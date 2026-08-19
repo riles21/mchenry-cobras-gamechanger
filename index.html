@@ -14,39 +14,30 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .cobras-header {
+    .team-header {
       text-align: center;
-      padding: 20px 12px 16px;
+      padding: 20px 16px 18px;
       border-bottom: 5px solid #ff5a00;
     }
 
-    .eyebrow {
-      color: #ff5a00;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
+    .team-logo {
+      display: block;
+      width: min(900px, 94%);
+      height: auto;
+      margin: 0 auto 12px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 34px;
-      line-height: 1.1;
-      color: #111;
-    }
-
-    .subtitle {
-      margin-top: 7px;
-      color: #666;
-      font-size: 16px;
+    .season {
+      color: #555;
+      font-size: 17px;
+      margin-top: 4px;
     }
 
     .section-title {
       text-align: center;
-      margin: 22px 10px 12px;
-      font-size: 20px;
-      font-weight: 700;
+      margin: 24px 12px 14px;
+      font-size: 22px;
+      font-weight: 800;
       color: #111;
     }
 
@@ -62,33 +53,66 @@
 
     .mobile-link {
       display: block;
-      margin: 18px 16px 24px;
-      padding: 14px 18px;
+      margin: 18px 16px 28px;
+      padding: 15px 18px;
       background: #ff5a00;
       color: #fff;
       text-align: center;
       text-decoration: none;
-      font-weight: 700;
-      border-radius: 4px;
+      font-weight: 800;
+      border-radius: 5px;
     }
 
-    .about {
-      margin: 22px 16px 30px;
-      padding: 20px;
+    .team-info {
+      margin: 28px auto 35px;
+      width: min(900px, 92%);
+      padding: 24px 20px;
       background: #f5f5f5;
-      border-left: 5px solid #ff5a00;
-      line-height: 1.5;
-      color: #333;
+      border-top: 5px solid #ff5a00;
     }
 
-    .about h2 {
-      margin: 0 0 8px;
-      font-size: 21px;
+    .team-info h2 {
+      margin: 0 0 16px;
+      text-align: center;
+      font-size: 23px;
       color: #111;
     }
 
-    /* Desktop: show the full GameChanger team page so visitors can
-       use Schedule, Team and Stats just like the original embed. */
+    .staff-grid {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .staff-role {
+      color: #ff5a00;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .staff-name {
+      color: #222;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .follow {
+      text-align: center;
+      margin: 10px 16px 35px;
+    }
+
+    .follow a {
+      color: #ff5a00;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    /* Desktop: full GameChanger team experience */
     #desktop-team {
       display: none;
       width: 100%;
@@ -96,7 +120,7 @@
       border: 0;
     }
 
-    /* Mobile: show the official responsive schedule widget instead. */
+    /* Mobile: responsive official GameChanger schedule widget */
     #mobile-schedule {
       display: block;
     }
@@ -111,15 +135,34 @@
         display: none;
       }
     }
+
+    @media (max-width: 767px) {
+      .team-logo {
+        width: 96%;
+        margin-bottom: 8px;
+      }
+
+      .season {
+        font-size: 15px;
+      }
+
+      .staff-grid {
+        gap: 20px;
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <header class="cobras-header">
-    <div class="eyebrow">McHenry Cobras Baseball</div>
-    <h1>17U Riley</h1>
-    <div class="subtitle">2026 Season</div>
+  <header class="team-header">
+    <img
+      class="team-logo"
+      src="./cobras-logo.png"
+      alt="McHenry Cobras"
+    >
+    <div class="season">17U Riley • 2026 Season</div>
   </header>
 
   <!-- Desktop: full GameChanger experience -->
@@ -147,13 +190,35 @@
     </a>
   </section>
 
-  <section class="about">
-    <h2>About 17U Riley</h2>
-    <p>
-      The McHenry Cobras 17U Riley team represents McHenry Cobras Travel Baseball
-      and competes throughout the season in tournaments and events throughout the Midwest.
-    </p>
+  <section class="team-info">
+    <h2>17U Riley Coaching Staff</h2>
+
+    <div class="staff-grid">
+      <div>
+        <div class="staff-role">Head Coach</div>
+        <div class="staff-name">Bryan Riley</div>
+      </div>
+
+      <div>
+        <div class="staff-role">Assistant Coach</div>
+        <div class="staff-name">Bob Tomlinson</div>
+      </div>
+
+      <div>
+        <div class="staff-role">Assistant Coach</div>
+        <div class="staff-name">Dan Dunn</div>
+      </div>
+    </div>
   </section>
+
+  <div class="follow">
+    <a
+      href="https://web.gc.com/teams/pMdj4HZlj6tS/2026-summer-mchenry-cobras---riley-17u"
+      target="_blank"
+      rel="noopener">
+      Follow 17U Riley on GameChanger →
+    </a>
+  </div>
 
   <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
   <script>
