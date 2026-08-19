@@ -3,62 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>McHenry Cobras GameChanger</title>
+  <title>McHenry Cobras 17U Riley</title>
   <style>
     * { box-sizing: border-box; }
+
     html, body {
       margin: 0;
       padding: 0;
       background: #fff;
       font-family: Arial, Helvetica, sans-serif;
     }
+
     .cobras-header {
       text-align: center;
-      padding: 18px 12px 14px;
-      border-bottom: 4px solid #ff5a00;
+      padding: 20px 12px 16px;
+      border-bottom: 5px solid #ff5a00;
     }
+
     .eyebrow {
       color: #ff5a00;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
+
     h1 {
       margin: 0;
-      font-size: 30px;
-      line-height: 1.15;
+      font-size: 34px;
+      line-height: 1.1;
       color: #111;
     }
+
     .subtitle {
-      margin-top: 6px;
+      margin-top: 7px;
       color: #666;
-      font-size: 15px;
+      font-size: 16px;
     }
-    #gc-schedule-widget-test {
+
+    .section-title {
+      text-align: center;
+      margin: 22px 10px 12px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .widget-wrap {
       width: 100%;
-      min-height: 500px;
+      overflow: hidden;
+    }
+
+    #gc-schedule-widget {
+      width: 100%;
+      min-height: 450px;
+    }
+
+    .mobile-link {
+      display: block;
+      margin: 18px 16px 24px;
+      padding: 14px 18px;
+      background: #ff5a00;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+
+    .about {
+      margin: 22px 16px 30px;
+      padding: 20px;
+      background: #f5f5f5;
+      border-left: 5px solid #ff5a00;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .about h2 {
+      margin: 0 0 8px;
+      font-size: 21px;
+      color: #111;
+    }
+
+    /* Desktop: show the full GameChanger team page so visitors can
+       use Schedule, Team and Stats just like the original embed. */
+    #desktop-team {
+      display: none;
+      width: 100%;
+      height: 1450px;
+      border: 0;
+    }
+
+    /* Mobile: show the official responsive schedule widget instead. */
+    #mobile-schedule {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      #desktop-team {
+        display: block;
+      }
+
+      #mobile-schedule,
+      .mobile-only {
+        display: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header class="cobras-header">
     <div class="eyebrow">McHenry Cobras Baseball</div>
     <h1>17U Riley</h1>
-    <div class="subtitle">Game Schedule &amp; Results</div>
+    <div class="subtitle">2026 Season</div>
   </header>
 
-  <div id="gc-schedule-widget-test"></div>
+  <!-- Desktop: full GameChanger experience -->
+  <iframe
+    id="desktop-team"
+    src="https://web.gc.com/teams/pMdj4HZlj6tS/2026-summer-mchenry-cobras---riley-17u"
+    title="McHenry Cobras 17U Riley on GameChanger"
+    allowfullscreen>
+  </iframe>
+
+  <!-- Mobile: responsive official GameChanger schedule widget -->
+  <section id="mobile-schedule">
+    <div class="section-title">Schedule &amp; Results</div>
+
+    <div class="widget-wrap">
+      <div id="gc-schedule-widget"></div>
+    </div>
+
+    <a
+      class="mobile-link mobile-only"
+      href="https://web.gc.com/teams/pMdj4HZlj6tS/2026-summer-mchenry-cobras---riley-17u"
+      target="_blank"
+      rel="noopener">
+      View Team, Roster &amp; Stats on GameChanger
+    </a>
+  </section>
+
+  <section class="about">
+    <h2>About 17U Riley</h2>
+    <p>
+      The McHenry Cobras 17U Riley team represents McHenry Cobras Travel Baseball
+      and competes throughout the season in tournaments and events throughout the Midwest.
+    </p>
+  </section>
 
   <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
   <script>
-    window.GC.team.schedule.init({
-      target: "#gc-schedule-widget-test",
-      widgetId: "d658d31b-468e-496a-939f-11fe8966b370",
-      maxVerticalGamesVisible: 4
-    });
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      window.GC.team.schedule.init({
+        target: "#gc-schedule-widget",
+        widgetId: "d658d31b-468e-496a-939f-11fe8966b370",
+        maxVerticalGamesVisible: 4
+      });
+    }
   </script>
 
 </body>
