@@ -51,20 +51,8 @@
       min-height: 450px;
     }
 
-    .mobile-link {
-      display: block;
-      margin: 18px 16px 28px;
-      padding: 15px 18px;
-      background: #ff5a00;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      font-weight: 800;
-      border-radius: 5px;
-    }
-
     .team-info {
-      margin: 28px auto 35px;
+      margin: 28px auto 25px;
       width: min(900px, 92%);
       padding: 24px 20px;
       background: #f5f5f5;
@@ -101,15 +89,35 @@
       font-weight: 700;
     }
 
+    .gc-button {
+      display: block;
+      margin: 18px auto 28px;
+      width: min(520px, calc(100% - 32px));
+      padding: 15px 18px;
+      background: #ff5a00;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 5px;
+    }
+
+    .facebook-button {
+      display: block;
+      margin: 0 auto 28px;
+      width: min(420px, calc(100% - 32px));
+      padding: 13px 18px;
+      background: #1877f2;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 5px;
+    }
+
     .follow {
       text-align: center;
       margin: 10px 16px 35px;
-    }
-
-    .follow a {
-      color: #ff5a00;
-      font-weight: 800;
-      text-decoration: none;
     }
 
     /* Desktop: full GameChanger team experience */
@@ -120,8 +128,7 @@
       border: 0;
     }
 
-    /* Mobile: responsive official GameChanger schedule widget */
-    #mobile-schedule {
+    #mobile-content {
       display: block;
     }
 
@@ -130,9 +137,12 @@
         display: block;
       }
 
-      #mobile-schedule,
-      .mobile-only {
+      #mobile-content {
         display: none;
+      }
+
+      .desktop-team-info {
+        display: block;
       }
     }
 
@@ -149,6 +159,10 @@
       .staff-grid {
         gap: 20px;
         flex-direction: column;
+      }
+
+      .team-info {
+        margin-top: 20px;
       }
     }
   </style>
@@ -173,24 +187,8 @@
     allowfullscreen>
   </iframe>
 
-  <!-- Mobile: responsive official GameChanger schedule widget -->
-  <section id="mobile-schedule">
-    <div class="section-title">Schedule &amp; Results</div>
-
-    <div class="widget-wrap">
-      <div id="gc-schedule-widget"></div>
-    </div>
-
-    <a
-      class="mobile-link mobile-only"
-      href="https://web.gc.com/teams/pMdj4HZlj6tS/2026-summer-mchenry-cobras---riley-17u"
-      target="_blank"
-      rel="noopener">
-      View Team, Roster &amp; Stats on GameChanger
-    </a>
-  </section>
-
-  <section class="team-info">
+  <!-- Desktop coaching staff -->
+  <section class="team-info desktop-team-info">
     <h2>17U Riley Coaching Staff</h2>
 
     <div class="staff-grid">
@@ -211,13 +209,57 @@
     </div>
   </section>
 
-  <div class="follow">
+  <!-- Mobile-only content -->
+  <div id="mobile-content">
+
+    <!-- Coaching staff comes first on mobile -->
+    <section class="team-info">
+      <h2>17U Riley Coaching Staff</h2>
+
+      <div class="staff-grid">
+        <div>
+          <div class="staff-role">Head Coach</div>
+          <div class="staff-name">Bryan Riley</div>
+        </div>
+
+        <div>
+          <div class="staff-role">Assistant Coach</div>
+          <div class="staff-name">Bob Tomlinson</div>
+        </div>
+
+        <div>
+          <div class="staff-role">Assistant Coach</div>
+          <div class="staff-name">Dan Dunn</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GameChanger full team page link comes before schedule -->
     <a
+      class="gc-button"
       href="https://web.gc.com/teams/pMdj4HZlj6tS/2026-summer-mchenry-cobras---riley-17u"
       target="_blank"
       rel="noopener">
-      Follow 17U Riley on GameChanger →
+      View Team, Roster &amp; Stats on GameChanger
     </a>
+
+    <!-- Optional team Facebook link.
+         Replace the URL below with the team's Facebook page.
+         If a team does not have Facebook, remove this button. -->
+    <a
+      class="facebook-button"
+      href="https://www.facebook.com/YOUR_TEAM_PAGE"
+      target="_blank"
+      rel="noopener">
+      Follow 17U Riley on Facebook
+    </a>
+
+    <div class="section-title">Schedule &amp; Results</div>
+
+    <div class="widget-wrap">
+      <div id="gc-schedule-widget"></div>
+    </div>
+
   </div>
 
   <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
