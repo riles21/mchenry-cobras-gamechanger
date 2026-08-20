@@ -137,14 +137,43 @@
       min-height: 450px;
     }
 
-    .error-message {
+    .team-picker {
+      width: min(700px, 92%);
       margin: 30px auto;
-      width: min(700px, 90%);
-      padding: 20px;
       text-align: center;
+    }
+
+    .team-picker h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      color: #111;
+    }
+
+    .team-picker p {
+      margin: 0 0 24px;
+      color: #666;
+      font-size: 16px;
+    }
+
+    .team-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .team-list a {
+      display: block;
+      padding: 13px 10px;
       background: #f5f5f5;
-      border-top: 5px solid #ff5a00;
-      color: #333;
+      border-left: 5px solid #ff5a00;
+      color: #111;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 3px;
+    }
+
+    .team-list a:hover {
+      background: #eee;
     }
 
     @media (max-width: 767px) {
@@ -178,122 +207,205 @@
         gap: 20px;
         flex-direction: column;
       }
+
+      .team-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header class="team-header">
-    <img class="team-logo" src="./cobras-logo.png" alt="McHenry Cobras">
-    <div class="season" id="team-season"></div>
-  </header>
-
-  <main class="team-content">
-
-    <section class="team-info">
-      <h2 id="staff-title"></h2>
-      <div class="staff-grid" id="staff-grid"></div>
-    </section>
-
-    <iframe
-      id="desktop-team"
-      title="McHenry Cobras on GameChanger"
-      allowfullscreen>
-    </iframe>
-
-    <section id="mobile-content">
-
-      <a class="gc-button" id="mobile-gc-link" target="_blank" rel="noopener">
-        View Team, Roster &amp; Stats on GameChanger
-      </a>
-
-      <a class="facebook-button" id="facebook-link" target="_blank" rel="noopener" style="display:none;">
-        Follow Team on Facebook
-      </a>
-
-      <div class="section-title">Schedule &amp; Results</div>
-
-      <div class="widget-wrap">
-        <div id="gc-schedule-widget"></div>
-      </div>
-
-    </section>
-
-  </main>
+  <div id="app"></div>
 
   <script src="./config.js"></script>
   <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
 
   <script>
     (function () {
-      const params = new URLSearchParams(window.location.search);
-      const teamKey = params.get("team") || "riley17u";
-      const team = COBRAS_TEAMS[teamKey];
 
-      if (!team || !team.active) {
-        document.querySelector(".team-content").innerHTML =
-          '<div class="error-message"><strong>Team page not available.</strong><br>Please check the team link.</div>';
+      const params = new URLSearchParams(window.location.search);
+      const teamKey = params.get("team");
+
+      /*
+        No team selected:
+        show a clean Cobras team selector.
+      */
+      if (!teamKey) {
+        showTeamPicker();
         return;
       }
 
-      document.title = "McHenry Cobras " + team.name;
+      const team = COBRAS_TEAMS[teamKey];
 
-      document.getElementById("team-season").textContent =
-        team.name + " • " + team.season;
-
-      document.getElementById("staff-title").textContent =
-        team.name + " Coaching Staff";
-
-      const staffGrid = document.getElementById("staff-grid");
-
-      if (team.headCoach) {
-        staffGrid.insertAdjacentHTML(
-          "beforeend",
-          '<div><div class="staff-role">Head Coach</div><div class="staff-name">' +
-          escapeHtml(team.headCoach) +
-          '</div></div>'
-        );
+      /*
+        Invalid or inactive team:
+        send the visitor back to the team selector.
+      */
+      if (!team || !team.active) {
+        showTeamPicker("That team page is not currently available.");
+        return;
       }
 
-      (team.assistantCoaches || []).slice(0, 3).forEach(function (coach) {
-        if (coach) {
-          staffGrid.insertAdjacentHTML(
-            "beforeend",
-            '<div><div class="staff-role">Assistant Coach</div><div class="staff-name">' +
-            escapeHtml(coach) +
-            '</div></div>'
-          );
+      renderTeam(team);
+
+      function renderTeam(team) {
+
+        document.title = "McHenry Cobras " + team.name;
+
+        const fullTeamUrl =
+          "https://web.gc.com/teams/" + team.gameChangerTeamId;
+
+        const scheduleUrl =
+          "https://web.gc.com/teams/" + team.gameChangerTeamId + "/schedule";
+
+        const app = document.getElementById("app");
+
+        app.innerHTML = `
+          <header class="team-header">
+            <img class="team-logo" src="./cobras-logo.png" alt="McHenry Cobras">
+            <div class="season">${escapeHtml(team.name)} • ${escapeHtml(team.season)}</div>
+          </header>
+
+          <main class="team-content">
+
+            <section class="team-info">
+              <h2>${escapeHtml(team.name)} Coaching Staff</h2>
+              <div class="staff-grid" id="staff-grid"></div>
+            </section>
+
+            <iframe
+              id="desktop-team"
+              src="${escapeAttribute(scheduleUrl)}"
+              title="${escapeAttribute(team.name)} on GameChanger"
+              allowfullscreen>
+            </iframe>
+
+            <section id="mobile-content">
+
+              <a
+                class="gc-button"
+                href="${escapeAttribute(fullTeamUrl)}"
+                target="_blank"
+                rel="noopener">
+                View Team, Roster &amp; Stats on GameChanger
+              </a>
+
+              <a
+                class="facebook-button"
+                id="facebook-link"
+                target="_blank"
+                rel="noopener"
+                style="display:none;">
+                Follow ${escapeHtml(team.name)} on Facebook
+              </a>
+
+              <div class="section-title">Schedule &amp; Results</div>
+
+              <div class="widget-wrap">
+                <div id="gc-schedule-widget"></div>
+              </div>
+
+            </section>
+
+          </main>
+        `;
+
+        const staffGrid = document.getElementById("staff-grid");
+
+        if (team.headCoach) {
+          addStaffMember(staffGrid, "Head Coach", team.headCoach);
         }
-      });
 
-      const teamUrl =
-        "https://web.gc.com/teams/" + team.gameChangerTeamId + "/schedule";
+        (team.assistantCoaches || []).slice(0, 3).forEach(function (coach) {
+          if (coach) {
+            addStaffMember(staffGrid, "Assistant Coach", coach);
+          }
+        });
 
-      const fullTeamUrl =
-        "https://web.gc.com/teams/" + team.gameChangerTeamId;
+        if (team.facebookUrl) {
+          const facebook = document.getElementById("facebook-link");
+          facebook.href = team.facebookUrl;
+          facebook.style.display = "block";
+        }
 
-      document.getElementById("desktop-team").src = teamUrl;
-      document.getElementById("mobile-gc-link").href = fullTeamUrl;
+        /*
+          Mobile uses the responsive GameChanger schedule widget.
+          If the widget ID has not been obtained yet, show a friendly
+          placeholder instead of breaking the page.
+        */
+        if (window.matchMedia("(max-width: 767px)").matches) {
 
-      if (team.facebookUrl) {
-        const facebook = document.getElementById("facebook-link");
-        facebook.href = team.facebookUrl;
-        facebook.textContent = "Follow " + team.name + " on Facebook";
-        facebook.style.display = "block";
+          if (team.gameChangerWidgetId) {
+
+            window.GC.team.schedule.init({
+              target: "#gc-schedule-widget",
+              widgetId: team.gameChangerWidgetId,
+              maxVerticalGamesVisible: 4
+            });
+
+          } else {
+
+            document.getElementById("gc-schedule-widget").innerHTML =
+              '<div style="text-align:center; padding:25px 15px; color:#666;">' +
+              'GameChanger schedule coming soon.' +
+              '</div>';
+
+          }
+        }
       }
 
-      if (window.matchMedia("(max-width: 767px)").matches) {
-        if (team.gameChangerWidgetId) {
-          window.GC.team.schedule.init({
-            target: "#gc-schedule-widget",
-            widgetId: team.gameChangerWidgetId,
-            maxVerticalGamesVisible: 4
+      function addStaffMember(container, role, name) {
+        const div = document.createElement("div");
+
+        const roleDiv = document.createElement("div");
+        roleDiv.className = "staff-role";
+        roleDiv.textContent = role;
+
+        const nameDiv = document.createElement("div");
+        nameDiv.className = "staff-name";
+        nameDiv.textContent = name;
+
+        div.appendChild(roleDiv);
+        div.appendChild(nameDiv);
+        container.appendChild(div);
+      }
+
+      function showTeamPicker(message) {
+
+        const activeTeams = Object.keys(COBRAS_TEAMS)
+          .filter(function (key) {
+            return COBRAS_TEAMS[key].active;
           });
-        } else {
-          document.getElementById("gc-schedule-widget").innerHTML =
-            '<div class="error-message">Schedule widget not configured yet.</div>';
-        }
+
+        let links = "";
+
+        activeTeams.forEach(function (key) {
+          const team = COBRAS_TEAMS[key];
+
+          links +=
+            '<a href="?team=' + encodeURIComponent(key) + '">' +
+            escapeHtml(team.name) +
+            '</a>';
+        });
+
+        document.getElementById("app").innerHTML = `
+          <header class="team-header">
+            <img class="team-logo" src="./cobras-logo.png" alt="McHenry Cobras">
+          </header>
+
+          <section class="team-picker">
+            <h1>McHenry Cobras Teams</h1>
+            <p>
+              ${message ? escapeHtml(message) : "Select a team to view their team page."}
+            </p>
+
+            <div class="team-list">
+              ${links}
+            </div>
+          </section>
+        `;
       }
 
       function escapeHtml(value) {
@@ -304,6 +416,11 @@
           .replace(/"/g, "&quot;")
           .replace(/'/g, "&#039;");
       }
+
+      function escapeAttribute(value) {
+        return escapeHtml(value);
+      }
+
     })();
   </script>
 
