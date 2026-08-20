@@ -24,7 +24,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "8U Deubel",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "NJRBPnj0Dhk6",
     gameChangerWidgetId: "",
     headCoach: "Mike Deubel",
     assistantCoaches: [
@@ -39,7 +39,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "9U McAndrews",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "eVa0Vr948vH4",
     gameChangerWidgetId: "",
     headCoach: "Justin McAndrews",
     assistantCoaches: [
@@ -54,7 +54,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "10U Hansen",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "glieJ5HMvC0j",
     gameChangerWidgetId: "",
     headCoach: "Zach Hansen",
     assistantCoaches: [
@@ -69,7 +69,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "10U DeCicco",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "xmAtHaprkmS1",
     gameChangerWidgetId: "",
     headCoach: "Vince DeCicco",
     assistantCoaches: [
@@ -84,7 +84,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "11U Lennon",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "lVwwLVbiCqXH",
     gameChangerWidgetId: "",
     headCoach: "Travis Lennon",
     assistantCoaches: [
@@ -99,7 +99,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "11U Bozer",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "jo418sCgCDyw",
     gameChangerWidgetId: "",
     headCoach: "Ben Bozer",
     assistantCoaches: [
@@ -113,7 +113,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "12U Meraz",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "BmhjNVz0W5gR",
     gameChangerWidgetId: "",
     headCoach: "Freddy Meraz",
     assistantCoaches: [
@@ -142,7 +142,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "13U Baillargeon",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "ewS3RDClhrGu",
     gameChangerWidgetId: "",
     headCoach: "Eric Baillargeon",
     assistantCoaches: [
@@ -157,7 +157,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "13U Thiemeyer",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "5OzlwlXAAYDd",
     gameChangerWidgetId: "",
     headCoach: "Joshua Thiemeyer",
     assistantCoaches: [
@@ -172,7 +172,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "14U Boettcher",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "5FbGFaKkWCHQ",
     gameChangerWidgetId: "",
     headCoach: "Aaron Boettcher",
     assistantCoaches: [
@@ -201,7 +201,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "16U Bivona",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "8NGYBcGFasMw",
     gameChangerWidgetId: "",
     headCoach: "Mike Bivona",
     assistantCoaches: [
@@ -216,7 +216,7 @@ const COBRAS_TEAMS = {
     active: true,
     name: "17U Deubel",
     season: "2027 Season",
-    gameChangerTeamId: "",
+    gameChangerTeamId: "kutDkVx3yhOH",
     gameChangerWidgetId: "",
     headCoach: "Mike Deubel",
     assistantCoaches: [
