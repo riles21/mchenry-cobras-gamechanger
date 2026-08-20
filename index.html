@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>McHenry Cobras 17U Riley</title>
+  <title>McHenry Cobras</title>
 
   <style>
     * { box-sizing: border-box; }
@@ -40,7 +40,6 @@
       width: 100%;
     }
 
-    /* Desktop: full GameChanger experience first, then staff */
     #desktop-team {
       order: 1;
       display: block;
@@ -88,7 +87,6 @@
       font-weight: 700;
     }
 
-    /* Mobile-only elements are hidden on desktop */
     #mobile-content {
       display: none;
     }
@@ -139,6 +137,16 @@
       min-height: 450px;
     }
 
+    .error-message {
+      margin: 30px auto;
+      width: min(700px, 90%);
+      padding: 20px;
+      text-align: center;
+      background: #f5f5f5;
+      border-top: 5px solid #ff5a00;
+      color: #333;
+    }
+
     @media (max-width: 767px) {
       .team-logo {
         width: 96%;
@@ -149,32 +157,20 @@
         font-size: 15px;
       }
 
-      /* Keep the mobile transition clean — no orange divider lines
-         between the logo/header and coaching staff. */
       .team-header {
         border-bottom: 0;
       }
 
       .team-info {
         border-top: 0;
+        margin: 20px auto 22px;
       }
 
-      /* Mobile order:
-         1. Coaching staff
-         2. GameChanger team/roster/stats button
-         3. Facebook
-         4. Schedule & Results */
       #desktop-team {
         display: none;
       }
 
-      .team-info {
-        order: 1;
-        margin: 20px auto 22px;
-      }
-
       #mobile-content {
-        order: 2;
         display: block;
       }
 
@@ -189,64 +185,31 @@
 <body>
 
   <header class="team-header">
-    <img
-      class="team-logo"
-      src="./cobras-logo.png"
-      alt="McHenry Cobras">
-    <div class="season">17U Riley • 2026 Season</div>
+    <img class="team-logo" src="./cobras-logo.png" alt="McHenry Cobras">
+    <div class="season" id="team-season"></div>
   </header>
 
   <main class="team-content">
 
-    <!-- One coaching-staff section shared by desktop and mobile -->
     <section class="team-info">
-      <h2>17U Riley Coaching Staff</h2>
-
-      <div class="staff-grid">
-        <div>
-          <div class="staff-role">Head Coach</div>
-          <div class="staff-name">Bryan Riley</div>
-        </div>
-
-        <div>
-          <div class="staff-role">Assistant Coach</div>
-          <div class="staff-name">Bob Tomlinson</div>
-        </div>
-
-        <div>
-          <div class="staff-role">Assistant Coach</div>
-          <div class="staff-name">Dan Dunn</div>
-        </div>
-      </div>
+      <h2 id="staff-title"></h2>
+      <div class="staff-grid" id="staff-grid"></div>
     </section>
 
-    <!-- Desktop: full GameChanger team page -->
     <iframe
       id="desktop-team"
-      src="https://web.gc.com/teams/pMdj4HZlj6tS/schedule"
-      title="McHenry Cobras 17U Riley on GameChanger"
+      title="McHenry Cobras on GameChanger"
       allowfullscreen>
     </iframe>
 
-    <!-- Mobile-only content -->
     <section id="mobile-content">
 
-      <a
-        class="gc-button"
-        href="https://web.gc.com/teams/pMdj4HZlj6tS/2026-summer-mchenry-cobras---riley-17u"
-        target="_blank"
-        rel="noopener">
+      <a class="gc-button" id="mobile-gc-link" target="_blank" rel="noopener">
         View Team, Roster &amp; Stats on GameChanger
       </a>
 
-      <!-- Replace this URL when the team's Facebook page is available.
-           If the team has no Facebook page, remove this button. -->
-      <a
-        class="facebook-button"
-        href="https://www.facebook.com/YOUR_TEAM_PAGE"
-        target="_blank"
-        rel="noopener">
-        Follow 17U Riley on Facebook
+      <a class="facebook-button" id="facebook-link" target="_blank" rel="noopener" style="display:none;">
+        Follow Team on Facebook
       </a>
 
       <div class="section-title">Schedule &amp; Results</div>
@@ -259,15 +222,89 @@
 
   </main>
 
+  <script src="./config.js"></script>
   <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+
   <script>
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      window.GC.team.schedule.init({
-        target: "#gc-schedule-widget",
-        widgetId: "d658d31b-468e-496a-939f-11fe8966b370",
-        maxVerticalGamesVisible: 4
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const teamKey = params.get("team") || "riley17u";
+      const team = COBRAS_TEAMS[teamKey];
+
+      if (!team || !team.active) {
+        document.querySelector(".team-content").innerHTML =
+          '<div class="error-message"><strong>Team page not available.</strong><br>Please check the team link.</div>';
+        return;
+      }
+
+      document.title = "McHenry Cobras " + team.name;
+
+      document.getElementById("team-season").textContent =
+        team.name + " • " + team.season;
+
+      document.getElementById("staff-title").textContent =
+        team.name + " Coaching Staff";
+
+      const staffGrid = document.getElementById("staff-grid");
+
+      if (team.headCoach) {
+        staffGrid.insertAdjacentHTML(
+          "beforeend",
+          '<div><div class="staff-role">Head Coach</div><div class="staff-name">' +
+          escapeHtml(team.headCoach) +
+          '</div></div>'
+        );
+      }
+
+      (team.assistantCoaches || []).slice(0, 3).forEach(function (coach) {
+        if (coach) {
+          staffGrid.insertAdjacentHTML(
+            "beforeend",
+            '<div><div class="staff-role">Assistant Coach</div><div class="staff-name">' +
+            escapeHtml(coach) +
+            '</div></div>'
+          );
+        }
       });
-    }
+
+      const teamUrl =
+        "https://web.gc.com/teams/" + team.gameChangerTeamId + "/schedule";
+
+      const fullTeamUrl =
+        "https://web.gc.com/teams/" + team.gameChangerTeamId;
+
+      document.getElementById("desktop-team").src = teamUrl;
+      document.getElementById("mobile-gc-link").href = fullTeamUrl;
+
+      if (team.facebookUrl) {
+        const facebook = document.getElementById("facebook-link");
+        facebook.href = team.facebookUrl;
+        facebook.textContent = "Follow " + team.name + " on Facebook";
+        facebook.style.display = "block";
+      }
+
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        if (team.gameChangerWidgetId) {
+          window.GC.team.schedule.init({
+            target: "#gc-schedule-widget",
+            widgetId: team.gameChangerWidgetId,
+            maxVerticalGamesVisible: 4
+          });
+        } else {
+          document.getElementById("gc-schedule-widget").innerHTML =
+            '<div class="error-message">Schedule widget not configured yet.</div>';
+        }
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+    })();
   </script>
 
 </body>
