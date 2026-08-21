@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>McHenry Cobras Lorenz 12U</title>
+  <title>McHenry Cobras Baseball</title>
 
   <style>
     * {
@@ -13,250 +13,120 @@
 
     body {
       margin: 0;
-      background: #f4f4f4;
+      background: #f5f5f5;
       color: #111;
       font-family: Arial, Helvetica, sans-serif;
     }
 
     .page {
-      max-width: 1150px;
+      width: 100%;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 24px 20px 60px;
+      padding: 18px;
     }
 
     /* =========================
-       COBRAS HEADER
-    ========================== */
+       COBRAS BANNER
+       ========================= */
 
-    .hero-banner {
+    .cobra-banner {
       position: relative;
-      height: 185px;
+      height: 145px;
       border-radius: 12px;
       overflow: hidden;
-
       background:
-        radial-gradient(
-          circle at 80% 50%,
-          rgba(255, 90, 0, .28),
-          transparent 38%
-        ),
         linear-gradient(
-          135deg,
-          #080808 0%,
-          #171717 45%,
-          #090909 100%
+          120deg,
+          #111 0%,
+          #171717 55%,
+          #3b1d0c 100%
         );
-
       box-shadow: 0 5px 16px rgba(0,0,0,.18);
-
       display: flex;
       align-items: center;
       justify-content: center;
-
-      margin-bottom: 22px;
     }
 
-    .hero-banner::before {
+    .cobra-banner::before {
       content: "";
       position: absolute;
       inset: 0;
-
       background:
         repeating-linear-gradient(
-          -18deg,
-          transparent 0,
-          transparent 24px,
-          rgba(255,255,255,.025) 25px,
-          transparent 26px
+          -20deg,
+          rgba(255,255,255,.025) 0px,
+          rgba(255,255,255,.025) 1px,
+          transparent 1px,
+          transparent 22px
         );
     }
 
-    .hero-banner::after {
+    .cobra-banner::after {
       content: "";
-
       position: absolute;
-
-      width: 330px;
-      height: 330px;
-
-      border: 25px solid rgba(255,90,0,.17);
+      width: 180px;
+      height: 260px;
+      right: 80px;
+      top: -60px;
+      border-left: 24px solid rgba(255,90,0,.18);
       border-radius: 50%;
-
-      right: -100px;
-      top: -75px;
+      transform: rotate(20deg);
     }
 
-    .hero-logo {
+    .cobra-banner img {
       position: relative;
       z-index: 2;
-
-      width: 78%;
-      max-width: 760px;
-
-      height: 150px;
-
+      width: min(620px, 78%);
+      max-height: 105px;
       object-fit: contain;
     }
 
-
     /* =========================
-       TEAM TITLE
-    ========================== */
+       HEADER
+       ========================= */
 
     .header {
       text-align: center;
-      margin-bottom: 18px;
+      padding: 25px 10px 18px;
+      border-bottom: 4px solid #ff5a00;
+      margin-bottom: 22px;
     }
 
-    h1 {
+    .header h1 {
       margin: 0;
-
-      font-size: 40px;
+      font-size: 36px;
       font-weight: 900;
-
-      letter-spacing: -1px;
+      letter-spacing: -.5px;
     }
 
-    .subtitle {
+    .season {
       margin-top: 7px;
-
-      color: #555;
-
+      color: #ff5a00;
       font-size: 20px;
-      font-weight: 700;
-
-      letter-spacing: .3px;
-    }
-
-    .orange-line {
-      height: 4px;
-
-      background: #ff5a00;
-
-      margin-top: 18px;
-    }
-
-
-    /* =========================
-       SECTION HEADINGS
-    ========================== */
-
-    .section-heading {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-
-      margin: 30px 0 12px;
-    }
-
-    .section-heading h2 {
-      margin: 0;
-
-      font-size: 21px;
-      font-weight: 900;
-    }
-
-    .section-heading span {
-      color: #777;
-      font-size: 12px;
-    }
-
-    .team-info-title {
-      text-align: center;
-
-      margin: 25px 0 12px;
-
-      font-size: 20px;
-      font-weight: 900;
-
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-
-    /* =========================
-       TEAM INFORMATION
-    ========================== */
-
-    .team-info {
-      display: grid;
-
-      grid-template-columns:
-        1.15fr
-        1.45fr
-        1fr
-        1.05fr;
-
-      gap: 10px;
-    }
-
-    .info-card {
-      background: #fff;
-
-      border: 1px solid #ddd;
-      border-radius: 9px;
-
-      padding: 15px;
-
-      box-shadow:
-        0 2px 6px rgba(0,0,0,.05);
-
-      min-height: 82px;
-    }
-
-    .info-label {
-      color: #ff5a00;
-
-      font-size: 10px;
-      font-weight: 800;
-
-      letter-spacing: 1.5px;
-
-      text-transform: uppercase;
-
-      margin-bottom: 6px;
-    }
-
-    .info-value {
-      font-size: 15px;
-      font-weight: 700;
-
-      line-height: 1.3;
-    }
-
-    .info-sub {
-      margin-top: 4px;
-
-      color: #777;
-
-      font-size: 11px;
-    }
-
-
     /* =========================
        RECORD
-    ========================== */
+       ========================= */
 
     .record {
-      display: flex;
-
-      padding: 0;
-
+      width: min(100%, 380px);
+      margin: 0 auto 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
       overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
     }
 
     .record-item {
-      flex: 1;
-
-      display: flex;
-      flex-direction: column;
-
-      justify-content: center;
-
       text-align: center;
-
-      padding: 9px 5px;
-
+      padding: 10px 6px;
       border-right: 1px solid #eee;
     }
 
@@ -265,343 +135,345 @@
     }
 
     .record-number {
-      font-size: 28px;
-
-      font-weight: 900;
-
+      font-size: 26px;
       line-height: 1;
-
-      margin-bottom: 5px;
+      font-weight: 900;
     }
 
     .record-label {
+      margin-top: 5px;
       font-size: 10px;
-
+      font-weight: 800;
       color: #777;
-
-      font-weight: 900;
-
-      letter-spacing: 1px;
-
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
+    /* =========================
+       SECTION HEADERS
+       ========================= */
+
+    .section-title {
+      margin: 22px 0 10px;
+      font-size: 21px;
+      font-weight: 900;
+    }
 
     /* =========================
-       GAMECHANGER
-    ========================== */
+       TEAM INFORMATION
+       ========================= */
+
+    .team-info {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .info-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      padding: 14px;
+      box-shadow: 0 2px 7px rgba(0,0,0,.05);
+    }
+
+    .info-label {
+      color: #ff5a00;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .info-main {
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .info-sub {
+      margin-top: 5px;
+      color: #777;
+      font-size: 11px;
+    }
+
+    /* =========================
+       GAMECHANGER BANNER
+       ========================= */
 
     .gamechanger {
-      margin-top: 16px;
-
-      background: #111;
-
-      border-radius: 10px;
-
-      padding: 17px 22px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 20px;
-
-      color: #fff;
-
-      box-shadow:
-        0 3px 10px rgba(0,0,0,.14);
-
+      padding: 15px 18px;
+      margin: 0 0 24px;
       border-left: 4px solid #ff5a00;
+      border-radius: 8px;
+      background: #111;
+      color: white;
+      box-shadow: 0 3px 10px rgba(0,0,0,.12);
     }
 
-    .gamechanger-text strong {
-      display: block;
-
+    .gamechanger-title {
       font-size: 15px;
-
-      margin-bottom: 4px;
+      font-weight: 800;
     }
 
-    .gamechanger-text span {
-      color: #bbb;
-
-      font-size: 12px;
+    .gamechanger-subtitle {
+      margin-top: 4px;
+      color: #ccc;
+      font-size: 11px;
     }
 
     .gamechanger-button {
+      flex-shrink: 0;
       display: inline-block;
-
+      padding: 10px 15px;
       background: #ff5a00;
-
       color: #fff;
-
       text-decoration: none;
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-      padding: 11px 17px;
-
       border-radius: 6px;
-
-      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 800;
     }
 
     .gamechanger-button:hover {
-      background: #e64f00;
+      background: #e84f00;
     }
-
 
     /* =========================
        NEXT GAME
-    ========================== */
+       ========================= */
 
     .next-game {
-      background: #111;
-
-      color: #fff;
-
-      border-radius: 11px;
-
-      padding: 23px 24px;
-
-      display: grid;
-
-      grid-template-columns: 95px 1fr auto;
-
-      align-items: center;
-
-      gap: 18px;
-
       position: relative;
-
       overflow: hidden;
-
-      box-shadow:
-        0 5px 14px rgba(0,0,0,.18);
-
+      display: grid;
+      grid-template-columns: 85px 1fr auto;
+      align-items: center;
+      gap: 18px;
+      min-height: 120px;
+      padding: 18px;
+      background: #111;
+      color: white;
       border-left: 5px solid #ff5a00;
-
-      min-height: 125px;
+      border-radius: 10px;
+      box-shadow: 0 5px 14px rgba(0,0,0,.15);
     }
 
     .next-game::after {
       content: "";
-
       position: absolute;
-
-      width: 205px;
-      height: 205px;
-
-      border: 19px solid rgba(255,90,0,.22);
-
+      width: 180px;
+      height: 180px;
+      right: -70px;
+      top: -30px;
+      border: 20px solid rgba(255,90,0,.28);
       border-radius: 50%;
-
-      right: -75px;
-      top: -70px;
     }
 
     .next-label {
+      position: absolute;
+      top: 12px;
+      left: 18px;
       color: #ff5a00;
-
       font-size: 10px;
-
       font-weight: 900;
-
       letter-spacing: 1.5px;
-
       text-transform: uppercase;
-
-      margin-bottom: 4px;
     }
 
-    .next-game .date {
-      border-color: rgba(255,255,255,.2);
-
-      position: relative;
-      z-index: 2;
-    }
-
-    .next-game .date .day {
-      font-size: 34px;
-    }
-
-    .next-game .opponent {
-      position: relative;
-      z-index: 2;
-    }
-
-    .next-game .opponent img,
-    .next-game .opponent-placeholder {
-      width: 60px;
-      height: 60px;
-    }
-
-    .next-game .opponent-name {
-      font-size: 19px;
-    }
-
-    .next-game .home-away {
-      color: #bbb;
-    }
-
-    .next-game .time {
-      font-size: 18px;
-
-      position: relative;
-
-      z-index: 2;
-    }
-
-
-    /* =========================
-       GAME CARDS
-    ========================== */
-
-    .game {
-      display: grid;
-
-      grid-template-columns: 85px 1fr auto;
-
-      align-items: center;
-
-      gap: 16px;
-
-      padding: 14px 17px;
-
-      margin-bottom: 10px;
-
-      background: #fff;
-
-      border: 1px solid #ddd;
-
-      border-left: 4px solid #ff5a00;
-
-      border-radius: 9px;
-
-      box-shadow:
-        0 2px 6px rgba(0,0,0,.05);
-    }
-
-    .date {
+    .next-date {
       text-align: center;
-
-      border-right: 1px solid #eee;
-
-      padding-right: 14px;
+      padding-top: 18px;
+      border-right: 1px solid #444;
     }
 
-    .date .month {
+    .next-date .month {
       color: #ff5a00;
-
-      font-size: 10px;
-
+      font-size: 11px;
       font-weight: 800;
-
       text-transform: uppercase;
     }
 
-    .date .day {
-      font-size: 27px;
-
-      font-weight: 900;
-
+    .next-date .day {
+      font-size: 31px;
       line-height: 1;
-
-      margin: 3px 0;
+      font-weight: 900;
+      margin: 4px 0;
     }
 
-    .date .weekday {
-      color: #777;
-
+    .next-date .weekday {
+      color: #aaa;
       font-size: 11px;
     }
 
-    .opponent {
+    .next-opponent {
       display: flex;
-
       align-items: center;
+      gap: 15px;
+      position: relative;
+      z-index: 2;
+    }
 
-      gap: 13px;
+    .next-opponent img,
+    .next-opponent .placeholder {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      flex-shrink: 0;
+    }
 
+    .next-opponent .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      font-size: 24px;
+    }
+
+    .next-opponent-name {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .next-home-away {
+      margin-top: 4px;
+      color: #bbb;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .next-time {
+      position: relative;
+      z-index: 2;
+      font-size: 17px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       GAME LIST
+       ========================= */
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .section-count {
+      color: #777;
+      font-size: 11px;
+    }
+
+    .games {
+      display: grid;
+      gap: 10px;
+    }
+
+    .game {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 16px;
+      min-height: 80px;
+      padding: 12px 14px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #ff5a00;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.05);
+    }
+
+    .game-date {
+      text-align: center;
+      border-right: 1px solid #eee;
+      padding-right: 12px;
+    }
+
+    .game-date .month {
+      color: #ff5a00;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .game-date .day {
+      font-size: 25px;
+      line-height: 1;
+      font-weight: 900;
+      margin: 3px 0;
+    }
+
+    .game-date .weekday {
+      color: #777;
+      font-size: 10px;
+    }
+
+    .game-opponent {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       min-width: 0;
     }
 
-    .opponent img,
-    .opponent-placeholder {
-      width: 48px;
-      height: 48px;
-
-      flex-shrink: 0;
-
+    .game-opponent img,
+    .game-opponent .placeholder {
+      width: 46px;
+      height: 46px;
       object-fit: contain;
-
       border-radius: 50%;
+      background: #fff;
+      flex-shrink: 0;
     }
 
-    .opponent-placeholder {
-      background: #eee;
-
+    .game-opponent .placeholder {
       display: flex;
-
       align-items: center;
       justify-content: center;
-
+      background: #eee;
       font-size: 20px;
     }
 
     .opponent-name {
-      font-size: 15px;
-
+      font-size: 14px;
       font-weight: 800;
-
-      line-height: 1.2;
     }
 
     .home-away {
-      margin-top: 4px;
-
+      margin-top: 3px;
       color: #777;
-
       font-size: 10px;
-
       font-weight: 700;
     }
 
-    .time {
+    .game-result {
       text-align: right;
-
-      font-size: 14px;
-
-      font-weight: 800;
-
-      white-space: nowrap;
-    }
-
-
-    /* =========================
-       RESULTS
-    ========================== */
-
-    .result {
-      border-left-color: #777;
+      min-width: 75px;
     }
 
     .result-score {
-      text-align: right;
-
-      font-size: 18px;
-
+      font-size: 16px;
       font-weight: 900;
+    }
 
-      white-space: nowrap;
+    .result-label {
+      margin-top: 3px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
 
     .result-win {
-      color: #16823b;
+      color: #16803c;
     }
 
     .result-loss {
@@ -612,1265 +484,1014 @@
       color: #777;
     }
 
+    .game-time {
+      text-align: right;
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
 
     /* =========================
-       LOADING / EMPTY / ERROR
-    ========================== */
+       EMPTY / LOADING / ERROR
+       ========================= */
 
-    .loading,
-    .empty {
+    .loading {
+      padding: 40px;
       text-align: center;
-
-      padding: 30px;
-
       color: #777;
+    }
 
+    .empty {
+      padding: 24px;
+      text-align: center;
       background: #fff;
-
       border: 1px solid #ddd;
-
-      border-radius: 9px;
+      border-radius: 8px;
+      color: #777;
     }
 
     .error {
       padding: 20px;
-
-      border: 1px solid #e0b4b4;
-
       background: #fff5f5;
-
-      color: #a00000;
-
+      border: 1px solid #e0b4b4;
       border-radius: 8px;
+      color: #a00000;
     }
 
-
-    /* =========================
-       TABLET
-    ========================== */
-
-    @media (max-width: 900px) {
-
-      .team-info {
-        grid-template-columns: 1fr 1fr;
-      }
-
+    .back-link {
+      display: inline-block;
+      margin-top: 28px;
+      color: #ff5a00;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
     }
 
+    .back-link:hover {
+      text-decoration: underline;
+    }
 
     /* =========================
        MOBILE
-    ========================== */
+       ========================= */
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
       .page {
-        padding: 14px 12px 45px;
-      }
-
-      .hero-banner {
-        height: 135px;
-
-        margin-bottom: 18px;
-      }
-
-      .hero-logo {
-        width: 90%;
-
-        height: 110px;
-      }
-
-      h1 {
-        font-size: 31px;
-      }
-
-      .subtitle {
-        font-size: 18px;
-      }
-
-      .orange-line {
-        margin-top: 15px;
-      }
-
-      .team-info-title {
-        font-size: 18px;
-
-        margin-top: 21px;
-      }
-
-      .team-info {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .info-card {
         padding: 12px;
       }
 
-      .info-value {
-        font-size: 13px;
+      .cobra-banner {
+        height: 105px;
+        border-radius: 9px;
       }
 
-      .record-number {
-        font-size: 25px;
+      .cobra-banner img {
+        width: 88%;
+        max-height: 78px;
       }
 
-      .record-label {
-        font-size: 9px;
+      .header {
+        padding: 18px 5px 14px;
       }
 
-      .gamechanger {
-        flex-direction: column;
-
-        align-items: stretch;
-
-        text-align: center;
-
-        padding: 16px;
+      .header h1 {
+        font-size: 28px;
       }
 
-      .gamechanger-button {
-        text-align: center;
-      }
-
-      .section-heading {
-        margin-top: 25px;
-      }
-
-      .game {
-        grid-template-columns: 65px 1fr;
-
-        gap: 11px;
-
-        padding: 12px;
-      }
-
-      .game .time {
-        grid-column: 2;
-
-        text-align: left;
-
-        margin-top: -8px;
-      }
-
-      .next-game {
-        grid-template-columns: 65px 1fr;
-
-        gap: 11px;
-
-        padding: 17px;
-
-        min-height: 120px;
-      }
-
-      .next-game .time {
-        grid-column: 2;
-
-        text-align: left;
-
-        margin-top: -7px;
-      }
-
-      .next-game .opponent img,
-      .next-game .opponent-placeholder {
-        width: 50px;
-        height: 50px;
-      }
-
-      .next-game .opponent-name {
+      .season {
         font-size: 16px;
       }
-
-      .next-game .date .day {
-        font-size: 30px;
-      }
-
-      .opponent img,
-      .opponent-placeholder {
-        width: 43px;
-        height: 43px;
-      }
-
-      .opponent-name {
-        font-size: 14px;
-      }
-
-    }
-
-
-    /* =========================
-       SMALL PHONES
-    ========================== */
-
-    @media (max-width: 420px) {
 
       .team-info {
         grid-template-columns: 1fr;
       }
 
-      .record {
-        min-height: 76px;
+      .gamechanger {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
-      .hero-banner {
-        height: 120px;
+      .gamechanger-button {
+        width: 100%;
+        text-align: center;
       }
 
-      .hero-logo {
-        height: 100px;
+      .next-game {
+        grid-template-columns: 65px 1fr;
+        gap: 12px;
+        padding: 15px;
       }
 
-      h1 {
-        font-size: 28px;
+      .next-date {
+        padding-top: 18px;
       }
 
-      .subtitle {
-        font-size: 17px;
+      .next-opponent {
+        gap: 10px;
       }
 
+      .next-opponent img,
+      .next-opponent .placeholder {
+        width: 46px;
+        height: 46px;
+      }
+
+      .next-opponent-name {
+        font-size: 15px;
+      }
+
+      .next-time {
+        grid-column: 2;
+        text-align: left;
+        margin-top: -8px;
+        font-size: 14px;
+      }
+
+      .game {
+        grid-template-columns: 65px 1fr;
+        gap: 10px;
+      }
+
+      .game-result,
+      .game-time {
+        grid-column: 2;
+        text-align: left;
+        margin-top: -4px;
+      }
+
+      .game-opponent img,
+      .game-opponent .placeholder {
+        width: 40px;
+        height: 40px;
+      }
+
+      .opponent-name {
+        font-size: 13px;
+      }
     }
-
   </style>
 </head>
 
-
 <body>
 
-<div class="page">
+  <div class="page">
 
+    <!-- COBRAS BANNER -->
 
-  <!-- =========================
-       COBRAS BANNER
-  ========================== -->
-
-  <div class="hero-banner">
-
-    <img
-      src="cobras-logo.png"
-      class="hero-logo"
-      alt="McHenry Cobras"
-    >
-
-  </div>
-
-
-  <!-- =========================
-       TEAM TITLE
-  ========================== -->
-
-  <header class="header">
-
-    <h1>
-      Lorenz 12U
-    </h1>
-
-    <div class="subtitle">
-      2026 Fall Season
+    <div class="cobra-banner">
+      <img src="cobras-logo.png" alt="McHenry Cobras">
     </div>
 
-    <div class="orange-line"></div>
+    <!-- TEAM HEADER -->
 
-  </header>
+    <header class="header">
+      <h1 id="teamName">McHenry Cobras Baseball</h1>
+      <div class="season" id="season">Season</div>
+    </header>
 
+    <!-- RECORD -->
 
-  <!-- =========================
-       TEAM INFORMATION
-  ========================== -->
-
-  <div class="team-info-title">
-    Team Information
-  </div>
-
-
-  <div class="team-info">
-
-
-    <div class="info-card">
-
-      <div class="info-label">
-        Team
+    <div class="record">
+      <div class="record-item">
+        <div class="record-number" id="wins">0</div>
+        <div class="record-label">Wins</div>
       </div>
 
-      <div class="info-value">
-        McHenry Cobras Lorenz 12U
+      <div class="record-item">
+        <div class="record-number" id="losses">0</div>
+        <div class="record-label">Losses</div>
       </div>
 
-      <div class="info-sub">
-        Fall 2026 · Baseball
+      <div class="record-item">
+        <div class="record-number" id="ties">0</div>
+        <div class="record-label">Ties</div>
       </div>
-
     </div>
 
+    <!-- TEAM INFORMATION -->
 
-    <div class="info-card">
+    <div class="section-title">
+      Team Information
+    </div>
 
-      <div class="info-label">
-        Coaches
+    <div class="team-info">
+
+      <div class="info-card">
+        <div class="info-label">Team</div>
+        <div class="info-main" id="infoTeam">
+          -
+        </div>
+        <div class="info-sub" id="infoSeason">
+          -
+        </div>
       </div>
 
-      <div class="info-value">
-        Randy Ozimek · John Lorenz · Nick Valenziano
+      <div class="info-card">
+        <div class="info-label">Coaches</div>
+        <div class="info-main" id="infoCoaches">
+          -
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-label">Roster</div>
+        <div class="info-main" id="infoRoster">
+          -
+        </div>
+        <div class="info-sub">
+          McHenry, Illinois
+        </div>
       </div>
 
     </div>
 
+    <!-- GAMECHANGER -->
 
-    <div class="info-card">
+    <div class="gamechanger">
 
-      <div class="info-label">
-        Roster
+      <div>
+        <div class="gamechanger-title">
+          Follow this team on GameChanger
+        </div>
+
+        <div class="gamechanger-subtitle">
+          Get live scores, game updates, stats and team notifications.
+        </div>
       </div>
 
-      <div
-        class="info-value"
-        id="roster-count"
+      <a
+        id="gameChangerLink"
+        class="gamechanger-button"
+        href="#"
+        target="_blank"
+        rel="noopener"
       >
-        10 Players
+        Follow on GameChanger →
+      </a>
+
+    </div>
+
+    <!-- NEXT GAME -->
+
+    <div id="nextGameSection">
+
+      <div class="section-title">
+        Next Game
       </div>
 
-      <div class="info-sub">
-        McHenry, Illinois
+      <div id="nextGame">
+        <div class="loading">
+          Loading next game...
+        </div>
       </div>
 
     </div>
 
+    <!-- RECENT RESULTS -->
 
-    <div class="info-card record">
+    <div id="resultsSection">
 
-
-      <div class="record-item">
-
-        <div
-          class="record-number"
-          id="wins"
-        >
-          0
+      <div class="section-header">
+        <div class="section-title">
+          Recent Results
         </div>
 
-        <div class="record-label">
-          W
+        <div class="section-count" id="resultsCount">
+          0 Games
         </div>
-
       </div>
 
-
-      <div class="record-item">
-
-        <div
-          class="record-number"
-          id="losses"
-        >
-          0
+      <div id="results" class="games">
+        <div class="loading">
+          Loading results...
         </div>
-
-        <div class="record-label">
-          L
-        </div>
-
       </div>
-
-
-      <div class="record-item">
-
-        <div
-          class="record-number"
-          id="ties"
-        >
-          0
-        </div>
-
-        <div class="record-label">
-          T
-        </div>
-
-      </div>
-
 
     </div>
 
-  </div>
+    <!-- UPCOMING GAMES -->
 
+    <div id="upcomingSection">
 
-  <!-- =========================
-       GAMECHANGER
-  ========================== -->
+      <div class="section-header">
+        <div class="section-title">
+          Upcoming Games
+        </div>
 
-  <div class="gamechanger">
+        <div class="section-count" id="upcomingCount">
+          0 Games
+        </div>
+      </div>
 
-    <div class="gamechanger-text">
-
-      <strong>
-        Follow this team on GameChanger
-      </strong>
-
-      <span>
-        Get live scores, game updates, stats and team notifications.
-      </span>
+      <div id="upcoming" class="games">
+        <div class="loading">
+          Loading schedule...
+        </div>
+      </div>
 
     </div>
 
-
-    <a
-      class="gamechanger-button"
-      href="https://web.gc.com/teams/JWdOuqoTjKow/2026-fall-mchenry-cobras-lorenz-12u"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Follow on GameChanger →
+    <a class="back-link" href="index.html">
+      ← Back to Cobras Organization
     </a>
 
   </div>
 
+  <!-- CONFIGURATION -->
 
-  <!-- =========================
-       NEXT GAME
-  ========================== -->
+  <script src="config.js"></script>
 
-  <div class="section-heading">
+  <script>
 
-    <h2>
-      Next Game
-    </h2>
+    /* =========================================================
+       HELPERS
+       ========================================================= */
 
-  </div>
+    function getTeamKey() {
 
+      const params = new URLSearchParams(window.location.search);
 
-  <div id="next-game">
+      /*
+        If no team is supplied, default to Lorenz.
+        This keeps the old URL working.
+      */
 
-    <div class="loading">
-      Loading next game...
-    </div>
+      return params.get("team") || "lorenz12u";
+    }
 
-  </div>
 
+    function formatDate(dateString, timezone) {
 
-  <!-- =========================
-       RECENT RESULTS
-  ========================== -->
+      const date = new Date(dateString);
 
-  <div
-    id="results-section"
-    style="display:none;"
-  >
+      const month = new Intl.DateTimeFormat("en-US", {
+        month: "short",
+        timeZone: timezone
+      }).format(date);
 
-    <div class="section-heading">
+      const day = new Intl.DateTimeFormat("en-US", {
+        day: "numeric",
+        timeZone: timezone
+      }).format(date);
 
-      <h2>
-        Recent Results
-      </h2>
+      const weekday = new Intl.DateTimeFormat("en-US", {
+        weekday: "short",
+        timeZone: timezone
+      }).format(date);
 
-      <span id="results-count"></span>
+      return {
+        date,
+        month,
+        day,
+        weekday
+      };
+    }
 
-    </div>
 
-    <div id="results"></div>
+    function formatTime(dateString, timezone) {
 
-  </div>
-
-
-  <!-- =========================
-       UPCOMING GAMES
-  ========================== -->
-
-  <div class="section-heading">
-
-    <h2>
-      Upcoming Games
-    </h2>
-
-    <span id="upcoming-count"></span>
-
-  </div>
-
-
-  <div id="schedule">
-
-    <div class="loading">
-      Loading schedule...
-    </div>
-
-  </div>
-
-
-</div>
-
-
-<script>
-
-
-  /* =========================
-     OPPONENT LOGOS
-  ========================== */
-
-  const opponentLogos = {
-
-    "Grayslake Coyotes 12U":
-      "logos/grayslake-coyotes-12u.png",
-
-    "Sparks North 12U- Lozano":
-      "logos/sparks-north-12u-lozano.png",
-
-    "GRB Rays Illinois - Moore 12U":
-      "logos/grb-rays-illinois-moore-12u.png",
-
-    "Elite NW 12U Milazzo":
-      "logos/elite-nw-12u-milazzo.png",
-
-    "Elite NW 12U Clouse":
-      "logos/elite-nw-12u-clouse.png",
-
-    "LITH Thunder Black 12U":
-      "logos/lith-thunder-black-12u.png",
-
-    "SBA Raiders-LoPresti 12U":
-      "logos/sba-raiders-lopresti-12u.png"
-
-  };
-
-
-  /* =========================
-     DATE
-  ========================== */
-
-  function getDate(game) {
-
-    return new Date(
-      game.start_ts
-    );
-
-  }
-
-
-  function formatDate(game) {
-
-    const date =
-      getDate(game);
-
-
-    const month =
-      new Intl.DateTimeFormat(
-        "en-US",
-        {
-          month: "short",
-          timeZone: game.timezone
-        }
-      ).format(date);
-
-
-    const day =
-      new Intl.DateTimeFormat(
-        "en-US",
-        {
-          day: "numeric",
-          timeZone: game.timezone
-        }
-      ).format(date);
-
-
-    const weekday =
-      new Intl.DateTimeFormat(
-        "en-US",
-        {
-          weekday: "short",
-          timeZone: game.timezone
-        }
-      ).format(date);
-
-
-    const time =
-      new Intl.DateTimeFormat(
-        "en-US",
-        {
-          hour: "numeric",
-          minute: "2-digit",
-          timeZone: game.timezone
-        }
-      ).format(date);
-
-
-    return {
-      month,
-      day,
-      weekday,
-      time
-    };
-
-  }
-
-
-  /* =========================
-     LOGO
-  ========================== */
-
-  function getLogo(game) {
-
-    const name =
-      game.opponent_team?.name || "";
-
-
-    if (opponentLogos[name]) {
-
-      return `
-        <img
-          src="${opponentLogos[name]}"
-          alt="${name}"
-        >
-      `;
+      return new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        timeZone: timezone
+      }).format(new Date(dateString));
 
     }
 
 
-    if (
-      game.opponent_team?.avatar_url
-    ) {
+    function homeAwayLabel(game) {
 
-      return `
-        <img
-          src="${game.opponent_team.avatar_url}"
-          alt="${name}"
-        >
-      `;
+      return game.home_away === "home"
+        ? "HOME"
+        : "AWAY";
 
     }
 
 
-    return `
-      <div class="opponent-placeholder">
-        ⚾
-      </div>
-    `;
+    function slugifyOpponent(name) {
 
-  }
-
-
-  /* =========================
-     HOME / AWAY
-  ========================== */
-
-  function homeAway(game) {
-
-    return game.home_away === "home"
-      ? "HOME"
-      : "AWAY";
-
-  }
-
-
-  /* =========================
-     SCORE
-  ========================== */
-
-  function getScore(game) {
-
-    if (!game.score) {
-      return null;
-    }
-
-
-    const teamScore =
-      Number(game.score.team);
-
-
-    const opponentScore =
-      Number(
-        game.score.opponent
-      );
-
-
-    if (
-      Number.isNaN(teamScore) ||
-      Number.isNaN(opponentScore)
-    ) {
-
-      return null;
+      return name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
 
     }
 
 
-    return {
+    function getOpponentLogo(game) {
 
-      team: teamScore,
+      const opponent = game.opponent_team || {};
 
-      opponent:
-        opponentScore
+      /*
+        Prefer our locally stored logo.
 
-    };
+        Example:
+        GRB Rays Illinois - Moore 12U
+        becomes:
+        logos/grb-rays-illinois-moore-12u.png
+      */
 
-  }
+      const slug = slugifyOpponent(opponent.name || "");
 
+      if (slug) {
 
-  /* =========================
-     RECORD
-  ========================== */
-
-  function calculateRecord(games) {
-
-    let wins = 0;
-
-    let losses = 0;
-
-    let ties = 0;
-
-
-    games.forEach(game => {
-
-
-      if (
-        game.game_status !==
-        "completed"
-      ) {
-
-        return;
-
-      }
-
-
-      const score =
-        getScore(game);
-
-
-      if (!score) {
-
-        return;
-
-      }
-
-
-      if (
-        score.team >
-        score.opponent
-      ) {
-
-        wins++;
-
-      }
-
-      else if (
-        score.team <
-        score.opponent
-      ) {
-
-        losses++;
-
-      }
-
-      else {
-
-        ties++;
-
-      }
-
-    });
-
-
-    return {
-
-      wins,
-      losses,
-      ties
-
-    };
-
-  }
-
-
-  /* =========================
-     GAME CARD
-  ========================== */
-
-  function createGameCard(
-    game,
-    resultMode = false
-  ) {
-
-
-    const date =
-      formatDate(game);
-
-
-    const card =
-      document.createElement(
-        "div"
-      );
-
-
-    card.className =
-      resultMode
-        ? "game result"
-        : "game";
-
-
-    let resultHTML = "";
-
-
-    if (resultMode) {
-
-
-      const score =
-        getScore(game);
-
-
-      if (score) {
-
-
-        let resultClass =
-          "result-tie";
-
-
-        let resultLetter =
-          "T";
-
-
-        if (
-          score.team >
-          score.opponent
-        ) {
-
-          resultClass =
-            "result-win";
-
-          resultLetter =
-            "W";
-
-        }
-
-
-        if (
-          score.team <
-          score.opponent
-        ) {
-
-          resultClass =
-            "result-loss";
-
-          resultLetter =
-            "L";
-
-        }
-
-
-        resultHTML = `
-
-          <div
-            class="result-score ${resultClass}"
+        return `
+          <img
+            src="logos/${slug}.png"
+            alt=""
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           >
-            ${resultLetter}
-            ${score.team}-${score.opponent}
-          </div>
-
+          <div class="placeholder" style="display:none;">⚾</div>
         `;
 
       }
 
+      return `<div class="placeholder">⚾</div>`;
+
     }
 
 
-    card.innerHTML = `
+    function getRecord(games) {
 
-      <div class="date">
+      let wins = 0;
+      let losses = 0;
+      let ties = 0;
 
-        <div class="month">
-          ${date.month}
-        </div>
+      games.forEach(game => {
 
-        <div class="day">
-          ${date.day}
-        </div>
+        if (game.game_status !== "completed") {
+          return;
+        }
 
-        <div class="weekday">
-          ${date.weekday}
-        </div>
+        if (!game.score) {
+          return;
+        }
 
-      </div>
+        const teamScore = Number(game.score.team);
+        const opponentScore = Number(game.score.opponent_team);
+
+        if (
+          Number.isNaN(teamScore) ||
+          Number.isNaN(opponentScore)
+        ) {
+          return;
+        }
+
+        if (teamScore > opponentScore) {
+          wins++;
+        }
+        else if (teamScore < opponentScore) {
+          losses++;
+        }
+        else {
+          ties++;
+        }
+
+      });
+
+      return {
+        wins,
+        losses,
+        ties
+      };
+
+    }
 
 
-      <div class="opponent">
+    function resultInfo(game) {
 
-        ${getLogo(game)}
-
-        <div>
-
-          <div class="opponent-name">
-            ${game.opponent_team?.name || "Opponent"}
-          </div>
-
-          <div class="home-away">
-            ${homeAway(game)}
-          </div>
-
-        </div>
-
-      </div>
-
-
-      ${
-        resultMode
-
-          ? resultHTML
-
-          : `
-            <div class="time">
-              ${date.time}
-            </div>
-          `
+      if (!game.score) {
+        return null;
       }
 
-    `;
+      const teamScore = Number(game.score.team);
+      const opponentScore = Number(game.score.opponent_team);
+
+      if (
+        Number.isNaN(teamScore) ||
+        Number.isNaN(opponentScore)
+      ) {
+        return null;
+      }
+
+      if (teamScore > opponentScore) {
+
+        return {
+          label: "W",
+          className: "result-win"
+        };
+
+      }
+
+      if (teamScore < opponentScore) {
+
+        return {
+          label: "L",
+          className: "result-loss"
+        };
+
+      }
+
+      return {
+        label: "T",
+        className: "result-tie"
+      };
+
+    }
 
 
-    return card;
+    /* =========================================================
+       NEXT GAME
+       ========================================================= */
 
-  }
+    function renderNextGame(game) {
 
+      const container = document.getElementById("nextGame");
 
-  /* =========================
-     NEXT GAME
-  ========================== */
+      if (!game) {
 
-  function createNextGame(game) {
+        document.getElementById("nextGameSection").style.display = "none";
 
+        return;
 
-    const container =
-      document.getElementById(
-        "next-game"
+      }
+
+      const formatted = formatDate(
+        game.start_ts,
+        game.timezone
       );
 
+      const time = formatTime(
+        game.start_ts,
+        game.timezone
+      );
 
-    const date =
-      formatDate(game);
+      const homeAway = homeAwayLabel(game);
 
+      const logo = getOpponentLogo(game);
 
-    container.innerHTML = `
+      container.innerHTML = `
 
-      <div class="next-game">
-
-
-        <div class="date">
+        <div class="next-game">
 
           <div class="next-label">
             Next Game
           </div>
 
-          <div class="month">
-            ${date.month}
-          </div>
+          <div class="next-date">
 
-          <div class="day">
-            ${date.day}
-          </div>
-
-          <div class="weekday">
-            ${date.weekday}
-          </div>
-
-        </div>
-
-
-        <div class="opponent">
-
-          ${getLogo(game)}
-
-          <div>
-
-            <div class="opponent-name">
-              ${game.opponent_team?.name || "Opponent"}
+            <div class="month">
+              ${formatted.month}
             </div>
 
-            <div class="home-away">
-              ${homeAway(game)}
+            <div class="day">
+              ${formatted.day}
+            </div>
+
+            <div class="weekday">
+              ${formatted.weekday}
             </div>
 
           </div>
 
-        </div>
+          <div class="next-opponent">
 
+            ${logo}
 
-        <div class="time">
-          ${date.time}
-        </div>
+            <div>
 
+              <div class="next-opponent-name">
+                ${game.opponent_team.name}
+              </div>
 
-      </div>
+              <div class="next-home-away">
+                ${homeAway}
+              </div>
 
-    `;
+            </div>
 
-  }
-
-
-  /* =========================
-     LOAD SCHEDULE
-  ========================== */
-
-  async function loadSchedule() {
-
-
-    try {
-
-
-      const response =
-        await fetch(
-          "schedule.json?v=" +
-          Date.now()
-        );
-
-
-      if (!response.ok) {
-
-        throw new Error(
-          "Unable to load schedule.json"
-        );
-
-      }
-
-
-      const games =
-        await response.json();
-
-
-      /* -------------------------
-         Sort games
-      ------------------------- */
-
-      games.sort(
-        (a, b) =>
-          getDate(a) -
-          getDate(b)
-      );
-
-
-      /* -------------------------
-         Record
-      ------------------------- */
-
-      const record =
-        calculateRecord(
-          games
-        );
-
-
-      document.getElementById(
-        "wins"
-      ).textContent =
-        record.wins;
-
-
-      document.getElementById(
-        "losses"
-      ).textContent =
-        record.losses;
-
-
-      document.getElementById(
-        "ties"
-      ).textContent =
-        record.ties;
-
-
-      /* -------------------------
-         Completed / upcoming
-      ------------------------- */
-
-      const completed =
-        games.filter(
-          game =>
-            game.game_status ===
-            "completed"
-        );
-
-
-      const upcoming =
-        games.filter(
-          game =>
-            game.game_status !==
-            "completed"
-        );
-
-
-      /* -------------------------
-         Next game
-      ------------------------- */
-
-      const nextGame =
-        upcoming.length > 0
-          ? upcoming[0]
-          : null;
-
-
-      if (nextGame) {
-
-        createNextGame(
-          nextGame
-        );
-
-      }
-
-      else {
-
-        document.getElementById(
-          "next-game"
-        ).innerHTML = `
-
-          <div class="empty">
-            No upcoming games scheduled.
           </div>
 
-        `;
-
-      }
-
-
-      /* -------------------------
-         Results
-      ------------------------- */
-
-      const resultsSection =
-        document.getElementById(
-          "results-section"
-        );
-
-
-      const resultsContainer =
-        document.getElementById(
-          "results"
-        );
-
-
-      if (
-        completed.length > 0
-      ) {
-
-
-        resultsSection.style.display =
-          "block";
-
-
-        document.getElementById(
-          "results-count"
-        ).textContent =
-          completed.length +
-          (
-            completed.length === 1
-              ? " Game"
-              : " Games"
-          );
-
-
-        resultsContainer.innerHTML =
-          "";
-
-
-        completed
-          .slice()
-          .reverse()
-          .forEach(
-            game => {
-
-              resultsContainer.appendChild(
-                createGameCard(
-                  game,
-                  true
-                )
-              );
-
-            }
-          );
-
-      }
-
-
-      /* -------------------------
-         Upcoming
-      ------------------------- */
-
-      const schedule =
-        document.getElementById(
-          "schedule"
-        );
-
-
-      const remainingUpcoming =
-        upcoming.slice(1);
-
-
-      document.getElementById(
-        "upcoming-count"
-      ).textContent =
-        upcoming.length +
-        (
-          upcoming.length === 1
-            ? " Game"
-            : " Games"
-        );
-
-
-      schedule.innerHTML =
-        "";
-
-
-      if (
-        remainingUpcoming.length === 0
-      ) {
-
-
-        schedule.innerHTML = `
-
-          <div class="empty">
-            No additional upcoming games scheduled.
+          <div class="next-time">
+            ${time}
           </div>
 
-        `;
-
-      }
-
-      else {
-
-
-        remainingUpcoming.forEach(
-          game => {
-
-            schedule.appendChild(
-              createGameCard(
-                game
-              )
-            );
-
-          }
-        );
-
-      }
-
-
-    }
-
-    catch (error) {
-
-
-      console.error(error);
-
-
-      document.getElementById(
-        "next-game"
-      ).innerHTML = `
-
-        <div class="error">
-          Unable to load the schedule right now.
         </div>
 
       `;
 
+    }
 
-      document.getElementById(
-        "schedule"
-      ).innerHTML =
-        "";
+
+    /* =========================================================
+       GAME CARD
+       ========================================================= */
+
+    function renderGame(game, completed) {
+
+      const formatted = formatDate(
+        game.start_ts,
+        game.timezone
+      );
+
+      const homeAway = homeAwayLabel(game);
+
+      const logo = getOpponentLogo(game);
+
+      let rightSide = "";
+
+      if (completed) {
+
+        const result = resultInfo(game);
+
+        if (result) {
+
+          rightSide = `
+
+            <div class="game-result">
+
+              <div class="result-score">
+                ${game.score.team}-${game.score.opponent_team}
+              </div>
+
+              <div class="result-label ${result.className}">
+                ${result.label}
+              </div>
+
+            </div>
+
+          `;
+
+        }
+
+      }
+      else {
+
+        rightSide = `
+
+          <div class="game-time">
+            ${formatTime(
+              game.start_ts,
+              game.timezone
+            )}
+          </div>
+
+        `;
+
+      }
+
+      return `
+
+        <div class="game">
+
+          <div class="game-date">
+
+            <div class="month">
+              ${formatted.month}
+            </div>
+
+            <div class="day">
+              ${formatted.day}
+            </div>
+
+            <div class="weekday">
+              ${formatted.weekday}
+            </div>
+
+          </div>
+
+          <div class="game-opponent">
+
+            ${logo}
+
+            <div>
+
+              <div class="opponent-name">
+                ${game.opponent_team.name}
+              </div>
+
+              <div class="home-away">
+                ${homeAway}
+              </div>
+
+            </div>
+
+          </div>
+
+          ${rightSide}
+
+        </div>
+
+      `;
 
     }
 
-  }
+
+    /* =========================================================
+       MAIN
+       ========================================================= */
+
+    async function loadTeam() {
+
+      const teamKey = getTeamKey();
+
+      const team = COBRAS_TEAMS[teamKey];
+
+      if (!team) {
+
+        document.body.innerHTML = `
+
+          <div class="page">
+
+            <div class="error">
+
+              <strong>Team not found.</strong>
+
+              <br><br>
+
+              The team "${teamKey}" does not exist in config.js.
+
+              <br><br>
+
+              <a href="index.html">
+                Return to Cobras Organization
+              </a>
+
+            </div>
+
+          </div>
+
+        `;
+
+        return;
+
+      }
 
 
-  loadSchedule();
+      /* =========================
+         BASIC TEAM INFORMATION
+         ========================= */
 
-</script>
+      document.title =
+        `McHenry Cobras ${team.name}`;
+
+
+      document.getElementById("teamName").textContent =
+        `McHenry Cobras ${team.name}`;
+
+
+      document.getElementById("season").textContent =
+        team.season;
+
+
+      document.getElementById("infoTeam").textContent =
+        `McHenry Cobras ${team.name}`;
+
+
+      document.getElementById("infoSeason").textContent =
+        team.season + " · Baseball";
+
+
+      const coaches = [
+        team.headCoach,
+        ...(team.assistantCoaches || [])
+      ].filter(Boolean);
+
+
+      document.getElementById("infoCoaches").textContent =
+        coaches.join(" · ");
+
+
+      /* =========================
+         GAMECHANGER LINK
+         ========================= */
+
+      const gameChangerLink =
+        document.getElementById("gameChangerLink");
+
+      if (team.gameChangerTeamId) {
+
+        gameChangerLink.href =
+          `https://web.gc.com/teams/${team.gameChangerTeamId}`;
+
+      }
+      else {
+
+        gameChangerLink.style.display = "none";
+
+      }
+
+
+      /* =========================
+         LOAD SCHEDULE
+         ========================= */
+
+      try {
+
+        const response = await fetch(
+          `schedules/${teamKey}.json?v=${Date.now()}`
+        );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            `Unable to load schedules/${teamKey}.json`
+          );
+
+        }
+
+
+        const games = await response.json();
+
+
+        /* =========================
+           RECORD
+           ========================= */
+
+        const record = getRecord(games);
+
+
+        document.getElementById("wins").textContent =
+          record.wins;
+
+        document.getElementById("losses").textContent =
+          record.losses;
+
+        document.getElementById("ties").textContent =
+          record.ties;
+
+
+        /* =========================
+           ROSTER
+           ========================= */
+
+        /*
+          The schedule API does not currently
+          contain roster information.
+
+          If a future API response provides it,
+          this can be populated automatically.
+        */
+
+        document.getElementById("infoRoster").textContent =
+          "Roster";
+
+
+        /* =========================
+           SPLIT GAMES
+           ========================= */
+
+        const completedGames = games
+          .filter(game =>
+            game.game_status === "completed"
+          )
+          .sort((a, b) =>
+            new Date(b.start_ts) -
+            new Date(a.start_ts)
+          );
+
+
+        const upcomingGames = games
+          .filter(game =>
+            game.game_status !== "completed"
+          )
+          .sort((a, b) =>
+            new Date(a.start_ts) -
+            new Date(b.start_ts)
+          );
+
+
+        /* =========================
+           NEXT GAME
+           ========================= */
+
+        renderNextGame(
+          upcomingGames.length
+            ? upcomingGames[0]
+            : null
+        );
+
+
+        /*
+          Remove the next game from the
+          upcoming list because it is already
+          displayed prominently above.
+        */
+
+        const remainingUpcoming =
+          upcomingGames.slice(1);
+
+
+        /* =========================
+           RECENT RESULTS
+           ========================= */
+
+        const resultsContainer =
+          document.getElementById("results");
+
+
+        document.getElementById("resultsCount")
+          .textContent =
+          `${completedGames.length} ${
+            completedGames.length === 1
+              ? "Game"
+              : "Games"
+          }`;
+
+
+        if (!completedGames.length) {
+
+          resultsContainer.innerHTML = `
+
+            <div class="empty">
+              No completed games yet.
+            </div>
+
+          `;
+
+        }
+        else {
+
+          resultsContainer.innerHTML =
+            completedGames
+              .map(game =>
+                renderGame(game, true)
+              )
+              .join("");
+
+        }
+
+
+        /* =========================
+           UPCOMING
+           ========================= */
+
+        const upcomingContainer =
+          document.getElementById("upcoming");
+
+
+        document.getElementById("upcomingCount")
+          .textContent =
+          `${remainingUpcoming.length} ${
+            remainingUpcoming.length === 1
+              ? "Game"
+              : "Games"
+          }`;
+
+
+        if (!remainingUpcoming.length) {
+
+          upcomingContainer.innerHTML = `
+
+            <div class="empty">
+              No upcoming games scheduled.
+            </div>
+
+          `;
+
+        }
+        else {
+
+          upcomingContainer.innerHTML =
+            remainingUpcoming
+              .map(game =>
+                renderGame(game, false)
+              )
+              .join("");
+
+        }
+
+
+      }
+      catch (error) {
+
+        console.error(error);
+
+        document.getElementById("nextGame")
+          .innerHTML = `
+
+            <div class="error">
+              Unable to load the team schedule.
+            </div>
+
+          `;
+
+        document.getElementById("results")
+          .innerHTML = "";
+
+        document.getElementById("upcoming")
+          .innerHTML = "";
+
+      }
+
+    }
+
+
+    loadTeam();
+
+  </script>
 
 </body>
 </html>
