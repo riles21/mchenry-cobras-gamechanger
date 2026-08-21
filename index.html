@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -14,12 +13,6 @@
 
   <style>
 
-    :root {
-      --cobras-orange: #ff5a00;
-      --cobras-black: #111111;
-      --content-width: 1180px;
-    }
-
     * {
       box-sizing: border-box;
     }
@@ -30,29 +23,33 @@
       padding: 0;
       width: 100%;
       background: #ffffff;
-      color: #111111;
       font-family: Arial, Helvetica, sans-serif;
+      color: #111111;
     }
 
     body {
       overflow-x: hidden;
     }
 
-    /* =====================================================
-       MAIN PAGE
-       ===================================================== */
+    :root {
+      --orange: #ff5a00;
+    }
+
+    /* ==========================================
+       PAGE
+       ========================================== */
 
     .page {
       width: 100%;
-      max-width: var(--content-width);
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 10px 12px 50px;
+      padding: 10px 12px 40px;
     }
 
 
-    /* =====================================================
+    /* ==========================================
        COBRAS HEADER
-       ===================================================== */
+       ========================================== */
 
     .team-header {
       width: 100%;
@@ -78,26 +75,21 @@
 
     .season {
       margin-top: 3px;
-
       color: #666666;
-
       font-size: 16px;
-      line-height: 1.2;
     }
 
     .orange-line {
       width: 100%;
       height: 3px;
-
       margin: 12px auto 20px;
-
-      background: var(--cobras-orange);
+      background: var(--orange);
     }
 
 
-    /* =====================================================
+    /* ==========================================
        COACHING STAFF
-       ===================================================== */
+       ========================================== */
 
     .staff-section {
       width: 100%;
@@ -108,23 +100,19 @@
       margin: 0 0 18px;
 
       font-size: clamp(21px, 2.2vw, 28px);
-      line-height: 1.1;
-
+      font-weight: 700;
       letter-spacing: 0.5px;
     }
 
     .staff-grid {
       display: flex;
-
       justify-content: center;
       align-items: flex-start;
-
       flex-wrap: wrap;
 
-      gap: 35px 80px;
+      gap: 30px 75px;
 
       width: 100%;
-
       margin: 0 auto 20px;
     }
 
@@ -135,21 +123,19 @@
 
     .coach-name {
       margin-bottom: 3px;
-
       font-size: 17px;
       font-weight: 700;
     }
 
     .coach-role {
       color: #777777;
-
       font-size: 14px;
     }
 
 
-    /* =====================================================
+    /* ==========================================
        GAMECHANGER BUTTON
-       ===================================================== */
+       ========================================== */
 
     .gamechanger-button {
       display: inline-block;
@@ -157,7 +143,7 @@
       margin: 0 auto 20px;
       padding: 12px 22px;
 
-      background: var(--cobras-orange);
+      background: var(--orange);
       color: #ffffff;
 
       border-radius: 4px;
@@ -166,29 +152,20 @@
 
       font-size: 14px;
       font-weight: 700;
-
-      transition:
-        background-color 0.15s ease,
-        transform 0.15s ease;
     }
 
     .gamechanger-button:hover {
       background: #e84f00;
-
-      transform: translateY(-1px);
     }
 
 
-    /* =====================================================
-       GAMECHANGER AREA
-       ===================================================== */
+    /* ==========================================
+       GAMECHANGER
+       ========================================== */
 
     .gamechanger-section {
       width: 100%;
-
       margin: 0 auto;
-
-      overflow: visible;
     }
 
     .gamechanger-title {
@@ -196,104 +173,53 @@
 
       padding: 9px 10px;
 
-      background: var(--cobras-orange);
+      background: var(--orange);
       color: #ffffff;
 
       text-align: center;
 
       font-size: 17px;
       font-weight: 700;
-
-      line-height: 1.2;
     }
 
     /*
-      This is the actual GameChanger widget container.
+      IMPORTANT:
 
-      We deliberately do NOT put overflow:hidden on this
-      element because GameChanger needs to control its
-      own internal layout.
+      Do NOT put overflow:hidden on the GameChanger
+      widget itself.
+
+      GameChanger creates its own content inside this
+      container.
     */
 
-    #gc-schedule-widget {
+    #gc-scoreboard-widget {
       width: 100%;
-
       min-height: 400px;
-
-      margin: 0;
-      padding: 0;
     }
 
-
-    /* =====================================================
-       LOADING / ERROR MESSAGE
-       ===================================================== */
-
-    .gc-message {
-      width: 100%;
-
+    .message {
       padding: 30px;
-
       border: 1px solid #dddddd;
-
       background: #fafafa;
-
       color: #666666;
-
       text-align: center;
-
       font-size: 14px;
     }
 
 
-    /* =====================================================
-       RESPONSIVE
-       ===================================================== */
+    /* ==========================================
+       MOBILE
+       ========================================== */
 
-    @media (max-width: 900px) {
-
-      .page {
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-
-      .cobras-banner {
-        max-width: 100%;
-      }
-
-      .staff-grid {
-        gap: 25px 45px;
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
       .page {
         padding-left: 5px;
         padding-right: 5px;
       }
 
-      .team-name {
-        font-size: 26px;
-      }
-
-      .season {
-        font-size: 14px;
-      }
-
-      .orange-line {
-        margin-top: 10px;
-        margin-bottom: 16px;
-      }
-
-      .section-title {
-        font-size: 21px;
-      }
-
       .staff-grid {
-        gap: 20px;
+        gap: 20px 35px;
       }
 
       .coach {
@@ -308,16 +234,6 @@
         font-size: 12px;
       }
 
-      .gamechanger-button {
-        padding: 10px 15px;
-
-        font-size: 12px;
-      }
-
-      .gamechanger-title {
-        font-size: 15px;
-      }
-
     }
 
   </style>
@@ -327,13 +243,12 @@
 
 <body>
 
-
   <main class="page">
 
 
-    <!-- =================================================
+    <!-- ========================================
          COBRAS HEADER
-         ================================================= -->
+         ======================================== -->
 
     <header class="team-header">
 
@@ -360,9 +275,9 @@
     </header>
 
 
-    <!-- =================================================
+    <!-- ========================================
          COACHING STAFF
-         ================================================= -->
+         ======================================== -->
 
     <section class="staff-section">
 
@@ -390,9 +305,9 @@
     </section>
 
 
-    <!-- =================================================
+    <!-- ========================================
          GAMECHANGER
-         ================================================= -->
+         ======================================== -->
 
     <section class="gamechanger-section">
 
@@ -401,11 +316,11 @@
       </div>
 
 
-      <div id="gc-schedule-widget">
+      <div id="gc-scoreboard-widget">
 
         <div
-          class="gc-message"
-          id="loadingMessage">
+          id="loadingMessage"
+          class="message">
 
           Loading GameChanger...
 
@@ -419,23 +334,25 @@
   </main>
 
 
-  <!-- ===================================================
-       COBRAS TEAM CONFIG
-       =================================================== -->
+  <!-- ==========================================
+       COBRAS CONFIG
+       ========================================== -->
 
   <script src="config.js?v=20260820"></script>
 
 
-  <!-- ===================================================
+  <!-- ==========================================
        GAMECHANGER SDK
-       =================================================== -->
+       ========================================== -->
 
-  <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+  <script
+    src="https://widgets.gc.com/static/js/sdk.v1.js">
+  </script>
 
 
-  <!-- ===================================================
+  <!-- ==========================================
        PAGE JAVASCRIPT
-       =================================================== -->
+       ========================================== -->
 
   <script>
 
@@ -444,9 +361,9 @@
       "use strict";
 
 
-      /* =================================================
-         READ TEAM FROM URL
-         ================================================= */
+      /* ========================================
+         GET TEAM FROM URL
+         ======================================== */
 
       const params =
         new URLSearchParams(
@@ -457,15 +374,15 @@
         params.get("team") || "lorenz12u";
 
 
-      /* =================================================
+      /* ========================================
          CHECK CONFIG
-         ================================================= */
+         ======================================== */
 
       if (
         typeof COBRAS_TEAMS === "undefined"
       ) {
 
-        showConfigurationError(
+        showError(
           "config.js could not be loaded."
         );
 
@@ -479,18 +396,17 @@
 
       if (!team) {
 
-        showConfigurationError(
-          "No configuration exists for team: " +
-          teamKey
+        showError(
+          "Team configuration not found."
         );
 
         return;
       }
 
 
-      /* =================================================
+      /* ========================================
          TEAM NAME
-         ================================================= */
+         ======================================== */
 
       document.getElementById(
         "teamName"
@@ -498,9 +414,9 @@
         team.name || "McHenry Cobras";
 
 
-      /* =================================================
+      /* ========================================
          SEASON
-         ================================================= */
+         ======================================== */
 
       document.getElementById(
         "season"
@@ -508,70 +424,108 @@
         team.season || "";
 
 
-      /* =================================================
+      /* ========================================
          COACHING STAFF
-         ================================================= */
+         ======================================== */
 
-      renderCoaches(team);
-
-
-      /* =================================================
-         GAMECHANGER TEAM LINK
-         ================================================= */
-
-      setupGameChangerLink(team);
+      renderStaff(team);
 
 
-      /* =================================================
+      /* ========================================
+         GAMECHANGER LINK
+         ======================================== */
+
+      const gcLink =
+        document.getElementById(
+          "gamechangerLink"
+        );
+
+
+      if (team.gameChangerTeamId) {
+
+        gcLink.href =
+          "https://web.gc.com/teams/" +
+          encodeURIComponent(
+            team.gameChangerTeamId
+          );
+
+      }
+      else {
+
+        gcLink.style.display = "none";
+
+      }
+
+
+      /* ========================================
          GAMECHANGER WIDGET
-         ================================================= */
+         ======================================== */
 
-      loadGameChanger(team);
+      if (
+        team.gameChangerWidgetId &&
+        team.gameChangerWidgetId.trim() !== ""
+      ) {
 
+        initializeGameChanger(
+          team.gameChangerWidgetId
+        );
 
-    })();
+      }
+      else {
 
-
-    /* =====================================================
-       RENDER COACHES
-       ===================================================== */
-
-    function renderCoaches(team) {
-
-      const staff =
-        document.getElementById("staff");
-
-      let html = "";
-
-
-      /* -------------------------------------------------
-         HEAD COACH
-         ------------------------------------------------- */
-
-      if (team.headCoach) {
-
-        html +=
-          '<div class="coach">' +
-
-            '<div class="coach-name">' +
-              escapeHTML(team.headCoach) +
-            '</div>' +
-
-            '<div class="coach-role">' +
-              'Head Coach' +
-            '</div>' +
-
+        document.getElementById(
+          "gc-scoreboard-widget"
+        ).innerHTML =
+          '<div class="message">' +
+          '<strong>' +
+          'GameChanger schedule coming soon' +
+          '</strong>' +
+          '<br><br>' +
+          'The GameChanger widget ID has not ' +
+          'been added for this team yet.' +
           '</div>';
 
       }
 
 
-      /* -------------------------------------------------
-         ASSISTANT COACHES
-         ------------------------------------------------- */
+    })();
+
+
+    /* ==========================================
+       STAFF
+       ========================================== */
+
+    function renderStaff(team) {
+
+      const staff =
+        document.getElementById(
+          "staff"
+        );
+
+      let html = "";
+
+
+      if (team.headCoach) {
+
+        html +=
+          '<div class="coach">' +
+            '<div class="coach-name">' +
+              escapeHTML(
+                team.headCoach
+              ) +
+            '</div>' +
+            '<div class="coach-role">' +
+              'Head Coach' +
+            '</div>' +
+          '</div>';
+
+      }
+
 
       if (
-        Array.isArray(team.assistantCoaches)
+        Array.isArray(
+          team.assistantCoaches
+        )
       ) {
 
         team.assistantCoaches.forEach(
@@ -583,15 +537,12 @@
 
             html +=
               '<div class="coach">' +
-
                 '<div class="coach-name">' +
                   escapeHTML(coach) +
                 '</div>' +
-
                 '<div class="coach-role">' +
                   'Assistant Coach' +
                 '</div>' +
-
               '</div>';
 
           }
@@ -600,103 +551,19 @@
       }
 
 
-      staff.innerHTML = html;
+      staff.innerHTML =
+        html;
 
     }
 
 
-    /* =====================================================
-       GAMECHANGER LINK
-       ===================================================== */
+    /* ==========================================
+       GAMECHANGER INITIALIZATION
+       ========================================== */
 
-    function setupGameChangerLink(team) {
-
-      const link =
-        document.getElementById(
-          "gamechangerLink"
-        );
-
-
-      if (
-        team.gameChangerTeamId
-      ) {
-
-        link.href =
-          "https://web.gc.com/teams/" +
-          encodeURIComponent(
-            team.gameChangerTeamId
-          );
-
-      } else {
-
-        link.style.display =
-          "none";
-
-      }
-
-    }
-
-
-    /* =====================================================
-       LOAD GAMECHANGER
-       ===================================================== */
-
-    function loadGameChanger(team) {
-
-      const container =
-        document.getElementById(
-          "gc-schedule-widget"
-        );
-
-
-      /* -------------------------------------------------
-         NO WIDGET ID
-         ------------------------------------------------- */
-
-      if (
-        !team.gameChangerWidgetId ||
-        team.gameChangerWidgetId.trim() === ""
-      ) {
-
-        container.innerHTML =
-          '<div class="gc-message">' +
-
-            '<strong>' +
-              'GameChanger schedule coming soon' +
-            '</strong>' +
-
-            '<br><br>' +
-
-            'The GameChanger widget ID has not been ' +
-            'added for this team yet.' +
-
-          '</div>';
-
-        return;
-
-      }
-
-
-      /*
-        The GameChanger SDK should already be loaded
-        because the script tag appears above this script.
-
-        We wait until window.GC.team.schedule.init
-        is available before initializing.
-      */
-
-      waitForGameChanger(
-        team.gameChangerWidgetId
-      );
-
-    }
-
-
-    /* =====================================================
-       WAIT FOR GAMECHANGER SDK
-       ===================================================== */
-
-    function waitForGameChanger(widgetId) {
+    function initializeGameChanger(
+      widgetId
+    ) {
 
       let attempts = 0;
 
@@ -711,42 +578,62 @@
 
 
             /*
-              Make sure the expected GameChanger
-              namespace exists.
+              THIS IS THE IMPORTANT PART.
+
+              Your Riley UUID is being treated as a
+              GameChanger SCOREBOARD widget.
+
+              This is the API that previously worked.
             */
 
             if (
               window.GC &&
-              window.GC.team &&
-              window.GC.team.schedule &&
+              window.GC.scoreboard &&
               typeof
-                window.GC.team.schedule.init ===
+                window.GC.scoreboard.init ===
                   "function"
             ) {
 
               clearInterval(timer);
 
 
-              initializeGameChanger(
-                widgetId
-              );
+              try {
+
+                window.GC.scoreboard.init({
+
+                  target:
+                    "#gc-scoreboard-widget",
+
+                  widgetId:
+                    widgetId,
+
+                  maxVerticalGamesVisible:
+                    6
+
+                });
+
+              }
+              catch (error) {
+
+                console.error(
+                  "GameChanger error:",
+                  error
+                );
+
+                showGameChangerError();
+
+              }
 
               return;
 
             }
 
 
-            /*
-              Stop waiting after approximately
-              10 seconds.
-            */
-
             if (
               attempts >= maxAttempts
             ) {
 
               clearInterval(timer);
-
 
               showGameChangerError();
 
@@ -759,101 +646,31 @@
     }
 
 
-    /* =====================================================
-       INITIALIZE GAMECHANGER TEAM SCHEDULE
-       ===================================================== */
-
-    function initializeGameChanger(widgetId) {
-
-      const container =
-        document.getElementById(
-          "gc-schedule-widget"
-        );
-
-
-      /*
-        Clear the loading message.
-      */
-
-      container.innerHTML = "";
-
-
-      /*
-        IMPORTANT:
-
-        This is the current GameChanger team
-        schedule widget initialization method.
-
-        DO NOT change this to:
-          GC.scoreboard.init()
-
-        The correct namespace is:
-          GC.team.schedule.init()
-      */
-
-      try {
-
-        window.GC.team.schedule.init({
-
-          target:
-            "#gc-schedule-widget",
-
-          widgetId:
-            widgetId,
-
-          maxVerticalGamesVisible:
-            6
-
-        });
-
-      }
-      catch (error) {
-
-        console.error(
-          "GameChanger initialization error:",
-          error
-        );
-
-        showGameChangerError();
-
-      }
-
-    }
-
-
-    /* =====================================================
+    /* ==========================================
        GAMECHANGER ERROR
-       ===================================================== */
+       ========================================== */
 
     function showGameChangerError() {
 
-      const container =
-        document.getElementById(
-          "gc-schedule-widget"
-        );
-
-
-      container.innerHTML =
-        '<div class="gc-message">' +
-
-          '<strong>' +
-            'Unable to load GameChanger.' +
-          '</strong>' +
-
-          '<br><br>' +
-
-          'Please refresh the page and try again.' +
-
+      document.getElementById(
+        "gc-scoreboard-widget"
+      ).innerHTML =
+        '<div class="message">' +
+        '<strong>' +
+        'Unable to load GameChanger.' +
+        '</strong>' +
+        '<br><br>' +
+        'Please refresh the page and try again.' +
         '</div>';
 
     }
 
 
-    /* =====================================================
-       CONFIGURATION ERROR
-       ===================================================== */
+    /* ==========================================
+       CONFIG ERROR
+       ========================================== */
 
-    function showConfigurationError(message) {
+    function showError(message) {
 
       document.getElementById(
         "teamName"
@@ -864,22 +681,14 @@
       document.getElementById(
         "season"
       ).textContent =
-        "Team configuration unavailable";
+        "Configuration Error";
 
 
       document.getElementById(
         "staff"
       ).innerHTML =
-        '<div class="gc-message">' +
-
-          '<strong>' +
-            'Team configuration unavailable' +
-          '</strong>' +
-
-          '<br><br>' +
-
-          escapeHTML(message) +
-
+        '<div class="message">' +
+        escapeHTML(message) +
         '</div>';
 
 
@@ -890,50 +699,27 @@
 
 
       document.getElementById(
-        "gc-schedule-widget"
+        "gc-scoreboard-widget"
       ).innerHTML =
-        '<div class="gc-message">' +
-
-          'Please check that config.js is uploaded ' +
-          'correctly.' +
-
+        '<div class="message">' +
+        'Please check config.js.' +
         '</div>';
 
     }
 
 
-    /* =====================================================
-       HTML ESCAPE
-       ===================================================== */
+    /* ==========================================
+       ESCAPE HTML
+       ========================================== */
 
     function escapeHTML(value) {
 
       return String(value)
-
-        .replace(
-          /&/g,
-          "&amp;"
-        )
-
-        .replace(
-          /</g,
-          "&lt;"
-        )
-
-        .replace(
-          />/g,
-          "&gt;"
-        )
-
-        .replace(
-          /"/g,
-          "&quot;"
-        )
-
-        .replace(
-          /'/g,
-          "&#039;"
-        );
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
     }
 
