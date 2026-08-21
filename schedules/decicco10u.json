@@ -1,689 +1,143 @@
 [
   {
-    "id": "aa548e3c-67c6-4505-9175-f2de91123e12",
+    "id": "83c18318-19fb-45a6-8286-32937e270604",
     "opponent_team": {
-      "name": "Grayslake Sliders 9U",
-      "avatar_url": "logos/cache/2afe93f58824d78b.jpg"
+      "name": "SBA Raiders 10U",
+      "avatar_url": "logos/cache/442e61a41d08ce1f.jpg"
     },
     "is_full_day": false,
-    "start_ts": "2026-04-11T20:00:00.000Z",
-    "end_ts": "2026-04-11T22:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 9,
-      "opponent_team": 9
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "1333000c-1e74-46c8-b135-4d574fe5243c",
-    "opponent_team": {
-      "name": "Ironmen 9U 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-14T22:30:00.000Z",
-    "end_ts": "2026-04-15T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 14,
-      "opponent_team": 4
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "94c8b9f0-b0c2-4c12-aef0-cf8a4aa1e699",
-    "opponent_team": {
-      "name": "GTS 9U",
-      "avatar_url": "logos/cache/bc81a05cf4fe785f.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-17T23:00:00.000Z",
-    "end_ts": "2026-04-18T01:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 3,
-      "opponent_team": 4
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "726fa23c-8a62-40e8-86b2-07ccf2ac91e1",
-    "opponent_team": {
-      "name": "SBA Raiders 9U",
-      "avatar_url": "logos/cache/b23ab01cbc644f4e.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-18T14:50:00.000Z",
-    "end_ts": "2026-04-18T16:50:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 5,
-      "opponent_team": 9
-    },
-    "game_status": "completed",
-    "has_videos_available": false,
-    "has_live_stream": false
-  },
-  {
-    "id": "5ccedd97-70e3-410a-8789-1fd74b53fbaf",
-    "opponent_team": {
-      "name": "Barrington"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-19T17:00:00.000Z",
-    "end_ts": "2026-04-19T18:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 5,
-      "opponent_team": 13
-    },
-    "game_status": "completed",
-    "has_videos_available": false,
-    "has_live_stream": false
-  },
-  {
-    "id": "c8c127af-7106-4fc0-9252-a98b779d14b2",
-    "opponent_team": {
-      "name": "SBA Raiders 9U",
-      "avatar_url": "logos/cache/b23ab01cbc644f4e.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-22T22:30:00.000Z",
-    "end_ts": "2026-04-23T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 5,
-      "opponent_team": 9
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "f43e4fde-d0b2-4eb3-8bca-2b3a7cde2430",
-    "opponent_team": {
-      "name": "Northwest Travelers - 9U Gold",
-      "avatar_url": "logos/cache/848720524407b5b7.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-25T15:00:00.000Z",
-    "end_ts": "2026-04-25T17:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 8,
-      "opponent_team": 4
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "ec8e3037-bfa1-4087-9c45-e4c760bd76b8",
-    "opponent_team": {
-      "name": "9U Wauconda Wreckers - Super",
-      "avatar_url": "logos/cache/a13380afd377e52e.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-25T19:00:00.000Z",
-    "end_ts": "2026-04-25T21:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 2,
-      "opponent_team": 15
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "aac0fcd5-30b4-4c36-9833-5a769e39cf80",
-    "opponent_team": {
-      "name": "Cary Trojans 9U",
-      "avatar_url": "logos/cache/6a8617d87912f6ea.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-26T13:00:00.000Z",
-    "end_ts": "2026-04-26T15:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 12,
-      "opponent_team": 7
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "67539790-62f1-41c2-8bb9-110917795409",
-    "opponent_team": {
-      "name": "Cougars 9U",
-      "avatar_url": "logos/cache/e5758bb280434063.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-26T17:00:00.000Z",
-    "end_ts": "2026-04-26T18:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 9,
-      "opponent_team": 11
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "82a28996-7e56-446c-9df7-051f815aeb4b",
-    "opponent_team": {
-      "name": "GRB RAYS ILLINOIS - BURKE 9U",
-      "avatar_url": "logos/cache/9c5990e2cd2bf2af.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-28T22:30:00.000Z",
-    "end_ts": "2026-04-29T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 14,
-      "opponent_team": 4
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "4b79dd5c-a2a9-49f2-bcd2-80cc8b59d238",
-    "opponent_team": {
-      "name": "Woodstock Heat 9U",
-      "avatar_url": "logos/cache/ffa967b11bbaa7c1.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-04-30T22:30:00.000Z",
-    "end_ts": "2026-05-01T00:30:00.000Z",
+    "start_ts": "2026-08-30T16:00:00.000Z",
+    "end_ts": "2026-08-30T17:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
   },
   {
-    "id": "72141fe6-5933-4c36-876e-f38e3ee2de6f",
+    "id": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
     "opponent_team": {
-      "name": "Ironmen 9U 9U"
+      "name": "Grayslake Coyotes 10U",
+      "avatar_url": "logos/cache/958f625abba1d3e9.jpg"
     },
     "is_full_day": false,
-    "start_ts": "2026-05-05T22:30:00.000Z",
-    "end_ts": "2026-05-06T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 16,
-      "opponent_team": 14
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "5c0609a8-0039-463d-bb50-e138736c982a",
-    "opponent_team": {
-      "name": "Elkhorn Xtreme 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-05-09T14:00:00.000Z",
-    "end_ts": "2026-05-09T16:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 13,
-      "opponent_team": 2
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "4a234d19-e87e-4d5e-b6f3-a0f81a43c6d6",
-    "opponent_team": {
-      "name": "2026 Huntley 47s 9U",
-      "avatar_url": "logos/cache/d0639c0e00e0a36c.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-05-09T16:00:00.000Z",
-    "end_ts": "2026-05-09T18:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 8,
-      "opponent_team": 5
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "f17216d4-1539-49da-938b-8917de5175c0",
-    "opponent_team": {
-      "name": "2026 Huntley 47s 9U",
-      "avatar_url": "logos/cache/d0639c0e00e0a36c.jpg"
-    },
-    "is_full_day": true,
-    "start_ts": "2026-05-10T00:00:00.000Z",
-    "end_ts": "2026-05-11T00:00:00.000Z",
-    "timezone": null,
-    "home_away": "home",
-    "score": {
-      "team": 8,
-      "opponent_team": 0
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "3c46575a-9c7b-4aba-9590-7727aaf39acd",
-    "opponent_team": {
-      "name": "Jr Badgers 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-05-10T19:00:00.000Z",
-    "end_ts": "2026-05-10T20:00:00.000Z",
+    "start_ts": "2026-09-03T00:00:00.000Z",
+    "end_ts": "2026-09-03T01:30:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
-    "score": {
-      "team": 5,
-      "opponent_team": 8
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "3148477f-4b3d-4274-bd74-02d7c5f352d1",
-    "opponent_team": {
-      "name": "GRB RAYS ILLINOIS - BURKE 9U",
-      "avatar_url": "logos/cache/9c5990e2cd2bf2af.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-05-12T22:30:00.000Z",
-    "end_ts": "2026-05-13T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 7,
-      "opponent_team": 19
-    },
-    "game_status": "completed",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
   },
   {
-    "id": "e41e9ff4-2c41-4378-b675-3e556737bd3e",
+    "id": "b4edf409-d335-40c0-9727-a7f4b72183fb",
     "opponent_team": {
-      "name": "Woodstock Heat 9U",
-      "avatar_url": "logos/cache/ffa967b11bbaa7c1.jpg"
+      "name": "Cary Trojans 10U"
     },
     "is_full_day": false,
-    "start_ts": "2026-05-14T23:00:00.000Z",
-    "end_ts": "2026-05-15T01:00:00.000Z",
+    "start_ts": "2026-09-04T22:30:00.000Z",
+    "end_ts": "2026-09-05T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
+  },
+  {
+    "id": "9e0d1ee8-b25f-4072-9d03-5c15e1d177b0",
+    "opponent_team": {
+      "name": "Ironman- Nisenson 10U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-06T17:00:00.000Z",
+    "end_ts": "2026-09-06T19:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
-    "score": {
-      "team": 12,
-      "opponent_team": 12
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
   },
   {
-    "id": "93154345-cdc1-4b31-9717-ee82d02e0e69",
+    "id": "ba903b67-c281-4478-9044-5affd5b3dbd9",
     "opponent_team": {
-      "name": "SBA Raiders 9U",
-      "avatar_url": "logos/cache/b23ab01cbc644f4e.jpg"
+      "name": "Grayslake Sliders 10U",
+      "avatar_url": "logos/cache/ec8e6bcc4ff12166.jpg"
     },
     "is_full_day": false,
-    "start_ts": "2026-05-19T22:30:00.000Z",
-    "end_ts": "2026-05-20T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 6,
-      "opponent_team": 10
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "5f9404f3-aca2-4442-b8da-1dbff66e2e1b",
-    "opponent_team": {
-      "name": "9U Wauconda Wreckers - Super",
-      "avatar_url": "logos/cache/a13380afd377e52e.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-05-21T22:30:00.000Z",
-    "end_ts": "2026-05-22T00:30:00.000Z",
+    "start_ts": "2026-09-13T15:00:00.000Z",
+    "end_ts": "2026-09-13T17:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
-    "score": {
-      "team": 9,
-      "opponent_team": 19
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
   },
   {
-    "id": "9dfc79ee-ef91-4646-820c-165b197b743b",
+    "id": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
     "opponent_team": {
-      "name": "Windy City Hit Dogs 9U Wintersdorf",
-      "avatar_url": "logos/cache/62c290645e4d6940.jpg"
+      "name": "Elite NW 10U Wintersdorf",
+      "avatar_url": "logos/cache/065a6f63d31ea000.jpg"
     },
     "is_full_day": false,
-    "start_ts": "2026-05-26T22:30:00.000Z",
-    "end_ts": "2026-05-27T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 10,
-      "opponent_team": 7
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "b0b417f3-e7ec-465d-a8c2-2cfc3effdc17",
-    "opponent_team": {
-      "name": "Ironmen 9U 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-05-27T22:30:00.000Z",
-    "end_ts": "2026-05-28T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 8,
-      "opponent_team": 12
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "6f527fc5-3ddf-442f-96f0-6e0eac8f181d",
-    "opponent_team": {
-      "name": "Woodstock Heat 9U",
-      "avatar_url": "logos/cache/ffa967b11bbaa7c1.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-05-31T15:00:00.000Z",
-    "end_ts": "2026-05-31T17:00:00.000Z",
+    "start_ts": "2026-09-20T19:00:00.000Z",
+    "end_ts": "2026-09-20T21:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
-    "score": {
-      "team": 13,
-      "opponent_team": 12
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
   },
   {
-    "id": "880b56e2-d0e0-423b-bba7-cce09d483d00",
+    "id": "eceb4335-36c3-4b63-a277-b64f824ad009",
     "opponent_team": {
-      "name": "SBA Raiders 9U",
-      "avatar_url": "logos/cache/b23ab01cbc644f4e.jpg"
+      "name": "Elite NW 10U Wintersdorf",
+      "avatar_url": "logos/cache/065a6f63d31ea000.jpg"
     },
     "is_full_day": false,
-    "start_ts": "2026-06-03T22:30:00.000Z",
-    "end_ts": "2026-06-04T00:30:00.000Z",
+    "start_ts": "2026-09-23T22:30:00.000Z",
+    "end_ts": "2026-09-24T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
+  },
+  {
+    "id": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
+    "opponent_team": {
+      "name": "Grayslake Coyotes 10U",
+      "avatar_url": "logos/cache/958f625abba1d3e9.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-27T20:00:00.000Z",
+    "end_ts": "2026-09-27T22:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
-    "score": {
-      "team": 10,
-      "opponent_team": 11
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
   },
   {
-    "id": "10c28360-c8ec-4ff8-974a-dbb8f368f5fa",
+    "id": "051b66f3-d93f-4145-8641-abed82a32814",
     "opponent_team": {
-      "name": "Freeport Stix 9U- Wilken",
-      "avatar_url": "logos/cache/5e77dd91eb42c6bf.jpg"
+      "name": "Ironman- Nisenson 10U"
     },
     "is_full_day": false,
-    "start_ts": "2026-06-06T19:00:00.000Z",
-    "end_ts": "2026-06-06T21:00:00.000Z",
+    "start_ts": "2026-10-10T00:30:00.000Z",
+    "end_ts": "2026-10-10T02:30:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
-    "score": {
-      "team": 7,
-      "opponent_team": 12
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "db819195-e65c-4312-a8d2-065d971166c9",
-    "opponent_team": {
-      "name": "GRB Rays 9U Forsberg/Mulvaney 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-06T21:00:00.000Z",
-    "end_ts": "2026-06-06T22:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 10,
-      "opponent_team": 2
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "21fc5f4a-5a24-4d4d-91f2-f0ba5471231a",
-    "opponent_team": {
-      "name": "Freeport Stix 9U- Wilken",
-      "avatar_url": "logos/cache/5e77dd91eb42c6bf.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-07T19:00:00.000Z",
-    "end_ts": "2026-06-07T21:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 4,
-      "opponent_team": 8
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "191aad49-3227-4636-83e5-a810dd0fafab",
-    "opponent_team": {
-      "name": "Woodstock Heat 9U",
-      "avatar_url": "logos/cache/ffa967b11bbaa7c1.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-09T22:30:00.000Z",
-    "end_ts": "2026-06-10T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 6,
-      "opponent_team": 12
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "ce2b102a-7567-4da4-89d9-2b42bcf9b6a9",
-    "opponent_team": {
-      "name": "Highland Park Giants 9U White 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-13T18:15:00.000Z",
-    "end_ts": "2026-06-13T20:15:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 12,
-      "opponent_team": 0
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "72eecc25-03d8-4202-8fa9-10f7d0cfe92e",
-    "opponent_team": {
-      "name": "KTB 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-13T21:45:00.000Z",
-    "end_ts": "2026-06-13T23:45:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 15,
-      "opponent_team": 5
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "96eab4c0-5ae1-4959-86a3-c1b31cbe008d",
-    "opponent_team": {
-      "name": "HP Giants Blue 9U",
-      "avatar_url": "logos/cache/080024efa123745f.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-14T19:45:00.000Z",
-    "end_ts": "2026-06-14T21:45:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 12,
-      "opponent_team": 2
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "2f1effc0-2ced-42b2-930e-b071e67cb890",
-    "opponent_team": {
-      "name": "Ironmen 9U 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-15T04:30:00.000Z",
-    "end_ts": "2026-06-15T06:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 2,
-      "opponent_team": 1
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "9d437bcc-f9d5-45b8-8f82-be252f1164de",
-    "opponent_team": {
-      "name": "GRB RAYS ILLINOIS - BURKE 9U",
-      "avatar_url": "logos/cache/9c5990e2cd2bf2af.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-16T22:30:00.000Z",
-    "end_ts": "2026-06-17T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 10,
-      "opponent_team": 8
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "a2ab0936-40bb-4186-a52d-f1e24e86d854",
-    "opponent_team": {
-      "name": "GRB Rays 9U Forsberg/Mulvaney 9U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-23T22:30:00.000Z",
-    "end_ts": "2026-06-24T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 18,
-      "opponent_team": 8
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "7b1acfa6-0bca-4d13-b2eb-bd44293a112f",
-    "opponent_team": {
-      "name": "SBA Raiders 9U",
-      "avatar_url": "logos/cache/b23ab01cbc644f4e.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-06-30T22:30:00.000Z",
-    "end_ts": "2026-07-01T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "score": {
-      "team": 6,
-      "opponent_team": 15
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
-  },
-  {
-    "id": "19706bde-1ffd-4a2a-8434-7fd6a7576e42",
-    "opponent_team": {
-      "name": "GRB RAYS ILLINOIS - BURKE 9U",
-      "avatar_url": "logos/cache/9c5990e2cd2bf2af.jpg"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-07-02T22:30:00.000Z",
-    "end_ts": "2026-07-03T00:30:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "score": {
-      "team": 3,
-      "opponent_team": 4
-    },
-    "game_status": "completed",
-    "has_videos_available": true,
-    "has_live_stream": false
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
   }
 ]

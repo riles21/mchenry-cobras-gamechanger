@@ -3,7 +3,7 @@
     "id": "451bdb0f-c424-48db-abb7-837a6c001c81",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/db64276119524958.jpg"
+      "avatar_url": "logos/cache/f8956c20a470de18.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T00:15:00.000Z",
@@ -16,13 +16,15 @@
     },
     "game_status": "completed",
     "has_videos_available": true,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
     "opponent_team": {
       "name": "Eagles Elite 14U",
-      "avatar_url": "logos/cache/3b6c64d70f4b17e9.jpg"
+      "avatar_url": "logos/cache/d6e41488e4e1b993.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T00:15:00.000Z",
@@ -30,7 +32,9 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "3073a774-7d54-408b-82bc-2552b1b3c6e6",
@@ -43,7 +47,9 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "4273d2f8-d35f-4071-9b07-d0e827e43ac0",
@@ -56,13 +62,15 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "08611e4c-75c6-471b-915d-477272bdff91",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/ccd1a4a9e5bad57c.jpg"
+      "avatar_url": "logos/cache/37d3507b95aa7de8.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-31T22:15:00.000Z",
@@ -70,7 +78,9 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "1121e758-761a-474c-8804-73471c97e5ec",
@@ -83,7 +93,9 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -96,7 +108,9 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "33ded3b9-783e-4c07-beec-70a75fda30de",
@@ -109,13 +123,15 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "83f634ae-41a4-4442-9603-94cb58b54816",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/db64276119524958.jpg"
+      "avatar_url": "logos/cache/f8956c20a470de18.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-21T22:15:00.000Z",
@@ -123,7 +139,9 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
     "id": "c0bf0ce0-0f46-4087-8d32-bdefd63feb07",
@@ -136,6 +154,8 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   }
 ]

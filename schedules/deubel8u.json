@@ -10,13 +10,15 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6"
   },
   {
     "id": "7f7155e3-7615-4df3-8f76-d076226b3814",
     "opponent_team": {
       "name": "Signature Stars 8U",
-      "avatar_url": "logos/cache/28e76857859e005f.jpg"
+      "avatar_url": "logos/cache/5e8fcd23a50e463c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T23:30:00.000Z",
@@ -24,7 +26,9 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6"
   },
   {
     "id": "951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -37,6 +41,8 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6"
   }
 ]

@@ -10,7 +10,9 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "jo418sCgCDyw"
   },
   {
     "id": "0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -23,7 +25,9 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "jo418sCgCDyw"
   },
   {
     "id": "92a9af05-1170-403b-9e0f-ad4f0a311637",
@@ -36,6 +40,8 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "has_videos_available": false,
-    "has_live_stream": false
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "jo418sCgCDyw"
   }
 ]
