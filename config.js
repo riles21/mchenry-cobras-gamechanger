@@ -1,44 +1,48 @@
 /*
-  McHenry Cobras Team Configuration
+  McHenry Cobras Configuration
 
-  This file is the single source of truth for Cobras teams.
+  COBRAS_SETTINGS controls the entire organization.
 
-  active:
-    true  = current active Cobras team
-    false = inactive/former team
+  season:
+    The season name displayed throughout the website.
 
-  Active teams:
-    - appear in the active team directory
-    - count toward the overall Cobras organizational record
+  gameChangerSeasons:
+    The GameChanger seasons that are included in the
+    Cobras season.
 
-  Required:
-    active
-    name
-    season
-    gameChangerTeamId
+    Add or remove seasons here as desired.
 
-  Coaching:
-    headCoach
-    assistantCoaches: up to 3 names
+    Examples:
 
-  Facebook:
-    facebookUrl: leave "" until a team page is available.
+      Fall only:
+        ["Fall 2026"]
+
+      Spring only:
+        ["Spring 2027"]
+
+      Spring + Summer:
+        ["Spring 2027", "Summer 2027"]
+
+      Fall + Spring + Summer:
+        ["Fall 2026", "Spring 2027", "Summer 2027"]
 */
+
+const COBRAS_SETTINGS = {
+
+  season: "2026-27 Season",
+
+  gameChangerSeasons: [
+    "Fall 2026"
+  ]
+
+};
+
 
 const COBRAS_TEAMS = {
 
-
-  /* =========================
-     8U
-  ========================== */
-
   deubel8u: {
     active: true,
-
     name: "8U Deubel",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "NJRBPnj0Dhk6",
 
     headCoach: "Mike Deubel",
@@ -52,18 +56,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     9U
-  ========================== */
-
   mcandrews9u: {
     active: true,
-
     name: "9U McAndrews",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "eVa0Vr948vH4",
 
     headCoach: "Justin McAndrews",
@@ -77,18 +72,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     10U
-  ========================== */
-
   hansen10u: {
     active: true,
-
     name: "10U Hansen",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "glieJ5HMvC0j",
 
     headCoach: "Zach Hansen",
@@ -102,14 +88,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
   decicco10u: {
     active: true,
-
     name: "10U DeCicco",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "xmAtHaprkmS1",
 
     headCoach: "Vince DeCicco",
@@ -123,18 +104,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     11U
-  ========================== */
-
   lennon11u: {
     active: true,
-
     name: "11U Lennon",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "lVwwLVbiCqXH",
 
     headCoach: "Travis Lennon",
@@ -148,14 +120,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
   bozer11u: {
     active: true,
-
     name: "11U Bozer",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "jo418sCgCDyw",
 
     headCoach: "Ben Bozer",
@@ -168,18 +135,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     12U
-  ========================== */
-
   meraz12u: {
     active: true,
-
     name: "12U Meraz",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "BmhjNVz0W5gR",
 
     headCoach: "Freddy Meraz",
@@ -193,14 +151,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
   lorenz12u: {
     active: true,
-
     name: "12U Lorenz",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "jWdOuqoTjKow",
 
     headCoach: "John Lorenz",
@@ -213,18 +166,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     13U
-  ========================== */
-
   baillargeon13u: {
     active: true,
-
     name: "13U Baillargeon",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "ewS3RDClhrGu",
 
     headCoach: "Eric Baillargeon",
@@ -238,14 +182,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
   thiemeyer13u: {
     active: true,
-
     name: "13U Thiemeyer",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "5OzlwlXAAYDd",
 
     headCoach: "Joshua Thiemeyer",
@@ -259,18 +198,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     14U
-  ========================== */
-
   boettcher14u: {
     active: true,
-
     name: "14U Boettcher",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "5FbGFaKkWCHQ",
 
     headCoach: "Aaron Boettcher",
@@ -283,18 +213,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     15U
-  ========================== */
-
   dean15u: {
     active: true,
-
     name: "15U Dean",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "",
 
     headCoach: "Jeremy Dean",
@@ -308,18 +229,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     16U
-  ========================== */
-
   bivona16u: {
     active: true,
-
     name: "16U Bivona",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "8NGYBcGFasMw",
 
     headCoach: "Mike Bivona",
@@ -333,18 +245,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     17U
-  ========================== */
-
   deubel17u: {
     active: true,
-
     name: "17U Deubel",
-
-    season: "2027 Season",
-
     gameChangerTeamId: "kutDkVx3yhOH",
 
     headCoach: "Mike Deubel",
@@ -357,18 +260,9 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
-
-  /* =========================
-     FORMER TEAMS
-  ========================== */
-
   riley17u: {
     active: false,
-
     name: "17U Riley",
-
-    season: "2026 Season",
-
     gameChangerTeamId: "pMdj4HZlj6tS",
 
     headCoach: "Bryan Riley",
