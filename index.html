@@ -1,428 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>McHenry Cobras</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * { box-sizing: border-box; }
+<title>McHenry Cobras Team</title>
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      font-family: Arial, Helvetica, sans-serif;
+<style>
+    * {
+        box-sizing: border-box;
     }
 
-    .team-header {
-      text-align: center;
-      padding: 20px 16px 18px;
-      border-bottom: 5px solid #ff5a00;
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
+    .team-page {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #ffffff;
+    }
+
+    /* Cobras logo */
     .team-logo {
-      display: block;
-      width: min(900px, 94%);
-      height: auto;
-      margin: 0 auto 12px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .team-logo img {
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* Team name / season */
+    .team-heading {
+        text-align: center;
+        padding: 8px 15px 12px;
+        border-bottom: 4px solid #ff5a00;
+    }
+
+    .team-name {
+        margin: 0;
+        color: #111111;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.15;
     }
 
     .season {
-      color: #555;
-      font-size: 17px;
-      margin-top: 4px;
+        margin-top: 5px;
+        color: #666666;
+        font-size: 18px;
     }
 
-    .team-content {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    #desktop-team {
-      order: 1;
-      display: block;
-      width: 100%;
-      height: 1450px;
-      border: 0;
-    }
-
-    .team-info {
-      order: 2;
-      margin: 28px auto 25px;
-      width: min(900px, 92%);
-      padding: 24px 20px;
-      background: #f5f5f5;
-      border-top: 5px solid #ff5a00;
-    }
-
-    .team-info h2 {
-      margin: 0 0 16px;
-      text-align: center;
-      font-size: 23px;
-      color: #111;
-    }
-
-    .staff-grid {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      text-align: center;
-    }
-
-    .staff-role {
-      color: #ff5a00;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .staff-name {
-      color: #222;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    #mobile-content {
-      display: none;
-    }
-
-    .gc-button,
-    .facebook-button {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      text-decoration: none;
-      font-weight: 800;
-      border-radius: 5px;
-    }
-
-    .gc-button {
-      padding: 15px 18px;
-      width: min(520px, calc(100% - 32px));
-      background: #ff5a00;
-      color: #fff;
-      margin-top: 0;
-      margin-bottom: 22px;
-    }
-
-    .facebook-button {
-      padding: 13px 18px;
-      width: min(420px, calc(100% - 32px));
-      background: #1877f2;
-      color: #fff;
-      margin-bottom: 26px;
+    /* Coaching staff */
+    .staff-section {
+        padding: 24px 20px 22px;
+        text-align: center;
     }
 
     .section-title {
-      text-align: center;
-      margin: 24px 12px 14px;
-      font-size: 22px;
-      font-weight: 800;
-      color: #111;
+        margin: 0 0 18px;
+        color: #111111;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
 
-    .widget-wrap {
-      width: 100%;
-      overflow: hidden;
+    .staff-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 30px;
     }
 
-    #gc-schedule-widget {
-      width: 100%;
-      min-height: 450px;
+    .coach {
+        min-width: 180px;
+        max-width: 240px;
     }
 
-    .team-picker {
-      width: min(700px, 92%);
-      margin: 30px auto;
-      text-align: center;
+    .coach-name {
+        color: #222222;
+        font-size: 18px;
+        font-weight: 700;
     }
 
-    .team-picker h1 {
-      margin: 0 0 8px;
-      font-size: 30px;
-      color: #111;
+    .coach-role {
+        margin-top: 3px;
+        color: #777777;
+        font-size: 14px;
     }
 
-    .team-picker p {
-      margin: 0 0 24px;
-      color: #666;
-      font-size: 16px;
+    /* GameChanger button */
+    .gc-button-section {
+        padding: 0 20px 25px;
+        text-align: center;
     }
 
-    .team-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+    .gc-button {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 5px;
+        background: #ff5a00;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
     }
 
-    .team-list a {
-      display: block;
-      padding: 13px 10px;
-      background: #f5f5f5;
-      border-left: 5px solid #ff5a00;
-      color: #111;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 3px;
+    .gc-button:hover {
+        opacity: 0.88;
     }
 
-    .team-list a:hover {
-      background: #eee;
+    /* Facebook */
+    .facebook-section {
+        padding: 0 20px 25px;
+        text-align: center;
     }
 
-    @media (max-width: 767px) {
-      .team-logo {
-        width: 96%;
-        margin-bottom: 8px;
-      }
-
-      .season {
+    .facebook-button {
+        color: #1877f2;
         font-size: 15px;
-      }
-
-      .team-header {
-        border-bottom: 0;
-      }
-
-      .team-info {
-        border-top: 0;
-        margin: 20px auto 22px;
-      }
-
-      #desktop-team {
-        display: none;
-      }
-
-      #mobile-content {
-        display: block;
-      }
-
-      .staff-grid {
-        gap: 20px;
-        flex-direction: column;
-      }
-
-      .team-list {
-        grid-template-columns: 1fr;
-      }
+        font-weight: 700;
+        text-decoration: none;
     }
-  </style>
+
+    /* Schedule */
+    .schedule-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .schedule-title {
+        margin: 0;
+        padding: 12px 10px;
+        background: #ff5a00;
+        color: #ffffff;
+        font-size: 21px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .gamechanger-container {
+        width: 100%;
+        min-height: 1200px;
+        overflow: hidden;
+    }
+
+    .gamechanger-container iframe {
+        display: block;
+        width: 100%;
+        height: 1200px;
+        border: 0;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+
+        .team-heading {
+            padding: 7px 12px 10px;
+            border-bottom: 3px solid #ff5a00;
+        }
+
+        .team-name {
+            font-size: 26px;
+        }
+
+        .season {
+            font-size: 16px;
+        }
+
+        .staff-section {
+            padding: 20px 12px 18px;
+        }
+
+        .section-title {
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .staff-grid {
+            display: block;
+        }
+
+        .coach {
+            max-width: none;
+            margin-bottom: 13px;
+        }
+
+        .coach:last-child {
+            margin-bottom: 0;
+        }
+
+        .coach-name {
+            font-size: 17px;
+        }
+
+        .coach-role {
+            font-size: 13px;
+        }
+
+        .gc-button-section {
+            padding: 0 12px 20px;
+        }
+
+        .gc-button {
+            width: 100%;
+            max-width: 400px;
+            padding: 13px 15px;
+            font-size: 15px;
+        }
+
+        .facebook-section {
+            padding-bottom: 20px;
+        }
+
+        .schedule-title {
+            padding: 11px 8px;
+            font-size: 19px;
+        }
+
+        .gamechanger-container {
+            min-height: 1100px;
+        }
+
+        .gamechanger-container iframe {
+            height: 1100px;
+        }
+    }
+</style>
 </head>
 
 <body>
 
-  <div id="app"></div>
+<div class="team-page">
 
-  <script src="./config.js"></script>
-  <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+    <!-- Cobras Team Logo -->
+    <div class="team-logo">
+        <img
+            src="https://raw.githubusercontent.com/riles21/mchenry-cobras-gamechanger/main/cobras-logo.png"
+            alt="McHenry Cobras">
+    </div>
 
-  <script>
-    (function () {
+    <!-- Team Name / Season -->
+    <div class="team-heading">
+        <h1 class="team-name" id="teamName"></h1>
+        <div class="season" id="teamSeason"></div>
+    </div>
 
-      const params = new URLSearchParams(window.location.search);
-      const teamKey = params.get("team");
+    <!-- Coaching Staff -->
+    <section class="staff-section">
+        <h2 class="section-title">Coaching Staff</h2>
+        <div class="staff-grid" id="staffGrid"></div>
+    </section>
 
-      /*
-        No team selected:
-        show a clean Cobras team selector.
-      */
-      if (!teamKey) {
-        showTeamPicker();
-        return;
-      }
+    <!-- GameChanger Button -->
+    <div class="gc-button-section" id="gcButtonSection">
+        <a
+            id="gcButton"
+            class="gc-button"
+            href="#"
+            target="_blank"
+            rel="noopener">
+            VIEW TEAM, ROSTER &amp; STATS ON GAMECHANGER
+        </a>
+    </div>
 
-      const team = COBRAS_TEAMS[teamKey];
+    <!-- Facebook -->
+    <div
+        class="facebook-section"
+        id="facebookSection"
+        style="display:none;">
 
-      /*
-        Invalid or inactive team:
-        send the visitor back to the team selector.
-      */
-      if (!team || !team.active) {
-        showTeamPicker("That team page is not currently available.");
-        return;
-      }
+        <a
+            id="facebookButton"
+            class="facebook-button"
+            href="#"
+            target="_blank"
+            rel="noopener">
+            VIEW TEAM FACEBOOK PAGE
+        </a>
 
-      renderTeam(team);
+    </div>
 
-      function renderTeam(team) {
+    <!-- GameChanger Schedule -->
+    <section class="schedule-section">
 
-        document.title = "McHenry Cobras " + team.name;
+        <div class="schedule-title">
+            Game Schedule &amp; Results
+        </div>
 
-        const fullTeamUrl =
-          "https://web.gc.com/teams/" + team.gameChangerTeamId;
-
-        const scheduleUrl =
-          "https://web.gc.com/teams/" + team.gameChangerTeamId + "/schedule";
-
-        const app = document.getElementById("app");
-
-        app.innerHTML = `
-          <header class="team-header">
-            <img class="team-logo" src="./cobras-logo.png" alt="McHenry Cobras">
-            <div class="season">${escapeHtml(team.name)} • ${escapeHtml(team.season)}</div>
-          </header>
-
-          <main class="team-content">
-
-            <section class="team-info">
-              <h2>${escapeHtml(team.name)} Coaching Staff</h2>
-              <div class="staff-grid" id="staff-grid"></div>
-            </section>
+        <div class="gamechanger-container">
 
             <iframe
-              id="desktop-team"
-              src="${escapeAttribute(scheduleUrl)}"
-              title="${escapeAttribute(team.name)} on GameChanger"
-              allowfullscreen>
+                id="gamechangerFrame"
+                src=""
+                scrolling="yes"
+                allowfullscreen>
             </iframe>
 
-            <section id="mobile-content">
+        </div>
 
-              <a
-                class="gc-button"
-                href="${escapeAttribute(fullTeamUrl)}"
-                target="_blank"
-                rel="noopener">
-                View Team, Roster &amp; Stats on GameChanger
-              </a>
+    </section>
 
-              <a
-                class="facebook-button"
-                id="facebook-link"
-                target="_blank"
-                rel="noopener"
-                style="display:none;">
-                Follow ${escapeHtml(team.name)} on Facebook
-              </a>
+</div>
 
-              <div class="section-title">Schedule &amp; Results</div>
+<script src="config.js"></script>
 
-              <div class="widget-wrap">
-                <div id="gc-schedule-widget"></div>
-              </div>
+<script>
+(function () {
 
-            </section>
+    const params = new URLSearchParams(window.location.search);
+    const teamKey = params.get("team");
 
-          </main>
+    /*
+     * If no team was specified, show a simple message.
+     */
+    if (!teamKey || !window.TEAMS || !window.TEAMS[teamKey]) {
+
+        document.getElementById("teamName").textContent =
+            "McHenry Cobras";
+
+        document.getElementById("teamSeason").textContent =
+            "Team Page";
+
+        return;
+    }
+
+    const team = window.TEAMS[teamKey];
+
+    /*
+     * Team name
+     */
+    document.getElementById("teamName").textContent =
+        team.name || teamKey;
+
+    /*
+     * Season
+     */
+    document.getElementById("teamSeason").textContent =
+        team.season || "2027 Season";
+
+    /*
+     * Coaching staff
+     */
+    const staffGrid =
+        document.getElementById("staffGrid");
+
+    if (team.headCoach) {
+
+        staffGrid.innerHTML += `
+            <div class="coach">
+                <div class="coach-name">
+                    ${team.headCoach}
+                </div>
+                <div class="coach-role">
+                    Head Coach
+                </div>
+            </div>
         `;
+    }
 
-        const staffGrid = document.getElementById("staff-grid");
+    if (Array.isArray(team.assistants)) {
 
-        if (team.headCoach) {
-          addStaffMember(staffGrid, "Head Coach", team.headCoach);
-        }
+        team.assistants.forEach(function (coach) {
 
-        (team.assistantCoaches || []).slice(0, 3).forEach(function (coach) {
-          if (coach) {
-            addStaffMember(staffGrid, "Assistant Coach", coach);
-          }
+            if (coach && coach.trim() !== "") {
+
+                staffGrid.innerHTML += `
+                    <div class="coach">
+                        <div class="coach-name">
+                            ${coach}
+                        </div>
+                        <div class="coach-role">
+                            Assistant Coach
+                        </div>
+                    </div>
+                `;
+
+            }
+
         });
 
-        if (team.facebookUrl) {
-          const facebook = document.getElementById("facebook-link");
-          facebook.href = team.facebookUrl;
-          facebook.style.display = "block";
-        }
+    }
+
+    /*
+     * GameChanger
+     */
+    if (team.gamechangerId) {
+
+        const gcUrl =
+            "https://web.gc.com/teams/" +
+            team.gamechangerId;
 
         /*
-          Mobile uses the responsive GameChanger schedule widget.
-          If the widget ID has not been obtained yet, show a friendly
-          placeholder instead of breaking the page.
-        */
-        if (window.matchMedia("(max-width: 767px)").matches) {
+         * Button opens the full GameChanger team page.
+         */
+        document.getElementById("gcButton").href =
+            gcUrl;
 
-          if (team.gameChangerWidgetId) {
+        /*
+         * Embedded GameChanger page.
+         *
+         * #schedule keeps the Schedule tab selected.
+         */
+        document.getElementById("gamechangerFrame").src =
+            gcUrl + "#schedule";
 
-            window.GC.team.schedule.init({
-              target: "#gc-schedule-widget",
-              widgetId: team.gameChangerWidgetId,
-              maxVerticalGamesVisible: 4
-            });
+    } else {
 
-          } else {
+        document.getElementById(
+            "gcButtonSection"
+        ).style.display = "none";
 
-            document.getElementById("gc-schedule-widget").innerHTML =
-              '<div style="text-align:center; padding:25px 15px; color:#666;">' +
-              'GameChanger schedule coming soon.' +
-              '</div>';
+        document.getElementById(
+            "gamechangerFrame"
+        ).style.display = "none";
 
-          }
-        }
-      }
+        document.querySelector(
+            ".schedule-title"
+        ).textContent =
+            "Game Schedule & Results Coming Soon";
+    }
 
-      function addStaffMember(container, role, name) {
-        const div = document.createElement("div");
+    /*
+     * Facebook
+     */
+    if (
+        team.facebookUrl &&
+        team.facebookUrl.trim() !== "" &&
+        team.facebookUrl.toUpperCase() !== "TBD"
+    ) {
 
-        const roleDiv = document.createElement("div");
-        roleDiv.className = "staff-role";
-        roleDiv.textContent = role;
+        document.getElementById(
+            "facebookButton"
+        ).href = team.facebookUrl;
 
-        const nameDiv = document.createElement("div");
-        nameDiv.className = "staff-name";
-        nameDiv.textContent = name;
+        document.getElementById(
+            "facebookSection"
+        ).style.display = "block";
+    }
 
-        div.appendChild(roleDiv);
-        div.appendChild(nameDiv);
-        container.appendChild(div);
-      }
-
-      function showTeamPicker(message) {
-
-        const activeTeams = Object.keys(COBRAS_TEAMS)
-          .filter(function (key) {
-            return COBRAS_TEAMS[key].active;
-          });
-
-        let links = "";
-
-        activeTeams.forEach(function (key) {
-          const team = COBRAS_TEAMS[key];
-
-          links +=
-            '<a href="?team=' + encodeURIComponent(key) + '">' +
-            escapeHtml(team.name) +
-            '</a>';
-        });
-
-        document.getElementById("app").innerHTML = `
-          <header class="team-header">
-            <img class="team-logo" src="./cobras-logo.png" alt="McHenry Cobras">
-          </header>
-
-          <section class="team-picker">
-            <h1>McHenry Cobras Teams</h1>
-            <p>
-              ${message ? escapeHtml(message) : "Select a team to view their team page."}
-            </p>
-
-            <div class="team-list">
-              ${links}
-            </div>
-          </section>
-        `;
-      }
-
-      function escapeHtml(value) {
-        return String(value)
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
-      }
-
-      function escapeAttribute(value) {
-        return escapeHtml(value);
-      }
-
-    })();
-  </script>
+})();
+</script>
 
 </body>
 </html>
