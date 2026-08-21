@@ -242,11 +242,29 @@ jobs:
 
           const context = {};
           vm.createContext(context);
-          vm.runInContext(configText + "\nthis.__teams = COBRAS_TEAMS;", context);
+          vm.runInContext(
+            configText + "\nthis.__teams = COBRAS_TEAMS;",
+            context
+          );
 
           const teams = context.__teams;
           const schedulesDir = "schedules";
-          const now = Date.now();
+
+          /*
+            Use the start of TODAY in America/Chicago rather than the
+            GitHub runner's exact UTC clock. This prevents timezone
+            differences from accidentally removing valid upcoming games.
+          */
+          const chicagoToday = new Intl.DateTimeFormat("en-CA", {
+            timeZone: "America/Chicago",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+          }).format(new Date());
+
+          const todayStart = new Date(
+            `${chicagoToday}T00:00:00-05:00`
+          ).getTime();
 
           const upcoming = [];
 
@@ -259,7 +277,9 @@ jobs:
               path.join(schedulesDir, `${teamKey}.json`);
 
             if (!fs.existsSync(scheduleFile)) {
-              console.log(`No schedule file for ${teamKey}; skipping.`);
+              console.log(
+                `No schedule file for ${teamKey}; skipping.`
+              );
               continue;
             }
 
@@ -277,17 +297,35 @@ jobs:
             }
 
             if (!Array.isArray(games)) {
+              console.log(
+                `Schedule for ${teamKey} is not an array; skipping.`
+              );
               continue;
             }
+
+            let teamUpcoming = 0;
 
             for (const game of games) {
               if (!game || !game.start_ts) {
                 continue;
               }
 
-              const startTime = new Date(game.start_ts).getTime();
+              const startTime =
+                new Date(game.start_ts).getTime();
 
-              if (Number.isNaN(startTime) || startTime < now) {
+              if (Number.isNaN(startTime)) {
+                console.log(
+                  `Invalid start_ts for ${teamKey}: ${game.start_ts}`
+                );
+                continue;
+              }
+
+              /*
+                Keep any game scheduled today or later.
+                Completed games are excluded, but future games are kept
+                even if GameChanger has not populated game_status yet.
+              */
+              if (startTime < todayStart) {
                 continue;
               }
 
@@ -298,10 +336,17 @@ jobs:
               upcoming.push({
                 teamKey,
                 teamName: team.name,
-                season: game.cobras_gamechanger_season || null,
+                season:
+                  game.cobras_gamechanger_season || null,
                 game
               });
+
+              teamUpcoming++;
             }
+
+            console.log(
+              `${team.name}: ${teamUpcoming} upcoming games included.`
+            );
           }
 
           const seen = new Set();
@@ -333,9 +378,14 @@ jobs:
             `Created upcoming-games.json with ${deduped.length} upcoming games.`
           );
 
-          for (const item of deduped.slice(0, 10)) {
+          console.log("=== First 15 upcoming games ===");
+
+          for (const item of deduped.slice(0, 15)) {
             console.log(
-              `${item.teamName} | ${item.game.start_ts} | ${item.game.opponent_team?.name || "TBD"} | ${item.season || "unknown season"}`
+              `${item.teamName} | ${item.game.start_ts} | ` +
+              `${item.game.opponent_team?.name || "TBD"} | ` +
+              `${item.game.home_away || ""} | ` +
+              `${item.season || "unknown season"}`
             );
           }
           NODE
