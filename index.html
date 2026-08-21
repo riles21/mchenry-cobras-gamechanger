@@ -135,6 +135,24 @@
       white-space: nowrap;
     }
 
+    /* Game results */
+    .result {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .result.win {
+      color: #16803c;
+    }
+
+    .result.loss {
+      color: #c62828;
+    }
+
+    .result.tie {
+      color: #666666;
+    }
+
     .loading {
       text-align: center;
       padding: 40px;
@@ -255,6 +273,44 @@
             ? `<img src="${game.opponent_team.avatar_url}" alt="">`
             : `<div class="opponent-placeholder">⚾</div>`;
 
+          /*
+           * GameChanger completed-game results.
+           *
+           * If score information exists, display:
+           * W 7-3
+           * L 2-10
+           * T 5-5
+           *
+           * If no score exists, continue displaying the game time.
+           */
+          let gameResult = "";
+
+          const hasScore =
+            game.score &&
+            game.score.team != null &&
+            game.score.opponent_team != null;
+
+          if (hasScore) {
+            const ourScore = Number(game.score.team);
+            const opponentScore = Number(game.score.opponent_team);
+
+            if (
+              Number.isFinite(ourScore) &&
+              Number.isFinite(opponentScore)
+            ) {
+              if (ourScore > opponentScore) {
+                gameResult =
+                  `<span class="result win">W ${ourScore}-${opponentScore}</span>`;
+              } else if (ourScore < opponentScore) {
+                gameResult =
+                  `<span class="result loss">L ${ourScore}-${opponentScore}</span>`;
+              } else {
+                gameResult =
+                  `<span class="result tie">T ${ourScore}-${opponentScore}</span>`;
+              }
+            }
+          }
+
           const card = document.createElement("div");
           card.className = "game";
 
@@ -278,7 +334,7 @@
             </div>
 
             <div class="time">
-              ${time}
+              ${gameResult || time}
             </div>
           `;
 
