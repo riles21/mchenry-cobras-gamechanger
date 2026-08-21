@@ -31,9 +31,7 @@ body {
     background: #ffffff;
 }
 
-/* =========================
-   COBRAS LOGO
-   ========================= */
+/* LOGO */
 
 .team-logo {
     width: 100%;
@@ -48,9 +46,7 @@ body {
     margin: 0 auto;
 }
 
-/* =========================
-   TEAM HEADING
-   ========================= */
+/* TEAM HEADING */
 
 .team-heading {
     text-align: center;
@@ -72,9 +68,7 @@ body {
     font-size: 18px;
 }
 
-/* =========================
-   COACHING STAFF
-   ========================= */
+/* COACHING STAFF */
 
 .staff-section {
     padding: 24px 20px 22px;
@@ -114,9 +108,7 @@ body {
     font-size: 14px;
 }
 
-/* =========================
-   GAMECHANGER BUTTON
-   ========================= */
+/* GAMECHANGER BUTTON */
 
 .gc-button-section {
     padding: 0 20px 25px;
@@ -138,9 +130,7 @@ body {
     opacity: 0.88;
 }
 
-/* =========================
-   FACEBOOK
-   ========================= */
+/* FACEBOOK */
 
 .facebook-section {
     padding: 0 20px 25px;
@@ -154,9 +144,7 @@ body {
     text-decoration: none;
 }
 
-/* =========================
-   GAMECHANGER
-   ========================= */
+/* GAMECHANGER */
 
 .schedule-section {
     width: 100%;
@@ -187,9 +175,7 @@ body {
     border: 0;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -373,16 +359,14 @@ body {
 </div>
 
 
-<!-- CONFIGURATION -->
+<!-- LOAD TEAM CONFIGURATION -->
 <script src="config.js"></script>
 
 
 <script>
 (function () {
 
-    /* --------------------------------
-       GET TEAM FROM URL
-       -------------------------------- */
+    /* GET TEAM FROM URL */
 
     const params = new URLSearchParams(
         window.location.search
@@ -391,14 +375,12 @@ body {
     const teamKey = params.get("team");
 
 
-    /* --------------------------------
-       VERIFY TEAM
-       -------------------------------- */
+    /* VERIFY TEAM */
 
     if (
         !teamKey ||
-        !window.COBRAS_TEAMS ||
-        !window.COBRAS_TEAMS[teamKey]
+        typeof COBRAS_TEAMS === "undefined" ||
+        !COBRAS_TEAMS[teamKey]
     ) {
 
         document.getElementById(
@@ -413,13 +395,12 @@ body {
     }
 
 
-    const team =
-        window.COBRAS_TEAMS[teamKey];
+    /* GET TEAM CONFIG */
+
+    const team = COBRAS_TEAMS[teamKey];
 
 
-    /* --------------------------------
-       TEAM NAME
-       -------------------------------- */
+    /* TEAM NAME */
 
     document.getElementById(
         "teamName"
@@ -427,9 +408,7 @@ body {
         team.name || teamKey;
 
 
-    /* --------------------------------
-       SEASON
-       -------------------------------- */
+    /* SEASON */
 
     document.getElementById(
         "teamSeason"
@@ -437,9 +416,7 @@ body {
         team.season || "2027 Season";
 
 
-    /* --------------------------------
-       COACHING STAFF
-       -------------------------------- */
+    /* COACHING STAFF */
 
     const staffGrid =
         document.getElementById(
@@ -507,9 +484,7 @@ body {
     }
 
 
-    /* --------------------------------
-       GAMECHANGER
-       -------------------------------- */
+    /* GAMECHANGER */
 
     if (team.gameChangerTeamId) {
 
@@ -518,19 +493,14 @@ body {
             team.gameChangerTeamId;
 
 
-        /* BUTTON */
+        /* BUTTON TO FULL GAMECHANGER PAGE */
 
         document.getElementById(
             "gcButton"
         ).href = gcUrl;
 
 
-        /*
-         * Embed the GameChanger team page.
-         *
-         * The #schedule portion tells GameChanger
-         * to open on the Schedule tab when supported.
-         */
+        /* EMBED GAMECHANGER */
 
         document.getElementById(
             "gamechangerFrame"
@@ -555,9 +525,7 @@ body {
     }
 
 
-    /* --------------------------------
-       FACEBOOK
-       -------------------------------- */
+    /* FACEBOOK */
 
     if (
         team.facebookUrl &&
