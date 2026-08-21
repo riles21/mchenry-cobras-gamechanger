@@ -565,29 +565,37 @@
     }
 
 
-    function createLogo(game) {
+function createLogo(game) {
 
-      if (
-        game.opponent_team &&
-        game.opponent_team.avatar_url
-      ) {
+  if (
+    game.opponent_team &&
+    game.opponent_team.avatar_url
+  ) {
 
-        return `
-          <img
-            src="${game.opponent_team.avatar_url}"
-            alt=""
-          >
-        `;
+    let logoUrl = game.opponent_team.avatar_url;
 
-      }
+    /*
+     * GameChanger logos are now stored locally by the
+     * GitHub Action. If the value starts with "logos/",
+     * use it directly. Otherwise fall back to the URL.
+     */
 
-      return `
-        <div class="opponent-placeholder">
-          ⚾
-        </div>
-      `;
-    }
+    return `
+      <img
+        src="${logoUrl}"
+        alt=""
+        loading="lazy"
+      >
+    `;
 
+  }
+
+  return `
+    <div class="opponent-placeholder">
+      ⚾
+    </div>
+  `;
+}
 
     function createGameCard(game, completed) {
 
