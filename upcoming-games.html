@@ -9,8 +9,8 @@
     --orange: #ff5a00;
     --black: #0d0d0d;
     --white: #ffffff;
-    --gray: #b8b8b8;
-    --line: rgba(255,255,255,.13);
+    --gray: #b7b7b7;
+    --line: rgba(255,255,255,.14);
   }
 
   * { box-sizing: border-box; }
@@ -28,11 +28,10 @@
   body { overflow: hidden; }
 
   .widget {
-    width: 100%;
     min-height: 100vh;
-    padding: 20px 24px 16px;
+    padding: 18px 20px 14px;
     background:
-      radial-gradient(circle at 92% 5%, rgba(255,90,0,.16), transparent 40%),
+      radial-gradient(circle at 90% 0%, rgba(255,90,0,.16), transparent 42%),
       linear-gradient(135deg, #101010 0%, #090909 100%);
   }
 
@@ -40,26 +39,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 8px;
     border-bottom: 2px solid var(--orange);
-    padding-bottom: 9px;
+    padding-bottom: 8px;
+    margin-bottom: 3px;
   }
 
   .title {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 900;
     letter-spacing: .4px;
     text-transform: uppercase;
   }
 
-  .live {
+  .subtitle {
     color: var(--orange);
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
-    white-space: nowrap;
   }
 
   #games {
@@ -69,51 +66,57 @@
 
   .game {
     display: grid;
-    grid-template-columns: 62px minmax(0,1fr) auto;
-    gap: 12px;
+    grid-template-columns: 57px minmax(0,1fr) auto;
+    gap: 11px;
     align-items: center;
-    min-height: 64px;
-    padding: 8px 0;
+    min-height: 56px;
+    padding: 7px 0;
     border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .game:hover {
+    background: rgba(255,90,0,.06);
   }
 
   .date {
     text-align: center;
     border-right: 1px solid var(--line);
-    padding-right: 10px;
+    padding-right: 9px;
   }
 
-  .date .month {
+  .month {
     color: var(--orange);
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
     text-transform: uppercase;
   }
 
-  .date .day {
-    font-size: 24px;
-    line-height: 24px;
+  .day {
+    font-size: 22px;
+    line-height: 21px;
     font-weight: 900;
   }
 
-  .date .dow {
+  .dow {
     color: var(--gray);
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 700;
     text-transform: uppercase;
   }
 
   .team-name {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .opponent {
-    font-size: 12px;
+    font-size: 11px;
     color: #eeeeee;
     white-space: nowrap;
     overflow: hidden;
@@ -122,24 +125,23 @@
 
   .meta {
     color: var(--gray);
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 700;
-    margin-top: 4px;
+    margin-top: 3px;
     text-transform: uppercase;
   }
 
   .time {
     text-align: right;
-    color: var(--white);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
     white-space: nowrap;
   }
 
-  .home-away {
+  .ha {
     color: var(--orange);
-    font-size: 9px;
-    margin-top: 3px;
+    font-size: 8px;
+    margin-top: 2px;
     font-weight: 900;
     text-transform: uppercase;
   }
@@ -147,38 +149,35 @@
   .footer {
     display: flex;
     justify-content: flex-end;
-    margin-top: 11px;
+    margin-top: 9px;
   }
 
   .footer a {
-    display: inline-block;
     color: var(--black);
     background: var(--orange);
     text-decoration: none;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
     text-transform: uppercase;
-    padding: 9px 13px;
-    border-radius: 4px;
+    padding: 8px 11px;
+    border-radius: 3px;
   }
-
-  .footer a:hover { background: #ff6b1a; }
 
   .status {
     color: var(--gray);
     text-align: center;
     padding: 28px 10px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .error { color: #ff9b75; }
 
   @media (max-width: 600px) {
-    .widget { padding: 15px 14px 12px; }
-    .title { font-size: 19px; }
-    .game { grid-template-columns: 56px minmax(0,1fr) auto; gap: 9px; }
-    .team-name, .opponent { font-size: 11px; }
-    .time { font-size: 11px; }
+    .widget { padding: 14px 13px 11px; }
+    .title { font-size: 18px; }
+    .game { grid-template-columns: 52px minmax(0,1fr) auto; gap: 8px; }
+    .team-name, .opponent { font-size: 10px; }
+    .time { font-size: 10px; }
   }
 </style>
 </head>
@@ -187,7 +186,7 @@
 <div class="widget">
   <div class="header">
     <div class="title">Cobras Next Up</div>
-    <div class="live">Upcoming Games</div>
+    <div class="subtitle">Upcoming Games</div>
   </div>
 
   <div id="games">
@@ -196,19 +195,19 @@
 
   <div class="footer">
     <a href="https://riles21.github.io/mchenry-cobras-gamechanger/index.html"
-       target="_blank" rel="noopener">View All Teams →</a>
+       target="_blank" rel="noopener">
+      View All Teams →
+    </a>
   </div>
 </div>
 
 <script>
 (async function () {
-  const gamesEl = document.getElementById("games");
-
-  // Always use the GitHub Pages root as the data source.
   const ROOT =
     "https://riles21.github.io/mchenry-cobras-gamechanger/";
 
   const MAX_GAMES = 6;
+  const gamesEl = document.getElementById("games");
 
   function escapeHtml(value) {
     return String(value ?? "")
@@ -219,12 +218,8 @@
       .replaceAll("'", "&#039;");
   }
 
-  function chicagoDate(ts) {
-    return new Date(ts);
-  }
-
   function formatDate(ts) {
-    const d = chicagoDate(ts);
+    const d = new Date(ts);
 
     return {
       month: new Intl.DateTimeFormat("en-US", {
@@ -250,20 +245,21 @@
     };
   }
 
-  function gameCard(item) {
-    const d = formatDate(item.game.start_ts);
+  function renderGame(item) {
+    const game = item.game;
+    const d = formatDate(game.start_ts);
+
     const opponent =
-      item.game.opponent_team?.name || "Opponent";
+      game.opponent_team?.name || "Opponent";
 
     const homeAway =
-      item.game.home_away === "away" ? "Away" : "Home";
+      game.home_away === "away" ? "Away" : "Home";
 
     return `
       <a class="game"
          href="${ROOT}team.html?team=${encodeURIComponent(item.teamKey)}"
          target="_blank"
-         rel="noopener"
-         style="color:inherit;text-decoration:none">
+         rel="noopener">
 
         <div class="date">
           <div class="month">${escapeHtml(d.month)}</div>
@@ -272,111 +268,55 @@
         </div>
 
         <div>
-          <div class="team-name">${escapeHtml(item.teamName)}</div>
-          <div class="opponent">${escapeHtml(opponent)}</div>
-          <div class="meta">${escapeHtml(homeAway)}</div>
+          <div class="team-name">
+            ${escapeHtml(item.teamName)}
+          </div>
+
+          <div class="opponent">
+            ${escapeHtml(opponent)}
+          </div>
+
+          <div class="meta">
+            ${escapeHtml(item.season || "")}
+          </div>
         </div>
 
         <div class="time">
           ${escapeHtml(d.time)}
-          <div class="home-away">${escapeHtml(homeAway)}</div>
+          <div class="ha">${homeAway}</div>
         </div>
       </a>
     `;
   }
 
   try {
-    const configResponse = await fetch(
-      ROOT + "config.js?cache=" + Date.now(),
+    const response = await fetch(
+      ROOT + "upcoming-games.json?cache=" + Date.now(),
       { cache: "no-store" }
     );
 
-    if (!configResponse.ok) {
+    if (!response.ok) {
       throw new Error(
-        "Could not load config.js (" +
-        configResponse.status + ")"
+        "upcoming-games.json returned HTTP " +
+        response.status
       );
     }
 
-    const configText = await configResponse.text();
+    const games = await response.json();
 
-    /*
-      config.js defines COBRAS_TEAMS. This evaluates only the
-      configuration file and returns that object.
-    */
-    const teams = new Function(
-      configText + "\nreturn COBRAS_TEAMS;"
-    )();
-
-    if (!teams || typeof teams !== "object") {
-      throw new Error("COBRAS_TEAMS was not found");
+    if (!Array.isArray(games) || games.length === 0) {
+      gamesEl.innerHTML =
+        '<div class="status">No upcoming Cobras games found.</div>';
+      return;
     }
 
-    const teamEntries = Object.entries(teams)
-      .filter(([key, team]) =>
-        team &&
-        team.active === true &&
-        team.gameChangerTeamId
-      );
-
-    const results = await Promise.all(
-      teamEntries.map(async ([teamKey, team]) => {
-        const url =
-          ROOT +
-          "schedules/" +
-          encodeURIComponent(teamKey) +
-          ".json?cache=" +
-          Date.now();
-
-        try {
-          const response = await fetch(url, {
-            cache: "no-store"
-          });
-
-          if (!response.ok) {
-            console.warn(
-              `Schedule unavailable for ${teamKey}: HTTP ${response.status}`
-            );
-            return [];
-          }
-
-          const games = await response.json();
-
-          if (!Array.isArray(games)) {
-            console.warn(
-              `Unexpected schedule format for ${teamKey}`
-            );
-            return [];
-          }
-
-          return games
-            .filter(game =>
-              game &&
-              game.start_ts &&
-              !Number.isNaN(
-                new Date(game.start_ts).getTime()
-              ) &&
-              new Date(game.start_ts).getTime() >= Date.now() &&
-              game.game_status !== "completed"
-            )
-            .map(game => ({
-              teamKey,
-              teamName: team.name,
-              game
-            }));
-
-        } catch (error) {
-          console.warn(
-            `Could not load ${teamKey}:`,
-            error
-          );
-          return [];
-        }
-      })
-    );
-
-    const upcoming = results
-      .flat()
+    const upcoming = games
+      .filter(item =>
+        item &&
+        item.game &&
+        item.game.start_ts &&
+        new Date(item.game.start_ts).getTime() >= Date.now()
+      )
       .sort(
         (a, b) =>
           new Date(a.game.start_ts) -
@@ -391,13 +331,13 @@
     }
 
     gamesEl.innerHTML =
-      upcoming.map(gameCard).join("");
+      upcoming.map(renderGame).join("");
 
   } catch (error) {
     console.error("Cobras Next Up error:", error);
 
     gamesEl.innerHTML =
-      '<div class="status error">Unable to load Cobras schedules.</div>';
+      '<div class="status error">Unable to load Cobras schedule.</div>';
   }
 })();
 </script>
