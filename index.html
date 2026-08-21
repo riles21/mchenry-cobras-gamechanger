@@ -17,15 +17,13 @@ body {
     margin: 0;
     padding: 0;
     background: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
     color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     overflow-x: hidden;
 }
-
-/* Main page */
 
 .cobras-page {
     width: 100%;
@@ -34,7 +32,9 @@ body {
     padding: 10px 14px 40px;
 }
 
-/* Logo */
+/* =========================
+   COBRAS LOGO
+   ========================= */
 
 .logo-wrapper {
     width: 100%;
@@ -50,7 +50,9 @@ body {
     margin: 0 auto;
 }
 
-/* Team heading */
+/* =========================
+   TEAM HEADER
+   ========================= */
 
 .team-name {
     margin: 8px 0 2px;
@@ -67,8 +69,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* Orange divider */
-
 .orange-divider {
     width: 100%;
     height: 4px;
@@ -76,7 +76,9 @@ body {
     margin: 0 0 18px;
 }
 
-/* Coaching staff */
+/* =========================
+   COACHING STAFF
+   ========================= */
 
 .staff-section {
     text-align: center;
@@ -114,7 +116,9 @@ body {
     color: #777777;
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+   ========================= */
 
 .button-row {
     display: flex;
@@ -152,7 +156,16 @@ body {
     opacity: 0.88;
 }
 
-/* GameChanger heading */
+/* =========================
+   GAMECHANGER
+   ========================= */
+
+.gc-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+}
 
 .gc-heading {
     width: 100%;
@@ -165,27 +178,11 @@ body {
     margin: 0;
 }
 
-/* GameChanger container */
-
-.gc-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-/*
-   The widget is intentionally given a generous height.
-
-   The GameChanger widget itself is responsive, but the widget can
-   create its own vertical scrollbar depending on browser/window size.
-*/
-
 .gc-container {
     position: relative;
     width: 100%;
-    min-height: 1050px;
-    height: 1050px;
+    height: 1100px;
+    min-height: 1100px;
     overflow: hidden;
     background: #ffffff;
 }
@@ -195,14 +192,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1050px;
+    height: 1100px;
 }
 
 /*
-   Hide only the far-right edge where the embedded widget's
-   internal scrollbar appears.
-
-   This does NOT cover the GameChanger navigation/content.
+   Covers only the very far-right edge of the
+   embedded GameChanger content where its
+   internal vertical scrollbar appears.
 */
 
 .gc-scrollbar-cover {
@@ -216,7 +212,9 @@ body {
     pointer-events: none;
 }
 
-/* Loading message */
+/* =========================
+   MESSAGES
+   ========================= */
 
 .loading {
     text-align: center;
@@ -225,14 +223,14 @@ body {
     font-size: 16px;
 }
 
-/* Error message */
-
 .error {
     text-align: center;
     padding: 35px 20px;
     color: #555555;
     background: #f7f7f7;
     border: 1px solid #eeeeee;
+    margin: 10px auto;
+    max-width: 500px;
 }
 
 .error strong {
@@ -241,7 +239,9 @@ body {
     margin-bottom: 8px;
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 700px) {
 
@@ -279,11 +279,10 @@ body {
 
     .gc-button,
     .facebook-button {
-        width: auto;
-        max-width: 100%;
-        text-align: center;
         font-size: 13px;
         padding: 11px 15px;
+        max-width: 100%;
+        text-align: center;
     }
 
     .gc-heading {
@@ -292,8 +291,8 @@ body {
     }
 
     .gc-container {
-        min-height: 1100px;
         height: 1100px;
+        min-height: 1100px;
     }
 
     .gc-embed {
@@ -312,25 +311,43 @@ body {
 
 <div class="cobras-page">
 
-    <!-- Cobras Logo -->
+    <!-- =========================
+         COBRAS LOGO
+         ========================= -->
+
     <div class="logo-wrapper">
         <img
             class="logo"
-            src="cobras-logo.png"
+            src="https://riles21.github.io/mchenry-cobras-gamechanger/cobras-logo.png"
             alt="McHenry Cobras Baseball"
         >
     </div>
 
-    <!-- Team information -->
-    <div id="teamName" class="team-name"></div>
-    <div id="teamSeason" class="team-season"></div>
+
+    <!-- =========================
+         TEAM INFORMATION
+         ========================= -->
+
+    <div id="teamName" class="team-name">
+        McHenry Cobras
+    </div>
+
+    <div id="teamSeason" class="team-season">
+        Loading...
+    </div>
 
     <div class="orange-divider"></div>
 
-    <!-- Coaching Staff -->
+
+    <!-- =========================
+         COACHING STAFF
+         ========================= -->
+
     <section class="staff-section">
 
-        <h2 class="staff-title">COACHING STAFF</h2>
+        <h2 class="staff-title">
+            COACHING STAFF
+        </h2>
 
         <div id="staffGrid" class="staff-grid"></div>
 
@@ -338,7 +355,11 @@ body {
 
     </section>
 
-    <!-- GameChanger -->
+
+    <!-- =========================
+         GAMECHANGER
+         ========================= -->
+
     <section class="gc-wrapper">
 
         <div class="gc-heading">
@@ -348,9 +369,11 @@ body {
         <div id="gcContainer" class="gc-container">
 
             <div id="gcWidget" class="gc-embed">
+
                 <div class="loading">
                     Loading GameChanger...
                 </div>
+
             </div>
 
             <div class="gc-scrollbar-cover"></div>
@@ -362,38 +385,40 @@ body {
 </div>
 
 
+<!-- =========================================================
+     IMPORTANT:
+     Load config.js from the absolute GitHub URL.
+     This is what allows the page to work inside Wix.
+     ========================================================= -->
+
+<script src="https://riles21.github.io/mchenry-cobras-gamechanger/config.js"></script>
+
+
 <!-- GameChanger SDK -->
+
 <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
 
 
 <script>
 
-/*
-    McHenry Cobras Team Page
-
-    Teams and IDs are controlled by config.js.
-
-    Example:
-    https://riles21.github.io/mchenry-cobras-gamechanger/?team=lorenz12u
-*/
-
-
 (function () {
 
-    /* ---------------------------------------------------------
-       Find requested team
-    --------------------------------------------------------- */
+    /* =========================================================
+       GET TEAM FROM URL
+       ========================================================= */
 
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(
+        window.location.search
+    );
 
     const requestedTeam = (
         params.get("team") || ""
     ).toLowerCase().trim();
 
 
-    /* ---------------------------------------------------------
-       Make sure config exists
-    --------------------------------------------------------- */
+    /* =========================================================
+       CHECK CONFIGURATION
+       ========================================================= */
 
     if (
         typeof COBRAS_TEAMS === "undefined" ||
@@ -407,33 +432,35 @@ body {
             "";
 
         document.getElementById("staffGrid").innerHTML =
+
             '<div class="error">' +
-            '<strong>Team configuration unavailable</strong>' +
-            'Please check that config.js is uploaded correctly.' +
+                '<strong>Team configuration unavailable</strong>' +
+                'Please check that config.js is available.' +
             '</div>';
 
         return;
     }
 
 
-    /* ---------------------------------------------------------
-       Build active team list
-    --------------------------------------------------------- */
+    /* =========================================================
+       GET ACTIVE TEAMS
+       ========================================================= */
 
-    const activeTeams = Object.entries(COBRAS_TEAMS)
-        .filter(function (entry) {
+    const activeTeams = Object.entries(
+        COBRAS_TEAMS
+    ).filter(function (entry) {
 
-            const team = entry[1];
+        return (
+            entry[1] &&
+            entry[1].active === true
+        );
 
-            return team &&
-                   team.active === true;
-
-        });
+    });
 
 
-    /* ---------------------------------------------------------
-       If no team was specified, show team selector
-    --------------------------------------------------------- */
+    /* =========================================================
+       NO TEAM SELECTED
+       ========================================================= */
 
     if (!requestedTeam) {
 
@@ -443,11 +470,12 @@ body {
     }
 
 
-    /* ---------------------------------------------------------
-       Find selected team
-    --------------------------------------------------------- */
+    /* =========================================================
+       FIND SELECTED TEAM
+       ========================================================= */
 
-    const team = COBRAS_TEAMS[requestedTeam];
+    const team =
+        COBRAS_TEAMS[requestedTeam];
 
 
     if (
@@ -461,25 +489,28 @@ body {
     }
 
 
-    /* ---------------------------------------------------------
-       Populate page
-    --------------------------------------------------------- */
+    /* =========================================================
+       PAGE TITLE
+       ========================================================= */
 
     document.title =
         "McHenry Cobras - " + team.name;
 
 
+    /* =========================================================
+       TEAM NAME / SEASON
+       ========================================================= */
+
     document.getElementById("teamName").textContent =
         team.name;
-
 
     document.getElementById("teamSeason").textContent =
         team.season || "2027 Season";
 
 
-    /* ---------------------------------------------------------
-       Coaching staff
-    --------------------------------------------------------- */
+    /* =========================================================
+       COACHING STAFF
+       ========================================================= */
 
     const staffGrid =
         document.getElementById("staffGrid");
@@ -490,13 +521,17 @@ body {
     if (team.headCoach) {
 
         staffHTML +=
+
             '<div class="coach">' +
+
                 '<div class="coach-name">' +
                     escapeHTML(team.headCoach) +
                 '</div>' +
+
                 '<div class="coach-role">' +
                     'Head Coach' +
                 '</div>' +
+
             '</div>';
 
     }
@@ -515,13 +550,17 @@ body {
                 ) {
 
                     staffHTML +=
+
                         '<div class="coach">' +
+
                             '<div class="coach-name">' +
                                 escapeHTML(coachName) +
                             '</div>' +
+
                             '<div class="coach-role">' +
                                 'Assistant Coach' +
                             '</div>' +
+
                         '</div>';
 
                 }
@@ -532,12 +571,13 @@ body {
     }
 
 
-    staffGrid.innerHTML = staffHTML;
+    staffGrid.innerHTML =
+        staffHTML;
 
 
-    /* ---------------------------------------------------------
-       Buttons
-    --------------------------------------------------------- */
+    /* =========================================================
+       BUTTONS
+       ========================================================= */
 
     const buttonRow =
         document.getElementById("buttonRow");
@@ -547,23 +587,25 @@ body {
 
     /*
        GameChanger button
-
-       Team ID is used to send visitors to the team's
-       GameChanger page.
     */
 
     if (team.gameChangerTeamId) {
 
         const gcURL =
             "https://web.gc.com/teams/" +
-            encodeURIComponent(team.gameChangerTeamId);
+            encodeURIComponent(
+                team.gameChangerTeamId
+            );
 
         buttonHTML +=
+
             '<a class="gc-button" ' +
                'href="' + gcURL + '" ' +
                'target="_blank" ' +
                'rel="noopener">' +
-               'VIEW TEAM, ROSTER &amp; STATS ON GAMECHANGER' +
+
+                'VIEW TEAM, ROSTER &amp; STATS ON GAMECHANGER' +
+
             '</a>';
 
     }
@@ -571,8 +613,6 @@ body {
 
     /*
        Facebook button
-
-       Only appears if a Facebook URL exists.
     */
 
     if (
@@ -581,28 +621,39 @@ body {
     ) {
 
         buttonHTML +=
+
             '<a class="facebook-button" ' +
                'href="' +
-                    escapeAttribute(team.facebookUrl) +
+                    escapeAttribute(
+                        team.facebookUrl
+                    ) +
                '" ' +
                'target="_blank" ' +
                'rel="noopener">' +
-               'FOLLOW TEAM ON FACEBOOK' +
+
+                'FOLLOW TEAM ON FACEBOOK' +
+
             '</a>';
 
     }
 
 
-    buttonRow.innerHTML = buttonHTML;
+    buttonRow.innerHTML =
+        buttonHTML;
 
 
-    /* ---------------------------------------------------------
-       GameChanger widget
-    --------------------------------------------------------- */
+    /* =========================================================
+       GAMECHANGER WIDGET
+       ========================================================= */
 
     const widgetId =
         team.gameChangerWidgetId;
 
+
+    /*
+       If there isn't a widget ID yet, don't show
+       a broken GameChanger area.
+    */
 
     if (
         !widgetId ||
@@ -610,18 +661,23 @@ body {
     ) {
 
         document.getElementById("gcWidget").innerHTML =
+
             '<div class="error">' +
+
                 '<strong>GameChanger schedule coming soon</strong>' +
-                'The GameChanger widget ID has not been added for this team yet.' +
+
+                'The GameChanger widget ID has not been added ' +
+                'for this team yet.' +
+
             '</div>';
 
         return;
     }
 
 
-    /*
-       Unique target for this page.
-    */
+    /* =========================================================
+       CREATE GAMECHANGER TARGET
+       ========================================================= */
 
     const targetId =
         "gc-schedule-widget-" +
@@ -629,12 +685,15 @@ body {
 
 
     document.getElementById("gcWidget").innerHTML =
-        '<div id="' + targetId + '"></div>';
+
+        '<div id="' +
+            targetId +
+        '"></div>';
 
 
-    /*
-       Wait for GameChanger SDK.
-    */
+    /* =========================================================
+       INITIALIZE GAMECHANGER
+       ========================================================= */
 
     function initializeGameChanger() {
 
@@ -642,7 +701,8 @@ body {
             !window.GC ||
             !window.GC.team ||
             !window.GC.team.schedule ||
-            typeof window.GC.team.schedule.init !== "function"
+            typeof window.GC.team.schedule.init !==
+                "function"
         ) {
 
             setTimeout(
@@ -654,21 +714,16 @@ body {
         }
 
 
-        /*
-           Initialize official GameChanger scoreboard widget.
-
-           maxVerticalGamesVisible keeps the schedule compact
-           while still allowing users to scroll horizontally
-           through games and click into GameChanger.
-        */
-
         window.GC.team.schedule.init({
 
-            target: "#" + targetId,
+            target:
+                "#" + targetId,
 
-            widgetId: widgetId,
+            widgetId:
+                widgetId,
 
-            maxVerticalGamesVisible: 8
+            maxVerticalGamesVisible:
+                8
 
         });
 
@@ -678,18 +733,38 @@ body {
     initializeGameChanger();
 
 
-    /* ---------------------------------------------------------
-       Helper functions
-    --------------------------------------------------------- */
+    /* =========================================================
+       HTML SAFETY HELPERS
+       ========================================================= */
 
     function escapeHTML(value) {
 
         return String(value)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
+
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+
+            .replace(
+                /</g,
+                "&lt;"
+            )
+
+            .replace(
+                />/g,
+                "&gt;"
+            )
+
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+
+            .replace(
+                /'/g,
+                "&#039;"
+            );
 
     }
 
@@ -697,17 +772,33 @@ body {
     function escapeAttribute(value) {
 
         return String(value)
-            .replace(/&/g, "&amp;")
-            .replace(/"/g, "&quot;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;");
+
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+
+            .replace(
+                /</g,
+                "&lt;"
+            )
+
+            .replace(
+                />/g,
+                "&gt;"
+            );
 
     }
 
 
-    /* ---------------------------------------------------------
-       Team selector
-    --------------------------------------------------------- */
+    /* =========================================================
+       TEAM SELECTOR
+       ========================================================= */
 
     function showTeamSelector(teams) {
 
@@ -723,7 +814,9 @@ body {
             "Select a Team";
 
 
-        document.querySelector(".staff-section").innerHTML =
+        document.querySelector(
+            ".staff-section"
+        ).innerHTML =
 
             '<div style="' +
                 'text-align:center;' +
@@ -734,7 +827,9 @@ body {
                     'font-size:22px;' +
                     'margin:0 0 20px;' +
                 '">' +
+
                     'TEAM PAGES' +
+
                 '</h2>' +
 
                 '<div style="' +
@@ -745,15 +840,21 @@ body {
                     'margin:0 auto;' +
                 '">' +
 
-                    teams.map(function (entry) {
+                    teams.map(
+                        function (entry) {
 
-                        const key = entry[0];
-                        const team = entry[1];
+                            const key =
+                                entry[0];
 
-                        return (
+                            const team =
+                                entry[1];
 
-                            '<a href="?team=' +
-                                encodeURIComponent(key) +
+                            return (
+
+                                '<a href="?team=' +
+                                    encodeURIComponent(
+                                        key
+                                    ) +
                                 '" ' +
 
                                 'style="' +
@@ -767,21 +868,25 @@ body {
                                     'font-weight:700;' +
                                 '">' +
 
-                                escapeHTML(team.name) +
+                                    escapeHTML(
+                                        team.name
+                                    ) +
 
-                            '</a>'
+                                '</a>'
 
-                        );
+                            );
 
-                    }).join("") +
+                        }
+                    ).join("") +
 
                 '</div>' +
 
             '</div>';
 
 
-        document.querySelector(".gc-wrapper").style.display =
-            "none";
+        document.querySelector(
+            ".gc-wrapper"
+        ).style.display = "none";
 
     }
 
