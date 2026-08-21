@@ -1,1 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>McHenry Cobras Baseball</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --orange: #ff5a00;
+      --orange-dark: #d94700;
+      --black: #111111;
+      --gray: #666666;
+      --light-gray: #f5f5f5;
+      --border: #dddddd;
+    }
+
+    body {
+      margin: 0;
+      background: #f6f6f6;
+      color: var(--black);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      width: min(1100px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 22px 0 50px;
+    }
+
+    /* =========================
+       COBRAS HEADER
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 190px;
+      border-radius: 14px;
+      background:
+        radial-gradient(
+          circle at 90% 50%,
+          rgba(255, 90, 0, .30),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #0b0b0b,
+          #171717 55%,
+          #28150d
+        );
+      box-shadow: 0 6px 18px rgba(0,0,0,.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          -20deg,
+          transparent 0,
+          transparent 38px,
+          rgba(255,255,255,.025) 39px,
+          transparent 40px
+        );
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      position: relative;
+      z-index: 1;
+      max-width: 78%;
+      max-height: 125px;
+      object-fit: contain;
+    }
+
+    .hero-title {
+      text-align: center;
+      margin: 22px 0 18px;
+    }
+
+    .hero-title h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .hero-title .season {
+      margin-top: 7px;
+      color: var(--orange);
+      font-size: clamp(18px, 3vw, 25px);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .orange-line {
+      height: 4px;
+      background: var(--orange);
+      border-radius: 4px;
+      margin-bottom: 28px;
+    }
+
+    /* =========================
+       ORGANIZATION SUMMARY
+    ========================== */
+
+    .section-title {
+      margin: 0 0 13px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: .5px;
+    }
+
+    .section-title span {
+      color: var(--orange);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .summary-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 15px;
+      text-align: center;
+      box-shadow: 0 2px 7px rgba(0,0,0,.06);
+    }
+
+    .summary-number {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .summary-label {
+      margin-top: 6px;
+      color: #777;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       TEAM DIRECTORY
+    ========================== */
+
+    .teams-section {
+      margin-top: 10px;
+    }
+
+    .age-group {
+      margin-bottom: 30px;
+    }
+
+    .age-group-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 11px;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .age-group-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #d7d7d7;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .team-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 15px;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 10px;
+      padding: 16px 17px;
+      box-shadow: 0 2px 7px rgba(0,0,0,.05);
+      transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0,0,0,.10);
+    }
+
+    .team-name {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .team-coach {
+      margin-top: 5px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .team-record {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+
+    .record-number {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .record-label {
+      color: #777;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .team-arrow {
+      margin-left: 8px;
+      color: var(--orange);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .coming-soon {
+      color: #888;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       LOADING / ERROR
+    ========================== */
+
+    .loading {
+      padding: 40px 20px;
+      text-align: center;
+      color: #666;
+    }
+
+    .error {
+      padding: 18px;
+      background: #fff5f5;
+      border: 1px solid #e0b4b4;
+      border-radius: 9px;
+      color: #a00000;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      .page {
+        width: min(100% - 18px, 600px);
+        padding-top: 10px;
+      }
+
+      .hero {
+        min-height: 135px;
+        border-radius: 11px;
+        padding: 18px;
+      }
+
+      .hero-logo {
+        max-width: 92%;
+        max-height: 90px;
+      }
+
+      .hero-title {
+        margin: 17px 0 14px;
+      }
+
+      .orange-line {
+        margin-bottom: 22px;
+      }
+
+      .summary {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-card {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 420px) {
+
+      .summary-card {
+        padding: 14px 8px;
+      }
+
+      .summary-number {
+        font-size: 27px;
+      }
+
+      .team-name {
+        font-size: 16px;
+      }
+
+      .team-coach {
+        font-size: 12px;
+      }
+
+      .team-record {
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- =========================
+         COBRAS HEADER
+    ========================== -->
+
+    <div class="hero">
+      <img
+        src="cobras-logo.png"
+        class="hero-logo"
+        alt="McHenry Cobras Baseball"
+      >
+    </div>
+
+    <div class="hero-title">
+      <h1>McHenry Cobras Baseball</h1>
+      <div class="season">2027 Season</div>
+    </div>
+
+    <div class="orange-line"></div>
+
+
+    <!-- =========================
+         ORGANIZATION SUMMARY
+    ========================== -->
+
+    <section>
+
+      <h2 class="section-title">
+        Cobras Organization
+      </h2>
+
+      <div id="summary" class="summary">
+
+        <div class="summary-card">
+          <div id="team-count" class="summary-number">—</div>
+          <div class="summary-label">Active Teams</div>
+        </div>
+
+        <div class="summary-card">
+          <div id="org-wins" class="summary-number">—</div>
+          <div class="summary-label">Wins</div>
+        </div>
+
+        <div class="summary-card">
+          <div id="org-losses" class="summary-number">—</div>
+          <div class="summary-label">Losses</div>
+        </div>
+
+        <div class="summary-card">
+          <div id="org-ties" class="summary-number">—</div>
+          <div class="summary-label">Ties</div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TEAM DIRECTORY
+    ========================== -->
+
+    <section class="teams-section">
+
+      <h2 class="section-title">
+        Cobras Teams
+      </h2>
+
+      <div id="teams">
+
+        <div class="loading">
+          Loading Cobras teams...
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      McHenry Cobras Baseball
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    /*
+      Load the team configuration.
+
+      config.js defines:
+        COBRAS_TEAMS
+    */
+
+    async function loadConfig() {
+
+      const response =
+        await fetch("config.js?v=" + Date.now());
+
+      if (!response.ok) {
+        throw new Error("Unable to load config.js");
+      }
+
+      const text = await response.text();
+
+      /*
+        Extract the COBRAS_TEAMS object from config.js.
+
+        This allows the configuration file to remain
+        normal JavaScript instead of requiring JSON.
+      */
+
+      const match =
+        text.match(
+          /const\s+COBRAS_TEAMS\s*=\s*(\{[\s\S]*\});?\s*$/
+        );
+
+      if (!match) {
+        throw new Error(
+          "Unable to find COBRAS_TEAMS in config.js"
+        );
+      }
+
+      /*
+        Convert the object literal into a JavaScript object.
+      */
+
+      return Function(
+        '"use strict"; return (' + match[1] + ')'
+      )();
+
+    }
+
+
+    /*
+      Load one team's schedule.
+    */
+
+    async function loadSchedule(teamKey) {
+
+      const response =
+        await fetch(
+          "schedules/" +
+          teamKey +
+          ".json?v=" +
+          Date.now()
+        );
+
+      if (!response.ok) {
+        throw new Error(
+          "Schedule unavailable"
+        );
+      }
+
+      return await response.json();
+
+    }
+
+
+    /*
+      Calculate a team's record.
+
+      Only completed games with a score
+      are included.
+    */
+
+    function calculateRecord(games) {
+
+      let wins = 0;
+      let losses = 0;
+      let ties = 0;
+
+      games.forEach(game => {
+
+        if (
+          game.game_status !== "completed" ||
+          !game.score
+        ) {
+          return;
+        }
+
+        /*
+          GameChanger score objects use:
+
+            score: {
+              team: number,
+              opponent_team: number
+            }
+        */
+
+        const teamScore =
+          Number(game.score.team);
+
+        const opponentScore =
+          Number(game.score.opponent_team);
+
+
+        if (
+          Number.isNaN(teamScore) ||
+          Number.isNaN(opponentScore)
+        ) {
+          return;
+        }
+
+
+        if (teamScore > opponentScore) {
+
+          wins++;
+
+        } else if (teamScore < opponentScore) {
+
+          losses++;
+
+        } else {
+
+          ties++;
+
+        }
+
+      });
+
+      return {
+        wins,
+        losses,
+        ties
+      };
+
+    }
+
+
+    /*
+      Return the age number from a team name.
+
+      Example:
+
+        "12U Lorenz" → 12
+
+    */
+
+    function getAge(team) {
+
+      const match =
+        team.name.match(/^(\d+)U/i);
+
+      return match
+        ? Number(match[1])
+        : 999;
+
+    }
+
+
+    /*
+      Build a coach display.
+    */
+
+    function getCoach(team) {
+
+      const coaches = [];
+
+      if (team.headCoach) {
+        coaches.push(team.headCoach);
+      }
+
+      if (
+        Array.isArray(team.assistantCoaches)
+      ) {
+        coaches.push(
+          ...team.assistantCoaches
+        );
+      }
+
+      return coaches.length
+        ? coaches.join(" · ")
+        : "Coaching information coming soon";
+
+    }
+
+
+    /*
+      Build a team card.
+    */
+
+    function createTeamCard(
+      teamKey,
+      team,
+      record
+    ) {
+
+      const card =
+        document.createElement("a");
+
+      card.className = "team-card";
+
+      card.href =
+        "?team=" +
+        encodeURIComponent(teamKey);
+
+
+      const totalGames =
+        record.wins +
+        record.losses +
+        record.ties;
+
+
+      const recordText =
+        totalGames > 0
+          ? `${record.wins}-${record.losses}-${record.ties}`
+          : "0-0-0";
+
+
+      const recordLabel =
+        totalGames > 0
+          ? "W-L-T"
+          : "RECORD";
+
+
+      const scheduleAvailable =
+        Boolean(team.gameChangerTeamId);
+
+
+      card.innerHTML = `
+
+        <div>
+
+          <div class="team-name">
+            ${team.name}
+          </div>
+
+          <div class="team-coach">
+            ${getCoach(team)}
+          </div>
+
+        </div>
+
+
+        <div class="team-record">
+
+          <div>
+            <div class="record-number">
+              ${recordText}
+            </div>
+
+            <div class="record-label">
+              ${recordLabel}
+            </div>
+          </div>
+
+          <div class="team-arrow">
+            →
+          </div>
+
+        </div>
+
+      `;
+
+
+      if (!scheduleAvailable) {
+
+        card.querySelector(
+          ".team-record"
+        ).insertAdjacentHTML(
+          "afterbegin",
+          `
+            <div class="coming-soon">
+              Schedule
+            </div>
+          `
+        );
+
+      }
+
+
+      return card;
+
+    }
+
+
+    /*
+      Build the complete team directory.
+    */
+
+    async function buildDirectory() {
+
+      const teamsContainer =
+        document.getElementById("teams");
+
+      const config =
+        await loadConfig();
+
+
+      /*
+        Only active teams participate
+        in the organization.
+      */
+
+      const activeTeams =
+        Object.entries(config)
+          .filter(
+            ([key, team]) =>
+              team.active === true
+          )
+          .sort(
+            ([keyA, teamA], [keyB, teamB]) =>
+              getAge(teamA) -
+              getAge(teamB) ||
+              teamA.name.localeCompare(
+                teamB.name
+              )
+          );
+
+
+      /*
+        Organization totals.
+      */
+
+      let organizationWins = 0;
+      let organizationLosses = 0;
+      let organizationTies = 0;
+
+
+      /*
+        Store team information so we can
+        build the directory after schedules
+        are loaded.
+      */
+
+      const teamData = [];
+
+
+      for (
+        const [teamKey, team]
+        of activeTeams
+      ) {
+
+        let record = {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        };
+
+
+        /*
+          Teams without a GameChanger ID
+          remain active, but have no schedule
+          data yet.
+        */
+
+        if (team.gameChangerTeamId) {
+
+          try {
+
+            const games =
+              await loadSchedule(teamKey);
+
+            record =
+              calculateRecord(games);
+
+          } catch (error) {
+
+            console.warn(
+              `Unable to load ${team.name}:`,
+              error.message
+            );
+
+          }
+
+        }
+
+
+        organizationWins +=
+          record.wins;
+
+        organizationLosses +=
+          record.losses;
+
+        organizationTies +=
+          record.ties;
+
+
+        teamData.push({
+          teamKey,
+          team,
+          record
+        });
+
+      }
+
+
+      /*
+        Update organization summary.
+      */
+
+      document.getElementById(
+        "team-count"
+      ).textContent =
+        activeTeams.length;
+
+      document.getElementById(
+        "org-wins"
+      ).textContent =
+        organizationWins;
+
+      document.getElementById(
+        "org-losses"
+      ).textContent =
+        organizationLosses;
+
+      document.getElementById(
+        "org-ties"
+      ).textContent =
+        organizationTies;
+
+
+      /*
+        Group teams by age.
+      */
+
+      const groups = {};
+
+      teamData.forEach(item => {
+
+        const age =
+          getAge(item.team);
+
+        if (!groups[age]) {
+          groups[age] = [];
+        }
+
+        groups[age].push(item);
+
+      });
+
+
+      teamsContainer.innerHTML = "";
+
+
+      /*
+        Create each age group.
+      */
+
+      Object.keys(groups)
+        .sort(
+          (a, b) =>
+            Number(a) -
+            Number(b)
+        )
+        .forEach(age => {
+
+          const section =
+            document.createElement("div");
+
+          section.className =
+            "age-group";
+
+
+          const title =
+            document.createElement("div");
+
+          title.className =
+            "age-group-title";
+
+          title.textContent =
+            age === "999"
+              ? "Other Teams"
+              : `${age}U`;
+
+
+          const grid =
+            document.createElement("div");
+
+          grid.className =
+            "team-grid";
+
+
+          groups[age].forEach(item => {
+
+            grid.appendChild(
+              createTeamCard(
+                item.teamKey,
+                item.team,
+                item.record
+              )
+            );
+
+          });
+
+
+          section.appendChild(title);
+          section.appendChild(grid);
+
+          teamsContainer.appendChild(
+            section
+          );
+
+        });
+
+    }
+
+
+    /*
+      Start the page.
+    */
+
+    buildDirectory().catch(error => {
+
+      console.error(error);
+
+      document.getElementById(
+        "teams"
+      ).innerHTML = `
+
+        <div class="error">
+          Unable to load the Cobras team directory right now.
+        </div>
+
+      `;
+
+    });
+
+  </script>
+
+</body>
+</html>
