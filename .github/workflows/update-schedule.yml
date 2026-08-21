@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -18,16 +19,91 @@ jobs:
         run: |
           curl -L "https://api.team-manager.gc.com/public/teams/jWdOuqoTjKow/games" -o schedule.json
 
+      - name: Download opponent logos
+        run: |
+          mkdir -p logos
+
+          python3 <<'PY'
+          import json
+          import os
+          import re
+          import subprocess
+
+          with open("schedule.json", "r", encoding="utf-8") as f:
+              games = json.load(f)
+
+          for game in games:
+              opponent = game.get("opponent_team", {})
+              name = opponent.get("name", "")
+              avatar_url = opponent.get("avatar_url")
+
+              if not avatar_url:
+                  continue
+
+              # Create a safe filename from the opponent name
+              filename = re.sub(
+                  r"[^a-z0-9]+",
+                  "-",
+                  name.lower()
+              ).strip("-")
+
+              if not filename:
+                  continue
+
+              path = f"logos/{filename}.png"
+
+              print(f"Downloading logo for {name}")
+
+              try:
+                  result = subprocess.run(
+                      [
+                          "curl",
+                          "-L",
+                          "--fail",
+                          "--silent",
+                          "--show-error",
+                          avatar_url,
+                          "-o",
+                          path
+                      ],
+                      check=False
+                  )
+
+                  if result.returncode == 0 and os.path.exists(path):
+                      # Replace the temporary GameChanger URL
+                      # with our permanent local logo path
+                      opponent["avatar_url"] = path
+                      print(f"Saved {path}")
+                  else:
+                      print(f"Could not download logo for {name}")
+
+              except Exception as e:
+                  print(f"Error downloading {name}: {e}")
+
+          with open("schedule.json", "w", encoding="utf-8") as f:
+              json.dump(
+                  games,
+                  f,
+                  separators=(",", ":")
+              )
+
+          PY
+
       - name: Show downloaded data
         run: |
           echo "Schedule downloaded:"
-          cat schedule.json
+          python3 -m json.tool schedule.json | head -100
 
-      - name: Save schedule
+          echo ""
+          echo "Downloaded logos:"
+          ls -lh logos || true
+
+      - name: Save schedule and logos
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add schedule.json
+
+          git add schedule.json logos/
 
           if git diff --cached --quiet; then
             echo "No changes to save."
