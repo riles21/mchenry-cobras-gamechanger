@@ -28,7 +28,7 @@
       text-align: center;
       border-bottom: 4px solid #ff5a00;
       padding-bottom: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .eyebrow {
@@ -49,6 +49,41 @@
       margin-top: 6px;
       color: #666;
       font-size: 15px;
+    }
+
+    /* RECORD */
+
+    .record {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin: 0 auto 24px;
+      padding: 14px 20px;
+      max-width: 420px;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 2px 7px rgba(0,0,0,.06);
+    }
+
+    .record-item {
+      text-align: center;
+      min-width: 70px;
+    }
+
+    .record-number {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .record-label {
+      margin-top: 5px;
+      color: #666;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .schedule {
@@ -135,22 +170,33 @@
       white-space: nowrap;
     }
 
-    /* Game results */
+    /* COMPLETED GAME */
+
     .result {
-      font-size: 18px;
+      margin-top: 4px;
+      font-size: 17px;
       font-weight: 800;
     }
 
-    .result.win {
+    .final {
+      display: block;
+      margin-top: 3px;
+      color: #777;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .win {
       color: #16803c;
     }
 
-    .result.loss {
-      color: #c62828;
+    .loss {
+      color: #b42318;
     }
 
-    .result.tie {
-      color: #666666;
+    .tie {
+      color: #666;
     }
 
     .loading {
@@ -174,6 +220,14 @@
 
       h1 {
         font-size: 26px;
+      }
+
+      .record {
+        gap: 20px;
+      }
+
+      .record-number {
+        font-size: 25px;
       }
 
       .game {
@@ -218,6 +272,25 @@
       <div class="subtitle">2026 Fall Schedule</div>
     </header>
 
+    <!-- RECORD -->
+
+    <div class="record">
+      <div class="record-item">
+        <div id="wins" class="record-number">0</div>
+        <div class="record-label">Wins</div>
+      </div>
+
+      <div class="record-item">
+        <div id="losses" class="record-number">0</div>
+        <div class="record-label">Losses</div>
+      </div>
+
+      <div class="record-item">
+        <div id="ties" class="record-number">0</div>
+        <div class="record-label">Ties</div>
+      </div>
+    </div>
+
     <div id="schedule" class="schedule">
       <div class="loading">Loading schedule...</div>
     </div>
@@ -239,7 +312,36 @@
 
         container.innerHTML = "";
 
+        let wins = 0;
+        let losses = 0;
+        let ties = 0;
+
         games.forEach(game => {
+
+          /*
+           * Calculate record from completed games.
+           *
+           * GameChanger returns:
+           * score.team
+           * score.opponent_team
+           * score.game_status
+           */
+
+          if (
+            game.score &&
+            game.score.game_status === "completed"
+          ) {
+            const teamScore = Number(game.score.team);
+            const opponentScore = Number(game.score.opponent_team);
+
+            if (teamScore > opponentScore) {
+              wins++;
+            } else if (teamScore < opponentScore) {
+              losses++;
+            } else {
+              ties++;
+            }
+          }
 
           const date = new Date(game.start_ts);
 
@@ -274,41 +376,33 @@
             : `<div class="opponent-placeholder">⚾</div>`;
 
           /*
-           * GameChanger completed-game results.
-           *
-           * If score information exists, display:
-           * W 7-3
-           * L 2-10
-           * T 5-5
-           *
-           * If no score exists, continue displaying the game time.
+           * Show score only when GameChanger
+           * says the game is completed.
            */
-          let gameResult = "";
 
-          const hasScore =
+          let result = "";
+
+          if (
             game.score &&
-            game.score.team != null &&
-            game.score.opponent_team != null;
-
-          if (hasScore) {
-            const ourScore = Number(game.score.team);
+            game.score.game_status === "completed"
+          ) {
+            const teamScore = Number(game.score.team);
             const opponentScore = Number(game.score.opponent_team);
 
-            if (
-              Number.isFinite(ourScore) &&
-              Number.isFinite(opponentScore)
-            ) {
-              if (ourScore > opponentScore) {
-                gameResult =
-                  `<span class="result win">W ${ourScore}-${opponentScore}</span>`;
-              } else if (ourScore < opponentScore) {
-                gameResult =
-                  `<span class="result loss">L ${ourScore}-${opponentScore}</span>`;
-              } else {
-                gameResult =
-                  `<span class="result tie">T ${ourScore}-${opponentScore}</span>`;
-              }
+            let resultClass = "tie";
+
+            if (teamScore > opponentScore) {
+              resultClass = "win";
+            } else if (teamScore < opponentScore) {
+              resultClass = "loss";
             }
+
+            result = `
+              <div class="result ${resultClass}">
+                ${teamScore} - ${opponentScore}
+                <span class="final">FINAL</span>
+              </div>
+            `;
           }
 
           const card = document.createElement("div");
@@ -323,23 +417,35 @@
 
             <div class="opponent">
               ${logo}
+
               <div>
                 <div class="opponent-name">
                   ${game.opponent_team.name}
                 </div>
+
                 <div class="home-away">
                   ${homeAway}
                 </div>
+
+                ${result}
               </div>
             </div>
 
             <div class="time">
-              ${gameResult || time}
+              ${result ? "" : time}
             </div>
           `;
 
           container.appendChild(card);
         });
+
+        /*
+         * Update record at the top.
+         */
+
+        document.getElementById("wins").textContent = wins;
+        document.getElementById("losses").textContent = losses;
+        document.getElementById("ties").textContent = ties;
 
       } catch (error) {
         console.error(error);
