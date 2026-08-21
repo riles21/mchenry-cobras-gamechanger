@@ -144,6 +144,18 @@ jobs:
 
             const games = await response.json();
 
+                        if (key === "lennon11u") {
+              console.log("");
+              console.log("========================================");
+              console.log("LENNON GAME DATA DIAGNOSTIC");
+              console.log("========================================");
+              console.log(JSON.stringify(games, null, 2));
+              console.log("========================================");
+              console.log("END LENNON DIAGNOSTIC");
+              console.log("========================================");
+              console.log("");
+            }
+
             if (!Array.isArray(games)) {
               throw new Error(
                 `Unexpected schedule format for ${key}`
