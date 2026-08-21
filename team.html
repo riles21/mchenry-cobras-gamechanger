@@ -755,15 +755,15 @@
   }
 
 
-  function getTeamConfig(key) {
+function getTeamConfig(key) {
 
-    if (!window.COBRAS_TEAMS) {
-      throw new Error("config.js did not load.");
-    }
-
-    return window.COBRAS_TEAMS[key];
-
+  if (typeof COBRAS_TEAMS === "undefined") {
+    throw new Error("config.js did not load.");
   }
+
+  return COBRAS_TEAMS[key];
+
+}
 
 
   function escapeHtml(value) {
