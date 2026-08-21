@@ -31,412 +31,160 @@ jobs:
           const path = require("path");
           const crypto = require("crypto");
 
-          /*
-            Load config.js.
-
-            We need both:
-              COBRAS_SETTINGS
-              COBRAS_TEAMS
-          */
-
           const configText = fs.readFileSync("config.js", "utf8");
 
           const context = {};
           vm.createContext(context);
+          vm.runInContext(configText + "\nthis.__teams = COBRAS_TEAMS;", context);
 
-          vm.runInContext(
-            configText +
-            "\nthis.__settings = COBRAS_SETTINGS;" +
-            "\nthis.__teams = COBRAS_TEAMS;",
-            context
-          );
-
-          const settings = context.__settings;
           const teams = context.__teams;
-
-          if (!settings) {
-            throw new Error(
-              "COBRAS_SETTINGS was not found in config.js"
-            );
-          }
-
-          if (!teams) {
-            throw new Error(
-              "COBRAS_TEAMS was not found in config.js"
-            );
-          }
-
-          /*
-            Validate the global GameChanger season selection.
-          */
-
-          const activeGameChangerSeasons =
-            Array.isArray(settings.activeGameChangerSeasons)
-              ? settings.activeGameChangerSeasons
-              : [];
-
-          if (activeGameChangerSeasons.length === 0) {
-            throw new Error(
-              "No active GameChanger seasons are configured."
-            );
-          }
-
-          console.log("");
-          console.log("========================================");
-          console.log("COBRAS SCHEDULE UPDATE");
-          console.log("========================================");
-          console.log(
-            `Cobras season: ${settings.cobrasSeason || "Not specified"}`
-          );
-          console.log(
-            `GameChanger seasons: ${activeGameChangerSeasons.join(", ")}`
-          );
-          console.log("========================================");
-          console.log("");
-
-
-          /*
-            Download helper used for opponent logos.
-          */
 
           function download(url, destination) {
             return new Promise((resolve, reject) => {
+              const client = url.startsWith("https://") ? https : http;
 
-              const client =
-                url.startsWith("https://")
-                  ? https
-                  : http;
-
-              const request = client.get(
-                url,
-                {
-                  headers: {
-                    "User-Agent":
-                      "McHenry-Cobras-Schedule-Updater"
-                  }
-                },
-                response => {
-
-                  /*
-                    Follow redirects.
-                  */
-
-                  if (
-                    response.statusCode >= 300 &&
-                    response.statusCode < 400 &&
-                    response.headers.location
-                  ) {
-                    response.resume();
-
-                    return download(
-                      response.headers.location,
-                      destination
-                    )
-                      .then(resolve)
-                      .catch(reject);
-                  }
-
-                  if (response.statusCode !== 200) {
-                    response.resume();
-
-                    return reject(
-                      new Error(
-                        `HTTP ${response.statusCode}`
-                      )
-                    );
-                  }
-
-                  const contentType =
-                    response.headers["content-type"] || "";
-
-                  let extension = ".jpg";
-
-                  if (contentType.includes("png")) {
-                    extension = ".png";
-                  } else if (
-                    contentType.includes("webp")
-                  ) {
-                    extension = ".webp";
-                  } else if (
-                    contentType.includes("gif")
-                  ) {
-                    extension = ".gif";
-                  } else if (
-                    contentType.includes("svg")
-                  ) {
-                    extension = ".svg";
-                  }
-
-                  const finalDestination =
-                    destination + extension;
-
-                  const file =
-                    fs.createWriteStream(
-                      finalDestination
-                    );
-
-                  response.pipe(file);
-
-                  file.on("finish", () => {
-                    file.close(() => {
-                      resolve({
-                        path: finalDestination,
-                        contentType
-                      });
-                    });
-                  });
-
-                  file.on("error", reject);
+              const request = client.get(url, {
+                headers: {
+                  "User-Agent": "McHenry-Cobras-Schedule-Updater"
                 }
-              );
+              }, response => {
+
+                if (
+                  response.statusCode >= 300 &&
+                  response.statusCode < 400 &&
+                  response.headers.location
+                ) {
+                  response.resume();
+                  return download(response.headers.location, destination)
+                    .then(resolve)
+                    .catch(reject);
+                }
+
+                if (response.statusCode !== 200) {
+                  response.resume();
+                  return reject(
+                    new Error(`HTTP ${response.statusCode}`)
+                  );
+                }
+
+                const contentType =
+                  response.headers["content-type"] || "";
+
+                let extension = ".jpg";
+
+                if (contentType.includes("png")) {
+                  extension = ".png";
+                } else if (contentType.includes("webp")) {
+                  extension = ".webp";
+                } else if (contentType.includes("gif")) {
+                  extension = ".gif";
+                } else if (contentType.includes("svg")) {
+                  extension = ".svg";
+                }
+
+                const finalDestination =
+                  destination + extension;
+
+                const file = fs.createWriteStream(finalDestination);
+
+                response.pipe(file);
+
+                file.on("finish", () => {
+                  file.close(() => resolve({
+                    path: finalDestination,
+                    contentType
+                  }));
+                });
+
+                file.on("error", reject);
+              });
 
               request.on("error", reject);
 
               request.setTimeout(30000, () => {
                 request.destroy(
-                  new Error(
-                    "Logo download timed out"
-                  )
+                  new Error("Logo download timed out")
                 );
               });
             });
           }
 
-
-          /*
-            Download one GameChanger season for one team.
-          */
-
-          async function downloadSeason(
-            teamKey,
-            team,
-            seasonName,
-            gameChangerTeamId
-          ) {
-
-            if (!gameChangerTeamId) {
-              console.log(
-                `  ${seasonName}: no GameChanger team ID`
-              );
-
-              return [];
-            }
-
-            console.log(
-              `  Downloading ${seasonName} (${gameChangerTeamId})`
-            );
-
-            const scheduleUrl =
-              `https://api.team-manager.gc.com/public/teams/${gameChangerTeamId}/games`;
-
-            const response =
-              await fetch(scheduleUrl);
-
-            if (!response.ok) {
-              throw new Error(
-                `Schedule HTTP ${response.status} ` +
-                `for ${teamKey} / ${seasonName}`
-              );
-            }
-
-            const games =
-              await response.json();
-
-            if (!Array.isArray(games)) {
-              throw new Error(
-                `Unexpected schedule format for ` +
-                `${teamKey} / ${seasonName}`
-              );
-            }
-
-            /*
-              Stamp the source season onto each game.
-
-              The GameChanger games endpoint does not currently
-              return a season field in the individual game object.
-
-              Since we know which season-specific GameChanger
-              team ID produced these games, we can safely record
-              that information ourselves.
-
-              This is especially important when multiple seasons
-              are combined later.
-            */
-
-            games.forEach(game => {
-              game.cobras_gamechanger_season =
-                seasonName;
-
-              game.cobras_gamechanger_team_id =
-                gameChangerTeamId;
-            });
-
-            console.log(
-              `  ${seasonName}: ${games.length} games`
-            );
-
-            return games;
-          }
-
-
-          /*
-            Download all selected seasons for one Cobras team.
-          */
-
           async function processTeam(key, team) {
 
             if (!team.active) {
-              console.log(
-                `Skipping inactive team: ${key}`
-              );
-
+              console.log(`Skipping inactive team: ${key}`);
               return;
             }
 
-            if (!team.gameChangerTeams) {
+            if (!team.gameChangerTeamId) {
               console.log(
-                `Skipping ${team.name}: ` +
-                `no gameChangerTeams configuration`
+                `Skipping ${team.name}: no GameChanger team ID`
               );
-
               return;
             }
 
-            console.log("");
             console.log(
-              `========================================`
-            );
-            console.log(
-              `Processing ${team.name} (${key})`
-            );
-            console.log(
-              `========================================`
+              `Downloading ${team.name} (${key})`
             );
 
-            const allGames = [];
+            const scheduleUrl =
+              `https://api.team-manager.gc.com/public/teams/${team.gameChangerTeamId}/games`;
 
-            for (
-              const seasonName
-              of activeGameChangerSeasons
-            ) {
+            const scheduleFile =
+              path.join("schedules", `${key}.json`);
 
-              const gameChangerTeamId =
-                team.gameChangerTeams[seasonName];
+            const response = await fetch(scheduleUrl);
 
-              const seasonGames =
-                await downloadSeason(
-                  key,
-                  team,
-                  seasonName,
-                  gameChangerTeamId
-                );
-
-              allGames.push(
-                ...seasonGames
+            if (!response.ok) {
+              throw new Error(
+                `Schedule HTTP ${response.status} for ${key}`
               );
             }
 
+            const games = await response.json();
 
-            /*
-              Sort all selected-season games chronologically.
-            */
+            if (!Array.isArray(games)) {
+              throw new Error(
+                `Unexpected schedule format for ${key}`
+              );
+            }
 
-            allGames.sort(
-              (a, b) =>
-                new Date(a.start_ts) -
-                new Date(b.start_ts)
-            );
+            const logoMap = new Map();
 
+            for (const game of games) {
 
-            /*
-              Download/cache opponent logos.
+              const opponent = game.opponent_team;
 
-              Use one map per team update so repeated
-              logos are only downloaded once.
-            */
-
-            const logoMap =
-              new Map();
-
-            for (
-              const game
-              of allGames
-            ) {
-
-              const opponent =
-                game.opponent_team;
-
-              if (
-                !opponent ||
-                !opponent.avatar_url
-              ) {
+              if (!opponent || !opponent.avatar_url) {
                 continue;
               }
 
-              const originalUrl =
-                opponent.avatar_url;
+              const originalUrl = opponent.avatar_url;
 
-              /*
-                If this is already one of our local
-                cached paths, don't try to download it.
-              */
-
-              if (
-                originalUrl.startsWith(
-                  "logos/cache/"
-                )
-              ) {
+              if (logoMap.has(originalUrl)) {
+                opponent.avatar_url = logoMap.get(originalUrl);
                 continue;
               }
 
-              if (
-                logoMap.has(originalUrl)
-              ) {
-                opponent.avatar_url =
-                  logoMap.get(originalUrl);
-
-                continue;
-              }
-
-              const hash =
-                crypto
-                  .createHash("sha1")
-                  .update(originalUrl)
-                  .digest("hex")
-                  .substring(0, 16);
+              const hash = crypto
+                .createHash("sha1")
+                .update(originalUrl)
+                .digest("hex")
+                .substring(0, 16);
 
               const basePath =
-                path.join(
-                  "logos",
-                  "cache",
-                  hash
-                );
+                path.join("logos", "cache", hash);
 
               try {
 
                 const result =
-                  await download(
-                    originalUrl,
-                    basePath
-                  );
-
-                /*
-                  Use a root-relative path.
-                */
+                  await download(originalUrl, basePath);
 
                 const localUrl =
-                  result.path.replace(
-                    /\\/g,
-                    "/"
-                  );
+                  result.path.replace(/\\/g, "/");
 
-                logoMap.set(
-                  originalUrl,
-                  localUrl
-                );
-
-                opponent.avatar_url =
-                  localUrl;
+                logoMap.set(originalUrl, localUrl);
+                opponent.avatar_url = localUrl;
 
                 console.log(
                   `  Saved opponent logo: ${localUrl}`
@@ -445,74 +193,36 @@ jobs:
               } catch (error) {
 
                 console.log(
-                  `  Could not download opponent logo: ` +
-                  `${error.message}`
+                  `  Could not download opponent logo: ${error.message}`
                 );
-
-                /*
-                  Keep the original URL if the
-                  download fails.
-                */
               }
             }
 
-
             /*
-              Save the combined schedule.
-
-              Only seasons selected in:
-                COBRAS_SETTINGS.activeGameChangerSeasons
-
-              are present here.
+              The downloaded schedule already contains the
+              globally selected Cobras GameChanger season data
+              and each game is tagged with cobras_gamechanger_season.
+              We preserve that behavior here.
             */
-
-            const scheduleFile =
-              path.join(
-                "schedules",
-                `${key}.json`
-              );
-
             fs.writeFileSync(
               scheduleFile,
-              JSON.stringify(
-                allGames,
-                null,
-                2
-              ) + "\n"
+              JSON.stringify(games, null, 2) + "\n"
             );
 
             console.log(
-              `Saved ${scheduleFile} ` +
-              `(${allGames.length} games)`
+              `Saved ${scheduleFile}`
             );
           }
 
-
-          /*
-            Process every configured team.
-          */
-
           async function main() {
 
-            for (
-              const [key, team]
-              of Object.entries(teams)
-            ) {
-
+            for (const [key, team] of Object.entries(teams)) {
               try {
-
-                await processTeam(
-                  key,
-                  team
-                );
-
+                await processTeam(key, team);
               } catch (error) {
-
                 console.error(
-                  `ERROR processing ${key}: ` +
-                  error.message
+                  `ERROR processing ${key}: ${error.message}`
                 );
-
                 process.exitCode = 1;
               }
             }
@@ -521,25 +231,138 @@ jobs:
           main();
           NODE
 
+      - name: Build combined upcoming games feed
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+          const path = require("path");
+          const vm = require("vm");
+
+          const configText = fs.readFileSync("config.js", "utf8");
+
+          const context = {};
+          vm.createContext(context);
+          vm.runInContext(configText + "\nthis.__teams = COBRAS_TEAMS;", context);
+
+          const teams = context.__teams;
+          const schedulesDir = "schedules";
+          const now = Date.now();
+
+          const upcoming = [];
+
+          for (const [teamKey, team] of Object.entries(teams)) {
+            if (!team || !team.active || !team.gameChangerTeamId) {
+              continue;
+            }
+
+            const scheduleFile =
+              path.join(schedulesDir, `${teamKey}.json`);
+
+            if (!fs.existsSync(scheduleFile)) {
+              console.log(`No schedule file for ${teamKey}; skipping.`);
+              continue;
+            }
+
+            let games;
+
+            try {
+              games = JSON.parse(
+                fs.readFileSync(scheduleFile, "utf8")
+              );
+            } catch (error) {
+              console.log(
+                `Could not parse ${scheduleFile}: ${error.message}`
+              );
+              continue;
+            }
+
+            if (!Array.isArray(games)) {
+              continue;
+            }
+
+            for (const game of games) {
+              if (!game || !game.start_ts) {
+                continue;
+              }
+
+              const startTime = new Date(game.start_ts).getTime();
+
+              if (Number.isNaN(startTime) || startTime < now) {
+                continue;
+              }
+
+              if (game.game_status === "completed") {
+                continue;
+              }
+
+              upcoming.push({
+                teamKey,
+                teamName: team.name,
+                season: game.cobras_gamechanger_season || null,
+                game
+              });
+            }
+          }
+
+          const seen = new Set();
+
+          const deduped = upcoming
+            .sort(
+              (a, b) =>
+                new Date(a.game.start_ts) -
+                new Date(b.game.start_ts)
+            )
+            .filter(item => {
+              const key =
+                `${item.teamKey}|${item.game.id}`;
+
+              if (seen.has(key)) {
+                return false;
+              }
+
+              seen.add(key);
+              return true;
+            });
+
+          fs.writeFileSync(
+            "upcoming-games.json",
+            JSON.stringify(deduped, null, 2) + "\n"
+          );
+
+          console.log(
+            `Created upcoming-games.json with ${deduped.length} upcoming games.`
+          );
+
+          for (const item of deduped.slice(0, 10)) {
+            console.log(
+              `${item.teamName} | ${item.game.start_ts} | ${item.game.opponent_team?.name || "TBD"} | ${item.season || "unknown season"}`
+            );
+          }
+          NODE
+
       - name: Show downloaded files
         run: |
           echo "=== Schedules ==="
           ls -lah schedules || true
 
           echo ""
+          echo "=== Upcoming games feed ==="
+          ls -lah upcoming-games.json || true
+
+          echo ""
           echo "=== Cached logos ==="
           ls -lah logos/cache || true
 
-      - name: Save schedules and logos
+      - name: Save schedules, feed, and logos
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add schedules logos/cache
+          git add schedules upcoming-games.json logos/cache
 
           if git diff --cached --quiet; then
             echo "No changes to save."
           else
-            git commit -m "Update Cobras schedules and opponent logos"
+            git commit -m "Update Cobras schedules and upcoming games"
             git push
           fi
