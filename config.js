@@ -16,6 +16,10 @@
 
   Facebook:
     facebookUrl: leave "" until a team page is available.
+
+  NOTE:
+    The 12U Lorenz team is temporarily using the Riley GameChanger
+    widget ID until the correct Lorenz widget ID is available.
 */
 
 const COBRAS_TEAMS = {
@@ -129,7 +133,12 @@ const COBRAS_TEAMS = {
     name: "12U Lorenz",
     season: "2027 Season",
     gameChangerTeamId: "jWdOuqoTjKow",
-    gameChangerWidgetId: "",
+
+    // TEMPORARY:
+    // Using the old 17U Riley GameChanger widget.
+    // Replace this value with the real Lorenz widget ID later.
+    gameChangerWidgetId: "d658d31b-468e-496a-939f-11fe8966b370",
+
     headCoach: "John Lorenz",
     assistantCoaches: [
       "Randy Ozimek",
@@ -245,5 +254,3 @@ const COBRAS_TEAMS = {
   }
 
 };
-
-window.COBRAS_TEAMS = COBRAS_TEAMS;
