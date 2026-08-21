@@ -959,8 +959,8 @@
 
     const teamKey = getTeamKey();
 
-    const config = window.COBRAS_TEAMS || {};
-    const teamConfig = config[teamKey];
+const config = COBRAS_TEAMS || {};
+const teamConfig = config[teamKey];
 
     if (!teamConfig) {
       throw new Error(
