@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>McHenry Cobras Lorenz 12U</title>
 
   <style>
@@ -13,7 +14,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: #ffffff;
+      background: #f7f7f7;
       color: #111111;
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -21,13 +22,17 @@
     .page {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 24px 20px 50px;
     }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     .header {
       text-align: center;
       border-bottom: 4px solid #ff5a00;
-      padding-bottom: 16px;
+      padding-bottom: 18px;
       margin-bottom: 20px;
     }
 
@@ -35,72 +40,144 @@
       color: #ff5a00;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: 5px;
     }
 
     h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 34px;
+      line-height: 1.1;
     }
 
     .subtitle {
-      margin-top: 6px;
-      color: #666;
+      margin-top: 7px;
+      color: #666666;
       font-size: 15px;
     }
 
-    /* RECORD */
+    /* =========================
+       RECORD
+    ========================= */
 
     .record {
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-      margin: 0 auto 24px;
-      padding: 14px 20px;
       max-width: 420px;
+      margin: 0 auto 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #ffffff;
       border: 1px solid #dddddd;
       border-radius: 10px;
-      background: #ffffff;
+      overflow: hidden;
       box-shadow: 0 2px 7px rgba(0,0,0,.06);
     }
 
     .record-item {
       text-align: center;
-      min-width: 70px;
+      padding: 13px 8px 11px;
+    }
+
+    .record-item + .record-item {
+      border-left: 1px solid #eeeeee;
     }
 
     .record-number {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 800;
       line-height: 1;
     }
 
     .record-label {
       margin-top: 5px;
-      color: #666;
-      font-size: 12px;
+      color: #666666;
+      font-size: 10px;
       font-weight: 700;
-      text-transform: uppercase;
       letter-spacing: 1px;
+      text-transform: uppercase;
     }
+
+    /* =========================
+       TEAM INFO
+    ========================= */
+
+    .team-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 2px 7px rgba(0,0,0,.05);
+    }
+
+    .info-title {
+      color: #ff5a00;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .info-value {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .info-sub {
+      margin-top: 4px;
+      color: #666666;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    /* =========================
+       SECTION HEADERS
+    ========================= */
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px 0 12px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 21px;
+    }
+
+    .section-count {
+      color: #777777;
+      font-size: 13px;
+    }
+
+    /* =========================
+       GAMES
+    ========================= */
 
     .schedule {
       display: grid;
-      gap: 14px;
+      gap: 12px;
     }
 
     .game {
       display: grid;
-      grid-template-columns: 105px 1fr auto;
+      grid-template-columns: 95px 1fr auto;
       align-items: center;
       gap: 18px;
-      padding: 16px;
+      padding: 15px;
       border: 1px solid #dddddd;
       border-radius: 10px;
       background: #ffffff;
-      box-shadow: 0 2px 7px rgba(0,0,0,.06);
+      box-shadow: 0 2px 7px rgba(0,0,0,.05);
     }
 
     .date {
@@ -111,27 +188,28 @@
 
     .date .month {
       color: #ff5a00;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
     }
 
     .date .day {
-      font-size: 30px;
+      font-size: 29px;
       font-weight: 800;
       line-height: 1;
       margin: 3px 0;
     }
 
     .date .weekday {
-      color: #666;
-      font-size: 13px;
+      color: #666666;
+      font-size: 12px;
     }
 
     .opponent {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 13px;
+      min-width: 0;
     }
 
     .opponent img {
@@ -139,6 +217,7 @@
       height: 52px;
       object-fit: contain;
       border-radius: 50%;
+      flex-shrink: 0;
     }
 
     .opponent-placeholder {
@@ -150,59 +229,119 @@
       align-items: center;
       justify-content: center;
       font-size: 22px;
+      flex-shrink: 0;
     }
 
     .opponent-name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
+      line-height: 1.25;
     }
 
     .home-away {
       margin-top: 4px;
-      color: #777;
-      font-size: 13px;
+      color: #777777;
+      font-size: 12px;
+      font-weight: 600;
     }
 
-    .time {
-      text-align: right;
-      font-size: 16px;
-      font-weight: 700;
+    .game-result {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       white-space: nowrap;
     }
 
-    /* COMPLETED GAME */
-
-    .result {
-      margin-top: 4px;
+    .score {
       font-size: 17px;
       font-weight: 800;
     }
 
-    .final {
-      display: block;
-      margin-top: 3px;
-      color: #777;
-      font-size: 11px;
+    .result-badge {
+      min-width: 29px;
+      height: 29px;
+      padding: 0 7px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .result-win {
+      background: #e8f5e9;
+      color: #1b6e20;
+    }
+
+    .result-loss {
+      background: #ffebee;
+      color: #b71c1c;
+    }
+
+    .result-tie {
+      background: #fff3e0;
+      color: #e65100;
+    }
+
+    .time {
+      text-align: right;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 1px;
+      white-space: nowrap;
     }
 
-    .win {
-      color: #16803c;
+    /* =========================
+       UPCOMING / COMPLETED
+    ========================= */
+
+    .completed-section {
+      margin-bottom: 30px;
     }
 
-    .loss {
-      color: #b42318;
+    .upcoming-section {
+      margin-top: 28px;
     }
 
-    .tie {
-      color: #666;
+    .completed-game {
+      border-left: 4px solid #777777;
     }
+
+    .upcoming-game {
+      border-left: 4px solid #ff5a00;
+    }
+
+    .completed-game .date .month {
+      color: #777777;
+    }
+
+    .location-label {
+      color: #777777;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      text-align: center;
+      margin-top: 35px;
+      padding-top: 18px;
+      border-top: 1px solid #dddddd;
+      color: #888888;
+      font-size: 12px;
+    }
+
+    /* =========================
+       LOADING / ERROR
+    ========================= */
 
     .loading {
       text-align: center;
       padding: 40px;
-      color: #666;
+      color: #666666;
     }
 
     .error {
@@ -213,26 +352,29 @@
       border-radius: 8px;
     }
 
-    @media (max-width: 650px) {
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
       .page {
-        padding: 12px;
+        padding: 16px 12px 40px;
       }
 
       h1 {
-        font-size: 26px;
+        font-size: 28px;
       }
 
-      .record {
-        gap: 20px;
-      }
-
-      .record-number {
-        font-size: 25px;
+      .team-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
       }
 
       .game {
-        grid-template-columns: 75px 1fr;
+        grid-template-columns: 72px 1fr;
         gap: 12px;
+        padding: 13px;
       }
 
       .date {
@@ -243,20 +385,34 @@
         font-size: 25px;
       }
 
-      .time {
-        grid-column: 2;
-        text-align: left;
-        margin-top: -8px;
-      }
-
       .opponent-name {
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .opponent img,
       .opponent-placeholder {
         width: 44px;
         height: 44px;
+      }
+
+      .game-result {
+        grid-column: 2;
+        justify-content: flex-start;
+        margin-top: -5px;
+      }
+
+      .time {
+        grid-column: 2;
+        text-align: left;
+        margin-top: -4px;
+      }
+
+      .upcoming-game .time {
+        grid-column: 2;
+      }
+
+      .completed-game .game-result {
+        margin-top: -3px;
       }
     }
   </style>
@@ -269,196 +425,502 @@
     <header class="header">
       <div class="eyebrow">McHenry Cobras Baseball</div>
       <h1>Lorenz 12U</h1>
-      <div class="subtitle">2026 Fall Schedule</div>
+      <div class="subtitle">2026 Fall Season</div>
     </header>
 
     <!-- RECORD -->
-
     <div class="record">
       <div class="record-item">
-        <div id="wins" class="record-number">0</div>
+        <div class="record-number" id="wins">0</div>
         <div class="record-label">Wins</div>
       </div>
 
       <div class="record-item">
-        <div id="losses" class="record-number">0</div>
+        <div class="record-number" id="losses">0</div>
         <div class="record-label">Losses</div>
       </div>
 
       <div class="record-item">
-        <div id="ties" class="record-number">0</div>
+        <div class="record-number" id="ties">0</div>
         <div class="record-label">Ties</div>
       </div>
     </div>
 
-    <div id="schedule" class="schedule">
+    <!-- TEAM INFO -->
+    <div class="team-info">
+
+      <div class="info-card">
+        <div class="info-title">Team</div>
+        <div class="info-value">McHenry Cobras Lorenz 12U</div>
+        <div class="info-sub">Fall 2026 · Baseball</div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-title">Coaches</div>
+        <div class="info-value" id="coaches">
+          Randy Ozimek · John Lorenz · Nick Valenziano
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-title">Roster</div>
+        <div class="info-value" id="player-count">10 Players</div>
+        <div class="info-sub">McHenry, Illinois</div>
+      </div>
+
+    </div>
+
+    <!-- GAMES -->
+    <div id="schedule">
       <div class="loading">Loading schedule...</div>
+    </div>
+
+    <div class="footer">
+      McHenry Cobras Baseball · Lorenz 12U · 2026 Fall Season
     </div>
 
   </div>
 
+
   <script>
+
+    function getResult(game) {
+
+      if (!game.score) {
+        return null;
+      }
+
+      /*
+       * GameChanger score structure:
+       *
+       * score.team
+       * score.opponent_team
+       *
+       * We determine the result using the home/away
+       * designation.
+       */
+
+      const teamScore = Number(game.score.team);
+      const opponentScore = Number(game.score.opponent_team);
+
+      if (
+        Number.isNaN(teamScore) ||
+        Number.isNaN(opponentScore)
+      ) {
+        return null;
+      }
+
+      if (teamScore > opponentScore) {
+        return {
+          result: "W",
+          className: "result-win"
+        };
+      }
+
+      if (teamScore < opponentScore) {
+        return {
+          result: "L",
+          className: "result-loss"
+        };
+      }
+
+      return {
+        result: "T",
+        className: "result-tie"
+      };
+    }
+
+
+    function formatDate(game) {
+
+      const date = new Date(game.start_ts);
+
+      const month = new Intl.DateTimeFormat("en-US", {
+        month: "short",
+        timeZone: game.timezone
+      }).format(date);
+
+      const day = new Intl.DateTimeFormat("en-US", {
+        day: "numeric",
+        timeZone: game.timezone
+      }).format(date);
+
+      const weekday = new Intl.DateTimeFormat("en-US", {
+        weekday: "short",
+        timeZone: game.timezone
+      }).format(date);
+
+      const time = new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        timeZone: game.timezone
+      }).format(date);
+
+      return {
+        month,
+        day,
+        weekday,
+        time
+      };
+    }
+
+
+    function createLogo(game) {
+
+      if (
+        game.opponent_team &&
+        game.opponent_team.avatar_url
+      ) {
+
+        return `
+          <img
+            src="${game.opponent_team.avatar_url}"
+            alt=""
+          >
+        `;
+
+      }
+
+      return `
+        <div class="opponent-placeholder">
+          ⚾
+        </div>
+      `;
+    }
+
+
+    function createGameCard(game, completed) {
+
+      const formatted = formatDate(game);
+
+      const homeAway =
+        game.home_away === "home"
+          ? "HOME"
+          : "AWAY";
+
+      const result = completed
+        ? getResult(game)
+        : null;
+
+      const card = document.createElement("div");
+
+      card.className =
+        completed
+          ? "game completed-game"
+          : "game upcoming-game";
+
+
+      let rightSide = "";
+
+      if (completed && result) {
+
+        rightSide = `
+          <div class="game-result">
+
+            <div class="score">
+              ${game.score.team} - ${game.score.opponent_team}
+            </div>
+
+            <div class="result-badge ${result.className}">
+              ${result.result}
+            </div>
+
+          </div>
+        `;
+
+      } else {
+
+        rightSide = `
+          <div class="time">
+            ${formatted.time}
+          </div>
+        `;
+      }
+
+
+      card.innerHTML = `
+
+        <div class="date">
+
+          <div class="month">
+            ${formatted.month}
+          </div>
+
+          <div class="day">
+            ${formatted.day}
+          </div>
+
+          <div class="weekday">
+            ${formatted.weekday}
+          </div>
+
+        </div>
+
+
+        <div class="opponent">
+
+          ${createLogo(game)}
+
+          <div>
+
+            <div class="opponent-name">
+              ${game.opponent_team.name}
+            </div>
+
+            <div class="home-away">
+              ${homeAway}
+            </div>
+
+          </div>
+
+        </div>
+
+
+        ${rightSide}
+
+      `;
+
+      return card;
+    }
+
+
     async function loadSchedule() {
-      const container = document.getElementById("schedule");
+
+      const container =
+        document.getElementById("schedule");
 
       try {
-        const response = await fetch("schedule.json?v=" + Date.now());
+
+        const response =
+          await fetch(
+            "schedule.json?v=" + Date.now()
+          );
+
 
         if (!response.ok) {
-          throw new Error("Unable to load schedule.json");
+          throw new Error(
+            "Unable to load schedule.json"
+          );
         }
 
-        const games = await response.json();
+
+        const games =
+          await response.json();
+
 
         container.innerHTML = "";
+
+
+        /*
+         * Determine completed games.
+         *
+         * GameChanger supplies game_status:
+         * "completed"
+         */
+
+        const completedGames =
+          games.filter(game =>
+            game.game_status === "completed"
+          );
+
+
+        const upcomingGames =
+          games.filter(game =>
+            game.game_status !== "completed"
+          );
+
+
+        /*
+         * Calculate record
+         */
 
         let wins = 0;
         let losses = 0;
         let ties = 0;
 
-        games.forEach(game => {
 
-          /*
-           * Calculate record from completed games.
-           *
-           * GameChanger returns:
-           * score.team
-           * score.opponent_team
-           * score.game_status
-           */
+        completedGames.forEach(game => {
 
-          if (
-            game.score &&
-            game.score.game_status === "completed"
-          ) {
-            const teamScore = Number(game.score.team);
-            const opponentScore = Number(game.score.opponent_team);
+          const result =
+            getResult(game);
 
-            if (teamScore > opponentScore) {
-              wins++;
-            } else if (teamScore < opponentScore) {
-              losses++;
-            } else {
-              ties++;
-            }
+          if (!result) {
+            return;
           }
 
-          const date = new Date(game.start_ts);
-
-          const month = new Intl.DateTimeFormat("en-US", {
-            month: "short",
-            timeZone: game.timezone
-          }).format(date);
-
-          const day = new Intl.DateTimeFormat("en-US", {
-            day: "numeric",
-            timeZone: game.timezone
-          }).format(date);
-
-          const weekday = new Intl.DateTimeFormat("en-US", {
-            weekday: "short",
-            timeZone: game.timezone
-          }).format(date);
-
-          const time = new Intl.DateTimeFormat("en-US", {
-            hour: "numeric",
-            minute: "2-digit",
-            timeZone: game.timezone
-          }).format(date);
-
-          const homeAway =
-            game.home_away === "home"
-              ? "HOME"
-              : "AWAY";
-
-          const logo = game.opponent_team.avatar_url
-            ? `<img src="${game.opponent_team.avatar_url}" alt="">`
-            : `<div class="opponent-placeholder">⚾</div>`;
-
-          /*
-           * Show score only when GameChanger
-           * says the game is completed.
-           */
-
-          let result = "";
-
-          if (
-            game.score &&
-            game.score.game_status === "completed"
-          ) {
-            const teamScore = Number(game.score.team);
-            const opponentScore = Number(game.score.opponent_team);
-
-            let resultClass = "tie";
-
-            if (teamScore > opponentScore) {
-              resultClass = "win";
-            } else if (teamScore < opponentScore) {
-              resultClass = "loss";
-            }
-
-            result = `
-              <div class="result ${resultClass}">
-                ${teamScore} - ${opponentScore}
-                <span class="final">FINAL</span>
-              </div>
-            `;
+          if (result.result === "W") {
+            wins++;
           }
 
-          const card = document.createElement("div");
-          card.className = "game";
+          if (result.result === "L") {
+            losses++;
+          }
 
-          card.innerHTML = `
-            <div class="date">
-              <div class="month">${month}</div>
-              <div class="day">${day}</div>
-              <div class="weekday">${weekday}</div>
-            </div>
+          if (result.result === "T") {
+            ties++;
+          }
 
-            <div class="opponent">
-              ${logo}
+        });
 
-              <div>
-                <div class="opponent-name">
-                  ${game.opponent_team.name}
-                </div>
 
-                <div class="home-away">
-                  ${homeAway}
-                </div>
+        document.getElementById("wins")
+          .textContent = wins;
 
-                ${result}
+        document.getElementById("losses")
+          .textContent = losses;
+
+        document.getElementById("ties")
+          .textContent = ties;
+
+
+        /*
+         * COMPLETED GAMES
+         */
+
+        if (completedGames.length > 0) {
+
+          const section =
+            document.createElement("div");
+
+          section.className =
+            "completed-section";
+
+
+          section.innerHTML = `
+
+            <div class="section-header">
+
+              <h2 class="section-title">
+                Results
+              </h2>
+
+              <div class="section-count">
+                ${completedGames.length}
+                ${
+                  completedGames.length === 1
+                    ? "Game"
+                    : "Games"
+                }
               </div>
+
             </div>
 
-            <div class="time">
-              ${result ? "" : time}
+            <div class="schedule"></div>
+
+          `;
+
+
+          const list =
+            section.querySelector(".schedule");
+
+
+          completedGames.forEach(game => {
+
+            list.appendChild(
+              createGameCard(game, true)
+            );
+
+          });
+
+
+          container.appendChild(section);
+
+        }
+
+
+        /*
+         * UPCOMING GAMES
+         */
+
+        if (upcomingGames.length > 0) {
+
+          const section =
+            document.createElement("div");
+
+          section.className =
+            "upcoming-section";
+
+
+          section.innerHTML = `
+
+            <div class="section-header">
+
+              <h2 class="section-title">
+                Upcoming Games
+              </h2>
+
+              <div class="section-count">
+                ${upcomingGames.length}
+                ${
+                  upcomingGames.length === 1
+                    ? "Game"
+                    : "Games"
+                }
+              </div>
+
+            </div>
+
+            <div class="schedule"></div>
+
+          `;
+
+
+          const list =
+            section.querySelector(".schedule");
+
+
+          upcomingGames.forEach(game => {
+
+            list.appendChild(
+              createGameCard(game, false)
+            );
+
+          });
+
+
+          container.appendChild(section);
+
+        }
+
+
+        /*
+         * No games
+         */
+
+        if (
+          completedGames.length === 0 &&
+          upcomingGames.length === 0
+        ) {
+
+          container.innerHTML = `
+            <div class="loading">
+              No games found.
             </div>
           `;
 
-          container.appendChild(card);
-        });
-
-        /*
-         * Update record at the top.
-         */
-
-        document.getElementById("wins").textContent = wins;
-        document.getElementById("losses").textContent = losses;
-        document.getElementById("ties").textContent = ties;
+        }
 
       } catch (error) {
+
         console.error(error);
 
         container.innerHTML = `
+
           <div class="error">
+
             Unable to load the schedule right now.
+
           </div>
+
         `;
+
       }
+
     }
 
+
     loadSchedule();
+
   </script>
 
 </body>
