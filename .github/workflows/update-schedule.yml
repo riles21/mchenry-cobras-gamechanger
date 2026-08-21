@@ -1,13 +1,15 @@
-name: Update Lorenz 12U Schedule
+name: Update Cobras Team Schedules
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * *"
 
 permissions:
   contents: write
 
 jobs:
-  update-schedule:
+  update-schedules:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,99 +17,217 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download Lorenz schedule
+      - name: Download all active team schedules
         run: |
-          curl -L "https://api.team-manager.gc.com/public/teams/jWdOuqoTjKow/games" -o schedule.json
+          mkdir -p schedules
 
-      - name: Download opponent logos
+          node <<'NODE'
+          const fs = require("fs");
+          const vm = require("vm");
+          const https = require("https");
+
+          /*
+            Load config.js so the GitHub Action uses
+            the same team configuration as the website.
+          */
+
+          const code =
+            fs.readFileSync("config.js", "utf8") +
+            "\nresult = COBRAS_TEAMS;";
+
+          const context = {
+            result: null
+          };
+
+          vm.createContext(context);
+          vm.runInContext(code, context);
+
+          const teams = context.result;
+
+          if (!teams) {
+            throw new Error(
+              "Unable to load COBRAS_TEAMS from config.js"
+            );
+          }
+
+          function download(url) {
+
+            return new Promise((resolve, reject) => {
+
+              https.get(url, response => {
+
+                let data = "";
+
+                response.on("data", chunk => {
+                  data += chunk;
+                });
+
+                response.on("end", () => {
+
+                  if (
+                    response.statusCode >= 200 &&
+                    response.statusCode < 300
+                  ) {
+
+                    resolve(data);
+
+                  } else {
+
+                    reject(
+                      new Error(
+                        `HTTP ${response.statusCode} for ${url}`
+                      )
+                    );
+
+                  }
+
+                });
+
+              }).on("error", reject);
+
+            });
+
+          }
+
+          async function main() {
+
+            for (
+              const [key, team]
+              of Object.entries(teams)
+            ) {
+
+              /*
+                Inactive teams are not current Cobras teams.
+                Do not download or update their schedules.
+              */
+
+              if (!team.active) {
+
+                console.log(
+                  `Skipping inactive team: ${key}`
+                );
+
+                continue;
+
+              }
+
+
+              /*
+                An active team without a GameChanger ID
+                is still a valid Cobras team.
+
+                We simply cannot download its schedule yet.
+              */
+
+              if (!team.gameChangerTeamId) {
+
+                console.log(
+                  `Skipping ${team.name}: no GameChanger team ID`
+                );
+
+                continue;
+
+              }
+
+
+              const url =
+                "https://api.team-manager.gc.com/public/teams/" +
+                encodeURIComponent(
+                  team.gameChangerTeamId
+                ) +
+                "/games";
+
+
+              console.log(
+                `Downloading ${team.name} (${key})`
+              );
+
+
+              try {
+
+                const data =
+                  await download(url);
+
+
+                /*
+                  Make sure the response is valid JSON
+                  before saving it.
+                */
+
+                JSON.parse(data);
+
+
+                fs.writeFileSync(
+                  `schedules/${key}.json`,
+                  data
+                );
+
+
+                console.log(
+                  `Saved schedules/${key}.json`
+                );
+
+
+              } catch (error) {
+
+                /*
+                  One team's failure should not prevent
+                  all of the other Cobras teams from updating.
+                */
+
+                console.error(
+                  `Failed to download ${team.name}:`,
+                  error.message
+                );
+
+              }
+
+            }
+
+          }
+
+
+          main().catch(error => {
+
+            console.error(error);
+
+            process.exit(1);
+
+          });
+
+          NODE
+
+
+      - name: Show downloaded schedules
         run: |
-          mkdir -p logos
 
-          python3 <<'PY'
-          import json
-          import os
-          import re
-          import subprocess
+          echo "=============================="
+          echo "Downloaded schedule files:"
+          echo "=============================="
 
-          with open("schedule.json", "r", encoding="utf-8") as f:
-              games = json.load(f)
+          ls -lh schedules
 
-          for game in games:
-              opponent = game.get("opponent_team", {})
-              name = opponent.get("name", "")
-              avatar_url = opponent.get("avatar_url")
 
-              if not avatar_url:
-                  continue
-
-              # Create a safe filename from the opponent name
-              filename = re.sub(
-                  r"[^a-z0-9]+",
-                  "-",
-                  name.lower()
-              ).strip("-")
-
-              if not filename:
-                  continue
-
-              path = f"logos/{filename}.png"
-
-              print(f"Downloading logo for {name}")
-
-              try:
-                  result = subprocess.run(
-                      [
-                          "curl",
-                          "-L",
-                          "--fail",
-                          "--silent",
-                          "--show-error",
-                          avatar_url,
-                          "-o",
-                          path
-                      ],
-                      check=False
-                  )
-
-                  if result.returncode == 0 and os.path.exists(path):
-                      # Replace the temporary GameChanger URL
-                      # with our permanent local logo path
-                      opponent["avatar_url"] = path
-                      print(f"Saved {path}")
-                  else:
-                      print(f"Could not download logo for {name}")
-
-              except Exception as e:
-                  print(f"Error downloading {name}: {e}")
-
-          with open("schedule.json", "w", encoding="utf-8") as f:
-              json.dump(
-                  games,
-                  f,
-                  separators=(",", ":")
-              )
-
-          PY
-
-      - name: Show downloaded data
+      - name: Save schedules
         run: |
-          echo "Schedule downloaded:"
-          python3 -m json.tool schedule.json | head -100
 
-          echo ""
-          echo "Downloaded logos:"
-          ls -lh logos || true
-
-      - name: Save schedule and logos
-        run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add schedule.json logos/
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add schedules/
+
 
           if git diff --cached --quiet; then
-            echo "No changes to save."
+
+            echo "No schedule changes to save."
+
           else
-            git commit -m "Update Lorenz 12U schedule"
+
+            git commit \
+              -m "Update Cobras team schedules"
+
             git push
+
           fi
