@@ -3,6 +3,10 @@ name: Update Cobras Team Schedules
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: "15 5 * * *"
+      timezone: "America/Chicago"
+
 permissions:
   contents: write
 
