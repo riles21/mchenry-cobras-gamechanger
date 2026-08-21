@@ -1,1 +1,41 @@
-[{"id":"a82a8d53-deb2-4999-967f-0abd1a4a0858","opponent_team":{"name":"Lake Zurich"},"is_full_day":false,"start_ts":"2026-09-18T23:00:00.000Z","end_ts":"2026-09-19T00:45:00.000Z","timezone":"America/Chicago","home_away":"away","has_videos_available":false,"has_live_stream":false},{"id":"0e5840fd-2635-42aa-9754-d5060cb92876","opponent_team":{"name":"Genoa City"},"is_full_day":false,"start_ts":"2026-09-20T15:00:00.000Z","end_ts":"2026-09-20T16:45:00.000Z","timezone":"America/Chicago","home_away":"away","has_videos_available":false,"has_live_stream":false},{"id":"92a9af05-1170-403b-9e0f-ad4f0a311637","opponent_team":{"name":"Genoa City"},"is_full_day":false,"start_ts":"2026-09-27T15:00:00.000Z","end_ts":"2026-09-27T16:45:00.000Z","timezone":"America/Chicago","home_away":"away","has_videos_available":false,"has_live_stream":false}]
+[
+  {
+    "id": "a82a8d53-deb2-4999-967f-0abd1a4a0858",
+    "opponent_team": {
+      "name": "Lake Zurich"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-18T23:00:00.000Z",
+    "end_ts": "2026-09-19T00:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false
+  },
+  {
+    "id": "0e5840fd-2635-42aa-9754-d5060cb92876",
+    "opponent_team": {
+      "name": "Genoa City"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-20T15:00:00.000Z",
+    "end_ts": "2026-09-20T16:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false
+  },
+  {
+    "id": "92a9af05-1170-403b-9e0f-ad4f0a311637",
+    "opponent_team": {
+      "name": "Genoa City"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-27T15:00:00.000Z",
+    "end_ts": "2026-09-27T16:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false
+  }
+]

@@ -1,1 +1,1014 @@
-[{"id":"c7beb998-aec1-4164-939c-cea2a92407f0","opponent_team":{"name":"Mequon Heat 10U Red"},"is_full_day":false,"start_ts":"2026-03-14T18:15:00.000Z","end_ts":"2026-03-14T19:55:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":1,"opponent_team":12},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"afbce576-f66b-4814-bf5a-835d919d3e01","opponent_team":{"name":"WFB Jr. Dukes (White) 10U","avatar_url":"https://media-service.gc.com/51a532f4-954d-441c-ab3b-99cedc3bc892?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS81MWE1MzJmNC05NTRkLTQ0MWMtYWIzYi05OWNlZGMzYmM4OTIiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=rIdKbrCR0oQ38XeZLxpGfMNDXTPy0g7r0CK3ww1WM6qqpvu~DmEMUrwAYThsMEasACzzTKs2mc~m7hb2cYMXJPoakVhsHdT5qXqgorxtnEBL0ac0MPOKEHGDpJG-JuQOZiJHhB1Hnw4bDSPcahBqMYyABlbYW3mu0ZGWweLxAFQrIFm4ey9MbpKa~ii9K4SjyM8rqvjkVsQJpKjEZrbMdspWS5AEB6WpD4WgEA8De9zviOlYRFBCiBTk4JtMhTB-CjEjN6xu-ZgpsVvazA5j03DJ~tsGlhmAlQfdk7ziX0GFn9ZtGLyu~VS95A5aqBjwPu8SzXykDNJRD4Y86W-kXQ__"},"is_full_day":false,"start_ts":"2026-03-14T21:45:00.000Z","end_ts":"2026-03-14T23:25:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":5,"opponent_team":5},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"777da60a-ccda-4f1b-b9d9-0a9b83d2df43","opponent_team":{"name":"GRB Rays Green 10U"},"is_full_day":false,"start_ts":"2026-03-15T16:30:00.000Z","end_ts":"2026-03-15T18:00:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":12,"opponent_team":6},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"7fabc1c6-f09a-4f84-9743-b5745ae29cbd","opponent_team":{"name":"GRB Rays - Illinois 10U","avatar_url":"https://media-service.gc.com/89968cec-b40e-4887-ad21-7fff8831f775?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS84OTk2OGNlYy1iNDBlLTQ4ODctYWQyMS03ZmZmODgzMWY3NzUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=3brQVJioVPB3Ys-x0OBQeyNCDG~4Zdc3XzVsOGqquJn3LnXsnXBMRwfjeimBKm-ngUMji2dzaxtJwzEVZw5RIzuxFP1KyQ1S4FC8g2rMUL1wzJKOujaGl2hKpzqUXUtyOb7j~oHD0IRxjq9Gb-NfwshjHewdEpezC2I~a6RxyfHuG~Ej4EwOuSlWLPgX8xoNog-x16oSkvBEWgwHI5ob4B1NfXhyL8Zfbgps5vKFkl5jZJIGlFiUYiq5sshXZWT5TuXogDYXdZpCho8E3Q6AzIdR6sX99zqEK9K5~~6DsCs2yVCpJfW~HLeWD3Wqo1lJqJdX8v8nkwSmfaP9YejYeg__"},"is_full_day":false,"start_ts":"2026-04-09T00:30:00.000Z","end_ts":"2026-04-09T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":3,"opponent_team":13},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"247df0b3-8601-4d0c-9438-e0f6aae21088","opponent_team":{"name":"Welles Park 10u Red"},"is_full_day":false,"start_ts":"2026-04-11T06:30:00.000Z","end_ts":"2026-04-11T08:15:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":12,"opponent_team":0},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"e48aa944-fc82-4122-83a4-95bdc0b976c5","opponent_team":{"name":"SBA Raiders (Woods) 10U","avatar_url":"https://media-service.gc.com/43cc195d-80f0-4e05-a773-653183a3ad65?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS80M2NjMTk1ZC04MGYwLTRlMDUtYTc3My02NTMxODNhM2FkNjUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=F5wmHD4a6Gu489Vgb8Dpl8SsErs-uvdGgYiVGx3llnAanqzuHIpPjNNJA6gWw5pJMpW9uRK6c0NmaYs8R5iG0w1b2MIUbLdl6VOBkONn5~CydolQGiPhCQasPzOUGRSZsk5tyNZBE0995y77GnxWcnJ1i-kN0-Oy-c6OjlG4x5gvPNY-JQXoOFpCBGUMrynSYKaWDx~qxfQFSkC281CyxWctX~XhbqMVcN-akwuAThpeWWqJYTzAn39HePcJmL5fOd7pI9DYhc-Tj0x3MXUMu~bQSnWiIh69pTXWVbCBGNTo6cA7qklyrsszcEtQkYKCtUMEPJ-W8zQBZJN6Kshjvw__"},"is_full_day":false,"start_ts":"2026-04-11T20:20:00.000Z","end_ts":"2026-04-11T22:05:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":5,"opponent_team":11},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"12e93006-5d90-4d72-95fc-17725cda26a2","opponent_team":{"name":"Welles Park 2026 - 10U Black","avatar_url":"https://media-service.gc.com/fb35df6c-af95-4a54-a248-381c52558e93?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9mYjM1ZGY2Yy1hZjk1LTRhNTQtYTI0OC0zODFjNTI1NThlOTMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=kO686JsWg6QqT6pnhujZs7Mh-l8RrJKFHBZhGDTh1ebgz5~DPDPZQOQDl2aV~h1BClcBLaDqCwTMFc~zeaAf4tbRhIpuLsT3I~67lO9rZJmu3twpgMXGjjV87Tx7b-tmeeUIqRZOnf9VEYwKUKgOKqfLMKx7pwirKT7Dtwxlg9pP4r8fjiJJMD4FkOs1~8hSvvWXUDF7QEqAHTOmg7J8XrTCYmaCsFLAq0qJMK76r4rUb9ukJVUcztbwv0czkU9qnanKo1b3OVzEY9WlAGExqqMV9GLhayWYJ7P1tA8x7Q8dxgbJ5Q4duLkV955DV0srHayjW96pe3EtrpKd~cqtSg__"},"is_full_day":false,"start_ts":"2026-04-12T13:00:00.000Z","end_ts":"2026-04-12T14:40:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":2,"opponent_team":8},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"189db2e7-af75-44cd-aee0-c8e0dc60358c","opponent_team":{"name":"Windy City Hit Dogs 10U Smerling","avatar_url":"https://media-service.gc.com/1be813c5-2860-48bf-9922-f295cafa2e90?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xYmU4MTNjNS0yODYwLTQ4YmYtOTkyMi1mMjk1Y2FmYTJlOTAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=HYaQTsrLgdsXP8doL9DHfukFOlpO4llaMiyFGr0chCUSMdUrRXRu8EMhwypxjLUnEeTTV-ia7SZDaLLNp0gSGxpX05YFONXUm6iW8ydXD6eztzZFuXRBGm911tTQHMWVF7LKZV9BBIfYi5x~KMdHUGy71PINuVQXU77Jn4EpbKZTmpRAJprSi9W-Nl3RHuMZh9tF~F6aHCU~7FVUAwAZCFfSKmPByMS34WMRRx~pS9J6f~dakeml3D2Vnj8bSMnS~nz0040ZTy5Mk8Aox0vSpsjpZwnGcQN6hW9qHgjY5drwBSIDGdwinI~c9tD6zNr9sqiXlWAZYeGdGWb~T5z4Jw__"},"is_full_day":false,"start_ts":"2026-04-18T20:40:00.000Z","end_ts":"2026-04-18T22:20:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":14,"opponent_team":11},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"9d201579-cb0b-4c98-9a6b-9a57187e6fe7","opponent_team":{"name":"Jr Memorial "},"is_full_day":true,"start_ts":"2026-04-19T00:00:00.000Z","end_ts":"2026-04-20T00:00:00.000Z","timezone":null,"home_away":"home","score":{"team":23,"opponent_team":0},"game_status":"completed","has_videos_available":false,"has_live_stream":false},{"id":"e0f746ff-f892-4d96-bb45-515a1bb5389e","opponent_team":{"name":"Broncos Red 10U","avatar_url":"https://media-service.gc.com/b71e8e34-05de-4cfa-8ae7-931e37887f2f?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9iNzFlOGUzNC0wNWRlLTRjZmEtOGFlNy05MzFlMzc4ODdmMmYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=eanwFQcKwkHhAnaAtBvS-pT5BvKHBrzjjTOUz6CDw7I5KIvUErDq1sEIKuxK01ASkQg-Wwe8utcs1EZfhvCwTRjdQ8KjIzAK06tmGdLdo5Mjbfr~FjCY6vbYSqXNkDwZSrR80TAz9Bzd3iRXcWznwnlVcCCHlW6U40J1FhDgqr3aCHjKEfAKQs5FVcfqxDaSWLG0jyFc5XUQC~cMQSdP0z5J0d3A1YpOyoni4~Kwlxzw5Cv1QfVl1NpKxE~2VUqFdtZgAsXlAZNkWUJ3vel7FXAIB7RXFx-6JoG-Fd8gKMZE5jcMzLqCloxqTsjnhDnMFN-aGGm91EdHEViYAHJGRw__"},"is_full_day":false,"start_ts":"2026-04-19T00:00:00.000Z","end_ts":"2026-04-19T01:40:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":11,"opponent_team":10},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"367ef452-2294-4a15-87d4-213a7bdf186b","opponent_team":{"name":"Cary Grove Trojans Travel 10U","avatar_url":"https://media-service.gc.com/bf8c5055-a315-44b8-af33-7de2fc363c76?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9iZjhjNTA1NS1hMzE1LTQ0YjgtYWYzMy03ZGUyZmMzNjNjNzYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=tS9Rx~2fe3-FDD~eDHqstfaYONGQFgxGCTF~HAbQqefQgIg2RZGgIhMZHhRONEv4ckUC5BDoBJzYwd14Y1Aq19hfVQqGu3dfsUcBcJlV39tzzITya0wEdmwtMQgtbSAq67JiGptMDmp5WwI2TAlI3yHnV16sRHGaAaGz~Zw~IPdPgGvq626fwBQDvASxuAG~H8FtXwRHXlGP0Erxe~iDxUTebOnKsvglsb1oejvOm6y~uLN-tJkEmD4J7iC96jzz8pwPyybodg3E83KaxU~u8TqJYOqvrxoXTvtINGEYe7FnSwF5YoltFWzhDDsYTrsSS1-UOQ45upZgk-X-TDIYtw__"},"is_full_day":false,"start_ts":"2026-04-19T16:40:00.000Z","end_ts":"2026-04-19T18:20:00.000Z","timezone":"America/Chicago","home_away":"home","has_videos_available":true,"has_live_stream":false},{"id":"d80d4470-b7d3-46bb-80f2-ec46a4000c1b","opponent_team":{"name":"SBA Raiders 10U","avatar_url":"https://media-service.gc.com/1d0909da-7165-435e-b6ae-bc9e4931e46a?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xZDA5MDlkYS03MTY1LTQzNWUtYjZhZS1iYzllNDkzMWU0NmEiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=4JRJ4IRoiHbLKbcF40dQcCUoJqOWE2P0cOn5aYXynO-Q~sqxz4q1eTxxK7eIxUbNqOwQkWf4hxPGRt5jK2daTDw~PtmkJFll8D0~jlILaQ9cc~-uCMsTjyZID0RSHZ8zaY~MkAZrVM2UJEAmJpbMIGnB7TX89tUy4aEG4e1nNB1Tn4bzJXQ5ICAYHDzoMmAHnwkF9XoaLVdM92W5tl4s7Mutk4Rld2Gk2kEb7rRoOPXW5otsEF-3qXIZUNXW~l6uyPSnWLDgmYyjVCD8OWDKlaATJI26xTyNRqwFxLJuOHjHt11jZ4m0CExfJqbf279ccMnjAvxtrdaFGZERidkX9A__"},"is_full_day":false,"start_ts":"2026-04-19T20:20:00.000Z","end_ts":"2026-04-19T21:20:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":6,"opponent_team":3},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"4f4b97aa-e36d-42e3-b56f-0683a3d1ef30","opponent_team":{"name":"Broncos Red 10U","avatar_url":"https://media-service.gc.com/b71e8e34-05de-4cfa-8ae7-931e37887f2f?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9iNzFlOGUzNC0wNWRlLTRjZmEtOGFlNy05MzFlMzc4ODdmMmYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=eanwFQcKwkHhAnaAtBvS-pT5BvKHBrzjjTOUz6CDw7I5KIvUErDq1sEIKuxK01ASkQg-Wwe8utcs1EZfhvCwTRjdQ8KjIzAK06tmGdLdo5Mjbfr~FjCY6vbYSqXNkDwZSrR80TAz9Bzd3iRXcWznwnlVcCCHlW6U40J1FhDgqr3aCHjKEfAKQs5FVcfqxDaSWLG0jyFc5XUQC~cMQSdP0z5J0d3A1YpOyoni4~Kwlxzw5Cv1QfVl1NpKxE~2VUqFdtZgAsXlAZNkWUJ3vel7FXAIB7RXFx-6JoG-Fd8gKMZE5jcMzLqCloxqTsjnhDnMFN-aGGm91EdHEViYAHJGRw__"},"is_full_day":false,"start_ts":"2026-04-19T22:00:00.000Z","end_ts":"2026-04-19T23:00:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":7,"opponent_team":10},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"a509e309-8947-461f-9b57-438fde9c2f8f","opponent_team":{"name":"Windy City Hit Dogs 10U Wuich","avatar_url":"https://media-service.gc.com/d7273897-205e-4c63-a563-c2310ac728e4?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9kNzI3Mzg5Ny0yMDVlLTRjNjMtYTU2My1jMjMxMGFjNzI4ZTQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=f241Sh5QlybhZG1H31Wkmz8IgyzIwWRvNeSweBSotna4fzwoOdas7jukL9qDNvPcEH3GBk43g64v4sp8-WUWUPNwyYBt2ehdAemmsV2EtikBLeaYafLuP~e7Y1zaDboG3dmoBNcIgyvkfEb6-qtYYr1WV3UH4JSG~NVMckxLg8EkkHGGRM93oYiB~cSb-xu-ypAWFquf-0jYH-Nyme8aaD1FkcvJ0GU-7yngkRof7cZRJzcWM-aVaY6zz0aFFWlBS1dX54kv~BM6TmoofGFDCXTE6QM2gTojvpN5XNI6mi58q17mZ7x3b4e0PWmv-gciUP6g1HsfCrtOuzkhhpopHQ__"},"is_full_day":false,"start_ts":"2026-04-23T00:30:00.000Z","end_ts":"2026-04-23T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":16,"opponent_team":15},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"d3ea9362-780b-4ad1-98d1-d977df60243a","opponent_team":{"name":"GRB Illinois 10U - Ciaglia"},"is_full_day":false,"start_ts":"2026-04-29T00:30:00.000Z","end_ts":"2026-04-29T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":13,"opponent_team":14},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"129d66a8-d894-4c34-b995-bd8ae05ee782","opponent_team":{"name":"Northwest Travelers 10U - White 10U","avatar_url":"https://media-service.gc.com/a8d49269-b45c-4263-8846-d57406fa1684?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9hOGQ0OTI2OS1iNDVjLTQyNjMtODg0Ni1kNTc0MDZmYTE2ODQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=yoCfbaFbns1OIbzAFTADHa6XiNkekCssDArNpGZoIwKP0O9-Sl5rlyJtvYiePYwokY5yz-2HlWQUZ3AF94qMqjrVone0EEhkDz8j566ir691-hhOUVDxvJ85UHOGREQkx95-mcolcpgntLJNV82PfxskUkUBXcpmArdSoOeKldYwpoFMi4hGNtjgxa2LBu75gHk6VNZJt58W378h8T6q2il-lAATA6QvlfbbEekMPdp3BvsHV0A3FMMpPKyuBk5IG1~2IYMhvITEya2p4xFR9ZbMtCzOcajkdD9iWtoGMK6orG6c-7XV2qyQ7WcfbtKwrdYjR8kMoAxMNQAQcikixg__"},"is_full_day":false,"start_ts":"2026-05-02T21:00:00.000Z","end_ts":"2026-05-02T23:00:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":15,"opponent_team":5},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"d41ec842-e9d0-4297-ba84-b0b3afc05efd","opponent_team":{"name":"Waukesha Blazers Hailstorm 10U","avatar_url":"https://media-service.gc.com/d78000ae-90f4-4151-9fef-812d2944f2ff?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9kNzgwMDBhZS05MGY0LTQxNTEtOWZlZi04MTJkMjk0NGYyZmYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=xwzed0RVqtpIW8h0wQEJhM30Bck9hMS7~PkEMArZn79OA2CYAYsYdvMRqQQhqp5Ipt5EWeVBeAOsJimdA~yBAOk1LkdOtu1z~r1Xw8jczw5BwPQEUl8PHSX-V7Tb5Ky6Wzqp08KvSphnzKu20HaggRWvWSYwG0XPC6twMhbSR4~Yk9U22R~KVA2JcrztLOj4eKfQ2YtiZhZaN3Bum6Db0z6BoaYp8DFNZVNLTGDoYxvePx4u--SQ9jhOAmXfXV6U3sxhlT-FDmjEGHT32D65dWaI7TDaoSNusZm0sBdOzUNOlLN-66zvotxLP-Ag9057UU3mJSpF4Oj-9OCk7A~S9A__"},"is_full_day":false,"start_ts":"2026-05-03T01:00:00.000Z","end_ts":"2026-05-03T03:00:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":13,"opponent_team":5},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"2d0fe2b3-3a19-4628-8024-38a0c96aa813","opponent_team":{"name":"Waukesha Blazers Hailstorm 10U","avatar_url":"https://media-service.gc.com/d78000ae-90f4-4151-9fef-812d2944f2ff?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9kNzgwMDBhZS05MGY0LTQxNTEtOWZlZi04MTJkMjk0NGYyZmYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=xwzed0RVqtpIW8h0wQEJhM30Bck9hMS7~PkEMArZn79OA2CYAYsYdvMRqQQhqp5Ipt5EWeVBeAOsJimdA~yBAOk1LkdOtu1z~r1Xw8jczw5BwPQEUl8PHSX-V7Tb5Ky6Wzqp08KvSphnzKu20HaggRWvWSYwG0XPC6twMhbSR4~Yk9U22R~KVA2JcrztLOj4eKfQ2YtiZhZaN3Bum6Db0z6BoaYp8DFNZVNLTGDoYxvePx4u--SQ9jhOAmXfXV6U3sxhlT-FDmjEGHT32D65dWaI7TDaoSNusZm0sBdOzUNOlLN-66zvotxLP-Ag9057UU3mJSpF4Oj-9OCk7A~S9A__"},"is_full_day":false,"start_ts":"2026-05-03T15:00:00.000Z","end_ts":"2026-05-03T16:45:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":3,"opponent_team":14},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"ab677026-8f14-4ff0-9fd8-35dd18e94a02","opponent_team":{"name":"Windy City Hit Dogs 10U Smerling","avatar_url":"https://media-service.gc.com/1be813c5-2860-48bf-9922-f295cafa2e90?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xYmU4MTNjNS0yODYwLTQ4YmYtOTkyMi1mMjk1Y2FmYTJlOTAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=HYaQTsrLgdsXP8doL9DHfukFOlpO4llaMiyFGr0chCUSMdUrRXRu8EMhwypxjLUnEeTTV-ia7SZDaLLNp0gSGxpX05YFONXUm6iW8ydXD6eztzZFuXRBGm911tTQHMWVF7LKZV9BBIfYi5x~KMdHUGy71PINuVQXU77Jn4EpbKZTmpRAJprSi9W-Nl3RHuMZh9tF~F6aHCU~7FVUAwAZCFfSKmPByMS34WMRRx~pS9J6f~dakeml3D2Vnj8bSMnS~nz0040ZTy5Mk8Aox0vSpsjpZwnGcQN6hW9qHgjY5drwBSIDGdwinI~c9tD6zNr9sqiXlWAZYeGdGWb~T5z4Jw__"},"is_full_day":false,"start_ts":"2026-05-07T00:30:00.000Z","end_ts":"2026-05-07T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":17,"opponent_team":3},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"de4f6a10-204f-474e-a262-43e3314e59ac","opponent_team":{"name":"GTS 10U","avatar_url":"https://media-service.gc.com/a423725b-e27a-40e3-9340-092f5d3121ef?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9hNDIzNzI1Yi1lMjdhLTQwZTMtOTM0MC0wOTJmNWQzMTIxZWYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=qSVt4k5ROJCru9cbFx0rpxNWqXjZvBP9ilDFeJfMn28xms7WmBRQ~9s4R64eBMgySB4fFP0y60zXHoBwb3l~lQbd5FYi5FC6a3GjHo~6aQyNiWJiUIwsG9juR4jYmoKwAWOxenrsfYcetYRTwZ--npKGSu62TmLdSAbZp0HnrkUOavVwt-uoSWMOeCTdLYhRqI6jZvTMKPcIelzec6MIpcGuh5-pwSU-gCBRUErXnJmgrYMfPkF0grN-2CZG4Gyz1v-JXci64C~wMhStgsMy3Fy1q3cMP0F7NGfQqmEHklXARV~OyCxamkd8-BzrUOGUXLGm~7qF18x2bHoNw-AkFg__"},"is_full_day":false,"start_ts":"2026-05-09T13:00:00.000Z","end_ts":"2026-05-09T14:40:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":14,"opponent_team":9},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"558a5c35-5944-46cc-9900-2524cb3a0c59","opponent_team":{"name":"Midwest Future Prospects 10U","avatar_url":"https://media-service.gc.com/d7181a8b-6dd5-4c99-88ff-95d550fa66f7?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9kNzE4MWE4Yi02ZGQ1LTRjOTktODhmZi05NWQ1NTBmYTY2ZjciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=auLV0mdrBm7cA6KrMSHzy~NBJ3Te-fCCS4Aym5PZ~9YWAEOii-K6bWjpVhfrZj63I7eOIIA~SaQpZhlArvlvdjIgitfA3pDQ7iq70WfPiH1PSB5kbiHH7BuwS-vP9QmTu~6JrHwtUCHdoiSGbri-XdN0a20~Juu6xebPUuPSZBOAWA0ebO4fWzyUReDWrt4N58fsQC-SNyjMxRgiSjNNFkCFI0ggi4hIJ0rURnFb6s7RNruNXDSQejdNlSL1b0zs6fy-BHyAY1NihUfGVugc4l6XboXvsz2HspOPQW9bUcry9jAMHougH5NKJ53yptSvdE8ls2IUDOJyiHNAmvUK4w__"},"is_full_day":false,"start_ts":"2026-05-09T14:45:00.000Z","end_ts":"2026-05-09T16:25:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":15,"opponent_team":4},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"45315000-5b75-490e-8f4c-8213cc0dfd04","opponent_team":{"name":"RBA 10 Albano 2026","avatar_url":"https://media-service.gc.com/11804c81-0d3e-4e07-b34b-425ec46b696d?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xMTgwNGM4MS0wZDNlLTRlMDctYjM0Yi00MjVlYzQ2YjY5NmQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=N7FXynSlOD0R9BHqi7gGIVVr99OViSpmlk4rYKlQbK~hHI3XBxq63fQOTUBpmegSRJXR-EPCenQ0QHrKRbEtPwoKBLjDWjJN01~g3RwqR9qJ4GVK8~9PUaV9RqvdWJ4pWF40j7BJMAW35yofZO-359jWRn0axRVQb-ESNwskgfLT6~Ebndm2RyIbVLIdjkO7PEbXZgKWzjvXOJxvQfxzkrzg73j02OtirXJ5sVvdo-K2MbDBbek1v3XunPobMvD0m~UiMXpzuyaaYwp~GbOvpIu9q9CwwQohNdT3hHcNn6fm--nhJniIPeua4ni0cidCNkKyZJXbmjX6BcKyxV0mmg__"},"is_full_day":false,"start_ts":"2026-05-10T19:15:00.000Z","end_ts":"2026-05-10T20:55:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":2,"opponent_team":4},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"a22882e3-bdca-4fe2-9ac2-88023fc833b2","opponent_team":{"name":"GRB Rays - Illinois 10U","avatar_url":"https://media-service.gc.com/89968cec-b40e-4887-ad21-7fff8831f775?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS84OTk2OGNlYy1iNDBlLTQ4ODctYWQyMS03ZmZmODgzMWY3NzUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=3brQVJioVPB3Ys-x0OBQeyNCDG~4Zdc3XzVsOGqquJn3LnXsnXBMRwfjeimBKm-ngUMji2dzaxtJwzEVZw5RIzuxFP1KyQ1S4FC8g2rMUL1wzJKOujaGl2hKpzqUXUtyOb7j~oHD0IRxjq9Gb-NfwshjHewdEpezC2I~a6RxyfHuG~Ej4EwOuSlWLPgX8xoNog-x16oSkvBEWgwHI5ob4B1NfXhyL8Zfbgps5vKFkl5jZJIGlFiUYiq5sshXZWT5TuXogDYXdZpCho8E3Q6AzIdR6sX99zqEK9K5~~6DsCs2yVCpJfW~HLeWD3Wqo1lJqJdX8v8nkwSmfaP9YejYeg__"},"is_full_day":false,"start_ts":"2026-05-14T00:30:00.000Z","end_ts":"2026-05-14T02:30:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":16,"opponent_team":7},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"ad857388-1103-4a1f-869a-00de4b044715","opponent_team":{"name":"Lake County Lightning 10u"},"is_full_day":false,"start_ts":"2026-05-20T00:30:00.000Z","end_ts":"2026-05-20T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":9,"opponent_team":8},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"3d809719-418d-46c2-8793-09d15d82d844","opponent_team":{"name":"Quad City Area Knights 10u Black"},"is_full_day":false,"start_ts":"2026-05-23T19:00:00.000Z","end_ts":"2026-05-23T20:40:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":12,"opponent_team":9},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"cfb48741-df08-4615-9162-9644a436fc78","opponent_team":{"name":"UBA Omaha Gladiators 10U","avatar_url":"https://media-service.gc.com/8d624ed8-0f3b-4c4c-a76b-a1ef0a52917a?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS84ZDYyNGVkOC0wZjNiLTRjNGMtYTc2Yi1hMWVmMGE1MjkxN2EiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=V~i3Uz4cDb1QyG9DYei4dUpmbv2VLwknjtgFeDD3py496wZdSFjW9ZrCJAOk1jtDKQc7s7rI1hv1G227NGhHVnUx-5NGK35MxS-HZ~nlnEH0VdzR-1uu7iRUUBVgTEOOWbBy9nvo4MZa478vRHA378BHCJQs3O~mpi2uIZ5kSL~W0zlrZeDztOdzr1--Phrpx36JHiVyMB1TNauIwjIcu9E6LuaNTq33R7uitKQAzc0FCgseovtYSVjRHOwoB-jQ74pbLVbYJNCl8X8ghPjBx9GzEvftQgUcvERWIo-tvltSq~1OmrO0lGaPpgoIVTePlwAvdoIdWaeZfKGY3CRFGA__"},"is_full_day":false,"start_ts":"2026-05-23T21:00:00.000Z","end_ts":"2026-05-23T22:45:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":12,"opponent_team":3},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"71d85453-477b-4e38-bd6b-8f9f0aaf6ff2","opponent_team":{"name":"Quad City Heat Gold 10U","avatar_url":"https://media-service.gc.com/23bf4f2f-b90b-4876-a47d-68baf95e798f?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8yM2JmNGYyZi1iOTBiLTQ4NzYtYTQ3ZC02OGJhZjk1ZTc5OGYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=dEm37dZhTvFRx8z6avq56FNEMfoDSesFgjppcCvSdsfErPtfJeEy30~-nI99dk7pDGEVIOqLdUnMndmscmVl3XaSpDWHgPjRHkGKM7qWb8RDSIRYHvFXd3M9tb0-221bUl~FYmS9xPfd~QQ3Z~W0XYTs8wowVp7U6iOpZlniwBRbIQwdspAqM3AAPcy5qbIcEfGyQo-bz0-mIvr-kUbXBN8EJtmZNcHrXjcljJXg5Uen51EEEdsvppCdlffGggBBtMWt7E95DMrBySzzzMlEYCeKFU0huKJix3EPsP-ljsjOYKbAf-axPZJhyGXe~YLKibv1ekqwOGvp-982Tn5Pew__"},"is_full_day":false,"start_ts":"2026-05-24T21:00:00.000Z","end_ts":"2026-05-24T22:45:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":10,"opponent_team":1},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"968703ce-a3ad-4833-a595-c2fc476ae2a0","opponent_team":{"name":"Barnstormer Renegades 10U","avatar_url":"https://media-service.gc.com/cf63c45c-9aec-4abf-8494-f64733b42da9?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9jZjYzYzQ1Yy05YWVjLTRhYmYtODQ5NC1mNjQ3MzNiNDJkYTkiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=47BKmiKJRSEgcWYxlUU7abWfRCNP6YRtM-C-~Rf5Ds5IyLp~64I5j64eui~ks3nEbT1-U1WXMIfSWno9N0XjBoAq0YBaB0hwshNizeBgmEfnrIkVZLS1AWAVm4B1xysC0lXNIUDMMQFYqZ46W6IZpUJkLS3v3q0OudkdirUMdGUhCD2YWLsUZMcjmQrrlG0mleR3LE3ygu8KZHue9J1-ni09-MQn00aW8zID40U0DPAbViVx7Ohf8n7fdaZmqO1ce26ecwmNHtLDNWlaoEv93ZS1hdrzYhrJDiAIg6u5Aau-EkIQGCwDmcbMkPcdvbWgznjHkw~U71jHlP68cat1rw__"},"is_full_day":false,"start_ts":"2026-05-24T23:00:00.000Z","end_ts":"2026-05-25T00:45:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":14,"opponent_team":2},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"8342f4af-a1b8-4c80-ae02-5c6c4128010b","opponent_team":{"name":"Gladiators Black 10U","avatar_url":"https://media-service.gc.com/0b32aff1-330f-4083-9d32-aabf3351f5b5?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8wYjMyYWZmMS0zMzBmLTQwODMtOWQzMi1hYWJmMzM1MWY1YjUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=WScIzqVfApWscD5HDbwW6hasWfysI~Qaj4-4KYh7TGyjew6yYKYEaHq3GZYBPp6g-pXSJh6ruE7-8WvNTivEMa2bC5orG96NsVwELcYnyOXBZljCyWq6RYtZ26Ty0x0UamVPnlBNvnkvqjTT~TDOD5gJ7ruMHFa0k3TEwYTIM80jWzIelQF-PaSFQ2e0jjRlDvoWSWlbdUY-mPVP~zg-vG8GP4rPVa6lsVNLpIFH0nwXBGXclUWTXR~46Fi8AqQ7EQ7KnsFEfdoPOeGG~izsVN5WI7BlzycLfkMaJA-CFm6-tDYEvrFhatZfKC8NR9dhyVweiZPlgNVOfJTLxeAm~A__"},"is_full_day":false,"start_ts":"2026-05-25T16:40:00.000Z","end_ts":"2026-05-25T18:20:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":10,"opponent_team":2},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"11061393-0427-4054-9b09-4171c7da6b71","opponent_team":{"name":"Barnstormer Bandits 10U","avatar_url":"https://media-service.gc.com/e3026701-0b4f-4ed4-b168-0dd1bd3aef33?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9lMzAyNjcwMS0wYjRmLTRlZDQtYjE2OC0wZGQxYmQzYWVmMzMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=Fk3R7-LpGNB7p4QAEnfe-F~UORNViFqE~Fav~SJ4LDXGsvSjXIyJ-z32UgBd-vYsNHKUk9VBWziopNng9ORPxG7ja2iVk0kMv7H4CL47HYBG8PSOYQgBDvCZCEqSshHGSpdnzVF64ynvO8WIDCOWFd9ljOetZ77WRBI2A9GHDci-Vr7uiGB437u2p1e8wlX2RodoeVvjPham71M8Nuvybryy-B6edEdoe14ZiS2Sb0rX2dzEYbihpmejZSkwzkxK3IK1aZk5Lo5CDJm0AVD3zd~2IFHOmV2ctzNCMpIAap1lQOsu2UcPYdEIC~PgErMRCr2Zo3hyno9V1FkQNOXMWw__"},"is_full_day":false,"start_ts":"2026-05-25T20:20:00.000Z","end_ts":"2026-05-25T21:20:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":7,"opponent_team":12},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"1ae68d13-9c41-4155-a5cd-4e9a25150e2c","opponent_team":{"name":"GRB Illinois 10U - Ciaglia"},"is_full_day":false,"start_ts":"2026-05-28T00:30:00.000Z","end_ts":"2026-05-28T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":14,"opponent_team":15},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"fdbed117-afb3-46f1-9c82-eac782ccf58d","opponent_team":{"name":"SBA Raiders 10U","avatar_url":"https://media-service.gc.com/3889f408-66f6-4cf0-84e0-b880f6c03981?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8zODg5ZjQwOC02NmY2LTRjZjAtODRlMC1iODgwZjZjMDM5ODEiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=jwmRUjYh~IQaNkqSxvTm8RFLAhAT4kNpxiz7us0qWx74M6ewVCvHkakeePWtDmBC9ijoYOoWSO1A5YfZ55yp6uEQRvqRqogrU0A2N04tEBvefk0qEI6lh4t3jBtvbncUoI0vK~i6xl4O9DxNE0Ps62sYCKwYePLv~CRMtPED~~PihgA3e3gnQZduSgdWQCPPIWDPQPfAb6kwWN6PDTVcmdsFdCLiYM87WyeObGJGkZqlaPp6~YD2qcXZDzWIPrciXoRENcUASTuswHAvyKHCLP~ifnL8WnA5bSn8Kxcx2WnoYanOemSBnovC4K0U5CqE5QFLO-F9zPp9lGuj3dLREg__"},"is_full_day":false,"start_ts":"2026-05-28T22:30:00.000Z","end_ts":"2026-05-29T00:30:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":6,"opponent_team":11},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"2019ddff-fba6-49c9-802f-420530cce412","opponent_team":{"name":"Windy City Hit Dogs 10U Smerling","avatar_url":"https://media-service.gc.com/1be813c5-2860-48bf-9922-f295cafa2e90?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xYmU4MTNjNS0yODYwLTQ4YmYtOTkyMi1mMjk1Y2FmYTJlOTAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=HYaQTsrLgdsXP8doL9DHfukFOlpO4llaMiyFGr0chCUSMdUrRXRu8EMhwypxjLUnEeTTV-ia7SZDaLLNp0gSGxpX05YFONXUm6iW8ydXD6eztzZFuXRBGm911tTQHMWVF7LKZV9BBIfYi5x~KMdHUGy71PINuVQXU77Jn4EpbKZTmpRAJprSi9W-Nl3RHuMZh9tF~F6aHCU~7FVUAwAZCFfSKmPByMS34WMRRx~pS9J6f~dakeml3D2Vnj8bSMnS~nz0040ZTy5Mk8Aox0vSpsjpZwnGcQN6hW9qHgjY5drwBSIDGdwinI~c9tD6zNr9sqiXlWAZYeGdGWb~T5z4Jw__"},"is_full_day":false,"start_ts":"2026-06-03T22:45:00.000Z","end_ts":"2026-06-04T00:45:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":11,"opponent_team":14},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"fe66cadd-21b2-4391-8809-a4f9feae4e18","opponent_team":{"name":"SBA 10U Raiders","avatar_url":"https://media-service.gc.com/6850b3a8-6422-445d-8dac-8fb9c1d40ac3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS82ODUwYjNhOC02NDIyLTQ0NWQtOGRhYy04ZmI5YzFkNDBhYzMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=ET21r0WkZfNxmnq95dgUj2zLkTpGcMKxtaJgFf42FyJSuzSFCzkwF-U8lZWJ9olYqo37GX6OnaWstuzL1ZP9STA9-Lvp1VgND2cgGFwR0wvc2PQruI44G98gk~iaBgw2GycmDPwXgwtsYD4nTcs3VTrSh-0Li98rWQ-LZcRPDkCUyn7TtBUWgOdfV1pcj1jIV68sUwgHZVYzPPHriqnTsHjkPZJc6AKWYCBSE6u7yAVg62vs69N0QHyQr36eqhcw0PjXBvc9aKRiZbM5pF6YazCPEzE7suQMWUntZ8S9aYIXg53ewQYZcZqQSkF6e6EXmgdhjKvv8-HG6fK-K6C9QA__"},"is_full_day":false,"start_ts":"2026-06-05T23:00:00.000Z","end_ts":"2026-06-06T00:40:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":11,"opponent_team":3},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"350af950-7ccc-48cc-b24f-7cecde440f35","opponent_team":{"name":"Wasco 10U Red","avatar_url":"https://media-service.gc.com/bfd2eedf-e750-462f-8185-7fa11bc674cf?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9iZmQyZWVkZi1lNzUwLTQ2MmYtODE4NS03ZmExMWJjNjc0Y2YiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=rFL-YMlkp1WnwCLBdIa7EAfIoV6pd5IKd-8NXYy2MpiaUFU6TdAMzx5DfQ2Huqb4sDbKgv6gb~EkcixCUUZrlzeYuIofGxy4v1s8sL9r74A5x8a844FGGNeJBSWQT2Qynr15~chtWtlih18WpWx61dhR6XKv5EvkxA~DsLDZpoWzmFQsRBjCIIQh72VUn6vZj0o8nXECm2PpEkxVBlfyTaLKzQo8XZ2LJ2ITIcakk0EG1LaoiSOh5MgHrR~fuJqKr67muAl~ePV1YbFroctR~IsfNEsv1OwpFwJXWB8sm1xPUt4WO3kV3A5qO65eQJI2rNPqLXt5kwG3lGOLmjEpsA__"},"is_full_day":false,"start_ts":"2026-06-06T19:00:00.000Z","end_ts":"2026-06-06T20:40:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":6,"opponent_team":13},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"4d55b728-6d3c-47bc-98d3-a1cb9eae854b","opponent_team":{"name":"McHenry Cobras Bozer 10U","avatar_url":"https://media-service.gc.com/29ff4149-5c21-4e8a-a958-df24645a1d0e?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8yOWZmNDE0OS01YzIxLTRlOGEtYTk1OC1kZjI0NjQ1YTFkMGUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=p6XPNy298RyGbUjWyKwePqAZXBgiWwqhnmYS77YqDxcD0ZytUFgHo0pBkUVZG0f5oEslIiD7ZNqazhbsnGfCdRWsmjx6giD8VWoEhXRJ806gK7a-~mckDNNh~1v6fqVmDFmnCtOq3lhQ4zN8oZkWviYFeLeL9Y6E42Roo1eD7fZM5Z2ATDSFtcOsJqObh~zMJqUWGo0FNR5KzzXgmy0DhNu4UOd2UrBarXO-Te32VqNSF2r4CEJWt6KHoJGY~xUhYTkmXHtPDS6ses55z9yG9bFAHCnrfeB1gbAx6EZ2bKMGlw-PD53AVRUkQ0gf5lJg8BhURHRiWZcGxDL4RTjjpA__"},"is_full_day":false,"start_ts":"2026-06-07T15:00:00.000Z","end_ts":"2026-06-07T16:40:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":8,"opponent_team":0},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"26a83491-1acc-438e-8e9a-57e4dd0812df","opponent_team":{"name":"Outlaws 10U","avatar_url":"https://media-service.gc.com/5630f223-6b3a-4a30-a899-d6a725a70344?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS81NjMwZjIyMy02YjNhLTRhMzAtYTg5OS1kNmE3MjVhNzAzNDQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=3RlOKhFgZvp-oZZoZs6XT-qecAMP~8FGC3YOkJSsQZTnprjxT50ZiWLOP4XCVzWT8LZM1u~~-bFQnJCCkU6Pnz54C6Y911unld4OtRXPmedQQRI4iKph1Wa2~-XuV8xoZtMkyZCs2g7WOxt08e-iW6qTqZz6JcNbhvBJ1gzx~Pn9UiYpzOX57hvJapoiK~rdR3Iw9h9qrY0slBT3f~EKTz1sGJJLzv21iQcwtJW5pFUf0mPyoeyEw4qaR5tDcx9eXhRp4ZQUYoxeZ24qdAg4g3PlrJ0-RJcC7JB1yx8GC3k4ONxvWvCF~kRN5-9Qn8Vhx5N0rqM73l~Gs2VpeNC76A__"},"is_full_day":false,"start_ts":"2026-06-07T19:00:00.000Z","end_ts":"2026-06-07T20:40:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":6,"opponent_team":7},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"dbc56966-3a90-4656-863c-d0b7f8071c4a","opponent_team":{"name":"CDBL Rockets 10u Blue","avatar_url":"https://media-service.gc.com/bb8a004a-9f5f-4b8a-8198-0153176a58a9?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9iYjhhMDA0YS05ZjVmLTRiOGEtODE5OC0wMTUzMTc2YTU4YTkiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=5ugYeqiyysNJd9VRkE3L0QchgYjsBFI9dGO8Taw8MrFePFPhDSaw9r5j3nXb2SiU1rktaj2GOz6Kjy9toTh6XoH55ECZURMKFTLnOxVCPkeU48N~z6HMIWiFnB6quYnXbptrA5fRJY5uj4sqQx4haPnK0yWq2MOskiKUg3PUiTasOBUmHhoQteY6MvUXrX3y8QvHj4AtVswjQtX9i-hy0cE7GlxvUoW5RwhqsXRp5h115TGITcAd7yc8uGRIEmp0DiNAEu~W6JmTaP3pBPoVQV-LyhqtVA2tM8xS6kzQtOgGoqETrzOdbzkFP8UNydTv9DKukQ2rIsMvnyoXly6Bow__"},"is_full_day":false,"start_ts":"2026-06-09T23:30:00.000Z","end_ts":"2026-06-10T01:30:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":5,"opponent_team":9},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"ad2f3457-0208-4dc1-8618-2c6b0cf9625d","opponent_team":{"name":"Woodstock Heat 10U","avatar_url":"https://media-service.gc.com/04719be3-92ed-4c91-92ca-f928ca0bc0bc?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8wNDcxOWJlMy05MmVkLTRjOTEtOTJjYS1mOTI4Y2EwYmMwYmMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=M3M9fRbD8LMtC0QMe5qwtUJeCX4mDq57yJxmmAzEPRwdGUzq97uoTrTo1YXPMXrxDUg9XEJ~G1NCDkW-lR9GwVpqPjpBioFs8ISSWd7Bz9h6VZ6mlkgzLfauqh-Vucf-T-UynyEcud2kJKnnDT9d~CpzVG4s4r-2fBuA~51CEcklVPkBK46RF7EswTwx9LN6H-9bbdSOi1kmhnFLYnr9cQqmIFTHr~H9p03HWKgXjBXTGJkX8lcqrk3FMTogGpLJcZqV7pZ2h6k4ODSd9Q7KOHuXAT4mU9sIvwu~OgGyLgPDkexRELyMM2fhIaaa-mgEKMviuPlTMCYxoBdF9gFKiQ__"},"is_full_day":false,"start_ts":"2026-06-16T23:00:00.000Z","end_ts":"2026-06-17T00:00:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":14,"opponent_team":7},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"eebe3487-c62f-453c-9205-9b1c805023aa","opponent_team":{"name":"Windy City Hit Dogs 10U Smerling","avatar_url":"https://media-service.gc.com/1be813c5-2860-48bf-9922-f295cafa2e90?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xYmU4MTNjNS0yODYwLTQ4YmYtOTkyMi1mMjk1Y2FmYTJlOTAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=HYaQTsrLgdsXP8doL9DHfukFOlpO4llaMiyFGr0chCUSMdUrRXRu8EMhwypxjLUnEeTTV-ia7SZDaLLNp0gSGxpX05YFONXUm6iW8ydXD6eztzZFuXRBGm911tTQHMWVF7LKZV9BBIfYi5x~KMdHUGy71PINuVQXU77Jn4EpbKZTmpRAJprSi9W-Nl3RHuMZh9tF~F6aHCU~7FVUAwAZCFfSKmPByMS34WMRRx~pS9J6f~dakeml3D2Vnj8bSMnS~nz0040ZTy5Mk8Aox0vSpsjpZwnGcQN6hW9qHgjY5drwBSIDGdwinI~c9tD6zNr9sqiXlWAZYeGdGWb~T5z4Jw__"},"is_full_day":false,"start_ts":"2026-06-20T14:00:00.000Z","end_ts":"2026-06-20T15:40:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":8,"opponent_team":3},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"469dee08-dc02-490c-a9f3-5d40080ce2d6","opponent_team":{"name":"RBI 10U","avatar_url":"https://media-service.gc.com/f45726c8-fcbe-4f58-b16d-326dbe11eabe?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9mNDU3MjZjOC1mY2JlLTRmNTgtYjE2ZC0zMjZkYmUxMWVhYmUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=jq~OonOnVd34GUd6AzVsEtwulbMRlviaNkdIrQPT0ownPS7YKATekdFbxMAfgZcg1utO5EaN5Dd7qCLbSfVkRupL-5Kc4vKl1kezlqbabq21gZp6mwmEhlmVowtGx5XPlYxOuibwRHmpkToA27xuwzaptNDD5sypp9PUZDBo8Hlb9HFfKLktSA8JOYgqZmTfa27RZIzQ7KAfSJVwxZ4c6VI42zW7W7ohzpOGUOBpGMaeqEcWZn4~8TKvQL2otHwy7E1qxSJHoCvOkxmxVti3mPyHxctl7nY5hjqr~k23GGUB27bB~TYn0NZLBaSg~-Z3CmDRH6lnQXPIJyPaIqk6NA__"},"is_full_day":false,"start_ts":"2026-06-20T16:00:00.000Z","end_ts":"2026-06-20T17:40:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":2,"opponent_team":8},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"42c70277-beb5-45ed-9772-f61ea08152f5","opponent_team":{"name":"Belvidere Bolts 10U","avatar_url":"https://media-service.gc.com/6da16b38-c294-42d3-8fbb-69cc4f9e4555?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS82ZGExNmIzOC1jMjk0LTQyZDMtOGZiYi02OWNjNGY5ZTQ1NTUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=KoOVnPKC9vLN2fGDZLe4O5siK73sVnulXRhXrbJ4pxcI~2hoVOXGkS7P6~1RXsKLLIVHf5hYIeQNGHglxn20EYRnq3R6ptA4krc2NCRQxOEofnz2V7YTlTwsY~n9pV-4kOqNyL3e5SVBmw5hVk5X6-Bs67H~c-aEB04zIjnTs0oBUbPEPzypmA1FSM4OzCgerCNiFj6eT7pPqjDh1MTjOX1tDXYJh~hF6BZax2lTNXbnUS2GOSdfZxkGA7gn7FusB7jH-fK6ZjFQgtHJ6kitlW6ScAYc6Dt7kgGbBkio1kQ-k8dnbf05tfMAYjSwY3yteSqOmHjx4Yvkvf~DP~8Prg__"},"is_full_day":false,"start_ts":"2026-06-21T16:00:00.000Z","end_ts":"2026-06-21T17:40:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":14,"opponent_team":0},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"3affdfbc-57d8-487a-a4da-79c337ec3154","opponent_team":{"name":"Windy City Hit Dogs 10U Smerling","avatar_url":"https://media-service.gc.com/1be813c5-2860-48bf-9922-f295cafa2e90?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xYmU4MTNjNS0yODYwLTQ4YmYtOTkyMi1mMjk1Y2FmYTJlOTAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=HYaQTsrLgdsXP8doL9DHfukFOlpO4llaMiyFGr0chCUSMdUrRXRu8EMhwypxjLUnEeTTV-ia7SZDaLLNp0gSGxpX05YFONXUm6iW8ydXD6eztzZFuXRBGm911tTQHMWVF7LKZV9BBIfYi5x~KMdHUGy71PINuVQXU77Jn4EpbKZTmpRAJprSi9W-Nl3RHuMZh9tF~F6aHCU~7FVUAwAZCFfSKmPByMS34WMRRx~pS9J6f~dakeml3D2Vnj8bSMnS~nz0040ZTy5Mk8Aox0vSpsjpZwnGcQN6hW9qHgjY5drwBSIDGdwinI~c9tD6zNr9sqiXlWAZYeGdGWb~T5z4Jw__"},"is_full_day":false,"start_ts":"2026-06-21T20:00:00.000Z","end_ts":"2026-06-21T21:40:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":15,"opponent_team":5},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"cfbfd4ae-4e14-47a0-bc60-12427e775d4e","opponent_team":{"name":"RBI 10U","avatar_url":"https://media-service.gc.com/f45726c8-fcbe-4f58-b16d-326dbe11eabe?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9mNDU3MjZjOC1mY2JlLTRmNTgtYjE2ZC0zMjZkYmUxMWVhYmUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=jq~OonOnVd34GUd6AzVsEtwulbMRlviaNkdIrQPT0ownPS7YKATekdFbxMAfgZcg1utO5EaN5Dd7qCLbSfVkRupL-5Kc4vKl1kezlqbabq21gZp6mwmEhlmVowtGx5XPlYxOuibwRHmpkToA27xuwzaptNDD5sypp9PUZDBo8Hlb9HFfKLktSA8JOYgqZmTfa27RZIzQ7KAfSJVwxZ4c6VI42zW7W7ohzpOGUOBpGMaeqEcWZn4~8TKvQL2otHwy7E1qxSJHoCvOkxmxVti3mPyHxctl7nY5hjqr~k23GGUB27bB~TYn0NZLBaSg~-Z3CmDRH6lnQXPIJyPaIqk6NA__"},"is_full_day":false,"start_ts":"2026-06-21T22:00:00.000Z","end_ts":"2026-06-21T23:40:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":14,"opponent_team":3},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"4b709d60-745a-46e4-a4c9-9e745823bd5d","opponent_team":{"name":"SBA Raiders 10U","avatar_url":"https://media-service.gc.com/3889f408-66f6-4cf0-84e0-b880f6c03981?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8zODg5ZjQwOC02NmY2LTRjZjAtODRlMC1iODgwZjZjMDM5ODEiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=jwmRUjYh~IQaNkqSxvTm8RFLAhAT4kNpxiz7us0qWx74M6ewVCvHkakeePWtDmBC9ijoYOoWSO1A5YfZ55yp6uEQRvqRqogrU0A2N04tEBvefk0qEI6lh4t3jBtvbncUoI0vK~i6xl4O9DxNE0Ps62sYCKwYePLv~CRMtPED~~PihgA3e3gnQZduSgdWQCPPIWDPQPfAb6kwWN6PDTVcmdsFdCLiYM87WyeObGJGkZqlaPp6~YD2qcXZDzWIPrciXoRENcUASTuswHAvyKHCLP~ifnL8WnA5bSn8Kxcx2WnoYanOemSBnovC4K0U5CqE5QFLO-F9zPp9lGuj3dLREg__"},"is_full_day":false,"start_ts":"2026-06-24T00:30:00.000Z","end_ts":"2026-06-24T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":10,"opponent_team":10},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"f41d6d91-6f31-4809-b633-8ea8bc6d2f06","opponent_team":{"name":"Cangelosi Sparks Kersten 10U"},"is_full_day":false,"start_ts":"2026-06-26T20:00:00.000Z","end_ts":"2026-06-26T21:40:00.000Z","timezone":"America/New_York","home_away":"away","score":{"team":4,"opponent_team":8},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"3b986efb-c193-495f-8ae6-7af35b9ddcc9","opponent_team":{"name":"Full Tilt Boltz 10U","avatar_url":"https://media-service.gc.com/6ba4556c-247f-40e9-b746-598a7f304f43?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS82YmE0NTU2Yy0yNDdmLTQwZTktYjc0Ni01OThhN2YzMDRmNDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=XdNu19~on9S4WzywmBGkAT4OaHwMeomS4-mlmPQGaaDaH-MwfPBl4kkQ-~1CbLsmbr0QcnOYy6Kol2DdtRgqtljsBM06jSLtDLnE25mEWReZsdHTxvv3iqf4aw0tb0j2eMwgGVjv6ipLMAhpKxnKxXzFCuo1CGidQVeW7KgiBdzMCHKtXPeYit-rASkYVlZnJMlgaTzxeg7LDJ38X-2QOsU9MG5Qaki8xDJX3gQo3J~lxSfmyLl7hILf897wxwxc8j2V0Su7Rc1~8dS-Zcj3Ky59hFns5RUYGdJKcyIKvFjU5DfWBlrLeRP3w~ZvT5L2-hG5CDTlZOdoPnhmcWyZqw__"},"is_full_day":false,"start_ts":"2026-06-27T12:00:00.000Z","end_ts":"2026-06-27T13:40:00.000Z","timezone":"America/New_York","home_away":"away","score":{"team":4,"opponent_team":6},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"b3cf21b9-a8af-4d89-97d5-96a006745474","opponent_team":{"name":"Northwoods 10U","avatar_url":"https://media-service.gc.com/c91f27e4-4c00-4b61-b0c8-d9841859a97a?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9jOTFmMjdlNC00YzAwLTRiNjEtYjBjOC1kOTg0MTg1OWE5N2EiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=s5JzMuvEDcQuZXEyijnfPEQkiUY77hz8cr1ezAvoKp0waJXCsFtO9hjGYj3-Gy2-sudexbC7nvcScQvwyEEX5y21Muhxe6TlGqH8s5nt5RxjlZVtOEtmY7wYZStSW6MrTA9HxQzFIvHKqgpiRKeqAvi8~n6fOn3NTMOtUmejvQtifHBMBsHAe6fYvyUp-Fa-jU15SBKZQQZplAWtt7xF3JN20JNN9xyxYtR1UzImMHWbL80Pncw53ppYzJyLX-Xl-0hKa4iq75WJlpXoRm23ecFU1~YFyaP~jP4dvlR2loM9ObBq8AubW7qxODxkqK9mtPeGuILse8xJmlCkn~LQ4g__"},"is_full_day":false,"start_ts":"2026-06-27T15:15:00.000Z","end_ts":"2026-06-27T16:55:00.000Z","timezone":"America/New_York","home_away":"home","score":{"team":7,"opponent_team":8},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"f49d8811-d0ba-4996-a44b-741b721ce3aa","opponent_team":{"name":"United Baseball Club - Ada 10U","avatar_url":"https://media-service.gc.com/394c7b1e-6aaf-4499-9f61-30b7209dd9b3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8zOTRjN2IxZS02YWFmLTQ0OTktOWY2MS0zMGI3MjA5ZGQ5YjMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=5UB0VvTd2TNmnpL4ZshKJUywT3VeIsPx1farAnbdAdhI~vr6wmJAh-e2XcQq4XTRPuyYWNd7GIKqJRhMeF5iWiQP7VVBs~lAa~PrKvM1Iw5zAKrcr6IEdLbyjoewXNAuKqQxg9DbsH7KUlbGGEVw-TBkm8LgI9JVgu-MpO7e3SdODi4f50MaXjr2uYb8~cwZWCiPeSPytCIxRATipFUBOi~ozHdOUaKUNgQG0layWH2-val8ILrriyppPPhmv2Z70tLh4BplSw~ZPauvxKevOAotPwPoqNfo1Az4RBYTlgg~mmBUfGz9r-pLXMeU1hWs0Q2YS0t3e8AlsIa9-LGN0w__"},"is_full_day":false,"start_ts":"2026-06-28T14:00:00.000Z","end_ts":"2026-06-28T15:40:00.000Z","timezone":"America/New_York","home_away":"away","score":{"team":12,"opponent_team":7},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"8017b1d0-1e12-41be-8ca7-67275cfe1960","opponent_team":{"name":"CDBL Rockets 10u Blue","avatar_url":"https://media-service.gc.com/bb8a004a-9f5f-4b8a-8198-0153176a58a9?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS9iYjhhMDA0YS05ZjVmLTRiOGEtODE5OC0wMTUzMTc2YTU4YTkiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=5ugYeqiyysNJd9VRkE3L0QchgYjsBFI9dGO8Taw8MrFePFPhDSaw9r5j3nXb2SiU1rktaj2GOz6Kjy9toTh6XoH55ECZURMKFTLnOxVCPkeU48N~z6HMIWiFnB6quYnXbptrA5fRJY5uj4sqQx4haPnK0yWq2MOskiKUg3PUiTasOBUmHhoQteY6MvUXrX3y8QvHj4AtVswjQtX9i-hy0cE7GlxvUoW5RwhqsXRp5h115TGITcAd7yc8uGRIEmp0DiNAEu~W6JmTaP3pBPoVQV-LyhqtVA2tM8xS6kzQtOgGoqETrzOdbzkFP8UNydTv9DKukQ2rIsMvnyoXly6Bow__"},"is_full_day":false,"start_ts":"2026-07-01T00:30:00.000Z","end_ts":"2026-07-01T02:30:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":14,"opponent_team":2},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"c4f539b2-99f2-4c52-835f-7e8b351e6653","opponent_team":{"name":"SBA Raiders (Woods) 10U","avatar_url":"https://media-service.gc.com/43cc195d-80f0-4e05-a773-653183a3ad65?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS80M2NjMTk1ZC04MGYwLTRlMDUtYTc3My02NTMxODNhM2FkNjUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=F5wmHD4a6Gu489Vgb8Dpl8SsErs-uvdGgYiVGx3llnAanqzuHIpPjNNJA6gWw5pJMpW9uRK6c0NmaYs8R5iG0w1b2MIUbLdl6VOBkONn5~CydolQGiPhCQasPzOUGRSZsk5tyNZBE0995y77GnxWcnJ1i-kN0-Oy-c6OjlG4x5gvPNY-JQXoOFpCBGUMrynSYKaWDx~qxfQFSkC281CyxWctX~XhbqMVcN-akwuAThpeWWqJYTzAn39HePcJmL5fOd7pI9DYhc-Tj0x3MXUMu~bQSnWiIh69pTXWVbCBGNTo6cA7qklyrsszcEtQkYKCtUMEPJ-W8zQBZJN6Kshjvw__"},"is_full_day":false,"start_ts":"2026-07-03T13:00:00.000Z","end_ts":"2026-07-03T14:45:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":10,"opponent_team":4},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"707ddd6c-6da4-4062-8b05-d40ae7ad153f","opponent_team":{"name":"Arlington Cardinals Red 10U","avatar_url":"https://media-service.gc.com/2eaa45cc-f1bd-4b18-9187-731a23e6b9e8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8yZWFhNDVjYy1mMWJkLTRiMTgtOTE4Ny03MzFhMjNlNmI5ZTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=5ueSBVe7eXfYPugFFm1tY41D~uQsi564oIBt~kSUv4AW1aSbMVph9AUIol6I9lcqn9Y~N~KDqvNDnK-z9qnK3QTL0SDULN9yla0mJdowDmH2ucl0OYvyL3ZCH0mxvWUYScDY1IljaQ0f1Zpi2oMKNfsVhVKl3IT2MXsZ4VAbnIhCCZ5eV1U5Ax9EKl7KSETlNWt2-TgyEYw8olpIUj6vlcXxwKYfzGZFiiSJ3BPSgHNTqSjWXEsnro-aWYPpiR3VJYOJQ83W7jGP59TMMW5aeQKDPJZhbkXO5hsY4fpaxa-WnmR2AREtXkngReJ7OKc9P8mNps80YBD4oIAxiJqpow__"},"is_full_day":false,"start_ts":"2026-07-05T14:00:00.000Z","end_ts":"2026-07-05T15:45:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":5,"opponent_team":2},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"eca1d571-453d-4ddd-9447-af330fdceb49","opponent_team":{"name":"Hamlin Park 9U Purple 2026","avatar_url":"https://media-service.gc.com/62502b9a-7619-4287-bcb5-bcb3155d8685?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS82MjUwMmI5YS03NjE5LTQyODctYmNiNS1iY2IzMTU1ZDg2ODUiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=aD~v9gbDIQ~KZVNbKmgtIXUtP-n662s3~-zmuijkShTVCqKEnvhk1wYjvUv8x1FPGms5bRqTo12sKbL3YKSSuHUZDNvfWxFcVVbl6ugh-IbDYNYziDbAQom29tlDk0nBEG7mlKt34Q44~drf6r58H~N41qbsoUPiov0qnosgiTnFQtJwyfMQowyYp8PM45e6rRGQ~RgOAdPVUx9W3Admz-KOjqXw46ZI5ZEwXxPVbZ6dhER8ejmgKxrjagoco~EQW1LA8oRy~besW4pQB93LRqLc9Vcaa9wIhTAyAu9sTJTHXQS2k4WTdlgw~RTY-KkHSA6zy8U0V01OWBKmTx3KZg__"},"is_full_day":false,"start_ts":"2026-07-05T18:30:00.000Z","end_ts":"2026-07-05T20:00:00.000Z","timezone":"America/Chicago","home_away":"home","score":{"team":15,"opponent_team":5},"game_status":"completed","has_videos_available":true,"has_live_stream":false},{"id":"2b488db1-c12a-4d6c-a1e0-f1b47e5b2bbb","opponent_team":{"name":"SBA Raiders 10U","avatar_url":"https://media-service.gc.com/1d0909da-7165-435e-b6ae-bc9e4931e46a?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9tZWRpYS1zZXJ2aWNlLmdjLmNvbS8xZDA5MDlkYS03MTY1LTQzNWUtYjZhZS1iYzllNDkzMWU0NmEiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODcyOTEzOTF9fX1dfQ__&Key-Pair-Id=K9VSFJEM9PTHU&Signature=4JRJ4IRoiHbLKbcF40dQcCUoJqOWE2P0cOn5aYXynO-Q~sqxz4q1eTxxK7eIxUbNqOwQkWf4hxPGRt5jK2daTDw~PtmkJFll8D0~jlILaQ9cc~-uCMsTjyZID0RSHZ8zaY~MkAZrVM2UJEAmJpbMIGnB7TX89tUy4aEG4e1nNB1Tn4bzJXQ5ICAYHDzoMmAHnwkF9XoaLVdM92W5tl4s7Mutk4Rld2Gk2kEb7rRoOPXW5otsEF-3qXIZUNXW~l6uyPSnWLDgmYyjVCD8OWDKlaATJI26xTyNRqwFxLJuOHjHt11jZ4m0CExfJqbf279ccMnjAvxtrdaFGZERidkX9A__"},"is_full_day":false,"start_ts":"2026-07-05T19:00:00.000Z","end_ts":"2026-07-05T20:00:00.000Z","timezone":"America/Chicago","home_away":"away","score":{"team":8,"opponent_team":0},"game_status":"completed","has_videos_available":true,"has_live_stream":false}]
+[
+  {
+    "id": "c7beb998-aec1-4164-939c-cea2a92407f0",
+    "opponent_team": {
+      "name": "Mequon Heat 10U Red"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-03-14T18:15:00.000Z",
+    "end_ts": "2026-03-14T19:55:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 1,
+      "opponent_team": 12
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "afbce576-f66b-4814-bf5a-835d919d3e01",
+    "opponent_team": {
+      "name": "WFB Jr. Dukes (White) 10U",
+      "avatar_url": "logos/cache/c9bd229352bc6eb8.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-03-14T21:45:00.000Z",
+    "end_ts": "2026-03-14T23:25:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 5,
+      "opponent_team": 5
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "777da60a-ccda-4f1b-b9d9-0a9b83d2df43",
+    "opponent_team": {
+      "name": "GRB Rays Green 10U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-03-15T16:30:00.000Z",
+    "end_ts": "2026-03-15T18:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 12,
+      "opponent_team": 6
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "7fabc1c6-f09a-4f84-9743-b5745ae29cbd",
+    "opponent_team": {
+      "name": "GRB Rays - Illinois 10U",
+      "avatar_url": "logos/cache/773932a4a89c0056.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-09T00:30:00.000Z",
+    "end_ts": "2026-04-09T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 3,
+      "opponent_team": 13
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "247df0b3-8601-4d0c-9438-e0f6aae21088",
+    "opponent_team": {
+      "name": "Welles Park 10u Red"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-11T06:30:00.000Z",
+    "end_ts": "2026-04-11T08:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 12,
+      "opponent_team": 0
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "e48aa944-fc82-4122-83a4-95bdc0b976c5",
+    "opponent_team": {
+      "name": "SBA Raiders (Woods) 10U",
+      "avatar_url": "logos/cache/8cbd84c4dc416d50.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-11T20:20:00.000Z",
+    "end_ts": "2026-04-11T22:05:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 5,
+      "opponent_team": 11
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "12e93006-5d90-4d72-95fc-17725cda26a2",
+    "opponent_team": {
+      "name": "Welles Park 2026 - 10U Black",
+      "avatar_url": "logos/cache/48629f719906ed5e.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-12T13:00:00.000Z",
+    "end_ts": "2026-04-12T14:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 2,
+      "opponent_team": 8
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "189db2e7-af75-44cd-aee0-c8e0dc60358c",
+    "opponent_team": {
+      "name": "Windy City Hit Dogs 10U Smerling",
+      "avatar_url": "logos/cache/3ce02b80f0aa62f2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-18T20:40:00.000Z",
+    "end_ts": "2026-04-18T22:20:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 14,
+      "opponent_team": 11
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "9d201579-cb0b-4c98-9a6b-9a57187e6fe7",
+    "opponent_team": {
+      "name": "Jr Memorial "
+    },
+    "is_full_day": true,
+    "start_ts": "2026-04-19T00:00:00.000Z",
+    "end_ts": "2026-04-20T00:00:00.000Z",
+    "timezone": null,
+    "home_away": "home",
+    "score": {
+      "team": 23,
+      "opponent_team": 0
+    },
+    "game_status": "completed",
+    "has_videos_available": false,
+    "has_live_stream": false
+  },
+  {
+    "id": "e0f746ff-f892-4d96-bb45-515a1bb5389e",
+    "opponent_team": {
+      "name": "Broncos Red 10U",
+      "avatar_url": "logos/cache/2ac3bcffb3f06278.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-19T00:00:00.000Z",
+    "end_ts": "2026-04-19T01:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 11,
+      "opponent_team": 10
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "367ef452-2294-4a15-87d4-213a7bdf186b",
+    "opponent_team": {
+      "name": "Cary Grove Trojans Travel 10U",
+      "avatar_url": "logos/cache/c4e1e16d2ec2e410.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-19T16:40:00.000Z",
+    "end_ts": "2026-04-19T18:20:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "d80d4470-b7d3-46bb-80f2-ec46a4000c1b",
+    "opponent_team": {
+      "name": "SBA Raiders 10U",
+      "avatar_url": "logos/cache/61eed98aceb88363.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-19T20:20:00.000Z",
+    "end_ts": "2026-04-19T21:20:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 6,
+      "opponent_team": 3
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "4f4b97aa-e36d-42e3-b56f-0683a3d1ef30",
+    "opponent_team": {
+      "name": "Broncos Red 10U",
+      "avatar_url": "logos/cache/2ac3bcffb3f06278.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-19T22:00:00.000Z",
+    "end_ts": "2026-04-19T23:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 7,
+      "opponent_team": 10
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "a509e309-8947-461f-9b57-438fde9c2f8f",
+    "opponent_team": {
+      "name": "Windy City Hit Dogs 10U Wuich",
+      "avatar_url": "logos/cache/a20586e950e24cf2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-23T00:30:00.000Z",
+    "end_ts": "2026-04-23T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 16,
+      "opponent_team": 15
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "d3ea9362-780b-4ad1-98d1-d977df60243a",
+    "opponent_team": {
+      "name": "GRB Illinois 10U - Ciaglia"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-04-29T00:30:00.000Z",
+    "end_ts": "2026-04-29T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 13,
+      "opponent_team": 14
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "129d66a8-d894-4c34-b995-bd8ae05ee782",
+    "opponent_team": {
+      "name": "Northwest Travelers 10U - White 10U",
+      "avatar_url": "logos/cache/f95ed6b6cd0a6aa8.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-02T21:00:00.000Z",
+    "end_ts": "2026-05-02T23:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 15,
+      "opponent_team": 5
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "d41ec842-e9d0-4297-ba84-b0b3afc05efd",
+    "opponent_team": {
+      "name": "Waukesha Blazers Hailstorm 10U",
+      "avatar_url": "logos/cache/d4b7bebc90941638.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-03T01:00:00.000Z",
+    "end_ts": "2026-05-03T03:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 13,
+      "opponent_team": 5
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "2d0fe2b3-3a19-4628-8024-38a0c96aa813",
+    "opponent_team": {
+      "name": "Waukesha Blazers Hailstorm 10U",
+      "avatar_url": "logos/cache/d4b7bebc90941638.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-03T15:00:00.000Z",
+    "end_ts": "2026-05-03T16:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 3,
+      "opponent_team": 14
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "ab677026-8f14-4ff0-9fd8-35dd18e94a02",
+    "opponent_team": {
+      "name": "Windy City Hit Dogs 10U Smerling",
+      "avatar_url": "logos/cache/3ce02b80f0aa62f2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-07T00:30:00.000Z",
+    "end_ts": "2026-05-07T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 17,
+      "opponent_team": 3
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "de4f6a10-204f-474e-a262-43e3314e59ac",
+    "opponent_team": {
+      "name": "GTS 10U",
+      "avatar_url": "logos/cache/a774fc7e187617a6.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-09T13:00:00.000Z",
+    "end_ts": "2026-05-09T14:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 14,
+      "opponent_team": 9
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "558a5c35-5944-46cc-9900-2524cb3a0c59",
+    "opponent_team": {
+      "name": "Midwest Future Prospects 10U",
+      "avatar_url": "logos/cache/f7623d5eec39203a.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-09T14:45:00.000Z",
+    "end_ts": "2026-05-09T16:25:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 15,
+      "opponent_team": 4
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "45315000-5b75-490e-8f4c-8213cc0dfd04",
+    "opponent_team": {
+      "name": "RBA 10 Albano 2026",
+      "avatar_url": "logos/cache/5d1511074601aaac.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-10T19:15:00.000Z",
+    "end_ts": "2026-05-10T20:55:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 2,
+      "opponent_team": 4
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "a22882e3-bdca-4fe2-9ac2-88023fc833b2",
+    "opponent_team": {
+      "name": "GRB Rays - Illinois 10U",
+      "avatar_url": "logos/cache/773932a4a89c0056.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-14T00:30:00.000Z",
+    "end_ts": "2026-05-14T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 16,
+      "opponent_team": 7
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "ad857388-1103-4a1f-869a-00de4b044715",
+    "opponent_team": {
+      "name": "Lake County Lightning 10u"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-20T00:30:00.000Z",
+    "end_ts": "2026-05-20T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 9,
+      "opponent_team": 8
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "3d809719-418d-46c2-8793-09d15d82d844",
+    "opponent_team": {
+      "name": "Quad City Area Knights 10u Black"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-23T19:00:00.000Z",
+    "end_ts": "2026-05-23T20:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 12,
+      "opponent_team": 9
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "cfb48741-df08-4615-9162-9644a436fc78",
+    "opponent_team": {
+      "name": "UBA Omaha Gladiators 10U",
+      "avatar_url": "logos/cache/bca7e14941481312.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-23T21:00:00.000Z",
+    "end_ts": "2026-05-23T22:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 12,
+      "opponent_team": 3
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "71d85453-477b-4e38-bd6b-8f9f0aaf6ff2",
+    "opponent_team": {
+      "name": "Quad City Heat Gold 10U",
+      "avatar_url": "logos/cache/7f505f91032c08c1.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-24T21:00:00.000Z",
+    "end_ts": "2026-05-24T22:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 10,
+      "opponent_team": 1
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "968703ce-a3ad-4833-a595-c2fc476ae2a0",
+    "opponent_team": {
+      "name": "Barnstormer Renegades 10U",
+      "avatar_url": "logos/cache/f540ad44740585dd.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-24T23:00:00.000Z",
+    "end_ts": "2026-05-25T00:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 14,
+      "opponent_team": 2
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "8342f4af-a1b8-4c80-ae02-5c6c4128010b",
+    "opponent_team": {
+      "name": "Gladiators Black 10U",
+      "avatar_url": "logos/cache/00b7d76b52b4a6ca.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-25T16:40:00.000Z",
+    "end_ts": "2026-05-25T18:20:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 10,
+      "opponent_team": 2
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "11061393-0427-4054-9b09-4171c7da6b71",
+    "opponent_team": {
+      "name": "Barnstormer Bandits 10U",
+      "avatar_url": "logos/cache/7bc9e663559e1bf1.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-25T20:20:00.000Z",
+    "end_ts": "2026-05-25T21:20:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 7,
+      "opponent_team": 12
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "1ae68d13-9c41-4155-a5cd-4e9a25150e2c",
+    "opponent_team": {
+      "name": "GRB Illinois 10U - Ciaglia"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-28T00:30:00.000Z",
+    "end_ts": "2026-05-28T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 14,
+      "opponent_team": 15
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "fdbed117-afb3-46f1-9c82-eac782ccf58d",
+    "opponent_team": {
+      "name": "SBA Raiders 10U",
+      "avatar_url": "logos/cache/8db746328ac81ba2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-05-28T22:30:00.000Z",
+    "end_ts": "2026-05-29T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 6,
+      "opponent_team": 11
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "2019ddff-fba6-49c9-802f-420530cce412",
+    "opponent_team": {
+      "name": "Windy City Hit Dogs 10U Smerling",
+      "avatar_url": "logos/cache/3ce02b80f0aa62f2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-03T22:45:00.000Z",
+    "end_ts": "2026-06-04T00:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 11,
+      "opponent_team": 14
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "fe66cadd-21b2-4391-8809-a4f9feae4e18",
+    "opponent_team": {
+      "name": "SBA 10U Raiders",
+      "avatar_url": "logos/cache/3b75642af3e6e547.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-05T23:00:00.000Z",
+    "end_ts": "2026-06-06T00:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 11,
+      "opponent_team": 3
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "350af950-7ccc-48cc-b24f-7cecde440f35",
+    "opponent_team": {
+      "name": "Wasco 10U Red",
+      "avatar_url": "logos/cache/a05abfdb9c130869.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-06T19:00:00.000Z",
+    "end_ts": "2026-06-06T20:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 6,
+      "opponent_team": 13
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "4d55b728-6d3c-47bc-98d3-a1cb9eae854b",
+    "opponent_team": {
+      "name": "McHenry Cobras Bozer 10U",
+      "avatar_url": "logos/cache/2008481663d3d664.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-07T15:00:00.000Z",
+    "end_ts": "2026-06-07T16:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 8,
+      "opponent_team": 0
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "26a83491-1acc-438e-8e9a-57e4dd0812df",
+    "opponent_team": {
+      "name": "Outlaws 10U",
+      "avatar_url": "logos/cache/a1253004b2a270ab.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-07T19:00:00.000Z",
+    "end_ts": "2026-06-07T20:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 6,
+      "opponent_team": 7
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "dbc56966-3a90-4656-863c-d0b7f8071c4a",
+    "opponent_team": {
+      "name": "CDBL Rockets 10u Blue",
+      "avatar_url": "logos/cache/e49566ce863d1b78.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-09T23:30:00.000Z",
+    "end_ts": "2026-06-10T01:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 5,
+      "opponent_team": 9
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "ad2f3457-0208-4dc1-8618-2c6b0cf9625d",
+    "opponent_team": {
+      "name": "Woodstock Heat 10U",
+      "avatar_url": "logos/cache/b97d7e68fff4d2b0.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-16T23:00:00.000Z",
+    "end_ts": "2026-06-17T00:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 14,
+      "opponent_team": 7
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "eebe3487-c62f-453c-9205-9b1c805023aa",
+    "opponent_team": {
+      "name": "Windy City Hit Dogs 10U Smerling",
+      "avatar_url": "logos/cache/3ce02b80f0aa62f2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-20T14:00:00.000Z",
+    "end_ts": "2026-06-20T15:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 8,
+      "opponent_team": 3
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "469dee08-dc02-490c-a9f3-5d40080ce2d6",
+    "opponent_team": {
+      "name": "RBI 10U",
+      "avatar_url": "logos/cache/9d4517073ad2966a.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-20T16:00:00.000Z",
+    "end_ts": "2026-06-20T17:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 2,
+      "opponent_team": 8
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "42c70277-beb5-45ed-9772-f61ea08152f5",
+    "opponent_team": {
+      "name": "Belvidere Bolts 10U",
+      "avatar_url": "logos/cache/8360cb84c64e9e7f.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-21T16:00:00.000Z",
+    "end_ts": "2026-06-21T17:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 14,
+      "opponent_team": 0
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "3affdfbc-57d8-487a-a4da-79c337ec3154",
+    "opponent_team": {
+      "name": "Windy City Hit Dogs 10U Smerling",
+      "avatar_url": "logos/cache/3ce02b80f0aa62f2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-21T20:00:00.000Z",
+    "end_ts": "2026-06-21T21:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 15,
+      "opponent_team": 5
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "cfbfd4ae-4e14-47a0-bc60-12427e775d4e",
+    "opponent_team": {
+      "name": "RBI 10U",
+      "avatar_url": "logos/cache/9d4517073ad2966a.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-21T22:00:00.000Z",
+    "end_ts": "2026-06-21T23:40:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 14,
+      "opponent_team": 3
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "4b709d60-745a-46e4-a4c9-9e745823bd5d",
+    "opponent_team": {
+      "name": "SBA Raiders 10U",
+      "avatar_url": "logos/cache/8db746328ac81ba2.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-24T00:30:00.000Z",
+    "end_ts": "2026-06-24T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 10,
+      "opponent_team": 10
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "f41d6d91-6f31-4809-b633-8ea8bc6d2f06",
+    "opponent_team": {
+      "name": "Cangelosi Sparks Kersten 10U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-26T20:00:00.000Z",
+    "end_ts": "2026-06-26T21:40:00.000Z",
+    "timezone": "America/New_York",
+    "home_away": "away",
+    "score": {
+      "team": 4,
+      "opponent_team": 8
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "3b986efb-c193-495f-8ae6-7af35b9ddcc9",
+    "opponent_team": {
+      "name": "Full Tilt Boltz 10U",
+      "avatar_url": "logos/cache/455b126fdd37801a.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-27T12:00:00.000Z",
+    "end_ts": "2026-06-27T13:40:00.000Z",
+    "timezone": "America/New_York",
+    "home_away": "away",
+    "score": {
+      "team": 4,
+      "opponent_team": 6
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "b3cf21b9-a8af-4d89-97d5-96a006745474",
+    "opponent_team": {
+      "name": "Northwoods 10U",
+      "avatar_url": "logos/cache/791d8b28a95a500e.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-27T15:15:00.000Z",
+    "end_ts": "2026-06-27T16:55:00.000Z",
+    "timezone": "America/New_York",
+    "home_away": "home",
+    "score": {
+      "team": 7,
+      "opponent_team": 8
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "f49d8811-d0ba-4996-a44b-741b721ce3aa",
+    "opponent_team": {
+      "name": "United Baseball Club - Ada 10U",
+      "avatar_url": "logos/cache/15d8dfb17f5bca2b.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-06-28T14:00:00.000Z",
+    "end_ts": "2026-06-28T15:40:00.000Z",
+    "timezone": "America/New_York",
+    "home_away": "away",
+    "score": {
+      "team": 12,
+      "opponent_team": 7
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "8017b1d0-1e12-41be-8ca7-67275cfe1960",
+    "opponent_team": {
+      "name": "CDBL Rockets 10u Blue",
+      "avatar_url": "logos/cache/e49566ce863d1b78.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-07-01T00:30:00.000Z",
+    "end_ts": "2026-07-01T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 14,
+      "opponent_team": 2
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "c4f539b2-99f2-4c52-835f-7e8b351e6653",
+    "opponent_team": {
+      "name": "SBA Raiders (Woods) 10U",
+      "avatar_url": "logos/cache/8cbd84c4dc416d50.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-07-03T13:00:00.000Z",
+    "end_ts": "2026-07-03T14:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 10,
+      "opponent_team": 4
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "707ddd6c-6da4-4062-8b05-d40ae7ad153f",
+    "opponent_team": {
+      "name": "Arlington Cardinals Red 10U",
+      "avatar_url": "logos/cache/0996cb0e060d698b.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-07-05T14:00:00.000Z",
+    "end_ts": "2026-07-05T15:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 5,
+      "opponent_team": 2
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "eca1d571-453d-4ddd-9447-af330fdceb49",
+    "opponent_team": {
+      "name": "Hamlin Park 9U Purple 2026",
+      "avatar_url": "logos/cache/93afa8bceb38484c.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-07-05T18:30:00.000Z",
+    "end_ts": "2026-07-05T20:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 15,
+      "opponent_team": 5
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  },
+  {
+    "id": "2b488db1-c12a-4d6c-a1e0-f1b47e5b2bbb",
+    "opponent_team": {
+      "name": "SBA Raiders 10U",
+      "avatar_url": "logos/cache/61eed98aceb88363.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-07-05T19:00:00.000Z",
+    "end_ts": "2026-07-05T20:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 8,
+      "opponent_team": 0
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
+    "has_live_stream": false
+  }
+]
