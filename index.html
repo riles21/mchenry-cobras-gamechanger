@@ -1,418 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>McHenry Cobras Baseball</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>McHenry Cobras Baseball</title>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    background: #f5f5f5;
-    color: #0d0d0d;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .page {
-    width: min(940px, calc(100% - 24px));
-    margin: 24px auto 60px;
-  }
-
-  /* =========================
-     COBRAS HEADER
-  ========================== */
-
-  .brand-banner {
-    height: 150px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-      linear-gradient(105deg, #111 0%, #151515 48%, #4b1f0c 100%);
-    box-shadow: 0 5px 14px rgba(0,0,0,.15);
-  }
-
-  .brand-banner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: .35;
-    background:
-      repeating-linear-gradient(
-        -25deg,
-        transparent 0,
-        transparent 28px,
-        rgba(255,255,255,.045) 29px,
-        transparent 30px
-      );
-  }
-
-  .brand-logo {
-    position: relative;
-    z-index: 1;
-    width: min(680px, 78%);
-    max-height: 120px;
-    object-fit: contain;
-  }
-
-  /* =========================
-     HEADER
-  ========================== */
-
-  .page-heading {
-    text-align: center;
-    margin: 24px 0 10px;
-  }
-
-  .page-heading h1 {
-    margin: 0;
-    font-size: clamp(32px, 5vw, 44px);
-    line-height: 1.08;
-    font-weight: 800;
-  }
-
-  .season {
-    margin-top: 9px;
-    color: #ff5a00;
-    font-size: clamp(20px, 3vw, 25px);
-    font-weight: 800;
-    letter-spacing: .5px;
-  }
-
-  .orange-line {
-    height: 3px;
-    background: #ff5a00;
-    margin: 16px 0 25px;
-  }
-
-  /* =========================
-     SECTION HEADERS
-  ========================== */
-
-  .section-title {
-    margin: 0 0 10px;
-    font-size: 18px;
-    font-weight: 800;
-  }
-
-  /* =========================
-     ORGANIZATION SUMMARY
-  ========================== */
-
-  .org-summary {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-
-  .summary-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    min-height: 76px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,.05);
-  }
-
-  .summary-number {
-    font-size: 27px;
-    font-weight: 800;
-    line-height: 1;
-  }
-
-  .summary-label {
-    margin-top: 7px;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1.1px;
-    color: #666;
-  }
-
-  /* =========================
-     TEAM DIRECTORY
-  ========================== */
-
-  .teams-section {
-    margin-top: 28px;
-  }
-
-  .age-group {
-    margin-top: 24px;
-  }
-
-  .age-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 9px;
-  }
-
-  .age-title {
-    font-size: 15px;
-    font-weight: 800;
-    white-space: nowrap;
-  }
-
-  .age-line {
-    height: 1px;
-    background: #d5d5d5;
-    flex: 1;
-  }
-
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 9px;
-  }
-
-  .team-card {
-    position: relative;
-    min-height: 62px;
-    background: white;
-    border: 1px solid #ddd;
-    border-left: 3px solid #ff5a00;
-    border-radius: 8px;
-    padding: 10px 38px 9px 13px;
-    transition:
-      transform .12s ease,
-      box-shadow .12s ease,
-      border-color .12s ease;
-  }
-
-  .team-card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,.10);
-    border-color: #ccc;
-  }
-
-  .team-name {
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 1.15;
-  }
-
-  .coaches {
-    margin-top: 5px;
-    color: #666;
-    font-size: 9px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .team-record {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: right;
-  }
-
-  .record-value {
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 1;
-  }
-
-  .record-label {
-    margin-top: 4px;
-    font-size: 7px;
-    font-weight: 800;
-    color: #777;
-    letter-spacing: .7px;
-  }
-
-  .arrow {
-    position: absolute;
-    right: 10px;
-    bottom: 8px;
-    color: #ff5a00;
-    font-size: 15px;
-    line-height: 1;
-  }
-
-  /* =========================
-     FOOTER
-  ========================== */
-
-  .footer {
-    margin-top: 40px;
-    padding-top: 18px;
-    border-top: 1px solid #ddd;
-    text-align: center;
-    color: #888;
-    font-size: 9px;
-  }
-
-  /* =========================
-     LOADING / ERROR
-  ========================== */
-
-  .loading {
-    text-align: center;
-    padding: 30px;
-    color: #777;
-    font-size: 12px;
-  }
-
-  .error {
-    background: #fff4f4;
-    border: 1px solid #efb5b5;
-    color: #c33;
-    border-radius: 7px;
-    padding: 14px;
-    font-size: 12px;
-  }
-
-  /* =========================
-     MOBILE
-  ========================== */
-
-  @media (max-width: 700px) {
-
-    .page {
-      width: calc(100% - 16px);
-      margin-top: 10px;
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    .brand-banner {
-      height: 105px;
-      border-radius: 8px;
+    body {
+      margin: 0;
+      padding: 30px 15px 60px;
+      background: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
     }
 
-    .brand-logo {
-      width: 82%;
-      max-height: 88px;
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
     }
 
-    .page-heading {
-      margin-top: 17px;
+    .hero {
+      background:
+        linear-gradient(115deg, #101010 0%, #171717 48%, #4b210f 100%);
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 12px rgba(0,0,0,.18);
+      margin-bottom: 24px;
     }
 
-    .page-heading h1 {
-      font-size: 30px;
+    .hero img {
+      width: 540px;
+      max-width: 90%;
+      height: auto;
+      display: inline-block;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+      margin: 15px 0 8px;
+      font-weight: 800;
     }
 
     .season {
-      font-size: 19px;
+      text-align: center;
+      color: #ff5a00;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 16px;
     }
 
-    .org-summary {
-      grid-template-columns: repeat(2, 1fr);
+    .orange-line {
+      height: 3px;
+      background: #ff5a00;
+      margin: 0 0 25px;
     }
 
-    .team-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 400px) {
-
-    .summary-number {
-      font-size: 23px;
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 0 0 10px;
     }
 
-    .summary-label {
-      font-size: 8px;
+    /* Organization record */
+
+    .org-record {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .record-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      padding: 14px 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,.08);
+    }
+
+    .record-number {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .record-label {
+      margin-top: 6px;
+      font-size: 9px;
+      letter-spacing: 1px;
+      font-weight: 800;
+      color: #555;
+    }
+
+    /* Teams */
+
+    .age-group {
+      margin-bottom: 20px;
+    }
+
+    .age-title {
+      font-size: 16px;
+      font-weight: 800;
+      border-bottom: 1px solid #d5d5d5;
+      padding-bottom: 7px;
+      margin-bottom: 8px;
+    }
+
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .team-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 62px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 3px solid #ff5a00;
+      border-radius: 8px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #111;
+      box-shadow: 0 2px 4px rgba(0,0,0,.06);
+      transition: box-shadow .15s ease, transform .15s ease;
+    }
+
+    .team-card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,.13);
+      transform: translateY(-1px);
+    }
+
+    .team-info {
+      min-width: 0;
+      padding-right: 10px;
     }
 
     .team-name {
-      font-size: 13px;
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 4px;
     }
-  }
-</style>
+
+    .coaches {
+      font-size: 9px;
+      color: #555;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .team-record {
+      text-align: right;
+      flex-shrink: 0;
+      min-width: 65px;
+    }
+
+    .record-line {
+      font-size: 15px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .record-caption {
+      font-size: 8px;
+      letter-spacing: .5px;
+      font-weight: 800;
+      color: #666;
+      margin-top: 2px;
+    }
+
+    .arrow {
+      color: #ff5a00;
+      font-size: 18px;
+      margin-left: 4px;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+
+    .error {
+      color: #a00000;
+      background: #fff1f1;
+      border: 1px solid #e5aaaa;
+      border-radius: 7px;
+      padding: 15px;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 15px 10px 40px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .hero {
+        padding: 18px 10px;
+      }
+
+      .org-record {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .teams-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="page">
+<div class="container">
 
-  <!-- =========================
-       COBRAS BRAND
-  ========================== -->
-
-  <div class="brand-banner">
-    <img
-      class="brand-logo"
-      src="cobras-logo.png"
-      alt="McHenry Cobras"
-    >
+  <div class="hero">
+    <img src="cobras-logo.png" alt="McHenry Cobras">
   </div>
 
-  <!-- =========================
-       PAGE HEADER
-  ========================== -->
+  <h1>McHenry Cobras Baseball</h1>
 
-  <div class="page-heading">
-    <h1>McHenry Cobras Baseball</h1>
-    <div class="season">2027 SEASON</div>
-  </div>
+  <div class="season">2027 SEASON</div>
 
   <div class="orange-line"></div>
 
-  <!-- =========================
-       ORGANIZATION
-  ========================== -->
+  <div class="section-title">Cobras Organization</div>
 
-  <section>
-    <h2 class="section-title">Cobras Organization</h2>
-
-    <div class="org-summary">
-
-      <div class="summary-card">
-        <div class="summary-number" id="activeTeams">0</div>
-        <div class="summary-label">ACTIVE TEAMS</div>
-      </div>
-
-      <div class="summary-card">
-        <div class="summary-number" id="orgWins">0</div>
-        <div class="summary-label">WINS</div>
-      </div>
-
-      <div class="summary-card">
-        <div class="summary-number" id="orgLosses">0</div>
-        <div class="summary-label">LOSSES</div>
-      </div>
-
-      <div class="summary-card">
-        <div class="summary-number" id="orgTies">0</div>
-        <div class="summary-label">TIES</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =========================
-       TEAMS
-  ========================== -->
-
-  <section class="teams-section">
-
-    <h2 class="section-title">Cobras Teams</h2>
-
-    <div id="teamDirectory">
-      <div class="loading">Loading Cobras teams...</div>
+  <div class="org-record">
+    <div class="record-card">
+      <div class="record-number" id="activeTeams">0</div>
+      <div class="record-label">ACTIVE TEAMS</div>
     </div>
 
-  </section>
+    <div class="record-card">
+      <div class="record-number" id="orgWins">0</div>
+      <div class="record-label">WINS</div>
+    </div>
 
-  <div class="footer">
-    McHenry Cobras Baseball · 2027 Season
+    <div class="record-card">
+      <div class="record-number" id="orgLosses">0</div>
+      <div class="record-label">LOSSES</div>
+    </div>
+
+    <div class="record-card">
+      <div class="record-number" id="orgTies">0</div>
+      <div class="record-label">TIES</div>
+    </div>
+  </div>
+
+  <div class="section-title">Cobras Teams</div>
+
+  <div id="teams">
+    <div class="loading">Loading Cobras teams...</div>
   </div>
 
 </div>
@@ -420,379 +272,111 @@
 <script src="config.js"></script>
 
 <script>
-(function () {
-
-  if (typeof COBRAS_TEAMS === "undefined") {
-
-    document.getElementById("teamDirectory").innerHTML =
-      '<div class="error">Unable to load team configuration.</div>';
-
-    return;
-  }
-
-  const activeTeams = Object.entries(COBRAS_TEAMS)
-    .filter(function ([key, team]) {
-      return team &&
-             team.active === true &&
-             team.gameChangerTeamId;
-    });
-
-  document.getElementById("activeTeams").textContent =
-    activeTeams.length;
-
   /*
-    Age groups are determined from the beginning
-    of the configured team name.
+    Organization page
 
-    Examples:
-      8U Deubel       -> 8U
-      12U Lorenz      -> 12U
-      17U Deubel      -> 17U
+    Records are calculated directly from:
+      schedules/<team-key>.json
+
+    A completed game contributes:
+      win  = team score > opponent score
+      loss = team score < opponent score
+      tie  = team score === opponent score
+
+    This keeps the organization record consistent with
+    the individual team pages.
   */
 
-  const groups = {};
+  const BASE_PATH = "";
 
-  activeTeams.forEach(function ([key, team]) {
-
-    const match = String(team.name || "").match(/^(\d+U)/i);
-
-    const age =
-      match
-        ? match[1].toUpperCase()
-        : "Other";
-
-    if (!groups[age]) {
-      groups[age] = [];
-    }
-
-    groups[age].push({
-      key: key,
-      team: team
-    });
-
-  });
-
-  /*
-    Sort age groups numerically.
-  */
-
-  const sortedGroups = Object.entries(groups)
-    .sort(function (a, b) {
-
-      if (a[0] === "Other") return 1;
-      if (b[0] === "Other") return -1;
-
-      return parseInt(a[0]) - parseInt(b[0]);
-    });
-
-  const directory = document.getElementById("teamDirectory");
-
-  if (sortedGroups.length === 0) {
-
-    directory.innerHTML =
-      '<div class="error">No active Cobras teams are configured.</div>';
-
-    return;
+  function getAgeGroup(teamName) {
+    const match = teamName.match(/^(\d+)U/i);
+    return match ? parseInt(match[1], 10) : 999;
   }
 
-  directory.innerHTML = sortedGroups
-    .map(function ([age, teams]) {
-
-      teams.sort(function (a, b) {
-        return a.team.name.localeCompare(b.team.name);
-      });
-
-      return `
-        <div class="age-group">
-
-          <div class="age-header">
-            <div class="age-title">${escapeHtml(age)}</div>
-            <div class="age-line"></div>
-          </div>
-
-          <div class="team-grid">
-            ${teams.map(renderTeamCard).join("")}
-          </div>
-
-        </div>
-      `;
-
-    })
-    .join("");
-
-  /*
-    Load every active team's cached schedule so the
-    organization record can be calculated.
-  */
-
-  loadOrganizationRecord(activeTeams);
-
-  /* =========================
-     TEAM CARD
-  ========================== */
-
-  function renderTeamCard(item) {
-
-    const key = item.key;
-    const team = item.team;
-
-    const coaches = [
-      team.headCoach,
-      ...(team.assistantCoaches || [])
-    ].filter(Boolean);
-
-    return `
-      <a
-        class="team-card"
-        href="team.html?team=${encodeURIComponent(key)}"
-      >
-
-        <div class="team-name">
-          ${escapeHtml(team.name)}
-        </div>
-
-        <div class="coaches">
-          ${escapeHtml(coaches.join(" · "))}
-        </div>
-
-        <div
-          class="team-record"
-          id="record-${escapeHtml(key)}"
-        >
-          <div class="record-value">0-0-0</div>
-          <div class="record-label">RECORD</div>
-        </div>
-
-        <div class="arrow">→</div>
-
-      </a>
-    `;
-  }
-
-  /* =========================
-     ORGANIZATION RECORD
-  ========================== */
-
-  async function loadOrganizationRecord(activeTeams) {
-
-    let totalWins = 0;
-    let totalLosses = 0;
-    let totalTies = 0;
-
-    /*
-      Fetch all active teams in parallel.
-    */
-
-    await Promise.all(
-      activeTeams.map(async function ([key, team]) {
-
-        try {
-
-          const response = await fetch(
-            "schedules/" +
-            key +
-            ".json?cache=" +
-            Date.now()
-          );
-
-          if (!response.ok) {
-            return;
-          }
-
-          const data = await response.json();
-
-          const games = Array.isArray(data)
-            ? data
-            : Array.isArray(data.games)
-              ? data.games
-              : [];
-
-          const record = calculateRecord(games);
-
-          totalWins += record.wins;
-          totalLosses += record.losses;
-          totalTies += record.ties;
-
-          const recordElement =
-            document.getElementById("record-" + key);
-
-          if (recordElement) {
-
-            recordElement.innerHTML = `
-              <div class="record-value">
-                ${record.wins}-${record.losses}-${record.ties}
-              </div>
-              <div class="record-label">RECORD</div>
-            `;
-
-          }
-
-        } catch (error) {
-
-          console.warn(
-            "Could not load schedule for",
-            key,
-            error
-          );
-
-        }
-
-      })
-    );
-
-    document.getElementById("orgWins").textContent =
-      totalWins;
-
-    document.getElementById("orgLosses").textContent =
-      totalLosses;
-
-    document.getElementById("orgTies").textContent =
-      totalTies;
-  }
-
-  /* =========================
-     RECORD CALCULATION
-  ========================== */
-
-  function calculateRecord(games) {
-
+  function getRecordFromGames(games) {
     let wins = 0;
     let losses = 0;
     let ties = 0;
 
-    games.forEach(function (game) {
+    if (!Array.isArray(games)) {
+      return { wins, losses, ties };
+    }
 
-      if (!game) {
-        return;
-      }
-
-      const score = getScores(game);
-
+    games.forEach(game => {
       if (
-        score.our === null ||
-        score.opponent === null
+        game &&
+        game.game_status === "completed" &&
+        game.score &&
+        typeof game.score.team === "number" &&
+        typeof game.score.opponent_team === "number"
       ) {
-        return;
+        if (game.score.team > game.score.opponent_team) {
+          wins++;
+        } else if (game.score.team < game.score.opponent_team) {
+          losses++;
+        } else {
+          ties++;
+        }
       }
-
-      if (score.our > score.opponent) {
-        wins++;
-      }
-      else if (score.our < score.opponent) {
-        losses++;
-      }
-      else {
-        ties++;
-      }
-
     });
 
-    return {
-      wins: wins,
-      losses: losses,
-      ties: ties
-    };
+    return { wins, losses, ties };
   }
 
-  /* =========================
-     SCORE EXTRACTION
-  ========================== */
+  async function loadTeamRecord(teamKey) {
+    try {
+      const response = await fetch(
+        `${BASE_PATH}schedules/${teamKey}.json?cache=${Date.now()}`,
+        { cache: "no-store" }
+      );
 
-  function getScores(game) {
-
-    let our = null;
-    let opponent = null;
-
-    const ourValues = [
-      game.team_score,
-      game.our_score
-    ];
-
-    const opponentValues = [
-      game.opponent_score
-    ];
-
-    for (const value of ourValues) {
-
-      if (
-        value !== undefined &&
-        value !== null &&
-        value !== "" &&
-        !isNaN(Number(value))
-      ) {
-        our = Number(value);
-        break;
+      if (!response.ok) {
+        console.warn(`Could not load schedule for ${teamKey}`);
+        return { wins: 0, losses: 0, ties: 0 };
       }
+
+      const games = await response.json();
+      return getRecordFromGames(games);
+
+    } catch (error) {
+      console.warn(`Error loading ${teamKey}:`, error);
+      return { wins: 0, losses: 0, ties: 0 };
     }
-
-    for (const value of opponentValues) {
-
-      if (
-        value !== undefined &&
-        value !== null &&
-        value !== "" &&
-        !isNaN(Number(value))
-      ) {
-        opponent = Number(value);
-        break;
-      }
-    }
-
-    /*
-      Handle nested score objects.
-    */
-
-    if (
-      (our === null || opponent === null) &&
-      game.score &&
-      typeof game.score === "object"
-    ) {
-
-      if (our === null) {
-
-        const value =
-          game.score.team ??
-          game.score.home ??
-          game.score.us;
-
-        if (
-          value !== undefined &&
-          value !== null &&
-          !isNaN(Number(value))
-        ) {
-          our = Number(value);
-        }
-      }
-
-      if (opponent === null) {
-
-        const value =
-          game.score.opponent ??
-          game.score.away;
-
-        if (
-          value !== undefined &&
-          value !== null &&
-          !isNaN(Number(value))
-        ) {
-          opponent = Number(value);
-        }
-      }
-    }
-
-    return {
-      our: our,
-      opponent: opponent
-    };
   }
 
-  /* =========================
-     HTML ESCAPING
-  ========================== */
+  function createTeamCard(teamKey, team, record) {
+    const coaches = [
+      team.headCoach,
+      ...(team.assistantCoaches || [])
+    ].filter(Boolean).join(" · ");
+
+    const card = document.createElement("a");
+
+    card.className = "team-card";
+
+    card.href = `team.html?team=${encodeURIComponent(teamKey)}`;
+
+    card.innerHTML = `
+      <div class="team-info">
+        <div class="team-name">${escapeHtml(team.name)}</div>
+        <div class="coaches">${escapeHtml(coaches)}</div>
+      </div>
+
+      <div class="team-record">
+        <div class="record-line">
+          ${record.wins}-${record.losses}-${record.ties}
+          <span class="arrow">→</span>
+        </div>
+        <div class="record-caption">W-L-T</div>
+      </div>
+    `;
+
+    return card;
+  }
 
   function escapeHtml(value) {
-
-    return String(value || "")
+    return String(value ?? "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
@@ -800,7 +384,145 @@
       .replace(/'/g, "&#039;");
   }
 
-})();
+  async function loadOrganization() {
+
+    const teamsContainer = document.getElementById("teams");
+
+    if (
+      typeof COBRAS_TEAMS === "undefined" ||
+      !COBRAS_TEAMS ||
+      typeof COBRAS_TEAMS !== "object"
+    ) {
+      teamsContainer.innerHTML =
+        `<div class="error">Unable to load Cobras team configuration.</div>`;
+      return;
+    }
+
+    const activeTeams = Object.entries(COBRAS_TEAMS)
+      .filter(([key, team]) => team && team.active === true)
+      .sort((a, b) => {
+        const ageA = getAgeGroup(a[1].name);
+        const ageB = getAgeGroup(b[1].name);
+
+        if (ageA !== ageB) {
+          return ageA - ageB;
+        }
+
+        return a[1].name.localeCompare(b[1].name);
+      });
+
+    document.getElementById("activeTeams").textContent =
+      activeTeams.length;
+
+    if (activeTeams.length === 0) {
+      teamsContainer.innerHTML =
+        `<div class="error">No active Cobras teams found.</div>`;
+      return;
+    }
+
+    teamsContainer.innerHTML = "";
+
+    let organizationWins = 0;
+    let organizationLosses = 0;
+    let organizationTies = 0;
+
+    /*
+      Load every team schedule.
+
+      Promise.all is used so one slow team does not hold up
+      the other teams unnecessarily.
+    */
+
+    const results = await Promise.all(
+      activeTeams.map(async ([teamKey, team]) => {
+        const record = await loadTeamRecord(teamKey);
+
+        console.log(
+          `[Cobras] ${team.name} record:`,
+          record
+        );
+
+        return {
+          teamKey,
+          team,
+          record
+        };
+      })
+    );
+
+    /*
+      Group teams by age.
+    */
+
+    const groups = {};
+
+    results.forEach(result => {
+      const age = getAgeGroup(result.team.name);
+
+      if (!groups[age]) {
+        groups[age] = [];
+      }
+
+      groups[age].push(result);
+
+      organizationWins += result.record.wins;
+      organizationLosses += result.record.losses;
+      organizationTies += result.record.ties;
+    });
+
+    /*
+      Display organization totals.
+    */
+
+    document.getElementById("orgWins").textContent =
+      organizationWins;
+
+    document.getElementById("orgLosses").textContent =
+      organizationLosses;
+
+    document.getElementById("orgTies").textContent =
+      organizationTies;
+
+    /*
+      Display teams by age group.
+    */
+
+    Object.keys(groups)
+      .sort((a, b) => Number(a) - Number(b))
+      .forEach(age => {
+
+        const group = document.createElement("div");
+        group.className = "age-group";
+
+        const title = document.createElement("div");
+        title.className = "age-title";
+        title.textContent = `${age}U`;
+
+        const grid = document.createElement("div");
+        grid.className = "teams-grid";
+
+        groups[age]
+          .sort((a, b) =>
+            a.team.name.localeCompare(b.team.name)
+          )
+          .forEach(result => {
+            grid.appendChild(
+              createTeamCard(
+                result.teamKey,
+                result.team,
+                result.record
+              )
+            );
+          });
+
+        group.appendChild(title);
+        group.appendChild(grid);
+
+        teamsContainer.appendChild(group);
+      });
+  }
+
+  loadOrganization();
 </script>
 
 </body>
