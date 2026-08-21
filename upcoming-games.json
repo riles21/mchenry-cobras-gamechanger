@@ -1,1 +1,1732 @@
-[]
+[
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
+      "opponent_team": {
+        "name": "Grayslake Coyotes 10U",
+        "avatar_url": "logos/cache/647357fefece7216.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-21T23:00:00.000Z",
+      "end_ts": "2026-08-22T00:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
+      "opponent_team": {
+        "name": "Eagles Elite 14U",
+        "avatar_url": "logos/cache/e570779b6b2bc671.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-28T00:15:00.000Z",
+      "end_ts": "2026-08-28T02:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "baillargeon13u",
+    "teamName": "13U Baillargeon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
+      "opponent_team": {
+        "name": "Cougars White 13U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-28T22:30:00.000Z",
+      "end_ts": "2026-08-29T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kTpmcwbSxdDR"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "83f3a129-7360-40e4-9a05-b4393b986b93",
+      "opponent_team": {
+        "name": "Lake Villa Eagles 10U-Kalina",
+        "avatar_url": "logos/cache/cbcdfb01aa26a93f.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-28T22:30:00.000Z",
+      "end_ts": "2026-08-29T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
+      "opponent_team": {
+        "name": "Broncos Red 9U",
+        "avatar_url": "logos/cache/7f0dcfa1685ef458.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-28T22:30:00.000Z",
+      "end_ts": "2026-08-29T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "meraz12u",
+    "teamName": "12U Meraz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "07fea401-9542-4620-933a-8162e92592dd",
+      "opponent_team": {
+        "name": "Top Tier MC 12u Brunschon",
+        "avatar_url": "logos/cache/3ef8bd57742b8bf3.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-29T00:30:00.000Z",
+      "end_ts": "2026-08-29T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "BmhjNVz0W5gR"
+    }
+  },
+  {
+    "teamKey": "meraz12u",
+    "teamName": "12U Meraz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
+      "opponent_team": {
+        "name": "Mundelein Mustangs Red 12U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-29T22:00:00.000Z",
+      "end_ts": "2026-08-30T00:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "BmhjNVz0W5gR"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "83c18318-19fb-45a6-8286-32937e270604",
+      "opponent_team": {
+        "name": "SBA Raiders 10U",
+        "avatar_url": "logos/cache/34c3b5efd6bfa12d.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-30T16:00:00.000Z",
+      "end_ts": "2026-08-30T17:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "08611e4c-75c6-471b-915d-477272bdff91",
+      "opponent_team": {
+        "name": "Lake Villa Eagles 14U-Adams",
+        "avatar_url": "logos/cache/a637264328f03ae3.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-08-31T22:15:00.000Z",
+      "end_ts": "2026-09-01T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "46997580-1fae-4bc2-bcf2-478ccb73648a",
+      "opponent_team": {
+        "name": "Grayslake Coyotes 12U",
+        "avatar_url": "logos/cache/c8a41ebbd88d053a.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-01T23:30:00.000Z",
+      "end_ts": "2026-09-02T01:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
+      "opponent_team": {
+        "name": "SBA 9U Graf",
+        "avatar_url": "logos/cache/24f21c3bac7c09be.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-02T22:30:00.000Z",
+      "end_ts": "2026-09-03T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
+      "opponent_team": {
+        "name": "Grayslake Coyotes 10U",
+        "avatar_url": "logos/cache/5d6bdec2781f9c37.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-03T00:00:00.000Z",
+      "end_ts": "2026-09-03T01:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "b4edf409-d335-40c0-9727-a7f4b72183fb",
+      "opponent_team": {
+        "name": "Cary Trojans 10U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-04T22:30:00.000Z",
+      "end_ts": "2026-09-05T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "lennon11u",
+    "teamName": "11U Lennon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
+      "opponent_team": {
+        "name": "SBA Raiders Woods 11U",
+        "avatar_url": "logos/cache/a0e294dbed07487e.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-04T22:30:00.000Z",
+      "end_ts": "2026-09-05T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kzFVJtSX9Brn"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "ce2e7fc3-c071-410c-a2fb-8f5af371c291",
+      "opponent_team": {
+        "name": "Top Tier West Freed"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-04T22:30:00.000Z",
+      "end_ts": "2026-09-05T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "baillargeon13u",
+    "teamName": "13U Baillargeon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "5b127abf-997e-43d1-a8b0-68b7cde64e3f",
+      "opponent_team": {
+        "name": "Lake Villa Eagles 13U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-05T00:15:00.000Z",
+      "end_ts": "2026-09-05T02:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kTpmcwbSxdDR"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "4799af12-76fe-429f-890c-cafc4d653264",
+      "opponent_team": {
+        "name": "GRB RAYS ILLINOIS - BURKE 10U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-05T00:30:00.000Z",
+      "end_ts": "2026-09-05T02:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
+      "opponent_team": {
+        "name": "Sparks North 12U- Lozano",
+        "avatar_url": "logos/cache/1ac25a1dc26b88fb.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-05T00:30:00.000Z",
+      "end_ts": "2026-09-05T02:15:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "9e0d1ee8-b25f-4072-9d03-5c15e1d177b0",
+      "opponent_team": {
+        "name": "Ironman- Nisenson 10U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-06T17:00:00.000Z",
+      "end_ts": "2026-09-06T19:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "b52e132b-e40a-462e-9352-4802bcc78e8d",
+      "opponent_team": {
+        "name": "Cary"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-09T22:30:00.000Z",
+      "end_ts": "2026-09-10T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
+      "opponent_team": {
+        "name": "GRB Rays Illinois - Moore 12U",
+        "avatar_url": "logos/cache/31508986cb5d38c0.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-10T00:30:00.000Z",
+      "end_ts": "2026-09-10T02:15:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "deubel8u",
+    "teamName": "8U Deubel",
+    "season": "Fall 2026",
+    "game": {
+      "id": "fb9e299b-2315-40e8-8ff6-4bfa20ebdc39",
+      "opponent_team": {
+        "name": "Arlington Cardinals"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-10T22:30:00.000Z",
+      "end_ts": "2026-09-11T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "NJRBPnj0Dhk6"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "1121e758-761a-474c-8804-73471c97e5ec",
+      "opponent_team": {
+        "name": "GRB illinois 14U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-11T00:00:00.000Z",
+      "end_ts": "2026-09-11T02:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
+      "opponent_team": {
+        "name": "SBA Raiders Duff 9U",
+        "avatar_url": "logos/cache/dd009468092b58ae.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-11T22:30:00.000Z",
+      "end_ts": "2026-09-12T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "fb019a0f-aba5-4207-9b62-1b7a2c988509",
+      "opponent_team": {
+        "name": "Arlington Cardinals 10U Red 10U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-12T00:30:00.000Z",
+      "end_ts": "2026-09-12T02:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "meraz12u",
+    "teamName": "12U Meraz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
+      "opponent_team": {
+        "name": "Elite NW 12U Milazzo",
+        "avatar_url": "logos/cache/ea97edc3c7f24661.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-12T00:30:00.000Z",
+      "end_ts": "2026-09-12T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "BmhjNVz0W5gR"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "ba903b67-c281-4478-9044-5affd5b3dbd9",
+      "opponent_team": {
+        "name": "Grayslake Sliders 10U",
+        "avatar_url": "logos/cache/c8ebc740f3729800.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-13T15:00:00.000Z",
+      "end_ts": "2026-09-13T17:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
+      "opponent_team": {
+        "name": "Cougars White 10u",
+        "avatar_url": "logos/cache/36d8cf61203d5d09.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-15T22:30:00.000Z",
+      "end_ts": "2026-09-16T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "ddf54119-c5fa-43f3-84b8-e0a46611c07a",
+      "opponent_team": {
+        "name": "sba raiders 14u"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-16T00:00:00.000Z",
+      "end_ts": "2026-09-16T02:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
+      "opponent_team": {
+        "name": "Elite NW 12U Milazzo",
+        "avatar_url": "logos/cache/38cee6d53df4f84f.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-17T00:30:00.000Z",
+      "end_ts": "2026-09-17T02:15:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "33ded3b9-783e-4c07-beec-70a75fda30de",
+      "opponent_team": {
+        "name": "GRB illinois 14U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-18T00:00:00.000Z",
+      "end_ts": "2026-09-18T02:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "thiemeyer13u",
+    "teamName": "13U Thiemeyer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "f2a96aff-c718-4939-9267-e3cf8f9e948d",
+      "opponent_team": {
+        "name": ""
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-18T22:00:00.000Z",
+      "end_ts": "2026-09-19T00:00:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5OzlwlXAAYDd"
+    }
+  },
+  {
+    "teamKey": "baillargeon13u",
+    "teamName": "13U Baillargeon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "fe880c8c-78dc-478e-bc60-1895b491c61c",
+      "opponent_team": {
+        "name": "Top Tier Mc 13u Brunschon",
+        "avatar_url": "logos/cache/150cc9916afa771e.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-18T22:30:00.000Z",
+      "end_ts": "2026-09-19T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kTpmcwbSxdDR"
+    }
+  },
+  {
+    "teamKey": "lennon11u",
+    "teamName": "11U Lennon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
+      "opponent_team": {
+        "name": "Lake Villa Eagles 11U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-18T22:30:00.000Z",
+      "end_ts": "2026-09-19T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kzFVJtSX9Brn"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "437f090e-d748-4588-8e84-b57190465519",
+      "opponent_team": {
+        "name": "Grayslake Sliders 9U",
+        "avatar_url": "logos/cache/483ce209bb401756.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-18T22:30:00.000Z",
+      "end_ts": "2026-09-19T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "bozer11u",
+    "teamName": "11U Bozer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "a82a8d53-deb2-4999-967f-0abd1a4a0858",
+      "opponent_team": {
+        "name": "Lake Zurich"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-18T23:00:00.000Z",
+      "end_ts": "2026-09-19T00:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jo418sCgCDyw"
+    }
+  },
+  {
+    "teamKey": "deubel8u",
+    "teamName": "8U Deubel",
+    "season": "Fall 2026",
+    "game": {
+      "id": "7f7155e3-7615-4df3-8f76-d076226b3814",
+      "opponent_team": {
+        "name": "Signature Stars 8U",
+        "avatar_url": "logos/cache/3833b60afc0a9a14.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-18T23:30:00.000Z",
+      "end_ts": "2026-09-19T01:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "NJRBPnj0Dhk6"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
+      "opponent_team": {
+        "name": "Grayslake Coyotes 10U",
+        "avatar_url": "logos/cache/647357fefece7216.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-19T00:30:00.000Z",
+      "end_ts": "2026-09-19T02:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "0ed8e914-1dab-4940-a045-7ed16a7972d5",
+      "opponent_team": {
+        "name": "Arlington Cardinals - 12U White (FALL)"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-19T00:30:00.000Z",
+      "end_ts": "2026-09-19T02:15:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "thiemeyer13u",
+    "teamName": "13U Thiemeyer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "289978e3-3978-45ca-b9dc-66135ce48eeb",
+      "opponent_team": {
+        "name": "Cary Trojans 13U Navy"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-19T00:30:00.000Z",
+      "end_ts": "2026-09-19T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5OzlwlXAAYDd"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
+      "opponent_team": {
+        "name": "Elite NW 12U Milazzo",
+        "avatar_url": "logos/cache/38cee6d53df4f84f.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-19T22:00:00.000Z",
+      "end_ts": "2026-09-19T23:45:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "9d20219d-0c09-4496-afea-f47e77eb204c",
+      "opponent_team": {
+        "name": "Elite NW 12U Clouse",
+        "avatar_url": "logos/cache/06d2ad5008ebee82.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-20T00:00:00.000Z",
+      "end_ts": "2026-09-20T01:45:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
+      "opponent_team": {
+        "name": "Signature Stars 9U",
+        "avatar_url": "logos/cache/2a077491dc8f343e.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-20T14:00:00.000Z",
+      "end_ts": "2026-09-20T15:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "bozer11u",
+    "teamName": "11U Bozer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "0e5840fd-2635-42aa-9754-d5060cb92876",
+      "opponent_team": {
+        "name": "Genoa City"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-20T15:00:00.000Z",
+      "end_ts": "2026-09-20T16:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jo418sCgCDyw"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
+      "opponent_team": {
+        "name": "Elite NW 10U Wintersdorf",
+        "avatar_url": "logos/cache/a138feb9abcc5bb8.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-20T19:00:00.000Z",
+      "end_ts": "2026-09-20T21:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "83f634ae-41a4-4442-9603-94cb58b54816",
+      "opponent_team": {
+        "name": "Lake County Stars (Nazario) 14U",
+        "avatar_url": "logos/cache/c43b8628355bad13.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-21T22:15:00.000Z",
+      "end_ts": "2026-09-22T00:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "c0bf0ce0-0f46-4087-8d32-bdefd63feb07",
+      "opponent_team": {
+        "name": "Elite Rodriguez 14U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-23T00:00:00.000Z",
+      "end_ts": "2026-09-23T02:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "eceb4335-36c3-4b63-a277-b64f824ad009",
+      "opponent_team": {
+        "name": "Elite NW 10U Wintersdorf",
+        "avatar_url": "logos/cache/a138feb9abcc5bb8.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-23T22:30:00.000Z",
+      "end_ts": "2026-09-24T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
+      "opponent_team": {
+        "name": "GRB Rays Illinois - Moore 12U",
+        "avatar_url": "logos/cache/31508986cb5d38c0.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-24T00:30:00.000Z",
+      "end_ts": "2026-09-24T02:15:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "baillargeon13u",
+    "teamName": "13U Baillargeon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "4a16f24d-1882-4966-bb55-ae758d57aac8",
+      "opponent_team": {
+        "name": "SBA Raiders 13u - Hedrick",
+        "avatar_url": "logos/cache/82feeac923b5fb81.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-25T22:30:00.000Z",
+      "end_ts": "2026-09-26T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kTpmcwbSxdDR"
+    }
+  },
+  {
+    "teamKey": "lennon11u",
+    "teamName": "11U Lennon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
+      "opponent_team": {
+        "name": "SBA Raiders 11U - Simmons",
+        "avatar_url": "logos/cache/9948ec293eadd81d.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-25T22:30:00.000Z",
+      "end_ts": "2026-09-26T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kzFVJtSX9Brn"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "a45043f4-5596-4537-b7da-9ba308dbc9d4",
+      "opponent_team": {
+        "name": "2026 Fall 9U Wauconda Wreckers"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-25T22:30:00.000Z",
+      "end_ts": "2026-09-26T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
+      "opponent_team": {
+        "name": "Top Tier MC - Neumann/Slowinski 10U",
+        "avatar_url": "logos/cache/fdf1dd57c8676274.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-26T00:30:00.000Z",
+      "end_ts": "2026-09-26T02:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "meraz12u",
+    "teamName": "12U Meraz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "72caae43-c7cf-4487-9669-241a233cb33d",
+      "opponent_team": {
+        "name": "SBA Raiders-LoPresti 12U",
+        "avatar_url": "logos/cache/734c4214fc0c3986.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-26T00:30:00.000Z",
+      "end_ts": "2026-09-26T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "BmhjNVz0W5gR"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
+      "opponent_team": {
+        "name": "SBA Raiders Duff 9U",
+        "avatar_url": "logos/cache/dd009468092b58ae.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-26T14:00:00.000Z",
+      "end_ts": "2026-09-26T15:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "fa6f1770-1db4-4815-912b-c4e02db153d0",
+      "opponent_team": {
+        "name": "Arlington Cardinals - 12U White (FALL)"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-26T16:15:00.000Z",
+      "end_ts": "2026-09-26T18:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "bozer11u",
+    "teamName": "11U Bozer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "92a9af05-1170-403b-9e0f-ad4f0a311637",
+      "opponent_team": {
+        "name": "Genoa City"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-27T15:00:00.000Z",
+      "end_ts": "2026-09-27T16:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jo418sCgCDyw"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "2bfa8776-272a-4c04-80d3-9e90371e4516",
+      "opponent_team": {
+        "name": "Grayslake Sliders 9U",
+        "avatar_url": "logos/cache/483ce209bb401756.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-27T17:00:00.000Z",
+      "end_ts": "2026-09-27T18:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
+      "opponent_team": {
+        "name": "Elite NW 10U Wintersdorf",
+        "avatar_url": "logos/cache/f731faff1b61d85c.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-27T19:00:00.000Z",
+      "end_ts": "2026-09-27T20:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "59b93419-8a14-46e6-b967-86924d1764e1",
+      "opponent_team": {
+        "name": "LITH Thunder Black 12U",
+        "avatar_url": "logos/cache/3160aab1489ee6c9.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-27T19:30:00.000Z",
+      "end_ts": "2026-09-27T21:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
+      "opponent_team": {
+        "name": "Grayslake Coyotes 10U",
+        "avatar_url": "logos/cache/5d6bdec2781f9c37.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-27T20:00:00.000Z",
+      "end_ts": "2026-09-27T22:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "meraz12u",
+    "teamName": "12U Meraz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
+      "opponent_team": {
+        "name": "Elite NW 12U Milazzo",
+        "avatar_url": "logos/cache/ea97edc3c7f24661.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-27T22:00:00.000Z",
+      "end_ts": "2026-09-28T00:35:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "BmhjNVz0W5gR"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "fcedaab2-9ce2-40e2-afac-ba4f0102a0a1",
+      "opponent_team": {
+        "name": "Elite Rodriguez 14U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-09-30T00:00:00.000Z",
+      "end_ts": "2026-09-30T02:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "thiemeyer13u",
+    "teamName": "13U Thiemeyer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "843c5cad-87f1-40a0-88c0-bc791d81552f",
+      "opponent_team": {
+        "name": ""
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-02T21:30:00.000Z",
+      "end_ts": "2026-10-02T22:30:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5OzlwlXAAYDd"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
+      "opponent_team": {
+        "name": "SBA Raiders 10U",
+        "avatar_url": "logos/cache/f0675a174963186d.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-02T22:30:00.000Z",
+      "end_ts": "2026-10-03T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "lennon11u",
+    "teamName": "11U Lennon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
+      "opponent_team": {
+        "name": "Elite NW 11U Smerling",
+        "avatar_url": "logos/cache/ff9e2cc9929b9ee8.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-02T22:30:00.000Z",
+      "end_ts": "2026-10-03T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kzFVJtSX9Brn"
+    }
+  },
+  {
+    "teamKey": "baillargeon13u",
+    "teamName": "13U Baillargeon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "b916f2f1-2955-4ed4-9409-73500ee3c184",
+      "opponent_team": {
+        "name": "Wauconda Wreckers - Fall 26’ - 13U",
+        "avatar_url": "logos/cache/b062b38c625b0a63.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-03T00:30:00.000Z",
+      "end_ts": "2026-10-03T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kTpmcwbSxdDR"
+    }
+  },
+  {
+    "teamKey": "lorenz12u",
+    "teamName": "12U Lorenz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
+      "opponent_team": {
+        "name": "SBA Raiders-LoPresti 12U",
+        "avatar_url": "logos/cache/ab3b2604273243b4.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-03T00:30:00.000Z",
+      "end_ts": "2026-10-03T02:15:00.000Z",
+      "timezone": "America/New_York",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "jWdOuqoTjKow"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "227ec302-4bea-4848-a091-dde93f4a545d",
+      "opponent_team": {
+        "name": "Trosky Illinois 9U",
+        "avatar_url": "logos/cache/f2b6336ab712ce44.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-03T00:30:00.000Z",
+      "end_ts": "2026-10-03T02:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "thiemeyer13u",
+    "teamName": "13U Thiemeyer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "25878a9e-959a-45d6-9131-d6fb1149a4e8",
+      "opponent_team": {
+        "name": "Cary Trojans 13U Navy"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-04T20:00:00.000Z",
+      "end_ts": "2026-10-04T22:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5OzlwlXAAYDd"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
+      "opponent_team": {
+        "name": "SBA 9U Graf",
+        "avatar_url": "logos/cache/24f21c3bac7c09be.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-07T22:30:00.000Z",
+      "end_ts": "2026-10-08T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "deubel8u",
+    "teamName": "8U Deubel",
+    "season": "Fall 2026",
+    "game": {
+      "id": "951db98e-a6e8-42e8-862d-1e62cebb0be1",
+      "opponent_team": {
+        "name": "Arlington Cardinals"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-07T23:00:00.000Z",
+      "end_ts": "2026-10-08T00:45:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "NJRBPnj0Dhk6"
+    }
+  },
+  {
+    "teamKey": "baillargeon13u",
+    "teamName": "13U Baillargeon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
+      "opponent_team": {
+        "name": "13U Jr Badgers 2027"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-09T22:30:00.000Z",
+      "end_ts": "2026-10-10T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kTpmcwbSxdDR"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "726ff682-4280-444e-97bd-716dd66eee54",
+      "opponent_team": {
+        "name": "10U Wauconda Wreckers - Super 10U",
+        "avatar_url": "logos/cache/589e83990c87a001.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-09T22:30:00.000Z",
+      "end_ts": "2026-10-10T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "away",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "lennon11u",
+    "teamName": "11U Lennon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
+      "opponent_team": {
+        "name": "Lake County Lightning 11U Fall",
+        "avatar_url": "logos/cache/071374cacec0554e.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-09T22:30:00.000Z",
+      "end_ts": "2026-10-10T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kzFVJtSX9Brn"
+    }
+  },
+  {
+    "teamKey": "mcandrews9u",
+    "teamName": "9U McAndrews",
+    "season": "Fall 2026",
+    "game": {
+      "id": "f2fcbc71-7086-48ee-a37c-422a969fa66a",
+      "opponent_team": {
+        "name": "Top Tier West Freed"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-09T22:30:00.000Z",
+      "end_ts": "2026-10-10T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "eVa0Vr948vH4"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "076bac65-840c-4e0b-839b-6c8db2dbdc64",
+      "opponent_team": {
+        "name": "Northwest Travelers - 10U Gold",
+        "avatar_url": "logos/cache/250340601259764c.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-10T00:30:00.000Z",
+      "end_ts": "2026-10-10T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "decicco10u",
+    "teamName": "10U DeCicco",
+    "season": "Fall 2026",
+    "game": {
+      "id": "051b66f3-d93f-4145-8641-abed82a32814",
+      "opponent_team": {
+        "name": "Ironman- Nisenson 10U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-10T00:30:00.000Z",
+      "end_ts": "2026-10-10T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "tHsuttzldgTo"
+    }
+  },
+  {
+    "teamKey": "meraz12u",
+    "teamName": "12U Meraz",
+    "season": "Fall 2026",
+    "game": {
+      "id": "36bfee84-f769-4bb3-81bb-c7b8efe55a8e",
+      "opponent_team": {
+        "name": "Algonquin Cyclones 12U"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-10T00:30:00.000Z",
+      "end_ts": "2026-10-10T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "BmhjNVz0W5gR"
+    }
+  },
+  {
+    "teamKey": "thiemeyer13u",
+    "teamName": "13U Thiemeyer",
+    "season": "Fall 2026",
+    "game": {
+      "id": "9d244dba-fc23-4661-80a2-9f89e9685390",
+      "opponent_team": {
+        "name": "13U Jr Badgers 2027"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-10T00:30:00.000Z",
+      "end_ts": "2026-10-10T02:30:00.000Z",
+      "timezone": "America/Detroit",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5OzlwlXAAYDd"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "3073a774-7d54-408b-82bc-2552b1b3c6e6",
+      "opponent_team": {
+        "name": "Bennieboys 14"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-10T18:00:00.000Z",
+      "end_ts": "2026-10-10T20:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "boettcher14u",
+    "teamName": "14U Boettcher",
+    "season": "Fall 2026",
+    "game": {
+      "id": "4273d2f8-d35f-4071-9b07-d0e827e43ac0",
+      "opponent_team": {
+        "name": "Bennieboys 14"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-10T20:00:00.000Z",
+      "end_ts": "2026-10-10T22:00:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+    }
+  },
+  {
+    "teamKey": "hansen10u",
+    "teamName": "10U Hansen",
+    "season": "Fall 2026",
+    "game": {
+      "id": "4d231ff4-0208-4cb5-9726-9bdb75311377",
+      "opponent_team": {
+        "name": "Trosky Baseball Barrington 10U",
+        "avatar_url": "logos/cache/debdecf471bbc6e6.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-16T22:30:00.000Z",
+      "end_ts": "2026-10-17T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "glieJ5HMvC0j"
+    }
+  },
+  {
+    "teamKey": "lennon11u",
+    "teamName": "11U Lennon",
+    "season": "Fall 2026",
+    "game": {
+      "id": "5377af70-7917-48a5-a0d3-b700c4c425db",
+      "opponent_team": {
+        "name": "Grayslake Coyotes 11U",
+        "avatar_url": "logos/cache/6004b31201af16fb.jpg"
+      },
+      "is_full_day": false,
+      "start_ts": "2026-10-16T22:30:00.000Z",
+      "end_ts": "2026-10-17T00:30:00.000Z",
+      "timezone": "America/Chicago",
+      "home_away": "home",
+      "has_videos_available": false,
+      "has_live_stream": false,
+      "cobras_gamechanger_season": "Fall 2026",
+      "cobras_gamechanger_team_id": "kzFVJtSX9Brn"
+    }
+  }
+]

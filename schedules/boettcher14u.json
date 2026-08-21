@@ -3,7 +3,7 @@
     "id": "451bdb0f-c424-48db-abb7-837a6c001c81",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/f8956c20a470de18.jpg"
+      "avatar_url": "logos/cache/c43b8628355bad13.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T00:15:00.000Z",
@@ -24,7 +24,7 @@
     "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
     "opponent_team": {
       "name": "Eagles Elite 14U",
-      "avatar_url": "logos/cache/d6e41488e4e1b993.jpg"
+      "avatar_url": "logos/cache/e570779b6b2bc671.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T00:15:00.000Z",
@@ -37,40 +37,10 @@
     "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
   },
   {
-    "id": "3073a774-7d54-408b-82bc-2552b1b3c6e6",
-    "opponent_team": {
-      "name": "Bennieboys 14"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-08-29T18:00:00.000Z",
-    "end_ts": "2026-08-29T20:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "has_videos_available": false,
-    "has_live_stream": false,
-    "cobras_gamechanger_season": "Fall 2026",
-    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
-  },
-  {
-    "id": "4273d2f8-d35f-4071-9b07-d0e827e43ac0",
-    "opponent_team": {
-      "name": "Bennieboys 14"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-08-29T20:00:00.000Z",
-    "end_ts": "2026-08-29T22:00:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "home",
-    "has_videos_available": false,
-    "has_live_stream": false,
-    "cobras_gamechanger_season": "Fall 2026",
-    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
-  },
-  {
     "id": "08611e4c-75c6-471b-915d-477272bdff91",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/37d3507b95aa7de8.jpg"
+      "avatar_url": "logos/cache/a637264328f03ae3.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-31T22:15:00.000Z",
@@ -131,7 +101,7 @@
     "id": "83f634ae-41a4-4442-9603-94cb58b54816",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/f8956c20a470de18.jpg"
+      "avatar_url": "logos/cache/c43b8628355bad13.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-21T22:15:00.000Z",
@@ -151,6 +121,51 @@
     "is_full_day": false,
     "start_ts": "2026-09-23T00:00:00.000Z",
     "end_ts": "2026-09-23T02:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+  },
+  {
+    "id": "fcedaab2-9ce2-40e2-afac-ba4f0102a0a1",
+    "opponent_team": {
+      "name": "Elite Rodriguez 14U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-30T00:00:00.000Z",
+    "end_ts": "2026-09-30T02:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+  },
+  {
+    "id": "3073a774-7d54-408b-82bc-2552b1b3c6e6",
+    "opponent_team": {
+      "name": "Bennieboys 14"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-10T18:00:00.000Z",
+    "end_ts": "2026-10-10T20:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ"
+  },
+  {
+    "id": "4273d2f8-d35f-4071-9b07-d0e827e43ac0",
+    "opponent_team": {
+      "name": "Bennieboys 14"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-10T20:00:00.000Z",
+    "end_ts": "2026-10-10T22:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,

@@ -3,7 +3,7 @@
     "id": "83c18318-19fb-45a6-8286-32937e270604",
     "opponent_team": {
       "name": "SBA Raiders 10U",
-      "avatar_url": "logos/cache/442e61a41d08ce1f.jpg"
+      "avatar_url": "logos/cache/34c3b5efd6bfa12d.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-30T16:00:00.000Z",
@@ -19,7 +19,7 @@
     "id": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
     "opponent_team": {
       "name": "Grayslake Coyotes 10U",
-      "avatar_url": "logos/cache/958f625abba1d3e9.jpg"
+      "avatar_url": "logos/cache/5d6bdec2781f9c37.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-03T00:00:00.000Z",
@@ -65,7 +65,7 @@
     "id": "ba903b67-c281-4478-9044-5affd5b3dbd9",
     "opponent_team": {
       "name": "Grayslake Sliders 10U",
-      "avatar_url": "logos/cache/ec8e6bcc4ff12166.jpg"
+      "avatar_url": "logos/cache/c8ebc740f3729800.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-13T15:00:00.000Z",
@@ -81,7 +81,7 @@
     "id": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
     "opponent_team": {
       "name": "Elite NW 10U Wintersdorf",
-      "avatar_url": "logos/cache/065a6f63d31ea000.jpg"
+      "avatar_url": "logos/cache/a138feb9abcc5bb8.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-20T19:00:00.000Z",
@@ -97,7 +97,7 @@
     "id": "eceb4335-36c3-4b63-a277-b64f824ad009",
     "opponent_team": {
       "name": "Elite NW 10U Wintersdorf",
-      "avatar_url": "logos/cache/065a6f63d31ea000.jpg"
+      "avatar_url": "logos/cache/a138feb9abcc5bb8.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-23T22:30:00.000Z",
@@ -113,13 +113,29 @@
     "id": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
     "opponent_team": {
       "name": "Grayslake Coyotes 10U",
-      "avatar_url": "logos/cache/958f625abba1d3e9.jpg"
+      "avatar_url": "logos/cache/5d6bdec2781f9c37.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-27T20:00:00.000Z",
     "end_ts": "2026-09-27T22:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo"
+  },
+  {
+    "id": "076bac65-840c-4e0b-839b-6c8db2dbdc64",
+    "opponent_team": {
+      "name": "Northwest Travelers - 10U Gold",
+      "avatar_url": "logos/cache/250340601259764c.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-10T00:30:00.000Z",
+    "end_ts": "2026-10-10T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
