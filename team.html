@@ -519,11 +519,13 @@
       <div class="info-value" id="coaches">Loading...</div>
     </div>
 
-    <div class="info-card">
-      <div class="info-label">Roster</div>
-      <div class="info-value">Roster Players</div>
-      <div class="info-sub">McHenry, Illinois</div>
-    </div>
+<div class="info-card">
+  <div class="info-label">GameChanger Data</div>
+  <div class="info-value" id="gameChangerSeasons">
+    Loading...
+  </div>
+  <div class="info-sub">Included seasons</div>
+</div>
 
     <div class="record">
       <div class="record-cell">
@@ -661,6 +663,29 @@
     return COBRAS_SETTINGS.activeGameChangerSeasons;
   }
 
+  function displayGameChangerSeasons() {
+
+  const seasons =
+    getActiveGameChangerSeasons();
+
+  const element =
+    document.getElementById(
+      "gameChangerSeasons"
+    );
+
+  if (!element) {
+    return;
+  }
+
+  if (!seasons.length) {
+    element.textContent =
+      "No seasons selected";
+    return;
+  }
+
+  element.textContent =
+    seasons.join(" · ");
+}
 
   function getCobrasSeason() {
 
@@ -1185,10 +1210,12 @@
     ============================================================
   */
 
-  function renderTeamHeader(team) {
+function renderTeamHeader(team) {
 
-    document.title =
-      `McHenry Cobras ${team.name}`;
+  document.title =
+    `McHenry Cobras ${team.name}`;
+
+  displayGameChangerSeasons();
 
     document.getElementById(
       "pageTitle"
