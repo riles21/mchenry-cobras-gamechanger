@@ -654,20 +654,19 @@
 
     We deliberately do NOT use the Cobras banner as a fallback.
   */
-  function logoHtml(url, className = "opponent-logo") {
-    if (url && typeof url === "string" && url.trim() !== "") {
-      return `
-        <img
-          class="${className}"
-          src="${escapeHtml(url)}"
-          alt=""
-          onerror="this.outerHTML='<div class=&quot;placeholder-logo&quot;>⚾</div>'"
-        >
-      `;
-    }
-
-    return `<div class="placeholder-logo">⚾</div>`;
+function logoHtml(url, className = "opponent-logo") {
+  if (url && typeof url === "string" && url.trim() !== "") {
+    return `
+      <img
+        class="${className}"
+        src="${url}"
+        alt=""
+      >
+    `;
   }
+
+  return `<div class="placeholder-logo">⚾</div>`;
+}
 
   function getOpponent(game) {
     return game?.opponent_team?.name || "Opponent";
