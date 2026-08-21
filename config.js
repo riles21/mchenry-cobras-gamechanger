@@ -1,7 +1,8 @@
 /*
-  McHenry Cobras team configuration
+  McHenry Cobras Team Configuration
 
-  Add/update teams here. The master index.html does not need to change.
+  Add/update teams here.
+  The master index.html does not need to change.
 
   Required:
     active
@@ -16,10 +17,6 @@
 
   Facebook:
     facebookUrl: leave "" until a team page is available.
-
-  NOTE:
-    The 12U Lorenz team is temporarily using the Riley GameChanger
-    widget ID until the correct Lorenz widget ID is available.
 */
 
 const COBRAS_TEAMS = {
@@ -29,7 +26,10 @@ const COBRAS_TEAMS = {
     name: "8U Deubel",
     season: "2027 Season",
     gameChangerTeamId: "NJRBPnj0Dhk6",
+
+    // Add the real widget ID when available
     gameChangerWidgetId: "",
+
     headCoach: "Mike Deubel",
     assistantCoaches: [
       "Ryan Freund",
@@ -39,12 +39,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   mcandrews9u: {
     active: true,
     name: "9U McAndrews",
     season: "2027 Season",
     gameChangerTeamId: "eVa0Vr948vH4",
+
     gameChangerWidgetId: "",
+
     headCoach: "Justin McAndrews",
     assistantCoaches: [
       "Matt Rocha",
@@ -54,12 +57,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   hansen10u: {
     active: true,
     name: "10U Hansen",
     season: "2027 Season",
     gameChangerTeamId: "glieJ5HMvC0j",
+
     gameChangerWidgetId: "",
+
     headCoach: "Zach Hansen",
     assistantCoaches: [
       "James Wood",
@@ -69,12 +75,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   decicco10u: {
     active: true,
     name: "10U DeCicco",
     season: "2027 Season",
     gameChangerTeamId: "xmAtHaprkmS1",
+
     gameChangerWidgetId: "",
+
     headCoach: "Vince DeCicco",
     assistantCoaches: [
       "Jim Gosnell",
@@ -84,12 +93,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   lennon11u: {
     active: true,
     name: "11U Lennon",
     season: "2027 Season",
     gameChangerTeamId: "lVwwLVbiCqXH",
+
     gameChangerWidgetId: "",
+
     headCoach: "Travis Lennon",
     assistantCoaches: [
       "Cliff Anderson",
@@ -99,12 +111,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   bozer11u: {
     active: true,
     name: "11U Bozer",
     season: "2027 Season",
     gameChangerTeamId: "jo418sCgCDyw",
+
     gameChangerWidgetId: "",
+
     headCoach: "Ben Bozer",
     assistantCoaches: [
       "Mike Minnery",
@@ -113,12 +128,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   meraz12u: {
     active: true,
     name: "12U Meraz",
     season: "2027 Season",
     gameChangerTeamId: "BmhjNVz0W5gR",
+
     gameChangerWidgetId: "",
+
     headCoach: "Freddy Meraz",
     assistantCoaches: [
       "Conner McLean",
@@ -128,15 +146,18 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   lorenz12u: {
     active: true,
     name: "12U Lorenz",
     season: "2027 Season",
     gameChangerTeamId: "jWdOuqoTjKow",
 
-    // TEMPORARY:
-    // Using the old 17U Riley GameChanger widget.
-    // Replace this value with the real Lorenz widget ID later.
+    /*
+      TEMPORARY:
+      Using the old Riley 17U widget ID until the
+      actual Lorenz widget ID is available.
+    */
     gameChangerWidgetId: "d658d31b-468e-496a-939f-11fe8966b370",
 
     headCoach: "John Lorenz",
@@ -147,12 +168,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   baillargeon13u: {
     active: true,
     name: "13U Baillargeon",
     season: "2027 Season",
     gameChangerTeamId: "ewS3RDClhrGu",
+
     gameChangerWidgetId: "",
+
     headCoach: "Eric Baillargeon",
     assistantCoaches: [
       "Zach Hansen",
@@ -162,12 +186,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   thiemeyer13u: {
     active: true,
     name: "13U Thiemeyer",
     season: "2027 Season",
     gameChangerTeamId: "5OzlwlXAAYDd",
+
     gameChangerWidgetId: "",
+
     headCoach: "Joshua Thiemeyer",
     assistantCoaches: [
       "Donovan Christman",
@@ -177,12 +204,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   boettcher14u: {
     active: true,
     name: "14U Boettcher",
     season: "2027 Season",
     gameChangerTeamId: "5FbGFaKkWCHQ",
+
     gameChangerWidgetId: "",
+
     headCoach: "Aaron Boettcher",
     assistantCoaches: [
       "Nick Valenziano",
@@ -191,12 +221,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   dean15u: {
     active: true,
     name: "15U Dean",
     season: "2027 Season",
     gameChangerTeamId: "",
+
     gameChangerWidgetId: "",
+
     headCoach: "Jeremy Dean",
     assistantCoaches: [
       "Dan Huels",
@@ -206,12 +239,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   bivona16u: {
     active: true,
     name: "16U Bivona",
     season: "2027 Season",
     gameChangerTeamId: "8NGYBcGFasMw",
+
     gameChangerWidgetId: "",
+
     headCoach: "Mike Bivona",
     assistantCoaches: [
       "Eric McCann",
@@ -221,12 +257,15 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   deubel17u: {
     active: true,
     name: "17U Deubel",
     season: "2027 Season",
     gameChangerTeamId: "kutDkVx3yhOH",
+
     gameChangerWidgetId: "",
+
     headCoach: "Mike Deubel",
     assistantCoaches: [
       "Blake Thome",
@@ -235,16 +274,23 @@ const COBRAS_TEAMS = {
     facebookUrl: ""
   },
 
+
   /*
     Former team — kept here for reference.
-    Set to false so it does not appear as an active team.
   */
+
   riley17u: {
     active: false,
     name: "17U Riley",
     season: "2026 Season",
     gameChangerTeamId: "pMdj4HZlj6tS",
+
+    /*
+      This is the widget ID we're temporarily
+      borrowing for the Lorenz page.
+    */
     gameChangerWidgetId: "d658d31b-468e-496a-939f-11fe8966b370",
+
     headCoach: "Bryan Riley",
     assistantCoaches: [
       "Bob Tomlinson",
