@@ -16,7 +16,7 @@ jobs:
 
       - name: Download Lorenz schedule
         run: |
-          curl -L "https://api.team-manager.gc.com/public/teams/jWdOuqoTjKow/games" -o schedule.json
+          curl -L "https://api.team-manager.gc.com/public/teams/pMdj4HZlj6tS/games" -o schedule.json
 
       - name: Show downloaded data
         run: |
