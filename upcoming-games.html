@@ -7,11 +7,10 @@
 <style>
   :root {
     --orange: #ff5a00;
-    --orange-dark: #d94700;
     --black: #0d0d0d;
     --white: #ffffff;
     --gray: #b8b8b8;
-    --line: rgba(255,255,255,.12);
+    --line: rgba(255,255,255,.13);
   }
 
   * { box-sizing: border-box; }
@@ -26,16 +25,14 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  body {
-    overflow: hidden;
-  }
+  body { overflow: hidden; }
 
   .widget {
     width: 100%;
     min-height: 100vh;
-    padding: 22px 24px 18px;
+    padding: 20px 24px 16px;
     background:
-      radial-gradient(circle at 90% 10%, rgba(255,90,0,.14), transparent 38%),
+      radial-gradient(circle at 92% 5%, rgba(255,90,0,.16), transparent 40%),
       linear-gradient(135deg, #101010 0%, #090909 100%);
   }
 
@@ -44,15 +41,15 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     border-bottom: 2px solid var(--orange);
-    padding-bottom: 10px;
+    padding-bottom: 9px;
   }
 
   .title {
     font-size: 22px;
     font-weight: 900;
-    letter-spacing: .5px;
+    letter-spacing: .4px;
     text-transform: uppercase;
   }
 
@@ -72,11 +69,11 @@
 
   .game {
     display: grid;
-    grid-template-columns: 66px 1fr auto;
-    gap: 13px;
+    grid-template-columns: 62px minmax(0,1fr) auto;
+    gap: 12px;
     align-items: center;
-    min-height: 67px;
-    padding: 9px 0;
+    min-height: 64px;
+    padding: 8px 0;
     border-bottom: 1px solid var(--line);
   }
 
@@ -104,10 +101,6 @@
     font-size: 9px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-
-  .team {
-    min-width: 0;
   }
 
   .team-name {
@@ -154,7 +147,7 @@
   .footer {
     display: flex;
     justify-content: flex-end;
-    margin-top: 13px;
+    margin-top: 11px;
   }
 
   .footer a {
@@ -169,43 +162,23 @@
     border-radius: 4px;
   }
 
-  .footer a:hover {
-    background: #ff6b1a;
-  }
+  .footer a:hover { background: #ff6b1a; }
 
   .status {
     color: var(--gray);
     text-align: center;
-    padding: 35px 10px;
+    padding: 28px 10px;
     font-size: 13px;
   }
 
-  .error {
-    color: #ff9b75;
-  }
+  .error { color: #ff9b75; }
 
   @media (max-width: 600px) {
-    .widget {
-      padding: 16px 15px 14px;
-    }
-
-    .title {
-      font-size: 19px;
-    }
-
-    .game {
-      grid-template-columns: 58px 1fr auto;
-      gap: 9px;
-    }
-
-    .team-name,
-    .opponent {
-      font-size: 11px;
-    }
-
-    .time {
-      font-size: 11px;
-    }
+    .widget { padding: 15px 14px 12px; }
+    .title { font-size: 19px; }
+    .game { grid-template-columns: 56px minmax(0,1fr) auto; gap: 9px; }
+    .team-name, .opponent { font-size: 11px; }
+    .time { font-size: 11px; }
   }
 </style>
 </head>
@@ -222,43 +195,59 @@
   </div>
 
   <div class="footer">
-    <a href="index.html" target="_blank" rel="noopener">View All Teams →</a>
+    <a href="https://riles21.github.io/mchenry-cobras-gamechanger/index.html"
+       target="_blank" rel="noopener">View All Teams →</a>
   </div>
 </div>
 
 <script>
 (async function () {
   const gamesEl = document.getElementById("games");
+
+  // Always use the GitHub Pages root as the data source.
+  const ROOT =
+    "https://riles21.github.io/mchenry-cobras-gamechanger/";
+
   const MAX_GAMES = 6;
-  const BASE = "./";
+
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  function chicagoDate(ts) {
+    return new Date(ts);
+  }
 
   function formatDate(ts) {
-    const d = new Date(ts);
+    const d = chicagoDate(ts);
+
     return {
       month: new Intl.DateTimeFormat("en-US", {
         month: "short",
         timeZone: "America/Chicago"
       }).format(d),
+
       day: new Intl.DateTimeFormat("en-US", {
         day: "numeric",
         timeZone: "America/Chicago"
       }).format(d),
+
       dow: new Intl.DateTimeFormat("en-US", {
         weekday: "short",
         timeZone: "America/Chicago"
       }).format(d),
+
       time: new Intl.DateTimeFormat("en-US", {
         hour: "numeric",
         minute: "2-digit",
         timeZone: "America/Chicago"
       }).format(d)
     };
-  }
-
-  function isFuture(game) {
-    return game &&
-           game.start_ts &&
-           new Date(game.start_ts).getTime() >= Date.now();
   }
 
   function gameCard(item) {
@@ -271,82 +260,120 @@
 
     return `
       <a class="game"
-         href="team.html?team=${encodeURIComponent(item.teamKey)}"
+         href="${ROOT}team.html?team=${encodeURIComponent(item.teamKey)}"
          target="_blank"
          rel="noopener"
          style="color:inherit;text-decoration:none">
 
         <div class="date">
-          <div class="month">${d.month}</div>
-          <div class="day">${d.day}</div>
-          <div class="dow">${d.dow}</div>
+          <div class="month">${escapeHtml(d.month)}</div>
+          <div class="day">${escapeHtml(d.day)}</div>
+          <div class="dow">${escapeHtml(d.dow)}</div>
         </div>
 
-        <div class="team">
+        <div>
           <div class="team-name">${escapeHtml(item.teamName)}</div>
           <div class="opponent">${escapeHtml(opponent)}</div>
-          <div class="meta">${homeAway}</div>
+          <div class="meta">${escapeHtml(homeAway)}</div>
         </div>
 
         <div class="time">
-          ${d.time}
-          <div class="home-away">${homeAway}</div>
+          ${escapeHtml(d.time)}
+          <div class="home-away">${escapeHtml(homeAway)}</div>
         </div>
       </a>
     `;
   }
 
-  function escapeHtml(value) {
-    return String(value)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
-  }
-
   try {
-    /*
-      config.js is the single source of truth for active Cobras teams.
-      We load it directly so adding/removing teams in config.js
-      automatically changes this widget too.
-    */
-    const configText = await fetch("config.js", {
-      cache: "no-store"
-    }).then(r => {
-      if (!r.ok) throw new Error("Could not load config.js");
-      return r.text();
-    });
+    const configResponse = await fetch(
+      ROOT + "config.js?cache=" + Date.now(),
+      { cache: "no-store" }
+    );
 
+    if (!configResponse.ok) {
+      throw new Error(
+        "Could not load config.js (" +
+        configResponse.status + ")"
+      );
+    }
+
+    const configText = await configResponse.text();
+
+    /*
+      config.js defines COBRAS_TEAMS. This evaluates only the
+      configuration file and returns that object.
+    */
     const teams = new Function(
       configText + "\nreturn COBRAS_TEAMS;"
     )();
 
-    const requests = Object.entries(teams)
-      .filter(([key, team]) => team.active && team.gameChangerTeamId)
-      .map(async ([teamKey, team]) => {
+    if (!teams || typeof teams !== "object") {
+      throw new Error("COBRAS_TEAMS was not found");
+    }
+
+    const teamEntries = Object.entries(teams)
+      .filter(([key, team]) =>
+        team &&
+        team.active === true &&
+        team.gameChangerTeamId
+      );
+
+    const results = await Promise.all(
+      teamEntries.map(async ([teamKey, team]) => {
+        const url =
+          ROOT +
+          "schedules/" +
+          encodeURIComponent(teamKey) +
+          ".json?cache=" +
+          Date.now();
+
         try {
-          const games = await fetch(
-            `schedules/${encodeURIComponent(teamKey)}.json?${Date.now()}`
-          ).then(r => {
-            if (!r.ok) throw new Error("Schedule not found");
-            return r.json();
+          const response = await fetch(url, {
+            cache: "no-store"
           });
 
+          if (!response.ok) {
+            console.warn(
+              `Schedule unavailable for ${teamKey}: HTTP ${response.status}`
+            );
+            return [];
+          }
+
+          const games = await response.json();
+
+          if (!Array.isArray(games)) {
+            console.warn(
+              `Unexpected schedule format for ${teamKey}`
+            );
+            return [];
+          }
+
           return games
-            .filter(isFuture)
+            .filter(game =>
+              game &&
+              game.start_ts &&
+              !Number.isNaN(
+                new Date(game.start_ts).getTime()
+              ) &&
+              new Date(game.start_ts).getTime() >= Date.now() &&
+              game.game_status !== "completed"
+            )
             .map(game => ({
               teamKey,
               teamName: team.name,
               game
             }));
+
         } catch (error) {
-          console.warn(`Could not load ${teamKey}:`, error);
+          console.warn(
+            `Could not load ${teamKey}:`,
+            error
+          );
           return [];
         }
-      });
-
-    const results = await Promise.all(requests);
+      })
+    );
 
     const upcoming = results
       .flat()
@@ -363,10 +390,12 @@
       return;
     }
 
-    gamesEl.innerHTML = upcoming.map(gameCard).join("");
+    gamesEl.innerHTML =
+      upcoming.map(gameCard).join("");
 
   } catch (error) {
-    console.error(error);
+    console.error("Cobras Next Up error:", error);
+
     gamesEl.innerHTML =
       '<div class="status error">Unable to load Cobras schedules.</div>';
   }
