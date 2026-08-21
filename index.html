@@ -137,7 +137,7 @@ body {
 }
 
 /* =========================
-   GAMECHANGER
+   GAMECHANGER SECTION
    ========================= */
 
 .gc-title {
@@ -151,14 +151,12 @@ body {
 }
 
 /*
-   The extra width is intentional.
-
    GameChanger is loaded from another domain, so its
-   scrollbar cannot be controlled by our CSS.
+   internal scrollbar cannot be controlled directly.
 
-   Making the iframe slightly wider than its visible
-   container moves that scrollbar outside the visible
-   area. The parent clips it.
+   The iframe is intentionally wider than the visible
+   container. The parent clips the right edge, hiding
+   GameChanger's vertical scrollbar.
 */
 
 .gc-container {
@@ -171,7 +169,7 @@ body {
 
 .gc-iframe {
     display: block;
-    width: calc(100% + 18px);
+    width: calc(100% + 50px);
     height: 1700px;
     border: 0;
     margin: 0;
@@ -242,7 +240,7 @@ body {
     }
 
     .gc-iframe {
-        width: calc(100% + 18px);
+        width: calc(100% + 50px);
         height: 1900px;
     }
 }
@@ -263,17 +261,21 @@ body {
 
     <!-- TEAM INFORMATION -->
     <div id="teamName" class="team-name"></div>
+
     <div id="season" class="season"></div>
 
     <div class="orange-line"></div>
 
     <!-- COACHING STAFF -->
-    <div class="staff-title">COACHING STAFF</div>
+    <div class="staff-title">
+        COACHING STAFF
+    </div>
 
     <div id="staff" class="staff"></div>
 
     <!-- GAMECHANGER BUTTON -->
     <div class="gc-button-wrap">
+
         <a
             id="gcButton"
             class="gc-button"
@@ -281,6 +283,7 @@ body {
             rel="noopener">
             VIEW TEAM, ROSTER &amp; STATS ON GAMECHANGER
         </a>
+
     </div>
 
     <!-- GAMECHANGER -->
@@ -295,51 +298,93 @@ body {
 <script src="config.js"></script>
 
 <script>
+
 (function () {
 
-    const params = new URLSearchParams(window.location.search);
-    const teamKey = params.get("team");
+    /* =========================
+       DETERMINE TEAM
+       ========================= */
 
-    const teams = window.COBRAS_TEAMS || {};
+    const params =
+        new URLSearchParams(window.location.search);
 
-    let team = teamKey ? teams[teamKey] : null;
+    const teamKey =
+        params.get("team");
+
+    const teams =
+        window.COBRAS_TEAMS || {};
+
+    let team =
+        teamKey ? teams[teamKey] : null;
+
+
+    /*
+       If no team was specified,
+       use the first active team.
+    */
 
     if (!team) {
-        const activeKey = Object.keys(teams).find(function (key) {
-            return teams[key] && teams[key].active;
-        });
+
+        const activeKey =
+            Object.keys(teams).find(function (key) {
+
+                return teams[key] &&
+                       teams[key].active;
+
+            });
 
         if (activeKey) {
             team = teams[activeKey];
         }
     }
 
-    if (!team) {
-        document.getElementById("teamName").textContent =
-            "McHenry Cobras";
 
-        document.getElementById("season").textContent =
+    /* =========================
+       TEAM NOT FOUND
+       ========================= */
+
+    if (!team) {
+
+        document.getElementById("teamName")
+            .textContent = "McHenry Cobras";
+
+        document.getElementById("season")
+            .textContent =
             "Team information unavailable";
 
         return;
     }
 
-    /* TEAM NAME */
 
-    document.getElementById("teamName").textContent =
+    /* =========================
+       TEAM NAME / SEASON
+       ========================= */
+
+    document.getElementById("teamName")
+        .textContent =
         team.name || "McHenry Cobras";
 
-    document.getElementById("season").textContent =
+    document.getElementById("season")
+        .textContent =
         team.season || "";
 
-    /* COACHING STAFF */
+
+    /* =========================
+       COACHING STAFF
+       ========================= */
 
     const staffContainer =
         document.getElementById("staff");
 
+
+    /*
+       HEAD COACH
+    */
+
     if (team.headCoach) {
 
-        const head = document.createElement("div");
+        const head =
+            document.createElement("div");
 
         head.className = "coach";
 
@@ -347,92 +392,160 @@ body {
             '<div class="coach-name">' +
             escapeHtml(team.headCoach) +
             '</div>' +
-            '<div class="coach-role">Head Coach</div>';
+            '<div class="coach-role">' +
+            'Head Coach' +
+            '</div>';
 
         staffContainer.appendChild(head);
     }
 
+
+    /*
+       ASSISTANT COACHES
+    */
+
     if (Array.isArray(team.assistantCoaches)) {
 
-        team.assistantCoaches.forEach(function (coachName) {
+        team.assistantCoaches.forEach(
+            function (coachName) {
 
-            if (!coachName) {
-                return;
+                if (!coachName) {
+                    return;
+                }
+
+                const assistant =
+                    document.createElement("div");
+
+                assistant.className = "coach";
+
+                assistant.innerHTML =
+                    '<div class="coach-name">' +
+                    escapeHtml(coachName) +
+                    '</div>' +
+                    '<div class="coach-role">' +
+                    'Assistant Coach' +
+                    '</div>';
+
+                staffContainer.appendChild(
+                    assistant
+                );
+
             }
-
-            const assistant =
-                document.createElement("div");
-
-            assistant.className = "coach";
-
-            assistant.innerHTML =
-                '<div class="coach-name">' +
-                escapeHtml(coachName) +
-                '</div>' +
-                '<div class="coach-role">Assistant Coach</div>';
-
-            staffContainer.appendChild(assistant);
-        });
+        );
     }
 
-    /* GAMECHANGER BUTTON */
+
+    /* =========================
+       GAMECHANGER BUTTON
+       ========================= */
 
     const gcButton =
         document.getElementById("gcButton");
+
 
     if (team.gameChangerTeamId) {
 
         gcButton.href =
             "https://web.gc.com/teams/" +
-            encodeURIComponent(team.gameChangerTeamId) +
+            encodeURIComponent(
+                team.gameChangerTeamId
+            ) +
             "/schedule";
 
     } else {
 
-        gcButton.style.display = "none";
+        gcButton.style.display =
+            "none";
     }
 
-    /* GAMECHANGER */
+
+    /* =========================
+       GAMECHANGER EMBED
+       ========================= */
 
     const gcContainer =
-        document.getElementById("gcContainer");
+        document.getElementById(
+            "gcContainer"
+        );
+
 
     if (team.gameChangerTeamId) {
 
         const iframe =
-            document.createElement("iframe");
+            document.createElement(
+                "iframe"
+            );
 
-        iframe.className = "gc-iframe";
+        iframe.className =
+            "gc-iframe";
+
 
         /*
-           Schedule is explicitly requested here.
+           Explicitly request the
+           GameChanger schedule.
         */
 
         iframe.src =
             "https://web.gc.com/teams/" +
-            encodeURIComponent(team.gameChangerTeamId) +
+            encodeURIComponent(
+                team.gameChangerTeamId
+            ) +
             "/schedule";
 
+
         iframe.title =
-            team.name + " GameChanger Schedule";
+            team.name +
+            " GameChanger Schedule";
 
-        iframe.setAttribute("frameborder", "0");
 
-        gcContainer.appendChild(iframe);
+        iframe.setAttribute(
+            "frameborder",
+            "0"
+        );
+
+
+        gcContainer.appendChild(
+            iframe
+        );
     }
 
 })();
 
 
+/* =========================
+   HTML ESCAPING
+   ========================= */
+
 function escapeHtml(value) {
 
     return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
 }
+
 </script>
 
 </body>
