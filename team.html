@@ -1104,17 +1104,17 @@
 
   async function loadTeam() {
 
-    if (
-      !teamKey ||
-      !window.COBRAS_TEAMS ||
-      !COBRAS_TEAMS[teamKey]
-    ) {
+if (
+  !teamKey ||
+  typeof COBRAS_TEAMS === "undefined" ||
+  !COBRAS_TEAMS[teamKey]
+) {
 
-      showError("Team not found.");
-      return;
-    }
+  showError("Team not found.");
+  return;
+}
 
-    const config = COBRAS_TEAMS[teamKey];
+const config = COBRAS_TEAMS[teamKey];
 
     if (!config.active) {
 
