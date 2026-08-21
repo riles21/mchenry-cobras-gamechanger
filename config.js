@@ -245,3 +245,5 @@ const COBRAS_TEAMS = {
   }
 
 };
+
+window.COBRAS_TEAMS = COBRAS_TEAMS;
