@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>McHenry Cobras</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>McHenry Cobras Team</title>
 
   <style>
+    :root {
+      --cobras-orange: #ff5a00;
+      --cobras-black: #111111;
+      --page-max: 1180px;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -16,184 +26,228 @@
       margin: 0;
       padding: 0;
       background: #ffffff;
-      color: #111111;
       font-family: Arial, Helvetica, sans-serif;
+      color: #111111;
     }
 
     body {
-      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    /* Main page container */
+    /* -------------------------------------------------
+       MAIN PAGE
+       ------------------------------------------------- */
+
     .page {
       width: 100%;
-      max-width: 1100px;
+      max-width: var(--page-max);
       margin: 0 auto;
-      padding: 8px 18px 40px;
+      padding: 10px 18px 40px;
     }
 
-    /* Cobras header logo */
-    .team-logo {
+    /* -------------------------------------------------
+       COBRAS HEADER
+       ------------------------------------------------- */
+
+    .team-header {
+      width: 100%;
+      text-align: center;
+    }
+
+    .cobras-banner {
       display: block;
       width: 100%;
-      max-width: 860px;
+      max-width: 1000px;
       height: auto;
-      margin: 0 auto 8px;
+      margin: 0 auto;
     }
 
-    /* Team title */
-    .team-title {
-      text-align: center;
-      margin: 0;
-      font-size: 32px;
+    .team-name {
+      margin: 8px 0 0;
+      font-size: clamp(26px, 3vw, 38px);
       font-weight: 700;
-      line-height: 1.15;
+      line-height: 1.05;
     }
 
-    .team-season {
-      text-align: center;
+    .season {
       margin-top: 3px;
-      color: #666;
-      font-size: 17px;
+      color: #666666;
+      font-size: 16px;
     }
 
     .orange-line {
       width: 100%;
       height: 3px;
-      background: #ff5a00;
-      margin: 12px 0 22px;
+      background: var(--cobras-orange);
+      margin: 12px auto 20px;
     }
 
-    /* Coaching staff */
-    .section-title {
+    /* -------------------------------------------------
+       COACHING STAFF
+       ------------------------------------------------- */
+
+    .staff-section {
       text-align: center;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin: 0 0 16px;
     }
 
-    .coaches {
+    .section-title {
+      margin: 0 0 20px;
+      font-size: clamp(21px, 2.2vw, 28px);
+      letter-spacing: 0.5px;
+    }
+
+    .staff-grid {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 70px;
+      gap: clamp(35px, 7vw, 100px);
       flex-wrap: wrap;
       margin-bottom: 20px;
     }
 
     .coach {
-      min-width: 150px;
-      text-align: center;
+      min-width: 130px;
     }
 
     .coach-name {
       font-size: 17px;
       font-weight: 700;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .coach-role {
+      color: #777777;
       font-size: 14px;
-      color: #777;
     }
 
-    /* GameChanger button */
-    .gc-button-wrap {
-      text-align: center;
-      margin: 10px 0 22px;
-    }
+    /* -------------------------------------------------
+       GAMECHANGER BUTTON
+       ------------------------------------------------- */
 
-    .gc-button {
+    .gamechanger-button {
       display: inline-block;
-      background: #ff5a00;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 700;
       padding: 12px 22px;
-      border-radius: 4px;
-    }
+      margin: 0 auto 20px;
 
-    .gc-button:hover {
-      background: #e84f00;
-    }
-
-    /* GameChanger heading */
-    .gc-heading {
-      width: 100%;
-      background: #ff5a00;
+      background: var(--cobras-orange);
       color: #ffffff;
-      text-align: center;
-      font-size: 19px;
+
+      border-radius: 4px;
+      text-decoration: none;
+
+      font-size: 14px;
       font-weight: 700;
-      padding: 10px 8px;
+
+      transition:
+        background-color 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .gamechanger-button:hover {
+      background: #e64f00;
+      transform: translateY(-1px);
+    }
+
+    /* -------------------------------------------------
+       GAMECHANGER SECTION
+       ------------------------------------------------- */
+
+    .gamechanger-title {
+      width: 100%;
+      background: var(--cobras-orange);
+      color: #ffffff;
+
+      text-align: center;
+
+      font-size: 17px;
+      font-weight: 700;
+
+      padding: 9px 10px;
       margin: 0;
     }
 
-    /* GameChanger container */
-    .gc-container {
+    /*
+      This is intentionally wider than the old version.
+
+      The Wix HTML element can still limit the overall width,
+      but this allows the GitHub page to use essentially all
+      of the width Wix gives it.
+    */
+    .gamechanger-wrapper {
       width: 100%;
-      max-width: 1050px;
+      max-width: 1180px;
       margin: 0 auto;
       overflow: hidden;
       background: #ffffff;
     }
 
-    .gc-frame {
+    /*
+      Keep the GameChanger frame tall enough that its own
+      navigation and schedule have plenty of room.
+
+      scrolling="no" is also applied in the HTML below.
+    */
+    .gamechanger-frame {
       display: block;
       width: 100%;
-      height: 1200px;
+      height: 2200px;
+
       border: 0;
       margin: 0;
       padding: 0;
+
       overflow: hidden;
     }
 
-    /* Error / unavailable message */
-    .message {
-      max-width: 500px;
-      margin: 20px auto;
-      padding: 20px;
-      border: 1px solid #ddd;
-      background: #fafafa;
-      text-align: center;
-      color: #555;
-    }
+    /* -------------------------------------------------
+       SMALL SCREEN / WIX
+       ------------------------------------------------- */
 
-    .message-title {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .message-text {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    /* Smaller screens */
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
 
       .page {
         padding-left: 10px;
         padding-right: 10px;
       }
 
-      .team-title {
-        font-size: 25px;
+      .cobras-banner {
+        max-width: 100%;
       }
 
-      .team-season {
-        font-size: 15px;
+      .gamechanger-frame {
+        height: 2200px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding: 6px;
       }
 
-      .coaches {
-        gap: 25px;
+      .team-name {
+        font-size: 26px;
+      }
+
+      .season {
+        font-size: 14px;
+      }
+
+      .orange-line {
+        margin-top: 10px;
+        margin-bottom: 16px;
+      }
+
+      .section-title {
+        font-size: 21px;
+      }
+
+      .staff-grid {
+        gap: 20px;
       }
 
       .coach {
-        min-width: 120px;
+        min-width: 105px;
       }
 
       .coach-name {
@@ -204,17 +258,13 @@
         font-size: 12px;
       }
 
-      .gc-button {
-        font-size: 13px;
-        padding: 10px 16px;
+      .gamechanger-button {
+        font-size: 12px;
+        padding: 10px 15px;
       }
 
-      .gc-heading {
-        font-size: 16px;
-      }
-
-      .gc-frame {
-        height: 1200px;
+      .gamechanger-title {
+        font-size: 15px;
       }
     }
   </style>
@@ -222,267 +272,493 @@
 
 <body>
 
-<div class="page">
+  <main class="page">
 
-  <!-- Team logo -->
-  <img
-    class="team-logo"
-    src="https://riles21.github.io/mchenry-cobras-gamechanger/cobras-logo.png"
-    alt="McHenry Cobras"
-  >
+    <!-- ================================================
+         COBRAS TEAM HEADER
+         ================================================ -->
 
-  <!-- Team information -->
-  <h1 id="teamName" class="team-title">McHenry Cobras</h1>
-  <div id="teamSeason" class="team-season"></div>
+    <header class="team-header">
 
-  <div class="orange-line"></div>
+      <img
+        src="cobras-logo.png"
+        alt="McHenry Cobras"
+        class="cobras-banner"
+      >
 
-  <!-- Coaching staff -->
-  <h2 class="section-title">COACHING STAFF</h2>
+      <h1
+        id="teamName"
+        class="team-name">
+        McHenry Cobras
+      </h1>
 
-  <div id="coaches" class="coaches"></div>
+      <div
+        id="season"
+        class="season">
+        Team Page
+      </div>
 
-  <!-- GameChanger link -->
-  <div class="gc-button-wrap">
-    <a
-      id="gcButton"
-      class="gc-button"
-      href="#"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      VIEW TEAM, ROSTER &amp; STATS ON GAMECHANGER
-    </a>
-  </div>
+      <div class="orange-line"></div>
 
-  <!-- GameChanger -->
-  <div class="gc-container">
-
-    <div class="gc-heading">
-      Game Schedule &amp; Results
-    </div>
-
-    <iframe
-      id="gcFrame"
-      class="gc-frame"
-      title="GameChanger Team Page"
-      scrolling="no"
-      frameborder="0"
-      allow="fullscreen">
-    </iframe>
-
-    <div id="gcMessage" class="message" style="display:none;">
-      <div class="message-title"></div>
-      <div class="message-text"></div>
-    </div>
-
-  </div>
-
-</div>
+    </header>
 
 
-<script src="config.js?v=5"></script>
+    <!-- ================================================
+         COACHING STAFF
+         ================================================ -->
 
-<script>
+    <section class="staff-section">
 
-  /*
-   * ------------------------------------------------------------
-   * McHenry Cobras Team Page
-   * ------------------------------------------------------------
-   */
+      <h2 class="section-title">
+        COACHING STAFF
+      </h2>
 
-  function getTeamKey() {
+      <div
+        id="staff"
+        class="staff-grid">
+      </div>
 
-    const params = new URLSearchParams(window.location.search);
+      <a
+        id="gamechangerLink"
+        class="gamechanger-button"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer">
+        VIEW TEAM, ROSTER &amp; STATS ON GAMECHANGER
+      </a>
 
-    return params.get("team");
-
-  }
-
-
-  function showMessage(title, text) {
-
-    const message = document.getElementById("gcMessage");
-
-    message.querySelector(".message-title").textContent = title;
-
-    message.querySelector(".message-text").textContent = text;
-
-    message.style.display = "block";
-
-  }
+    </section>
 
 
-  function initializePage() {
+    <!-- ================================================
+         GAMECHANGER
+         ================================================ -->
 
-    const teamKey = getTeamKey();
+    <section class="gamechanger-wrapper">
 
-    /*
-     * Make sure config.js loaded correctly.
-     */
+      <div class="gamechanger-title">
+        Game Schedule &amp; Results
+      </div>
 
-    if (
-      typeof COBRAS_TEAMS === "undefined" ||
-      !COBRAS_TEAMS
-    ) {
+      <div id="gamechangerContainer">
 
-      document.getElementById("teamName").textContent =
-        "McHenry Cobras";
-
-      showMessage(
-        "Team configuration unavailable",
-        "Please check that config.js is uploaded correctly."
-      );
-
-      return;
-
-    }
-
-
-    /*
-     * Find requested team.
-     */
-
-    const team = COBRAS_TEAMS[teamKey];
-
-
-    if (!team || team.active === false) {
-
-      document.getElementById("teamName").textContent =
-        "McHenry Cobras";
-
-      showMessage(
-        "Team not found",
-        "The requested team could not be found."
-      );
-
-      return;
-
-    }
-
-
-    /*
-     * Team name and season
-     */
-
-    document.getElementById("teamName").textContent =
-      team.name || "McHenry Cobras";
-
-
-    document.getElementById("teamSeason").textContent =
-      team.season || "";
-
-
-    /*
-     * Coaching staff
-     */
-
-    const coachesContainer =
-      document.getElementById("coaches");
-
-    coachesContainer.innerHTML = "";
-
-
-    if (team.headCoach) {
-
-      coachesContainer.innerHTML += `
-        <div class="coach">
-          <div class="coach-name">
-            ${team.headCoach}
-          </div>
-          <div class="coach-role">
-            Head Coach
-          </div>
+        <div
+          id="loadingMessage"
+          style="
+            text-align:center;
+            padding:30px;
+            color:#666;
+            font-size:14px;
+          ">
+          Loading GameChanger...
         </div>
-      `;
 
-    }
+      </div>
+
+    </section>
+
+  </main>
 
 
-    if (Array.isArray(team.assistantCoaches)) {
+  <!-- ================================================
+       TEAM CONFIGURATION
+       ================================================ -->
 
-      team.assistantCoaches.forEach(function(coach) {
+  <script src="config.js?v=20260820"></script>
 
-        if (!coach) {
+
+  <!-- ================================================
+       PAGE LOGIC
+       ================================================ -->
+
+  <script>
+
+    (function () {
+
+      "use strict";
+
+
+      /* -----------------------------------------------
+         GET TEAM FROM URL
+         ----------------------------------------------- */
+
+      const params = new URLSearchParams(
+        window.location.search
+      );
+
+      const teamKey =
+        params.get("team") || "lorenz12u";
+
+
+      /* -----------------------------------------------
+         FIND TEAM CONFIGURATION
+         ----------------------------------------------- */
+
+      if (
+        typeof COBRAS_TEAMS === "undefined" ||
+        !COBRAS_TEAMS[teamKey]
+      ) {
+
+        document.getElementById("teamName").textContent =
+          "McHenry Cobras";
+
+        document.getElementById("season").textContent =
+          "Team configuration unavailable";
+
+        document.getElementById("staff").innerHTML =
+          '<div style="' +
+          'padding:20px;' +
+          'border:1px solid #ddd;' +
+          'background:#fafafa;' +
+          'color:#555;' +
+          '">' +
+          '<strong>Team configuration unavailable</strong>' +
+          '<br><br>' +
+          'Please check that config.js is uploaded correctly.' +
+          '</div>';
+
+        document.getElementById(
+          "gamechangerContainer"
+        ).innerHTML =
+          '<div style="' +
+          'padding:30px;' +
+          'text-align:center;' +
+          'color:#666;' +
+          '">' +
+          'GameChanger unavailable.' +
+          '</div>';
+
+        return;
+      }
+
+
+      const team = COBRAS_TEAMS[teamKey];
+
+
+      /* -----------------------------------------------
+         TEAM NAME / SEASON
+         ----------------------------------------------- */
+
+      document.getElementById(
+        "teamName"
+      ).textContent = team.name || "McHenry Cobras";
+
+
+      document.getElementById(
+        "season"
+      ).textContent = team.season || "";
+
+
+      /* -----------------------------------------------
+         COACHING STAFF
+         ----------------------------------------------- */
+
+      const staff =
+        document.getElementById("staff");
+
+      let staffHTML = "";
+
+
+      if (team.headCoach) {
+
+        staffHTML +=
+          '<div class="coach">' +
+            '<div class="coach-name">' +
+              escapeHTML(team.headCoach) +
+            '</div>' +
+            '<div class="coach-role">' +
+              'Head Coach' +
+            '</div>' +
+          '</div>';
+
+      }
+
+
+      if (
+        Array.isArray(team.assistantCoaches)
+      ) {
+
+        team.assistantCoaches.forEach(
+          function (coach) {
+
+            if (!coach) {
+              return;
+            }
+
+            staffHTML +=
+              '<div class="coach">' +
+                '<div class="coach-name">' +
+                  escapeHTML(coach) +
+                '</div>' +
+                '<div class="coach-role">' +
+                  'Assistant Coach' +
+                '</div>' +
+              '</div>';
+
+          }
+        );
+
+      }
+
+
+      staff.innerHTML = staffHTML;
+
+
+      /* -----------------------------------------------
+         GAMECHANGER TEAM LINK
+         ----------------------------------------------- */
+
+      const gcLink =
+        document.getElementById(
+          "gamechangerLink"
+        );
+
+
+      if (team.gameChangerTeamId) {
+
+        /*
+          GameChanger's public team URL.
+        */
+
+        gcLink.href =
+          "https://web.gc.com/teams/" +
+          encodeURIComponent(
+            team.gameChangerTeamId
+          );
+
+      } else {
+
+        gcLink.style.display = "none";
+
+      }
+
+
+      /* -----------------------------------------------
+         LOAD GAMECHANGER WIDGET
+         ----------------------------------------------- */
+
+      const gcContainer =
+        document.getElementById(
+          "gamechangerContainer"
+        );
+
+
+      /*
+        IMPORTANT:
+
+        If a GameChanger widget ID exists in config.js,
+        use the GameChanger widget SDK.
+
+        This preserves the full GameChanger experience
+        that is currently working for the Riley test.
+      */
+
+      if (
+        team.gameChangerWidgetId &&
+        team.gameChangerWidgetId.trim() !== ""
+      ) {
+
+        gcContainer.innerHTML =
+          '<div id="gc-scoreboard-widget"></div>';
+
+
+        loadGameChangerSDK(
+          team.gameChangerWidgetId
+        );
+
+      } else {
+
+        gcContainer.innerHTML =
+          '<div style="' +
+          'padding:30px;' +
+          'text-align:center;' +
+          'border:1px solid #ddd;' +
+          'background:#fafafa;' +
+          'color:#555;' +
+          '">' +
+
+          '<strong>GameChanger schedule coming soon</strong>' +
+
+          '<br><br>' +
+
+          'The GameChanger widget ID has not been added ' +
+          'for this team yet.' +
+
+          '</div>';
+
+      }
+
+
+      /* -----------------------------------------------
+         GAMECHANGER SDK
+         ----------------------------------------------- */
+
+      function loadGameChangerSDK(widgetId) {
+
+        /*
+          Prevent loading the SDK twice.
+        */
+
+        if (
+          document.querySelector(
+            'script[data-gamechanger-sdk]'
+          )
+        ) {
+
+          initializeGameChanger(
+            widgetId
+          );
+
           return;
         }
 
-        coachesContainer.innerHTML += `
-          <div class="coach">
-            <div class="coach-name">
-              ${coach}
-            </div>
-            <div class="coach-role">
-              Assistant Coach
-            </div>
-          </div>
-        `;
 
-      });
-
-    }
+        const script =
+          document.createElement("script");
 
 
-    /*
-     * GameChanger team URL
-     *
-     * This uses the actual GameChanger Team ID.
-     */
-
-    if (team.gameChangerTeamId) {
-
-      const gameChangerUrl =
-        "https://web.gc.com/teams/" +
-        team.gameChangerTeamId;
+        script.src =
+          "https://widgets.gc.com/static/js/sdk.v1.js";
 
 
-      /*
-       * Button above GameChanger
-       */
-
-      document.getElementById("gcButton").href =
-        gameChangerUrl;
+        script.async = true;
 
 
-      /*
-       * Full GameChanger team page
-       *
-       * This is intentionally NOT the scoreboard widget.
-       */
-
-      document.getElementById("gcFrame").src =
-        gameChangerUrl;
+        script.setAttribute(
+          "data-gamechanger-sdk",
+          "true"
+        );
 
 
-    } else {
+        script.onload =
+          function () {
 
-      /*
-       * Team does not have a GameChanger team yet.
-       */
+            initializeGameChanger(
+              widgetId
+            );
 
-      document.getElementById("gcFrame").style.display =
-        "none";
-
-      showMessage(
-        "GameChanger schedule coming soon",
-        "The GameChanger team page has not been added for this team yet."
-      );
-
-    }
-
-  }
+          };
 
 
-  /*
-   * Initialize once the page is ready.
-   */
+        script.onerror =
+          function () {
 
-  document.addEventListener(
-    "DOMContentLoaded",
-    initializePage
-  );
+            gcContainer.innerHTML =
+              '<div style="' +
+              'padding:30px;' +
+              'text-align:center;' +
+              'color:#666;' +
+              '">' +
+              'Unable to load GameChanger.' +
+              '</div>';
 
-</script>
+          };
+
+
+        document.body.appendChild(
+          script
+        );
+
+      }
+
+
+      /* -----------------------------------------------
+         INITIALIZE GAMECHANGER
+         ----------------------------------------------- */
+
+      function initializeGameChanger(
+        widgetId
+      ) {
+
+        /*
+          Wait briefly because the SDK can take
+          a moment to expose window.GC.
+        */
+
+        let attempts = 0;
+
+
+        const timer =
+          setInterval(
+            function () {
+
+              attempts++;
+
+
+              if (
+                window.GC &&
+                window.GC.scoreboard &&
+                typeof window.GC.scoreboard.init ===
+                  "function"
+              ) {
+
+                clearInterval(timer);
+
+
+                window.GC.scoreboard.init({
+
+                  target:
+                    "#gc-scoreboard-widget",
+
+                  widgetId:
+                    widgetId,
+
+                  /*
+                    Show several games vertically where
+                    GameChanger supports the option.
+                  */
+
+                  maxVerticalGamesVisible: 6
+
+                });
+
+
+                return;
+
+              }
+
+
+              if (attempts >= 50) {
+
+                clearInterval(timer);
+
+
+                gcContainer.innerHTML =
+                  '<div style="' +
+                  'padding:30px;' +
+                  'text-align:center;' +
+                  'color:#666;' +
+                  '">' +
+                  'GameChanger could not be initialized.' +
+                  '</div>';
+
+              }
+
+            },
+            100
+          );
+
+      }
+
+
+      /* -----------------------------------------------
+         SIMPLE HTML ESCAPE
+         ----------------------------------------------- */
+
+      function escapeHTML(value) {
+
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+
+      }
+
+    })();
+
+  </script>
 
 </body>
 </html>
