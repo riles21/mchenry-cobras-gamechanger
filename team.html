@@ -48,6 +48,21 @@
       display: block;
     }
 
+    .breadcrumb {
+      margin: 12px 0 8px;
+    }
+
+    .breadcrumb a {
+      color: #ff5a00;
+      font-size: 11px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
     h1 {
       margin: 20px 0 2px;
       text-align: center;
@@ -430,6 +445,7 @@
     }
 
     @media (max-width: 680px) {
+
       body {
         padding: 12px 8px 35px;
       }
@@ -460,6 +476,7 @@
     }
 
     @media (max-width: 460px) {
+
       .info-grid {
         grid-template-columns: 1fr;
       }
@@ -499,6 +516,10 @@
     >
   </div>
 
+  <div class="breadcrumb">
+    <a href="index.html">← All Cobras Teams</a>
+  </div>
+
   <h1 id="pageTitle">McHenry Cobras</h1>
   <div class="season" id="seasonTitle">Loading...</div>
 
@@ -519,13 +540,13 @@
       <div class="info-value" id="coaches">Loading...</div>
     </div>
 
-<div class="info-card">
-  <div class="info-label">GameChanger Data</div>
-  <div class="info-value" id="gameChangerSeasons">
-    Loading...
-  </div>
-  <div class="info-sub">Included seasons</div>
-</div>
+    <div class="info-card">
+      <div class="info-label">GameChanger Data</div>
+      <div class="info-value" id="gameChangerSeasons">
+        Loading...
+      </div>
+      <div class="info-sub">Included seasons</div>
+    </div>
 
     <div class="record">
       <div class="record-cell">
@@ -548,7 +569,10 @@
 
   <div class="follow-bar">
     <div>
-      <div class="follow-title">Follow this team on GameChanger</div>
+      <div class="follow-title">
+        Follow this team on GameChanger
+      </div>
+
       <div class="follow-sub">
         Get live scores, game updates, stats and team notifications.
       </div>
@@ -595,6 +619,7 @@
 <script src="config.js"></script>
 
 <script>
+
   /*
     ============================================================
     COBRAS TEAM PAGE
@@ -663,29 +688,31 @@
     return COBRAS_SETTINGS.activeGameChangerSeasons;
   }
 
+
   function displayGameChangerSeasons() {
 
-  const seasons =
-    getActiveGameChangerSeasons();
+    const seasons =
+      getActiveGameChangerSeasons();
 
-  const element =
-    document.getElementById(
-      "gameChangerSeasons"
-    );
+    const element =
+      document.getElementById(
+        "gameChangerSeasons"
+      );
 
-  if (!element) {
-    return;
-  }
+    if (!element) {
+      return;
+    }
 
-  if (!seasons.length) {
+    if (!seasons.length) {
+      element.textContent =
+        "No seasons selected";
+      return;
+    }
+
     element.textContent =
-      "No seasons selected";
-    return;
+      seasons.join(" · ");
   }
 
-  element.textContent =
-    seasons.join(" · ");
-}
 
   function getCobrasSeason() {
 
@@ -1210,12 +1237,12 @@
     ============================================================
   */
 
-function renderTeamHeader(team) {
+  function renderTeamHeader(team) {
 
-  document.title =
-    `McHenry Cobras ${team.name}`;
+    document.title =
+      `McHenry Cobras ${team.name}`;
 
-  displayGameChangerSeasons();
+    displayGameChangerSeasons();
 
     document.getElementById(
       "pageTitle"
