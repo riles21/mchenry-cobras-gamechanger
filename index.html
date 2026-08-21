@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>McHenry Cobras Baseball</title>
 
   <style>
@@ -25,7 +26,12 @@
 
     .hero {
       background:
-        linear-gradient(115deg, #101010 0%, #171717 48%, #4b210f 100%);
+        linear-gradient(
+          115deg,
+          #101010 0%,
+          #171717 48%,
+          #4b210f 100%
+        );
       border-radius: 10px;
       padding: 25px;
       text-align: center;
@@ -132,7 +138,9 @@
       text-decoration: none;
       color: #111;
       box-shadow: 0 2px 4px rgba(0,0,0,.06);
-      transition: box-shadow .15s ease, transform .15s ease;
+      transition:
+        box-shadow .15s ease,
+        transform .15s ease;
     }
 
     .team-card:hover {
@@ -200,6 +208,7 @@
     }
 
     @media (max-width: 650px) {
+
       body {
         padding: 15px 10px 40px;
       }
@@ -228,154 +237,393 @@
 <div class="container">
 
   <div class="hero">
-    <img src="cobras-logo.png" alt="McHenry Cobras">
+    <img
+      src="cobras-logo.png"
+      alt="McHenry Cobras"
+    >
   </div>
 
   <h1>McHenry Cobras Baseball</h1>
 
-  <div class="season">2027 SEASON</div>
+  <div
+    class="season"
+    id="seasonTitle"
+  >
+    Loading...
+  </div>
 
   <div class="orange-line"></div>
 
-  <div class="section-title">Cobras Organization</div>
-
-  <div class="org-record">
-    <div class="record-card">
-      <div class="record-number" id="activeTeams">0</div>
-      <div class="record-label">ACTIVE TEAMS</div>
-    </div>
-
-    <div class="record-card">
-      <div class="record-number" id="orgWins">0</div>
-      <div class="record-label">WINS</div>
-    </div>
-
-    <div class="record-card">
-      <div class="record-number" id="orgLosses">0</div>
-      <div class="record-label">LOSSES</div>
-    </div>
-
-    <div class="record-card">
-      <div class="record-number" id="orgTies">0</div>
-      <div class="record-label">TIES</div>
-    </div>
+  <div class="section-title">
+    Cobras Organization
   </div>
 
-  <div class="section-title">Cobras Teams</div>
+  <div class="org-record">
+
+    <div class="record-card">
+      <div
+        class="record-number"
+        id="activeTeams"
+      >
+        0
+      </div>
+
+      <div class="record-label">
+        ACTIVE TEAMS
+      </div>
+    </div>
+
+    <div class="record-card">
+      <div
+        class="record-number"
+        id="orgWins"
+      >
+        0
+      </div>
+
+      <div class="record-label">
+        WINS
+      </div>
+    </div>
+
+    <div class="record-card">
+      <div
+        class="record-number"
+        id="orgLosses"
+      >
+        0
+      </div>
+
+      <div class="record-label">
+        LOSSES
+      </div>
+    </div>
+
+    <div class="record-card">
+      <div
+        class="record-number"
+        id="orgTies"
+      >
+        0
+      </div>
+
+      <div class="record-label">
+        TIES
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">
+    Cobras Teams
+  </div>
 
   <div id="teams">
-    <div class="loading">Loading Cobras teams...</div>
+    <div class="loading">
+      Loading Cobras teams...
+    </div>
   </div>
 
 </div>
 
+
 <script src="config.js"></script>
 
 <script>
+
   /*
-    Organization page
+    ============================================================
+    COBRAS ORGANIZATION PAGE
+    ============================================================
 
-    Records are calculated directly from:
-      schedules/<team-key>.json
+    The GitHub Action generates each team's schedule JSON.
 
-    A completed game contributes:
-      win  = team score > opponent score
-      loss = team score < opponent score
-      tie  = team score === opponent score
+    Those JSON files already contain ONLY the GameChanger
+    seasons selected in:
 
-    This keeps the organization record consistent with
-    the individual team pages.
+      COBRAS_SETTINGS.activeGameChangerSeasons
+
+    Therefore this page does not need to know how GameChanger
+    identifies individual seasons.
+
+    It simply calculates records from the generated schedules.
+
+    This keeps the architecture:
+
+      config.js
+          ↓
+      GitHub Action
+          ↓
+      filtered schedules/*.json
+          ↓
+      index.html / team.html
   */
 
-  const BASE_PATH = "";
 
-  function getAgeGroup(teamName) {
-    const match = teamName.match(/^(\d+)U/i);
-    return match ? parseInt(match[1], 10) : 999;
+  /*
+    ============================================================
+    GLOBAL SETTINGS
+    ============================================================
+  */
+
+  function getCobrasSeason() {
+
+    if (
+      typeof COBRAS_SETTINGS !== "undefined" &&
+      COBRAS_SETTINGS &&
+      COBRAS_SETTINGS.cobrasSeason
+    ) {
+      return COBRAS_SETTINGS.cobrasSeason;
+    }
+
+    return "2026-27 Season";
   }
 
+
+  function getActiveGameChangerSeasons() {
+
+    if (
+      typeof COBRAS_SETTINGS === "undefined" ||
+      !COBRAS_SETTINGS
+    ) {
+      return [];
+    }
+
+    if (
+      !Array.isArray(
+        COBRAS_SETTINGS.activeGameChangerSeasons
+      )
+    ) {
+      return [];
+    }
+
+    return COBRAS_SETTINGS.activeGameChangerSeasons;
+  }
+
+
+  /*
+    ============================================================
+    AGE GROUP
+    ============================================================
+  */
+
+  function getAgeGroup(teamName) {
+
+    const match =
+      String(teamName || "")
+        .match(/^(\d+)U/i);
+
+    return match
+      ? parseInt(match[1], 10)
+      : 999;
+  }
+
+
+  /*
+    ============================================================
+    RECORD CALCULATION
+    ============================================================
+  */
+
   function getRecordFromGames(games) {
+
     let wins = 0;
     let losses = 0;
     let ties = 0;
 
     if (!Array.isArray(games)) {
-      return { wins, losses, ties };
+      return {
+        wins,
+        losses,
+        ties
+      };
     }
 
     games.forEach(game => {
+
+      /*
+        Only completed games with valid numeric scores
+        count toward the record.
+
+        This is the same rule used by team.html.
+      */
+
       if (
-        game &&
-        game.game_status === "completed" &&
-        game.score &&
-        typeof game.score.team === "number" &&
-        typeof game.score.opponent_team === "number"
+        !game ||
+        game.game_status !== "completed" ||
+        !game.score ||
+        typeof game.score.team !== "number" ||
+        typeof game.score.opponent_team !== "number"
       ) {
-        if (game.score.team > game.score.opponent_team) {
-          wins++;
-        } else if (game.score.team < game.score.opponent_team) {
-          losses++;
-        } else {
-          ties++;
-        }
+        return;
       }
+
+      if (
+        game.score.team >
+        game.score.opponent_team
+      ) {
+        wins++;
+      }
+
+      else if (
+        game.score.team <
+        game.score.opponent_team
+      ) {
+        losses++;
+      }
+
+      else {
+        ties++;
+      }
+
     });
 
-    return { wins, losses, ties };
+    return {
+      wins,
+      losses,
+      ties
+    };
   }
 
+
+  /*
+    ============================================================
+    LOAD TEAM RECORD
+    ============================================================
+  */
+
   async function loadTeamRecord(teamKey) {
+
     try {
-      const response = await fetch(
-        `${BASE_PATH}schedules/${teamKey}.json?cache=${Date.now()}`,
-        { cache: "no-store" }
-      );
+
+      const response =
+        await fetch(
+          `schedules/${encodeURIComponent(teamKey)}.json?v=${Date.now()}`,
+          {
+            cache: "no-store"
+          }
+        );
 
       if (!response.ok) {
-        console.warn(`Could not load schedule for ${teamKey}`);
-        return { wins: 0, losses: 0, ties: 0 };
+
+        console.warn(
+          `Could not load schedule for ${teamKey}:`,
+          response.status
+        );
+
+        return {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        };
       }
 
-      const games = await response.json();
+      const games =
+        await response.json();
+
+      if (!Array.isArray(games)) {
+
+        console.warn(
+          `Schedule for ${teamKey} was not an array.`
+        );
+
+        return {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        };
+      }
+
       return getRecordFromGames(games);
 
     } catch (error) {
-      console.warn(`Error loading ${teamKey}:`, error);
-      return { wins: 0, losses: 0, ties: 0 };
+
+      console.warn(
+        `Error loading ${teamKey}:`,
+        error
+      );
+
+      return {
+        wins: 0,
+        losses: 0,
+        ties: 0
+      };
     }
   }
 
-  function createTeamCard(teamKey, team, record) {
+
+  /*
+    ============================================================
+    TEAM CARD
+    ============================================================
+  */
+
+  function createTeamCard(
+    teamKey,
+    team,
+    record
+  ) {
+
     const coaches = [
       team.headCoach,
       ...(team.assistantCoaches || [])
-    ].filter(Boolean).join(" · ");
+    ]
+      .filter(Boolean)
+      .join(" · ");
 
-    const card = document.createElement("a");
+    const card =
+      document.createElement("a");
 
-    card.className = "team-card";
+    card.className =
+      "team-card";
 
-    card.href = `team.html?team=${encodeURIComponent(teamKey)}`;
+    card.href =
+      `team.html?team=${encodeURIComponent(teamKey)}`;
 
     card.innerHTML = `
+
       <div class="team-info">
-        <div class="team-name">${escapeHtml(team.name)}</div>
-        <div class="coaches">${escapeHtml(coaches)}</div>
+
+        <div class="team-name">
+          ${escapeHtml(team.name)}
+        </div>
+
+        <div class="coaches">
+          ${escapeHtml(coaches)}
+        </div>
+
       </div>
 
       <div class="team-record">
+
         <div class="record-line">
           ${record.wins}-${record.losses}-${record.ties}
-          <span class="arrow">→</span>
+
+          <span class="arrow">
+            →
+          </span>
         </div>
-        <div class="record-caption">W-L-T</div>
+
+        <div class="record-caption">
+          W-L-T
+        </div>
+
       </div>
+
     `;
 
     return card;
   }
 
+
+  /*
+    ============================================================
+    HTML ESCAPING
+    ============================================================
+  */
+
   function escapeHtml(value) {
+
     return String(value ?? "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
@@ -384,71 +632,175 @@
       .replace(/'/g, "&#039;");
   }
 
+
+  /*
+    ============================================================
+    LOAD ORGANIZATION
+    ============================================================
+  */
+
   async function loadOrganization() {
 
-    const teamsContainer = document.getElementById("teams");
+    const teamsContainer =
+      document.getElementById("teams");
+
+
+    /*
+      Display the global Cobras season.
+    */
+
+    document.getElementById(
+      "seasonTitle"
+    ).textContent =
+      getCobrasSeason();
+
+
+    /*
+      Verify team configuration.
+    */
 
     if (
       typeof COBRAS_TEAMS === "undefined" ||
       !COBRAS_TEAMS ||
       typeof COBRAS_TEAMS !== "object"
     ) {
+
       teamsContainer.innerHTML =
-        `<div class="error">Unable to load Cobras team configuration.</div>`;
+        `
+          <div class="error">
+            Unable to load Cobras team configuration.
+          </div>
+        `;
+
       return;
     }
 
-    const activeTeams = Object.entries(COBRAS_TEAMS)
-      .filter(([key, team]) => team && team.active === true)
-      .sort((a, b) => {
-        const ageA = getAgeGroup(a[1].name);
-        const ageB = getAgeGroup(b[1].name);
 
-        if (ageA !== ageB) {
-          return ageA - ageB;
-        }
+    /*
+      Determine which GameChanger seasons the site is
+      currently configured to include.
 
-        return a[1].name.localeCompare(b[1].name);
-      });
+      This is displayed in the browser console as a
+      useful diagnostic, but the actual filtering is
+      already performed by the GitHub Action.
+    */
 
-    document.getElementById("activeTeams").textContent =
+    const activeSeasons =
+      getActiveGameChangerSeasons();
+
+    console.log(
+      "[Cobras] Organizational season:",
+      getCobrasSeason()
+    );
+
+    console.log(
+      "[Cobras] Included GameChanger seasons:",
+      activeSeasons
+    );
+
+
+    /*
+      Get active Cobras teams only.
+    */
+
+    const activeTeams =
+      Object.entries(COBRAS_TEAMS)
+
+        .filter(
+          ([key, team]) =>
+            team &&
+            team.active === true
+        )
+
+        .sort(
+          (a, b) => {
+
+            const ageA =
+              getAgeGroup(a[1].name);
+
+            const ageB =
+              getAgeGroup(b[1].name);
+
+            if (ageA !== ageB) {
+              return ageA - ageB;
+            }
+
+            return a[1].name
+              .localeCompare(
+                b[1].name
+              );
+          }
+        );
+
+
+    /*
+      Active team count.
+    */
+
+    document.getElementById(
+      "activeTeams"
+    ).textContent =
       activeTeams.length;
 
+
     if (activeTeams.length === 0) {
+
       teamsContainer.innerHTML =
-        `<div class="error">No active Cobras teams found.</div>`;
+        `
+          <div class="error">
+            No active Cobras teams found.
+          </div>
+        `;
+
       return;
     }
 
-    teamsContainer.innerHTML = "";
+
+    teamsContainer.innerHTML =
+      "";
+
+
+    /*
+      Organization totals.
+    */
 
     let organizationWins = 0;
     let organizationLosses = 0;
     let organizationTies = 0;
 
-    /*
-      Load every team schedule.
 
-      Promise.all is used so one slow team does not hold up
-      the other teams unnecessarily.
+    /*
+      Load every team's generated schedule.
+
+      Promise.all allows all team schedules to load
+      independently.
     */
 
-    const results = await Promise.all(
-      activeTeams.map(async ([teamKey, team]) => {
-        const record = await loadTeamRecord(teamKey);
+    const results =
+      await Promise.all(
 
-        console.log(
-          `[Cobras] ${team.name} record:`,
-          record
-        );
+        activeTeams.map(
+          async ([teamKey, team]) => {
 
-        return {
-          teamKey,
-          team,
-          record
-        };
-      })
-    );
+            const record =
+              await loadTeamRecord(
+                teamKey
+              );
+
+            console.log(
+              `[Cobras] ${team.name} record:`,
+              record
+            );
+
+            return {
+              teamKey,
+              team,
+              record
+            };
+          }
+        )
+      );
+
 
     /*
       Group teams by age.
@@ -456,73 +808,156 @@
 
     const groups = {};
 
-    results.forEach(result => {
-      const age = getAgeGroup(result.team.name);
 
-      if (!groups[age]) {
-        groups[age] = [];
+    results.forEach(
+      result => {
+
+        const age =
+          getAgeGroup(
+            result.team.name
+          );
+
+        if (!groups[age]) {
+          groups[age] = [];
+        }
+
+        groups[age].push(
+          result
+        );
+
+
+        /*
+          Add the team's record to the
+          organizational total.
+        */
+
+        organizationWins +=
+          result.record.wins;
+
+        organizationLosses +=
+          result.record.losses;
+
+        organizationTies +=
+          result.record.ties;
       }
+    );
 
-      groups[age].push(result);
-
-      organizationWins += result.record.wins;
-      organizationLosses += result.record.losses;
-      organizationTies += result.record.ties;
-    });
 
     /*
       Display organization totals.
     */
 
-    document.getElementById("orgWins").textContent =
+    document.getElementById(
+      "orgWins"
+    ).textContent =
       organizationWins;
 
-    document.getElementById("orgLosses").textContent =
+    document.getElementById(
+      "orgLosses"
+    ).textContent =
       organizationLosses;
 
-    document.getElementById("orgTies").textContent =
+    document.getElementById(
+      "orgTies"
+    ).textContent =
       organizationTies;
+
 
     /*
       Display teams by age group.
     */
 
     Object.keys(groups)
-      .sort((a, b) => Number(a) - Number(b))
-      .forEach(age => {
 
-        const group = document.createElement("div");
-        group.className = "age-group";
+      .sort(
+        (a, b) =>
+          Number(a) -
+          Number(b)
+      )
 
-        const title = document.createElement("div");
-        title.className = "age-title";
-        title.textContent = `${age}U`;
+      .forEach(
+        age => {
 
-        const grid = document.createElement("div");
-        grid.className = "teams-grid";
-
-        groups[age]
-          .sort((a, b) =>
-            a.team.name.localeCompare(b.team.name)
-          )
-          .forEach(result => {
-            grid.appendChild(
-              createTeamCard(
-                result.teamKey,
-                result.team,
-                result.record
-              )
+          const group =
+            document.createElement(
+              "div"
             );
-          });
 
-        group.appendChild(title);
-        group.appendChild(grid);
+          group.className =
+            "age-group";
 
-        teamsContainer.appendChild(group);
-      });
+
+          const title =
+            document.createElement(
+              "div"
+            );
+
+          title.className =
+            "age-title";
+
+          title.textContent =
+            `${age}U`;
+
+
+          const grid =
+            document.createElement(
+              "div"
+            );
+
+          grid.className =
+            "teams-grid";
+
+
+          groups[age]
+
+            .sort(
+              (a, b) =>
+                a.team.name
+                  .localeCompare(
+                    b.team.name
+                  )
+            )
+
+            .forEach(
+              result => {
+
+                grid.appendChild(
+                  createTeamCard(
+                    result.teamKey,
+                    result.team,
+                    result.record
+                  )
+                );
+
+              }
+            );
+
+
+          group.appendChild(
+            title
+          );
+
+          group.appendChild(
+            grid
+          );
+
+          teamsContainer.appendChild(
+            group
+          );
+
+        }
+      );
   }
 
+
+  /*
+    ============================================================
+    START
+    ============================================================
+  */
+
   loadOrganization();
+
 </script>
 
 </body>
