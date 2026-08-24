@@ -163,7 +163,7 @@ button:hover {
     min-height: 125px;
     border-right: 1px solid #292929;
     border-bottom: 1px solid #292929;
-    padding: 7px;
+    padding: 6px;
     position: relative;
     background: #101010;
 }
@@ -174,146 +174,261 @@ button:hover {
 
 .day.other-month {
     background: #0b0b0b;
-    color: #555;
 }
 
 .day.today {
     box-shadow: inset 0 0 0 2px #ff5a00;
 }
 
-.day-number {
-    font-size: 13px;
-    font-weight: 800;
-    color: #aaa;
+.day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 5px;
 }
 
-.today .day-number {
-    color: #ff5a00;
-}
-
-/* =========================
-   EVENTS
-========================= */
-
-.event {
-    display: block;
-    margin-bottom: 4px;
-    padding: 5px 6px;
-    border-radius: 3px;
-    font-size: 11px;
-    line-height: 1.25;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.event.game {
-    background: #262626;
-    border-left: 3px solid #ff5a00;
-}
-
-.event.organization {
-    background: #252525;
-    border-left: 3px solid #ffffff;
-}
-
-.event.tournament {
-    border-left-color: #ff5a00;
-}
-
-.event-title {
+.day-number-button {
+    background: transparent;
+    color: #aaa;
+    padding: 2px 5px;
+    font-size: 13px;
     font-weight: 800;
+    border-radius: 3px;
+}
+
+.day-number-button:hover {
+    background: #292929;
     color: #fff;
 }
 
-.event-time {
-    color: #ff8a4c;
-    font-size: 10px;
-    font-weight: 700;
-    margin-top: 2px;
+.today .day-number-button {
+    color: #ff5a00;
 }
 
-.event-meta {
-    color: #aaa;
+.day-event-count {
     font-size: 9px;
-    margin-top: 2px;
+    color: #666;
+    font-weight: 700;
 }
 
 /* =========================
-   LIST VIEW
+   COMPACT EVENTS
 ========================= */
 
-.list-view {
-    display: none;
-}
-
-.list-event {
-    display: grid;
-    grid-template-columns: 80px 1fr auto;
-    gap: 15px;
+.event {
+    display: flex;
     align-items: center;
-    padding: 13px;
-    border-bottom: 1px solid #292929;
-    background: #111;
-}
-
-.list-event:hover {
-    background: #181818;
-}
-
-.list-date {
-    text-align: center;
-    font-weight: 900;
-}
-
-.list-date .month {
-    color: #ff5a00;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 3px;
+    padding: 5px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: left;
+    background: #202020;
+    border-left: 3px solid #ff5a00;
+    color: #fff;
     font-size: 11px;
+    line-height: 1.2;
+    overflow: hidden;
 }
 
-.list-date .day-number {
-    color: white;
-    font-size: 25px;
-    margin: 0;
+.event:hover {
+    background: #303030;
 }
 
-.list-main-title {
-    font-size: 15px;
+.event.organization {
+    border-left-color: #ffffff;
+}
+
+.event-team {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: 800;
 }
 
-.list-subtitle {
-    color: #aaa;
-    font-size: 12px;
-    margin-top: 3px;
-}
-
-.list-time {
-    text-align: right;
-    font-weight: 900;
-    font-size: 15px;
-}
-
-.list-homeaway {
-    color: #ff5a00;
+.event-time {
+    flex-shrink: 0;
+    color: #ff8a4c;
     font-size: 10px;
-    margin-top: 2px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.event-all-day {
+    flex-shrink: 0;
+    color: #aaa;
+    font-size: 9px;
+    font-weight: 800;
 }
 
 /* =========================
-   FOOTER
+   MORE EVENTS INDICATOR
 ========================= */
 
-.footer {
-    text-align: center;
-    color: #777;
-    font-size: 11px;
+.more-events {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #ff5a00;
+    padding: 3px 5px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.more-events:hover {
+    background: #222;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.78);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-backdrop.visible {
+    display: flex;
+}
+
+.modal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #111;
+    border: 1px solid #444;
+    border-top: 4px solid #ff5a00;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.65);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px 18px;
+    border-bottom: 1px solid #333;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.modal-close {
+    background: #292929;
+    border: 1px solid #444;
+    font-size: 18px;
+    padding: 7px 11px;
+}
+
+.modal-body {
     padding: 18px;
 }
 
+/* =========================
+   DAY EVENT LIST
+========================= */
+
+.day-event {
+    width: 100%;
+    display: block;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-left: 4px solid #ff5a00;
+    color: white;
+    text-align: left;
+    padding: 13px;
+    margin-bottom: 9px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.day-event:hover {
+    background: #242424;
+}
+
+.day-event.organization {
+    border-left-color: #fff;
+}
+
+.day-event-title {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.day-event-details {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.day-event-time {
+    color: #ff8a4c;
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+/* =========================
+   EVENT DETAIL
+========================= */
+
+.detail-row {
+    padding: 13px 0;
+    border-bottom: 1px solid #292929;
+}
+
+.detail-label {
+    color: #777;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.detail-value {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.detail-value.orange {
+    color: #ff6a1a;
+}
+
+.detail-description {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.back-button {
+    background: #292929;
+    border: 1px solid #444;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   LOADING / ERROR
+========================= */
+
 .loading,
-.error,
-.empty {
+.error {
     padding: 50px;
     text-align: center;
     color: #aaa;
@@ -326,7 +441,7 @@ button:hover {
 @media (max-width: 800px) {
 
     .container {
-        padding: 10px;
+        padding: 8px;
     }
 
     .header {
@@ -347,27 +462,32 @@ button:hover {
         padding: 4px;
     }
 
-    .event {
-        font-size: 9px;
-        padding: 4px;
-    }
-
-    .event-meta {
-        display: none;
-    }
-
     .weekday {
         font-size: 9px;
         padding: 7px 2px;
     }
 
-    .list-event {
-        grid-template-columns: 60px 1fr;
+    .event {
+        padding: 4px;
+        font-size: 9px;
     }
 
-    .list-time {
+    .event-time {
+        font-size: 8px;
+    }
+
+    .day-event-count {
         display: none;
     }
+
+    .modal-backdrop {
+        padding: 8px;
+    }
+
+    .modal {
+        max-height: 92vh;
+    }
+
 }
 
 </style>
@@ -381,12 +501,16 @@ button:hover {
 
         <div>
             <h1>COBRAS <span>CALENDAR</span></h1>
+
             <div class="header-subtitle">
                 McHenry Cobras Baseball
             </div>
         </div>
 
-        <button class="secondary-button" onclick="showToday()">
+        <button
+            type="button"
+            class="secondary-button"
+            id="todayButton">
             TODAY
         </button>
 
@@ -397,13 +521,23 @@ button:hover {
 
         <div class="month-controls">
 
-            <button onclick="changeMonth(-1)">‹</button>
+            <button
+                type="button"
+                id="previousMonth">
+                ‹
+            </button>
 
-            <div class="month-title" id="monthTitle">
+            <div
+                class="month-title"
+                id="monthTitle">
                 Loading...
             </div>
 
-            <button onclick="changeMonth(1)">›</button>
+            <button
+                type="button"
+                id="nextMonth">
+                ›
+            </button>
 
         </div>
 
@@ -411,23 +545,23 @@ button:hover {
         <div class="filters">
 
             <button
+                type="button"
                 class="filter active"
-                data-filter="all"
-                onclick="setFilter('all')">
+                data-filter="all">
                 ALL
             </button>
 
             <button
+                type="button"
                 class="filter"
-                data-filter="gamechanger"
-                onclick="setFilter('gamechanger')">
+                data-filter="gamechanger">
                 GAMES
             </button>
 
             <button
+                type="button"
                 class="filter"
-                data-filter="organization"
-                onclick="setFilter('organization')">
+                data-filter="organization">
                 COBRAS EVENTS
             </button>
 
@@ -436,7 +570,9 @@ button:hover {
     </div>
 
 
-    <div class="calendar" id="calendar">
+    <div
+        class="calendar"
+        id="calendar">
 
         <div class="loading">
             Loading Cobras calendar...
@@ -444,12 +580,42 @@ button:hover {
 
     </div>
 
+</div>
 
-    <div class="list-view" id="listView"></div>
 
+<!-- =========================
+     MODAL
+========================= -->
 
-    <div class="footer">
-        Cobras calendar automatically updated from the organization's schedule data.
+<div
+    class="modal-backdrop"
+    id="modalBackdrop"
+    role="dialog"
+    aria-modal="true">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <h2
+                class="modal-title"
+                id="modalTitle">
+            </h2>
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modalClose">
+                ×
+            </button>
+
+        </div>
+
+        <div
+            class="modal-body"
+            id="modalBody">
+        </div>
+
     </div>
 
 </div>
@@ -458,12 +624,16 @@ button:hover {
 <script>
 
 let events = [];
-let currentDate = new Date();
-let currentFilter = "all";
+
+let currentDate =
+    new Date();
+
+let currentFilter =
+    "all";
 
 
 /* =========================
-   LOAD CALENDAR DATA
+   LOAD DATA
 ========================= */
 
 async function loadCalendar() {
@@ -478,7 +648,7 @@ async function loadCalendar() {
 
         if (!response.ok) {
             throw new Error(
-                "Unable to load calendar-events.json"
+                "Unable to load calendar data."
             );
         }
 
@@ -496,10 +666,13 @@ async function loadCalendar() {
 
         console.error(error);
 
-        document.getElementById("calendar").innerHTML =
-            `<div class="error">
+        document.getElementById(
+            "calendar"
+        ).innerHTML = `
+            <div class="error">
                 Unable to load the Cobras calendar.
-             </div>`;
+            </div>
+        `;
 
     }
 
@@ -532,6 +705,21 @@ function formatTime(date) {
 }
 
 
+function formatFullDate(date) {
+
+    return date.toLocaleDateString(
+        "en-US",
+        {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+        }
+    );
+
+}
+
+
 function sameDay(a, b) {
 
     return (
@@ -543,68 +731,85 @@ function sameDay(a, b) {
 }
 
 
-function startOfMonth(date) {
-
-    return new Date(
-        date.getFullYear(),
-        date.getMonth(),
-        1
-    );
-
-}
-
-
-function endOfMonth(date) {
-
-    return new Date(
-        date.getFullYear(),
-        date.getMonth() + 1,
-        0
-    );
-
-}
-
-
 /* =========================
    FILTERING
 ========================= */
 
-function filteredEvents() {
+function getFilteredEvents() {
 
-    if (currentFilter === "all") {
+    if (
+        currentFilter ===
+        "all"
+    ) {
+
         return events;
+
     }
 
     return events.filter(
         event =>
-            event.type === currentFilter
+            event.type ===
+            currentFilter
     );
 
 }
 
 
-function setFilter(filter) {
+/* =========================
+   EVENTS FOR DAY
+========================= */
 
-    currentFilter = filter;
+function eventsForDate(date) {
 
-    document.querySelectorAll(
-        ".filter"
-    ).forEach(button => {
+    return getFilteredEvents()
+        .filter(event => {
 
-        button.classList.toggle(
-            "active",
-            button.dataset.filter === filter
+            const start =
+                parseDate(
+                    event.start
+                );
+
+            const end =
+                event.end
+                    ? parseDate(
+                        event.end
+                      )
+                    : start;
+
+            const dayStart =
+                new Date(
+                    date.getFullYear(),
+                    date.getMonth(),
+                    date.getDate()
+                );
+
+            const dayEnd =
+                new Date(
+                    date.getFullYear(),
+                    date.getMonth(),
+                    date.getDate(),
+                    23,
+                    59,
+                    59
+                );
+
+            return (
+                start <= dayEnd &&
+                end >= dayStart
+            );
+
+        })
+        .sort(
+            (a, b) =>
+                parseDate(a.start) -
+                parseDate(b.start)
         );
-
-    });
-
-    renderCalendar();
 
 }
 
 
 /* =========================
-   CALENDAR RENDER
+   RENDER CALENDAR
 ========================= */
 
 function renderCalendar() {
@@ -615,7 +820,10 @@ function renderCalendar() {
     const month =
         currentDate.getMonth();
 
-    const monthName =
+
+    document.getElementById(
+        "monthTitle"
+    ).textContent =
         currentDate.toLocaleString(
             "en-US",
             {
@@ -623,11 +831,6 @@ function renderCalendar() {
                 year: "numeric"
             }
         );
-
-    document.getElementById(
-        "monthTitle"
-    ).textContent =
-        monthName;
 
 
     const firstDay =
@@ -644,10 +847,6 @@ function renderCalendar() {
             0
         );
 
-
-    /*
-      Sunday = 0
-    */
 
     const startingDay =
         firstDay.getDay();
@@ -675,7 +874,7 @@ function renderCalendar() {
 
 
     /*
-      Previous month cells
+       Previous month days
     */
 
     for (
@@ -684,23 +883,26 @@ function renderCalendar() {
         i++
     ) {
 
-        const previousDate =
+        const date =
             new Date(
                 year,
                 month,
-                i - startingDay + 1
+                i -
+                startingDay +
+                1
             );
 
-        html += renderDay(
-            previousDate,
-            true
-        );
+        html +=
+            renderDay(
+                date,
+                true
+            );
 
     }
 
 
     /*
-      Current month
+       Current month
     */
 
     for (
@@ -716,16 +918,17 @@ function renderCalendar() {
                 day
             );
 
-        html += renderDay(
-            date,
-            false
-        );
+        html +=
+            renderDay(
+                date,
+                false
+            );
 
     }
 
 
     /*
-      Fill final week
+       Next month days
     */
 
     const totalCells =
@@ -733,8 +936,11 @@ function renderCalendar() {
         daysInMonth;
 
     const remaining =
-        (7 -
-            (totalCells % 7)
+        (
+            7 -
+            (
+                totalCells % 7
+            )
         ) % 7;
 
 
@@ -744,17 +950,19 @@ function renderCalendar() {
         i++
     ) {
 
-        const nextDate =
+        const date =
             new Date(
                 year,
                 month,
-                daysInMonth + i
+                daysInMonth +
+                i
             );
 
-        html += renderDay(
-            nextDate,
-            true
-        );
+        html +=
+            renderDay(
+                date,
+                true
+            );
 
     }
 
@@ -769,8 +977,80 @@ function renderCalendar() {
     ).innerHTML =
         html;
 
+
+    /*
+       Attach day/event handlers
+    */
+
+    document
+        .querySelectorAll(
+            "[data-day]"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        const date =
+                            new Date(
+                                button.dataset.day
+                            );
+
+                        showDayModal(
+                            date
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    document
+        .querySelectorAll(
+            "[data-event-id]"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    event => {
+
+                        event.stopPropagation();
+
+                        const id =
+                            button.dataset.eventId;
+
+                        const selected =
+                            events.find(
+                                item =>
+                                    item.id === id
+                            );
+
+                        if (selected) {
+
+                            showEventModal(
+                                selected
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
 }
 
+
+/* =========================
+   RENDER DAY
+========================= */
 
 function renderDay(
     date,
@@ -780,28 +1060,11 @@ function renderDay(
     const today =
         new Date();
 
-
     const isToday =
         sameDay(
             date,
             today
         );
-
-
-    let classes =
-        "day";
-
-
-    if (otherMonth) {
-        classes +=
-            " other-month";
-    }
-
-
-    if (isToday) {
-        classes +=
-            " today";
-    }
 
 
     const dayEvents =
@@ -810,33 +1073,110 @@ function renderDay(
         );
 
 
+    let classes =
+        "day";
+
+    if (otherMonth) {
+        classes +=
+            " other-month";
+    }
+
+    if (isToday) {
+        classes +=
+            " today";
+    }
+
+
+    /*
+       Limit visible events in the
+       calendar cell so busy days
+       don't become enormous.
+    */
+
+    const maxVisible =
+        5;
+
+    const visibleEvents =
+        dayEvents.slice(
+            0,
+            maxVisible
+        );
+
+    const hiddenCount =
+        Math.max(
+            0,
+            dayEvents.length -
+            maxVisible
+        );
+
+
     let html = `
 
-        <div class="${classes}">
+        <div
+            class="${classes}"
+            data-day-container>
 
-            <div class="day-number">
-                ${date.getDate()}
+            <div class="day-header">
+
+                <button
+                    type="button"
+                    class="day-number-button"
+                    data-day="${formatDateKey(date)}"
+                    title="View all events for this day">
+
+                    ${date.getDate()}
+
+                </button>
+
+                ${
+                    dayEvents.length
+                        ? `
+                            <span
+                                class="day-event-count">
+                                ${dayEvents.length}
+                                ${
+                                    dayEvents.length === 1
+                                        ? "EVENT"
+                                        : "EVENTS"
+                                }
+                            </span>
+                          `
+                        : ""
+                }
+
             </div>
 
     `;
 
 
-    dayEvents
-        .sort(
-            (a, b) =>
-                new Date(a.start) -
-                new Date(b.start)
-        )
-        .forEach(
-            event => {
+    visibleEvents.forEach(
+        event => {
 
-                html +=
-                    renderEvent(
-                        event
-                    );
+            html +=
+                renderCompactEvent(
+                    event
+                );
 
-            }
-        );
+        }
+    );
+
+
+    if (hiddenCount > 0) {
+
+        html += `
+
+            <button
+                type="button"
+                class="more-events"
+                data-day="${formatDateKey(date)}">
+
+                + ${hiddenCount} more
+
+            </button>
+
+        `;
+
+    }
 
 
     html += `
@@ -850,69 +1190,325 @@ function renderDay(
 
 
 /* =========================
-   EVENTS FOR DAY
+   COMPACT EVENT
 ========================= */
 
-function eventsForDate(
-    date
+function renderCompactEvent(
+    event
 ) {
 
-    return filteredEvents()
-        .filter(
-            event => {
-
-                const start =
-                    parseDate(
-                        event.start
-                    );
-
-                const end =
-                    event.end
-                        ? parseDate(
-                            event.end
-                          )
-                        : start;
+    const isGame =
+        event.type ===
+        "gamechanger";
 
 
-                /*
-                  Normalize all-day events.
-                */
-
-                const dayStart =
-                    new Date(
-                        date.getFullYear(),
-                        date.getMonth(),
-                        date.getDate()
-                    );
-
-                const dayEnd =
-                    new Date(
-                        date.getFullYear(),
-                        date.getMonth(),
-                        date.getDate(),
-                        23,
-                        59,
-                        59
-                    );
+    let teamText =
+        event.teamName ||
+        event.title ||
+        "Cobras Event";
 
 
-                return (
-                    start <= dayEnd &&
-                    end >= dayStart
-                );
+    let timeText = "";
 
+
+    if (isGame) {
+
+        const start =
+            event.start
+                ? parseDate(
+                    event.start
+                  )
+                : null;
+
+        timeText =
+            start
+                ? formatTime(
+                    start
+                  )
+                : "";
+
+    } else {
+
+        timeText =
+            "ALL DAY";
+
+    }
+
+
+    return `
+
+        <button
+            type="button"
+            class="event ${
+                isGame
+                    ? "game"
+                    : "organization"
+            }"
+            data-event-id="${escapeAttribute(event.id)}"
+            title="View event details">
+
+            <span
+                class="event-team">
+                ${escapeHtml(teamText)}
+            </span>
+
+            ${
+                timeText === "ALL DAY"
+                    ? `
+                        <span class="event-all-day">
+                            ALL DAY
+                        </span>
+                      `
+                    : `
+                        <span class="event-time">
+                            ${escapeHtml(timeText)}
+                        </span>
+                      `
             }
-        );
+
+        </button>
+
+    `;
 
 }
 
 
 /* =========================
-   EVENT DISPLAY
+   DAY KEY
 ========================= */
 
-function renderEvent(
-    event
+function formatDateKey(date) {
+
+    const year =
+        date.getFullYear();
+
+    const month =
+        String(
+            date.getMonth() + 1
+        ).padStart(
+            2,
+            "0"
+        );
+
+    const day =
+        String(
+            date.getDate()
+        ).padStart(
+            2,
+            "0"
+        );
+
+    return `${year}-${month}-${day}`;
+
+}
+
+
+/* =========================
+   DAY MODAL
+========================= */
+
+function showDayModal(
+    date
+) {
+
+    const dayEvents =
+        eventsForDate(
+            date
+        );
+
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+        formatFullDate(
+            date
+        );
+
+
+    if (!dayEvents.length) {
+
+        document.getElementById(
+            "modalBody"
+        ).innerHTML = `
+
+            <div
+                style="
+                    text-align:center;
+                    padding:25px;
+                    color:#888;
+                ">
+
+                No Cobras events scheduled
+                for this day.
+
+            </div>
+
+        `;
+
+    } else {
+
+        let html = "";
+
+
+        dayEvents.forEach(
+            event => {
+
+                const isGame =
+                    event.type ===
+                    "gamechanger";
+
+
+                const start =
+                    event.start
+                        ? parseDate(
+                            event.start
+                          )
+                        : null;
+
+
+                let title =
+                    isGame
+                        ? event.teamName
+                        : event.title;
+
+
+                let details = "";
+
+
+                if (isGame) {
+
+                    details =
+                        `
+                            <span
+                                class="day-event-time">
+
+                                ${
+                                    start
+                                        ? formatTime(start)
+                                        : ""
+                                }
+
+                            </span>
+
+                            vs
+                            ${
+                                escapeHtml(
+                                    event.opponent ||
+                                    "Opponent"
+                                )
+                            }
+
+                            ${
+                                event.homeAway
+                                    ? `
+                                        —
+                                        ${
+                                            event.homeAway ===
+                                            "home"
+                                                ? "HOME"
+                                                : "AWAY"
+                                        }
+                                      `
+                                    : ""
+                            }
+                        `;
+
+                } else {
+
+                    details =
+                        event.category ||
+                        "COBRAS EVENT";
+
+                }
+
+
+                html += `
+
+                    <button
+                        type="button"
+                        class="day-event ${
+                            isGame
+                                ? ""
+                                : "organization"
+                        }"
+                        data-event-id="${escapeAttribute(event.id)}">
+
+                        <div
+                            class="day-event-title">
+
+                            ${escapeHtml(title)}
+
+                        </div>
+
+                        <div
+                            class="day-event-details">
+
+                            ${details}
+
+                        </div>
+
+                    </button>
+
+                `;
+
+            }
+        );
+
+
+        document.getElementById(
+            "modalBody"
+        ).innerHTML =
+            html;
+
+
+        document
+            .querySelectorAll(
+                "#modalBody [data-event-id]"
+            )
+            .forEach(
+                button => {
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            const event =
+                                events.find(
+                                    item =>
+                                        item.id ===
+                                        button.dataset.eventId
+                                );
+
+                            if (event) {
+
+                                showEventModal(
+                                    event,
+                                    date
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+
+
+    openModal();
+
+}
+
+
+/* =========================
+   EVENT DETAIL MODAL
+========================= */
+
+function showEventModal(
+    event,
+    returnDate = null
 ) {
 
     const isGame =
@@ -928,196 +1524,523 @@ function renderEvent(
             : null;
 
 
-    let title =
-        event.title ||
-        "Cobras Event";
+    const end =
+        event.end
+            ? parseDate(
+                event.end
+              )
+            : null;
 
 
-    let meta = "";
+    let html = "";
 
 
-    if (isGame) {
+    if (returnDate) {
 
-        title =
-            `${event.teamName} vs ${event.opponent}`;
+        html += `
 
-        meta =
-            event.homeAway === "home"
-                ? "HOME"
-                : event.homeAway === "away"
-                    ? "AWAY"
-                    : "";
+            <button
+                type="button"
+                class="back-button"
+                id="backToDay">
 
-    } else {
+                ← Back to day's events
 
-        meta =
-            event.category ||
-            "COBRAS EVENT";
+            </button>
+
+        `;
 
     }
 
 
-    const time =
-        event.allDay
-            ? ""
-            : formatTime(
-                start
-              );
+    if (isGame) {
 
+        html += `
 
-    return `
+            <div class="detail-row">
 
-        <div
-            class="event ${
-                isGame
-                    ? "game"
-                    : "organization"
-            }"
-            onclick='showEvent(${JSON.stringify(event)})'
-        >
+                <div class="detail-label">
+                    Team
+                </div>
 
-            <div class="event-title">
-                ${escapeHtml(title)}
+                <div class="detail-value">
+                    ${escapeHtml(
+                        event.teamName
+                    )}
+                </div>
+
             </div>
 
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Opponent
+                </div>
+
+                <div class="detail-value">
+                    ${escapeHtml(
+                        event.opponent ||
+                        "Opponent"
+                    )}
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Date & Time
+                </div>
+
+                <div class="detail-value">
+
+                    ${
+                        start
+                            ? start.toLocaleString(
+                                "en-US",
+                                {
+                                    weekday:
+                                        "long",
+                                    month:
+                                        "long",
+                                    day:
+                                        "numeric",
+                                    year:
+                                        "numeric",
+                                    hour:
+                                        "numeric",
+                                    minute:
+                                        "2-digit"
+                                }
+                              )
+                            : ""
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Location
+                </div>
+
+                <div class="detail-value">
+                    ${
+                        event.location ||
+                        "Location information not currently available"
+                    }
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Home / Away
+                </div>
+
+                <div class="detail-value orange">
+
+                    ${
+                        event.homeAway === "home"
+                            ? "HOME"
+                            : event.homeAway === "away"
+                                ? "AWAY"
+                                : "Not specified"
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Season
+                </div>
+
+                <div class="detail-value">
+                    ${escapeHtml(
+                        event.season ||
+                        ""
+                    )}
+                </div>
+
+            </div>
+
+        `;
+
+    } else {
+
+        html += `
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Event
+                </div>
+
+                <div class="detail-value">
+                    ${escapeHtml(
+                        event.title
+                    )}
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Date
+                </div>
+
+                <div class="detail-value">
+
+                    ${
+                        start
+                            ? start.toLocaleDateString(
+                                "en-US",
+                                {
+                                    weekday:
+                                        "long",
+                                    month:
+                                        "long",
+                                    day:
+                                        "numeric",
+                                    year:
+                                        "numeric"
+                                }
+                              )
+                            : ""
+                    }
+
+                </div>
+
+            </div>
+
+
             ${
-                time
-                    ? `<div class="event-time">
-                         ${time}
-                       </div>`
+                end &&
+                start &&
+                !sameDay(start, end)
+                    ? `
+                        <div class="detail-row">
+
+                            <div class="detail-label">
+                                Through
+                            </div>
+
+                            <div class="detail-value">
+
+                                ${
+                                    end.toLocaleDateString(
+                                        "en-US",
+                                        {
+                                            weekday:
+                                                "long",
+                                            month:
+                                                "long",
+                                            day:
+                                                "numeric",
+                                            year:
+                                                "numeric"
+                                        }
+                                    )
+                                }
+
+                            </div>
+
+                        </div>
+                      `
                     : ""
             }
 
-            <div class="event-meta">
-                ${escapeHtml(meta)}
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Category
+                </div>
+
+                <div class="detail-value orange">
+
+                    ${
+                        escapeHtml(
+                            event.category ||
+                            "Cobras Event"
+                        )
+                    }
+
+                </div>
+
             </div>
 
-        </div>
 
-    `;
+            ${
+                event.description
+                    ? `
+                        <div class="detail-row">
+
+                            <div class="detail-label">
+                                Details
+                            </div>
+
+                            <div
+                                class="detail-description">
+
+                                ${escapeHtml(
+                                    event.description
+                                )}
+
+                            </div>
+
+                        </div>
+                      `
+                    : ""
+            }
+
+        `;
+
+    }
+
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+        isGame
+            ? "Game Details"
+            : "Cobras Event";
+
+
+    document.getElementById(
+        "modalBody"
+    ).innerHTML =
+        html;
+
+
+    if (returnDate) {
+
+        const backButton =
+            document.getElementById(
+                "backToDay"
+            );
+
+        if (backButton) {
+
+            backButton.addEventListener(
+                "click",
+                () => {
+
+                    showDayModal(
+                        returnDate
+                    );
+
+                }
+            );
+
+        }
+
+    }
+
+
+    openModal();
 
 }
 
 
 /* =========================
-   EVENT DETAIL
+   MODAL CONTROLS
 ========================= */
 
-function showEvent(event) {
+function openModal() {
 
-    const start =
-        event.start
-            ? parseDate(
-                event.start
-              )
-            : null;
-
-
-    let message =
-        event.title ||
-        "Cobras Event";
-
-
-    if (
-        event.type ===
-        "gamechanger"
-    ) {
-
-        message +=
-            "\n\n" +
-            event.teamName +
-            "\n" +
-            event.opponent;
-
-
-        if (start) {
-
-            message +=
-                "\n" +
-                start.toLocaleString(
-                    "en-US",
-                    {
-                        dateStyle:
-                            "full",
-                        timeStyle:
-                            "short"
-                    }
-                );
-
-        }
-
-
-        if (event.homeAway) {
-
-            message +=
-                "\n" +
-                (
-                    event.homeAway ===
-                    "home"
-                        ? "HOME"
-                        : "AWAY"
-                );
-
-        }
-
-    } else {
-
-        message +=
-            "\n\n" +
-            (
-                event.description ||
-                event.category ||
-                ""
-            );
-
-    }
-
-
-    alert(message);
+    document.getElementById(
+        "modalBackdrop"
+    ).classList.add(
+        "visible"
+    );
 
 }
+
+
+function closeModal() {
+
+    document.getElementById(
+        "modalBackdrop"
+    ).classList.remove(
+        "visible"
+    );
+
+}
+
+
+document.getElementById(
+    "modalClose"
+).addEventListener(
+    "click",
+    closeModal
+);
+
+
+document.getElementById(
+    "modalBackdrop"
+).addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            document.getElementById(
+                "modalBackdrop"
+            )
+        ) {
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            closeModal();
+
+        }
+
+    }
+);
 
 
 /* =========================
    NAVIGATION
 ========================= */
 
-function changeMonth(
-    amount
-) {
+document.getElementById(
+    "previousMonth"
+).addEventListener(
+    "click",
+    () => {
 
-    currentDate =
-        new Date(
-            currentDate.getFullYear(),
-            currentDate.getMonth() +
-                amount,
-            1
-        );
+        currentDate =
+            new Date(
+                currentDate.getFullYear(),
+                currentDate.getMonth() - 1,
+                1
+            );
 
-    renderCalendar();
+        renderCalendar();
 
-}
+    }
+);
 
 
-function showToday() {
+document.getElementById(
+    "nextMonth"
+).addEventListener(
+    "click",
+    () => {
 
-    currentDate =
-        new Date();
+        currentDate =
+            new Date(
+                currentDate.getFullYear(),
+                currentDate.getMonth() + 1,
+                1
+            );
 
-    renderCalendar();
+        renderCalendar();
 
-}
+    }
+);
+
+
+document.getElementById(
+    "todayButton"
+).addEventListener(
+    "click",
+    () => {
+
+        currentDate =
+            new Date();
+
+        renderCalendar();
+
+    }
+);
 
 
 /* =========================
-   ESCAPE HTML
+   FILTER BUTTONS
+========================= */
+
+document
+    .querySelectorAll(
+        ".filter"
+    )
+    .forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    currentFilter =
+                        button.dataset.filter;
+
+
+                    document
+                        .querySelectorAll(
+                            ".filter"
+                        )
+                        .forEach(
+                            item => {
+
+                                item.classList.toggle(
+                                    "active",
+                                    item.dataset.filter ===
+                                    currentFilter
+                                );
+
+                            }
+                        );
+
+
+                    renderCalendar();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================
+   ESCAPE HELPERS
 ========================= */
 
 function escapeHtml(
     value
 ) {
 
-    return String(value || "")
+    return String(
+        value || ""
+    )
         .replace(
             /&/g,
             "&amp;"
@@ -1138,6 +2061,17 @@ function escapeHtml(
             /'/g,
             "&#039;"
         );
+
+}
+
+
+function escapeAttribute(
+    value
+) {
+
+    return escapeHtml(
+        value
+    );
 
 }
 
