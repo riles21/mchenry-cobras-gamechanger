@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>McHenry Cobras Calendar</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0d0d0d;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.header h1 span {
+    color: #ff5a00;
+}
+
+.header-subtitle {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: #151515;
+    border: 1px solid #333;
+    border-top: 3px solid #ff5a00;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.month-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.month-title {
+    min-width: 190px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+button {
+    border: none;
+    background: #ff5a00;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 9px 13px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background: #ff761f;
+}
+
+.secondary-button {
+    background: #292929;
+    border: 1px solid #444;
+}
+
+.secondary-button:hover {
+    background: #3a3a3a;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 7px 12px;
+    background: #242424;
+    border: 1px solid #444;
+    color: #ddd;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.filter.active {
+    background: #ff5a00;
+    border-color: #ff5a00;
+    color: white;
+}
+
+/* =========================
+   CALENDAR
+========================= */
+
+.calendar {
+    background: #111;
+    border: 1px solid #333;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #1b1b1b;
+    border-bottom: 1px solid #444;
+}
+
+.weekday {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: #aaa;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    min-height: 125px;
+    border-right: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    padding: 7px;
+    position: relative;
+    background: #101010;
+}
+
+.day:nth-child(7n) {
+    border-right: none;
+}
+
+.day.other-month {
+    background: #0b0b0b;
+    color: #555;
+}
+
+.day.today {
+    box-shadow: inset 0 0 0 2px #ff5a00;
+}
+
+.day-number {
+    font-size: 13px;
+    font-weight: 800;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.today .day-number {
+    color: #ff5a00;
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.event {
+    display: block;
+    margin-bottom: 4px;
+    padding: 5px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    line-height: 1.25;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.event.game {
+    background: #262626;
+    border-left: 3px solid #ff5a00;
+}
+
+.event.organization {
+    background: #252525;
+    border-left: 3px solid #ffffff;
+}
+
+.event.tournament {
+    border-left-color: #ff5a00;
+}
+
+.event-title {
+    font-weight: 800;
+    color: #fff;
+}
+
+.event-time {
+    color: #ff8a4c;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.event-meta {
+    color: #aaa;
+    font-size: 9px;
+    margin-top: 2px;
+}
+
+/* =========================
+   LIST VIEW
+========================= */
+
+.list-view {
+    display: none;
+}
+
+.list-event {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 15px;
+    align-items: center;
+    padding: 13px;
+    border-bottom: 1px solid #292929;
+    background: #111;
+}
+
+.list-event:hover {
+    background: #181818;
+}
+
+.list-date {
+    text-align: center;
+    font-weight: 900;
+}
+
+.list-date .month {
+    color: #ff5a00;
+    font-size: 11px;
+}
+
+.list-date .day-number {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+}
+
+.list-main-title {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.list-subtitle {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.list-time {
+    text-align: right;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.list-homeaway {
+    color: #ff5a00;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 11px;
+    padding: 18px;
+}
+
+.loading,
+.error,
+.empty {
+    padding: 50px;
+    text-align: center;
+    color: #aaa;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .month-title {
+        min-width: 150px;
+        font-size: 18px;
+    }
+
+    .day {
+        min-height: 90px;
+        padding: 4px;
+    }
+
+    .event {
+        font-size: 9px;
+        padding: 4px;
+    }
+
+    .event-meta {
+        display: none;
+    }
+
+    .weekday {
+        font-size: 9px;
+        padding: 7px 2px;
+    }
+
+    .list-event {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .list-time {
+        display: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div>
+            <h1>COBRAS <span>CALENDAR</span></h1>
+            <div class="header-subtitle">
+                McHenry Cobras Baseball
+            </div>
+        </div>
+
+        <button class="secondary-button" onclick="showToday()">
+            TODAY
+        </button>
+
+    </div>
+
+
+    <div class="controls">
+
+        <div class="month-controls">
+
+            <button onclick="changeMonth(-1)">‹</button>
+
+            <div class="month-title" id="monthTitle">
+                Loading...
+            </div>
+
+            <button onclick="changeMonth(1)">›</button>
+
+        </div>
+
+
+        <div class="filters">
+
+            <button
+                class="filter active"
+                data-filter="all"
+                onclick="setFilter('all')">
+                ALL
+            </button>
+
+            <button
+                class="filter"
+                data-filter="gamechanger"
+                onclick="setFilter('gamechanger')">
+                GAMES
+            </button>
+
+            <button
+                class="filter"
+                data-filter="organization"
+                onclick="setFilter('organization')">
+                COBRAS EVENTS
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="calendar" id="calendar">
+
+        <div class="loading">
+            Loading Cobras calendar...
+        </div>
+
+    </div>
+
+
+    <div class="list-view" id="listView"></div>
+
+
+    <div class="footer">
+        Cobras calendar automatically updated from the organization's schedule data.
+    </div>
+
+</div>
+
+
+<script>
+
+let events = [];
+let currentDate = new Date();
+let currentFilter = "all";
+
+
+/* =========================
+   LOAD CALENDAR DATA
+========================= */
+
+async function loadCalendar() {
+
+    try {
+
+        const response =
+            await fetch(
+                "calendar-events.json?t=" +
+                Date.now()
+            );
+
+        if (!response.ok) {
+            throw new Error(
+                "Unable to load calendar-events.json"
+            );
+        }
+
+        const data =
+            await response.json();
+
+        events =
+            Array.isArray(data.events)
+                ? data.events
+                : [];
+
+        renderCalendar();
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("calendar").innerHTML =
+            `<div class="error">
+                Unable to load the Cobras calendar.
+             </div>`;
+
+    }
+
+}
+
+
+/* =========================
+   DATE HELPERS
+========================= */
+
+function parseDate(value) {
+
+    return new Date(value);
+
+}
+
+
+function formatTime(date) {
+
+    if (!date) return "";
+
+    return date.toLocaleTimeString(
+        "en-US",
+        {
+            hour: "numeric",
+            minute: "2-digit"
+        }
+    );
+
+}
+
+
+function sameDay(a, b) {
+
+    return (
+        a.getFullYear() === b.getFullYear() &&
+        a.getMonth() === b.getMonth() &&
+        a.getDate() === b.getDate()
+    );
+
+}
+
+
+function startOfMonth(date) {
+
+    return new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        1
+    );
+
+}
+
+
+function endOfMonth(date) {
+
+    return new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        0
+    );
+
+}
+
+
+/* =========================
+   FILTERING
+========================= */
+
+function filteredEvents() {
+
+    if (currentFilter === "all") {
+        return events;
+    }
+
+    return events.filter(
+        event =>
+            event.type === currentFilter
+    );
+
+}
+
+
+function setFilter(filter) {
+
+    currentFilter = filter;
+
+    document.querySelectorAll(
+        ".filter"
+    ).forEach(button => {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.filter === filter
+        );
+
+    });
+
+    renderCalendar();
+
+}
+
+
+/* =========================
+   CALENDAR RENDER
+========================= */
+
+function renderCalendar() {
+
+    const year =
+        currentDate.getFullYear();
+
+    const month =
+        currentDate.getMonth();
+
+    const monthName =
+        currentDate.toLocaleString(
+            "en-US",
+            {
+                month: "long",
+                year: "numeric"
+            }
+        );
+
+    document.getElementById(
+        "monthTitle"
+    ).textContent =
+        monthName;
+
+
+    const firstDay =
+        new Date(
+            year,
+            month,
+            1
+        );
+
+    const lastDay =
+        new Date(
+            year,
+            month + 1,
+            0
+        );
+
+
+    /*
+      Sunday = 0
+    */
+
+    const startingDay =
+        firstDay.getDay();
+
+    const daysInMonth =
+        lastDay.getDate();
+
+
+    let html = `
+
+        <div class="weekdays">
+
+            <div class="weekday">SUN</div>
+            <div class="weekday">MON</div>
+            <div class="weekday">TUE</div>
+            <div class="weekday">WED</div>
+            <div class="weekday">THU</div>
+            <div class="weekday">FRI</div>
+            <div class="weekday">SAT</div>
+
+        </div>
+
+        <div class="days">
+    `;
+
+
+    /*
+      Previous month cells
+    */
+
+    for (
+        let i = 0;
+        i < startingDay;
+        i++
+    ) {
+
+        const previousDate =
+            new Date(
+                year,
+                month,
+                i - startingDay + 1
+            );
+
+        html += renderDay(
+            previousDate,
+            true
+        );
+
+    }
+
+
+    /*
+      Current month
+    */
+
+    for (
+        let day = 1;
+        day <= daysInMonth;
+        day++
+    ) {
+
+        const date =
+            new Date(
+                year,
+                month,
+                day
+            );
+
+        html += renderDay(
+            date,
+            false
+        );
+
+    }
+
+
+    /*
+      Fill final week
+    */
+
+    const totalCells =
+        startingDay +
+        daysInMonth;
+
+    const remaining =
+        (7 -
+            (totalCells % 7)
+        ) % 7;
+
+
+    for (
+        let i = 1;
+        i <= remaining;
+        i++
+    ) {
+
+        const nextDate =
+            new Date(
+                year,
+                month,
+                daysInMonth + i
+            );
+
+        html += renderDay(
+            nextDate,
+            true
+        );
+
+    }
+
+
+    html += `
+        </div>
+    `;
+
+
+    document.getElementById(
+        "calendar"
+    ).innerHTML =
+        html;
+
+}
+
+
+function renderDay(
+    date,
+    otherMonth
+) {
+
+    const today =
+        new Date();
+
+
+    const isToday =
+        sameDay(
+            date,
+            today
+        );
+
+
+    let classes =
+        "day";
+
+
+    if (otherMonth) {
+        classes +=
+            " other-month";
+    }
+
+
+    if (isToday) {
+        classes +=
+            " today";
+    }
+
+
+    const dayEvents =
+        eventsForDate(
+            date
+        );
+
+
+    let html = `
+
+        <div class="${classes}">
+
+            <div class="day-number">
+                ${date.getDate()}
+            </div>
+
+    `;
+
+
+    dayEvents
+        .sort(
+            (a, b) =>
+                new Date(a.start) -
+                new Date(b.start)
+        )
+        .forEach(
+            event => {
+
+                html +=
+                    renderEvent(
+                        event
+                    );
+
+            }
+        );
+
+
+    html += `
+        </div>
+    `;
+
+
+    return html;
+
+}
+
+
+/* =========================
+   EVENTS FOR DAY
+========================= */
+
+function eventsForDate(
+    date
+) {
+
+    return filteredEvents()
+        .filter(
+            event => {
+
+                const start =
+                    parseDate(
+                        event.start
+                    );
+
+                const end =
+                    event.end
+                        ? parseDate(
+                            event.end
+                          )
+                        : start;
+
+
+                /*
+                  Normalize all-day events.
+                */
+
+                const dayStart =
+                    new Date(
+                        date.getFullYear(),
+                        date.getMonth(),
+                        date.getDate()
+                    );
+
+                const dayEnd =
+                    new Date(
+                        date.getFullYear(),
+                        date.getMonth(),
+                        date.getDate(),
+                        23,
+                        59,
+                        59
+                    );
+
+
+                return (
+                    start <= dayEnd &&
+                    end >= dayStart
+                );
+
+            }
+        );
+
+}
+
+
+/* =========================
+   EVENT DISPLAY
+========================= */
+
+function renderEvent(
+    event
+) {
+
+    const isGame =
+        event.type ===
+        "gamechanger";
+
+
+    const start =
+        event.start
+            ? parseDate(
+                event.start
+              )
+            : null;
+
+
+    let title =
+        event.title ||
+        "Cobras Event";
+
+
+    let meta = "";
+
+
+    if (isGame) {
+
+        title =
+            `${event.teamName} vs ${event.opponent}`;
+
+        meta =
+            event.homeAway === "home"
+                ? "HOME"
+                : event.homeAway === "away"
+                    ? "AWAY"
+                    : "";
+
+    } else {
+
+        meta =
+            event.category ||
+            "COBRAS EVENT";
+
+    }
+
+
+    const time =
+        event.allDay
+            ? ""
+            : formatTime(
+                start
+              );
+
+
+    return `
+
+        <div
+            class="event ${
+                isGame
+                    ? "game"
+                    : "organization"
+            }"
+            onclick='showEvent(${JSON.stringify(event)})'
+        >
+
+            <div class="event-title">
+                ${escapeHtml(title)}
+            </div>
+
+            ${
+                time
+                    ? `<div class="event-time">
+                         ${time}
+                       </div>`
+                    : ""
+            }
+
+            <div class="event-meta">
+                ${escapeHtml(meta)}
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================
+   EVENT DETAIL
+========================= */
+
+function showEvent(event) {
+
+    const start =
+        event.start
+            ? parseDate(
+                event.start
+              )
+            : null;
+
+
+    let message =
+        event.title ||
+        "Cobras Event";
+
+
+    if (
+        event.type ===
+        "gamechanger"
+    ) {
+
+        message +=
+            "\n\n" +
+            event.teamName +
+            "\n" +
+            event.opponent;
+
+
+        if (start) {
+
+            message +=
+                "\n" +
+                start.toLocaleString(
+                    "en-US",
+                    {
+                        dateStyle:
+                            "full",
+                        timeStyle:
+                            "short"
+                    }
+                );
+
+        }
+
+
+        if (event.homeAway) {
+
+            message +=
+                "\n" +
+                (
+                    event.homeAway ===
+                    "home"
+                        ? "HOME"
+                        : "AWAY"
+                );
+
+        }
+
+    } else {
+
+        message +=
+            "\n\n" +
+            (
+                event.description ||
+                event.category ||
+                ""
+            );
+
+    }
+
+
+    alert(message);
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+function changeMonth(
+    amount
+) {
+
+    currentDate =
+        new Date(
+            currentDate.getFullYear(),
+            currentDate.getMonth() +
+                amount,
+            1
+        );
+
+    renderCalendar();
+
+}
+
+
+function showToday() {
+
+    currentDate =
+        new Date();
+
+    renderCalendar();
+
+}
+
+
+/* =========================
+   ESCAPE HTML
+========================= */
+
+function escapeHtml(
+    value
+) {
+
+    return String(value || "")
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+loadCalendar();
+
+</script>
+
+</body>
+</html>
