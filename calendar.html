@@ -266,7 +266,7 @@ button:hover {
 }
 
 /* =========================
-   MORE EVENTS INDICATOR
+   MORE EVENTS
 ========================= */
 
 .more-events {
@@ -365,7 +365,7 @@ button:hover {
 }
 
 .day-event.organization {
-    border-left-color: #fff;
+    border-left-color: #ffffff;
 }
 
 .day-event-title {
@@ -386,7 +386,7 @@ button:hover {
 }
 
 /* =========================
-   EVENT DETAIL
+   EVENT DETAILS
 ========================= */
 
 .detail-row {
@@ -435,7 +435,7 @@ button:hover {
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 
 @media (max-width: 800px) {
@@ -583,10 +583,6 @@ button:hover {
 </div>
 
 
-<!-- =========================
-     MODAL
-========================= -->
-
 <div
     class="modal-backdrop"
     id="modalBackdrop"
@@ -625,16 +621,10 @@ button:hover {
 
 let events = [];
 
-let currentDate =
-    new Date();
+let currentDate = new Date();
 
-let currentFilter =
-    "all";
+let currentFilter = "all";
 
-
-/* =========================
-   LOAD DATA
-========================= */
 
 async function loadCalendar() {
 
@@ -679,14 +669,8 @@ async function loadCalendar() {
 }
 
 
-/* =========================
-   DATE HELPERS
-========================= */
-
 function parseDate(value) {
-
     return new Date(value);
-
 }
 
 
@@ -731,33 +715,19 @@ function sameDay(a, b) {
 }
 
 
-/* =========================
-   FILTERING
-========================= */
-
 function getFilteredEvents() {
 
-    if (
-        currentFilter ===
-        "all"
-    ) {
-
+    if (currentFilter === "all") {
         return events;
-
     }
 
     return events.filter(
         event =>
-            event.type ===
-            currentFilter
+            event.type === currentFilter
     );
 
 }
 
-
-/* =========================
-   EVENTS FOR DAY
-========================= */
 
 function eventsForDate(date) {
 
@@ -765,15 +735,11 @@ function eventsForDate(date) {
         .filter(event => {
 
             const start =
-                parseDate(
-                    event.start
-                );
+                parseDate(event.start);
 
             const end =
                 event.end
-                    ? parseDate(
-                        event.end
-                      )
+                    ? parseDate(event.end)
                     : start;
 
             const dayStart =
@@ -808,10 +774,6 @@ function eventsForDate(date) {
 }
 
 
-/* =========================
-   RENDER CALENDAR
-========================= */
-
 function renderCalendar() {
 
     const year =
@@ -819,7 +781,6 @@ function renderCalendar() {
 
     const month =
         currentDate.getMonth();
-
 
     document.getElementById(
         "monthTitle"
@@ -847,7 +808,6 @@ function renderCalendar() {
             0
         );
 
-
     const startingDay =
         firstDay.getDay();
 
@@ -873,10 +833,6 @@ function renderCalendar() {
     `;
 
 
-    /*
-       Previous month days
-    */
-
     for (
         let i = 0;
         i < startingDay;
@@ -887,9 +843,7 @@ function renderCalendar() {
             new Date(
                 year,
                 month,
-                i -
-                startingDay +
-                1
+                i - startingDay + 1
             );
 
         html +=
@@ -900,10 +854,6 @@ function renderCalendar() {
 
     }
 
-
-    /*
-       Current month
-    */
 
     for (
         let day = 1;
@@ -926,10 +876,6 @@ function renderCalendar() {
 
     }
 
-
-    /*
-       Next month days
-    */
 
     const totalCells =
         startingDay +
@@ -954,8 +900,7 @@ function renderCalendar() {
             new Date(
                 year,
                 month,
-                daysInMonth +
-                i
+                daysInMonth + i
             );
 
         html +=
@@ -978,10 +923,6 @@ function renderCalendar() {
         html;
 
 
-    /*
-       Attach day/event handlers
-    */
-
     document
         .querySelectorAll(
             "[data-day]"
@@ -995,7 +936,8 @@ function renderCalendar() {
 
                         const date =
                             new Date(
-                                button.dataset.day
+                                button.dataset.day +
+                                "T12:00:00"
                             );
 
                         showDayModal(
@@ -1022,21 +964,17 @@ function renderCalendar() {
 
                         event.stopPropagation();
 
-                        const id =
-                            button.dataset.eventId;
-
                         const selected =
                             events.find(
                                 item =>
-                                    item.id === id
+                                    item.id ===
+                                    button.dataset.eventId
                             );
 
                         if (selected) {
-
                             showEventModal(
                                 selected
                             );
-
                         }
 
                     }
@@ -1047,10 +985,6 @@ function renderCalendar() {
 
 }
 
-
-/* =========================
-   RENDER DAY
-========================= */
 
 function renderDay(
     date,
@@ -1066,7 +1000,6 @@ function renderDay(
             today
         );
 
-
     const dayEvents =
         eventsForDate(
             date
@@ -1077,24 +1010,15 @@ function renderDay(
         "day";
 
     if (otherMonth) {
-        classes +=
-            " other-month";
+        classes += " other-month";
     }
 
     if (isToday) {
-        classes +=
-            " today";
+        classes += " today";
     }
 
 
-    /*
-       Limit visible events in the
-       calendar cell so busy days
-       don't become enormous.
-    */
-
-    const maxVisible =
-        5;
+    const maxVisible = 5;
 
     const visibleEvents =
         dayEvents.slice(
@@ -1112,17 +1036,14 @@ function renderDay(
 
     let html = `
 
-        <div
-            class="${classes}"
-            data-day-container>
+        <div class="${classes}">
 
             <div class="day-header">
 
                 <button
                     type="button"
                     class="day-number-button"
-                    data-day="${formatDateKey(date)}"
-                    title="View all events for this day">
+                    data-day="${formatDateKey(date)}">
 
                     ${date.getDate()}
 
@@ -1131,8 +1052,7 @@ function renderDay(
                 ${
                     dayEvents.length
                         ? `
-                            <span
-                                class="day-event-count">
+                            <span class="day-event-count">
                                 ${dayEvents.length}
                                 ${
                                     dayEvents.length === 1
@@ -1189,10 +1109,6 @@ function renderDay(
 }
 
 
-/* =========================
-   COMPACT EVENT
-========================= */
-
 function renderCompactEvent(
     event
 ) {
@@ -1202,10 +1118,19 @@ function renderCompactEvent(
         "gamechanger";
 
 
-    let teamText =
-        event.teamName ||
-        event.title ||
-        "Cobras Event";
+    /*
+       IMPORTANT:
+       Organization events use their
+       actual title rather than
+       "All Cobras".
+    */
+
+    const displayName =
+        !isGame
+            ? event.title
+            : event.teamName ||
+              event.title ||
+              "Cobras Event";
 
 
     let timeText = "";
@@ -1222,9 +1147,7 @@ function renderCompactEvent(
 
         timeText =
             start
-                ? formatTime(
-                    start
-                  )
+                ? formatTime(start)
                 : "";
 
     } else {
@@ -1247,9 +1170,8 @@ function renderCompactEvent(
             data-event-id="${escapeAttribute(event.id)}"
             title="View event details">
 
-            <span
-                class="event-team">
-                ${escapeHtml(teamText)}
+            <span class="event-team">
+                ${escapeHtml(displayName)}
             </span>
 
             ${
@@ -1272,10 +1194,6 @@ function renderCompactEvent(
 
 }
 
-
-/* =========================
-   DAY KEY
-========================= */
 
 function formatDateKey(date) {
 
@@ -1304,12 +1222,10 @@ function formatDateKey(date) {
 
 
 /* =========================
-   DAY MODAL
+   DAY POPUP
 ========================= */
 
-function showDayModal(
-    date
-) {
+function showDayModal(date) {
 
     const dayEvents =
         eventsForDate(
@@ -1377,47 +1293,49 @@ function showDayModal(
 
                 if (isGame) {
 
-                    details =
-                        `
-                            <span
-                                class="day-event-time">
+                    details = `
 
-                                ${
-                                    start
-                                        ? formatTime(start)
-                                        : ""
-                                }
-
-                            </span>
-
-                            vs
-                            ${
-                                escapeHtml(
-                                    event.opponent ||
-                                    "Opponent"
-                                )
-                            }
+                        <span class="day-event-time">
 
                             ${
-                                event.homeAway
-                                    ? `
-                                        —
-                                        ${
-                                            event.homeAway ===
-                                            "home"
-                                                ? "HOME"
-                                                : "AWAY"
-                                        }
-                                      `
+                                start
+                                    ? formatTime(start)
                                     : ""
                             }
-                        `;
+
+                        </span>
+
+                        vs
+                        ${
+                            escapeHtml(
+                                event.opponent ||
+                                "Opponent"
+                            )
+                        }
+
+                        ${
+                            event.homeAway
+                                ? `
+                                    —
+                                    ${
+                                        event.homeAway ===
+                                        "home"
+                                            ? "HOME"
+                                            : "AWAY"
+                                    }
+                                  `
+                                : ""
+                        }
+
+                    `;
 
                 } else {
 
                     details =
-                        event.category ||
-                        "COBRAS EVENT";
+                        escapeHtml(
+                            event.category ||
+                            "Cobras Event"
+                        );
 
                 }
 
@@ -1433,18 +1351,12 @@ function showDayModal(
                         }"
                         data-event-id="${escapeAttribute(event.id)}">
 
-                        <div
-                            class="day-event-title">
-
+                        <div class="day-event-title">
                             ${escapeHtml(title)}
-
                         </div>
 
-                        <div
-                            class="day-event-details">
-
+                        <div class="day-event-details">
                             ${details}
-
                         </div>
 
                     </button>
@@ -1503,7 +1415,7 @@ function showDayModal(
 
 
 /* =========================
-   EVENT DETAIL MODAL
+   EVENT DETAIL POPUP
 ========================= */
 
 function showEventModal(
@@ -1771,14 +1683,10 @@ function showEventModal(
                 </div>
 
                 <div class="detail-value orange">
-
-                    ${
-                        escapeHtml(
-                            event.category ||
-                            "Cobras Event"
-                        )
-                    }
-
+                    ${escapeHtml(
+                        event.category ||
+                        "Cobras Event"
+                    )}
                 </div>
 
             </div>
@@ -1793,8 +1701,7 @@ function showEventModal(
                                 Details
                             </div>
 
-                            <div
-                                class="detail-description">
+                            <div class="detail-description">
 
                                 ${escapeHtml(
                                     event.description
@@ -1855,10 +1762,6 @@ function showEventModal(
 
 }
 
-
-/* =========================
-   MODAL CONTROLS
-========================= */
 
 function openModal() {
 
@@ -1986,7 +1889,7 @@ document.getElementById(
 
 
 /* =========================
-   FILTER BUTTONS
+   FILTERS
 ========================= */
 
 document
@@ -2034,9 +1937,7 @@ document
    ESCAPE HELPERS
 ========================= */
 
-function escapeHtml(
-    value
-) {
+function escapeHtml(value) {
 
     return String(
         value || ""
@@ -2065,13 +1966,9 @@ function escapeHtml(
 }
 
 
-function escapeAttribute(
-    value
-) {
+function escapeAttribute(value) {
 
-    return escapeHtml(
-        value
-    );
+    return escapeHtml(value);
 
 }
 
