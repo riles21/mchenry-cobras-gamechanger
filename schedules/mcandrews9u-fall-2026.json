@@ -1,0 +1,232 @@
+[
+  {
+    "id": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
+    "opponent_team": {
+      "name": "Broncos Red 9U",
+      "avatar_url": "logos/cache/2b861041a93eadc1.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-08-28T22:30:00.000Z",
+    "end_ts": "2026-08-29T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": true,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
+    "opponent_team": {
+      "name": "SBA 9U Graf",
+      "avatar_url": "logos/cache/49189d385828ff87.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-02T22:30:00.000Z",
+    "end_ts": "2026-09-03T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "ce2e7fc3-c071-410c-a2fb-8f5af371c291",
+    "opponent_team": {
+      "name": "Top Tier West Freed"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-04T22:30:00.000Z",
+    "end_ts": "2026-09-05T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "b52e132b-e40a-462e-9352-4802bcc78e8d",
+    "opponent_team": {
+      "name": "Cary"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-09T22:30:00.000Z",
+    "end_ts": "2026-09-10T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
+    "opponent_team": {
+      "name": "SBA Raiders Duff 9U",
+      "avatar_url": "logos/cache/f71f026456340232.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-11T22:30:00.000Z",
+    "end_ts": "2026-09-12T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "437f090e-d748-4588-8e84-b57190465519",
+    "opponent_team": {
+      "name": "Grayslake Sliders 9U",
+      "avatar_url": "logos/cache/4196b99af991e986.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-18T22:30:00.000Z",
+    "end_ts": "2026-09-19T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
+    "opponent_team": {
+      "name": "Signature Stars 9U",
+      "avatar_url": "logos/cache/df2895e4e45b3d18.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-20T14:00:00.000Z",
+    "end_ts": "2026-09-20T15:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "a45043f4-5596-4537-b7da-9ba308dbc9d4",
+    "opponent_team": {
+      "name": "2026 Fall 9U Wauconda Wreckers"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-25T22:30:00.000Z",
+    "end_ts": "2026-09-26T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
+    "opponent_team": {
+      "name": "SBA Raiders Duff 9U",
+      "avatar_url": "logos/cache/f71f026456340232.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-26T14:00:00.000Z",
+    "end_ts": "2026-09-26T15:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "2bfa8776-272a-4c04-80d3-9e90371e4516",
+    "opponent_team": {
+      "name": "Grayslake Sliders 9U",
+      "avatar_url": "logos/cache/4196b99af991e986.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-27T17:00:00.000Z",
+    "end_ts": "2026-09-27T18:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "227ec302-4bea-4848-a091-dde93f4a545d",
+    "opponent_team": {
+      "name": "Trosky Illinois 9U",
+      "avatar_url": "logos/cache/04d655214c31bc5c.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-03T00:30:00.000Z",
+    "end_ts": "2026-10-03T02:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
+    "opponent_team": {
+      "name": "SBA 9U Graf",
+      "avatar_url": "logos/cache/49189d385828ff87.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-07T22:30:00.000Z",
+    "end_ts": "2026-10-08T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  },
+  {
+    "id": "f2fcbc71-7086-48ee-a37c-422a969fa66a",
+    "opponent_team": {
+      "name": "Top Tier West Freed"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-09T22:30:00.000Z",
+    "end_ts": "2026-10-10T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "eVa0Vr948vH4",
+    "cobras_team_key": "mcandrews9u",
+    "cobras_team_name": "9U McAndrews"
+  }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "id": "83c18318-19fb-45a6-8286-32937e270604",
+    "opponent_team": {
+      "name": "SBA Raiders 10U",
+      "avatar_url": "logos/cache/5e33b474558ff833.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-08-30T16:00:00.000Z",
+    "end_ts": "2026-08-30T17:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
+    "opponent_team": {
+      "name": "Grayslake Coyotes 10U",
+      "avatar_url": "logos/cache/cf06a55845cc1a77.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-03T00:00:00.000Z",
+    "end_ts": "2026-09-03T01:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "b4edf409-d335-40c0-9727-a7f4b72183fb",
+    "opponent_team": {
+      "name": "Cary Trojans 10U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-04T22:30:00.000Z",
+    "end_ts": "2026-09-05T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "9e0d1ee8-b25f-4072-9d03-5c15e1d177b0",
+    "opponent_team": {
+      "name": "Ironman- Nisenson 10U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-06T17:00:00.000Z",
+    "end_ts": "2026-09-06T19:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "ba903b67-c281-4478-9044-5affd5b3dbd9",
+    "opponent_team": {
+      "name": "Grayslake Sliders 10U",
+      "avatar_url": "logos/cache/2af98a73c9604868.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-13T15:00:00.000Z",
+    "end_ts": "2026-09-13T17:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
+    "opponent_team": {
+      "name": "Elite NW 10U Wintersdorf",
+      "avatar_url": "logos/cache/7fd207c8124e0ead.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-20T19:00:00.000Z",
+    "end_ts": "2026-09-20T21:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "eceb4335-36c3-4b63-a277-b64f824ad009",
+    "opponent_team": {
+      "name": "Elite NW 10U Wintersdorf",
+      "avatar_url": "logos/cache/7fd207c8124e0ead.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-23T22:30:00.000Z",
+    "end_ts": "2026-09-24T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
+    "opponent_team": {
+      "name": "Grayslake Coyotes 10U",
+      "avatar_url": "logos/cache/cf06a55845cc1a77.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-27T20:00:00.000Z",
+    "end_ts": "2026-09-27T22:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
+    "opponent_team": {
+      "name": "Lake Villa Eagles 10U-Kalina",
+      "avatar_url": "logos/cache/1ae2212312645d9d.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-04T15:00:00.000Z",
+    "end_ts": "2026-10-04T17:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  },
+  {
+    "id": "051b66f3-d93f-4145-8641-abed82a32814",
+    "opponent_team": {
+      "name": "Ironman- Nisenson 10U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-10T00:30:00.000Z",
+    "end_ts": "2026-10-10T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "tHsuttzldgTo",
+    "cobras_team_key": "decicco10u",
+    "cobras_team_name": "10U DeCicco"
+  }
+]

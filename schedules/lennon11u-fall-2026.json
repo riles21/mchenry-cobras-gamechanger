@@ -1,0 +1,109 @@
+[
+  {
+    "id": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
+    "opponent_team": {
+      "name": "SBA Raiders Woods 11U",
+      "avatar_url": "logos/cache/d869c4856e901c28.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-04T22:30:00.000Z",
+    "end_ts": "2026-09-05T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
+    "cobras_team_key": "lennon11u",
+    "cobras_team_name": "11U Lennon"
+  },
+  {
+    "id": "aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
+    "opponent_team": {
+      "name": "Lake Villa Eagles 11U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-18T22:30:00.000Z",
+    "end_ts": "2026-09-19T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
+    "cobras_team_key": "lennon11u",
+    "cobras_team_name": "11U Lennon"
+  },
+  {
+    "id": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
+    "opponent_team": {
+      "name": "SBA Raiders 11U - Simmons",
+      "avatar_url": "logos/cache/d0fb715e84462e1c.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-25T22:30:00.000Z",
+    "end_ts": "2026-09-26T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
+    "cobras_team_key": "lennon11u",
+    "cobras_team_name": "11U Lennon"
+  },
+  {
+    "id": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
+    "opponent_team": {
+      "name": "Elite NW 11U Smerling",
+      "avatar_url": "logos/cache/27b01044f78a99d9.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-02T22:30:00.000Z",
+    "end_ts": "2026-10-03T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
+    "cobras_team_key": "lennon11u",
+    "cobras_team_name": "11U Lennon"
+  },
+  {
+    "id": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
+    "opponent_team": {
+      "name": "Lake County Lightning 11U Fall",
+      "avatar_url": "logos/cache/f7162c4c84d6fd95.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-09T22:30:00.000Z",
+    "end_ts": "2026-10-10T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
+    "cobras_team_key": "lennon11u",
+    "cobras_team_name": "11U Lennon"
+  },
+  {
+    "id": "5377af70-7917-48a5-a0d3-b700c4c425db",
+    "opponent_team": {
+      "name": "Grayslake Coyotes 11U",
+      "avatar_url": "logos/cache/1347aa3cdbecae1c.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-16T22:30:00.000Z",
+    "end_ts": "2026-10-17T00:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
+    "cobras_team_key": "lennon11u",
+    "cobras_team_name": "11U Lennon"
+  }
+]

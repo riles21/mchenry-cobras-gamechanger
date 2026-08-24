@@ -1,0 +1,125 @@
+[
+  {
+    "id": "07fea401-9542-4620-933a-8162e92592dd",
+    "opponent_team": {
+      "name": "Top Tier MC 12u Brunschon",
+      "avatar_url": "logos/cache/f4c6f6f9f3538ddd.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-08-29T00:30:00.000Z",
+    "end_ts": "2026-08-29T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "BmhjNVz0W5gR",
+    "cobras_team_key": "meraz12u",
+    "cobras_team_name": "12U Meraz"
+  },
+  {
+    "id": "18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
+    "opponent_team": {
+      "name": "Mundelein Mustangs Red 12U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-08-29T22:00:00.000Z",
+    "end_ts": "2026-08-30T00:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "BmhjNVz0W5gR",
+    "cobras_team_key": "meraz12u",
+    "cobras_team_name": "12U Meraz"
+  },
+  {
+    "id": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
+    "opponent_team": {
+      "name": "Elite NW 12U Milazzo",
+      "avatar_url": "logos/cache/464af8c7eb8ea185.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-12T00:30:00.000Z",
+    "end_ts": "2026-09-12T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "BmhjNVz0W5gR",
+    "cobras_team_key": "meraz12u",
+    "cobras_team_name": "12U Meraz"
+  },
+  {
+    "id": "44ac610f-e442-401e-8837-f41476558b9f",
+    "opponent_team": {
+      "name": "Arlington Cardinals 12U Grey"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-19T00:30:00.000Z",
+    "end_ts": "2026-09-19T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "BmhjNVz0W5gR",
+    "cobras_team_key": "meraz12u",
+    "cobras_team_name": "12U Meraz"
+  },
+  {
+    "id": "72caae43-c7cf-4487-9669-241a233cb33d",
+    "opponent_team": {
+      "name": "SBA Raiders-LoPresti 12U",
+      "avatar_url": "logos/cache/b4793ba7133c43d8.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-26T00:30:00.000Z",
+    "end_ts": "2026-09-26T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "BmhjNVz0W5gR",
+    "cobras_team_key": "meraz12u",
+    "cobras_team_name": "12U Meraz"
+  },
+  {
+    "id": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
+    "opponent_team": {
+      "name": "Elite NW 12U Milazzo",
+      "avatar_url": "logos/cache/464af8c7eb8ea185.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-27T22:00:00.000Z",
+    "end_ts": "2026-09-28T00:35:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "BmhjNVz0W5gR",
+    "cobras_team_key": "meraz12u",
+    "cobras_team_name": "12U Meraz"
+  },
+  {
+    "id": "36bfee84-f769-4bb3-81bb-c7b8efe55a8e",
+    "opponent_team": {
+      "name": "Algonquin Cyclones 12U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-10T00:30:00.000Z",
+    "end_ts": "2026-10-10T02:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "BmhjNVz0W5gR",
+    "cobras_team_key": "meraz12u",
+    "cobras_team_name": "12U Meraz"
+  }
+]

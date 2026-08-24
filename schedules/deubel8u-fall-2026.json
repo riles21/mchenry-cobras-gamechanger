@@ -1,0 +1,54 @@
+[
+  {
+    "id": "fb9e299b-2315-40e8-8ff6-4bfa20ebdc39",
+    "opponent_team": {
+      "name": "Arlington Cardinals"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-10T22:30:00.000Z",
+    "end_ts": "2026-09-11T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6",
+    "cobras_team_key": "deubel8u",
+    "cobras_team_name": "8U Deubel"
+  },
+  {
+    "id": "7f7155e3-7615-4df3-8f76-d076226b3814",
+    "opponent_team": {
+      "name": "Signature Stars 8U",
+      "avatar_url": "logos/cache/ad2b47b19697b9df.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-18T23:30:00.000Z",
+    "end_ts": "2026-09-19T01:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6",
+    "cobras_team_key": "deubel8u",
+    "cobras_team_name": "8U Deubel"
+  },
+  {
+    "id": "951db98e-a6e8-42e8-862d-1e62cebb0be1",
+    "opponent_team": {
+      "name": "Arlington Cardinals"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-07T23:00:00.000Z",
+    "end_ts": "2026-10-08T00:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6",
+    "cobras_team_key": "deubel8u",
+    "cobras_team_name": "8U Deubel"
+  }
+]
