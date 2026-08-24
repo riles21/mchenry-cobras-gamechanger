@@ -31,15 +31,10 @@ jobs:
           const path = require("path");
           const crypto = require("crypto");
 
-          /*
-            Load configuration
-          */
-          const configText =
-            fs.readFileSync("config.js", "utf8");
+          const configText = fs.readFileSync("config.js", "utf8");
 
           const context = {};
           vm.createContext(context);
-
           vm.runInContext(
             configText +
             "\nthis.__teams = COBRAS_TEAMS;" +
@@ -51,9 +46,7 @@ jobs:
           const settings = context.__settings;
 
           const activeSeasons =
-            Array.isArray(settings.activeGameChangerSeasons)
-              ? settings.activeGameChangerSeasons
-              : [];
+            settings.activeGameChangerSeasons || [];
 
           console.log(
             "Active GameChanger seasons:",
@@ -61,222 +54,186 @@ jobs:
           );
 
           /*
-            Download a URL and save it locally.
+            ----------------------------------------
+            DOWNLOAD HELPER
+            ----------------------------------------
           */
+
           function download(url, destination) {
+
             return new Promise((resolve, reject) => {
+
               const client =
                 url.startsWith("https://")
                   ? https
                   : http;
 
-              const request = client.get(
-                url,
-                {
-                  headers: {
-                    "User-Agent":
-                      "McHenry-Cobras-Schedule-Updater"
-                  }
-                },
-                response => {
+              const request =
+                client.get(
+                  url,
+                  {
+                    headers: {
+                      "User-Agent":
+                        "McHenry-Cobras-Schedule-Updater"
+                    }
+                  },
+                  response => {
 
-                  /*
-                    Follow redirects.
-                  */
-                  if (
-                    response.statusCode >= 300 &&
-                    response.statusCode < 400 &&
-                    response.headers.location
-                  ) {
-                    response.resume();
+                    /*
+                      Follow redirects
+                    */
 
-                    return download(
-                      response.headers.location,
-                      destination
-                    )
-                      .then(resolve)
-                      .catch(reject);
-                  }
+                    if (
+                      response.statusCode >= 300 &&
+                      response.statusCode < 400 &&
+                      response.headers.location
+                    ) {
 
-                  if (response.statusCode !== 200) {
-                    response.resume();
+                      response.resume();
 
-                    return reject(
-                      new Error(
-                        `HTTP ${response.statusCode}`
+                      return download(
+                        response.headers.location,
+                        destination
                       )
+                        .then(resolve)
+                        .catch(reject);
+                    }
+
+
+                    if (response.statusCode !== 200) {
+
+                      response.resume();
+
+                      return reject(
+                        new Error(
+                          `HTTP ${response.statusCode}`
+                        )
+                      );
+                    }
+
+
+                    const contentType =
+                      response.headers["content-type"] || "";
+
+                    let extension = ".jpg";
+
+                    if (
+                      contentType.includes("png")
+                    ) {
+                      extension = ".png";
+
+                    } else if (
+                      contentType.includes("webp")
+                    ) {
+                      extension = ".webp";
+
+                    } else if (
+                      contentType.includes("gif")
+                    ) {
+                      extension = ".gif";
+
+                    } else if (
+                      contentType.includes("svg")
+                    ) {
+                      extension = ".svg";
+                    }
+
+
+                    const finalDestination =
+                      destination + extension;
+
+                    const file =
+                      fs.createWriteStream(
+                        finalDestination
+                      );
+
+                    response.pipe(file);
+
+                    file.on(
+                      "finish",
+                      () => {
+
+                        file.close(
+                          () =>
+                            resolve({
+                              path:
+                                finalDestination,
+                              contentType
+                            })
+                        );
+
+                      }
                     );
+
+                    file.on(
+                      "error",
+                      reject
+                    );
+
                   }
+                );
 
-                  const contentType =
-                    response.headers["content-type"] || "";
 
-                  let extension = ".jpg";
+              request.on(
+                "error",
+                reject
+              );
 
-                  if (
-                    contentType.includes("png")
-                  ) {
-                    extension = ".png";
-                  } else if (
-                    contentType.includes("webp")
-                  ) {
-                    extension = ".webp";
-                  } else if (
-                    contentType.includes("gif")
-                  ) {
-                    extension = ".gif";
-                  } else if (
-                    contentType.includes("svg")
-                  ) {
-                    extension = ".svg";
-                  }
 
-                  const finalDestination =
-                    destination + extension;
+              request.setTimeout(
+                30000,
+                () => {
 
-                  const file =
-                    fs.createWriteStream(
-                      finalDestination
-                    );
+                  request.destroy(
+                    new Error(
+                      "Logo download timed out"
+                    )
+                  );
 
-                  response.pipe(file);
-
-                  file.on("finish", () => {
-                    file.close(() =>
-                      resolve({
-                        path: finalDestination,
-                        contentType
-                      })
-                    );
-                  });
-
-                  file.on("error", reject);
                 }
               );
 
-              request.on("error", reject);
-
-              request.setTimeout(30000, () => {
-                request.destroy(
-                  new Error(
-                    "Logo download timed out"
-                  )
-                );
-              });
             });
+
           }
 
+
           /*
-            Download one GameChanger season.
+            ----------------------------------------
+            PROCESS ONE TEAM
+            ----------------------------------------
           */
-          async function downloadSeason(
-            teamKey,
-            team,
-            season,
-            gameChangerTeamId
+
+          async function processTeam(
+            key,
+            team
           ) {
 
-            if (!gameChangerTeamId) {
+            if (!team.active) {
+
               console.log(
-                `  ${team.name}: no GameChanger ID for ${season}`
+                `Skipping inactive team: ${key}`
               );
 
               return [];
             }
 
-            console.log(
-              `  Downloading ${team.name} - ${season} (${gameChangerTeamId})`
-            );
-
-            const scheduleUrl =
-              `https://api.team-manager.gc.com/public/teams/${gameChangerTeamId}/games`;
-
-            const response =
-              await fetch(scheduleUrl);
-
-            if (!response.ok) {
-              throw new Error(
-                `Schedule HTTP ${response.status} for ` +
-                `${teamKey} / ${season}`
-              );
-            }
-
-            const games =
-              await response.json();
-
-            if (!Array.isArray(games)) {
-              throw new Error(
-                `Unexpected schedule format for ` +
-                `${teamKey} / ${season}`
-              );
-            }
-
-            /*
-              Tag every game with the season and
-              GameChanger team ID that produced it.
-            */
-            const taggedGames =
-              games.map(game => ({
-                ...game,
-
-                cobras_gamechanger_season:
-                  season,
-
-                cobras_gamechanger_team_id:
-                  gameChangerTeamId
-              }));
-
-            console.log(
-              `    Downloaded ${taggedGames.length} games`
-            );
-
-            return taggedGames;
-          }
-
-          /*
-            Process one Cobras team.
-          */
-          async function processTeam(
-            teamKey,
-            team
-          ) {
-
-            if (!team || !team.active) {
-              console.log(
-                `Skipping inactive team: ${teamKey}`
-              );
-
-              return;
-            }
 
             if (
-              !team.gameChangerTeams ||
-              typeof team.gameChangerTeams !== "object"
+              !team.gameChangerTeams
             ) {
+
               console.log(
-                `Skipping ${team.name}: no gameChangerTeams configured`
+                `Skipping ${team.name}: no GameChanger seasons configured`
               );
 
-              return;
+              return [];
             }
 
-            console.log("");
-            console.log(
-              `========================================`
-            );
-            console.log(
-              `Processing ${team.name}`
-            );
-            console.log(
-              `========================================`
-            );
 
-            let allGames = [];
+            const teamCalendarEvents = [];
 
-            /*
-              Pull every globally selected season
-              that this team actually has an ID for.
-            */
+
             for (
               const season of activeSeasons
             ) {
@@ -284,507 +241,636 @@ jobs:
               const gameChangerTeamId =
                 team.gameChangerTeams[season];
 
+
               if (!gameChangerTeamId) {
-                console.log(
-                  `  ${season}: no team ID configured`
-                );
-
-                continue;
-              }
-
-              try {
-
-                const seasonGames =
-                  await downloadSeason(
-                    teamKey,
-                    team,
-                    season,
-                    gameChangerTeamId
-                  );
-
-                allGames =
-                  allGames.concat(
-                    seasonGames
-                  );
-
-              } catch (error) {
-
-                console.error(
-                  `  ERROR ${team.name} / ${season}: ` +
-                  `${error.message}`
-                );
-              }
-            }
-
-            /*
-              Deduplicate games by ID.
-            */
-            const seen = new Set();
-
-            const deduped =
-              allGames.filter(game => {
-
-                if (!game || !game.id) {
-                  return true;
-                }
-
-                if (seen.has(game.id)) {
-                  return false;
-                }
-
-                seen.add(game.id);
-
-                return true;
-              });
-
-            /*
-              Download/cache opponent logos.
-            */
-            const logoMap = new Map();
-
-            for (const game of deduped) {
-
-              const opponent =
-                game.opponent_team;
-
-              if (
-                !opponent ||
-                !opponent.avatar_url
-              ) {
-                continue;
-              }
-
-              const originalUrl =
-                opponent.avatar_url;
-
-              /*
-                Already local.
-              */
-              if (
-                originalUrl.startsWith(
-                  "logos/cache/"
-                )
-              ) {
-                continue;
-              }
-
-              if (
-                logoMap.has(originalUrl)
-              ) {
-                opponent.avatar_url =
-                  logoMap.get(originalUrl);
-
-                continue;
-              }
-
-              const hash =
-                crypto
-                  .createHash("sha1")
-                  .update(originalUrl)
-                  .digest("hex")
-                  .substring(0, 16);
-
-              const basePath =
-                path.join(
-                  "logos",
-                  "cache",
-                  hash
-                );
-
-              try {
-
-                const result =
-                  await download(
-                    originalUrl,
-                    basePath
-                  );
-
-                const localUrl =
-                  result.path.replace(
-                    /\\/g,
-                    "/"
-                  );
-
-                logoMap.set(
-                  originalUrl,
-                  localUrl
-                );
-
-                opponent.avatar_url =
-                  localUrl;
 
                 console.log(
-                  `  Saved opponent logo: ${localUrl}`
+                  `${team.name}: no GameChanger ID for ${season}`
                 );
 
-              } catch (error) {
-
-                console.log(
-                  `  Could not download opponent logo: ` +
-                  `${error.message}`
-                );
+                continue;
               }
-            }
 
-            const scheduleFile =
-              path.join(
-                "schedules",
-                `${teamKey}.json`
+
+              console.log(
+                `Downloading ${team.name} - ${season}`
               );
 
-            fs.writeFileSync(
-              scheduleFile,
-              JSON.stringify(
-                deduped,
-                null,
-                2
-              ) + "\n"
-            );
+
+              const scheduleUrl =
+                `https://api.team-manager.gc.com/public/teams/${gameChangerTeamId}/games`;
+
+
+              const scheduleFile =
+                path.join(
+                  "schedules",
+                  `${key}-${season
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/^-|-$/g, "")}.json`
+                );
+
+
+              const response =
+                await fetch(
+                  scheduleUrl
+                );
+
+
+              if (!response.ok) {
+
+                throw new Error(
+                  `Schedule HTTP ${response.status} for ${key} / ${season}`
+                );
+
+              }
+
+
+              const games =
+                await response.json();
+
+
+              if (!Array.isArray(games)) {
+
+                throw new Error(
+                  `Unexpected schedule format for ${key} / ${season}`
+                );
+
+              }
+
+
+              /*
+                ----------------------------------
+                DOWNLOAD OPPONENT LOGOS
+                ----------------------------------
+              */
+
+              const logoMap =
+                new Map();
+
+
+              for (
+                const game of games
+              ) {
+
+                const opponent =
+                  game.opponent_team;
+
+
+                if (
+                  !opponent ||
+                  !opponent.avatar_url
+                ) {
+                  continue;
+                }
+
+
+                const originalUrl =
+                  opponent.avatar_url;
+
+
+                if (
+                  logoMap.has(originalUrl)
+                ) {
+
+                  opponent.avatar_url =
+                    logoMap.get(
+                      originalUrl
+                    );
+
+                  continue;
+                }
+
+
+                const hash =
+                  crypto
+                    .createHash("sha1")
+                    .update(originalUrl)
+                    .digest("hex")
+                    .substring(0, 16);
+
+
+                const basePath =
+                  path.join(
+                    "logos",
+                    "cache",
+                    hash
+                  );
+
+
+                try {
+
+                  const result =
+                    await download(
+                      originalUrl,
+                      basePath
+                    );
+
+
+                  const localUrl =
+                    result.path
+                      .replace(
+                        /\\/g,
+                        "/"
+                      );
+
+
+                  logoMap.set(
+                    originalUrl,
+                    localUrl
+                  );
+
+
+                  opponent.avatar_url =
+                    localUrl;
+
+
+                  console.log(
+                    `  Saved opponent logo: ${localUrl}`
+                  );
+
+
+                } catch (error) {
+
+                  console.log(
+                    `  Could not download opponent logo: ${error.message}`
+                  );
+
+                }
+
+              }
+
+
+              /*
+                ----------------------------------
+                ADD COBRAS METADATA TO EACH GAME
+                ----------------------------------
+              */
+
+              for (
+                const game of games
+              ) {
+
+                game.cobras_gamechanger_season =
+                  season;
+
+                game.cobras_gamechanger_team_id =
+                  gameChangerTeamId;
+
+                game.cobras_team_key =
+                  key;
+
+                game.cobras_team_name =
+                  team.name;
+
+
+                /*
+                  Add games to calendar feed.
+                */
+
+                teamCalendarEvents.push({
+
+                  id:
+                    `${key}-${season}-${game.id}`,
+
+                  type:
+                    "gamechanger",
+
+                  title:
+                    `${team.name} vs ${
+                      game.opponent_team?.name ||
+                      "Opponent"
+                    }`,
+
+                  start:
+                    game.start_ts,
+
+                  end:
+                    game.end_ts,
+
+                  timezone:
+                    game.timezone ||
+                    "America/Chicago",
+
+                  teamKey:
+                    key,
+
+                  teamName:
+                    team.name,
+
+                  opponent:
+                    game.opponent_team?.name ||
+                    "Opponent",
+
+                  homeAway:
+                    game.home_away ||
+                    "",
+
+                  gameStatus:
+                    game.game_status ||
+                    "",
+
+                  season:
+                    season,
+
+                  gameChangerTeamId:
+                    gameChangerTeamId,
+
+                  gameChangerGameId:
+                    game.id,
+
+                  opponentLogo:
+                    game.opponent_team?.avatar_url ||
+                    ""
+
+                });
+
+              }
+
+
+              fs.writeFileSync(
+                scheduleFile,
+                JSON.stringify(
+                  games,
+                  null,
+                  2
+                ) + "\n"
+              );
+
+
+              console.log(
+                `Saved ${scheduleFile}`
+              );
+
+
+              console.log(
+                `${team.name}: ${games.length} games downloaded for ${season}`
+              );
+
+            }
+
 
             console.log(
-              `Saved ${scheduleFile} with ` +
-              `${deduped.length} games`
+              `${team.name}: ${teamCalendarEvents.length} calendar games added`
             );
+
+
+            return teamCalendarEvents;
+
           }
+
+
+          /*
+            ----------------------------------------
+            ORGANIZATION EVENTS
+            ----------------------------------------
+          */
+
+          const organizationEvents = [
+
+            {
+              id:
+                "uniform-fitting-2026",
+
+              type:
+                "organization",
+
+              title:
+                "Uniform Fitting",
+
+              start:
+                "2026-12-12",
+
+              end:
+                "2026-12-12",
+
+              allDay:
+                true,
+
+              category:
+                "Organization",
+
+              description:
+                "Cobras uniform fitting",
+
+              teamKey:
+                "",
+
+              teamName:
+                "All Cobras",
+
+              source:
+                "Cobras"
+
+            },
+
+
+            {
+              id:
+                "pictures-2027",
+
+              type:
+                "organization",
+
+              title:
+                "Team Pictures",
+
+              start:
+                "2027-02-28",
+
+              end:
+                "2027-02-28",
+
+              allDay:
+                true,
+
+              category:
+                "Organization",
+
+              description:
+                "Cobras team pictures",
+
+              teamKey:
+                "",
+
+              teamName:
+                "All Cobras",
+
+              source:
+                "Cobras"
+
+            },
+
+
+            {
+              id:
+                "steak-fry-2027",
+
+              type:
+                "organization",
+
+              title:
+                "Cobras Steak Fry",
+
+              start:
+                "2027-03-13",
+
+              end:
+                "2027-03-13",
+
+              allDay:
+                true,
+
+              category:
+                "Fundraiser",
+
+              description:
+                "Annual Cobras Steak Fry",
+
+              teamKey:
+                "",
+
+              teamName:
+                "All Cobras",
+
+              source:
+                "Cobras"
+
+            },
+
+
+            {
+              id:
+                "jr-memorial-2027",
+
+              type:
+                "organization",
+
+              title:
+                "JR Memorial Tournament",
+
+              start:
+                "2027-04-15",
+
+              end:
+                "2027-04-18",
+
+              allDay:
+                true,
+
+              category:
+                "Tournament",
+
+              description:
+                "JR Memorial Tournament",
+
+              teamKey:
+                "",
+
+              teamName:
+                "All Cobras",
+
+              source:
+                "Cobras"
+
+            },
+
+
+            {
+              id:
+                "cobras-for-a-cause-2027",
+
+              type:
+                "organization",
+
+              title:
+                "Cobras for a Cause",
+
+              start:
+                "2027-06-03",
+
+              end:
+                "2027-06-06",
+
+              allDay:
+                true,
+
+              category:
+                "Tournament",
+
+              description:
+                "Cobras for a Cause tournament",
+
+              teamKey:
+                "",
+
+              teamName:
+                "All Cobras",
+
+              source:
+                "Cobras"
+
+            }
+
+          ];
+
+
+          /*
+            ----------------------------------------
+            MAIN
+            ----------------------------------------
+          */
 
           async function main() {
 
+            const allCalendarEvents = [];
+
+
             for (
-              const [teamKey, team]
+              const [key, team]
               of Object.entries(teams)
             ) {
 
               try {
 
-                await processTeam(
-                  teamKey,
-                  team
+                const events =
+                  await processTeam(
+                    key,
+                    team
+                  );
+
+                allCalendarEvents.push(
+                  ...events
                 );
 
               } catch (error) {
 
                 console.error(
-                  `ERROR processing ${teamKey}: ` +
-                  `${error.message}`
+                  `ERROR processing ${key}: ${error.message}`
                 );
 
                 process.exitCode = 1;
+
               }
+
             }
+
+
+            /*
+              Add organization events.
+            */
+
+            allCalendarEvents.push(
+              ...organizationEvents
+            );
+
+
+            /*
+              Sort calendar chronologically.
+            */
+
+            allCalendarEvents.sort(
+              (a, b) =>
+                new Date(a.start) -
+                new Date(b.start)
+            );
+
+
+            /*
+              Calendar feed metadata.
+            */
+
+            const calendarFeed = {
+
+              generatedAt:
+                new Date().toISOString(),
+
+              cobrasSeason:
+                settings.cobrasSeason,
+
+              activeGameChangerSeasons:
+                activeSeasons,
+
+              eventCount:
+                allCalendarEvents.length,
+
+              events:
+                allCalendarEvents
+
+            };
+
+
+            fs.writeFileSync(
+              "calendar-events.json",
+              JSON.stringify(
+                calendarFeed,
+                null,
+                2
+              ) + "\n"
+            );
+
+
+            console.log("");
+            console.log(
+              "========================================"
+            );
+
+            console.log(
+              `Created calendar-events.json with ${allCalendarEvents.length} events`
+            );
+
+            console.log(
+              `GameChanger events: ${
+                allCalendarEvents.filter(
+                  e =>
+                    e.type === "gamechanger"
+                ).length
+              }`
+            );
+
+            console.log(
+              `Organization events: ${
+                allCalendarEvents.filter(
+                  e =>
+                    e.type === "organization"
+                ).length
+              }`
+            );
+
+            console.log(
+              "========================================"
+            );
+
           }
+
 
           main();
+
           NODE
 
-      - name: Build combined upcoming games feed
-        run: |
-          node <<'NODE'
-          const fs = require("fs");
-          const path = require("path");
-          const vm = require("vm");
-
-          /*
-            Load configuration.
-          */
-          const configText =
-            fs.readFileSync(
-              "config.js",
-              "utf8"
-            );
-
-          const context = {};
-
-          vm.createContext(context);
-
-          vm.runInContext(
-            configText +
-            "\nthis.__teams = COBRAS_TEAMS;" +
-            "\nthis.__settings = COBRAS_SETTINGS;",
-            context
-          );
-
-          const teams =
-            context.__teams;
-
-          const settings =
-            context.__settings;
-
-          const activeSeasons =
-            Array.isArray(
-              settings.activeGameChangerSeasons
-            )
-              ? settings.activeGameChangerSeasons
-              : [];
-
-          console.log(
-            "Building upcoming games feed."
-          );
-
-          console.log(
-            "Active seasons:",
-            activeSeasons.join(", ")
-          );
-
-          /*
-            Get today's date in Chicago.
-          */
-          const chicagoToday =
-            new Intl.DateTimeFormat(
-              "en-CA",
-              {
-                timeZone:
-                  "America/Chicago",
-                year: "numeric",
-                month: "2-digit",
-                day: "2-digit"
-              }
-            ).format(new Date());
-
-          /*
-            Use a fixed Chicago offset appropriate
-            for the current Fall 2026 season.
-          */
-          const todayStart =
-            new Date(
-              `${chicagoToday}T00:00:00-05:00`
-            ).getTime();
-
-          const upcoming = [];
-
-          /*
-            IMPORTANT:
-            We scan the schedule files directly.
-
-            We do NOT look for the old
-            team.gameChangerTeamId property.
-          */
-          const scheduleFiles =
-            fs.readdirSync(
-              "schedules"
-            )
-            .filter(file =>
-              file.endsWith(".json")
-            );
-
-          for (
-            const scheduleFileName
-            of scheduleFiles
-          ) {
-
-            const teamKey =
-              scheduleFileName
-                .replace(
-                  /\.json$/,
-                  ""
-                );
-
-            const team =
-              teams[teamKey];
-
-            if (!team || !team.active) {
-              continue;
-            }
-
-            const scheduleFile =
-              path.join(
-                "schedules",
-                scheduleFileName
-              );
-
-            let games;
-
-            try {
-
-              games =
-                JSON.parse(
-                  fs.readFileSync(
-                    scheduleFile,
-                    "utf8"
-                  )
-                );
-
-            } catch (error) {
-
-              console.log(
-                `Could not parse ${scheduleFile}: ` +
-                `${error.message}`
-              );
-
-              continue;
-            }
-
-            if (!Array.isArray(games)) {
-              continue;
-            }
-
-            let teamCount = 0;
-
-            for (
-              const game of games
-            ) {
-
-              if (
-                !game ||
-                !game.start_ts
-              ) {
-                continue;
-              }
-
-              /*
-                Respect the global season setting.
-              */
-              const gameSeason =
-                game.cobras_gamechanger_season;
-
-              if (
-                !activeSeasons.includes(
-                  gameSeason
-                )
-              ) {
-                continue;
-              }
-
-              const startTime =
-                new Date(
-                  game.start_ts
-                ).getTime();
-
-              if (
-                Number.isNaN(
-                  startTime
-                )
-              ) {
-                continue;
-              }
-
-              /*
-                Keep today's and future games.
-              */
-              if (
-                startTime < todayStart
-              ) {
-                continue;
-              }
-
-              /*
-                Completed games are not upcoming.
-              */
-              if (
-                game.game_status ===
-                "completed"
-              ) {
-                continue;
-              }
-
-              upcoming.push({
-                teamKey,
-                teamName:
-                  team.name,
-                season:
-                  gameSeason,
-                game
-              });
-
-              teamCount++;
-            }
-
-            console.log(
-              `${team.name}: ` +
-              `${teamCount} upcoming games included.`
-            );
-          }
-
-          /*
-            Sort chronologically.
-          */
-          upcoming.sort(
-            (a, b) =>
-              new Date(
-                a.game.start_ts
-              ) -
-              new Date(
-                b.game.start_ts
-              )
-          );
-
-          /*
-            Remove duplicates.
-          */
-          const seen =
-            new Set();
-
-          const deduped =
-            upcoming.filter(item => {
-
-              const id =
-                `${item.teamKey}|${item.game.id}`;
-
-              if (seen.has(id)) {
-                return false;
-              }
-
-              seen.add(id);
-
-              return true;
-            });
-
-          fs.writeFileSync(
-            "upcoming-games.json",
-            JSON.stringify(
-              deduped,
-              null,
-              2
-            ) + "\n"
-          );
-
-          console.log("");
-          console.log(
-            `Created upcoming-games.json with ` +
-            `${deduped.length} upcoming games.`
-          );
-
-          console.log("");
-          console.log(
-            "=== First 15 upcoming games ==="
-          );
-
-          for (
-            const item
-            of deduped.slice(0, 15)
-          ) {
-
-            console.log(
-              `${item.teamName} | ` +
-              `${item.season} | ` +
-              `${item.game.start_ts} | ` +
-              `${item.game.opponent_team?.name || "TBD"}`
-            );
-          }
-          NODE
-
-      - name: Show downloaded files
+      - name: Show generated files
         run: |
           echo "=== Schedules ==="
           ls -lah schedules || true
 
           echo ""
-          echo "=== Upcoming games feed ==="
-          ls -lah upcoming-games.json || true
-
-          echo ""
           echo "=== Cached logos ==="
           ls -lah logos/cache || true
 
-      - name: Save schedules, feed, and logos
+          echo ""
+          echo "=== Calendar feed ==="
+          ls -lah calendar-events.json || true
+
+      - name: Save schedules, logos, and calendar
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add schedules upcoming-games.json logos/cache
+          git add schedules logos/cache calendar-events.json
 
           if git diff --cached --quiet; then
             echo "No changes to save."
           else
-            git commit -m "Update Cobras schedules and upcoming games"
+            git commit -m "Update Cobras schedules and calendar"
             git push
           fi
