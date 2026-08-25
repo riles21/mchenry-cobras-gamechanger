@@ -1037,6 +1037,300 @@ button:hover {
     overflow: hidden;
 }
 
+
+/* =========================================================
+   VIEW TOGGLES
+========================================================= */
+
+.view-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.view-button,
+.range-button {
+    background: #292929;
+    border: 1px solid #444;
+    color: #bbb;
+    padding: 7px 10px;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.view-button.active,
+.range-button.active {
+    background: #ff5a00;
+    border-color: #ff5a00;
+    color: #ffffff;
+}
+
+.range-button:disabled {
+    opacity: .45;
+    cursor: default;
+}
+
+.view-divider {
+    width: 1px;
+    height: 22px;
+    background: #444;
+    margin: 0 3px;
+}
+
+
+/* =========================================================
+   LIST VIEW
+========================================================= */
+
+.list-view {
+    width: 100%;
+    background: #101010;
+    border: 1px solid #333;
+}
+
+.list-summary {
+    padding: 10px 14px;
+    color: #888;
+    font-size: 11px;
+    font-weight: 800;
+    border-bottom: 1px solid #292929;
+}
+
+.list-day-heading {
+    display: flex;
+    align-items: center;
+    padding: 11px 14px;
+    background: #1b1b1b;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    border-bottom: 1px solid #333;
+    border-top: 2px solid #ff5a00;
+}
+
+.list-event {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #292929;
+    border-left: 4px solid #888;
+    border-radius: 0;
+    background: #141414;
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+}
+
+.list-event:hover {
+    background: #202020;
+}
+
+.list-event.game {
+    border-left-color: #ff5a00;
+}
+
+.list-event.practice {
+    border-left-color: #888;
+}
+
+.list-event.organization {
+    border-left-color: #fff;
+}
+
+.list-event-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.list-event-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.list-event-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.list-event-type {
+    flex-shrink: 0;
+    color: #777;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+
+.list-event-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+    color: #999;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.list-event-info span + span::before {
+    content: "•";
+    color: #555;
+    margin-right: 8px;
+}
+
+.list-event-right {
+    flex-shrink: 0;
+    min-width: 68px;
+    text-align: right;
+}
+
+.list-event-time,
+.list-event-score {
+    font-size: 12px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.list-event-time {
+    color: #ff8a4c;
+}
+
+.list-event.practice .list-event-time {
+    color: #b0b0b0;
+}
+
+.list-event-score.win {
+    color: #39d353;
+}
+
+.list-event-score.loss {
+    color: #ff4d4d;
+}
+
+.list-event-score.tie {
+    color: #ffffff;
+}
+
+.list-empty {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.list-empty-title {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.list-empty-text {
+    margin-top: 7px;
+    color: #777;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+
+    .view-controls {
+        width: 100%;
+        margin-top: 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+    .view-divider {
+        display: none;
+    }
+
+    .view-button,
+    .range-button {
+        min-height: 38px;
+        padding: 7px 4px;
+        font-size: 10px;
+    }
+
+    .list-event {
+        padding: 13px 10px;
+        gap: 8px;
+    }
+
+    .list-event-title {
+        font-size: 14px;
+    }
+
+    .list-event-info {
+        font-size: 10px;
+    }
+
+    .list-event-right {
+        min-width: 62px;
+    }
+
+    .list-event-time,
+    .list-event-score {
+        font-size: 11px;
+    }
+
+    .list-day-heading {
+        padding: 10px 11px;
+        font-size: 13px;
+    }
+
+    .list-summary {
+        padding: 8px 11px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .view-controls {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .view-button,
+    .range-button {
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .list-event {
+        padding: 12px 8px;
+    }
+
+    .list-event-title {
+        font-size: 13px;
+    }
+
+    .list-event-type {
+        display: none;
+    }
+
+    .list-event-info {
+        font-size: 9px;
+    }
+
+    .list-event-right {
+        min-width: 58px;
+    }
+
+    .list-event-time,
+    .list-event-score {
+        font-size: 10px;
+    }
+
+}
+
 </style>
 
 </head>
@@ -1193,6 +1487,40 @@ button:hover {
 
 </div>
 
+        <div class="view-controls">
+
+            <button
+                type="button"
+                class="view-button active"
+                data-view="calendar">
+                CALENDAR
+            </button>
+
+            <button
+                type="button"
+                class="view-button"
+                data-view="list">
+                LIST
+            </button>
+
+            <span class="view-divider"></span>
+
+            <button
+                type="button"
+                class="range-button active"
+                data-range="month">
+                MONTH
+            </button>
+
+            <button
+                type="button"
+                class="range-button"
+                data-range="week">
+                WEEK
+            </button>
+
+        </div>
+
     </div>
 
 
@@ -1277,6 +1605,25 @@ let currentDate =
 
 let currentFilter =
     "all";
+
+/*
+ * Desktop starts in calendar view.
+ * Phones start in list view because it is
+ * much easier to read on a narrow screen.
+ */
+let currentView =
+    window.matchMedia(
+        "(max-width: 800px)"
+    ).matches
+        ? "list"
+        : "calendar";
+
+/*
+ * List view can show either the current
+ * month or the current week.
+ */
+let listRange =
+    "month";
 
 
 /* =========================================================
@@ -1745,7 +2092,683 @@ function eventsForDate(date) {
    RENDER CALENDAR
 ========================================================= */
 
+
+/* =========================================================
+   RENDER LIST VIEW
+========================================================= */
+
+function getRangeStart() {
+
+    if (listRange === "week") {
+
+        const day =
+            currentDate.getDay();
+
+        return new Date(
+            currentDate.getFullYear(),
+            currentDate.getMonth(),
+            currentDate.getDate() - day
+        );
+
+    }
+
+    return new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        1
+    );
+
+}
+
+
+function getRangeEnd() {
+
+    if (listRange === "week") {
+
+        const start =
+            getRangeStart();
+
+        return new Date(
+            start.getFullYear(),
+            start.getMonth(),
+            start.getDate() + 6,
+            23,
+            59,
+            59
+        );
+
+    }
+
+    return new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth() + 1,
+        0,
+        23,
+        59,
+        59
+    );
+
+}
+
+
+function eventsForRange() {
+
+    const rangeStart =
+        getRangeStart();
+
+    const rangeEnd =
+        getRangeEnd();
+
+    return getFilteredEvents()
+        .filter(
+            event => {
+
+                const start =
+                    parseDate(
+                        event.start
+                    );
+
+                const end =
+                    event.end
+                        ? parseDate(event.end)
+                        : start;
+
+                if (!start) {
+                    return false;
+                }
+
+                return (
+                    start <= rangeEnd &&
+                    end >= rangeStart
+                );
+
+            }
+        )
+        .sort(
+            (a, b) =>
+                parseDate(a.start) -
+                parseDate(b.start)
+        );
+
+}
+
+
+function getEventDisplayName(
+    event
+) {
+
+    if (isGame(event)) {
+
+        return (
+            event.teamName ||
+            event.title ||
+            "Cobras Game"
+        );
+
+    }
+
+    if (isPractice(event)) {
+
+        return getPracticeDisplayName(
+            event
+        );
+
+    }
+
+    return (
+        event.title ||
+        "Cobras Event"
+    );
+
+}
+
+
+function getEventTypeLabel(
+    event
+) {
+
+    if (isGame(event)) {
+        return "GAME";
+    }
+
+    if (
+        isIndoor(event) ||
+        isPractice(event)
+    ) {
+        return "PRACTICE";
+    }
+
+    return "COBRAS EVENT";
+
+}
+
+
+function getEventClass(
+    event
+) {
+
+    if (isGame(event)) {
+        return "list-event game";
+    }
+
+    if (
+        isIndoor(event) ||
+        isPractice(event)
+    ) {
+        return "list-event practice";
+    }
+
+    return "list-event organization";
+
+}
+
+
+function getEventTimeText(
+    event
+) {
+
+    const start =
+        event.start
+            ? parseDate(event.start)
+            : null;
+
+    const end =
+        event.end
+            ? parseDate(event.end)
+            : null;
+
+    const score =
+        getGameScoreInfo(event);
+
+    if (score) {
+        return {
+            text: score.text,
+            scoreClass: score.result
+        };
+    }
+
+    if (
+        start &&
+        (isGame(event) ||
+         isIndoor(event) ||
+         isPractice(event))
+    ) {
+
+        let text =
+            formatTime(start);
+
+        if (
+            isIndoor(event) &&
+            end &&
+            sameDay(start, end)
+        ) {
+
+            text +=
+                "–" +
+                formatTime(end);
+
+        }
+
+        return {
+            text,
+            scoreClass: ""
+        };
+
+    }
+
+    return {
+        text: "ALL DAY",
+        scoreClass: ""
+    };
+
+}
+
+
+function formatListDate(
+    date
+) {
+
+    if (!date) {
+        return "";
+    }
+
+    return date.toLocaleDateString(
+        "en-US",
+        {
+            weekday: "short",
+            month: "short",
+            day: "numeric"
+        }
+    );
+
+}
+
+
+function formatListDateRange(
+    event
+) {
+
+    const start =
+        parseDate(event.start);
+
+    const end =
+        event.end
+            ? parseDate(event.end)
+            : start;
+
+    if (!start) {
+        return "";
+    }
+
+    if (
+        !end ||
+        sameDay(start, end)
+    ) {
+
+        return formatListDate(start);
+
+    }
+
+    return (
+        formatListDate(start) +
+        " – " +
+        formatListDate(end)
+    );
+
+}
+
+
+function getEventLocation(
+    event
+) {
+
+    return (
+        event.location ||
+        event.venue ||
+        event.field ||
+        event.facility ||
+        ""
+    );
+
+}
+
+
+function renderListEvent(
+    event
+) {
+
+    const time =
+        getEventTimeText(event);
+
+    const score =
+        getGameScoreInfo(event);
+
+    const location =
+        getEventLocation(event);
+
+    let secondary = [];
+
+    if (isGame(event)) {
+
+        if (event.opponent) {
+            secondary.push(
+                "vs. " +
+                escapeHtml(
+                    event.opponent
+                )
+            );
+        }
+
+        if (event.homeAway) {
+
+            const homeAway =
+                String(
+                    event.homeAway
+                ).toLowerCase();
+
+            if (homeAway === "home") {
+                secondary.push("HOME");
+            } else if (
+                homeAway === "away"
+            ) {
+                secondary.push("AWAY");
+            }
+
+        }
+
+    }
+
+    if (location) {
+        secondary.push(
+            escapeHtml(location)
+        );
+    }
+
+    const scoreMarkup =
+        score
+            ? `
+                <span
+                    class="list-event-score ${score.result}">
+                    ${escapeHtml(score.text)}
+                </span>
+              `
+            : `
+                <span class="list-event-time">
+                    ${escapeHtml(time.text)}
+                </span>
+              `;
+
+    return `
+        <button
+            type="button"
+            class="${getEventClass(event)}"
+            data-event-id="${escapeAttribute(event.id)}">
+
+            <span class="list-event-marker"></span>
+
+            <span class="list-event-main">
+
+                <span class="list-event-top">
+
+                    <span class="list-event-title">
+                        ${escapeHtml(
+                            getEventDisplayName(event)
+                        )}
+                    </span>
+
+                    <span class="list-event-type">
+                        ${getEventTypeLabel(event)}
+                    </span>
+
+                </span>
+
+                <span class="list-event-info">
+
+                    ${
+                        isGame(event) &&
+                        event.opponent
+                            ? `
+                                <span>
+                                    vs.
+                                    ${escapeHtml(
+                                        event.opponent
+                                    )}
+                                </span>
+                              `
+                            : ""
+                    }
+
+                    ${
+                        location
+                            ? `
+                                <span>
+                                    ${escapeHtml(
+                                        location
+                                    )}
+                                </span>
+                              `
+                            : ""
+                    }
+
+                </span>
+
+            </span>
+
+            <span class="list-event-right">
+
+                <span class="${
+                    score
+                        ? "list-event-score " +
+                          score.result
+                        : "list-event-time"
+                }">
+                    ${escapeHtml(time.text)}
+                </span>
+
+            </span>
+
+        </button>
+    `;
+
+}
+
+
+function renderListView() {
+
+    const rangeStart =
+        getRangeStart();
+
+    const rangeEnd =
+        getRangeEnd();
+
+    const rangeEvents =
+        eventsForRange();
+
+    if (listRange === "week") {
+
+        document.getElementById(
+            "monthTitle"
+        ).textContent =
+            `${formatListDate(rangeStart)} – ${formatListDate(rangeEnd)}`;
+
+    } else {
+
+        document.getElementById(
+            "monthTitle"
+        ).textContent =
+            currentDate.toLocaleString(
+                "en-US",
+                {
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+
+    }
+
+    let html = `
+        <div class="list-view">
+
+            <div class="list-summary">
+                ${
+                    rangeEvents.length
+                        ? `
+                            ${rangeEvents.length}
+                            ${
+                                rangeEvents.length === 1
+                                    ? "event"
+                                    : "events"
+                            }
+                        `
+                        : "No events"
+                }
+            </div>
+    `;
+
+    if (!rangeEvents.length) {
+
+        html += `
+            <div class="list-empty">
+                <div class="list-empty-title">
+                    No events found
+                </div>
+                <div class="list-empty-text">
+                    Try another filter or date range.
+                </div>
+            </div>
+        `;
+
+    } else {
+
+        /*
+         * Group events by their starting date.
+         * Multi-day organization events appear
+         * on the day they begin.
+         */
+        let currentGroup =
+            "";
+
+        rangeEvents.forEach(
+            event => {
+
+                const start =
+                    parseDate(event.start);
+
+                const groupKey =
+                    start
+                        ? formatDateKey(start)
+                        : "unknown";
+
+                if (
+                    groupKey !==
+                    currentGroup
+                ) {
+
+                    currentGroup =
+                        groupKey;
+
+                    html += `
+                        <div class="list-day-heading">
+
+                            <span>
+                                ${
+                                    start
+                                        ? start.toLocaleDateString(
+                                            "en-US",
+                                            {
+                                                weekday:
+                                                    "long",
+                                                month:
+                                                    "long",
+                                                day:
+                                                    "numeric"
+                                            }
+                                          )
+                                        : "Date TBD"
+                                }
+                            </span>
+
+                        </div>
+                    `;
+
+                }
+
+                html +=
+                    renderListEvent(
+                        event
+                    );
+
+            }
+        );
+
+    }
+
+    html += `
+        </div>
+    `;
+
+    document.getElementById(
+        "calendar"
+    ).innerHTML =
+        html;
+
+    document
+        .querySelectorAll(
+            "#calendar [data-event-id]"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    event => {
+
+                        event.stopPropagation();
+
+                        const selected =
+                            events.find(
+                                item =>
+                                    item.id ===
+                                    button.dataset.eventId
+                            );
+
+                        if (selected) {
+
+                            showEventModal(
+                                selected
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+function updateViewControls() {
+
+    document
+        .querySelectorAll(
+            ".view-button"
+        )
+        .forEach(
+            button => {
+
+                button.classList.toggle(
+                    "active",
+                    button.dataset.view ===
+                    currentView
+                );
+
+            }
+        );
+
+    document
+        .querySelectorAll(
+            ".range-button"
+        )
+        .forEach(
+            button => {
+
+                button.classList.toggle(
+                    "active",
+                    button.dataset.range ===
+                    listRange
+                );
+
+                button.disabled =
+                    currentView !== "list";
+
+            }
+        );
+
+}
+
+
 function renderCalendar() {
+
+    updateViewControls();
+
+    if (
+        currentView === "list"
+    ) {
+
+        renderListView();
+
+    } else {
+
+        renderMonthCalendar();
+
+    }
+
+}
+
+
+function renderMonthCalendar() {
 
     const year =
         currentDate.getFullYear();
@@ -3605,13 +4628,28 @@ document.getElementById(
     "click",
     () => {
 
-        currentDate =
-            new Date(
-                currentDate.getFullYear(),
-                currentDate.getMonth() - 1,
-                1
-            );
+        if (
+            currentView === "list" &&
+            listRange === "week"
+        ) {
 
+            currentDate =
+                new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth(),
+                    currentDate.getDate() - 7
+                );
+
+        } else {
+
+            currentDate =
+                new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth() - 1,
+                    1
+                );
+
+        }
 
         renderCalendar();
 
@@ -3625,13 +4663,28 @@ document.getElementById(
     "click",
     () => {
 
-        currentDate =
-            new Date(
-                currentDate.getFullYear(),
-                currentDate.getMonth() + 1,
-                1
-            );
+        if (
+            currentView === "list" &&
+            listRange === "week"
+        ) {
 
+            currentDate =
+                new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth(),
+                    currentDate.getDate() + 7
+                );
+
+        } else {
+
+            currentDate =
+                new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth() + 1,
+                    1
+                );
+
+        }
 
         renderCalendar();
 
@@ -3653,6 +4706,57 @@ document.getElementById(
 
     }
 );
+
+
+
+/* =========================================================
+   VIEW / RANGE CONTROLS
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".view-button"
+    )
+    .forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    currentView =
+                        button.dataset.view;
+
+                    renderCalendar();
+
+                }
+            );
+
+        }
+    );
+
+
+document
+    .querySelectorAll(
+        ".range-button"
+    )
+    .forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    listRange =
+                        button.dataset.range;
+
+                    renderCalendar();
+
+                }
+            );
+
+        }
+    );
 
 
 /* =========================================================
