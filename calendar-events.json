@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-25T18:02:21.044Z",
+  "generatedAt": "2026-08-25T23:50:55.004Z",
   "cobrasSeason": "2026-27 Season",
   "activeGameChangerSeasons": [
     "Fall 2026"
   ],
-  "eventCount": 163,
+  "eventCount": 174,
   "eventCounts": {
-    "gamechanger": 87,
+    "gamechanger": 91,
     "organization": 5,
     "indoor": 47,
-    "practice": 24
+    "practice": 31
   },
   "events": [
     {
@@ -30,7 +30,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "451bdb0f-c424-48db-abb7-837a6c001c81",
-      "opponentLogo": "logos/cache/f7849979d97d17c1.jpg"
+      "opponentLogo": "logos/cache/a6ec6a8161598ded.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-91d70c9c-7cbc-4446-a5d3-25ded996cadc",
@@ -50,7 +50,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
-      "opponentLogo": "logos/cache/dfc2e3282e1b0978.jpg"
+      "opponentLogo": "logos/cache/052b8bfd05189759.jpg"
     },
     {
       "id": "sportsconnect-46886872",
@@ -70,11 +70,28 @@
       "sportsConnectTeamId": "41628517"
     },
     {
+      "id": "sportsconnect-46919402",
+      "type": "practice",
+      "title": "Cobras 10U DeCicco Practice",
+      "start": "2026-08-26T17:30:01",
+      "end": "2026-08-26T19:30:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 10U DeCicco",
+      "teamKey": "",
+      "location": "Freund Field (Mustang Practices) - Freund Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Freund Field (Mustang Practices) - Freund Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919402",
+      "sportsConnectTeamId": "41559146"
+    },
+    {
       "id": "sportsconnect-46892987",
       "type": "practice",
       "title": "Cobras 13U Baillargeon Practice",
-      "start": "2026-08-26T17:30:01",
-      "end": "2026-08-26T19:30:01",
+      "start": "2026-08-26T17:30:02",
+      "end": "2026-08-26T19:30:02",
       "timezone": "America/Chicago",
       "teamName": "Cobras 13U Baillargeon",
       "teamKey": "",
@@ -121,7 +138,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "f841b34f-56be-43d8-ab63-6adaf268f159",
-      "opponentLogo": "logos/cache/84915d361c465df6.jpg"
+      "opponentLogo": "logos/cache/e81675c938b656a6.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
@@ -141,7 +158,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
-      "opponentLogo": "logos/cache/9ffb5662a8482ff5.jpg"
+      "opponentLogo": "logos/cache/fe6cfa1b032ed161.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-83f3a129-7360-40e4-9a05-b4393b986b93",
@@ -161,7 +178,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "83f3a129-7360-40e4-9a05-b4393b986b93",
-      "opponentLogo": "logos/cache/c990b2f644f8a39a.jpg"
+      "opponentLogo": "logos/cache/8d594dcd27606a02.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
@@ -201,7 +218,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "07fea401-9542-4620-933a-8162e92592dd",
-      "opponentLogo": "logos/cache/dbad57cbbbc4d344.jpg"
+      "opponentLogo": "logos/cache/c5912dcfcee8ce00.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
@@ -224,6 +241,23 @@
       "opponentLogo": ""
     },
     {
+      "id": "sportsconnect-46919405",
+      "type": "practice",
+      "title": "Cobras 10U DeCicco Practice",
+      "start": "2026-08-30T11:00:01",
+      "end": "2026-08-30T13:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 10U DeCicco",
+      "teamKey": "",
+      "location": "Freund Field (Mustang Practices) - Freund Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Freund Field (Mustang Practices) - Freund Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919405",
+      "sportsConnectTeamId": "41559146"
+    },
+    {
       "id": "decicco10u-Fall 2026-83c18318-19fb-45a6-8286-32937e270604",
       "type": "gamechanger",
       "title": "10U DeCicco vs SBA Raiders 10U",
@@ -241,7 +275,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "83c18318-19fb-45a6-8286-32937e270604",
-      "opponentLogo": "logos/cache/0ef4c3e0c2a24411.jpg"
+      "opponentLogo": "logos/cache/f11324f2e046f904.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-08611e4c-75c6-471b-915d-477272bdff91",
@@ -261,7 +295,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "08611e4c-75c6-471b-915d-477272bdff91",
-      "opponentLogo": "logos/cache/50bf51454bf8ae50.jpg"
+      "opponentLogo": "logos/cache/81f76ce937b480f9.jpg"
     },
     {
       "id": "sportsconnect-46886873",
@@ -298,14 +332,31 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "46997580-1fae-4bc2-bcf2-478ccb73648a",
-      "opponentLogo": "logos/cache/d234eefebb4da055.jpg"
+      "opponentLogo": "logos/cache/b249bf8326dbd1dc.jpg"
+    },
+    {
+      "id": "sportsconnect-46919403",
+      "type": "practice",
+      "title": "Cobras 10U DeCicco Practice",
+      "start": "2026-09-02T17:30:01",
+      "end": "2026-09-02T19:30:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 10U DeCicco",
+      "teamKey": "",
+      "location": "Freund Field (Mustang Practices) - Freund Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Freund Field (Mustang Practices) - Freund Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919403",
+      "sportsConnectTeamId": "41559146"
     },
     {
       "id": "sportsconnect-46892988",
       "type": "practice",
       "title": "Cobras 13U Baillargeon Practice",
-      "start": "2026-09-02T17:30:01",
-      "end": "2026-09-02T19:30:01",
+      "start": "2026-09-02T17:30:02",
+      "end": "2026-09-02T19:30:02",
       "timezone": "America/Chicago",
       "teamName": "Cobras 13U Baillargeon",
       "teamKey": "",
@@ -335,7 +386,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
-      "opponentLogo": "logos/cache/d98bb75ba4f80fd4.jpg"
+      "opponentLogo": "logos/cache/41820884100ee496.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
@@ -355,7 +406,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
-      "opponentLogo": "logos/cache/ded5003573c05d14.jpg"
+      "opponentLogo": "logos/cache/425a8aca1c17ff6a.jpg"
     },
     {
       "id": "sportsconnect-46886907",
@@ -432,7 +483,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
-      "opponentLogo": "logos/cache/6b1d8f82b49ea111.jpg"
+      "opponentLogo": "logos/cache/22a6bb736fa439c0.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-5b127abf-997e-43d1-a8b0-68b7cde64e3f",
@@ -492,7 +543,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
-      "opponentLogo": "logos/cache/bd44e8a4df271e21.jpg"
+      "opponentLogo": "logos/cache/45e31797658faa92.jpg"
+    },
+    {
+      "id": "sportsconnect-46919406",
+      "type": "practice",
+      "title": "Cobras 10U DeCicco Practice",
+      "start": "2026-09-06T11:00:01",
+      "end": "2026-09-06T13:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 10U DeCicco",
+      "teamKey": "",
+      "location": "Freund Field (Mustang Practices) - Freund Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Freund Field (Mustang Practices) - Freund Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919406",
+      "sportsConnectTeamId": "41559146"
     },
     {
       "id": "decicco10u-Fall 2026-9e0d1ee8-b25f-4072-9d03-5c15e1d177b0",
@@ -532,11 +600,28 @@
       "sportsConnectTeamId": "41628517"
     },
     {
+      "id": "sportsconnect-46919404",
+      "type": "practice",
+      "title": "Cobras 10U DeCicco Practice",
+      "start": "2026-09-09T17:30:01",
+      "end": "2026-09-09T19:30:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 10U DeCicco",
+      "teamKey": "",
+      "location": "Freund Field (Mustang Practices) - Freund Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Freund Field (Mustang Practices) - Freund Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919404",
+      "sportsConnectTeamId": "41559146"
+    },
+    {
       "id": "sportsconnect-46892989",
       "type": "practice",
       "title": "Cobras 13U Baillargeon Practice",
-      "start": "2026-09-09T17:30:01",
-      "end": "2026-09-09T19:30:01",
+      "start": "2026-09-09T17:30:02",
+      "end": "2026-09-09T19:30:02",
       "timezone": "America/Chicago",
       "teamName": "Cobras 13U Baillargeon",
       "teamKey": "",
@@ -586,7 +671,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
-      "opponentLogo": "logos/cache/d7c55d0610eaad30.jpg"
+      "opponentLogo": "logos/cache/ab8686b7c67408dd.jpg"
     },
     {
       "id": "sportsconnect-46886908",
@@ -663,7 +748,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
-      "opponentLogo": "logos/cache/34fd499bcc92d93e.jpg"
+      "opponentLogo": "logos/cache/0cbf558b0f48c6bd.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-fb019a0f-aba5-4207-9b62-1b7a2c988509",
@@ -703,7 +788,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
-      "opponentLogo": "logos/cache/39adbac034f6b481.jpg"
+      "opponentLogo": "logos/cache/73471ce671a690d0.jpg"
+    },
+    {
+      "id": "sportsconnect-46919407",
+      "type": "practice",
+      "title": "Cobras 10U DeCicco Practice",
+      "start": "2026-09-13T11:00:01",
+      "end": "2026-09-13T13:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 10U DeCicco",
+      "teamKey": "",
+      "location": "Freund Field (Mustang Practices) - Freund Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Freund Field (Mustang Practices) - Freund Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919407",
+      "sportsConnectTeamId": "41559146"
     },
     {
       "id": "hansen10u-Fall 2026-88a47f45-97ca-47a1-baa5-bee83abaf32e",
@@ -723,7 +825,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "88a47f45-97ca-47a1-baa5-bee83abaf32e",
-      "opponentLogo": "logos/cache/d89de0634a61d6a9.jpg"
+      "opponentLogo": "logos/cache/bdb3f13745b81992.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-ba903b67-c281-4478-9044-5affd5b3dbd9",
@@ -743,7 +845,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "ba903b67-c281-4478-9044-5affd5b3dbd9",
-      "opponentLogo": "logos/cache/7ea5a20a4297769a.jpg"
+      "opponentLogo": "logos/cache/77244743d56d8131.jpg"
     },
     {
       "id": "sportsconnect-46886875",
@@ -780,7 +882,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
-      "opponentLogo": "logos/cache/0b2535c4f97e1f2a.jpg"
+      "opponentLogo": "logos/cache/cb553cf70e8a3819.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -837,7 +939,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
-      "opponentLogo": "logos/cache/2404f9b52e7f8ee2.jpg"
+      "opponentLogo": "logos/cache/82ab38840ddf00a9.jpg"
     },
     {
       "id": "sportsconnect-46886909",
@@ -914,7 +1016,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "437f090e-d748-4588-8e84-b57190465519",
-      "opponentLogo": "logos/cache/30188d449f8e5e7a.jpg"
+      "opponentLogo": "logos/cache/0b6dd1b7cf8683ff.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
@@ -954,7 +1056,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "fe880c8c-78dc-478e-bc60-1895b491c61c",
-      "opponentLogo": "logos/cache/390c4af8e6bfa22e.jpg"
+      "opponentLogo": "logos/cache/07fcc36397145686.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-a82a8d53-deb2-4999-967f-0abd1a4a0858",
@@ -994,7 +1096,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "7f7155e3-7615-4df3-8f76-d076226b3814",
-      "opponentLogo": "logos/cache/3270a0cfa407f899.jpg"
+      "opponentLogo": "logos/cache/84337d2dcc73b517.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
@@ -1014,7 +1116,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
-      "opponentLogo": "logos/cache/dfc2e3282e1b0978.jpg"
+      "opponentLogo": "logos/cache/052b8bfd05189759.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-44ac610f-e442-401e-8837-f41476558b9f",
@@ -1094,7 +1196,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
-      "opponentLogo": "logos/cache/2404f9b52e7f8ee2.jpg"
+      "opponentLogo": "logos/cache/82ab38840ddf00a9.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-9d20219d-0c09-4496-afea-f47e77eb204c",
@@ -1114,7 +1216,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "9d20219d-0c09-4496-afea-f47e77eb204c",
-      "opponentLogo": "logos/cache/7821b7e441e67394.jpg"
+      "opponentLogo": "logos/cache/c05cdf45982849a6.jpg"
+    },
+    {
+      "id": "sportsconnect-46919408",
+      "type": "practice",
+      "title": "Cobras 10U DeCicco Practice",
+      "start": "2026-09-20T11:00:01",
+      "end": "2026-09-20T13:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 10U DeCicco",
+      "teamKey": "",
+      "location": "Freund Field (Mustang Practices) - Freund Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Freund Field (Mustang Practices) - Freund Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919408",
+      "sportsConnectTeamId": "41559146"
     },
     {
       "id": "mcandrews9u-Fall 2026-8535acef-19bd-48ee-9723-2d46ac60d5e7",
@@ -1134,7 +1253,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
-      "opponentLogo": "logos/cache/33143e3c3ffd281c.jpg"
+      "opponentLogo": "logos/cache/7591d2d2f3e34bfe.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -1174,7 +1293,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
-      "opponentLogo": "logos/cache/788240a4a756d4be.jpg"
+      "opponentLogo": "logos/cache/dcda9802597fbb7d.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-83f634ae-41a4-4442-9603-94cb58b54816",
@@ -1194,7 +1313,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "83f634ae-41a4-4442-9603-94cb58b54816",
-      "opponentLogo": "logos/cache/f7849979d97d17c1.jpg"
+      "opponentLogo": "logos/cache/a6ec6a8161598ded.jpg"
     },
     {
       "id": "sportsconnect-46886876",
@@ -1268,7 +1387,27 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "eceb4335-36c3-4b63-a277-b64f824ad009",
-      "opponentLogo": "logos/cache/788240a4a756d4be.jpg"
+      "opponentLogo": "logos/cache/dcda9802597fbb7d.jpg"
+    },
+    {
+      "id": "deubel8u-Fall 2026-c920f9a3-b7d1-44d0-a141-42d994704f87",
+      "type": "gamechanger",
+      "title": "8U Deubel vs Top Tier MC - Neumann 8U",
+      "start": "2026-09-23T23:00:00.000Z",
+      "end": "2026-09-24T00:45:00.000Z",
+      "timezone": "America/Chicago",
+      "teamKey": "deubel8u",
+      "teamName": "8U Deubel",
+      "opponent": "Top Tier MC - Neumann 8U",
+      "homeAway": "home",
+      "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
+      "season": "Fall 2026",
+      "gameChangerTeamId": "NJRBPnj0Dhk6",
+      "gameChangerGameId": "c920f9a3-b7d1-44d0-a141-42d994704f87",
+      "opponentLogo": "logos/cache/84564f8ca5ecd9b5.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
@@ -1288,7 +1427,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
-      "opponentLogo": "logos/cache/d7c55d0610eaad30.jpg"
+      "opponentLogo": "logos/cache/ab8686b7c67408dd.jpg"
     },
     {
       "id": "sportsconnect-46886910",
@@ -1345,7 +1484,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
-      "opponentLogo": "logos/cache/9c4860a101173c8e.jpg"
+      "opponentLogo": "logos/cache/d9ebcc4e2e660ef3.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-4a16f24d-1882-4966-bb55-ae758d57aac8",
@@ -1365,7 +1504,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "4a16f24d-1882-4966-bb55-ae758d57aac8",
-      "opponentLogo": "logos/cache/07c7aac73d6eb46c.jpg"
+      "opponentLogo": "logos/cache/b09636f4aabd3c13.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-53543ffc-3b9d-4356-8c0c-78823bdb3018",
@@ -1385,7 +1524,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
-      "opponentLogo": "logos/cache/11f4a040f44802c8.jpg"
+      "opponentLogo": "logos/cache/357fe3f682c34113.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-72caae43-c7cf-4487-9669-241a233cb33d",
@@ -1405,7 +1544,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "72caae43-c7cf-4487-9669-241a233cb33d",
-      "opponentLogo": "logos/cache/e99361c8a538999d.jpg"
+      "opponentLogo": "logos/cache/c873f1961824301d.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-b450590e-59e3-4429-b7e8-c0b35fbfde3c",
@@ -1425,7 +1564,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
-      "opponentLogo": "logos/cache/34fd499bcc92d93e.jpg"
+      "opponentLogo": "logos/cache/0cbf558b0f48c6bd.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-fa6f1770-1db4-4815-912b-c4e02db153d0",
@@ -1485,7 +1624,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "2bfa8776-272a-4c04-80d3-9e90371e4516",
-      "opponentLogo": "logos/cache/30188d449f8e5e7a.jpg"
+      "opponentLogo": "logos/cache/0b6dd1b7cf8683ff.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-56880f21-1ced-4b64-baf7-8ae58e819ddd",
@@ -1505,7 +1644,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
-      "opponentLogo": "logos/cache/c1b74aecd9da7ff0.jpg"
+      "opponentLogo": "logos/cache/e1b89d9b29d5c0cc.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-59b93419-8a14-46e6-b967-86924d1764e1",
@@ -1525,7 +1664,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "59b93419-8a14-46e6-b967-86924d1764e1",
-      "opponentLogo": "logos/cache/2fffb0764c967ebe.jpg"
+      "opponentLogo": "logos/cache/4ba8c045aa570e78.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-8aaa56bf-083b-49b5-985a-73a9f1214c08",
@@ -1545,7 +1684,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
-      "opponentLogo": "logos/cache/ded5003573c05d14.jpg"
+      "opponentLogo": "logos/cache/425a8aca1c17ff6a.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ccce8207-ae64-49d8-9bd7-529234d58d1e",
@@ -1565,7 +1704,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
-      "opponentLogo": "logos/cache/39adbac034f6b481.jpg"
+      "opponentLogo": "logos/cache/73471ce671a690d0.jpg"
     },
     {
       "id": "sportsconnect-46886877",
@@ -1676,7 +1815,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
-      "opponentLogo": "logos/cache/90ae0a57c7b70b39.jpg"
+      "opponentLogo": "logos/cache/66d13b95bc75e006.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
@@ -1696,7 +1835,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
-      "opponentLogo": "logos/cache/165e1d24f490bf99.jpg"
+      "opponentLogo": "logos/cache/4ffa02015e0c77e9.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-227ec302-4bea-4848-a091-dde93f4a545d",
@@ -1716,7 +1855,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "227ec302-4bea-4848-a091-dde93f4a545d",
-      "opponentLogo": "logos/cache/4bd7d173c6662e51.jpg"
+      "opponentLogo": "logos/cache/cfdec2b19cbd4b5b.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-45a075d7-adc1-4a55-9e48-479b1f4034f9",
@@ -1736,7 +1875,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
-      "opponentLogo": "logos/cache/cdf060169f5f563f.jpg"
+      "opponentLogo": "logos/cache/96ef7cc1ee34f29c.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-b916f2f1-2955-4ed4-9409-73500ee3c184",
@@ -1756,7 +1895,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "b916f2f1-2955-4ed4-9409-73500ee3c184",
-      "opponentLogo": "logos/cache/17571eb9d0b81ae4.jpg"
+      "opponentLogo": "logos/cache/c07f3682c0e923df.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
@@ -1776,7 +1915,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
-      "opponentLogo": "logos/cache/02a254500d033529.jpg"
+      "opponentLogo": "logos/cache/c5e22d901db4b819.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-25878a9e-959a-45d6-9131-d6fb1149a4e8",
@@ -1850,7 +1989,27 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
-      "opponentLogo": "logos/cache/d98bb75ba4f80fd4.jpg"
+      "opponentLogo": "logos/cache/41820884100ee496.jpg"
+    },
+    {
+      "id": "bozer11u-Fall 2026-b1c63fea-4b07-4e89-baf9-84f4a5877e65",
+      "type": "gamechanger",
+      "title": "11U Bozer vs Wauconda Wreckers 11U",
+      "start": "2026-10-07T22:30:00.000Z",
+      "end": "2026-10-08T00:15:00.000Z",
+      "timezone": "America/Chicago",
+      "teamKey": "bozer11u",
+      "teamName": "11U Bozer",
+      "opponent": "Wauconda Wreckers 11U",
+      "homeAway": "home",
+      "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
+      "season": "Fall 2026",
+      "gameChangerTeamId": "jo418sCgCDyw",
+      "gameChangerGameId": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
+      "opponentLogo": "logos/cache/aa0674140bdbcd04.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -1927,7 +2086,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "726ff682-4280-444e-97bd-716dd66eee54",
-      "opponentLogo": "logos/cache/812a6fd64d9df663.jpg"
+      "opponentLogo": "logos/cache/7f4f98cdf5cb3951.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
@@ -1947,7 +2106,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
-      "opponentLogo": "logos/cache/2376d0c5187bbe81.jpg"
+      "opponentLogo": "logos/cache/a03c6c7203215beb.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
@@ -2104,6 +2263,26 @@
       "sportsConnectTeamId": "41195554"
     },
     {
+      "id": "deubel8u-Fall 2026-0fc0ad11-dafe-491e-802b-4679f59c96b4",
+      "type": "gamechanger",
+      "title": "8U Deubel vs Top Tier MC - Neumann 8U",
+      "start": "2026-10-14T23:00:00.000Z",
+      "end": "2026-10-15T00:45:00.000Z",
+      "timezone": "America/Chicago",
+      "teamKey": "deubel8u",
+      "teamName": "8U Deubel",
+      "opponent": "Top Tier MC - Neumann 8U",
+      "homeAway": "",
+      "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
+      "season": "Fall 2026",
+      "gameChangerTeamId": "NJRBPnj0Dhk6",
+      "gameChangerGameId": "0fc0ad11-dafe-491e-802b-4679f59c96b4",
+      "opponentLogo": "logos/cache/84564f8ca5ecd9b5.jpg"
+    },
+    {
       "id": "hansen10u-Fall 2026-4d231ff4-0208-4cb5-9726-9bdb75311377",
       "type": "gamechanger",
       "title": "10U Hansen vs Trosky Baseball Barrington 10U",
@@ -2121,7 +2300,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "4d231ff4-0208-4cb5-9726-9bdb75311377",
-      "opponentLogo": "logos/cache/a2e660ed367ebb04.jpg"
+      "opponentLogo": "logos/cache/9caac010528d8740.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-5377af70-7917-48a5-a0d3-b700c4c425db",
@@ -2141,7 +2320,27 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "5377af70-7917-48a5-a0d3-b700c4c425db",
-      "opponentLogo": "logos/cache/86e3db5d41b07247.jpg"
+      "opponentLogo": "logos/cache/eb98176ba711e29f.jpg"
+    },
+    {
+      "id": "decicco10u-Fall 2026-d2917d60-4c74-48b9-8e92-c5639c7285da",
+      "type": "gamechanger",
+      "title": "10U DeCicco vs Barrington Red 10U",
+      "start": "2026-10-17T00:30:00.000Z",
+      "end": "2026-10-17T02:30:00.000Z",
+      "timezone": "America/Chicago",
+      "teamKey": "decicco10u",
+      "teamName": "10U DeCicco",
+      "opponent": "Barrington Red 10U",
+      "homeAway": "home",
+      "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
+      "season": "Fall 2026",
+      "gameChangerTeamId": "tHsuttzldgTo",
+      "gameChangerGameId": "d2917d60-4c74-48b9-8e92-c5639c7285da",
+      "opponentLogo": "logos/cache/1df494d70dcbb226.jpg"
     },
     {
       "id": "sportsconnect-46892995",

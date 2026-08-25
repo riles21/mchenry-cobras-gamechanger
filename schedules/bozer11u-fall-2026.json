@@ -49,5 +49,23 @@
     "cobras_gamechanger_team_id": "jo418sCgCDyw",
     "cobras_team_key": "bozer11u",
     "cobras_team_name": "11U Bozer"
+  },
+  {
+    "id": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
+    "opponent_team": {
+      "name": "Wauconda Wreckers 11U",
+      "avatar_url": "logos/cache/aa0674140bdbcd04.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-07T22:30:00.000Z",
+    "end_ts": "2026-10-08T00:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "jo418sCgCDyw",
+    "cobras_team_key": "bozer11u",
+    "cobras_team_name": "11U Bozer"
   }
 ]
