@@ -11,36 +11,22 @@ permissions:
   contents: write
 
 jobs:
-
   update-schedules:
-
     runs-on: ubuntu-latest
 
     steps:
-
-      # ========================================
-      # CHECKOUT
-      # ========================================
-
       - name: Checkout repository
         uses: actions/checkout@v4
-
-
-      # ========================================
-      # DOWNLOAD GAMECHANGER + ALLBOOKED
-      # ========================================
 
       - name: Download schedules and build calendar
         env:
           ALLBOOKED_ICAL_URL: ${{ secrets.ALLBOOKED_ICAL_URL }}
-
+          SPORTS_CONNECT_URL: "https://www.mchenrybaseball.com/Default.aspx?tabid=891478&selectedEvents=40107087"
         run: |
-
           mkdir -p schedules
           mkdir -p logos/cache
 
           node <<'NODE'
-
           const fs = require("fs");
           const vm = require("vm");
           const https = require("https");
@@ -48,703 +34,391 @@ jobs:
           const path = require("path");
           const crypto = require("crypto");
 
-
           /*
-            ========================================
-            LOAD COBRAS CONFIGURATION
-            ========================================
-          */
+           * ========================================
+           * LOAD COBRAS CONFIGURATION
+           * ========================================
+           */
 
-          const configText =
-            fs.readFileSync(
-              "config.js",
-              "utf8"
-            );
-
-
+          const configText = fs.readFileSync("config.js", "utf8");
           const context = {};
-
           vm.createContext(context);
 
-
           vm.runInContext(
-
             configText +
-
-            "\nthis.__teams = COBRAS_TEAMS;" +
-
-            "\nthis.__settings = COBRAS_SETTINGS;" +
-
-            "\nthis.__organizationEvents = COBRAS_ORGANIZATION_EVENTS;",
-
+              "\nthis.__teams = COBRAS_TEAMS;" +
+              "\nthis.__settings = COBRAS_SETTINGS;" +
+              "\nthis.__organizationEvents = COBRAS_ORGANIZATION_EVENTS;",
             context
-
           );
 
-
-          const teams =
-            context.__teams;
-
-          const settings =
-            context.__settings;
-
+          const teams = context.__teams;
+          const settings = context.__settings;
           const organizationEvents =
             context.__organizationEvents || [];
 
-
-          if (
-            !Array.isArray(
-              organizationEvents
-            )
-          ) {
-
+          if (!Array.isArray(organizationEvents)) {
             throw new Error(
               "COBRAS_ORGANIZATION_EVENTS must be an array"
             );
-
           }
-
-
-          /*
-            ========================================
-            ACTIVE GAMECHANGER SEASONS
-            ========================================
-          */
 
           const activeSeasons =
             settings.activeGameChangerSeasons || [];
-
 
           console.log(
             "Active GameChanger seasons:",
             activeSeasons.join(", ")
           );
 
-
           /*
-            ========================================
-            DOWNLOAD HELPER
-            ========================================
-          */
+           * ========================================
+           * FETCH TEXT / DOWNLOAD HELPER
+           * ========================================
+           */
 
-          function download(
-            url,
-            destination
-          ) {
+          function fetchText(url) {
+            return new Promise((resolve, reject) => {
+              const client = url.startsWith("https://")
+                ? https
+                : http;
 
-            return new Promise(
-              (resolve, reject) => {
+              const request = client.get(
+                url,
+                {
+                  headers: {
+                    "User-Agent":
+                      "McHenry-Cobras-Schedule-Updater"
+                  }
+                },
+                response => {
+                  if (
+                    response.statusCode >= 300 &&
+                    response.statusCode < 400 &&
+                    response.headers.location
+                  ) {
+                    response.resume();
 
-                const client =
-                  url.startsWith("https://")
-                    ? https
-                    : http;
+                    return fetchText(
+                      new URL(
+                        response.headers.location,
+                        url
+                      ).href
+                    )
+                      .then(resolve)
+                      .catch(reject);
+                  }
 
+                  if (response.statusCode !== 200) {
+                    response.resume();
 
-                const request =
-                  client.get(
-                    url,
-                    {
-                      headers: {
-                        "User-Agent":
-                          "McHenry-Cobras-Schedule-Updater"
-                      }
-                    },
-
-                    response => {
-
-                      /*
-                        Follow redirects
-                      */
-
-                      if (
-                        response.statusCode >= 300 &&
-                        response.statusCode < 400 &&
-                        response.headers.location
-                      ) {
-
-                        response.resume();
-
-                        return download(
-                          response.headers.location,
-                          destination
-                        )
-                          .then(resolve)
-                          .catch(reject);
-
-                      }
-
-
-                      if (
-                        response.statusCode !== 200
-                      ) {
-
-                        response.resume();
-
-                        return reject(
-                          new Error(
-                            `HTTP ${response.statusCode}`
-                          )
-                        );
-
-                      }
-
-
-                      const contentType =
-                        response.headers[
-                          "content-type"
-                        ] || "";
-
-
-                      let extension =
-                        ".jpg";
-
-
-                      if (
-                        contentType.includes(
-                          "png"
-                        )
-                      ) {
-
-                        extension =
-                          ".png";
-
-                      } else if (
-                        contentType.includes(
-                          "webp"
-                        )
-                      ) {
-
-                        extension =
-                          ".webp";
-
-                      } else if (
-                        contentType.includes(
-                          "gif"
-                        )
-                      ) {
-
-                        extension =
-                          ".gif";
-
-                      } else if (
-                        contentType.includes(
-                          "svg"
-                        )
-                      ) {
-
-                        extension =
-                          ".svg";
-
-                      }
-
-
-                      const finalDestination =
-                        destination +
-                        extension;
-
-
-                      const file =
-                        fs.createWriteStream(
-                          finalDestination
-                        );
-
-
-                      response.pipe(file);
-
-
-                      file.on(
-                        "finish",
-                        () => {
-
-                          file.close(
-                            () =>
-                              resolve({
-                                path:
-                                  finalDestination,
-                                contentType
-                              })
-                          );
-
-                        }
-                      );
-
-
-                      file.on(
-                        "error",
-                        reject
-                      );
-
-                    }
-                  );
-
-
-                request.on(
-                  "error",
-                  reject
-                );
-
-
-                request.setTimeout(
-                  30000,
-                  () => {
-
-                    request.destroy(
+                    return reject(
                       new Error(
-                        "Download timed out"
+                        `HTTP ${response.statusCode} for ${url}`
                       )
                     );
-
                   }
+
+                  let data = "";
+
+                  response.setEncoding("utf8");
+
+                  response.on("data", chunk => {
+                    data += chunk;
+                  });
+
+                  response.on("end", () => {
+                    resolve(data);
+                  });
+                }
+              );
+
+              request.on("error", reject);
+
+              request.setTimeout(30000, () => {
+                request.destroy(
+                  new Error(
+                    `Request timed out: ${url}`
+                  )
                 );
-
-              }
-            );
-
+              });
+            });
           }
 
+          function download(url, destination) {
+            return new Promise((resolve, reject) => {
+              const client = url.startsWith("https://")
+                ? https
+                : http;
 
-          /*
-            ========================================
-            FETCH TEXT
-            ========================================
-          */
+              const request = client.get(
+                url,
+                {
+                  headers: {
+                    "User-Agent":
+                      "McHenry-Cobras-Schedule-Updater"
+                  }
+                },
+                response => {
+                  if (
+                    response.statusCode >= 300 &&
+                    response.statusCode < 400 &&
+                    response.headers.location
+                  ) {
+                    response.resume();
 
-          function fetchText(
-            url
-          ) {
+                    return download(
+                      new URL(
+                        response.headers.location,
+                        url
+                      ).href,
+                      destination
+                    )
+                      .then(resolve)
+                      .catch(reject);
+                  }
 
-            return new Promise(
-              (resolve, reject) => {
+                  if (response.statusCode !== 200) {
+                    response.resume();
 
-                const client =
-                  url.startsWith("https://")
-                    ? https
-                    : http;
-
-
-                const request =
-                  client.get(
-                    url,
-                    {
-                      headers: {
-                        "User-Agent":
-                          "McHenry-Cobras-Schedule-Updater"
-                      }
-                    },
-
-                    response => {
-
-                      if (
-                        response.statusCode >= 300 &&
-                        response.statusCode < 400 &&
-                        response.headers.location
-                      ) {
-
-                        response.resume();
-
-                        return fetchText(
-                          response.headers.location
-                        )
-                          .then(resolve)
-                          .catch(reject);
-
-                      }
-
-
-                      if (
-                        response.statusCode !== 200
-                      ) {
-
-                        response.resume();
-
-                        return reject(
-                          new Error(
-                            `AllBooked HTTP ${response.statusCode}`
-                          )
-                        );
-
-                      }
-
-
-                      let data = "";
-
-
-                      response.setEncoding(
-                        "utf8"
-                      );
-
-
-                      response.on(
-                        "data",
-                        chunk => {
-                          data += chunk;
-                        }
-                      );
-
-
-                      response.on(
-                        "end",
-                        () => {
-                          resolve(data);
-                        }
-                      );
-
-                    }
-                  );
-
-
-                request.on(
-                  "error",
-                  reject
-                );
-
-
-                request.setTimeout(
-                  30000,
-                  () => {
-
-                    request.destroy(
+                    return reject(
                       new Error(
-                        "AllBooked request timed out"
+                        `HTTP ${response.statusCode}`
                       )
                     );
-
                   }
+
+                  const contentType =
+                    response.headers["content-type"] || "";
+
+                  let extension = ".jpg";
+
+                  if (contentType.includes("png")) {
+                    extension = ".png";
+                  } else if (
+                    contentType.includes("webp")
+                  ) {
+                    extension = ".webp";
+                  } else if (
+                    contentType.includes("gif")
+                  ) {
+                    extension = ".gif";
+                  } else if (
+                    contentType.includes("svg")
+                  ) {
+                    extension = ".svg";
+                  }
+
+                  const finalDestination =
+                    destination + extension;
+
+                  const file =
+                    fs.createWriteStream(
+                      finalDestination
+                    );
+
+                  response.pipe(file);
+
+                  file.on("finish", () => {
+                    file.close(() => {
+                      resolve({
+                        path: finalDestination,
+                        contentType
+                      });
+                    });
+                  });
+
+                  file.on("error", reject);
+                }
+              );
+
+              request.on("error", reject);
+
+              request.setTimeout(30000, () => {
+                request.destroy(
+                  new Error(
+                    "Download timed out"
+                  )
                 );
-
-              }
-            );
-
+              });
+            });
           }
 
-
           /*
-            ========================================
-            GAMECHANGER TEAM PROCESSING
-            ========================================
-          */
+           * ========================================
+           * GAMECHANGER
+           * ========================================
+           */
 
-          async function processTeam(
-            key,
-            team
-          ) {
-
-            if (
-              !team.active
-            ) {
-
+          async function processTeam(key, team) {
+            if (!team.active) {
               console.log(
                 `Skipping inactive team: ${key}`
               );
-
               return [];
-
             }
 
-
-            if (
-              !team.gameChangerTeams
-            ) {
-
+            if (!team.gameChangerTeams) {
               console.log(
                 `${team.name}: no GameChanger seasons configured`
               );
-
               return [];
-
             }
 
+            const events = [];
 
-            const teamCalendarEvents =
-              [];
-
-
-            for (
-              const season of activeSeasons
-            ) {
-
+            for (const season of activeSeasons) {
               const gameChangerTeamId =
-                team.gameChangerTeams[
-                  season
-                ];
+                team.gameChangerTeams[season];
 
-
-              if (
-                !gameChangerTeamId
-              ) {
-
+              if (!gameChangerTeamId) {
                 console.log(
                   `${team.name}: no GameChanger ID for ${season}`
                 );
-
                 continue;
-
               }
-
 
               console.log(
                 `Downloading ${team.name} - ${season}`
               );
 
-
               const scheduleUrl =
                 `https://api.team-manager.gc.com/public/teams/${gameChangerTeamId}/games`;
 
-
-              const scheduleFile =
-                path.join(
-                  "schedules",
-                  `${key}-${season
-                    .toLowerCase()
-                    .replace(
-                      /[^a-z0-9]+/g,
-                      "-"
-                    )
-                    .replace(
-                      /^-|-$/g,
-                      ""
-                    )}.json`
-                );
-
+              const scheduleFile = path.join(
+                "schedules",
+                `${key}-${season
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, "-")
+                  .replace(/^-|-$/g, "")}.json`
+              );
 
               const response =
-                await fetch(
-                  scheduleUrl
-                );
+                await fetch(scheduleUrl);
 
-
-              if (
-                !response.ok
-              ) {
-
+              if (!response.ok) {
                 throw new Error(
                   `Schedule HTTP ${response.status} for ${key} / ${season}`
                 );
-
               }
-
 
               const games =
                 await response.json();
 
-
-              if (
-                !Array.isArray(
-                  games
-                )
-              ) {
-
+              if (!Array.isArray(games)) {
                 throw new Error(
                   `Unexpected schedule format for ${key} / ${season}`
                 );
-
               }
 
+              const logoMap = new Map();
 
-              /*
-                ==================================
-                DOWNLOAD OPPONENT LOGOS
-                ==================================
-              */
-
-              const logoMap =
-                new Map();
-
-
-              for (
-                const game of games
-              ) {
-
+              for (const game of games) {
                 const opponent =
                   game.opponent_team;
-
 
                 if (
                   !opponent ||
                   !opponent.avatar_url
                 ) {
-
                   continue;
-
                 }
-
 
                 const originalUrl =
                   opponent.avatar_url;
 
-
-                if (
-                  logoMap.has(
-                    originalUrl
-                  )
-                ) {
-
+                if (logoMap.has(originalUrl)) {
                   opponent.avatar_url =
-                    logoMap.get(
-                      originalUrl
-                    );
-
+                    logoMap.get(originalUrl);
                   continue;
-
                 }
-
 
                 const hash =
                   crypto
-                    .createHash(
-                      "sha1"
-                    )
-                    .update(
-                      originalUrl
-                    )
-                    .digest(
-                      "hex"
-                    )
-                    .substring(
-                      0,
-                      16
-                    );
+                    .createHash("sha1")
+                    .update(originalUrl)
+                    .digest("hex")
+                    .substring(0, 16);
 
-
-                const basePath =
-                  path.join(
-                    "logos",
-                    "cache",
-                    hash
-                  );
-
+                const basePath = path.join(
+                  "logos",
+                  "cache",
+                  hash
+                );
 
                 try {
-
                   const result =
                     await download(
                       originalUrl,
                       basePath
                     );
 
-
                   const localUrl =
-                    result.path
-                      .replace(
-                        /\\/g,
-                        "/"
-                      );
-
+                    result.path.replace(
+                      /\\/g,
+                      "/"
+                    );
 
                   logoMap.set(
                     originalUrl,
                     localUrl
                   );
 
-
                   opponent.avatar_url =
                     localUrl;
 
-
                   console.log(
-                    `  Saved opponent logo: ${localUrl}`
+                    `Saved opponent logo: ${localUrl}`
                   );
-
-
-                } catch (
-                  error
-                ) {
-
+                } catch (error) {
                   console.log(
-                    `  Could not download opponent logo: ${error.message}`
+                    `Could not download opponent logo: ${error.message}`
                   );
-
                 }
-
               }
 
-
-              /*
-                ==================================
-                ADD GAMES TO CALENDAR
-                ==================================
-              */
-
-              for (
-                const game of games
-              ) {
-
+              for (const game of games) {
                 game.cobras_gamechanger_season =
                   season;
-
 
                 game.cobras_gamechanger_team_id =
                   gameChangerTeamId;
 
-
-                game.cobras_team_key =
-                  key;
-
-
+                game.cobras_team_key = key;
                 game.cobras_team_name =
                   team.name;
 
-
-                teamCalendarEvents.push({
-
+                events.push({
                   id:
                     `${key}-${season}-${game.id}`,
-
-                  type:
-                    "gamechanger",
-
+                  type: "gamechanger",
                   title:
                     `${team.name} vs ${
                       game.opponent_team?.name ||
                       "Opponent"
                     }`,
-
-                  start:
-                    game.start_ts,
-
-                  end:
-                    game.end_ts,
-
+                  start: game.start_ts,
+                  end: game.end_ts,
                   timezone:
                     game.timezone ||
                     "America/Chicago",
-
-                  teamKey:
-                    key,
-
-                  teamName:
-                    team.name,
-
+                  teamKey: key,
+                  teamName: team.name,
                   opponent:
                     game.opponent_team?.name ||
                     "Opponent",
-
                   homeAway:
-                    game.home_away ||
-                    "",
-
+                    game.home_away || "",
                   gameStatus:
-                    game.game_status ||
-                    "",
-
-                  season:
-                    season,
-
-                  gameChangerTeamId:
-                    gameChangerTeamId,
-
-                  gameChangerGameId:
-                    game.id,
-
+                    game.game_status || "",
+                  season,
+                  gameChangerTeamId,
+                  gameChangerGameId: game.id,
                   opponentLogo:
                     game.opponent_team?.avatar_url ||
                     ""
-
                 });
-
               }
-
 
               fs.writeFileSync(
                 scheduleFile,
@@ -755,172 +429,74 @@ jobs:
                 ) + "\n"
               );
 
-
               console.log(
                 `Saved ${scheduleFile}`
               );
 
-
               console.log(
                 `${team.name}: ${games.length} games downloaded for ${season}`
               );
-
             }
 
-
             console.log(
-              `${team.name}: ${teamCalendarEvents.length} calendar games added`
+              `${team.name}: ${events.length} calendar games added`
             );
 
-
-            return teamCalendarEvents;
-
+            return events;
           }
-
 
           /*
-            ========================================
-            ICS HELPERS
-            ========================================
-          */
+           * ========================================
+           * ICS HELPERS
+           * ========================================
+           */
 
-          function unfoldICS(
-            text
-          ) {
-
+          function unfoldICS(text) {
             return text
-              .replace(
-                /\r\n/g,
-                "\n"
-              )
-              .replace(
-                /\r/g,
-                "\n"
-              )
-              .replace(
-                /\n[ \t]/g,
-                ""
-              );
-
+              .replace(/\r\n/g, "\n")
+              .replace(/\r/g, "\n")
+              .replace(/\n[ \t]/g, "");
           }
 
-
-          function unescapeICS(
-            value
-          ) {
-
-            return String(
-              value || ""
-            )
-              .replace(
-                /\\n/g,
-                "\n"
-              )
-              .replace(
-                /\\,/g,
-                ","
-              )
-              .replace(
-                /\\;/g,
-                ";"
-              )
-              .replace(
-                /\\\\/g,
-                "\\"
-              );
-
+          function unescapeICS(value) {
+            return String(value || "")
+              .replace(/\\n/g, "\n")
+              .replace(/\\,/g, ",")
+              .replace(/\\;/g, ";")
+              .replace(/\\\\/g, "\\");
           }
-
 
           function getICSProperty(
             lines,
             property
           ) {
+            const line = lines.find(
+              item =>
+                item.startsWith(property + ":") ||
+                item.startsWith(property + ";")
+            );
 
-            const line =
-              lines.find(
-                item =>
-                  item.startsWith(
-                    property + ":"
-                  ) ||
-                  item.startsWith(
-                    property + ";"
-                  )
-              );
-
-
-            if (!line) {
-              return null;
-            }
-
+            if (!line) return null;
 
             const colon =
               line.indexOf(":");
 
-
-            if (
-              colon === -1
-            ) {
-
-              return null;
-
-            }
-
+            if (colon === -1) return null;
 
             return {
-
-              raw:
-                line.substring(
-                  0,
-                  colon
-                ),
-
-              value:
-                unescapeICS(
-                  line.substring(
-                    colon + 1
-                  )
-                )
-
+              raw: line.substring(0, colon),
+              value: unescapeICS(
+                line.substring(colon + 1)
+              )
             };
-
           }
 
+          function parseICSDate(rawProperty) {
+            if (!rawProperty) return null;
 
-          /*
-            Convert AllBooked DTSTART values
-            into ISO timestamps.
+            const raw = rawProperty.value;
 
-            AllBooked currently uses values such as:
-
-            DTSTART;TZID=UTC-05:20260804T190000
-
-            We preserve that explicit offset.
-          */
-
-          function parseICSDate(
-            rawProperty
-          ) {
-
-            if (!rawProperty) {
-              return null;
-            }
-
-
-            const raw =
-              rawProperty.value;
-
-
-            /*
-              Date-only event.
-            */
-
-            if (
-              /^\d{8}$/.test(
-                raw
-              )
-            ) {
-
+            if (/^\d{8}$/.test(raw)) {
               return (
                 raw.substring(0, 4) +
                 "-" +
@@ -928,84 +504,45 @@ jobs:
                 "-" +
                 raw.substring(6, 8)
               );
-
             }
 
-
-            /*
-              Explicit UTC.
-            */
-
-            if (
-              raw.endsWith("Z")
-            ) {
-
+            if (raw.endsWith("Z")) {
               const value =
                 raw.substring(
                   0,
                   raw.length - 1
                 );
 
-
               const year =
-                value.substring(
-                  0,
-                  4
-                );
+                value.substring(0, 4);
 
               const month =
-                value.substring(
-                  4,
-                  6
-                );
+                value.substring(4, 6);
 
               const day =
-                value.substring(
-                  6,
-                  8
-                );
+                value.substring(6, 8);
 
               const hour =
-                value.substring(
-                  9,
-                  11
-                );
+                value.substring(9, 11);
 
               const minute =
-                value.substring(
-                  11,
-                  13
-                );
+                value.substring(11, 13);
 
               const second =
-                value.substring(
-                  13,
-                  15
-                ) || "00";
-
+                value.substring(13, 15) ||
+                "00";
 
               return (
                 `${year}-${month}-${day}` +
                 `T${hour}:${minute}:${second}Z`
               );
-
             }
 
+            const match = raw.match(
+              /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/
+            );
 
-            /*
-              Extract local date/time.
-            */
-
-            const match =
-              raw.match(
-                /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/
-              );
-
-
-            if (!match) {
-              return null;
-            }
-
+            if (!match) return null;
 
             const [
               ,
@@ -1017,148 +554,84 @@ jobs:
               second
             ] = match;
 
-
-            /*
-              Look for TZID=UTC-05 / UTC-06.
-            */
-
             const tzMatch =
               rawProperty.raw.match(
                 /TZID=UTC([+-])(\d{2})/
               );
 
-
             if (tzMatch) {
-
-              const sign =
-                tzMatch[1];
-
-              const offsetHours =
-                tzMatch[2];
-
-
               return (
                 `${year}-${month}-${day}` +
                 `T${hour}:${minute}:${second}` +
-                `${sign}${offsetHours}:00`
+                `${tzMatch[1]}${tzMatch[2]}:00`
               );
-
             }
-
-
-            /*
-              America/Chicago or unspecified:
-              use the local-looking timestamp.
-
-              The calendar will interpret this
-              according to the browser timezone.
-            */
 
             return (
               `${year}-${month}-${day}` +
               `T${hour}:${minute}:${second}`
             );
-
           }
 
-
           /*
-            ========================================
-            ALLBOOKED PROCESSING
-            ========================================
-          */
+           * ========================================
+           * ALLBOOKED
+           * ========================================
+           */
 
           async function processAllBooked() {
-
             const url =
               process.env.ALLBOOKED_ICAL_URL;
 
-
             if (!url) {
-
               throw new Error(
                 "ALLBOOKED_ICAL_URL GitHub secret is missing"
               );
-
             }
-
 
             console.log(
               "Downloading AllBooked calendar..."
             );
 
-
             const ics =
-              await fetchText(
-                url
-              );
-
+              await fetchText(url);
 
             const lines =
-              unfoldICS(
-                ics
-              )
+              unfoldICS(ics)
                 .split("\n")
-                .map(
-                  line =>
-                    line.trim()
-                );
-
+                .map(line => line.trim());
 
             const teamNames =
-              Object.values(
-                teams
-              )
+              Object.values(teams)
                 .filter(
-                  team =>
-                    team.active
+                  team => team.active
                 )
                 .map(
-                  team =>
-                    team.name
+                  team => team.name
                 );
 
+            const events = [];
+            let current = null;
 
-            const events =
-              [];
-
-
-            let current =
-              null;
-
-
-            for (
-              const line of lines
-            ) {
-
+            for (const line of lines) {
               if (
                 line ===
                 "BEGIN:VEVENT"
               ) {
-
-                current =
-                  [];
-
+                current = [];
                 continue;
-
               }
-
 
               if (
                 line ===
                 "END:VEVENT"
               ) {
-
-                if (
-                  current
-                ) {
-
+                if (current) {
                   const summary =
                     getICSProperty(
                       current,
                       "SUMMARY"
                     );
-
 
                   const start =
                     getICSProperty(
@@ -1166,13 +639,11 @@ jobs:
                       "DTSTART"
                     );
 
-
                   const end =
                     getICSProperty(
                       current,
                       "DTEND"
                     );
-
 
                   const resources =
                     getICSProperty(
@@ -1180,20 +651,11 @@ jobs:
                       "RESOURCES"
                     );
 
-
-                  const description =
-                    getICSProperty(
-                      current,
-                      "DESCRIPTION"
-                    );
-
-
                   const status =
                     getICSProperty(
                       current,
                       "STATUS"
                     );
-
 
                   const uid =
                     getICSProperty(
@@ -1201,32 +663,17 @@ jobs:
                       "UID"
                     );
 
-
                   const summaryText =
-                    summary?.value ||
-                    "";
-
+                    summary?.value || "";
 
                   const resourceText =
-                    resources?.value ||
-                    "";
-
-
-                  /*
-                    Only confirmed bookings.
-                  */
+                    resources?.value || "";
 
                   const confirmed =
                     !status ||
                     status.value
                       .toUpperCase() ===
                       "CONFIRMED";
-
-
-                  /*
-                    We only want the shared
-                    team area.
-                  */
 
                   const teamResource =
                     resourceText
@@ -1235,30 +682,18 @@ jobs:
                         "all tunnels (team)"
                       );
 
-
-                  /*
-                    The booking title must begin
-                    with an active Cobras team name.
-
-                    This is what prevents private
-                    individual lessons from appearing.
-                  */
-
                   const matchingTeam =
                     teamNames.find(
                       teamName =>
                         summaryText ===
                           teamName ||
-
                         summaryText.startsWith(
                           teamName + " "
                         ) ||
-
                         summaryText.startsWith(
                           teamName + " ("
                         )
                     );
-
 
                   if (
                     confirmed &&
@@ -1268,245 +703,521 @@ jobs:
                     end &&
                     uid
                   ) {
-
-                    const cleanTitle =
-                      matchingTeam;
-
-
                     events.push({
-
                       id:
                         `allbooked-${uid.value}`,
-
-                      type:
-                        "indoor",
-
+                      type: "indoor",
                       title:
-                        cleanTitle,
-
+                        matchingTeam,
                       start:
                         parseICSDate(
                           start
                         ),
-
                       end:
                         parseICSDate(
                           end
                         ),
-
                       teamKey:
                         Object.keys(
                           teams
                         ).find(
                           key =>
-                            teams[key].name ===
+                            teams[key]
+                              .name ===
                             matchingTeam
                         ) || "",
-
                       teamName:
                         matchingTeam,
-
                       location:
                         "McHenry Cobras Indoor Facility",
-
                       space:
                         "All Tunnels",
-
                       category:
                         "Indoor Facility",
-
                       description:
                         summaryText,
-
-                      source:
-                        "AllBooked",
-
+                      source: "AllBooked",
                       allBookedUid:
                         uid.value
-
                     });
-
                   }
-
                 }
 
-
-                current =
-                  null;
-
+                current = null;
                 continue;
-
               }
 
-
-              if (
-                current
-              ) {
-
-                current.push(
-                  line
-                );
-
+              if (current) {
+                current.push(line);
               }
-
             }
 
+            const unique = new Map();
 
-            /*
-              Remove duplicate UIDs.
-            */
-
-            const unique =
-              new Map();
-
-
-            for (
-              const event of events
-            ) {
-
+            for (const event of events) {
               unique.set(
                 event.id,
                 event
               );
-
             }
-
 
             const finalEvents =
               Array.from(
                 unique.values()
               );
 
-
             console.log(
-              `AllBooked bookings found: ${lines.filter(
-                line =>
-                  line ===
-                  "BEGIN:VEVENT"
-              ).length}`
+              `AllBooked bookings found: ${
+                lines.filter(
+                  line =>
+                    line ===
+                    "BEGIN:VEVENT"
+                ).length
+              }`
             );
-
 
             console.log(
               `AllBooked team bookings imported: ${finalEvents.length}`
             );
 
-
             return finalEvents;
-
           }
 
+          /*
+           * ========================================
+           * SPORTS CONNECT
+           * ========================================
+           */
+
+          function normalizeWebcalUrl(url) {
+            if (!url) return url;
+
+            return url
+              .replace(
+                /^webcal:\/\//i,
+                "https://"
+              )
+              .replace(
+                /^webcals:\/\//i,
+                "https://"
+              );
+          }
+
+          function extractSportsConnectIcalUrls(
+            html,
+            baseUrl
+          ) {
+            const candidates = [];
+
+            const patterns = [
+              /(?:href|src)\s*=\s*["']([^"']+)["']/gi,
+              /https?:\/\/[^\s"'<>]+/gi,
+              /webcal:\/\/[^\s"'<>]+/gi
+            ];
+
+            for (const pattern of patterns) {
+              for (const match of html.matchAll(pattern)) {
+                const raw =
+                  match[1] ||
+                  match[0];
+
+                if (!raw) continue;
+
+                const decoded =
+                  raw
+                    .replace(
+                      /&amp;/gi,
+                      "&"
+                    )
+                    .replace(
+                      /\\u0026/g,
+                      "&"
+                    )
+                    .replace(
+                      /\\/g,
+                      ""
+                    );
+
+                if (
+                  /\.ics(?:[?#]|$)/i.test(
+                    decoded
+                  ) ||
+                  /ical/i.test(
+                    decoded
+                  ) ||
+                  /calendar.*feed/i.test(
+                    decoded
+                  )
+                ) {
+                  try {
+                    const absolute =
+                      new URL(
+                        normalizeWebcalUrl(
+                          decoded
+                        ),
+                        baseUrl
+                      ).href;
+
+                    candidates.push(
+                      absolute
+                    );
+                  } catch (_) {}
+                }
+              }
+            }
+
+            return [
+              ...new Set(
+                candidates
+              )
+            ];
+          }
+
+          async function processSportsConnect() {
+            const pageUrl =
+              process.env.SPORTS_CONNECT_URL;
+
+            if (!pageUrl) {
+              throw new Error(
+                "SPORTS_CONNECT_URL is missing"
+              );
+            }
+
+            console.log(
+              "Downloading Sports Connect calendar..."
+            );
+
+            console.log(
+              `Sports Connect source: ${pageUrl}`
+            );
+
+            const pageHtml =
+              await fetchText(pageUrl);
+
+            const icalUrls =
+              extractSportsConnectIcalUrls(
+                pageHtml,
+                pageUrl
+              );
+
+            if (!icalUrls.length) {
+              throw new Error(
+                "Could not find an iCal/ICS feed URL on the Sports Connect calendar page."
+              );
+            }
+
+            let ics = null;
+            let selectedIcalUrl = null;
+            let lastError = null;
+
+            for (const url of icalUrls) {
+              try {
+                const candidate =
+                  await fetchText(url);
+
+                if (
+                  candidate.includes(
+                    "BEGIN:VCALENDAR"
+                  ) &&
+                  candidate.includes(
+                    "BEGIN:VEVENT"
+                  )
+                ) {
+                  ics = candidate;
+                  selectedIcalUrl = url;
+                  break;
+                }
+              } catch (error) {
+                lastError = error;
+              }
+            }
+
+            if (!ics) {
+              throw new Error(
+                `Unable to download a valid Sports Connect iCal feed${
+                  lastError
+                    ? `: ${lastError.message}`
+                    : ""
+                }`
+              );
+            }
+
+            console.log(
+              `Sports Connect iCal feed: ${selectedIcalUrl}`
+            );
+
+            const lines =
+              unfoldICS(ics)
+                .split("\n")
+                .map(
+                  line =>
+                    line.trim()
+                );
+
+            const teamNames =
+              Object.values(teams)
+                .filter(
+                  team =>
+                    team &&
+                    team.active
+                )
+                .map(
+                  team =>
+                    team.name
+                )
+                .filter(Boolean);
+
+            const events = [];
+            let current = null;
+
+            for (const line of lines) {
+              if (
+                line ===
+                "BEGIN:VEVENT"
+              ) {
+                current = [];
+                continue;
+              }
+
+              if (
+                line ===
+                "END:VEVENT"
+              ) {
+                if (current) {
+                  const summary =
+                    getICSProperty(
+                      current,
+                      "SUMMARY"
+                    );
+
+                  const start =
+                    getICSProperty(
+                      current,
+                      "DTSTART"
+                    );
+
+                  const end =
+                    getICSProperty(
+                      current,
+                      "DTEND"
+                    );
+
+                  const location =
+                    getICSProperty(
+                      current,
+                      "LOCATION"
+                    );
+
+                  const description =
+                    getICSProperty(
+                      current,
+                      "DESCRIPTION"
+                    );
+
+                  const status =
+                    getICSProperty(
+                      current,
+                      "STATUS"
+                    );
+
+                  const uid =
+                    getICSProperty(
+                      current,
+                      "UID"
+                    );
+
+                  const summaryText =
+                    summary?.value || "";
+
+                  const locationText =
+                    location?.value || "";
+
+                  const descriptionText =
+                    description?.value || "";
+
+                  const confirmed =
+                    !status ||
+                    ![
+                      "CANCELLED",
+                      "CANCELED"
+                    ].includes(
+                      status.value
+                        .toUpperCase()
+                    );
+
+                  const matchingTeam =
+                    teamNames.find(
+                      teamName =>
+                        summaryText ===
+                          teamName ||
+                        summaryText.startsWith(
+                          teamName + " "
+                        ) ||
+                        summaryText.startsWith(
+                          teamName + " ("
+                        )
+                    );
+
+                  if (
+                    confirmed &&
+                    matchingTeam &&
+                    start &&
+                    end &&
+                    uid
+                  ) {
+                    const teamKey =
+                      Object.keys(
+                        teams
+                      ).find(
+                        key =>
+                          teams[key]
+                            .name ===
+                          matchingTeam
+                      ) || "";
+
+                    events.push({
+                      id:
+                        `sportsconnect-${uid.value}`,
+                      type: "practice",
+                      title:
+                        matchingTeam,
+                      start:
+                        parseICSDate(
+                          start
+                        ),
+                      end:
+                        parseICSDate(
+                          end
+                        ),
+                      teamKey,
+                      teamName:
+                        matchingTeam,
+                      location:
+                        locationText,
+                      category:
+                        "Outdoor Practice",
+                      description:
+                        descriptionText ||
+                        summaryText,
+                      source:
+                        "Sports Connect",
+                      sportsConnectUid:
+                        uid.value
+                    });
+                  }
+                }
+
+                current = null;
+                continue;
+              }
+
+              if (current) {
+                current.push(line);
+              }
+            }
+
+            const unique = new Map();
+
+            for (const event of events) {
+              unique.set(
+                event.id,
+                event
+              );
+            }
+
+            const finalEvents =
+              Array.from(
+                unique.values()
+              );
+
+            console.log(
+              `Sports Connect team practices imported: ${finalEvents.length}`
+            );
+
+            return finalEvents;
+          }
 
           /*
-            ========================================
-            MAIN
-            ========================================
-          */
+           * ========================================
+           * MAIN
+           * ========================================
+           */
 
           async function main() {
-
-            const allCalendarEvents =
-              [];
-
+            const allCalendarEvents = [];
 
             /*
-              ==================================
-              GAMECHANGER
-              ==================================
-            */
+             * GAMECHANGER
+             */
 
             for (
-              const [
-                key,
-                team
-              ]
-              of Object.entries(
-                teams
-              )
+              const [key, team]
+              of Object.entries(teams)
             ) {
-
               try {
-
                 const events =
                   await processTeam(
                     key,
                     team
                   );
 
-
                 allCalendarEvents.push(
                   ...events
                 );
-
-
-              } catch (
-                error
-              ) {
-
+              } catch (error) {
                 console.error(
                   `ERROR processing ${key}: ${error.message}`
                 );
 
-
-                process.exitCode =
-                  1;
-
+                process.exitCode = 1;
               }
-
             }
 
-
             /*
-              ==================================
-              COBRAS ORGANIZATION EVENTS
-              ==================================
-            */
+             * COBRAS ORGANIZATION EVENTS
+             */
 
             allCalendarEvents.push(
               ...organizationEvents
             );
 
-
             /*
-              ==================================
-              ALLBOOKED
-              ==================================
-            */
+             * ALLBOOKED
+             */
 
             const allBookedEvents =
               await processAllBooked();
-
 
             allCalendarEvents.push(
               ...allBookedEvents
             );
 
+            /*
+             * SPORTS CONNECT PRACTICES
+             */
+
+            const sportsConnectEvents =
+              await processSportsConnect();
+
+            allCalendarEvents.push(
+              ...sportsConnectEvents
+            );
 
             /*
-              ==================================
-              SORT
-              ==================================
-            */
+             * SORT EVERYTHING
+             */
 
             allCalendarEvents.sort(
               (a, b) =>
-                new Date(
-                  a.start
-                ) -
-                new Date(
-                  b.start
-                )
+                new Date(a.start) -
+                new Date(b.start)
             );
 
-
             /*
-              ==================================
-              CALENDAR FEED
-              ==================================
-            */
+             * CREATE CALENDAR FEED
+             */
 
             const calendarFeed = {
-
               generatedAt:
                 new Date().toISOString(),
 
@@ -1520,7 +1231,6 @@ jobs:
                 allCalendarEvents.length,
 
               eventCounts: {
-
                 gamechanger:
                   allCalendarEvents.filter(
                     event =>
@@ -1540,37 +1250,30 @@ jobs:
                     event =>
                       event.type ===
                       "indoor"
-                  ).length
+                  ).length,
 
+                practice:
+                  allCalendarEvents.filter(
+                    event =>
+                      event.type ===
+                      "practice"
+                  ).length
               },
 
               events:
                 allCalendarEvents
-
             };
 
-
             fs.writeFileSync(
-
               "calendar-events.json",
-
               JSON.stringify(
                 calendarFeed,
                 null,
                 2
               ) + "\n"
-
             );
 
-
-            /*
-              ==================================
-              SUMMARY
-              ==================================
-            */
-
             console.log("");
-
             console.log(
               "========================================"
             );
@@ -1598,76 +1301,47 @@ jobs:
             );
 
             console.log(
-              "========================================"
+              `Outdoor practice events: ${
+                calendarFeed.eventCounts.practice
+              }`
             );
 
+            console.log(
+              "========================================"
+            );
           }
 
-
-          /*
-            ========================================
-            RUN
-            ========================================
-          */
-
           main();
-
           NODE
-
-
-      # ========================================
-      # SHOW GENERATED FILES
-      # ========================================
 
       - name: Show generated files
         run: |
-
           echo "=== Schedules ==="
-
           ls -lah schedules || true
 
-
           echo ""
-
           echo "=== Cached logos ==="
-
           ls -lah logos/cache || true
 
-
           echo ""
-
           echo "=== Calendar feed ==="
-
           ls -lah calendar-events.json || true
-
-
-      # ========================================
-      # SAVE EVERYTHING
-      # ========================================
 
       - name: Save schedules, logos, and calendar
         run: |
-
           git config user.name "github-actions[bot]"
-
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
 
           git add \
             schedules \
             logos/cache \
             calendar-events.json
 
-
           if git diff --cached --quiet; then
-
             echo "No changes to save."
-
           else
-
             git commit \
               -m "Update Cobras schedules and calendar"
 
             git push
-
           fi
