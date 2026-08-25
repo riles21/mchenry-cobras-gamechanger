@@ -411,6 +411,37 @@ jobs:
                     game.home_away || "",
                   gameStatus:
                     game.game_status || "",
+
+                  /*
+                   * GameChanger provides the score from
+                   * the Cobras team's perspective:
+                   *   score.team = Cobras score
+                   *   score.opponent_team = opponent score
+                   *
+                   * Future games do not have a score object,
+                   * so leave the values as null.
+                   */
+                  teamScore:
+                    game.score?.team ?? null,
+
+                  opponentScore:
+                    game.score?.opponent_team ?? null,
+
+                  result:
+                    game.score &&
+                    typeof game.score.team === "number" &&
+                    typeof game.score.opponent_team === "number"
+                      ? (
+                          game.score.team >
+                          game.score.opponent_team
+                            ? "win"
+                            : game.score.team <
+                              game.score.opponent_team
+                                ? "loss"
+                                : "tie"
+                        )
+                      : null,
+
                   season,
                   gameChangerTeamId,
                   gameChangerGameId: game.id,
