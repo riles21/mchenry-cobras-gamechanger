@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-25T01:31:34.885Z",
+  "generatedAt": "2026-08-25T05:20:33.349Z",
   "cobrasSeason": "2026-27 Season",
   "activeGameChangerSeasons": [
     "Fall 2026"
   ],
-  "eventCount": 162,
+  "eventCount": 163,
   "eventCounts": {
     "gamechanger": 87,
     "organization": 5,
-    "indoor": 45,
-    "practice": 25
+    "indoor": 47,
+    "practice": 24
   },
   "events": [
     {
@@ -24,10 +24,13 @@
       "opponent": "Lake County Stars (Nazario) 14U",
       "homeAway": "home",
       "gameStatus": "completed",
+      "teamScore": 11,
+      "opponentScore": 5,
+      "result": "win",
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "451bdb0f-c424-48db-abb7-837a6c001c81",
-      "opponentLogo": "logos/cache/87e9b469a0d1ff8e.jpg"
+      "opponentLogo": "logos/cache/f0c70d5ab9550ada.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-91d70c9c-7cbc-4446-a5d3-25ded996cadc",
@@ -41,27 +44,13 @@
       "opponent": "Grayslake Coyotes 10U",
       "homeAway": "home",
       "gameStatus": "completed",
+      "teamScore": 22,
+      "opponentScore": 2,
+      "result": "win",
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
-      "opponentLogo": "logos/cache/e9ff69a9457cd3f1.jpg"
-    },
-    {
-      "id": "sportsconnect-46915977",
-      "type": "practice",
-      "title": "Cobras 12U Meraz Practice",
-      "start": "2026-08-24T17:00:01",
-      "end": "2026-08-24T19:00:01",
-      "timezone": "America/Chicago",
-      "teamName": "Cobras 12U Meraz",
-      "teamKey": "",
-      "location": "VFW - Bronco Field",
-      "category": "Outdoor Practice",
-      "description": "Outdoor practice at VFW - Bronco Field.",
-      "source": "Sports Connect",
-      "sportsConnectEventId": "40107087",
-      "sportsConnectMatchId": "46915977",
-      "sportsConnectTeamId": "41300055"
+      "opponentLogo": "logos/cache/a2db72feb62d637c.jpg"
     },
     {
       "id": "sportsconnect-46886872",
@@ -126,10 +115,13 @@
       "opponent": "Eagles Elite 14U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "f841b34f-56be-43d8-ab63-6adaf268f159",
-      "opponentLogo": "logos/cache/b65f35c41ae8b2ef.jpg"
+      "opponentLogo": "logos/cache/4d76a229ef7bc7ec.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
@@ -143,10 +135,13 @@
       "opponent": "Broncos Red 9U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
-      "opponentLogo": "logos/cache/18ea75356054f5e7.jpg"
+      "opponentLogo": "logos/cache/ade03eba07345c76.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-83f3a129-7360-40e4-9a05-b4393b986b93",
@@ -160,10 +155,13 @@
       "opponent": "Lake Villa Eagles 10U-Kalina",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "83f3a129-7360-40e4-9a05-b4393b986b93",
-      "opponentLogo": "logos/cache/8e66d0d144f7b2a8.jpg"
+      "opponentLogo": "logos/cache/2909bd888608617d.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
@@ -177,6 +175,9 @@
       "opponent": "Cougars White 13U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
@@ -194,10 +195,13 @@
       "opponent": "Top Tier MC 12u Brunschon",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "07fea401-9542-4620-933a-8162e92592dd",
-      "opponentLogo": "logos/cache/9e88ab7913ea2a18.jpg"
+      "opponentLogo": "logos/cache/439d05a64d12ec4a.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
@@ -211,6 +215,9 @@
       "opponent": "Mundelein Mustangs Red 12U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
@@ -228,10 +235,13 @@
       "opponent": "SBA Raiders 10U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "83c18318-19fb-45a6-8286-32937e270604",
-      "opponentLogo": "logos/cache/5d4528a4d5fe4afa.jpg"
+      "opponentLogo": "logos/cache/3fb58343d2e52038.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-08611e4c-75c6-471b-915d-477272bdff91",
@@ -245,10 +255,13 @@
       "opponent": "Lake Villa Eagles 14U-Adams",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "08611e4c-75c6-471b-915d-477272bdff91",
-      "opponentLogo": "logos/cache/c21258f1bb103363.jpg"
+      "opponentLogo": "logos/cache/2a721facab88e040.jpg"
     },
     {
       "id": "sportsconnect-46886873",
@@ -279,10 +292,13 @@
       "opponent": "Grayslake Coyotes 12U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "46997580-1fae-4bc2-bcf2-478ccb73648a",
-      "opponentLogo": "logos/cache/9482083840e11d52.jpg"
+      "opponentLogo": "logos/cache/39b4432d2ee834b0.jpg"
     },
     {
       "id": "sportsconnect-46892988",
@@ -313,10 +329,13 @@
       "opponent": "SBA 9U Graf",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
-      "opponentLogo": "logos/cache/fb4b445bef66de62.jpg"
+      "opponentLogo": "logos/cache/50e6d960bff08056.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
@@ -330,10 +349,13 @@
       "opponent": "Grayslake Coyotes 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
-      "opponentLogo": "logos/cache/3dfe7c4b38ee75d5.jpg"
+      "opponentLogo": "logos/cache/627f060c568a1655.jpg"
     },
     {
       "id": "sportsconnect-46886907",
@@ -364,6 +386,9 @@
       "opponent": "Top Tier West Freed",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "ce2e7fc3-c071-410c-a2fb-8f5af371c291",
@@ -381,6 +406,9 @@
       "opponent": "Cary Trojans 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "b4edf409-d335-40c0-9727-a7f4b72183fb",
@@ -398,10 +426,13 @@
       "opponent": "SBA Raiders Woods 11U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
-      "opponentLogo": "logos/cache/03cbb0eb42404af6.jpg"
+      "opponentLogo": "logos/cache/77ba155aa61ca393.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-5b127abf-997e-43d1-a8b0-68b7cde64e3f",
@@ -415,6 +446,9 @@
       "opponent": "Lake Villa Eagles 13U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "5b127abf-997e-43d1-a8b0-68b7cde64e3f",
@@ -432,6 +466,9 @@
       "opponent": "GRB RAYS ILLINOIS - BURKE 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "4799af12-76fe-429f-890c-cafc4d653264",
@@ -449,10 +486,13 @@
       "opponent": "Sparks North 12U- Lozano",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
-      "opponentLogo": "logos/cache/d94bf2ffe7324544.jpg"
+      "opponentLogo": "logos/cache/d7e1f2ad629afcad.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-9e0d1ee8-b25f-4072-9d03-5c15e1d177b0",
@@ -466,6 +506,9 @@
       "opponent": "Ironman- Nisenson 10U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "9e0d1ee8-b25f-4072-9d03-5c15e1d177b0",
@@ -517,6 +560,9 @@
       "opponent": "Cary",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "b52e132b-e40a-462e-9352-4802bcc78e8d",
@@ -534,10 +580,13 @@
       "opponent": "GRB Rays Illinois - Moore 12U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
-      "opponentLogo": "logos/cache/61b8eb8dcbf1adab.jpg"
+      "opponentLogo": "logos/cache/a9d910a720d63a73.jpg"
     },
     {
       "id": "sportsconnect-46886908",
@@ -568,6 +617,9 @@
       "opponent": "Arlington Cardinals",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "fb9e299b-2315-40e8-8ff6-4bfa20ebdc39",
@@ -585,6 +637,9 @@
       "opponent": "GRB illinois 14U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "1121e758-761a-474c-8804-73471c97e5ec",
@@ -602,10 +657,13 @@
       "opponent": "SBA Raiders Duff 9U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
-      "opponentLogo": "logos/cache/cd0f46944fc1b95b.jpg"
+      "opponentLogo": "logos/cache/404f6a23bdece01b.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-fb019a0f-aba5-4207-9b62-1b7a2c988509",
@@ -619,6 +677,9 @@
       "opponent": "Arlington Cardinals 10U Red 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "fb019a0f-aba5-4207-9b62-1b7a2c988509",
@@ -636,10 +697,13 @@
       "opponent": "Elite NW 12U Milazzo",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
-      "opponentLogo": "logos/cache/0e1bf7fa54d5166e.jpg"
+      "opponentLogo": "logos/cache/a925d224b26db713.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-88a47f45-97ca-47a1-baa5-bee83abaf32e",
@@ -653,10 +717,13 @@
       "opponent": "Northwest Travelers - 10U Gold",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "88a47f45-97ca-47a1-baa5-bee83abaf32e",
-      "opponentLogo": "logos/cache/84fe008783b8226a.jpg"
+      "opponentLogo": "logos/cache/05453472c526385a.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-ba903b67-c281-4478-9044-5affd5b3dbd9",
@@ -670,10 +737,13 @@
       "opponent": "Grayslake Sliders 10U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "ba903b67-c281-4478-9044-5affd5b3dbd9",
-      "opponentLogo": "logos/cache/1584d462dcb822ef.jpg"
+      "opponentLogo": "logos/cache/3cc60bc759804288.jpg"
     },
     {
       "id": "sportsconnect-46886875",
@@ -704,10 +774,13 @@
       "opponent": "Cougars White 10u",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
-      "opponentLogo": "logos/cache/f9731c4975d6c24c.jpg"
+      "opponentLogo": "logos/cache/fd2c437ef801bd00.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -721,6 +794,9 @@
       "opponent": "sba raiders 14u",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -755,10 +831,13 @@
       "opponent": "Elite NW 12U Milazzo",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
-      "opponentLogo": "logos/cache/04c94dd89608b178.jpg"
+      "opponentLogo": "logos/cache/689a66128e7df213.jpg"
     },
     {
       "id": "sportsconnect-46886909",
@@ -789,6 +868,9 @@
       "opponent": "GRB illinois 14U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "33ded3b9-783e-4c07-beec-70a75fda30de",
@@ -806,6 +888,9 @@
       "opponent": "Opponent",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "f2a96aff-c718-4939-9267-e3cf8f9e948d",
@@ -823,10 +908,13 @@
       "opponent": "Grayslake Sliders 9U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "437f090e-d748-4588-8e84-b57190465519",
-      "opponentLogo": "logos/cache/89a7d621a88a7aae.jpg"
+      "opponentLogo": "logos/cache/38674022a38740c4.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
@@ -840,6 +928,9 @@
       "opponent": "Lake Villa Eagles 11U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
@@ -857,10 +948,13 @@
       "opponent": "Top Tier Mc 13u Brunschon",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "fe880c8c-78dc-478e-bc60-1895b491c61c",
-      "opponentLogo": "logos/cache/f459dc50b4208b88.jpg"
+      "opponentLogo": "logos/cache/e5cdf3b1b0e142db.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-a82a8d53-deb2-4999-967f-0abd1a4a0858",
@@ -874,6 +968,9 @@
       "opponent": "Lake Zurich",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jo418sCgCDyw",
       "gameChangerGameId": "a82a8d53-deb2-4999-967f-0abd1a4a0858",
@@ -891,10 +988,13 @@
       "opponent": "Signature Stars 8U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "7f7155e3-7615-4df3-8f76-d076226b3814",
-      "opponentLogo": "logos/cache/3a214bb15cd07bfd.jpg"
+      "opponentLogo": "logos/cache/b627c03e472a5b01.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
@@ -908,10 +1008,13 @@
       "opponent": "Grayslake Coyotes 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
-      "opponentLogo": "logos/cache/e9ff69a9457cd3f1.jpg"
+      "opponentLogo": "logos/cache/a2db72feb62d637c.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-44ac610f-e442-401e-8837-f41476558b9f",
@@ -925,6 +1028,9 @@
       "opponent": "Arlington Cardinals 12U Grey",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "44ac610f-e442-401e-8837-f41476558b9f",
@@ -942,6 +1048,9 @@
       "opponent": "Arlington Cardinals - 12U White (FALL)",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "0ed8e914-1dab-4940-a045-7ed16a7972d5",
@@ -959,6 +1068,9 @@
       "opponent": "Cary Trojans 13U Navy",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "289978e3-3978-45ca-b9dc-66135ce48eeb",
@@ -976,10 +1088,13 @@
       "opponent": "Elite NW 12U Milazzo",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
-      "opponentLogo": "logos/cache/04c94dd89608b178.jpg"
+      "opponentLogo": "logos/cache/689a66128e7df213.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-9d20219d-0c09-4496-afea-f47e77eb204c",
@@ -993,10 +1108,13 @@
       "opponent": "Elite NW 12U Clouse",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "9d20219d-0c09-4496-afea-f47e77eb204c",
-      "opponentLogo": "logos/cache/48985bbb2369a64a.jpg"
+      "opponentLogo": "logos/cache/fa6bdd42949e6ded.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-8535acef-19bd-48ee-9723-2d46ac60d5e7",
@@ -1010,10 +1128,13 @@
       "opponent": "Signature Stars 9U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
-      "opponentLogo": "logos/cache/1558196ce5b4ad67.jpg"
+      "opponentLogo": "logos/cache/3d427f33c07cba37.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -1027,6 +1148,9 @@
       "opponent": "Genoa City",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jo418sCgCDyw",
       "gameChangerGameId": "0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -1044,10 +1168,13 @@
       "opponent": "Elite NW 10U Wintersdorf",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
-      "opponentLogo": "logos/cache/0c93aad87ca1de64.jpg"
+      "opponentLogo": "logos/cache/84edd8483ed1a1ad.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-83f634ae-41a4-4442-9603-94cb58b54816",
@@ -1061,10 +1188,13 @@
       "opponent": "Lake County Stars (Nazario) 14U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "83f634ae-41a4-4442-9603-94cb58b54816",
-      "opponentLogo": "logos/cache/87e9b469a0d1ff8e.jpg"
+      "opponentLogo": "logos/cache/f0c70d5ab9550ada.jpg"
     },
     {
       "id": "sportsconnect-46886876",
@@ -1095,6 +1225,9 @@
       "opponent": "Elite Rodriguez 14U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "c0bf0ce0-0f46-4087-8d32-bdefd63feb07",
@@ -1129,10 +1262,13 @@
       "opponent": "Elite NW 10U Wintersdorf",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "eceb4335-36c3-4b63-a277-b64f824ad009",
-      "opponentLogo": "logos/cache/0c93aad87ca1de64.jpg"
+      "opponentLogo": "logos/cache/84edd8483ed1a1ad.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
@@ -1146,10 +1282,13 @@
       "opponent": "GRB Rays Illinois - Moore 12U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
-      "opponentLogo": "logos/cache/61b8eb8dcbf1adab.jpg"
+      "opponentLogo": "logos/cache/a9d910a720d63a73.jpg"
     },
     {
       "id": "sportsconnect-46886910",
@@ -1180,6 +1319,9 @@
       "opponent": "2026 Fall 9U Wauconda Wreckers",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "a45043f4-5596-4537-b7da-9ba308dbc9d4",
@@ -1197,10 +1339,13 @@
       "opponent": "SBA Raiders 11U - Simmons",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
-      "opponentLogo": "logos/cache/4a426abcfffe3129.jpg"
+      "opponentLogo": "logos/cache/c3a62c0de6f02e7e.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-4a16f24d-1882-4966-bb55-ae758d57aac8",
@@ -1214,10 +1359,13 @@
       "opponent": "SBA Raiders 13u - Hedrick",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "4a16f24d-1882-4966-bb55-ae758d57aac8",
-      "opponentLogo": "logos/cache/9386bc410c2b63c9.jpg"
+      "opponentLogo": "logos/cache/cf362669f419da89.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-53543ffc-3b9d-4356-8c0c-78823bdb3018",
@@ -1231,10 +1379,13 @@
       "opponent": "Top Tier MC - Neumann/Slowinski 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
-      "opponentLogo": "logos/cache/d43b926cc6005afb.jpg"
+      "opponentLogo": "logos/cache/42500ed0c2bc6411.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-72caae43-c7cf-4487-9669-241a233cb33d",
@@ -1248,10 +1399,13 @@
       "opponent": "SBA Raiders-LoPresti 12U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "72caae43-c7cf-4487-9669-241a233cb33d",
-      "opponentLogo": "logos/cache/8a5d730a91866bb3.jpg"
+      "opponentLogo": "logos/cache/0f998d434c7d4f87.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-b450590e-59e3-4429-b7e8-c0b35fbfde3c",
@@ -1265,10 +1419,13 @@
       "opponent": "SBA Raiders Duff 9U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
-      "opponentLogo": "logos/cache/cd0f46944fc1b95b.jpg"
+      "opponentLogo": "logos/cache/404f6a23bdece01b.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-fa6f1770-1db4-4815-912b-c4e02db153d0",
@@ -1282,6 +1439,9 @@
       "opponent": "Arlington Cardinals - 12U White (FALL)",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "fa6f1770-1db4-4815-912b-c4e02db153d0",
@@ -1299,6 +1459,9 @@
       "opponent": "Genoa City",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jo418sCgCDyw",
       "gameChangerGameId": "92a9af05-1170-403b-9e0f-ad4f0a311637",
@@ -1316,10 +1479,13 @@
       "opponent": "Grayslake Sliders 9U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "2bfa8776-272a-4c04-80d3-9e90371e4516",
-      "opponentLogo": "logos/cache/89a7d621a88a7aae.jpg"
+      "opponentLogo": "logos/cache/38674022a38740c4.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-56880f21-1ced-4b64-baf7-8ae58e819ddd",
@@ -1333,10 +1499,13 @@
       "opponent": "Elite NW 10U Wintersdorf",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
-      "opponentLogo": "logos/cache/456f88ae32bdac77.jpg"
+      "opponentLogo": "logos/cache/ae819363898a63af.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-59b93419-8a14-46e6-b967-86924d1764e1",
@@ -1350,10 +1519,13 @@
       "opponent": "LITH Thunder Black 12U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "59b93419-8a14-46e6-b967-86924d1764e1",
-      "opponentLogo": "logos/cache/7f0e4deca1bb3c48.jpg"
+      "opponentLogo": "logos/cache/d7913276f9ccd6ed.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-8aaa56bf-083b-49b5-985a-73a9f1214c08",
@@ -1367,10 +1539,13 @@
       "opponent": "Grayslake Coyotes 10U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
-      "opponentLogo": "logos/cache/3dfe7c4b38ee75d5.jpg"
+      "opponentLogo": "logos/cache/627f060c568a1655.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ccce8207-ae64-49d8-9bd7-529234d58d1e",
@@ -1384,10 +1559,13 @@
       "opponent": "Elite NW 12U Milazzo",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
-      "opponentLogo": "logos/cache/0e1bf7fa54d5166e.jpg"
+      "opponentLogo": "logos/cache/a925d224b26db713.jpg"
     },
     {
       "id": "sportsconnect-46886877",
@@ -1418,6 +1596,9 @@
       "opponent": "Elite Rodriguez 14U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "fcedaab2-9ce2-40e2-afac-ba4f0102a0a1",
@@ -1469,6 +1650,9 @@
       "opponent": "Opponent",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "843c5cad-87f1-40a0-88c0-bc791d81552f",
@@ -1486,10 +1670,13 @@
       "opponent": "SBA Raiders 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
-      "opponentLogo": "logos/cache/d3618e0d3603c5a7.jpg"
+      "opponentLogo": "logos/cache/92c7caf9de58e444.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
@@ -1503,10 +1690,13 @@
       "opponent": "Elite NW 11U Smerling",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
-      "opponentLogo": "logos/cache/756c1b045c99057d.jpg"
+      "opponentLogo": "logos/cache/90814b06d3a768ba.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-227ec302-4bea-4848-a091-dde93f4a545d",
@@ -1520,10 +1710,13 @@
       "opponent": "Trosky Illinois 9U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "227ec302-4bea-4848-a091-dde93f4a545d",
-      "opponentLogo": "logos/cache/4c65d23a3719b205.jpg"
+      "opponentLogo": "logos/cache/9213301b99ba4fcc.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-45a075d7-adc1-4a55-9e48-479b1f4034f9",
@@ -1537,10 +1730,13 @@
       "opponent": "SBA Raiders-LoPresti 12U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
-      "opponentLogo": "logos/cache/eb514decafebf925.jpg"
+      "opponentLogo": "logos/cache/28552adde53a639c.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-b916f2f1-2955-4ed4-9409-73500ee3c184",
@@ -1554,10 +1750,13 @@
       "opponent": "Wauconda Wreckers - Fall 26’ - 13U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "b916f2f1-2955-4ed4-9409-73500ee3c184",
-      "opponentLogo": "logos/cache/d88c872e13d38591.jpg"
+      "opponentLogo": "logos/cache/1cceedd391cef9bf.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
@@ -1571,10 +1770,13 @@
       "opponent": "Lake Villa Eagles 10U-Kalina",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
-      "opponentLogo": "logos/cache/3d5fdef4fb81d032.jpg"
+      "opponentLogo": "logos/cache/75c44c1df3df5bbd.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-25878a9e-959a-45d6-9131-d6fb1149a4e8",
@@ -1588,6 +1790,9 @@
       "opponent": "Cary Trojans 13U Navy",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "25878a9e-959a-45d6-9131-d6fb1149a4e8",
@@ -1639,10 +1844,13 @@
       "opponent": "SBA 9U Graf",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
-      "opponentLogo": "logos/cache/fb4b445bef66de62.jpg"
+      "opponentLogo": "logos/cache/50e6d960bff08056.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -1656,6 +1864,9 @@
       "opponent": "Arlington Cardinals",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -1690,6 +1901,9 @@
       "opponent": "Top Tier West Freed",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "f2fcbc71-7086-48ee-a37c-422a969fa66a",
@@ -1707,10 +1921,13 @@
       "opponent": "10U Wauconda Wreckers - Super 10U",
       "homeAway": "away",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "726ff682-4280-444e-97bd-716dd66eee54",
-      "opponentLogo": "logos/cache/65773b3e2f1e244f.jpg"
+      "opponentLogo": "logos/cache/b637358f62456688.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
@@ -1724,10 +1941,13 @@
       "opponent": "Lake County Lightning 11U Fall",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
-      "opponentLogo": "logos/cache/9c8f1bbbe88d6fde.jpg"
+      "opponentLogo": "logos/cache/95b4da95a56636f4.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
@@ -1741,6 +1961,9 @@
       "opponent": "13U Jr Badgers 2027",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
@@ -1758,6 +1981,9 @@
       "opponent": "Ironman- Nisenson 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "051b66f3-d93f-4145-8641-abed82a32814",
@@ -1775,6 +2001,9 @@
       "opponent": "Algonquin Cyclones 12U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "36bfee84-f769-4bb3-81bb-c7b8efe55a8e",
@@ -1792,6 +2021,9 @@
       "opponent": "13U Jr Badgers 2027",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "9d244dba-fc23-4661-80a2-9f89e9685390",
@@ -1809,6 +2041,9 @@
       "opponent": "Bennieboys 14",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "3073a774-7d54-408b-82bc-2552b1b3c6e6",
@@ -1826,6 +2061,9 @@
       "opponent": "Bennieboys 14",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "4273d2f8-d35f-4071-9b07-d0e827e43ac0",
@@ -1877,10 +2115,13 @@
       "opponent": "Trosky Baseball Barrington 10U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "4d231ff4-0208-4cb5-9726-9bdb75311377",
-      "opponentLogo": "logos/cache/9cc47dfe2979dec9.jpg"
+      "opponentLogo": "logos/cache/fd2d6e6645e974a9.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-5377af70-7917-48a5-a0d3-b700c4c425db",
@@ -1894,10 +2135,13 @@
       "opponent": "Grayslake Coyotes 11U",
       "homeAway": "home",
       "gameStatus": "",
+      "teamScore": null,
+      "opponentScore": null,
+      "result": null,
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "5377af70-7917-48a5-a0d3-b700c4c425db",
-      "opponentLogo": "logos/cache/71676d7acd4f477a.jpg"
+      "opponentLogo": "logos/cache/975c7f66bcdaf4be.jpg"
     },
     {
       "id": "sportsconnect-46892995",
@@ -2590,6 +2834,36 @@
       "description": "15U Dean (All Tunnels (Team))",
       "source": "AllBooked",
       "allBookedUid": "119526788_639311652000000000"
+    },
+    {
+      "id": "allbooked-119526795_639312444000000000",
+      "type": "indoor",
+      "title": "16U Bivona",
+      "start": "2026-11-25T17:00:00-06:00",
+      "end": "2026-11-25T19:00:00-06:00",
+      "teamKey": "bivona16u",
+      "teamName": "16U Bivona",
+      "location": "McHenry Cobras Indoor Facility",
+      "space": "All Tunnels",
+      "category": "Indoor Facility",
+      "description": "16U Bivona (All Tunnels (Team))",
+      "source": "AllBooked",
+      "allBookedUid": "119526795_639312444000000000"
+    },
+    {
+      "id": "allbooked-119526800_639312516000000000",
+      "type": "indoor",
+      "title": "17U Deubel",
+      "start": "2026-11-25T19:00:00-06:00",
+      "end": "2026-11-25T21:00:00-06:00",
+      "teamKey": "deubel17u",
+      "teamName": "17U Deubel",
+      "location": "McHenry Cobras Indoor Facility",
+      "space": "All Tunnels",
+      "category": "Indoor Facility",
+      "description": "17U Deubel (All Tunnels (Team))",
+      "source": "AllBooked",
+      "allBookedUid": "119526800_639312516000000000"
     },
     {
       "id": "uniform-fitting-2026",
