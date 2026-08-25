@@ -857,9 +857,9 @@ button:hover {
                 COBRAS <span>CALENDAR</span>
             </h1>
 
-            <div class="header-subtitle">
-                McHenry Cobras Baseball
-            </div>
+<div class="header-subtitle" id="lastUpdated">
+    Last updated: Loading...
+</div>
 
         </div>
 
@@ -958,51 +958,37 @@ button:hover {
         </div>
 
 
-        <div class="filters">
+<div class="filters">
 
+    <button
+        type="button"
+        class="filter active"
+        data-filter="all">
+        ALL
+    </button>
 
-            <button
-                type="button"
-                class="filter active"
-                data-filter="all">
+    <button
+        type="button"
+        class="filter"
+        data-filter="games">
+        GAMES
+    </button>
 
-                ALL
+    <button
+        type="button"
+        class="filter"
+        data-filter="practices">
+        PRACTICES
+    </button>
 
-            </button>
+    <button
+        type="button"
+        class="filter"
+        data-filter="organization">
+        COBRAS EVENTS
+    </button>
 
-
-            <button
-                type="button"
-                class="filter"
-                data-filter="gamechanger">
-
-                GAMES
-
-            </button>
-
-
-            <button
-                type="button"
-                class="filter"
-                data-filter="organization">
-
-                COBRAS EVENTS
-
-            </button>
-
-
-            <button
-                type="button"
-                class="filter"
-                data-filter="indoor">
-
-                INDOOR
-
-            </button>
-
-
-        </div>
-
+</div>
 
     </div>
 
@@ -1114,18 +1100,46 @@ async function loadCalendar() {
         }
 
 
-        const data =
-            await response.json();
+const data =
+    await response.json();
 
+events =
+    Array.isArray(data.events)
+        ? data.events
+        : [];
 
-        events =
-            Array.isArray(data.events)
-                ? data.events
-                : [];
+/*
+ * Display the timestamp from calendar-events.json.
+ */
+const updatedElement =
+    document.getElementById(
+        "lastUpdated"
+    );
 
+if (
+    updatedElement &&
+    data.generatedAt
+) {
+    const updatedDate =
+        new Date(
+            data.generatedAt
+        );
 
-        renderCalendar();
+    updatedElement.textContent =
+        "Last updated: " +
+        updatedDate.toLocaleString(
+            "en-US",
+            {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+                hour: "numeric",
+                minute: "2-digit"
+            }
+        );
+}
 
+renderCalendar();
 
     } catch (error) {
 
@@ -1317,24 +1331,45 @@ function isOrganization(event) {
 
 function getFilteredEvents() {
 
-    if (
-        currentFilter ===
-        "all"
-    ) {
-
+    if (currentFilter === "all") {
         return events;
-
     }
 
+    /*
+     * GAMES = GameChanger games
+     */
+    if (currentFilter === "games") {
+        return events.filter(
+            event =>
+                event.type === "gamechanger"
+        );
+    }
 
-    return events.filter(
-        event =>
-            event.type ===
-            currentFilter
-    );
+    /*
+     * PRACTICES = both:
+     *   - AllBooked indoor practices
+     *   - Sports Connect outdoor practices
+     */
+    if (currentFilter === "practices") {
+        return events.filter(
+            event =>
+                event.type === "indoor" ||
+                event.type === "practice"
+        );
+    }
 
+    /*
+     * COBRAS EVENTS = organization events
+     */
+    if (currentFilter === "organization") {
+        return events.filter(
+            event =>
+                event.type === "organization"
+        );
+    }
+
+    return events;
 }
-
 
 /* =========================================================
    EVENTS FOR DATE
