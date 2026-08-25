@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>McHenry Cobras Calendar</title>
 
+
 <style>
+
+/* =========================================================
+   BASE
+========================================================= */
 
 * {
     box-sizing: border-box;
 }
+
 
 body {
     margin: 0;
@@ -19,6 +31,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .container {
     width: 100%;
     max-width: 1400px;
@@ -26,17 +39,19 @@ body {
     padding: 24px;
 }
 
-/* =========================
+
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
+
 
 .header h1 {
     margin: 0;
@@ -45,9 +60,11 @@ body {
     letter-spacing: 1px;
 }
 
+
 .header h1 span {
     color: #ff5a00;
 }
+
 
 .header-subtitle {
     color: #aaa;
@@ -55,9 +72,62 @@ body {
     margin-top: 5px;
 }
 
-/* =========================
+
+/* =========================================================
+   INDOOR FACILITY NOTICE
+========================================================= */
+
+.indoor-notice {
+    background: #151515;
+    border: 1px solid #333;
+    border-left: 4px solid #ff5a00;
+    padding: 15px 18px;
+    margin-bottom: 18px;
+}
+
+
+.indoor-notice-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    margin-bottom: 6px;
+}
+
+
+.indoor-notice-text {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.indoor-notice-text strong {
+    color: #ffffff;
+}
+
+
+.allbooked-button {
+    display: inline-block;
+    margin-top: 11px;
+    padding: 9px 13px;
+    background: #ff5a00;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 900;
+    border-radius: 3px;
+}
+
+
+.allbooked-button:hover {
+    background: #ff761f;
+}
+
+
+/* =========================================================
    CONTROLS
-========================= */
+========================================================= */
 
 .controls {
     display: flex;
@@ -65,12 +135,16 @@ body {
     justify-content: space-between;
     gap: 15px;
     flex-wrap: wrap;
+
     background: #151515;
+
     border: 1px solid #333;
     border-top: 3px solid #ff5a00;
+
     padding: 12px 15px;
     margin-bottom: 15px;
 }
+
 
 .month-controls {
     display: flex;
@@ -78,12 +152,14 @@ body {
     gap: 10px;
 }
 
+
 .month-title {
     min-width: 190px;
     text-align: center;
     font-size: 21px;
     font-weight: 800;
 }
+
 
 button {
     border: none;
@@ -95,24 +171,29 @@ button {
     border-radius: 3px;
 }
 
+
 button:hover {
     background: #ff761f;
 }
+
 
 .secondary-button {
     background: #292929;
     border: 1px solid #444;
 }
 
+
 .secondary-button:hover {
     background: #3a3a3a;
 }
+
 
 .filters {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
+
 
 .filter {
     padding: 7px 12px;
@@ -124,20 +205,23 @@ button:hover {
     font-weight: 700;
 }
 
+
 .filter.active {
     background: #ff5a00;
     border-color: #ff5a00;
-    color: white;
+    color: #ffffff;
 }
 
-/* =========================
+
+/* =========================================================
    CALENDAR
-========================= */
+========================================================= */
 
 .calendar {
     background: #111;
     border: 1px solid #333;
 }
+
 
 .weekdays {
     display: grid;
@@ -145,6 +229,7 @@ button:hover {
     background: #1b1b1b;
     border-bottom: 1px solid #444;
 }
+
 
 .weekday {
     padding: 10px;
@@ -154,10 +239,12 @@ button:hover {
     color: #aaa;
 }
 
+
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
+
 
 .day {
     min-height: 125px;
@@ -168,17 +255,21 @@ button:hover {
     background: #101010;
 }
 
+
 .day:nth-child(7n) {
     border-right: none;
 }
+
 
 .day.other-month {
     background: #0b0b0b;
 }
 
+
 .day.today {
     box-shadow: inset 0 0 0 2px #ff5a00;
 }
+
 
 .day-header {
     display: flex;
@@ -186,6 +277,7 @@ button:hover {
     justify-content: space-between;
     margin-bottom: 5px;
 }
+
 
 .day-number-button {
     background: transparent;
@@ -196,14 +288,17 @@ button:hover {
     border-radius: 3px;
 }
 
+
 .day-number-button:hover {
     background: #292929;
-    color: #fff;
+    color: #ffffff;
 }
+
 
 .today .day-number-button {
     color: #ff5a00;
 }
+
 
 .day-event-count {
     font-size: 9px;
@@ -211,232 +306,422 @@ button:hover {
     font-weight: 700;
 }
 
-/* =========================
+
+/* =========================================================
    COMPACT EVENTS
-========================= */
+========================================================= */
 
 .event {
     display: flex;
     align-items: center;
     gap: 5px;
+
     width: 100%;
     margin-bottom: 3px;
     padding: 5px 6px;
+
     border-radius: 3px;
     cursor: pointer;
+
     text-align: left;
+
     background: #202020;
+
     border-left: 3px solid #ff5a00;
-    color: #fff;
+
+    color: #ffffff;
+
     font-size: 11px;
     line-height: 1.2;
+
     overflow: hidden;
 }
+
 
 .event:hover {
     background: #303030;
 }
 
+
+/* GameChanger */
+
+.event.game {
+    border-left-color: #ff5a00;
+}
+
+
+/* Organization */
+
 .event.organization {
     border-left-color: #ffffff;
 }
 
+
+/* Indoor */
+
+.event.indoor {
+    border-left-color: #4da6ff;
+    background: #171d24;
+}
+
+
+.event.indoor:hover {
+    background: #202a34;
+}
+
+
 .event-team {
     flex: 1;
     min-width: 0;
+
     overflow: hidden;
+
     white-space: nowrap;
     text-overflow: ellipsis;
+
     font-weight: 800;
 }
+
 
 .event-time {
     flex-shrink: 0;
+
     color: #ff8a4c;
+
     font-size: 10px;
     font-weight: 800;
+
     white-space: nowrap;
 }
 
+
+.event.indoor .event-time {
+    color: #75bfff;
+}
+
+
 .event-all-day {
     flex-shrink: 0;
+
     color: #aaa;
+
     font-size: 9px;
     font-weight: 800;
 }
 
-/* =========================
+
+/* =========================================================
    MORE EVENTS
-========================= */
+========================================================= */
 
 .more-events {
     width: 100%;
+
     background: transparent;
     border: none;
+
     color: #ff5a00;
+
     padding: 3px 5px;
+
     text-align: left;
+
     font-size: 10px;
     font-weight: 800;
+
     cursor: pointer;
 }
+
 
 .more-events:hover {
     background: #222;
 }
 
-/* =========================
+
+/* =========================================================
    MODAL
-========================= */
+========================================================= */
 
 .modal-backdrop {
     display: none;
+
     position: fixed;
     inset: 0;
+
     z-index: 1000;
+
     background: rgba(0, 0, 0, 0.78);
+
     align-items: center;
     justify-content: center;
+
     padding: 20px;
 }
+
 
 .modal-backdrop.visible {
     display: flex;
 }
 
+
 .modal {
     width: 100%;
     max-width: 650px;
     max-height: 85vh;
+
     overflow-y: auto;
+
     background: #111;
+
     border: 1px solid #444;
     border-top: 4px solid #ff5a00;
+
     border-radius: 5px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.65);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.65);
 }
+
 
 .modal-header {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 15px;
+
     padding: 16px 18px;
+
     border-bottom: 1px solid #333;
 }
 
+
 .modal-title {
     margin: 0;
+
     font-size: 22px;
     font-weight: 900;
 }
 
+
 .modal-close {
     background: #292929;
+
     border: 1px solid #444;
+
     font-size: 18px;
+
     padding: 7px 11px;
 }
+
 
 .modal-body {
     padding: 18px;
 }
 
-/* =========================
+
+/* =========================================================
    DAY EVENT LIST
-========================= */
+========================================================= */
 
 .day-event {
     width: 100%;
     display: block;
+
     background: #1a1a1a;
+
     border: 1px solid #333;
     border-left: 4px solid #ff5a00;
-    color: white;
+
+    color: #ffffff;
+
     text-align: left;
+
     padding: 13px;
+
     margin-bottom: 9px;
+
     border-radius: 3px;
+
     cursor: pointer;
 }
+
 
 .day-event:hover {
     background: #242424;
 }
 
+
 .day-event.organization {
     border-left-color: #ffffff;
 }
+
+
+.day-event.indoor {
+    border-left-color: #4da6ff;
+    background: #171d24;
+}
+
+
+.day-event.indoor:hover {
+    background: #202a34;
+}
+
 
 .day-event-title {
     font-size: 15px;
     font-weight: 900;
 }
 
+
 .day-event-details {
     color: #aaa;
+
     font-size: 12px;
+
     margin-top: 5px;
 }
 
+
 .day-event-time {
     color: #ff8a4c;
+
     font-weight: 800;
+
     margin-right: 8px;
 }
 
-/* =========================
+
+.day-event.indoor .day-event-time {
+    color: #75bfff;
+}
+
+
+/* =========================================================
    EVENT DETAILS
-========================= */
+========================================================= */
 
 .detail-row {
     padding: 13px 0;
+
     border-bottom: 1px solid #292929;
 }
 
+
 .detail-label {
     color: #777;
+
     font-size: 10px;
+
     text-transform: uppercase;
+
     font-weight: 800;
+
     margin-bottom: 4px;
 }
 
+
 .detail-value {
-    color: #fff;
+    color: #ffffff;
+
     font-size: 15px;
+
     font-weight: 700;
 }
+
 
 .detail-value.orange {
     color: #ff6a1a;
 }
 
+
+.detail-value.blue {
+    color: #75bfff;
+}
+
+
 .detail-description {
     color: #bbb;
+
     line-height: 1.5;
 }
 
+
 .back-button {
     background: #292929;
+
     border: 1px solid #444;
+
     margin-bottom: 12px;
 }
 
-/* =========================
+
+.detail-note {
+    margin-top: 16px;
+
+    padding: 12px;
+
+    background: #171717;
+
+    border-left: 3px solid #ff5a00;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.detail-note strong {
+    color: #ffffff;
+}
+
+
+.detail-link {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 8px 11px;
+
+    background: #ff5a00;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    border-radius: 3px;
+}
+
+
+.detail-link:hover {
+    background: #ff761f;
+}
+
+
+/* =========================================================
    LOADING / ERROR
-========================= */
+========================================================= */
 
 .loading,
 .error {
     padding: 50px;
+
     text-align: center;
+
     color: #aaa;
 }
 
-/* =========================
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 800px) {
 
@@ -444,144 +729,307 @@ button:hover {
         padding: 8px;
     }
 
+
     .header {
         display: block;
     }
+
 
     .header h1 {
         font-size: 25px;
     }
 
+
     .month-title {
         min-width: 150px;
+
         font-size: 18px;
     }
 
+
     .day {
         min-height: 90px;
+
         padding: 4px;
     }
+
 
     .weekday {
         font-size: 9px;
+
         padding: 7px 2px;
     }
 
+
     .event {
         padding: 4px;
+
         font-size: 9px;
     }
+
 
     .event-time {
         font-size: 8px;
     }
 
+
     .day-event-count {
         display: none;
     }
+
 
     .modal-backdrop {
         padding: 8px;
     }
 
+
     .modal {
         max-height: 92vh;
+    }
+
+
+    .indoor-notice {
+        padding: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .controls {
+        display: block;
+    }
+
+
+    .month-controls {
+        justify-content: center;
+
+        margin-bottom: 10px;
+    }
+
+
+    .filters {
+        justify-content: center;
+    }
+
+
+    .day {
+        min-height: 80px;
+    }
+
+
+    .event-team {
+        font-size: 8px;
+    }
+
+
+    .event-time {
+        font-size: 7px;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
 <div class="container">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
     <div class="header">
 
         <div>
-            <h1>COBRAS <span>CALENDAR</span></h1>
+
+            <h1>
+                COBRAS <span>CALENDAR</span>
+            </h1>
 
             <div class="header-subtitle">
                 McHenry Cobras Baseball
             </div>
+
         </div>
+
 
         <button
             type="button"
             class="secondary-button"
             id="todayButton">
+
             TODAY
+
         </button>
 
     </div>
 
 
+    <!-- =========================================
+         INDOOR FACILITY NOTICE
+    ========================================== -->
+
+    <div class="indoor-notice">
+
+        <div class="indoor-notice-title">
+
+            🏟️ INDOOR FACILITY NOTICE
+
+        </div>
+
+
+        <div class="indoor-notice-text">
+
+            Team practices and Cobras events are shown
+            on this calendar.
+
+            <strong>
+                Private rentals and individual bookings
+                are not displayed.
+            </strong>
+
+            For current indoor availability or to reserve
+            space, please check AllBooked.
+
+        </div>
+
+
+        <a
+            class="allbooked-button"
+            href="https://mchenrycobras.allbooked.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            CHECK INDOOR AVAILABILITY →
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================================
+         CONTROLS
+    ========================================== -->
+
     <div class="controls">
 
+
         <div class="month-controls">
+
 
             <button
                 type="button"
                 id="previousMonth">
+
                 ‹
+
             </button>
+
 
             <div
                 class="month-title"
                 id="monthTitle">
+
                 Loading...
+
             </div>
+
 
             <button
                 type="button"
                 id="nextMonth">
+
                 ›
+
             </button>
+
 
         </div>
 
 
         <div class="filters">
 
+
             <button
                 type="button"
                 class="filter active"
                 data-filter="all">
+
                 ALL
+
             </button>
+
 
             <button
                 type="button"
                 class="filter"
                 data-filter="gamechanger">
+
                 GAMES
+
             </button>
+
 
             <button
                 type="button"
                 class="filter"
                 data-filter="organization">
+
                 COBRAS EVENTS
+
             </button>
+
+
+            <button
+                type="button"
+                class="filter"
+                data-filter="indoor">
+
+                INDOOR
+
+            </button>
+
 
         </div>
 
+
     </div>
 
+
+    <!-- =========================================
+         CALENDAR
+    ========================================== -->
 
     <div
         class="calendar"
         id="calendar">
 
         <div class="loading">
+
             Loading Cobras calendar...
+
         </div>
 
     </div>
 
+
 </div>
 
+
+<!-- =========================================
+     MODAL
+========================================== -->
 
 <div
     class="modal-backdrop"
@@ -589,28 +1037,37 @@ button:hover {
     role="dialog"
     aria-modal="true">
 
+
     <div class="modal">
 
+
         <div class="modal-header">
+
 
             <h2
                 class="modal-title"
                 id="modalTitle">
             </h2>
 
+
             <button
                 type="button"
                 class="modal-close"
                 id="modalClose">
+
                 ×
+
             </button>
 
+
         </div>
+
 
         <div
             class="modal-body"
             id="modalBody">
         </div>
+
 
     </div>
 
@@ -619,12 +1076,23 @@ button:hover {
 
 <script>
 
+
+/* =========================================================
+   STATE
+========================================================= */
+
 let events = [];
 
-let currentDate = new Date();
+let currentDate =
+    new Date();
 
-let currentFilter = "all";
+let currentFilter =
+    "all";
 
+
+/* =========================================================
+   LOAD CALENDAR
+========================================================= */
 
 async function loadCalendar() {
 
@@ -636,32 +1104,44 @@ async function loadCalendar() {
                 Date.now()
             );
 
+
         if (!response.ok) {
+
             throw new Error(
                 "Unable to load calendar data."
             );
+
         }
+
 
         const data =
             await response.json();
+
 
         events =
             Array.isArray(data.events)
                 ? data.events
                 : [];
 
+
         renderCalendar();
+
 
     } catch (error) {
 
         console.error(error);
 
+
         document.getElementById(
             "calendar"
         ).innerHTML = `
+
             <div class="error">
+
                 Unable to load the Cobras calendar.
+
             </div>
+
         `;
 
     }
@@ -669,22 +1149,28 @@ async function loadCalendar() {
 }
 
 
+/* =========================================================
+   DATE PARSING
+========================================================= */
+
 function parseDate(value) {
 
     if (!value) {
+
         return null;
+
     }
 
+
     /*
-       Organization events use date-only values such as:
+       Organization events use date-only
+       values such as:
 
        2026-12-12
 
-       JavaScript interprets a date-only string as UTC.
-       In Central Time, that can move the date back
-       to the previous evening.
-
-       Treat date-only values as LOCAL calendar dates.
+       Treat those as LOCAL dates so
+       Central Time does not shift them
+       backward one day.
     */
 
     if (
@@ -692,28 +1178,48 @@ function parseDate(value) {
         /^\d{4}-\d{2}-\d{2}$/.test(value)
     ) {
 
-        const [year, month, day] =
-            value.split("-").map(Number);
+        const [
+            year,
+            month,
+            day
+        ] =
+            value
+                .split("-")
+                .map(Number);
+
 
         return new Date(
             year,
             month - 1,
             day
         );
+
     }
 
+
     /*
-       GameChanger events contain full timestamps,
-       so continue handling those normally.
+       GameChanger and AllBooked events
+       contain timestamps, so handle them
+       normally.
     */
 
     return new Date(value);
+
 }
 
 
+/* =========================================================
+   TIME FORMAT
+========================================================= */
+
 function formatTime(date) {
 
-    if (!date) return "";
+    if (!date) {
+
+        return "";
+
+    }
+
 
     return date.toLocaleTimeString(
         "en-US",
@@ -725,6 +1231,10 @@ function formatTime(date) {
 
 }
 
+
+/* =========================================================
+   FULL DATE
+========================================================= */
 
 function formatFullDate(date) {
 
@@ -741,67 +1251,159 @@ function formatFullDate(date) {
 }
 
 
+/* =========================================================
+   SAME DAY
+========================================================= */
+
 function sameDay(a, b) {
 
     return (
-        a.getFullYear() === b.getFullYear() &&
-        a.getMonth() === b.getMonth() &&
-        a.getDate() === b.getDate()
+
+        a.getFullYear() ===
+        b.getFullYear()
+
+        &&
+
+        a.getMonth() ===
+        b.getMonth()
+
+        &&
+
+        a.getDate() ===
+        b.getDate()
+
     );
 
 }
 
+
+/* =========================================================
+   EVENT TYPE HELPERS
+========================================================= */
+
+function isGame(event) {
+
+    return (
+        event.type ===
+        "gamechanger"
+    );
+
+}
+
+
+function isIndoor(event) {
+
+    return (
+        event.type ===
+        "indoor"
+    );
+
+}
+
+
+function isOrganization(event) {
+
+    return (
+        !isGame(event) &&
+        !isIndoor(event)
+    );
+
+}
+
+
+/* =========================================================
+   FILTERING
+========================================================= */
 
 function getFilteredEvents() {
 
-    if (currentFilter === "all") {
+    if (
+        currentFilter ===
+        "all"
+    ) {
+
         return events;
+
     }
+
 
     return events.filter(
         event =>
-            event.type === currentFilter
+            event.type ===
+            currentFilter
     );
 
 }
 
+
+/* =========================================================
+   EVENTS FOR DATE
+========================================================= */
 
 function eventsForDate(date) {
 
     return getFilteredEvents()
-        .filter(event => {
 
-            const start =
-                parseDate(event.start);
+        .filter(
+            event => {
 
-            const end =
-                event.end
-                    ? parseDate(event.end)
-                    : start;
+                const start =
+                    parseDate(
+                        event.start
+                    );
 
-            const dayStart =
-                new Date(
-                    date.getFullYear(),
-                    date.getMonth(),
-                    date.getDate()
+
+                const end =
+                    event.end
+                        ? parseDate(
+                            event.end
+                          )
+                        : start;
+
+
+                if (
+                    !start
+                ) {
+
+                    return false;
+
+                }
+
+
+                const dayStart =
+                    new Date(
+                        date.getFullYear(),
+                        date.getMonth(),
+                        date.getDate()
+                    );
+
+
+                const dayEnd =
+                    new Date(
+                        date.getFullYear(),
+                        date.getMonth(),
+                        date.getDate(),
+                        23,
+                        59,
+                        59
+                    );
+
+
+                return (
+
+                    start <=
+                    dayEnd
+
+                    &&
+
+                    end >=
+                    dayStart
+
                 );
 
-            const dayEnd =
-                new Date(
-                    date.getFullYear(),
-                    date.getMonth(),
-                    date.getDate(),
-                    23,
-                    59,
-                    59
-                );
+            }
+        )
 
-            return (
-                start <= dayEnd &&
-                end >= dayStart
-            );
-
-        })
         .sort(
             (a, b) =>
                 parseDate(a.start) -
@@ -811,17 +1413,24 @@ function eventsForDate(date) {
 }
 
 
+/* =========================================================
+   RENDER CALENDAR
+========================================================= */
+
 function renderCalendar() {
 
     const year =
         currentDate.getFullYear();
 
+
     const month =
         currentDate.getMonth();
+
 
     document.getElementById(
         "monthTitle"
     ).textContent =
+
         currentDate.toLocaleString(
             "en-US",
             {
@@ -838,6 +1447,7 @@ function renderCalendar() {
             1
         );
 
+
     const lastDay =
         new Date(
             year,
@@ -845,8 +1455,10 @@ function renderCalendar() {
             0
         );
 
+
     const startingDay =
         firstDay.getDay();
+
 
     const daysInMonth =
         lastDay.getDate();
@@ -866,9 +1478,15 @@ function renderCalendar() {
 
         </div>
 
+
         <div class="days">
+
     `;
 
+
+    /*
+       Previous-month cells
+    */
 
     for (
         let i = 0;
@@ -883,6 +1501,7 @@ function renderCalendar() {
                 i - startingDay + 1
             );
 
+
         html +=
             renderDay(
                 date,
@@ -891,6 +1510,10 @@ function renderCalendar() {
 
     }
 
+
+    /*
+       Current-month cells
+    */
 
     for (
         let day = 1;
@@ -905,6 +1528,7 @@ function renderCalendar() {
                 day
             );
 
+
         html +=
             renderDay(
                 date,
@@ -914,9 +1538,14 @@ function renderCalendar() {
     }
 
 
+    /*
+       Next-month cells
+    */
+
     const totalCells =
         startingDay +
         daysInMonth;
+
 
     const remaining =
         (
@@ -940,6 +1569,7 @@ function renderCalendar() {
                 daysInMonth + i
             );
 
+
         html +=
             renderDay(
                 date,
@@ -950,7 +1580,9 @@ function renderCalendar() {
 
 
     html += `
+
         </div>
+
     `;
 
 
@@ -959,6 +1591,10 @@ function renderCalendar() {
     ).innerHTML =
         html;
 
+
+    /*
+       Day buttons
+    */
 
     document
         .querySelectorAll(
@@ -977,6 +1613,7 @@ function renderCalendar() {
                                 "T12:00:00"
                             );
 
+
                         showDayModal(
                             date
                         );
@@ -987,6 +1624,10 @@ function renderCalendar() {
             }
         );
 
+
+    /*
+       Event buttons
+    */
 
     document
         .querySelectorAll(
@@ -1001,6 +1642,7 @@ function renderCalendar() {
 
                         event.stopPropagation();
 
+
                         const selected =
                             events.find(
                                 item =>
@@ -1008,10 +1650,15 @@ function renderCalendar() {
                                     button.dataset.eventId
                             );
 
-                        if (selected) {
+
+                        if (
+                            selected
+                        ) {
+
                             showEventModal(
                                 selected
                             );
+
                         }
 
                     }
@@ -1020,8 +1667,13 @@ function renderCalendar() {
             }
         );
 
+
 }
 
+
+/* =========================================================
+   RENDER DAY
+========================================================= */
 
 function renderDay(
     date,
@@ -1031,11 +1683,13 @@ function renderDay(
     const today =
         new Date();
 
+
     const isToday =
         sameDay(
             date,
             today
         );
+
 
     const dayEvents =
         eventsForDate(
@@ -1046,22 +1700,42 @@ function renderDay(
     let classes =
         "day";
 
-    if (otherMonth) {
-        classes += " other-month";
+
+    if (
+        otherMonth
+    ) {
+
+        classes +=
+            " other-month";
+
     }
 
-    if (isToday) {
-        classes += " today";
+
+    if (
+        isToday
+    ) {
+
+        classes +=
+            " today";
+
     }
 
 
-    const maxVisible = 5;
+    /*
+       Show up to 5 events
+       directly in the calendar.
+    */
+
+    const maxVisible =
+        5;
+
 
     const visibleEvents =
         dayEvents.slice(
             0,
             maxVisible
         );
+
 
     const hiddenCount =
         Math.max(
@@ -1075,7 +1749,9 @@ function renderDay(
 
         <div class="${classes}">
 
+
             <div class="day-header">
+
 
                 <button
                     type="button"
@@ -1086,20 +1762,28 @@ function renderDay(
 
                 </button>
 
+
                 ${
                     dayEvents.length
                         ? `
-                            <span class="day-event-count">
+
+                            <span
+                                class="day-event-count">
+
                                 ${dayEvents.length}
+
                                 ${
                                     dayEvents.length === 1
                                         ? "EVENT"
                                         : "EVENTS"
                                 }
+
                             </span>
+
                           `
                         : ""
                 }
+
 
             </div>
 
@@ -1118,7 +1802,9 @@ function renderDay(
     );
 
 
-    if (hiddenCount > 0) {
+    if (
+        hiddenCount > 0
+    ) {
 
         html += `
 
@@ -1137,7 +1823,9 @@ function renderDay(
 
 
     html += `
+
         </div>
+
     `;
 
 
@@ -1146,46 +1834,103 @@ function renderDay(
 }
 
 
+/* =========================================================
+   RENDER COMPACT EVENT
+========================================================= */
+
 function renderCompactEvent(
     event
 ) {
 
-    const isGame =
-        event.type ===
-        "gamechanger";
+    const game =
+        isGame(event);
 
 
-    /*
-       IMPORTANT:
-       Organization events use their
-       actual title rather than
-       "All Cobras".
-    */
-
-    const displayName =
-        !isGame
-            ? event.title
-            : event.teamName ||
-              event.title ||
-              "Cobras Event";
+    const indoor =
+        isIndoor(event);
 
 
-    let timeText = "";
+    const organization =
+        isOrganization(event);
 
 
-    if (isGame) {
+    let displayName;
 
-        const start =
-            event.start
-                ? parseDate(
-                    event.start
-                  )
-                : null;
 
-        timeText =
+    if (game) {
+
+        displayName =
+            event.teamName ||
+            event.title ||
+            "Cobras Game";
+
+    } else {
+
+        displayName =
+            event.title ||
+            "Cobras Event";
+
+    }
+
+
+    let timeText =
+        "";
+
+
+    const start =
+        event.start
+            ? parseDate(
+                event.start
+              )
+            : null;
+
+
+    const end =
+        event.end
+            ? parseDate(
+                event.end
+              )
+            : null;
+
+
+    if (
+        game ||
+        indoor
+    ) {
+
+        if (
             start
-                ? formatTime(start)
-                : "";
+        ) {
+
+            timeText =
+                formatTime(
+                    start
+                );
+
+
+            /*
+               Indoor events have an
+               explicit end time.
+            */
+
+            if (
+                indoor &&
+                end &&
+                !sameDay(
+                    start,
+                    end
+                )
+            ) {
+
+                timeText +=
+                    "–" +
+                    formatTime(
+                        end
+                    );
+
+            }
+
+        }
 
     } else {
 
@@ -1195,35 +1940,81 @@ function renderCompactEvent(
     }
 
 
+    let eventClass =
+        "event";
+
+
+    if (
+        game
+    ) {
+
+        eventClass +=
+            " game";
+
+    } else if (
+        indoor
+    ) {
+
+        eventClass +=
+            " indoor";
+
+    } else if (
+        organization
+    ) {
+
+        eventClass +=
+            " organization";
+
+    }
+
+
     return `
 
         <button
             type="button"
-            class="event ${
-                isGame
-                    ? "game"
-                    : "organization"
-            }"
+            class="${eventClass}"
             data-event-id="${escapeAttribute(event.id)}"
             title="View event details">
 
+
             <span class="event-team">
-                ${escapeHtml(displayName)}
+
+                ${escapeHtml(
+                    displayName
+                )}
+
             </span>
 
+
             ${
-                timeText === "ALL DAY"
+                timeText ===
+                "ALL DAY"
+
                     ? `
-                        <span class="event-all-day">
+
+                        <span
+                            class="event-all-day">
+
                             ALL DAY
+
                         </span>
+
                       `
+
                     : `
-                        <span class="event-time">
-                            ${escapeHtml(timeText)}
+
+                        <span
+                            class="event-time">
+
+                            ${escapeHtml(
+                                timeText
+                            )}
+
                         </span>
+
                       `
             }
+
 
         </button>
 
@@ -1232,10 +2023,17 @@ function renderCompactEvent(
 }
 
 
-function formatDateKey(date) {
+/* =========================================================
+   DATE KEY
+========================================================= */
+
+function formatDateKey(
+    date
+) {
 
     const year =
         date.getFullYear();
+
 
     const month =
         String(
@@ -1245,6 +2043,7 @@ function formatDateKey(date) {
             "0"
         );
 
+
     const day =
         String(
             date.getDate()
@@ -1253,16 +2052,21 @@ function formatDateKey(date) {
             "0"
         );
 
-    return `${year}-${month}-${day}`;
+
+    return (
+        `${year}-${month}-${day}`
+    );
 
 }
 
 
-/* =========================
+/* =========================================================
    DAY POPUP
-========================= */
+========================================================= */
 
-function showDayModal(date) {
+function showDayModal(
+    date
+) {
 
     const dayEvents =
         eventsForDate(
@@ -1278,7 +2082,9 @@ function showDayModal(date) {
         );
 
 
-    if (!dayEvents.length) {
+    if (
+        !dayEvents.length
+    ) {
 
         document.getElementById(
             "modalBody"
@@ -1300,15 +2106,19 @@ function showDayModal(date) {
 
     } else {
 
-        let html = "";
+        let html =
+            "";
 
 
         dayEvents.forEach(
             event => {
 
-                const isGame =
-                    event.type ===
-                    "gamechanger";
+                const game =
+                    isGame(event);
+
+
+                const indoor =
+                    isIndoor(event);
 
 
                 const start =
@@ -1319,40 +2129,59 @@ function showDayModal(date) {
                         : null;
 
 
+                const end =
+                    event.end
+                        ? parseDate(
+                            event.end
+                          )
+                        : null;
+
+
                 let title =
-                    isGame
-                        ? event.teamName
+                    game
+                        ? (
+                            event.teamName ||
+                            event.title
+                          )
                         : event.title;
 
 
-                let details = "";
+                let details =
+                    "";
 
 
-                if (isGame) {
+                if (
+                    game
+                ) {
 
                     details = `
 
-                        <span class="day-event-time">
+                        <span
+                            class="day-event-time">
 
                             ${
                                 start
-                                    ? formatTime(start)
+                                    ? formatTime(
+                                        start
+                                      )
                                     : ""
                             }
 
                         </span>
 
+
                         vs
-                        ${
-                            escapeHtml(
-                                event.opponent ||
-                                "Opponent"
-                            )
-                        }
+
+                        ${escapeHtml(
+                            event.opponent ||
+                            "Opponent"
+                        )}
+
 
                         ${
                             event.homeAway
                                 ? `
+
                                     —
                                     ${
                                         event.homeAway ===
@@ -1360,9 +2189,45 @@ function showDayModal(date) {
                                             ? "HOME"
                                             : "AWAY"
                                     }
+
                                   `
                                 : ""
                         }
+
+                    `;
+
+                } else if (
+                    indoor
+                ) {
+
+                    details = `
+
+                        <span
+                            class="day-event-time">
+
+                            ${
+                                start
+                                    ? formatTime(
+                                        start
+                                      )
+                                    : ""
+                            }
+
+                            ${
+                                end
+                                    ? `
+                                        –
+                                        ${formatTime(
+                                            end
+                                        )}
+                                      `
+                                    : ""
+                            }
+
+                        </span>
+
+
+                        🏟️ Indoor Facility
 
                     `;
 
@@ -1377,24 +2242,52 @@ function showDayModal(date) {
                 }
 
 
+                let eventClass =
+                    "day-event";
+
+
+                if (
+                    indoor
+                ) {
+
+                    eventClass +=
+                        " indoor";
+
+                } else if (
+                    !game
+                ) {
+
+                    eventClass +=
+                        " organization";
+
+                }
+
+
                 html += `
 
                     <button
                         type="button"
-                        class="day-event ${
-                            isGame
-                                ? ""
-                                : "organization"
-                        }"
+                        class="${eventClass}"
                         data-event-id="${escapeAttribute(event.id)}">
 
-                        <div class="day-event-title">
-                            ${escapeHtml(title)}
+
+                        <div
+                            class="day-event-title">
+
+                            ${escapeHtml(
+                                title
+                            )}
+
                         </div>
 
-                        <div class="day-event-details">
+
+                        <div
+                            class="day-event-details">
+
                             ${details}
+
                         </div>
+
 
                     </button>
 
@@ -1428,7 +2321,10 @@ function showDayModal(date) {
                                         button.dataset.eventId
                                 );
 
-                            if (event) {
+
+                            if (
+                                event
+                            ) {
 
                                 showEventModal(
                                     event,
@@ -1451,18 +2347,21 @@ function showDayModal(date) {
 }
 
 
-/* =========================
+/* =========================================================
    EVENT DETAIL POPUP
-========================= */
+========================================================= */
 
 function showEventModal(
     event,
     returnDate = null
 ) {
 
-    const isGame =
-        event.type ===
-        "gamechanger";
+    const game =
+        isGame(event);
+
+
+    const indoor =
+        isIndoor(event);
 
 
     const start =
@@ -1481,10 +2380,18 @@ function showEventModal(
             : null;
 
 
-    let html = "";
+    let html =
+        "";
 
 
-    if (returnDate) {
+    /*
+       Back button when arriving
+       from a day popup.
+    */
+
+    if (
+        returnDate
+    ) {
 
         html += `
 
@@ -1502,7 +2409,13 @@ function showEventModal(
     }
 
 
-    if (isGame) {
+    /* =====================================================
+       GAMECHANGER GAME
+    ===================================================== */
+
+    if (
+        game
+    ) {
 
         html += `
 
@@ -1513,9 +2426,12 @@ function showEventModal(
                 </div>
 
                 <div class="detail-value">
+
                     ${escapeHtml(
-                        event.teamName
+                        event.teamName ||
+                        ""
                     )}
+
                 </div>
 
             </div>
@@ -1528,10 +2444,12 @@ function showEventModal(
                 </div>
 
                 <div class="detail-value">
+
                     ${escapeHtml(
                         event.opponent ||
                         "Opponent"
                     )}
+
                 </div>
 
             </div>
@@ -1579,10 +2497,12 @@ function showEventModal(
                 </div>
 
                 <div class="detail-value">
+
                     ${
                         event.location ||
                         "Location information not currently available"
                     }
+
                 </div>
 
             </div>
@@ -1597,10 +2517,16 @@ function showEventModal(
                 <div class="detail-value orange">
 
                     ${
-                        event.homeAway === "home"
+                        event.homeAway ===
+                        "home"
+
                             ? "HOME"
-                            : event.homeAway === "away"
+
+                            : event.homeAway ===
+                              "away"
+
                                 ? "AWAY"
+
                                 : "Not specified"
                     }
 
@@ -1616,17 +2542,180 @@ function showEventModal(
                 </div>
 
                 <div class="detail-value">
+
                     ${escapeHtml(
                         event.season ||
                         ""
                     )}
+
                 </div>
 
             </div>
 
         `;
 
-    } else {
+    }
+
+
+    /* =====================================================
+       INDOOR EVENT
+    ===================================================== */
+
+    else if (
+        indoor
+    ) {
+
+        html += `
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Team
+                </div>
+
+                <div class="detail-value blue">
+
+                    ${escapeHtml(
+                        event.teamName ||
+                        event.title ||
+                        ""
+                    )}
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Date
+                </div>
+
+                <div class="detail-value">
+
+                    ${
+                        start
+                            ? formatFullDate(
+                                start
+                              )
+                            : ""
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Time
+                </div>
+
+                <div class="detail-value blue">
+
+                    ${
+                        start
+                            ? formatTime(
+                                start
+                              )
+                            : ""
+                    }
+
+                    ${
+                        end
+                            ? `
+                                –
+                                ${formatTime(
+                                    end
+                                )}
+                              `
+                            : ""
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Facility
+                </div>
+
+                <div class="detail-value">
+
+                    McHenry Cobras Indoor Facility
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Space
+                </div>
+
+                <div class="detail-value">
+
+                    ${
+                        escapeHtml(
+                            event.space ||
+                            "Indoor Facility"
+                        )
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-note">
+
+                <strong>
+                    Looking to reserve indoor space?
+                </strong>
+
+                <br><br>
+
+                This calendar shows Cobras team
+                practices and events, but private
+                rentals and individual bookings are
+                not displayed.
+
+                <br><br>
+
+                Please check AllBooked for current
+                availability and reservations.
+
+                <br>
+
+                <a
+                    class="detail-link"
+                    href="https://mchenrycobras.allbooked.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    CHECK ALLBOOKED AVAILABILITY →
+
+                </a>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       COBRAS ORGANIZATION EVENT
+    ===================================================== */
+
+    else {
 
         html += `
 
@@ -1637,9 +2726,11 @@ function showEventModal(
                 </div>
 
                 <div class="detail-value">
+
                     ${escapeHtml(
                         event.title
                     )}
+
                 </div>
 
             </div>
@@ -1679,8 +2770,13 @@ function showEventModal(
             ${
                 end &&
                 start &&
-                !sameDay(start, end)
+                !sameDay(
+                    start,
+                    end
+                )
+
                     ? `
+
                         <div class="detail-row">
 
                             <div class="detail-label">
@@ -1708,7 +2804,9 @@ function showEventModal(
                             </div>
 
                         </div>
+
                       `
+
                     : ""
             }
 
@@ -1720,10 +2818,12 @@ function showEventModal(
                 </div>
 
                 <div class="detail-value orange">
+
                     ${escapeHtml(
                         event.category ||
                         "Cobras Event"
                     )}
+
                 </div>
 
             </div>
@@ -1731,7 +2831,9 @@ function showEventModal(
 
             ${
                 event.description
+
                     ? `
+
                         <div class="detail-row">
 
                             <div class="detail-label">
@@ -1747,7 +2849,9 @@ function showEventModal(
                             </div>
 
                         </div>
+
                       `
+
                     : ""
             }
 
@@ -1756,12 +2860,39 @@ function showEventModal(
     }
 
 
+    /*
+       Modal title
+    */
+
+    let modalTitle;
+
+
+    if (
+        game
+    ) {
+
+        modalTitle =
+            "Game Details";
+
+    } else if (
+        indoor
+    ) {
+
+        modalTitle =
+            "Indoor Facility";
+
+    } else {
+
+        modalTitle =
+            "Cobras Event";
+
+    }
+
+
     document.getElementById(
         "modalTitle"
     ).textContent =
-        isGame
-            ? "Game Details"
-            : "Cobras Event";
+        modalTitle;
 
 
     document.getElementById(
@@ -1770,14 +2901,23 @@ function showEventModal(
         html;
 
 
-    if (returnDate) {
+    /*
+       Back to day
+    */
+
+    if (
+        returnDate
+    ) {
 
         const backButton =
             document.getElementById(
                 "backToDay"
             );
 
-        if (backButton) {
+
+        if (
+            backButton
+        ) {
 
             backButton.addEventListener(
                 "click",
@@ -1799,6 +2939,10 @@ function showEventModal(
 
 }
 
+
+/* =========================================================
+   OPEN / CLOSE MODAL
+========================================================= */
 
 function openModal() {
 
@@ -1822,6 +2966,8 @@ function closeModal() {
 }
 
 
+/* Close button */
+
 document.getElementById(
     "modalClose"
 ).addEventListener(
@@ -1829,6 +2975,8 @@ document.getElementById(
     closeModal
 );
 
+
+/* Click outside */
 
 document.getElementById(
     "modalBackdrop"
@@ -1851,6 +2999,8 @@ document.getElementById(
 );
 
 
+/* Escape key */
+
 document.addEventListener(
     "keydown",
     event => {
@@ -1868,9 +3018,9 @@ document.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-========================= */
+========================================================= */
 
 document.getElementById(
     "previousMonth"
@@ -1884,6 +3034,7 @@ document.getElementById(
                 currentDate.getMonth() - 1,
                 1
             );
+
 
         renderCalendar();
 
@@ -1904,6 +3055,7 @@ document.getElementById(
                 1
             );
 
+
         renderCalendar();
 
     }
@@ -1919,15 +3071,16 @@ document.getElementById(
         currentDate =
             new Date();
 
+
         renderCalendar();
 
     }
 );
 
 
-/* =========================
+/* =========================================================
    FILTERS
-========================= */
+========================================================= */
 
 document
     .querySelectorAll(
@@ -1970,31 +3123,38 @@ document
     );
 
 
-/* =========================
+/* =========================================================
    ESCAPE HELPERS
-========================= */
+========================================================= */
 
-function escapeHtml(value) {
+function escapeHtml(
+    value
+) {
 
     return String(
         value || ""
     )
+
         .replace(
             /&/g,
             "&amp;"
         )
+
         .replace(
             /</g,
             "&lt;"
         )
+
         .replace(
             />/g,
             "&gt;"
         )
+
         .replace(
             /"/g,
             "&quot;"
         )
+
         .replace(
             /'/g,
             "&#039;"
@@ -2003,20 +3163,26 @@ function escapeHtml(value) {
 }
 
 
-function escapeAttribute(value) {
+function escapeAttribute(
+    value
+) {
 
-    return escapeHtml(value);
+    return escapeHtml(
+        value
+    );
 
 }
 
 
-/* =========================
+/* =========================================================
    START
-========================= */
+========================================================= */
 
 loadCalendar();
 
 </script>
 
+
 </body>
+
 </html>
