@@ -783,360 +783,285 @@ jobs:
             return finalEvents;
           }
 
-          /*
+                   /*
            * ========================================
            * SPORTS CONNECT
            * ========================================
            */
 
-          function normalizeWebcalUrl(url) {
-            if (!url) return url;
-
-            return url
-              .replace(
-                /^webcal:\/\//i,
-                "https://"
-              )
-              .replace(
-                /^webcals:\/\//i,
-                "https://"
-              );
-          }
-
-          function extractSportsConnectIcalUrls(
-            html,
-            baseUrl
-          ) {
-            const candidates = [];
-
-            const patterns = [
-              /(?:href|src)\s*=\s*["']([^"']+)["']/gi,
-              /https?:\/\/[^\s"'<>]+/gi,
-              /webcal:\/\/[^\s"'<>]+/gi
-            ];
-
-            for (const pattern of patterns) {
-              for (const match of html.matchAll(pattern)) {
-                const raw =
-                  match[1] ||
-                  match[0];
-
-                if (!raw) continue;
-
-                const decoded =
-                  raw
-                    .replace(
-                      /&amp;/gi,
-                      "&"
-                    )
-                    .replace(
-                      /\\u0026/g,
-                      "&"
-                    )
-                    .replace(
-                      /\\/g,
-                      ""
-                    );
-
-                if (
-                  /\.ics(?:[?#]|$)/i.test(
-                    decoded
-                  ) ||
-                  /ical/i.test(
-                    decoded
-                  ) ||
-                  /calendar.*feed/i.test(
-                    decoded
-                  )
-                ) {
-                  try {
-                    const absolute =
-                      new URL(
-                        normalizeWebcalUrl(
-                          decoded
-                        ),
-                        baseUrl
-                      ).href;
-
-                    candidates.push(
-                      absolute
-                    );
-                  } catch (_) {}
-                }
-              }
-            }
-
-            return [
-              ...new Set(
-                candidates
-              )
-            ];
-          }
-
           async function processSportsConnect() {
-            const pageUrl =
+            const baseUrl =
               process.env.SPORTS_CONNECT_URL;
 
-            if (!pageUrl) {
+            if (!baseUrl) {
               throw new Error(
                 "SPORTS_CONNECT_URL is missing"
               );
             }
 
             console.log(
-              "Downloading Sports Connect calendar..."
+              "Downloading Sports Connect practices..."
             );
 
-            console.log(
-              `Sports Connect source: ${pageUrl}`
+            /*
+             * Sports Connect does not expose an ICS feed for this
+             * calendar. The calendar page uses the GetMatches API.
+             *
+             * selectedEvents=40107087 is:
+             * "McHenry Cobras - Cobras (Practices)"
+             *
+             * We query one week at a time so future practices are
+             * captured as they are added to Sports Connect.
+             */
+
+            const startDate = new Date();
+            const endDate = new Date(startDate);
+            endDate.setDate(
+              endDate.getDate() + 365
             );
 
-            const pageHtml =
-              await fetchText(pageUrl);
+            function chicagoDateString(date) {
+              const parts =
+                new Intl.DateTimeFormat(
+                  "en-US",
+                  {
+                    timeZone: "America/Chicago",
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit"
+                  }
+                ).formatToParts(date);
 
-            const icalUrls =
-              extractSportsConnectIcalUrls(
-                pageHtml,
-                pageUrl
-              );
+              const year =
+                parts.find(
+                  p => p.type === "year"
+                ).value;
 
-            if (!icalUrls.length) {
-              throw new Error(
-                "Could not find an iCal/ICS feed URL on the Sports Connect calendar page."
+              const month =
+                parts.find(
+                  p => p.type === "month"
+                ).value;
+
+              const day =
+                parts.find(
+                  p => p.type === "day"
+                ).value;
+
+              return `${month}/${day}/${year}`;
+            }
+
+            const weekDates = [];
+
+            for (
+              let cursor = new Date(startDate);
+              cursor <= endDate;
+              cursor.setDate(
+                cursor.getDate() + 7
+              )
+            ) {
+              weekDates.push(
+                new Date(cursor)
               );
             }
 
-            let ics = null;
-            let selectedIcalUrl = null;
-            let lastError = null;
+            const allMatches = [];
 
-            for (const url of icalUrls) {
+            for (const date of weekDates) {
+              const params =
+                new URLSearchParams({
+                  portalId: "6920",
+                  selectedEvents: "40107087",
+                  selectedFields: "",
+                  currentDate:
+                    chicagoDateString(date),
+                  timeZone:
+                    "Central Standard Time",
+                  currentCalendarView: "3",
+                  isToCheckForDateRange: "true",
+                  isPosted: "true",
+                  selectedTeams: "",
+                  isCustomEventMatchInclude: "true",
+                  isCheckForAction: "false",
+                  isBulkEventCancel: "false"
+                });
+
+              const apiUrl =
+                `https://www.mchenrybaseball.com/DesktopModules/sScheduleEventServices/API/Calendar/GetMatches?${params.toString()}`;
+
+              console.log(
+                `Sports Connect week: ${chicagoDateString(date)}`
+              );
+
+              const responseText =
+                await fetchText(apiUrl);
+
+              let matches;
+
               try {
-                const candidate =
-                  await fetchText(url);
-
-                if (
-                  candidate.includes(
-                    "BEGIN:VCALENDAR"
-                  ) &&
-                  candidate.includes(
-                    "BEGIN:VEVENT"
-                  )
-                ) {
-                  ics = candidate;
-                  selectedIcalUrl = url;
-                  break;
-                }
+                matches =
+                  JSON.parse(responseText);
               } catch (error) {
-                lastError = error;
+                throw new Error(
+                  `Sports Connect returned invalid JSON for ${chicagoDateString(date)}`
+                );
               }
-            }
 
-            if (!ics) {
-              throw new Error(
-                `Unable to download a valid Sports Connect iCal feed${
-                  lastError
-                    ? `: ${lastError.message}`
-                    : ""
-                }`
+              if (!Array.isArray(matches)) {
+                throw new Error(
+                  `Unexpected Sports Connect response for ${chicagoDateString(date)}`
+                );
+              }
+
+              allMatches.push(
+                ...matches
               );
             }
 
-            console.log(
-              `Sports Connect iCal feed: ${selectedIcalUrl}`
-            );
-
-            const lines =
-              unfoldICS(ics)
-                .split("\n")
-                .map(
-                  line =>
-                    line.trim()
-                );
-
-            const teamNames =
-              Object.values(teams)
-                .filter(
-                  team =>
-                    team &&
-                    team.active
-                )
-                .map(
-                  team =>
-                    team.name
-                )
-                .filter(Boolean);
+            /*
+             * Keep ONLY:
+             *   1. The Cobras Practices calendar
+             *   2. Actual practices
+             *   3. Cobras teams
+             *
+             * This excludes games, Other events, and
+             * McHenry recreational-league schedules.
+             */
 
             const events = [];
-            let current = null;
-
-            for (const line of lines) {
-              if (
-                line ===
-                "BEGIN:VEVENT"
-              ) {
-                current = [];
-                continue;
-              }
-
-              if (
-                line ===
-                "END:VEVENT"
-              ) {
-                if (current) {
-                  const summary =
-                    getICSProperty(
-                      current,
-                      "SUMMARY"
-                    );
-
-                  const start =
-                    getICSProperty(
-                      current,
-                      "DTSTART"
-                    );
-
-                  const end =
-                    getICSProperty(
-                      current,
-                      "DTEND"
-                    );
-
-                  const location =
-                    getICSProperty(
-                      current,
-                      "LOCATION"
-                    );
-
-                  const description =
-                    getICSProperty(
-                      current,
-                      "DESCRIPTION"
-                    );
-
-                  const status =
-                    getICSProperty(
-                      current,
-                      "STATUS"
-                    );
-
-                  const uid =
-                    getICSProperty(
-                      current,
-                      "UID"
-                    );
-
-                  const summaryText =
-                    summary?.value || "";
-
-                  const locationText =
-                    location?.value || "";
-
-                  const descriptionText =
-                    description?.value || "";
-
-                  const confirmed =
-                    !status ||
-                    ![
-                      "CANCELLED",
-                      "CANCELED"
-                    ].includes(
-                      status.value
-                        .toUpperCase()
-                    );
-
-                  const matchingTeam =
-                    teamNames.find(
-                      teamName =>
-                        summaryText ===
-                          teamName ||
-                        summaryText.startsWith(
-                          teamName + " "
-                        ) ||
-                        summaryText.startsWith(
-                          teamName + " ("
-                        )
-                    );
-
-                  if (
-                    confirmed &&
-                    matchingTeam &&
-                    start &&
-                    end &&
-                    uid
-                  ) {
-                    const teamKey =
-                      Object.keys(
-                        teams
-                      ).find(
-                        key =>
-                          teams[key]
-                            .name ===
-                          matchingTeam
-                      ) || "";
-
-                    events.push({
-                      id:
-                        `sportsconnect-${uid.value}`,
-                      type: "practice",
-                      title:
-                        matchingTeam,
-                      start:
-                        parseICSDate(
-                          start
-                        ),
-                      end:
-                        parseICSDate(
-                          end
-                        ),
-                      teamKey,
-                      teamName:
-                        matchingTeam,
-                      location:
-                        locationText,
-                      category:
-                        "Outdoor Practice",
-                      description:
-                        descriptionText ||
-                        summaryText,
-                      source:
-                        "Sports Connect",
-                      sportsConnectUid:
-                        uid.value
-                    });
-                  }
-                }
-
-                current = null;
-                continue;
-              }
-
-              if (current) {
-                current.push(line);
-              }
-            }
-
             const unique = new Map();
 
-            for (const event of events) {
+            for (const match of allMatches) {
+
+              if (
+                Number(match.EventID) !== 40107087
+              ) {
+                continue;
+              }
+
+              if (
+                String(match.EventType || "")
+                  .toLowerCase() !== "practice"
+              ) {
+                continue;
+              }
+
+              const teamName =
+                String(
+                  match.Team1Name ||
+                  match.Team1 ||
+                  ""
+                ).trim();
+
+              if (
+                !/^Cobras\s+/i.test(teamName)
+              ) {
+                continue;
+              }
+
+              const start =
+                match.Start ||
+                (
+                  match.Date &&
+                  match.StartTime
+                    ? `${String(match.Date).substring(0, 10)}T${match.StartTime}:00`
+                    : null
+                );
+
+              const end =
+                match.End ||
+                (
+                  match.Date &&
+                  match.EndTime
+                    ? `${String(match.Date).substring(0, 10)}T${match.EndTime}:00`
+                    : null
+                );
+
+              if (!start || !end) {
+                continue;
+              }
+
+              const matchId =
+                match.MatchID ||
+                match.MasterMatchId ||
+                `${teamName}-${start}`;
+
+              const locationParts = [
+                match.LocationName,
+                match.FieldName
+              ].filter(Boolean);
+
+              const location =
+                [...new Set(locationParts)]
+                  .join(" - ");
+
+              const title =
+                `${teamName} Practice`;
+
+              const event = {
+                id:
+                  `sportsconnect-${matchId}`,
+
+                type: "practice",
+
+                title,
+
+                start,
+
+                end,
+
+                timezone:
+                  "America/Chicago",
+
+                teamName,
+
+                teamKey: "",
+
+                location,
+
+                category:
+                  "Outdoor Practice",
+
+                description:
+                  location
+                    ? `Outdoor practice at ${location}.`
+                    : "Outdoor team practice.",
+
+                source:
+                  "Sports Connect",
+
+                sportsConnectEventId:
+                  String(match.EventID),
+
+                sportsConnectMatchId:
+                  String(matchId),
+
+                sportsConnectTeamId:
+                  String(
+                    match.HomeTeamID ||
+                    ""
+                  )
+              };
+
               unique.set(
                 event.id,
                 event
               );
             }
 
-            const finalEvents =
-              Array.from(
-                unique.values()
-              );
-
-            console.log(
-              `Sports Connect team practices imported: ${finalEvents.length}`
+            events.push(
+              ...unique.values()
             );
 
-            return finalEvents;
-          }
+            console.log(
+              `Sports Connect practices found: ${allMatches.length}`
+            );
 
+            console.log(
+              `Sports Connect Cobras practices imported: ${events.length}`
+            );
+
+            return events;
+          }
           /*
            * ========================================
            * MAIN
