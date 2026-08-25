@@ -11,13 +11,15 @@ permissions:
   contents: write
 
 jobs:
+
   update-schedules:
+
     runs-on: ubuntu-latest
 
     steps:
 
       # ========================================
-      # CHECKOUT REPOSITORY
+      # CHECKOUT
       # ========================================
 
       - name: Checkout repository
@@ -25,10 +27,13 @@ jobs:
 
 
       # ========================================
-      # DOWNLOAD ACTIVE TEAM SCHEDULES
+      # DOWNLOAD GAMECHANGER + ALLBOOKED
       # ========================================
 
-      - name: Download active team schedules
+      - name: Download schedules and build calendar
+        env:
+          ALLBOOKED_ICAL_URL: ${{ secrets.ALLBOOKED_ICAL_URL }}
+
         run: |
 
           mkdir -p schedules
@@ -86,11 +91,6 @@ jobs:
           const organizationEvents =
             context.__organizationEvents || [];
 
-
-          /*
-            Make sure organization events
-            are actually an array.
-          */
 
           if (
             !Array.isArray(
@@ -291,7 +291,7 @@ jobs:
 
                     request.destroy(
                       new Error(
-                        "Logo download timed out"
+                        "Download timed out"
                       )
                     );
 
@@ -306,7 +306,122 @@ jobs:
 
           /*
             ========================================
-            PROCESS ONE TEAM
+            FETCH TEXT
+            ========================================
+          */
+
+          function fetchText(
+            url
+          ) {
+
+            return new Promise(
+              (resolve, reject) => {
+
+                const client =
+                  url.startsWith("https://")
+                    ? https
+                    : http;
+
+
+                const request =
+                  client.get(
+                    url,
+                    {
+                      headers: {
+                        "User-Agent":
+                          "McHenry-Cobras-Schedule-Updater"
+                      }
+                    },
+
+                    response => {
+
+                      if (
+                        response.statusCode >= 300 &&
+                        response.statusCode < 400 &&
+                        response.headers.location
+                      ) {
+
+                        response.resume();
+
+                        return fetchText(
+                          response.headers.location
+                        )
+                          .then(resolve)
+                          .catch(reject);
+
+                      }
+
+
+                      if (
+                        response.statusCode !== 200
+                      ) {
+
+                        response.resume();
+
+                        return reject(
+                          new Error(
+                            `AllBooked HTTP ${response.statusCode}`
+                          )
+                        );
+
+                      }
+
+
+                      let data = "";
+
+
+                      response.setEncoding(
+                        "utf8"
+                      );
+
+
+                      response.on(
+                        "data",
+                        chunk => {
+                          data += chunk;
+                        }
+                      );
+
+
+                      response.on(
+                        "end",
+                        () => {
+                          resolve(data);
+                        }
+                      );
+
+                    }
+                  );
+
+
+                request.on(
+                  "error",
+                  reject
+                );
+
+
+                request.setTimeout(
+                  30000,
+                  () => {
+
+                    request.destroy(
+                      new Error(
+                        "AllBooked request timed out"
+                      )
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+          }
+
+
+          /*
+            ========================================
+            GAMECHANGER TEAM PROCESSING
             ========================================
           */
 
@@ -547,7 +662,7 @@ jobs:
 
               /*
                 ==================================
-                ADD COBRAS METADATA TO EACH GAME
+                ADD GAMES TO CALENDAR
                 ==================================
               */
 
@@ -570,10 +685,6 @@ jobs:
                 game.cobras_team_name =
                   team.name;
 
-
-                /*
-                  Add games to calendar feed.
-                */
 
                 teamCalendarEvents.push({
 
@@ -635,10 +746,6 @@ jobs:
               }
 
 
-              /*
-                Save raw GameChanger schedule.
-              */
-
               fs.writeFileSync(
                 scheduleFile,
                 JSON.stringify(
@@ -673,6 +780,625 @@ jobs:
 
           /*
             ========================================
+            ICS HELPERS
+            ========================================
+          */
+
+          function unfoldICS(
+            text
+          ) {
+
+            return text
+              .replace(
+                /\r\n/g,
+                "\n"
+              )
+              .replace(
+                /\r/g,
+                "\n"
+              )
+              .replace(
+                /\n[ \t]/g,
+                ""
+              );
+
+          }
+
+
+          function unescapeICS(
+            value
+          ) {
+
+            return String(
+              value || ""
+            )
+              .replace(
+                /\\n/g,
+                "\n"
+              )
+              .replace(
+                /\\,/g,
+                ","
+              )
+              .replace(
+                /\\;/g,
+                ";"
+              )
+              .replace(
+                /\\\\/g,
+                "\\"
+              );
+
+          }
+
+
+          function getICSProperty(
+            lines,
+            property
+          ) {
+
+            const line =
+              lines.find(
+                item =>
+                  item.startsWith(
+                    property + ":"
+                  ) ||
+                  item.startsWith(
+                    property + ";"
+                  )
+              );
+
+
+            if (!line) {
+              return null;
+            }
+
+
+            const colon =
+              line.indexOf(":");
+
+
+            if (
+              colon === -1
+            ) {
+
+              return null;
+
+            }
+
+
+            return {
+
+              raw:
+                line.substring(
+                  0,
+                  colon
+                ),
+
+              value:
+                unescapeICS(
+                  line.substring(
+                    colon + 1
+                  )
+                )
+
+            };
+
+          }
+
+
+          /*
+            Convert AllBooked DTSTART values
+            into ISO timestamps.
+
+            AllBooked currently uses values such as:
+
+            DTSTART;TZID=UTC-05:20260804T190000
+
+            We preserve that explicit offset.
+          */
+
+          function parseICSDate(
+            rawProperty
+          ) {
+
+            if (!rawProperty) {
+              return null;
+            }
+
+
+            const raw =
+              rawProperty.value;
+
+
+            /*
+              Date-only event.
+            */
+
+            if (
+              /^\d{8}$/.test(
+                raw
+              )
+            ) {
+
+              return (
+                raw.substring(0, 4) +
+                "-" +
+                raw.substring(4, 6) +
+                "-" +
+                raw.substring(6, 8)
+              );
+
+            }
+
+
+            /*
+              Explicit UTC.
+            */
+
+            if (
+              raw.endsWith("Z")
+            ) {
+
+              const value =
+                raw.substring(
+                  0,
+                  raw.length - 1
+                );
+
+
+              const year =
+                value.substring(
+                  0,
+                  4
+                );
+
+              const month =
+                value.substring(
+                  4,
+                  6
+                );
+
+              const day =
+                value.substring(
+                  6,
+                  8
+                );
+
+              const hour =
+                value.substring(
+                  9,
+                  11
+                );
+
+              const minute =
+                value.substring(
+                  11,
+                  13
+                );
+
+              const second =
+                value.substring(
+                  13,
+                  15
+                ) || "00";
+
+
+              return (
+                `${year}-${month}-${day}` +
+                `T${hour}:${minute}:${second}Z`
+              );
+
+            }
+
+
+            /*
+              Extract local date/time.
+            */
+
+            const match =
+              raw.match(
+                /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/
+              );
+
+
+            if (!match) {
+              return null;
+            }
+
+
+            const [
+              ,
+              year,
+              month,
+              day,
+              hour,
+              minute,
+              second
+            ] = match;
+
+
+            /*
+              Look for TZID=UTC-05 / UTC-06.
+            */
+
+            const tzMatch =
+              rawProperty.raw.match(
+                /TZID=UTC([+-])(\d{2})/
+              );
+
+
+            if (tzMatch) {
+
+              const sign =
+                tzMatch[1];
+
+              const offsetHours =
+                tzMatch[2];
+
+
+              return (
+                `${year}-${month}-${day}` +
+                `T${hour}:${minute}:${second}` +
+                `${sign}${offsetHours}:00`
+              );
+
+            }
+
+
+            /*
+              America/Chicago or unspecified:
+              use the local-looking timestamp.
+
+              The calendar will interpret this
+              according to the browser timezone.
+            */
+
+            return (
+              `${year}-${month}-${day}` +
+              `T${hour}:${minute}:${second}`
+            );
+
+          }
+
+
+          /*
+            ========================================
+            ALLBOOKED PROCESSING
+            ========================================
+          */
+
+          async function processAllBooked() {
+
+            const url =
+              process.env.ALLBOOKED_ICAL_URL;
+
+
+            if (!url) {
+
+              throw new Error(
+                "ALLBOOKED_ICAL_URL GitHub secret is missing"
+              );
+
+            }
+
+
+            console.log(
+              "Downloading AllBooked calendar..."
+            );
+
+
+            const ics =
+              await fetchText(
+                url
+              );
+
+
+            const lines =
+              unfoldICS(
+                ics
+              )
+                .split("\n")
+                .map(
+                  line =>
+                    line.trim()
+                );
+
+
+            const teamNames =
+              Object.values(
+                teams
+              )
+                .filter(
+                  team =>
+                    team.active
+                )
+                .map(
+                  team =>
+                    team.name
+                );
+
+
+            const events =
+              [];
+
+
+            let current =
+              null;
+
+
+            for (
+              const line of lines
+            ) {
+
+              if (
+                line ===
+                "BEGIN:VEVENT"
+              ) {
+
+                current =
+                  [];
+
+                continue;
+
+              }
+
+
+              if (
+                line ===
+                "END:VEVENT"
+              ) {
+
+                if (
+                  current
+                ) {
+
+                  const summary =
+                    getICSProperty(
+                      current,
+                      "SUMMARY"
+                    );
+
+
+                  const start =
+                    getICSProperty(
+                      current,
+                      "DTSTART"
+                    );
+
+
+                  const end =
+                    getICSProperty(
+                      current,
+                      "DTEND"
+                    );
+
+
+                  const resources =
+                    getICSProperty(
+                      current,
+                      "RESOURCES"
+                    );
+
+
+                  const description =
+                    getICSProperty(
+                      current,
+                      "DESCRIPTION"
+                    );
+
+
+                  const status =
+                    getICSProperty(
+                      current,
+                      "STATUS"
+                    );
+
+
+                  const uid =
+                    getICSProperty(
+                      current,
+                      "UID"
+                    );
+
+
+                  const summaryText =
+                    summary?.value ||
+                    "";
+
+
+                  const resourceText =
+                    resources?.value ||
+                    "";
+
+
+                  /*
+                    Only confirmed bookings.
+                  */
+
+                  const confirmed =
+                    !status ||
+                    status.value
+                      .toUpperCase() ===
+                      "CONFIRMED";
+
+
+                  /*
+                    We only want the shared
+                    team area.
+                  */
+
+                  const teamResource =
+                    resourceText
+                      .toLowerCase()
+                      .includes(
+                        "all tunnels (team)"
+                      );
+
+
+                  /*
+                    The booking title must begin
+                    with an active Cobras team name.
+
+                    This is what prevents private
+                    individual lessons from appearing.
+                  */
+
+                  const matchingTeam =
+                    teamNames.find(
+                      teamName =>
+                        summaryText ===
+                          teamName ||
+
+                        summaryText.startsWith(
+                          teamName + " "
+                        ) ||
+
+                        summaryText.startsWith(
+                          teamName + " ("
+                        )
+                    );
+
+
+                  if (
+                    confirmed &&
+                    teamResource &&
+                    matchingTeam &&
+                    start &&
+                    end &&
+                    uid
+                  ) {
+
+                    const cleanTitle =
+                      matchingTeam;
+
+
+                    events.push({
+
+                      id:
+                        `allbooked-${uid.value}`,
+
+                      type:
+                        "indoor",
+
+                      title:
+                        cleanTitle,
+
+                      start:
+                        parseICSDate(
+                          start
+                        ),
+
+                      end:
+                        parseICSDate(
+                          end
+                        ),
+
+                      teamKey:
+                        Object.keys(
+                          teams
+                        ).find(
+                          key =>
+                            teams[key].name ===
+                            matchingTeam
+                        ) || "",
+
+                      teamName:
+                        matchingTeam,
+
+                      location:
+                        "McHenry Cobras Indoor Facility",
+
+                      space:
+                        "All Tunnels",
+
+                      category:
+                        "Indoor Facility",
+
+                      description:
+                        summaryText,
+
+                      source:
+                        "AllBooked",
+
+                      allBookedUid:
+                        uid.value
+
+                    });
+
+                  }
+
+                }
+
+
+                current =
+                  null;
+
+                continue;
+
+              }
+
+
+              if (
+                current
+              ) {
+
+                current.push(
+                  line
+                );
+
+              }
+
+            }
+
+
+            /*
+              Remove duplicate UIDs.
+            */
+
+            const unique =
+              new Map();
+
+
+            for (
+              const event of events
+            ) {
+
+              unique.set(
+                event.id,
+                event
+              );
+
+            }
+
+
+            const finalEvents =
+              Array.from(
+                unique.values()
+              );
+
+
+            console.log(
+              `AllBooked bookings found: ${lines.filter(
+                line =>
+                  line ===
+                  "BEGIN:VEVENT"
+              ).length}`
+            );
+
+
+            console.log(
+              `AllBooked team bookings imported: ${finalEvents.length}`
+            );
+
+
+            return finalEvents;
+
+          }
+
+
+          /*
+            ========================================
             MAIN
             ========================================
           */
@@ -685,7 +1411,7 @@ jobs:
 
             /*
               ==================================
-              PROCESS COBRAS TEAMS
+              GAMECHANGER
               ==================================
             */
 
@@ -732,16 +1458,8 @@ jobs:
 
             /*
               ==================================
-              ADD ORGANIZATION EVENTS
+              COBRAS ORGANIZATION EVENTS
               ==================================
-
-              These now come directly from
-              COBRAS_ORGANIZATION_EVENTS
-              in config.js.
-
-              This means descriptions,
-              titles, dates, etc. only need
-              to be maintained in config.js.
             */
 
             allCalendarEvents.push(
@@ -751,7 +1469,22 @@ jobs:
 
             /*
               ==================================
-              SORT CALENDAR CHRONOLOGICALLY
+              ALLBOOKED
+              ==================================
+            */
+
+            const allBookedEvents =
+              await processAllBooked();
+
+
+            allCalendarEvents.push(
+              ...allBookedEvents
+            );
+
+
+            /*
+              ==================================
+              SORT
               ==================================
             */
 
@@ -768,7 +1501,7 @@ jobs:
 
             /*
               ==================================
-              CALENDAR FEED METADATA
+              CALENDAR FEED
               ==================================
             */
 
@@ -786,19 +1519,39 @@ jobs:
               eventCount:
                 allCalendarEvents.length,
 
+              eventCounts: {
+
+                gamechanger:
+                  allCalendarEvents.filter(
+                    event =>
+                      event.type ===
+                      "gamechanger"
+                  ).length,
+
+                organization:
+                  allCalendarEvents.filter(
+                    event =>
+                      event.type ===
+                      "organization"
+                  ).length,
+
+                indoor:
+                  allCalendarEvents.filter(
+                    event =>
+                      event.type ===
+                      "indoor"
+                  ).length
+
+              },
+
               events:
                 allCalendarEvents
 
             };
 
 
-            /*
-              ==================================
-              WRITE CALENDAR JSON
-              ==================================
-            */
-
             fs.writeFileSync(
+
               "calendar-events.json",
 
               JSON.stringify(
@@ -806,6 +1559,7 @@ jobs:
                 null,
                 2
               ) + "\n"
+
             );
 
 
@@ -827,21 +1581,19 @@ jobs:
 
             console.log(
               `GameChanger events: ${
-                allCalendarEvents.filter(
-                  e =>
-                    e.type ===
-                    "gamechanger"
-                ).length
+                calendarFeed.eventCounts.gamechanger
               }`
             );
 
             console.log(
               `Organization events: ${
-                allCalendarEvents.filter(
-                  e =>
-                    e.type ===
-                    "organization"
-                ).length
+                calendarFeed.eventCounts.organization
+              }`
+            );
+
+            console.log(
+              `Indoor events: ${
+                calendarFeed.eventCounts.indoor
               }`
             );
 
