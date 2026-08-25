@@ -421,6 +421,7 @@ const COBRAS_ORGANIZATION_EVENTS = [
 
   {
     id: "uniform-fitting-2026",
+    type: "organization",
     title: "Uniform Fitting",
     start: "2026-12-12",
     end: "2026-12-12",
@@ -431,6 +432,7 @@ const COBRAS_ORGANIZATION_EVENTS = [
 
   {
     id: "pictures-2027",
+    type: "organization",
     title: "Pictures",
     start: "2027-02-28",
     end: "2027-02-28",
@@ -441,6 +443,7 @@ const COBRAS_ORGANIZATION_EVENTS = [
 
   {
     id: "steak-fry-2027",
+    type: "organization",
     title: "Steak Fry",
     start: "2027-03-13",
     end: "2027-03-13",
@@ -451,6 +454,7 @@ const COBRAS_ORGANIZATION_EVENTS = [
 
   {
     id: "jr-memorial-2027",
+    type: "organization",
     title: "JR Memorial Tournament",
     start: "2027-04-15",
     end: "2027-04-18",
@@ -461,6 +465,7 @@ const COBRAS_ORGANIZATION_EVENTS = [
 
   {
     id: "cobras-for-a-cause-2027",
+    type: "organization",
     title: "Cobras for a Cause",
     start: "2027-06-03",
     end: "2027-06-06",
