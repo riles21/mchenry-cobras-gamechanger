@@ -369,17 +369,7 @@ button:hover {
     border-left-color: #ffffff;
 }
 
-/* Outdoor Practice */
 
-.event.practice {
-    border-left-color: #ff5a00;
-    background: #202020;
-}
-
-
-.event.practice:hover {
-    background: #303030;
-}
 
 
 .event-team {
@@ -409,6 +399,26 @@ button:hover {
 
 .event.indoor .event-time {
     color: #b0b0b0;
+}
+
+/* Completed game scores */
+.event-score {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.event-score.win {
+    color: #35d06f;
+}
+
+.event-score.loss {
+    color: #ff4d4d;
+}
+
+.event-score.tie {
+    color: #ffffff;
 }
 
 
@@ -571,27 +581,17 @@ button:hover {
 
 
 .day-event.indoor {
-    border-left-color: #4da6ff;
-    background: #171d24;
-}
-
-
-.day-event.indoor:hover {
-    background: #202a34;
-}
-
-
-/* Outdoor Practice */
-
-.day-event.practice {
-    border-left-color: #ff5a00;
+    border-left-color: #888888;
     background: #202020;
 }
 
 
-.day-event.practice:hover {
+.day-event.indoor:hover {
     background: #303030;
 }
+
+
+
 
 
 .day-event-title {
@@ -1937,6 +1937,113 @@ function renderDay(
    RENDER COMPACT EVENT
 ========================================================= */
 
+function getNumericScore(value) {
+    if (value === null || value === undefined || value === "") {
+        return null;
+    }
+
+    const number = Number(value);
+
+    return Number.isFinite(number)
+        ? number
+        : null;
+}
+
+function getGameScore(event) {
+
+    const directTeamScore =
+        getNumericScore(
+            event.teamScore ??
+            event.scoreFor ??
+            event.cobrasScore
+        );
+
+    const directOpponentScore =
+        getNumericScore(
+            event.opponentScore ??
+            event.scoreAgainst ??
+            event.opponentScoreValue
+        );
+
+    if (
+        directTeamScore !== null &&
+        directOpponentScore !== null
+    ) {
+        return {
+            team: directTeamScore,
+            opponent: directOpponentScore
+        };
+    }
+
+    const homeScore =
+        getNumericScore(
+            event.homeScore ??
+            event.home_team_score ??
+            event.home_score
+        );
+
+    const awayScore =
+        getNumericScore(
+            event.awayScore ??
+            event.away_team_score ??
+            event.away_score
+        );
+
+    if (
+        homeScore !== null &&
+        awayScore !== null
+    ) {
+        if (event.homeAway === "home") {
+            return {
+                team: homeScore,
+                opponent: awayScore
+            };
+        }
+
+        if (event.homeAway === "away") {
+            return {
+                team: awayScore,
+                opponent: homeScore
+            };
+        }
+    }
+
+    return null;
+}
+
+function getGameResultClass(event) {
+
+    const score =
+        getGameScore(event);
+
+    if (!score) {
+        return "";
+    }
+
+    if (score.team > score.opponent) {
+        return "win";
+    }
+
+    if (score.team < score.opponent) {
+        return "loss";
+    }
+
+    return "tie";
+}
+
+function getGameScoreText(event) {
+
+    const score =
+        getGameScore(event);
+
+    if (!score) {
+        return "";
+    }
+
+    return `${score.team}-${score.opponent}`;
+}
+
+
 function renderCompactEvent(
     event
 ) {
@@ -2003,31 +2110,62 @@ function renderCompactEvent(
             : null;
 
 
+    let scoreText =
+        "";
+
+    let scoreClass =
+        "";
+
     /*
-     * Games, indoor bookings, and outdoor
-     * practices all have actual start times.
+     * Completed games show the result instead of
+     * the scheduled time. Future games keep the time.
      */
 
-    if (
-        game ||
-        indoor ||
-        practice
-    ) {
+    if (game) {
+
+        const score =
+            getGameScore(event);
+
+        const isPast =
+            start &&
+            start.getTime() <
+            Date.now();
 
         if (
-            start
+            isPast &&
+            score
         ) {
+
+            scoreText =
+                getGameScoreText(
+                    event
+                );
+
+            scoreClass =
+                getGameResultClass(
+                    event
+                );
+
+        } else if (start) {
 
             timeText =
                 formatTime(
                     start
                 );
 
+        }
 
-            /*
-             * Indoor events may have an
-             * explicit end time.
-             */
+    } else if (
+        indoor ||
+        practice
+    ) {
+
+        if (start) {
+
+            timeText =
+                formatTime(
+                    start
+                );
 
             if (
                 indoor &&
@@ -2110,8 +2248,23 @@ function renderCompactEvent(
 
 
             ${
-                timeText ===
-                "ALL DAY"
+                scoreText
+
+                    ? `
+
+                        <span
+                            class="event-score ${scoreClass}">
+
+                            ${escapeHtml(
+                                scoreText
+                            )}
+
+                        </span>
+
+                      `
+
+                    : timeText ===
+                      "ALL DAY"
 
                     ? `
 
@@ -2296,21 +2449,46 @@ function showDayModal(
                     game
                 ) {
 
+                    const gameScore =
+                        getGameScore(event);
+
+                    const gameScoreClass =
+                        getGameResultClass(event);
+
+                    const gameIsPast =
+                        start &&
+                        start.getTime() <
+                        Date.now();
+
+                    const gameTimeOrScore =
+                        gameIsPast &&
+                        gameScore
+                            ? `
+                                <span
+                                    class="event-score ${gameScoreClass}">
+
+                                    ${escapeHtml(
+                                        getGameScoreText(event)
+                                    )}
+
+                                </span>
+                              `
+                            : `
+                                <span
+                                    class="day-event-time">
+
+                                    ${
+                                        start
+                                            ? formatTime(start)
+                                            : ""
+                                    }
+
+                                </span>
+                              `;
+
                     details = `
 
-                        <span
-                            class="day-event-time">
-
-                            ${
-                                start
-                                    ? formatTime(
-                                        start
-                                      )
-                                    : ""
-                            }
-
-                        </span>
-
+                        ${gameTimeOrScore}
 
                         vs
 
@@ -2942,7 +3120,7 @@ function showEventModal(
                     Time
                 </div>
 
-                <div class="detail-value orange">
+                <div class="detail-value">
 
                     ${
                         start
