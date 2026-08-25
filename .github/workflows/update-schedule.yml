@@ -15,15 +15,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      # ========================================
+      # CHECKOUT REPOSITORY
+      # ========================================
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
+
+      # ========================================
+      # DOWNLOAD ACTIVE TEAM SCHEDULES
+      # ========================================
+
       - name: Download active team schedules
         run: |
+
           mkdir -p schedules
           mkdir -p logos/cache
 
           node <<'NODE'
+
           const fs = require("fs");
           const vm = require("vm");
           const https = require("https");
@@ -31,177 +43,271 @@ jobs:
           const path = require("path");
           const crypto = require("crypto");
 
-          const configText = fs.readFileSync("config.js", "utf8");
+
+          /*
+            ========================================
+            LOAD COBRAS CONFIGURATION
+            ========================================
+          */
+
+          const configText =
+            fs.readFileSync(
+              "config.js",
+              "utf8"
+            );
+
 
           const context = {};
+
           vm.createContext(context);
+
+
           vm.runInContext(
+
             configText +
+
             "\nthis.__teams = COBRAS_TEAMS;" +
-            "\nthis.__settings = COBRAS_SETTINGS;",
+
+            "\nthis.__settings = COBRAS_SETTINGS;" +
+
+            "\nthis.__organizationEvents = COBRAS_ORGANIZATION_EVENTS;",
+
             context
+
           );
 
-          const teams = context.__teams;
-          const settings = context.__settings;
+
+          const teams =
+            context.__teams;
+
+          const settings =
+            context.__settings;
+
+          const organizationEvents =
+            context.__organizationEvents || [];
+
+
+          /*
+            Make sure organization events
+            are actually an array.
+          */
+
+          if (
+            !Array.isArray(
+              organizationEvents
+            )
+          ) {
+
+            throw new Error(
+              "COBRAS_ORGANIZATION_EVENTS must be an array"
+            );
+
+          }
+
+
+          /*
+            ========================================
+            ACTIVE GAMECHANGER SEASONS
+            ========================================
+          */
 
           const activeSeasons =
             settings.activeGameChangerSeasons || [];
+
 
           console.log(
             "Active GameChanger seasons:",
             activeSeasons.join(", ")
           );
 
+
           /*
-            ----------------------------------------
+            ========================================
             DOWNLOAD HELPER
-            ----------------------------------------
+            ========================================
           */
 
-          function download(url, destination) {
+          function download(
+            url,
+            destination
+          ) {
 
-            return new Promise((resolve, reject) => {
+            return new Promise(
+              (resolve, reject) => {
 
-              const client =
-                url.startsWith("https://")
-                  ? https
-                  : http;
-
-              const request =
-                client.get(
-                  url,
-                  {
-                    headers: {
-                      "User-Agent":
-                        "McHenry-Cobras-Schedule-Updater"
-                    }
-                  },
-                  response => {
-
-                    /*
-                      Follow redirects
-                    */
-
-                    if (
-                      response.statusCode >= 300 &&
-                      response.statusCode < 400 &&
-                      response.headers.location
-                    ) {
-
-                      response.resume();
-
-                      return download(
-                        response.headers.location,
-                        destination
-                      )
-                        .then(resolve)
-                        .catch(reject);
-                    }
+                const client =
+                  url.startsWith("https://")
+                    ? https
+                    : http;
 
 
-                    if (response.statusCode !== 200) {
+                const request =
+                  client.get(
+                    url,
+                    {
+                      headers: {
+                        "User-Agent":
+                          "McHenry-Cobras-Schedule-Updater"
+                      }
+                    },
 
-                      response.resume();
+                    response => {
 
-                      return reject(
-                        new Error(
-                          `HTTP ${response.statusCode}`
+                      /*
+                        Follow redirects
+                      */
+
+                      if (
+                        response.statusCode >= 300 &&
+                        response.statusCode < 400 &&
+                        response.headers.location
+                      ) {
+
+                        response.resume();
+
+                        return download(
+                          response.headers.location,
+                          destination
                         )
-                      );
-                    }
+                          .then(resolve)
+                          .catch(reject);
+
+                      }
 
 
-                    const contentType =
-                      response.headers["content-type"] || "";
+                      if (
+                        response.statusCode !== 200
+                      ) {
 
-                    let extension = ".jpg";
+                        response.resume();
 
-                    if (
-                      contentType.includes("png")
-                    ) {
-                      extension = ".png";
-
-                    } else if (
-                      contentType.includes("webp")
-                    ) {
-                      extension = ".webp";
-
-                    } else if (
-                      contentType.includes("gif")
-                    ) {
-                      extension = ".gif";
-
-                    } else if (
-                      contentType.includes("svg")
-                    ) {
-                      extension = ".svg";
-                    }
-
-
-                    const finalDestination =
-                      destination + extension;
-
-                    const file =
-                      fs.createWriteStream(
-                        finalDestination
-                      );
-
-                    response.pipe(file);
-
-                    file.on(
-                      "finish",
-                      () => {
-
-                        file.close(
-                          () =>
-                            resolve({
-                              path:
-                                finalDestination,
-                              contentType
-                            })
+                        return reject(
+                          new Error(
+                            `HTTP ${response.statusCode}`
+                          )
                         );
 
                       }
-                    );
 
-                    file.on(
-                      "error",
-                      reject
+
+                      const contentType =
+                        response.headers[
+                          "content-type"
+                        ] || "";
+
+
+                      let extension =
+                        ".jpg";
+
+
+                      if (
+                        contentType.includes(
+                          "png"
+                        )
+                      ) {
+
+                        extension =
+                          ".png";
+
+                      } else if (
+                        contentType.includes(
+                          "webp"
+                        )
+                      ) {
+
+                        extension =
+                          ".webp";
+
+                      } else if (
+                        contentType.includes(
+                          "gif"
+                        )
+                      ) {
+
+                        extension =
+                          ".gif";
+
+                      } else if (
+                        contentType.includes(
+                          "svg"
+                        )
+                      ) {
+
+                        extension =
+                          ".svg";
+
+                      }
+
+
+                      const finalDestination =
+                        destination +
+                        extension;
+
+
+                      const file =
+                        fs.createWriteStream(
+                          finalDestination
+                        );
+
+
+                      response.pipe(file);
+
+
+                      file.on(
+                        "finish",
+                        () => {
+
+                          file.close(
+                            () =>
+                              resolve({
+                                path:
+                                  finalDestination,
+                                contentType
+                              })
+                          );
+
+                        }
+                      );
+
+
+                      file.on(
+                        "error",
+                        reject
+                      );
+
+                    }
+                  );
+
+
+                request.on(
+                  "error",
+                  reject
+                );
+
+
+                request.setTimeout(
+                  30000,
+                  () => {
+
+                    request.destroy(
+                      new Error(
+                        "Logo download timed out"
+                      )
                     );
 
                   }
                 );
 
-
-              request.on(
-                "error",
-                reject
-              );
-
-
-              request.setTimeout(
-                30000,
-                () => {
-
-                  request.destroy(
-                    new Error(
-                      "Logo download timed out"
-                    )
-                  );
-
-                }
-              );
-
-            });
+              }
+            );
 
           }
 
 
           /*
-            ----------------------------------------
+            ========================================
             PROCESS ONE TEAM
-            ----------------------------------------
+            ========================================
           */
 
           async function processTeam(
@@ -209,13 +315,16 @@ jobs:
             team
           ) {
 
-            if (!team.active) {
+            if (
+              !team.active
+            ) {
 
               console.log(
                 `Skipping inactive team: ${key}`
               );
 
               return [];
+
             }
 
 
@@ -224,14 +333,16 @@ jobs:
             ) {
 
               console.log(
-                `Skipping ${team.name}: no GameChanger seasons configured`
+                `${team.name}: no GameChanger seasons configured`
               );
 
               return [];
+
             }
 
 
-            const teamCalendarEvents = [];
+            const teamCalendarEvents =
+              [];
 
 
             for (
@@ -239,16 +350,21 @@ jobs:
             ) {
 
               const gameChangerTeamId =
-                team.gameChangerTeams[season];
+                team.gameChangerTeams[
+                  season
+                ];
 
 
-              if (!gameChangerTeamId) {
+              if (
+                !gameChangerTeamId
+              ) {
 
                 console.log(
                   `${team.name}: no GameChanger ID for ${season}`
                 );
 
                 continue;
+
               }
 
 
@@ -266,8 +382,14 @@ jobs:
                   "schedules",
                   `${key}-${season
                     .toLowerCase()
-                    .replace(/[^a-z0-9]+/g, "-")
-                    .replace(/^-|-$/g, "")}.json`
+                    .replace(
+                      /[^a-z0-9]+/g,
+                      "-"
+                    )
+                    .replace(
+                      /^-|-$/g,
+                      ""
+                    )}.json`
                 );
 
 
@@ -277,7 +399,9 @@ jobs:
                 );
 
 
-              if (!response.ok) {
+              if (
+                !response.ok
+              ) {
 
                 throw new Error(
                   `Schedule HTTP ${response.status} for ${key} / ${season}`
@@ -290,7 +414,11 @@ jobs:
                 await response.json();
 
 
-              if (!Array.isArray(games)) {
+              if (
+                !Array.isArray(
+                  games
+                )
+              ) {
 
                 throw new Error(
                   `Unexpected schedule format for ${key} / ${season}`
@@ -300,9 +428,9 @@ jobs:
 
 
               /*
-                ----------------------------------
+                ==================================
                 DOWNLOAD OPPONENT LOGOS
-                ----------------------------------
+                ==================================
               */
 
               const logoMap =
@@ -321,7 +449,9 @@ jobs:
                   !opponent ||
                   !opponent.avatar_url
                 ) {
+
                   continue;
+
                 }
 
 
@@ -330,7 +460,9 @@ jobs:
 
 
                 if (
-                  logoMap.has(originalUrl)
+                  logoMap.has(
+                    originalUrl
+                  )
                 ) {
 
                   opponent.avatar_url =
@@ -339,15 +471,25 @@ jobs:
                     );
 
                   continue;
+
                 }
 
 
                 const hash =
                   crypto
-                    .createHash("sha1")
-                    .update(originalUrl)
-                    .digest("hex")
-                    .substring(0, 16);
+                    .createHash(
+                      "sha1"
+                    )
+                    .update(
+                      originalUrl
+                    )
+                    .digest(
+                      "hex"
+                    )
+                    .substring(
+                      0,
+                      16
+                    );
 
 
                 const basePath =
@@ -390,7 +532,9 @@ jobs:
                   );
 
 
-                } catch (error) {
+                } catch (
+                  error
+                ) {
 
                   console.log(
                     `  Could not download opponent logo: ${error.message}`
@@ -402,9 +546,9 @@ jobs:
 
 
               /*
-                ----------------------------------
+                ==================================
                 ADD COBRAS METADATA TO EACH GAME
-                ----------------------------------
+                ==================================
               */
 
               for (
@@ -414,11 +558,14 @@ jobs:
                 game.cobras_gamechanger_season =
                   season;
 
+
                 game.cobras_gamechanger_team_id =
                   gameChangerTeamId;
 
+
                 game.cobras_team_key =
                   key;
+
 
                 game.cobras_team_name =
                   team.name;
@@ -488,6 +635,10 @@ jobs:
               }
 
 
+              /*
+                Save raw GameChanger schedule.
+              */
+
               fs.writeFileSync(
                 scheduleFile,
                 JSON.stringify(
@@ -521,214 +672,31 @@ jobs:
 
 
           /*
-            ----------------------------------------
-            ORGANIZATION EVENTS
-            ----------------------------------------
-          */
-
-          const organizationEvents = [
-
-            {
-              id:
-                "uniform-fitting-2026",
-
-              type:
-                "organization",
-
-              title:
-                "Uniform Fitting",
-
-              start:
-                "2026-12-12",
-
-              end:
-                "2026-12-12",
-
-              allDay:
-                true,
-
-              category:
-                "Organization",
-
-              description:
-                "Cobras uniform fitting",
-
-              teamKey:
-                "",
-
-              teamName:
-                "All Cobras",
-
-              source:
-                "Cobras"
-
-            },
-
-
-            {
-              id:
-                "pictures-2027",
-
-              type:
-                "organization",
-
-              title:
-                "Team Pictures",
-
-              start:
-                "2027-02-28",
-
-              end:
-                "2027-02-28",
-
-              allDay:
-                true,
-
-              category:
-                "Organization",
-
-              description:
-                "Cobras team pictures",
-
-              teamKey:
-                "",
-
-              teamName:
-                "All Cobras",
-
-              source:
-                "Cobras"
-
-            },
-
-
-            {
-              id:
-                "steak-fry-2027",
-
-              type:
-                "organization",
-
-              title:
-                "Cobras Steak Fry",
-
-              start:
-                "2027-03-13",
-
-              end:
-                "2027-03-13",
-
-              allDay:
-                true,
-
-              category:
-                "Fundraiser",
-
-              description:
-                "Annual Cobras Steak Fry",
-
-              teamKey:
-                "",
-
-              teamName:
-                "All Cobras",
-
-              source:
-                "Cobras"
-
-            },
-
-
-            {
-              id:
-                "jr-memorial-2027",
-
-              type:
-                "organization",
-
-              title:
-                "JR Memorial Tournament",
-
-              start:
-                "2027-04-15",
-
-              end:
-                "2027-04-18",
-
-              allDay:
-                true,
-
-              category:
-                "Tournament",
-
-              description:
-                "JR Memorial Tournament",
-
-              teamKey:
-                "",
-
-              teamName:
-                "All Cobras",
-
-              source:
-                "Cobras"
-
-            },
-
-
-            {
-              id:
-                "cobras-for-a-cause-2027",
-
-              type:
-                "organization",
-
-              title:
-                "Cobras for a Cause",
-
-              start:
-                "2027-06-03",
-
-              end:
-                "2027-06-06",
-
-              allDay:
-                true,
-
-              category:
-                "Tournament",
-
-              description:
-                "Cobras for a Cause tournament",
-
-              teamKey:
-                "",
-
-              teamName:
-                "All Cobras",
-
-              source:
-                "Cobras"
-
-            }
-
-          ];
-
-
-          /*
-            ----------------------------------------
+            ========================================
             MAIN
-            ----------------------------------------
+            ========================================
           */
 
           async function main() {
 
-            const allCalendarEvents = [];
+            const allCalendarEvents =
+              [];
 
+
+            /*
+              ==================================
+              PROCESS COBRAS TEAMS
+              ==================================
+            */
 
             for (
-              const [key, team]
-              of Object.entries(teams)
+              const [
+                key,
+                team
+              ]
+              of Object.entries(
+                teams
+              )
             ) {
 
               try {
@@ -739,17 +707,23 @@ jobs:
                     team
                   );
 
+
                 allCalendarEvents.push(
                   ...events
                 );
 
-              } catch (error) {
+
+              } catch (
+                error
+              ) {
 
                 console.error(
                   `ERROR processing ${key}: ${error.message}`
                 );
 
-                process.exitCode = 1;
+
+                process.exitCode =
+                  1;
 
               }
 
@@ -757,7 +731,17 @@ jobs:
 
 
             /*
-              Add organization events.
+              ==================================
+              ADD ORGANIZATION EVENTS
+              ==================================
+
+              These now come directly from
+              COBRAS_ORGANIZATION_EVENTS
+              in config.js.
+
+              This means descriptions,
+              titles, dates, etc. only need
+              to be maintained in config.js.
             */
 
             allCalendarEvents.push(
@@ -766,18 +750,26 @@ jobs:
 
 
             /*
-              Sort calendar chronologically.
+              ==================================
+              SORT CALENDAR CHRONOLOGICALLY
+              ==================================
             */
 
             allCalendarEvents.sort(
               (a, b) =>
-                new Date(a.start) -
-                new Date(b.start)
+                new Date(
+                  a.start
+                ) -
+                new Date(
+                  b.start
+                )
             );
 
 
             /*
-              Calendar feed metadata.
+              ==================================
+              CALENDAR FEED METADATA
+              ==================================
             */
 
             const calendarFeed = {
@@ -800,8 +792,15 @@ jobs:
             };
 
 
+            /*
+              ==================================
+              WRITE CALENDAR JSON
+              ==================================
+            */
+
             fs.writeFileSync(
               "calendar-events.json",
+
               JSON.stringify(
                 calendarFeed,
                 null,
@@ -810,7 +809,14 @@ jobs:
             );
 
 
+            /*
+              ==================================
+              SUMMARY
+              ==================================
+            */
+
             console.log("");
+
             console.log(
               "========================================"
             );
@@ -823,7 +829,8 @@ jobs:
               `GameChanger events: ${
                 allCalendarEvents.filter(
                   e =>
-                    e.type === "gamechanger"
+                    e.type ===
+                    "gamechanger"
                 ).length
               }`
             );
@@ -832,7 +839,8 @@ jobs:
               `Organization events: ${
                 allCalendarEvents.filter(
                   e =>
-                    e.type === "organization"
+                    e.type ===
+                    "organization"
                 ).length
               }`
             );
@@ -844,33 +852,70 @@ jobs:
           }
 
 
+          /*
+            ========================================
+            RUN
+            ========================================
+          */
+
           main();
 
           NODE
 
+
+      # ========================================
+      # SHOW GENERATED FILES
+      # ========================================
+
       - name: Show generated files
         run: |
+
           echo "=== Schedules ==="
+
           ls -lah schedules || true
 
-          echo ""
-          echo "=== Cached logos ==="
-          ls -lah logos/cache || true
 
           echo ""
+
+          echo "=== Cached logos ==="
+
+          ls -lah logos/cache || true
+
+
+          echo ""
+
           echo "=== Calendar feed ==="
+
           ls -lah calendar-events.json || true
+
+
+      # ========================================
+      # SAVE EVERYTHING
+      # ========================================
 
       - name: Save schedules, logos, and calendar
         run: |
+
           git config user.name "github-actions[bot]"
+
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add schedules logos/cache calendar-events.json
+
+          git add \
+            schedules \
+            logos/cache \
+            calendar-events.json
+
 
           if git diff --cached --quiet; then
+
             echo "No changes to save."
+
           else
-            git commit -m "Update Cobras schedules and calendar"
+
+            git commit \
+              -m "Update Cobras schedules and calendar"
+
             git push
+
           fi
