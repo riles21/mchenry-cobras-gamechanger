@@ -370,6 +370,19 @@ button:hover {
 }
 
 
+/* Outdoor Practice */
+
+.event.practice {
+    border-left-color: #ff5a00;
+    background: #202020;
+}
+
+
+.event.practice:hover {
+    background: #303030;
+}
+
+
 .event-team {
     flex: 1;
     min-width: 0;
@@ -566,6 +579,19 @@ button:hover {
 
 .day-event.indoor:hover {
     background: #202a34;
+}
+
+
+/* Outdoor Practice */
+
+.day-event.practice {
+    border-left-color: #ff5a00;
+    background: #202020;
+}
+
+
+.day-event.practice:hover {
+    background: #303030;
 }
 
 
@@ -1315,12 +1341,51 @@ function isIndoor(event) {
 }
 
 
+function isPractice(event) {
+
+    return (
+        event.type ===
+        "practice"
+    );
+
+}
+
+
 function isOrganization(event) {
 
     return (
         !isGame(event) &&
-        !isIndoor(event)
+        !isIndoor(event) &&
+        !isPractice(event)
     );
+
+}
+
+
+/*
+ * Sports Connect practice titles normally look like:
+ *
+ *   Cobras 9U McAndrews Practice
+ *
+ * Display them as:
+ *
+ *   9U McAndrews
+ */
+function getPracticeDisplayName(event) {
+
+    return String(
+        event.title ||
+        "Practice"
+    )
+        .replace(
+            /^Cobras\s+/i,
+            ""
+        )
+        .replace(
+            /\s+Practice$/i,
+            ""
+        )
+        .trim();
 
 }
 
@@ -1885,6 +1950,10 @@ function renderCompactEvent(
         isIndoor(event);
 
 
+    const practice =
+        isPractice(event);
+
+
     const organization =
         isOrganization(event);
 
@@ -1898,6 +1967,13 @@ function renderCompactEvent(
             event.teamName ||
             event.title ||
             "Cobras Game";
+
+    } else if (practice) {
+
+        displayName =
+            getPracticeDisplayName(
+                event
+            );
 
     } else {
 
@@ -1928,9 +2004,15 @@ function renderCompactEvent(
             : null;
 
 
+    /*
+     * Games, indoor bookings, and outdoor
+     * practices all have actual start times.
+     */
+
     if (
         game ||
-        indoor
+        indoor ||
+        practice
     ) {
 
         if (
@@ -1944,14 +2026,14 @@ function renderCompactEvent(
 
 
             /*
-               Indoor events have an
-               explicit end time.
-            */
+             * Indoor events may have an
+             * explicit end time.
+             */
 
             if (
                 indoor &&
                 end &&
-                !sameDay(
+                sameDay(
                     start,
                     end
                 )
@@ -1992,6 +2074,13 @@ function renderCompactEvent(
 
         eventClass +=
             " indoor";
+
+    } else if (
+        practice
+    ) {
+
+        eventClass +=
+            " practice";
 
     } else if (
         organization
@@ -2156,6 +2245,10 @@ function showDayModal(
                     isIndoor(event);
 
 
+                const practice =
+                    isPractice(event);
+
+
                 const start =
                     event.start
                         ? parseDate(
@@ -2172,13 +2265,28 @@ function showDayModal(
                         : null;
 
 
-                let title =
-                    game
-                        ? (
-                            event.teamName ||
-                            event.title
-                          )
-                        : event.title;
+                let title;
+
+
+                if (game) {
+
+                    title =
+                        event.teamName ||
+                        event.title;
+
+                } else if (practice) {
+
+                    title =
+                        getPracticeDisplayName(
+                            event
+                        );
+
+                } else {
+
+                    title =
+                        event.title;
+
+                }
 
 
                 let details =
@@ -2249,7 +2357,11 @@ function showDayModal(
                             }
 
                             ${
-                                end
+                                end &&
+                                sameDay(
+                                    start,
+                                    end
+                                )
                                     ? `
                                         –
                                         ${formatTime(
@@ -2263,6 +2375,30 @@ function showDayModal(
 
 
                         🏟️ Indoor Facility
+
+                    `;
+
+                } else if (
+                    practice
+                ) {
+
+                    details = `
+
+                        <span
+                            class="day-event-time">
+
+                            ${
+                                start
+                                    ? formatTime(
+                                        start
+                                      )
+                                    : ""
+                            }
+
+                        </span>
+
+
+                        ⚾ Practice
 
                     `;
 
@@ -2287,6 +2423,13 @@ function showDayModal(
 
                     eventClass +=
                         " indoor";
+
+                } else if (
+                    practice
+                ) {
+
+                    eventClass +=
+                        " practice";
 
                 } else if (
                     !game
@@ -2747,6 +2890,112 @@ function showEventModal(
 
 
     /* =====================================================
+       SPORTS CONNECT OUTDOOR PRACTICE
+    ===================================================== */
+
+    else if (
+        isPractice(event)
+    ) {
+
+        html += `
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Team / Practice
+                </div>
+
+                <div class="detail-value">
+                    ${escapeHtml(
+                        getPracticeDisplayName(
+                            event
+                        )
+                    )}
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Date
+                </div>
+
+                <div class="detail-value">
+
+                    ${
+                        start
+                            ? formatFullDate(
+                                start
+                              )
+                            : ""
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Time
+                </div>
+
+                <div class="detail-value orange">
+
+                    ${
+                        start
+                            ? formatTime(
+                                start
+                              )
+                            : ""
+                    }
+
+                    ${
+                        end &&
+                        sameDay(
+                            start,
+                            end
+                        )
+                            ? `
+                                –
+                                ${formatTime(
+                                    end
+                                )}
+                              `
+                            : ""
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <div class="detail-label">
+                    Location
+                </div>
+
+                <div class="detail-value">
+                    ${
+                        escapeHtml(
+                            event.location ||
+                            "Location information not currently available"
+                        )
+                    }
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =====================================================
        COBRAS ORGANIZATION EVENT
     ===================================================== */
 
@@ -2915,6 +3164,13 @@ function showEventModal(
 
         modalTitle =
             "Indoor Facility";
+
+    } else if (
+        isPractice(event)
+    ) {
+
+        modalTitle =
+            "Practice Details";
 
     } else {
 
