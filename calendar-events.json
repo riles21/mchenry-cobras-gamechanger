@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T06:05:46.091Z",
+  "generatedAt": "2026-08-26T12:01:21.082Z",
   "cobrasSeason": "2026-27 Season",
   "activeGameChangerSeasons": [
     "Fall 2026"
   ],
-  "eventCount": 175,
+  "eventCount": 182,
   "eventCounts": {
     "gamechanger": 91,
     "organization": 5,
     "indoor": 49,
-    "practice": 30
+    "practice": 37
   },
   "events": [
     {
@@ -30,7 +30,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "451bdb0f-c424-48db-abb7-837a6c001c81",
-      "opponentLogo": "logos/cache/091f1e73c5a186d7.jpg"
+      "opponentLogo": "logos/cache/7ba70ff9d21f0949.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-91d70c9c-7cbc-4446-a5d3-25ded996cadc",
@@ -50,7 +50,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
-      "opponentLogo": "logos/cache/6a121ac5220583d2.jpg"
+      "opponentLogo": "logos/cache/6959701fb1fa5302.jpg"
     },
     {
       "id": "sportsconnect-46919402",
@@ -121,7 +121,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "f841b34f-56be-43d8-ab63-6adaf268f159",
-      "opponentLogo": "logos/cache/ef0be328f087e4d2.jpg"
+      "opponentLogo": "logos/cache/0651d30f9d50c1e5.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
@@ -141,7 +141,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
-      "opponentLogo": "logos/cache/dd891c824f10e5cb.jpg"
+      "opponentLogo": "logos/cache/979a3795bcef624f.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-83f3a129-7360-40e4-9a05-b4393b986b93",
@@ -161,7 +161,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "83f3a129-7360-40e4-9a05-b4393b986b93",
-      "opponentLogo": "logos/cache/1672b348cd2f1e8a.jpg"
+      "opponentLogo": "logos/cache/cfee55f7be37b2d1.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
@@ -201,7 +201,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "07fea401-9542-4620-933a-8162e92592dd",
-      "opponentLogo": "logos/cache/eac2f635bb662f16.jpg"
+      "opponentLogo": "logos/cache/99f70ae02220a18f.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
@@ -258,7 +258,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "83c18318-19fb-45a6-8286-32937e270604",
-      "opponentLogo": "logos/cache/56baadfce9ae02c5.jpg"
+      "opponentLogo": "logos/cache/ed43150524fc5b28.jpg"
+    },
+    {
+      "id": "sportsconnect-46919792",
+      "type": "practice",
+      "title": "Cobras 11U Bozer Practice",
+      "start": "2026-08-31T17:30:01",
+      "end": "2026-08-31T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 11U Bozer",
+      "teamKey": "",
+      "location": "Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919792",
+      "sportsConnectTeamId": "41475196"
     },
     {
       "id": "boettcher14u-Fall 2026-08611e4c-75c6-471b-915d-477272bdff91",
@@ -278,7 +295,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "08611e4c-75c6-471b-915d-477272bdff91",
-      "opponentLogo": "logos/cache/69be7f70e84b7ec8.jpg"
+      "opponentLogo": "logos/cache/454ec49f856d555f.jpg"
     },
     {
       "id": "sportsconnect-46886873",
@@ -315,7 +332,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "46997580-1fae-4bc2-bcf2-478ccb73648a",
-      "opponentLogo": "logos/cache/4afb646c8f608819.jpg"
+      "opponentLogo": "logos/cache/0c00cfc07701d90c.jpg"
     },
     {
       "id": "sportsconnect-46919403",
@@ -369,7 +386,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
-      "opponentLogo": "logos/cache/7984ea131c5659fb.jpg"
+      "opponentLogo": "logos/cache/d97b5edf0c57db4b.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
@@ -389,7 +406,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
-      "opponentLogo": "logos/cache/329c8dbf0cd74a5c.jpg"
+      "opponentLogo": "logos/cache/d2b91a99b0fd4d7c.jpg"
     },
     {
       "id": "sportsconnect-46886907",
@@ -466,7 +483,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
-      "opponentLogo": "logos/cache/2b73b12facac6b6c.jpg"
+      "opponentLogo": "logos/cache/1454305f57c0c4e4.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-5b127abf-997e-43d1-a8b0-68b7cde64e3f",
@@ -526,7 +543,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
-      "opponentLogo": "logos/cache/22a891926d86b8ca.jpg"
+      "opponentLogo": "logos/cache/bb592c0a703acf96.jpg"
     },
     {
       "id": "sportsconnect-46919406",
@@ -564,6 +581,23 @@
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "9e0d1ee8-b25f-4072-9d03-5c15e1d177b0",
       "opponentLogo": ""
+    },
+    {
+      "id": "sportsconnect-46919793",
+      "type": "practice",
+      "title": "Cobras 11U Bozer Practice",
+      "start": "2026-09-07T17:30:01",
+      "end": "2026-09-07T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 11U Bozer",
+      "teamKey": "",
+      "location": "Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919793",
+      "sportsConnectTeamId": "41475196"
     },
     {
       "id": "sportsconnect-46886874",
@@ -654,7 +688,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
-      "opponentLogo": "logos/cache/d737a36a0d9c50b3.jpg"
+      "opponentLogo": "logos/cache/f4d011749a9c27e8.jpg"
     },
     {
       "id": "sportsconnect-46886908",
@@ -731,7 +765,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
-      "opponentLogo": "logos/cache/c4bb627c5b7e65e7.jpg"
+      "opponentLogo": "logos/cache/067c2ad40f77265a.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-fb019a0f-aba5-4207-9b62-1b7a2c988509",
@@ -771,7 +805,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
-      "opponentLogo": "logos/cache/2e2b1d791aad128d.jpg"
+      "opponentLogo": "logos/cache/88540ca6c7f879db.jpg"
     },
     {
       "id": "sportsconnect-46919407",
@@ -808,7 +842,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "88a47f45-97ca-47a1-baa5-bee83abaf32e",
-      "opponentLogo": "logos/cache/3accd22942002539.jpg"
+      "opponentLogo": "logos/cache/09dec344ae78d3ae.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-ba903b67-c281-4478-9044-5affd5b3dbd9",
@@ -828,7 +862,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "ba903b67-c281-4478-9044-5affd5b3dbd9",
-      "opponentLogo": "logos/cache/c7bbcdeb5343a3a7.jpg"
+      "opponentLogo": "logos/cache/0a0040bfb1b94d8a.jpg"
+    },
+    {
+      "id": "sportsconnect-46919794",
+      "type": "practice",
+      "title": "Cobras 11U Bozer Practice",
+      "start": "2026-09-14T17:30:01",
+      "end": "2026-09-14T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 11U Bozer",
+      "teamKey": "",
+      "location": "Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919794",
+      "sportsConnectTeamId": "41475196"
     },
     {
       "id": "sportsconnect-46886875",
@@ -865,7 +916,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
-      "opponentLogo": "logos/cache/c295b0332f21f5e7.jpg"
+      "opponentLogo": "logos/cache/b585545498e44687.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -922,7 +973,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
-      "opponentLogo": "logos/cache/a58575ea159fb45a.jpg"
+      "opponentLogo": "logos/cache/e6639692ff5ab059.jpg"
     },
     {
       "id": "sportsconnect-46886909",
@@ -999,7 +1050,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "437f090e-d748-4588-8e84-b57190465519",
-      "opponentLogo": "logos/cache/0023b6a6ecde25b2.jpg"
+      "opponentLogo": "logos/cache/bada3dff6c36b73c.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
@@ -1039,7 +1090,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "fe880c8c-78dc-478e-bc60-1895b491c61c",
-      "opponentLogo": "logos/cache/0c74c7fd8c7309aa.jpg"
+      "opponentLogo": "logos/cache/cf59e189ab713cec.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-a82a8d53-deb2-4999-967f-0abd1a4a0858",
@@ -1079,7 +1130,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "7f7155e3-7615-4df3-8f76-d076226b3814",
-      "opponentLogo": "logos/cache/8c0f779f9369dad0.jpg"
+      "opponentLogo": "logos/cache/c672c118d5c82e30.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
@@ -1099,7 +1150,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
-      "opponentLogo": "logos/cache/6a121ac5220583d2.jpg"
+      "opponentLogo": "logos/cache/6959701fb1fa5302.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-44ac610f-e442-401e-8837-f41476558b9f",
@@ -1179,7 +1230,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
-      "opponentLogo": "logos/cache/a58575ea159fb45a.jpg"
+      "opponentLogo": "logos/cache/e6639692ff5ab059.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-9d20219d-0c09-4496-afea-f47e77eb204c",
@@ -1199,7 +1250,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "9d20219d-0c09-4496-afea-f47e77eb204c",
-      "opponentLogo": "logos/cache/34d301d84c000ad9.jpg"
+      "opponentLogo": "logos/cache/0f8eb1a5022f79cc.jpg"
     },
     {
       "id": "sportsconnect-46919408",
@@ -1236,7 +1287,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
-      "opponentLogo": "logos/cache/1f487df45b7b3e48.jpg"
+      "opponentLogo": "logos/cache/c5ee7ce8ece623ef.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -1276,7 +1327,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
-      "opponentLogo": "logos/cache/497a168c39c05917.jpg"
+      "opponentLogo": "logos/cache/ec721b13531a545c.jpg"
+    },
+    {
+      "id": "sportsconnect-46919795",
+      "type": "practice",
+      "title": "Cobras 11U Bozer Practice",
+      "start": "2026-09-21T17:30:01",
+      "end": "2026-09-21T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 11U Bozer",
+      "teamKey": "",
+      "location": "Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919795",
+      "sportsConnectTeamId": "41475196"
     },
     {
       "id": "boettcher14u-Fall 2026-83f634ae-41a4-4442-9603-94cb58b54816",
@@ -1296,7 +1364,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "83f634ae-41a4-4442-9603-94cb58b54816",
-      "opponentLogo": "logos/cache/091f1e73c5a186d7.jpg"
+      "opponentLogo": "logos/cache/7ba70ff9d21f0949.jpg"
     },
     {
       "id": "sportsconnect-46886876",
@@ -1370,7 +1438,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "eceb4335-36c3-4b63-a277-b64f824ad009",
-      "opponentLogo": "logos/cache/497a168c39c05917.jpg"
+      "opponentLogo": "logos/cache/ec721b13531a545c.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-c920f9a3-b7d1-44d0-a141-42d994704f87",
@@ -1390,7 +1458,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "c920f9a3-b7d1-44d0-a141-42d994704f87",
-      "opponentLogo": "logos/cache/ed1938855d115a3d.jpg"
+      "opponentLogo": "logos/cache/9eadd091e64cce7a.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
@@ -1410,7 +1478,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
-      "opponentLogo": "logos/cache/d737a36a0d9c50b3.jpg"
+      "opponentLogo": "logos/cache/f4d011749a9c27e8.jpg"
     },
     {
       "id": "sportsconnect-46886910",
@@ -1467,7 +1535,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
-      "opponentLogo": "logos/cache/67b195d3beffd6fc.jpg"
+      "opponentLogo": "logos/cache/e3c1c7cfe9549de1.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-4a16f24d-1882-4966-bb55-ae758d57aac8",
@@ -1487,7 +1555,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "4a16f24d-1882-4966-bb55-ae758d57aac8",
-      "opponentLogo": "logos/cache/e0a390e315467fdf.jpg"
+      "opponentLogo": "logos/cache/add2857447bb107e.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-53543ffc-3b9d-4356-8c0c-78823bdb3018",
@@ -1507,7 +1575,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
-      "opponentLogo": "logos/cache/ab384e3244fee126.jpg"
+      "opponentLogo": "logos/cache/f9a5c57c9c1792c2.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-72caae43-c7cf-4487-9669-241a233cb33d",
@@ -1527,7 +1595,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "72caae43-c7cf-4487-9669-241a233cb33d",
-      "opponentLogo": "logos/cache/2045c1d68a1837ea.jpg"
+      "opponentLogo": "logos/cache/d52adb138bf231ba.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-b450590e-59e3-4429-b7e8-c0b35fbfde3c",
@@ -1547,7 +1615,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
-      "opponentLogo": "logos/cache/c4bb627c5b7e65e7.jpg"
+      "opponentLogo": "logos/cache/067c2ad40f77265a.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-fa6f1770-1db4-4815-912b-c4e02db153d0",
@@ -1607,7 +1675,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "2bfa8776-272a-4c04-80d3-9e90371e4516",
-      "opponentLogo": "logos/cache/0023b6a6ecde25b2.jpg"
+      "opponentLogo": "logos/cache/bada3dff6c36b73c.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-56880f21-1ced-4b64-baf7-8ae58e819ddd",
@@ -1627,7 +1695,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
-      "opponentLogo": "logos/cache/bc03999378ea0ccd.jpg"
+      "opponentLogo": "logos/cache/24b4d2071e65221b.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-59b93419-8a14-46e6-b967-86924d1764e1",
@@ -1647,7 +1715,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "59b93419-8a14-46e6-b967-86924d1764e1",
-      "opponentLogo": "logos/cache/d0098be9db88a612.jpg"
+      "opponentLogo": "logos/cache/c058bfc0dca16086.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-8aaa56bf-083b-49b5-985a-73a9f1214c08",
@@ -1667,7 +1735,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
-      "opponentLogo": "logos/cache/329c8dbf0cd74a5c.jpg"
+      "opponentLogo": "logos/cache/d2b91a99b0fd4d7c.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ccce8207-ae64-49d8-9bd7-529234d58d1e",
@@ -1687,7 +1755,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
-      "opponentLogo": "logos/cache/2e2b1d791aad128d.jpg"
+      "opponentLogo": "logos/cache/88540ca6c7f879db.jpg"
+    },
+    {
+      "id": "sportsconnect-46919796",
+      "type": "practice",
+      "title": "Cobras 11U Bozer Practice",
+      "start": "2026-09-28T17:30:01",
+      "end": "2026-09-28T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 11U Bozer",
+      "teamKey": "",
+      "location": "Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919796",
+      "sportsConnectTeamId": "41475196"
     },
     {
       "id": "sportsconnect-46886877",
@@ -1798,7 +1883,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
-      "opponentLogo": "logos/cache/e88230a585c4b4c2.jpg"
+      "opponentLogo": "logos/cache/5f10e71ad857001d.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
@@ -1818,7 +1903,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
-      "opponentLogo": "logos/cache/fa2f159cba381105.jpg"
+      "opponentLogo": "logos/cache/fdada39a1be1f085.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-227ec302-4bea-4848-a091-dde93f4a545d",
@@ -1838,7 +1923,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "227ec302-4bea-4848-a091-dde93f4a545d",
-      "opponentLogo": "logos/cache/3a57c4d37747d97e.jpg"
+      "opponentLogo": "logos/cache/ff8d411d6baf2991.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-45a075d7-adc1-4a55-9e48-479b1f4034f9",
@@ -1858,7 +1943,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
-      "opponentLogo": "logos/cache/3d3dd0376e8232a1.jpg"
+      "opponentLogo": "logos/cache/4df26ca67de937a6.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-b916f2f1-2955-4ed4-9409-73500ee3c184",
@@ -1878,7 +1963,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "b916f2f1-2955-4ed4-9409-73500ee3c184",
-      "opponentLogo": "logos/cache/8363ff01efea1b5b.jpg"
+      "opponentLogo": "logos/cache/10c757040cb6c653.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
@@ -1898,7 +1983,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
-      "opponentLogo": "logos/cache/625922b3517e385a.jpg"
+      "opponentLogo": "logos/cache/18dee0016a6252da.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-25878a9e-959a-45d6-9131-d6fb1149a4e8",
@@ -1919,6 +2004,23 @@
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "25878a9e-959a-45d6-9131-d6fb1149a4e8",
       "opponentLogo": ""
+    },
+    {
+      "id": "sportsconnect-46919797",
+      "type": "practice",
+      "title": "Cobras 11U Bozer Practice",
+      "start": "2026-10-05T17:30:01",
+      "end": "2026-10-05T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 11U Bozer",
+      "teamKey": "",
+      "location": "Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919797",
+      "sportsConnectTeamId": "41475196"
     },
     {
       "id": "sportsconnect-46886878",
@@ -1972,7 +2074,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
-      "opponentLogo": "logos/cache/7984ea131c5659fb.jpg"
+      "opponentLogo": "logos/cache/d97b5edf0c57db4b.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-b1c63fea-4b07-4e89-baf9-84f4a5877e65",
@@ -1992,7 +2094,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jo418sCgCDyw",
       "gameChangerGameId": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
-      "opponentLogo": "logos/cache/4ac6bfc2ede64fa6.jpg"
+      "opponentLogo": "logos/cache/81a42e20142b57db.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -2069,7 +2171,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "726ff682-4280-444e-97bd-716dd66eee54",
-      "opponentLogo": "logos/cache/43816b3cde6645f1.jpg"
+      "opponentLogo": "logos/cache/c2488b9c41b77599.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
@@ -2089,7 +2191,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
-      "opponentLogo": "logos/cache/93a2a28983d6b810.jpg"
+      "opponentLogo": "logos/cache/3ea941de4d5ef53d.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
@@ -2212,6 +2314,23 @@
       "opponentLogo": ""
     },
     {
+      "id": "sportsconnect-46919798",
+      "type": "practice",
+      "title": "Cobras 11U Bozer Practice",
+      "start": "2026-10-12T17:30:01",
+      "end": "2026-10-12T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras 11U Bozer",
+      "teamKey": "",
+      "location": "Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at Shamrock Farms Park (Bronco Practices) - Shamrock Farms Field 1 West- Soccer Fields.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46919798",
+      "sportsConnectTeamId": "41475196"
+    },
+    {
       "id": "sportsconnect-46886879",
       "type": "practice",
       "title": "Cobras Deubel 8U Practice",
@@ -2263,7 +2382,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "0fc0ad11-dafe-491e-802b-4679f59c96b4",
-      "opponentLogo": "logos/cache/ed1938855d115a3d.jpg"
+      "opponentLogo": "logos/cache/9eadd091e64cce7a.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-4d231ff4-0208-4cb5-9726-9bdb75311377",
@@ -2283,7 +2402,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "4d231ff4-0208-4cb5-9726-9bdb75311377",
-      "opponentLogo": "logos/cache/d3653c310c279565.jpg"
+      "opponentLogo": "logos/cache/95aca2a42230b81b.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-5377af70-7917-48a5-a0d3-b700c4c425db",
@@ -2303,7 +2422,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "5377af70-7917-48a5-a0d3-b700c4c425db",
-      "opponentLogo": "logos/cache/30add3a6f44e5758.jpg"
+      "opponentLogo": "logos/cache/9e8cbba12fca0217.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-d2917d60-4c74-48b9-8e92-c5639c7285da",
@@ -2323,7 +2442,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "d2917d60-4c74-48b9-8e92-c5639c7285da",
-      "opponentLogo": "logos/cache/fe635a5f0797265c.jpg"
+      "opponentLogo": "logos/cache/a8f49ef4c3ac0a01.jpg"
     },
     {
       "id": "sportsconnect-46892995",
