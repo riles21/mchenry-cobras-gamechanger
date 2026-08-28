@@ -3,7 +3,7 @@
     "id": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
     "opponent_team": {
       "name": "Grayslake Coyotes 10U",
-      "avatar_url": "logos/cache/2c71e7a5046ed824.jpg"
+      "avatar_url": "logos/cache/8bb659980159707d.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T23:00:00.000Z",
@@ -26,13 +26,18 @@
     "id": "83f3a129-7360-40e4-9a05-b4393b986b93",
     "opponent_team": {
       "name": "Lake Villa Eagles 10U-Kalina",
-      "avatar_url": "logos/cache/512089f8c61ed97e.jpg"
+      "avatar_url": "logos/cache/cd331f60d88dc394.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T22:30:00.000Z",
     "end_ts": "2026-08-29T00:15:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
+    "score": {
+      "team": 0,
+      "opponent_team": 0
+    },
+    "game_status": "new",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -78,7 +83,7 @@
     "id": "88a47f45-97ca-47a1-baa5-bee83abaf32e",
     "opponent_team": {
       "name": "Northwest Travelers - 10U Gold",
-      "avatar_url": "logos/cache/b3b1bd07f95bacef.jpg"
+      "avatar_url": "logos/cache/5e3ba87da03d4beb.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-13T15:00:00.000Z",
@@ -96,7 +101,7 @@
     "id": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
     "opponent_team": {
       "name": "Cougars White 10u",
-      "avatar_url": "logos/cache/f050076eb1094e48.jpg"
+      "avatar_url": "logos/cache/63f9f52fbcb5b977.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-15T22:30:00.000Z",
@@ -114,7 +119,7 @@
     "id": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
     "opponent_team": {
       "name": "Grayslake Coyotes 10U",
-      "avatar_url": "logos/cache/2c71e7a5046ed824.jpg"
+      "avatar_url": "logos/cache/8bb659980159707d.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-19T00:30:00.000Z",
@@ -132,7 +137,7 @@
     "id": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
     "opponent_team": {
       "name": "Top Tier MC - Neumann/Slowinski 10U",
-      "avatar_url": "logos/cache/6ed01bb5ff9e2e4a.jpg"
+      "avatar_url": "logos/cache/fdde2540effdc0c7.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-26T00:30:00.000Z",
@@ -150,7 +155,7 @@
     "id": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
     "opponent_team": {
       "name": "Elite NW 10U Wintersdorf",
-      "avatar_url": "logos/cache/83e308fdcb6218a3.jpg"
+      "avatar_url": "logos/cache/f0b411f02e5b5d58.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-27T19:00:00.000Z",
@@ -168,7 +173,7 @@
     "id": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
     "opponent_team": {
       "name": "SBA Raiders 10U",
-      "avatar_url": "logos/cache/99e9e87eb6350c87.jpg"
+      "avatar_url": "logos/cache/42d7f3b54820d91e.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-02T22:30:00.000Z",
@@ -186,7 +191,7 @@
     "id": "726ff682-4280-444e-97bd-716dd66eee54",
     "opponent_team": {
       "name": "10U Wauconda Wreckers - Super 10U",
-      "avatar_url": "logos/cache/087893e5de3280ea.jpg"
+      "avatar_url": "logos/cache/3eee66d8c597bbe3.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-09T22:30:00.000Z",
@@ -204,7 +209,7 @@
     "id": "4d231ff4-0208-4cb5-9726-9bdb75311377",
     "opponent_team": {
       "name": "Trosky Baseball Barrington 10U",
-      "avatar_url": "logos/cache/2befa9c3a911c894.jpg"
+      "avatar_url": "logos/cache/ab33d71dc67b7101.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-16T22:30:00.000Z",
