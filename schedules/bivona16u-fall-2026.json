@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "6f432b97-93cf-4aec-acc8-1cfebd9bf35c",
+    "opponent_team": {
+      "name": "Woodstock Heat 16U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-20T00:00:00.000Z",
+    "end_ts": "2026-09-20T02:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "8NGYBcGFasMw",
+    "cobras_team_key": "bivona16u",
+    "cobras_team_name": "16U Bivona"
+  },
+  {
+    "id": "3b11c752-c15c-4bc8-94a6-af2f9196486f",
+    "opponent_team": {
+      "name": "Woodstock Heat 16U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-27T00:15:00.000Z",
+    "end_ts": "2026-09-27T02:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "8NGYBcGFasMw",
+    "cobras_team_key": "bivona16u",
+    "cobras_team_name": "16U Bivona"
+  }
+]

@@ -1,14 +1,13 @@
 [
   {
-    "id": "f2a96aff-c718-4939-9267-e3cf8f9e948d",
+    "id": "6448386f-512d-4302-a4ad-fc679e2e6f96",
     "opponent_team": {
       "name": ""
     },
-    "is_full_day": false,
-    "start_ts": "2026-09-18T22:00:00.000Z",
-    "end_ts": "2026-09-19T00:00:00.000Z",
-    "timezone": "America/New_York",
-    "home_away": "away",
+    "is_full_day": true,
+    "start_ts": "2026-09-11T00:00:00.000Z",
+    "end_ts": "2026-09-14T00:00:00.000Z",
+    "timezone": null,
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -26,6 +25,23 @@
     "end_ts": "2026-09-19T02:30:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5OzlwlXAAYDd",
+    "cobras_team_key": "thiemeyer13u",
+    "cobras_team_name": "13U Thiemeyer"
+  },
+  {
+    "id": "f2a96aff-c718-4939-9267-e3cf8f9e948d",
+    "opponent_team": {
+      "name": ""
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-20T21:30:00.000Z",
+    "end_ts": "2026-09-20T23:30:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -77,6 +93,24 @@
     "end_ts": "2026-10-10T02:30:00.000Z",
     "timezone": "America/Detroit",
     "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5OzlwlXAAYDd",
+    "cobras_team_key": "thiemeyer13u",
+    "cobras_team_name": "13U Thiemeyer"
+  },
+  {
+    "id": "4cfbf7f9-f768-40e5-ba34-dee0938ea21e",
+    "opponent_team": {
+      "name": "McHenry County Bandits - Hampton 13U",
+      "avatar_url": "logos/cache/bf6ccc23bc96828a.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-25T18:00:00.000Z",
+    "end_ts": "2026-10-25T20:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
