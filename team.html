@@ -1400,9 +1400,23 @@
       const data =
         await response.json();
 
-      if (!Array.isArray(data)) {
+      /*
+        calendar-events.json is an object containing metadata plus
+        an "events" array. Older versions of the page expected the
+        root JSON value itself to be an array, which caused the
+        schedule load to fail.
+      */
+
+      const calendarEvents =
+        Array.isArray(data)
+          ? data
+          : Array.isArray(data.events)
+            ? data.events
+            : null;
+
+      if (!calendarEvents) {
         throw new Error(
-          "calendar-events.json was not an array."
+          "calendar-events.json does not contain an events array."
         );
       }
 
@@ -1427,7 +1441,7 @@
           : [];
 
       games =
-        data.filter(game => {
+        calendarEvents.filter(game => {
 
           if (!game) {
             return false;
@@ -1456,7 +1470,7 @@
 
 
       console.log(
-        `[Cobras] Calendar contained ${data.length} total events.`
+        `[Cobras] Calendar contained ${calendarEvents.length} total events.`
       );
 
       console.log(
