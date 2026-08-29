@@ -703,32 +703,11 @@
 
   function getPrimaryGameChangerTeamId() {
 
-    const seasons =
-      getActiveGameChangerSeasons();
-
-    if (
-      !teamConfig ||
-      !teamConfig.gameChangerTeams
-    ) {
+    if (!teamConfig) {
       return "";
     }
 
-    /*
-      Use the first selected season that has a
-      GameChanger team ID for this team.
-    */
-
-    for (const season of seasons) {
-
-      const id =
-        teamConfig.gameChangerTeams[season];
-
-      if (id) {
-        return id;
-      }
-    }
-
-    return "";
+    return teamConfig.gameChangerTeamId || "";
   }
 
 
@@ -1225,7 +1204,7 @@ function renderTeamHeader(team) {
     document.getElementById(
       "seasonTitle"
     ).textContent =
-      getCobrasSeason();
+      team.season || "2027 Season";
 
     document.getElementById(
       "teamName"
@@ -1238,10 +1217,7 @@ function renderTeamHeader(team) {
       getCoaches(team);
 
 
-    /*
-      GameChanger button uses the first selected
-      season for which this team has a GameChanger ID.
-    */
+    /* GameChanger button uses the team's configured ID. */
 
     const followButton =
       document.getElementById(
@@ -1479,11 +1455,22 @@ function renderTeamHeader(team) {
 
 
     /*
-      The current Cobras config uses the simple
-      gameChangerTeamId property.
+      IMPORTANT:
+      config.js uses the simple gameChangerTeamId property.
 
-      Do not use gameChangerTeams here. That is a
-      different/older configuration structure.
+      The GitHub Action creates schedules/<teamKey>.json from
+      the GameChanger API. That file contains the ORIGINAL
+      GameChanger game objects, including:
+
+        game_status
+        score.team
+        score.opponent_team
+        opponent_team
+        start_ts
+        home_away
+
+      Use that file here so the team page has the same score
+      data used by the organization index page.
     */
 
     if (!teamConfig.gameChangerTeamId) {
@@ -1517,33 +1504,17 @@ function renderTeamHeader(team) {
     }
 
 
-    /*
-      ============================================================
-      SINGLE SOURCE OF TRUTH
-      ============================================================
-
-      The main calendar workflow already downloads GameChanger
-      data and writes the normalized events to:
-
-          calendar-events.json
-
-      The calendar, team pages, and organization overview should
-      all use that same feed.
-
-      This also avoids the old problem where the workflow created
-      season-specific schedule filenames while the team page was
-      looking for schedules/<teamKey>.json.
-    */
-
-    const calendarUrl =
-      `calendar-events.json?v=${Date.now()}`;
+    const scheduleUrl =
+      `schedules/${encodeURIComponent(
+        teamKey
+      )}.json?v=${Date.now()}`;
 
 
     try {
 
       const response =
         await fetch(
-          calendarUrl,
+          scheduleUrl,
           {
             cache: "no-store"
           }
@@ -1553,150 +1524,44 @@ function renderTeamHeader(team) {
       if (!response.ok) {
 
         throw new Error(
-          `Calendar request failed: ${response.status}`
+          `Schedule request failed: ${response.status}`
         );
 
       }
 
 
-      const feed =
+      const data =
         await response.json();
 
 
-      if (
-        !feed ||
-        !Array.isArray(feed.events)
-      ) {
+      if (!Array.isArray(data)) {
 
         throw new Error(
-          "calendar-events.json does not contain an events array."
+          "Schedule JSON was not an array."
         );
 
       }
 
 
       /*
-        Select ONLY GameChanger events for this team.
+        The schedule file is already in the exact GameChanger
+        format expected by getGameResult(), renderResultGame(),
+        and the date/time helpers.
 
-        This intentionally excludes:
-          - Indoor practices
-          - Outdoor practices
-          - Cobras organization events
-          - Other Cobras teams
+        Do NOT convert it through calendar-events.json because
+        that normalized feed intentionally does not contain
+        the GameChanger score object.
       */
 
-      const teamEvents =
-        feed.events.filter(
-          event =>
-            event &&
-            event.type === "gamechanger" &&
-            event.teamKey === teamKey
-        );
+      games = data;
 
-
-      /*
-        Convert the normalized calendar format into the
-        format already used by the team-page rendering code.
-
-        calendar-events.json:
-          gameStatus
-          teamScore
-          opponentScore
-          opponent
-          opponentLogo
-          start
-          end
-          homeAway
-
-        Existing team-page code:
-          game_status
-          score.team
-          score.opponent_team
-          opponent_team.name
-          opponent_team.avatar_url
-          start_ts
-          end_ts
-          home_away
-      */
-
-      games =
-        teamEvents.map(
-          event => ({
-
-            ...event,
-
-            game_status:
-              event.gameStatus || "",
-
-            score:
-              typeof event.teamScore === "number" &&
-              typeof event.opponentScore === "number"
-                ? {
-                    team:
-                      event.teamScore,
-
-                    opponent_team:
-                      event.opponentScore
-                  }
-                : null,
-
-            opponent_team: {
-              name:
-                event.opponent ||
-                "Opponent",
-
-              avatar_url:
-                event.opponentLogo ||
-                ""
-            },
-
-            start_ts:
-              event.start,
-
-            end_ts:
-              event.end,
-
-            home_away:
-              event.homeAway ||
-              "",
-
-            timezone:
-              event.timezone ||
-              "America/Chicago"
-
-          })
-        );
-
-
-      /*
-        Sort newest/future data consistently before rendering.
-      */
 
       games.sort(gameSort);
 
 
       console.log(
-        `[Cobras] Loaded ${games.length} calendar games ` +
+        `[Cobras] Loaded ${games.length} games ` +
         `for ${teamConfig.name}`
-      );
-
-
-      const completedCount =
-        games.filter(
-          game =>
-            getGameResult(game) !== null
-        ).length;
-
-
-      const upcomingCount =
-        games.length -
-        completedCount;
-
-
-      console.log(
-        `[Cobras] ${teamConfig.name}: ` +
-        `${completedCount} completed, ` +
-        `${upcomingCount} upcoming`
       );
 
 
@@ -1706,7 +1571,7 @@ function renderTeamHeader(team) {
     } catch (error) {
 
       console.error(
-        "[Cobras] Could not load calendar feed:",
+        "[Cobras] Could not load team schedule:",
         error
       );
 
