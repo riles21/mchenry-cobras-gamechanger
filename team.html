@@ -24,6 +24,10 @@
       margin: 0 auto;
     }
 
+    /* =========================
+       HEADER
+    ========================== */
+
     .hero {
       height: 112px;
       border-radius: 10px;
@@ -70,11 +74,19 @@
       margin: 0 0 22px;
     }
 
+    /* =========================
+       SECTION HEADINGS
+    ========================== */
+
     .section-title {
       font-size: 18px;
       font-weight: 800;
       margin: 0 0 10px;
     }
+
+    /* =========================
+       TEAM INFORMATION
+    ========================== */
 
     .info-grid {
       display: grid;
@@ -113,6 +125,10 @@
       margin-top: 4px;
     }
 
+    /* =========================
+       RECORD
+    ========================== */
+
     .record {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -147,6 +163,10 @@
       margin-top: 5px;
       letter-spacing: .5px;
     }
+
+    /* =========================
+       GAMECHANGER BAR
+    ========================== */
 
     .follow-bar {
       display: flex;
@@ -184,6 +204,10 @@
       text-decoration: none;
       white-space: nowrap;
     }
+
+    /* =========================
+       NEXT GAME
+    ========================== */
 
     .next-game {
       background: #111;
@@ -283,6 +307,10 @@
       font-weight: 800;
       z-index: 1;
     }
+
+    /* =========================
+       RESULTS / UPCOMING
+    ========================== */
 
     .section-header {
       display: flex;
@@ -429,6 +457,10 @@
       font-size: 10px;
     }
 
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
     @media (max-width: 680px) {
       body {
         padding: 12px 8px 35px;
@@ -492,6 +524,10 @@
 
 <div class="page">
 
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <div class="hero">
     <img
       src="cobras-logo.png"
@@ -503,6 +539,10 @@
   <div class="season" id="seasonTitle">Loading...</div>
 
   <div class="orange-line"></div>
+
+  <!-- =========================
+       TEAM INFORMATION
+  ========================== -->
 
   <div class="section-title">Team Information</div>
 
@@ -519,13 +559,11 @@
       <div class="info-value" id="coaches">Loading...</div>
     </div>
 
-<div class="info-card">
-  <div class="info-label">GameChanger Data</div>
-  <div class="info-value" id="gameChangerSeasons">
-    Loading...
-  </div>
-  <div class="info-sub">Included seasons</div>
-</div>
+    <div class="info-card">
+      <div class="info-label">Roster</div>
+      <div class="info-value">Roster Players</div>
+      <div class="info-sub">McHenry, Illinois</div>
+    </div>
 
     <div class="record">
       <div class="record-cell">
@@ -546,6 +584,10 @@
 
   </div>
 
+  <!-- =========================
+       GAMECHANGER
+  ========================== -->
+
   <div class="follow-bar">
     <div>
       <div class="follow-title">Follow this team on GameChanger</div>
@@ -565,11 +607,19 @@
     </a>
   </div>
 
+  <!-- =========================
+       NEXT GAME
+  ========================== -->
+
   <div class="section-title">Next Game</div>
 
   <div id="nextGame">
     <div class="loading">Loading...</div>
   </div>
+
+  <!-- =========================
+       RECENT RESULTS
+  ========================== -->
 
   <div class="section-header">
     <div class="section-title">Recent Results</div>
@@ -579,6 +629,10 @@
   <div id="recentGames" class="game-list">
     <div class="loading">Loading...</div>
   </div>
+
+  <!-- =========================
+       UPCOMING GAMES
+  ========================== -->
 
   <div class="section-header">
     <div class="section-title">Upcoming Games</div>
@@ -595,32 +649,29 @@
 <script src="config.js"></script>
 
 <script>
-  /*
-    ============================================================
-    COBRAS TEAM PAGE
-    ============================================================
-  */
+  /* ============================================================
+     COBRAS TEAM PAGE
+     ============================================================ */
 
   const FALLBACK_LOGO = "cobras-logo.png";
 
-  const params = new URLSearchParams(
-    window.location.search
-  );
+  /*
+    Get the team key from:
 
+      team.html?team=boettcher14u
+  */
+  const params = new URLSearchParams(window.location.search);
   const teamKey = params.get("team");
 
   let teamConfig = null;
   let games = [];
 
 
-  /*
-    ============================================================
-    TEAM LOOKUP
-    ============================================================
-  */
+  /* ============================================================
+     TEAM LOOKUP
+     ============================================================ */
 
   function getTeamConfig() {
-
     if (!teamKey) {
       return null;
     }
@@ -637,92 +688,12 @@
   }
 
 
-  /*
-    ============================================================
-    GLOBAL SETTINGS
-    ============================================================
-  */
-
-  function getActiveGameChangerSeasons() {
-
-    if (
-      typeof COBRAS_SETTINGS === "undefined" ||
-      !COBRAS_SETTINGS
-    ) {
-      return [];
-    }
-
-    if (
-      !Array.isArray(
-        COBRAS_SETTINGS.activeGameChangerSeasons
-      )
-    ) {
-      return [];
-    }
-
-    return COBRAS_SETTINGS.activeGameChangerSeasons;
-  }
-
-  function displayGameChangerSeasons() {
-
-  const seasons =
-    getActiveGameChangerSeasons();
-
-  const element =
-    document.getElementById(
-      "gameChangerSeasons"
-    );
-
-  if (!element) {
-    return;
-  }
-
-  if (!seasons.length) {
-    element.textContent =
-      "No seasons selected";
-    return;
-  }
-
-  element.textContent =
-    seasons.join(" · ");
-}
-
-  function getCobrasSeason() {
-
-    if (
-      typeof COBRAS_SETTINGS !== "undefined" &&
-      COBRAS_SETTINGS &&
-      COBRAS_SETTINGS.cobrasSeason
-    ) {
-      return COBRAS_SETTINGS.cobrasSeason;
-    }
-
-    return teamConfig?.season || "2026-27 Season";
-  }
-
-
-  function getPrimaryGameChangerTeamId() {
-
-    if (!teamConfig) {
-      return "";
-    }
-
-    return teamConfig.gameChangerTeamId || "";
-  }
-
-
-  /*
-    ============================================================
-    TEXT HELPERS
-    ============================================================
-  */
+  /* ============================================================
+     TEXT HELPERS
+     ============================================================ */
 
   function escapeHtml(value) {
-
-    if (
-      value === null ||
-      value === undefined
-    ) {
+    if (value === null || value === undefined) {
       return "";
     }
 
@@ -735,64 +706,70 @@
   }
 
 
-  function getCoaches(team) {
+  function getGameChangerTeamId(team) {
 
+    if (!team || !team.gameChangerTeams) {
+      return "";
+    }
+
+    const seasonMap = team.gameChangerTeams;
+
+    /*
+      config.js stores GameChanger IDs by season, for example:
+      gameChangerTeams: { "Fall 2026": "5FbGFaKkWCHQ" }
+    */
+
+    if (team.season && seasonMap[team.season]) {
+      return seasonMap[team.season];
+    }
+
+    const seasonKeys = Object.keys(seasonMap);
+
+    return seasonKeys.length
+      ? seasonMap[seasonKeys[0]]
+      : "";
+  }
+
+
+  function getCoaches(team) {
     const coaches = [];
 
     if (team.headCoach) {
       coaches.push(team.headCoach);
     }
 
-    if (
-      Array.isArray(team.assistantCoaches)
-    ) {
-
-      team.assistantCoaches.forEach(
-        coach => {
-
-          if (coach) {
-            coaches.push(coach);
-          }
-
+    if (Array.isArray(team.assistantCoaches)) {
+      team.assistantCoaches.forEach(coach => {
+        if (coach) {
+          coaches.push(coach);
         }
-      );
+      });
     }
 
     return coaches.join(" · ");
   }
 
 
-  /*
-    ============================================================
-    DATE / TIME
-    ============================================================
-  */
+  /* ============================================================
+     DATE / TIME
+     ============================================================ */
 
   function getDateParts(game) {
+    const timezone = game.timezone || "America/Chicago";
 
-    const timezone =
-      game.timezone ||
-      "America/Chicago";
+    const date = new Date(game.start_ts);
 
-    const date =
-      new Date(game.start_ts);
-
-    const parts =
-      new Intl.DateTimeFormat(
-        "en-US",
-        {
-          timeZone: timezone,
-          month: "short",
-          day: "numeric",
-          weekday: "short"
-        }
-      ).formatToParts(date);
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: timezone,
+      month: "short",
+      day: "numeric",
+      weekday: "short"
+    }).formatToParts(date);
 
     const values = {};
 
     parts.forEach(part => {
-      values[part.type] =
-        part.value;
+      values[part.type] = part.value;
     });
 
     return {
@@ -804,41 +781,43 @@
 
 
   function formatTime(game) {
-
     if (!game.start_ts) {
       return "";
     }
 
-    const timezone =
-      game.timezone ||
-      "America/Chicago";
+    const timezone = game.timezone || "America/Chicago";
 
-    return new Intl.DateTimeFormat(
-      "en-US",
-      {
-        timeZone: timezone,
-        hour: "numeric",
-        minute: "2-digit"
-      }
-    ).format(
-      new Date(game.start_ts)
-    );
+    return new Intl.DateTimeFormat("en-US", {
+      timeZone: timezone,
+      hour: "numeric",
+      minute: "2-digit"
+    }).format(new Date(game.start_ts));
   }
 
 
   function gameSort(a, b) {
-
-    return (
-      new Date(a.start_ts) -
-      new Date(b.start_ts)
-    );
+    return new Date(a.start_ts) - new Date(b.start_ts);
   }
 
 
+  /* ============================================================
+     GAME RESULT
+     ============================================================ */
+
   /*
-    ============================================================
-    GAME RESULT
-    ============================================================
+    IMPORTANT:
+
+    GameChanger schedule JSON uses:
+
+      game_status: "completed"
+
+    and:
+
+      score.team
+      score.opponent_team
+
+    This is the authoritative way to determine a completed
+    game and its result.
   */
 
   function getGameResult(game) {
@@ -853,17 +832,11 @@
       return null;
     }
 
-    if (
-      game.score.team >
-      game.score.opponent_team
-    ) {
+    if (game.score.team > game.score.opponent_team) {
       return "W";
     }
 
-    if (
-      game.score.team <
-      game.score.opponent_team
-    ) {
+    if (game.score.team < game.score.opponent_team) {
       return "L";
     }
 
@@ -881,8 +854,7 @@
 
     gameList.forEach(game => {
 
-      const result =
-        getGameResult(game);
+      const result = getGameResult(game);
 
       if (result === "W") {
         record.wins++;
@@ -902,20 +874,26 @@
   }
 
 
-  /*
-    ============================================================
-    LOGO HANDLING
-    ============================================================
-  */
+  /* ============================================================
+     LOGO HANDLING
+     ============================================================ */
 
   function logoUrl(game) {
 
-    const avatar =
-      game?.opponent_team?.avatar_url;
+    const avatar = game?.opponent_team?.avatar_url;
 
     if (!avatar) {
       return FALLBACK_LOGO;
     }
+
+    /*
+      The GitHub Action converts GameChanger's remote logo
+      URL into a local path such as:
+
+        logos/cache/9edf841a46d44196.jpg
+
+      If it is already relative, use it directly.
+    */
 
     if (
       avatar.startsWith("http://") ||
@@ -925,22 +903,13 @@
       return avatar;
     }
 
-    return avatar.replace(
-      /^\.?\//,
-      ""
-    );
+    return avatar.replace(/^\.?\//, "");
   }
 
 
-  function imageTag(
-    game,
-    className = "team-logo"
-  ) {
+  function imageTag(game, className = "team-logo") {
 
-    const src =
-      escapeHtml(
-        logoUrl(game)
-      );
+    const src = escapeHtml(logoUrl(game));
 
     return `
       <img
@@ -953,16 +922,13 @@
   }
 
 
-  /*
-    ============================================================
-    GAME HTML
-    ============================================================
-  */
+  /* ============================================================
+     GAME HTML
+     ============================================================ */
 
   function renderNextGame(game) {
 
     if (!game) {
-
       return `
         <div class="no-games">
           No upcoming games scheduled.
@@ -970,12 +936,10 @@
       `;
     }
 
-    const date =
-      getDateParts(game);
+    const date = getDateParts(game);
 
     const opponent =
-      game.opponent_team?.name ||
-      "Opponent";
+      game.opponent_team?.name || "Opponent";
 
     const homeAway =
       game.home_away === "away"
@@ -987,15 +951,9 @@
 
         <div class="next-date">
           <div class="next-label">Next Game</div>
-          <div class="next-month">
-            ${escapeHtml(date.month)}
-          </div>
-          <div class="next-day">
-            ${escapeHtml(date.day)}
-          </div>
-          <div class="next-dow">
-            ${escapeHtml(date.weekday)}
-          </div>
+          <div class="next-month">${escapeHtml(date.month)}</div>
+          <div class="next-day">${escapeHtml(date.day)}</div>
+          <div class="next-dow">${escapeHtml(date.weekday)}</div>
         </div>
 
         <div class="game-main">
@@ -1015,9 +973,7 @@
         </div>
 
         <div class="game-time">
-          ${escapeHtml(
-            formatTime(game)
-          )}
+          ${escapeHtml(formatTime(game))}
         </div>
 
       </div>
@@ -1027,12 +983,10 @@
 
   function renderResultGame(game) {
 
-    const date =
-      getDateParts(game);
+    const date = getDateParts(game);
 
     const opponent =
-      game.opponent_team?.name ||
-      "Opponent";
+      game.opponent_team?.name || "Opponent";
 
     const result =
       getGameResult(game);
@@ -1043,17 +997,14 @@
     const opponentScore =
       game.score.opponent_team;
 
-    let resultClass =
-      "result-tie";
+    let resultClass = "result-tie";
 
     if (result === "W") {
-      resultClass =
-        "result-win";
+      resultClass = "result-win";
     }
 
     if (result === "L") {
-      resultClass =
-        "result-loss";
+      resultClass = "result-loss";
     }
 
     const homeAway =
@@ -1065,15 +1016,9 @@
       <div class="game-card result-card">
 
         <div class="game-date">
-          <div class="game-month">
-            ${escapeHtml(date.month)}
-          </div>
-          <div class="game-day">
-            ${escapeHtml(date.day)}
-          </div>
-          <div class="game-dow">
-            ${escapeHtml(date.weekday)}
-          </div>
+          <div class="game-month">${escapeHtml(date.month)}</div>
+          <div class="game-day">${escapeHtml(date.day)}</div>
+          <div class="game-dow">${escapeHtml(date.weekday)}</div>
         </div>
 
         <div class="game-info">
@@ -1098,24 +1043,10 @@
             ${teamScore} - ${opponentScore}
           </div>
 
-          <div
-            class="result-label ${resultClass}"
-          >
-            ${
-              result === "W"
-                ? "WIN"
-                : ""
-            }
-            ${
-              result === "L"
-                ? "LOSS"
-                : ""
-            }
-            ${
-              result === "T"
-                ? "TIE"
-                : ""
-            }
+          <div class="result-label ${resultClass}">
+            ${result === "W" ? "WIN" : ""}
+            ${result === "L" ? "LOSS" : ""}
+            ${result === "T" ? "TIE" : ""}
           </div>
 
         </div>
@@ -1127,12 +1058,10 @@
 
   function renderUpcomingGame(game) {
 
-    const date =
-      getDateParts(game);
+    const date = getDateParts(game);
 
     const opponent =
-      game.opponent_team?.name ||
-      "Opponent";
+      game.opponent_team?.name || "Opponent";
 
     const homeAway =
       game.home_away === "away"
@@ -1143,15 +1072,9 @@
       <div class="game-card">
 
         <div class="game-date">
-          <div class="game-month">
-            ${escapeHtml(date.month)}
-          </div>
-          <div class="game-day">
-            ${escapeHtml(date.day)}
-          </div>
-          <div class="game-dow">
-            ${escapeHtml(date.weekday)}
-          </div>
+          <div class="game-month">${escapeHtml(date.month)}</div>
+          <div class="game-day">${escapeHtml(date.day)}</div>
+          <div class="game-dow">${escapeHtml(date.weekday)}</div>
         </div>
 
         <div class="game-info">
@@ -1172,9 +1095,7 @@
 
         <div class="game-result">
           <div class="score">
-            ${escapeHtml(
-              formatTime(game)
-            )}
+            ${escapeHtml(formatTime(game))}
           </div>
         </div>
 
@@ -1183,131 +1104,94 @@
   }
 
 
-  /*
-    ============================================================
-    RENDER TEAM
-    ============================================================
-  */
+  /* ============================================================
+     RENDER TEAM
+     ============================================================ */
 
-function renderTeamHeader(team) {
+  function renderTeamHeader(team) {
 
-  document.title =
-    `McHenry Cobras ${team.name}`;
-
-  displayGameChangerSeasons();
-
-    document.getElementById(
-      "pageTitle"
-    ).textContent =
+    document.title =
       `McHenry Cobras ${team.name}`;
 
-    document.getElementById(
-      "seasonTitle"
-    ).textContent =
-      team.season || getCobrasSeason();
-
-    document.getElementById(
-      "teamName"
-    ).textContent =
+    document.getElementById("pageTitle").textContent =
       `McHenry Cobras ${team.name}`;
 
-    document.getElementById(
-      "coaches"
-    ).textContent =
+    document.getElementById("seasonTitle").textContent =
+      team.season || "2027 Season";
+
+    document.getElementById("teamName").textContent =
+      `McHenry Cobras ${team.name}`;
+
+    document.getElementById("coaches").textContent =
       getCoaches(team);
 
-
     /*
-      GameChanger button uses the first selected
-      season for which this team has a GameChanger ID.
+      GameChanger's public team URL varies depending on the
+      team/version of the GameChanger site. Keep the button
+      pointing at GameChanger unless a direct URL is explicitly
+      configured later.
     */
 
     const followButton =
-      document.getElementById(
-        "followButton"
-      );
+      document.getElementById("followButton");
 
-    const primaryId =
-      getPrimaryGameChangerTeamId();
+    const gameChangerTeamId =
+      getGameChangerTeamId(team);
 
-    if (primaryId) {
-
+    if (gameChangerTeamId) {
       followButton.href =
-        `https://web.gc.com/teams/${encodeURIComponent(primaryId)}`;
-
-      followButton.style.display =
-        "";
-
+        `https://gc.com/`;
     } else {
-
-      followButton.style.display =
-        "none";
+      followButton.style.display = "none";
     }
   }
 
 
-  /*
-    ============================================================
-    RENDER ALL GAMES
-    ============================================================
-  */
+  /* ============================================================
+     RENDER ALL GAMES
+     ============================================================ */
 
   function renderGames() {
 
     /*
-      Completed games are determined by the
-      GameChanger status and score.
+      Completed games are determined ONLY by game_status and score.
     */
 
     const completedGames =
       games
-        .filter(
-          game =>
-            getGameResult(game) !== null
-        )
-        .sort(
-          (a, b) =>
-            new Date(b.start_ts) -
-            new Date(a.start_ts)
-        );
-
+        .filter(game => getGameResult(game) !== null)
+        .sort((a, b) => new Date(b.start_ts) - new Date(a.start_ts));
 
     /*
-      Upcoming games are games without
-      a completed result.
+      Upcoming games are everything that has not been completed.
     */
 
     const upcomingGames =
       games
-        .filter(
-          game =>
-            getGameResult(game) === null
-        )
+        .filter(game => getGameResult(game) === null)
         .sort(gameSort);
 
 
-    /*
-      RECORD
-    */
+    /* =========================
+       RECORD
+    ========================== */
 
     const record =
       calculateRecord(games);
 
-    document.getElementById(
-      "wins"
-    ).textContent =
+    document.getElementById("wins").textContent =
       record.wins;
 
-    document.getElementById(
-      "losses"
-    ).textContent =
+    document.getElementById("losses").textContent =
       record.losses;
 
-    document.getElementById(
-      "ties"
-    ).textContent =
+    document.getElementById("ties").textContent =
       record.ties;
 
+
+    /*
+      Helpful debugging information while we're testing.
+    */
 
     console.log(
       `[Cobras] ${teamConfig.name} record:`,
@@ -1320,39 +1204,30 @@ function renderTeamHeader(team) {
     );
 
 
-    /*
-      NEXT GAME
-    */
+    /* =========================
+       NEXT GAME
+    ========================== */
 
     const nextGame =
       upcomingGames.length
         ? upcomingGames[0]
         : null;
 
-    document.getElementById(
-      "nextGame"
-    ).innerHTML =
+    document.getElementById("nextGame").innerHTML =
       renderNextGame(nextGame);
 
 
-    /*
-      RECENT RESULTS
-    */
+    /* =========================
+       RECENT RESULTS
+    ========================== */
 
     const recentContainer =
-      document.getElementById(
-        "recentGames"
-      );
+      document.getElementById("recentGames");
 
-    document.getElementById(
-      "recentCount"
-    ).textContent =
+    document.getElementById("recentCount").textContent =
       `${completedGames.length} ${
-        completedGames.length === 1
-          ? "Game"
-          : "Games"
+        completedGames.length === 1 ? "Game" : "Games"
       }`;
-
 
     if (!completedGames.length) {
 
@@ -1364,6 +1239,10 @@ function renderTeamHeader(team) {
 
     } else {
 
+      /*
+        Show the five most recent completed games.
+      */
+
       recentContainer.innerHTML =
         completedGames
           .slice(0, 5)
@@ -1372,24 +1251,17 @@ function renderTeamHeader(team) {
     }
 
 
-    /*
-      UPCOMING
-    */
+    /* =========================
+       UPCOMING
+    ========================== */
 
     const upcomingContainer =
-      document.getElementById(
-        "upcomingGames"
-      );
+      document.getElementById("upcomingGames");
 
-    document.getElementById(
-      "upcomingCount"
-    ).textContent =
+    document.getElementById("upcomingCount").textContent =
       `${upcomingGames.length} ${
-        upcomingGames.length === 1
-          ? "Game"
-          : "Games"
+        upcomingGames.length === 1 ? "Game" : "Games"
       }`;
-
 
     if (!upcomingGames.length) {
 
@@ -1403,6 +1275,7 @@ function renderTeamHeader(team) {
 
       /*
         Don't show the next game twice.
+        The first upcoming game is already displayed above.
       */
 
       upcomingContainer.innerHTML =
@@ -1414,41 +1287,28 @@ function renderTeamHeader(team) {
   }
 
 
-  /*
-    ============================================================
-    LOAD SCHEDULE
-    ============================================================
-  */
+  /* ============================================================
+     LOAD SCHEDULE
+  ========================================================== */
 
   async function loadSchedule() {
 
     if (!teamConfig) {
 
-      document.getElementById(
-        "pageTitle"
-      ).textContent =
+      document.getElementById("pageTitle").textContent =
         "McHenry Cobras";
 
-      document.getElementById(
-        "seasonTitle"
-      ).textContent =
+      document.getElementById("seasonTitle").textContent =
         "TEAM NOT FOUND";
 
-      document.getElementById(
-        "nextGame"
-      ).innerHTML = `
+      document.getElementById("nextGame").innerHTML = `
         <div class="error">
           Team not found.
         </div>
       `;
 
-      document.getElementById(
-        "recentGames"
-      ).innerHTML = "";
-
-      document.getElementById(
-        "upcomingGames"
-      ).innerHTML = "";
+      document.getElementById("recentGames").innerHTML = "";
+      document.getElementById("upcomingGames").innerHTML = "";
 
       return;
     }
@@ -1458,46 +1318,28 @@ function renderTeamHeader(team) {
 
 
     /*
-      The workflow creates the schedule JSON for the
-      globally selected GameChanger seasons.
-
-      The page therefore reads the generated JSON directly.
+      GameChanger IDs are stored by season in config.js.
+      Resolve the ID from the nested gameChangerTeams object.
     */
 
-    const activeSeasons =
-      getActiveGameChangerSeasons();
+    const gameChangerTeamId =
+      getGameChangerTeamId(teamConfig);
 
-    const hasGameChangerId =
-      Boolean(teamConfig.gameChangerTeamId);
+    if (!gameChangerTeamId) {
 
-
-    /*
-      No GameChanger team ID for any selected season.
-      This is currently expected for 15U Dean.
-    */
-
-    if (!hasGameChangerId) {
-
-      document.getElementById(
-        "nextGame"
-      ).innerHTML = `
+      document.getElementById("nextGame").innerHTML = `
         <div class="no-games">
-          GameChanger schedule is not available
-          for this team yet.
+          GameChanger schedule is not available for this team yet.
         </div>
       `;
 
-      document.getElementById(
-        "recentGames"
-      ).innerHTML = `
+      document.getElementById("recentGames").innerHTML = `
         <div class="no-games">
           No completed games available.
         </div>
       `;
 
-      document.getElementById(
-        "upcomingGames"
-      ).innerHTML = `
+      document.getElementById("upcomingGames").innerHTML = `
         <div class="no-games">
           No upcoming games available.
         </div>
@@ -1508,31 +1350,30 @@ function renderTeamHeader(team) {
 
 
     /*
-      Cache-busting prevents GitHub Pages/browser caching
-      from showing an older schedule.
+      Cache-busting is intentional.
+
+      GitHub Pages/browser caching was making testing confusing.
+      The timestamp causes the browser to request the current
+      schedule JSON rather than relying on an older cached copy.
     */
 
     const scheduleUrl =
-      `schedules/${encodeURIComponent(
-        teamKey
-      )}.json?v=${Date.now()}`;
+      `schedules/${encodeURIComponent(teamKey)}.json?v=${Date.now()}`;
 
-    console.log("[Cobras] Loading schedule:", scheduleUrl);
-    console.log("[Cobras] GameChanger team ID:", teamConfig.gameChangerTeamId);
+    console.log(
+      "[Cobras] GameChanger team ID:",
+      gameChangerTeamId
+    );
 
 
     try {
 
       const response =
-        await fetch(
-          scheduleUrl,
-          {
-            cache: "no-store"
-          }
-        );
+        await fetch(scheduleUrl, {
+          cache: "no-store"
+        });
 
       if (!response.ok) {
-
         throw new Error(
           `Schedule request failed: ${response.status}`
         );
@@ -1542,7 +1383,6 @@ function renderTeamHeader(team) {
         await response.json();
 
       if (!Array.isArray(data)) {
-
         throw new Error(
           "Schedule JSON was not an array."
         );
@@ -1550,17 +1390,9 @@ function renderTeamHeader(team) {
 
       games = data;
 
-
       console.log(
-        `[Cobras] Loaded ${games.length} games ` +
-        `for ${teamConfig.name}`
+        `[Cobras] Loaded ${games.length} games for ${teamConfig.name}`
       );
-
-      console.log(
-        `[Cobras] Selected GameChanger seasons:`,
-        activeSeasons
-      );
-
 
       renderGames();
 
@@ -1571,33 +1403,24 @@ function renderTeamHeader(team) {
         error
       );
 
-      document.getElementById(
-        "nextGame"
-      ).innerHTML = `
+      document.getElementById("nextGame").innerHTML = `
         <div class="error">
           Unable to load this team's schedule right now.
         </div>
       `;
 
-      document.getElementById(
-        "recentGames"
-      ).innerHTML = "";
+      document.getElementById("recentGames").innerHTML = "";
 
-      document.getElementById(
-        "upcomingGames"
-      ).innerHTML = "";
+      document.getElementById("upcomingGames").innerHTML = "";
     }
   }
 
 
-  /*
-    ============================================================
-    START
-    ============================================================
-  */
+  /* ============================================================
+     START
+  ========================================================== */
 
-  teamConfig =
-    getTeamConfig();
+  teamConfig = getTeamConfig();
 
   loadSchedule();
 
