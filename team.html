@@ -1162,7 +1162,9 @@
   function renderGames() {
 
     /*
-      Completed games are determined ONLY by game_status and score.
+      Completed games are determined by the presence of a
+      GameChanger score. This handles cases where GameChanger
+      supplies the final score before updating game_status.
     */
 
     const completedGames =
@@ -1327,7 +1329,13 @@
 
     /*
       GameChanger IDs are stored by season in config.js.
-      Resolve the ID from the nested gameChangerTeams object.
+
+      The team page now uses the same source as the main Cobras
+      calendar: calendar-events.json.
+
+      This is important because calendar-events.json contains
+      the authoritative GameChanger event data, including scores
+      when a game has been completed.
     */
 
     const gameChangerTeamId =
@@ -1358,32 +1366,34 @@
 
 
     /*
-      Cache-busting is intentional.
-
-      GitHub Pages/browser caching was making testing confusing.
-      The timestamp causes the browser to request the current
-      schedule JSON rather than relying on an older cached copy.
+      Cache-busting prevents GitHub Pages/browser caching from
+      showing an older calendar-events.json during testing.
     */
 
-    const scheduleUrl =
-      `schedules/${encodeURIComponent(teamKey)}.json?v=${Date.now()}`;
+    const calendarUrl =
+      `calendar-events.json?v=${Date.now()}`;
 
     console.log(
       "[Cobras] GameChanger team ID:",
       gameChangerTeamId
     );
 
+    console.log(
+      "[Cobras] Loading GameChanger events from:",
+      calendarUrl
+    );
+
 
     try {
 
       const response =
-        await fetch(scheduleUrl, {
+        await fetch(calendarUrl, {
           cache: "no-store"
         });
 
       if (!response.ok) {
         throw new Error(
-          `Schedule request failed: ${response.status}`
+          `Calendar request failed: ${response.status}`
         );
       }
 
@@ -1392,14 +1402,65 @@
 
       if (!Array.isArray(data)) {
         throw new Error(
-          "Schedule JSON was not an array."
+          "calendar-events.json was not an array."
         );
       }
 
-      games = data;
+
+      /*
+        calendar-events.json contains events for every Cobras team
+        and every active GameChanger season.
+
+        Keep only:
+          - GameChanger events
+          - this exact Cobras team
+          - seasons configured for this team
+
+        This prevents another team's games from appearing here
+        while allowing the team page to use the authoritative
+        calendar event data.
+      */
+
+      const configuredSeasons =
+        teamConfig.gameChangerTeams
+          ? Object.keys(teamConfig.gameChangerTeams)
+          : [];
+
+      games =
+        data.filter(game => {
+
+          if (!game) {
+            return false;
+          }
+
+          if (game.type !== "gamechanger") {
+            return false;
+          }
+
+          if (game.cobras_team_key !== teamKey) {
+            return false;
+          }
+
+          if (
+            configuredSeasons.length &&
+            game.cobras_gamechanger_season &&
+            !configuredSeasons.includes(
+              game.cobras_gamechanger_season
+            )
+          ) {
+            return false;
+          }
+
+          return true;
+        });
+
 
       console.log(
-        `[Cobras] Loaded ${games.length} games for ${teamConfig.name}`
+        `[Cobras] Calendar contained ${data.length} total events.`
+      );
+
+      console.log(
+        `[Cobras] Loaded ${games.length} GameChanger games for ${teamConfig.name}.`
       );
 
       console.log(
@@ -1417,7 +1478,7 @@
     } catch (error) {
 
       console.error(
-        "[Cobras] Could not load team schedule:",
+        "[Cobras] Could not load calendar GameChanger data:",
         error
       );
 
@@ -1432,7 +1493,6 @@
       document.getElementById("upcomingGames").innerHTML = "";
     }
   }
-
 
   /* ============================================================
      START
