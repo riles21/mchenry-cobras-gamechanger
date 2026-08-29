@@ -1204,7 +1204,7 @@ function renderTeamHeader(team) {
     document.getElementById(
       "seasonTitle"
     ).textContent =
-      team.season || "2027 Season";
+      team.season || getCobrasSeason();
 
     document.getElementById(
       "teamName"
@@ -1217,7 +1217,10 @@ function renderTeamHeader(team) {
       getCoaches(team);
 
 
-    /* GameChanger button uses the team's configured ID. */
+    /*
+      GameChanger button uses the first selected
+      season for which this team has a GameChanger ID.
+    */
 
     const followButton =
       document.getElementById(
@@ -1455,25 +1458,25 @@ function renderTeamHeader(team) {
 
 
     /*
-      IMPORTANT:
-      config.js uses the simple gameChangerTeamId property.
+      The workflow creates the schedule JSON for the
+      globally selected GameChanger seasons.
 
-      The GitHub Action creates schedules/<teamKey>.json from
-      the GameChanger API. That file contains the ORIGINAL
-      GameChanger game objects, including:
-
-        game_status
-        score.team
-        score.opponent_team
-        opponent_team
-        start_ts
-        home_away
-
-      Use that file here so the team page has the same score
-      data used by the organization index page.
+      The page therefore reads the generated JSON directly.
     */
 
-    if (!teamConfig.gameChangerTeamId) {
+    const activeSeasons =
+      getActiveGameChangerSeasons();
+
+    const hasGameChangerId =
+      Boolean(teamConfig.gameChangerTeamId);
+
+
+    /*
+      No GameChanger team ID for any selected season.
+      This is currently expected for 15U Dean.
+    */
+
+    if (!hasGameChangerId) {
 
       document.getElementById(
         "nextGame"
@@ -1504,10 +1507,18 @@ function renderTeamHeader(team) {
     }
 
 
+    /*
+      Cache-busting prevents GitHub Pages/browser caching
+      from showing an older schedule.
+    */
+
     const scheduleUrl =
       `schedules/${encodeURIComponent(
         teamKey
       )}.json?v=${Date.now()}`;
+
+    console.log("[Cobras] Loading schedule:", scheduleUrl);
+    console.log("[Cobras] GameChanger team ID:", teamConfig.gameChangerTeamId);
 
 
     try {
@@ -1520,43 +1531,24 @@ function renderTeamHeader(team) {
           }
         );
 
-
       if (!response.ok) {
 
         throw new Error(
           `Schedule request failed: ${response.status}`
         );
-
       }
-
 
       const data =
         await response.json();
-
 
       if (!Array.isArray(data)) {
 
         throw new Error(
           "Schedule JSON was not an array."
         );
-
       }
 
-
-      /*
-        The schedule file is already in the exact GameChanger
-        format expected by getGameResult(), renderResultGame(),
-        and the date/time helpers.
-
-        Do NOT convert it through calendar-events.json because
-        that normalized feed intentionally does not contain
-        the GameChanger score object.
-      */
-
       games = data;
-
-
-      games.sort(gameSort);
 
 
       console.log(
@@ -1564,9 +1556,13 @@ function renderTeamHeader(team) {
         `for ${teamConfig.name}`
       );
 
+      console.log(
+        `[Cobras] Selected GameChanger seasons:`,
+        activeSeasons
+      );
+
 
       renderGames();
-
 
     } catch (error) {
 
@@ -1574,7 +1570,6 @@ function renderTeamHeader(team) {
         "[Cobras] Could not load team schedule:",
         error
       );
-
 
       document.getElementById(
         "nextGame"
@@ -1591,11 +1586,8 @@ function renderTeamHeader(team) {
       document.getElementById(
         "upcomingGames"
       ).innerHTML = "";
-
     }
-
   }
-
 
 
   /*
