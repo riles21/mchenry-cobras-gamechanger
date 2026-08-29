@@ -822,9 +822,17 @@
 
   function getGameResult(game) {
 
+    /*
+      GameChanger can occasionally leave game_status as "scheduled"
+      even after a game has been played. The score is the reliable
+      indicator that a result is actually available.
+
+      Therefore, if both numeric scores exist, treat the game as
+      completed regardless of the game_status value.
+    */
+
     if (
       !game ||
-      game.game_status !== "completed" ||
       !game.score ||
       typeof game.score.team !== "number" ||
       typeof game.score.opponent_team !== "number"
@@ -1392,6 +1400,16 @@
 
       console.log(
         `[Cobras] Loaded ${games.length} games for ${teamConfig.name}`
+      );
+
+      console.log(
+        "[Cobras] Games with scores:",
+        games.filter(g =>
+          g &&
+          g.score &&
+          typeof g.score.team === "number" &&
+          typeof g.score.opponent_team === "number"
+        )
       );
 
       renderGames();
