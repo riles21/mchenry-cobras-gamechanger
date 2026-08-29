@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-28T23:02:57.675Z",
+  "generatedAt": "2026-08-29T02:49:16.079Z",
   "cobrasSeason": "2026-27 Season",
   "activeGameChangerSeasons": [
     "Fall 2026"
   ],
-  "eventCount": 194,
+  "eventCount": 202,
   "eventCounts": {
     "gamechanger": 95,
     "organization": 5,
     "indoor": 52,
-    "practice": 42
+    "practice": 50
   },
   "events": [
     {
@@ -30,7 +30,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "451bdb0f-c424-48db-abb7-837a6c001c81",
-      "opponentLogo": "logos/cache/a2253936ff3bc208.jpg"
+      "opponentLogo": "logos/cache/8f54988cde0a52a7.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-91d70c9c-7cbc-4446-a5d3-25ded996cadc",
@@ -50,7 +50,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
-      "opponentLogo": "logos/cache/34f02822b486fca0.jpg"
+      "opponentLogo": "logos/cache/40f5c9067a3ca340.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-f841b34f-56be-43d8-ab63-6adaf268f159",
@@ -70,7 +70,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "f841b34f-56be-43d8-ab63-6adaf268f159",
-      "opponentLogo": "logos/cache/b62be61e02d38406.jpg"
+      "opponentLogo": "logos/cache/db019aa879539cb7.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
@@ -83,14 +83,14 @@
       "teamName": "9U McAndrews",
       "opponent": "Broncos Red 9U",
       "homeAway": "home",
-      "gameStatus": "live",
-      "teamScore": 0,
-      "opponentScore": 6,
+      "gameStatus": "completed",
+      "teamScore": 5,
+      "opponentScore": 17,
       "result": "loss",
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
-      "opponentLogo": "logos/cache/df9a0d0a56014022.jpg"
+      "opponentLogo": "logos/cache/9e957fa03793adc5.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-83f3a129-7360-40e4-9a05-b4393b986b93",
@@ -103,14 +103,14 @@
       "teamName": "10U Hansen",
       "opponent": "Lake Villa Eagles 10U-Kalina",
       "homeAway": "home",
-      "gameStatus": "live",
-      "teamScore": 4,
-      "opponentScore": 2,
+      "gameStatus": "completed",
+      "teamScore": 25,
+      "opponentScore": 6,
       "result": "win",
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "83f3a129-7360-40e4-9a05-b4393b986b93",
-      "opponentLogo": "logos/cache/23a0a7851ec61ae6.jpg"
+      "opponentLogo": "logos/cache/97be02a6c67626e4.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
@@ -123,9 +123,9 @@
       "teamName": "13U Baillargeon",
       "opponent": "Cougars White 13U",
       "homeAway": "away",
-      "gameStatus": "live",
-      "teamScore": 4,
-      "opponentScore": 0,
+      "gameStatus": "completed",
+      "teamScore": 17,
+      "opponentScore": 7,
       "result": "win",
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
@@ -143,14 +143,14 @@
       "teamName": "12U Meraz",
       "opponent": "Top Tier MC 12u Brunschon",
       "homeAway": "home",
-      "gameStatus": "",
-      "teamScore": null,
-      "opponentScore": null,
-      "result": null,
+      "gameStatus": "live",
+      "teamScore": 6,
+      "opponentScore": 16,
+      "result": "loss",
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "07fea401-9542-4620-933a-8162e92592dd",
-      "opponentLogo": "logos/cache/62c0881cad03cadd.jpg"
+      "opponentLogo": "logos/cache/652aa379b94fbb00.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
@@ -207,7 +207,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "83c18318-19fb-45a6-8286-32937e270604",
-      "opponentLogo": "logos/cache/ece4f1baa4f33a6a.jpg"
+      "opponentLogo": "logos/cache/89f25290bc76735b.jpg"
     },
     {
       "id": "sportsconnect-46923272",
@@ -261,7 +261,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "08611e4c-75c6-471b-915d-477272bdff91",
-      "opponentLogo": "logos/cache/d3ccd4a9f2264df3.jpg"
+      "opponentLogo": "logos/cache/c17e32707c03259c.jpg"
     },
     {
       "id": "sportsconnect-46886873",
@@ -298,7 +298,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "46997580-1fae-4bc2-bcf2-478ccb73648a",
-      "opponentLogo": "logos/cache/a7bc3ded812d70a6.jpg"
+      "opponentLogo": "logos/cache/a0f9108b0c96df51.jpg"
     },
     {
       "id": "sportsconnect-46919403",
@@ -352,7 +352,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
-      "opponentLogo": "logos/cache/ba24ae4bbc39da5e.jpg"
+      "opponentLogo": "logos/cache/752123a1aedf4880.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
@@ -372,7 +372,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
-      "opponentLogo": "logos/cache/33bce8de624998b7.jpg"
+      "opponentLogo": "logos/cache/14d8f16c1a1c0bbe.jpg"
     },
     {
       "id": "sportsconnect-46886907",
@@ -390,6 +390,23 @@
       "sportsConnectEventId": "40107087",
       "sportsConnectMatchId": "46886907",
       "sportsConnectTeamId": "41559145"
+    },
+    {
+      "id": "sportsconnect-46925751",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-09-03T17:00:01",
+      "end": "2026-09-03T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925751",
+      "sportsConnectTeamId": "41628518"
     },
     {
       "id": "mcandrews9u-Fall 2026-ce2e7fc3-c071-410c-a2fb-8f5af371c291",
@@ -449,7 +466,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
-      "opponentLogo": "logos/cache/63231ebe3ec76c5d.jpg"
+      "opponentLogo": "logos/cache/7dae488e6259c025.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-5b127abf-997e-43d1-a8b0-68b7cde64e3f",
@@ -509,7 +526,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
-      "opponentLogo": "logos/cache/81ee07c2edfd1c7c.jpg"
+      "opponentLogo": "logos/cache/ef86a1bb88225bc0.jpg"
     },
     {
       "id": "sportsconnect-46919406",
@@ -671,7 +688,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
-      "opponentLogo": "logos/cache/802be719bcd6bef4.jpg"
+      "opponentLogo": "logos/cache/88ca1e206d4c092c.jpg"
     },
     {
       "id": "sportsconnect-46886908",
@@ -689,6 +706,23 @@
       "sportsConnectEventId": "40107087",
       "sportsConnectMatchId": "46886908",
       "sportsConnectTeamId": "41559145"
+    },
+    {
+      "id": "sportsconnect-46925752",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-09-10T17:00:01",
+      "end": "2026-09-10T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925752",
+      "sportsConnectTeamId": "41628518"
     },
     {
       "id": "deubel8u-Fall 2026-fb9e299b-2315-40e8-8ff6-4bfa20ebdc39",
@@ -768,7 +802,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
-      "opponentLogo": "logos/cache/2d4b41bacb1c811d.jpg"
+      "opponentLogo": "logos/cache/326b3a53d041c1fa.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-fb019a0f-aba5-4207-9b62-1b7a2c988509",
@@ -808,7 +842,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
-      "opponentLogo": "logos/cache/6d2555ac4eae6b2e.jpg"
+      "opponentLogo": "logos/cache/3879c84db20ebc41.jpg"
     },
     {
       "id": "sportsconnect-46919407",
@@ -845,7 +879,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "88a47f45-97ca-47a1-baa5-bee83abaf32e",
-      "opponentLogo": "logos/cache/3fe96a02820b8f2d.jpg"
+      "opponentLogo": "logos/cache/c5c627b0dc80665a.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-ba903b67-c281-4478-9044-5affd5b3dbd9",
@@ -865,7 +899,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "ba903b67-c281-4478-9044-5affd5b3dbd9",
-      "opponentLogo": "logos/cache/8e354aa396970fb0.jpg"
+      "opponentLogo": "logos/cache/baf55b550e846777.jpg"
     },
     {
       "id": "sportsconnect-46923274",
@@ -936,7 +970,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
-      "opponentLogo": "logos/cache/c27010d91cbf4c1f.jpg"
+      "opponentLogo": "logos/cache/af5fe8935566c1be.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -993,7 +1027,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
-      "opponentLogo": "logos/cache/4b233a0b64fe128a.jpg"
+      "opponentLogo": "logos/cache/d1865c5b60829afa.jpg"
     },
     {
       "id": "sportsconnect-46886909",
@@ -1011,6 +1045,23 @@
       "sportsConnectEventId": "40107087",
       "sportsConnectMatchId": "46886909",
       "sportsConnectTeamId": "41559145"
+    },
+    {
+      "id": "sportsconnect-46925753",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-09-17T17:00:01",
+      "end": "2026-09-17T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925753",
+      "sportsConnectTeamId": "41628518"
     },
     {
       "id": "boettcher14u-Fall 2026-33ded3b9-783e-4c07-beec-70a75fda30de",
@@ -1050,7 +1101,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "437f090e-d748-4588-8e84-b57190465519",
-      "opponentLogo": "logos/cache/9398a41f4f9de67b.jpg"
+      "opponentLogo": "logos/cache/2901278ac8adbad9.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
@@ -1090,7 +1141,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "fe880c8c-78dc-478e-bc60-1895b491c61c",
-      "opponentLogo": "logos/cache/9803a79b4372c63f.jpg"
+      "opponentLogo": "logos/cache/ca9e01f939ff346c.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-a82a8d53-deb2-4999-967f-0abd1a4a0858",
@@ -1130,7 +1181,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "7f7155e3-7615-4df3-8f76-d076226b3814",
-      "opponentLogo": "logos/cache/ae642335ae89a28d.jpg"
+      "opponentLogo": "logos/cache/1861a492f87cd642.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
@@ -1150,7 +1201,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
-      "opponentLogo": "logos/cache/34f02822b486fca0.jpg"
+      "opponentLogo": "logos/cache/40f5c9067a3ca340.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-44ac610f-e442-401e-8837-f41476558b9f",
@@ -1230,7 +1281,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
-      "opponentLogo": "logos/cache/4b233a0b64fe128a.jpg"
+      "opponentLogo": "logos/cache/d1865c5b60829afa.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-9d20219d-0c09-4496-afea-f47e77eb204c",
@@ -1250,7 +1301,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "9d20219d-0c09-4496-afea-f47e77eb204c",
-      "opponentLogo": "logos/cache/af24670271ca255b.jpg"
+      "opponentLogo": "logos/cache/cc12d6b3285c53db.jpg"
     },
     {
       "id": "bivona16u-Fall 2026-6f432b97-93cf-4aec-acc8-1cfebd9bf35c",
@@ -1307,7 +1358,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
-      "opponentLogo": "logos/cache/e3623cd960cbd275.jpg"
+      "opponentLogo": "logos/cache/9d40e91a09843724.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -1347,7 +1398,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
-      "opponentLogo": "logos/cache/d0bc47058dbdc340.jpg"
+      "opponentLogo": "logos/cache/cab0878102028f59.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-f2a96aff-c718-4939-9267-e3cf8f9e948d",
@@ -1421,7 +1472,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "83f634ae-41a4-4442-9603-94cb58b54816",
-      "opponentLogo": "logos/cache/a2253936ff3bc208.jpg"
+      "opponentLogo": "logos/cache/8f54988cde0a52a7.jpg"
     },
     {
       "id": "sportsconnect-46886876",
@@ -1495,7 +1546,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "eceb4335-36c3-4b63-a277-b64f824ad009",
-      "opponentLogo": "logos/cache/d0bc47058dbdc340.jpg"
+      "opponentLogo": "logos/cache/cab0878102028f59.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-c920f9a3-b7d1-44d0-a141-42d994704f87",
@@ -1515,7 +1566,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "c920f9a3-b7d1-44d0-a141-42d994704f87",
-      "opponentLogo": "logos/cache/cd0d0bdac8069208.jpg"
+      "opponentLogo": "logos/cache/c6defc343e05ecd2.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
@@ -1535,7 +1586,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
-      "opponentLogo": "logos/cache/802be719bcd6bef4.jpg"
+      "opponentLogo": "logos/cache/88ca1e206d4c092c.jpg"
     },
     {
       "id": "sportsconnect-46886910",
@@ -1553,6 +1604,23 @@
       "sportsConnectEventId": "40107087",
       "sportsConnectMatchId": "46886910",
       "sportsConnectTeamId": "41559145"
+    },
+    {
+      "id": "sportsconnect-46925754",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-09-24T17:00:01",
+      "end": "2026-09-24T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925754",
+      "sportsConnectTeamId": "41628518"
     },
     {
       "id": "mcandrews9u-Fall 2026-a45043f4-5596-4537-b7da-9ba308dbc9d4",
@@ -1592,7 +1660,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
-      "opponentLogo": "logos/cache/048e14f2f4de0bd2.jpg"
+      "opponentLogo": "logos/cache/e727b06241df3d16.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-4a16f24d-1882-4966-bb55-ae758d57aac8",
@@ -1612,7 +1680,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "4a16f24d-1882-4966-bb55-ae758d57aac8",
-      "opponentLogo": "logos/cache/0d5e87ceb13db0b4.jpg"
+      "opponentLogo": "logos/cache/46943a8f4ca74ed3.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-53543ffc-3b9d-4356-8c0c-78823bdb3018",
@@ -1632,7 +1700,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
-      "opponentLogo": "logos/cache/efc108b5f4881965.jpg"
+      "opponentLogo": "logos/cache/7e8f30540193f412.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-72caae43-c7cf-4487-9669-241a233cb33d",
@@ -1652,7 +1720,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "72caae43-c7cf-4487-9669-241a233cb33d",
-      "opponentLogo": "logos/cache/dbdfa50e320d191f.jpg"
+      "opponentLogo": "logos/cache/adc5c52d98867f4f.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-b450590e-59e3-4429-b7e8-c0b35fbfde3c",
@@ -1672,7 +1740,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
-      "opponentLogo": "logos/cache/2d4b41bacb1c811d.jpg"
+      "opponentLogo": "logos/cache/326b3a53d041c1fa.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-fa6f1770-1db4-4815-912b-c4e02db153d0",
@@ -1752,7 +1820,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "2bfa8776-272a-4c04-80d3-9e90371e4516",
-      "opponentLogo": "logos/cache/9398a41f4f9de67b.jpg"
+      "opponentLogo": "logos/cache/2901278ac8adbad9.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-56880f21-1ced-4b64-baf7-8ae58e819ddd",
@@ -1772,7 +1840,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
-      "opponentLogo": "logos/cache/4307bf69596599fa.jpg"
+      "opponentLogo": "logos/cache/66a79af050e968e1.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-59b93419-8a14-46e6-b967-86924d1764e1",
@@ -1792,7 +1860,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "59b93419-8a14-46e6-b967-86924d1764e1",
-      "opponentLogo": "logos/cache/96c87d519538cfd9.jpg"
+      "opponentLogo": "logos/cache/89fd8e26f654bbf8.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-8aaa56bf-083b-49b5-985a-73a9f1214c08",
@@ -1812,7 +1880,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
-      "opponentLogo": "logos/cache/33bce8de624998b7.jpg"
+      "opponentLogo": "logos/cache/14d8f16c1a1c0bbe.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ccce8207-ae64-49d8-9bd7-529234d58d1e",
@@ -1832,7 +1900,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
-      "opponentLogo": "logos/cache/6d2555ac4eae6b2e.jpg"
+      "opponentLogo": "logos/cache/3879c84db20ebc41.jpg"
     },
     {
       "id": "sportsconnect-46923276",
@@ -1940,6 +2008,23 @@
       "sportsConnectTeamId": "41559145"
     },
     {
+      "id": "sportsconnect-46925755",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-10-01T17:00:01",
+      "end": "2026-10-01T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925755",
+      "sportsConnectTeamId": "41628518"
+    },
+    {
       "id": "thiemeyer13u-Fall 2026-843c5cad-87f1-40a0-88c0-bc791d81552f",
       "type": "gamechanger",
       "title": "13U Thiemeyer vs Opponent",
@@ -1977,7 +2062,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
-      "opponentLogo": "logos/cache/e3b8ad179028b8e0.jpg"
+      "opponentLogo": "logos/cache/29adf6e90f932fec.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
@@ -1997,7 +2082,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
-      "opponentLogo": "logos/cache/798df5385037445d.jpg"
+      "opponentLogo": "logos/cache/fabaaa126335f2a7.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-227ec302-4bea-4848-a091-dde93f4a545d",
@@ -2017,7 +2102,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "227ec302-4bea-4848-a091-dde93f4a545d",
-      "opponentLogo": "logos/cache/f816795c32c40079.jpg"
+      "opponentLogo": "logos/cache/700033e733169195.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-45a075d7-adc1-4a55-9e48-479b1f4034f9",
@@ -2037,7 +2122,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
-      "opponentLogo": "logos/cache/bf5c0a7a114d525d.jpg"
+      "opponentLogo": "logos/cache/10582667103976ac.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-b916f2f1-2955-4ed4-9409-73500ee3c184",
@@ -2057,7 +2142,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "b916f2f1-2955-4ed4-9409-73500ee3c184",
-      "opponentLogo": "logos/cache/96659cf175c23bec.jpg"
+      "opponentLogo": "logos/cache/6e879caa8b02acb2.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
@@ -2077,7 +2162,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
-      "opponentLogo": "logos/cache/e4364f3d1f7c07fd.jpg"
+      "opponentLogo": "logos/cache/e7ae05c9c54fb4d3.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-25878a9e-959a-45d6-9131-d6fb1149a4e8",
@@ -2185,7 +2270,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
-      "opponentLogo": "logos/cache/ba24ae4bbc39da5e.jpg"
+      "opponentLogo": "logos/cache/752123a1aedf4880.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-b1c63fea-4b07-4e89-baf9-84f4a5877e65",
@@ -2205,7 +2290,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jo418sCgCDyw",
       "gameChangerGameId": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
-      "opponentLogo": "logos/cache/79ba46839213ca17.jpg"
+      "opponentLogo": "logos/cache/6acfd7b6eb201a79.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -2245,6 +2330,23 @@
       "sportsConnectTeamId": "41559145"
     },
     {
+      "id": "sportsconnect-46925756",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-10-08T17:00:01",
+      "end": "2026-10-08T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925756",
+      "sportsConnectTeamId": "41628518"
+    },
+    {
       "id": "mcandrews9u-Fall 2026-f2fcbc71-7086-48ee-a37c-422a969fa66a",
       "type": "gamechanger",
       "title": "9U McAndrews vs Top Tier West Freed",
@@ -2282,7 +2384,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "726ff682-4280-444e-97bd-716dd66eee54",
-      "opponentLogo": "logos/cache/fa89340bb1e6970b.jpg"
+      "opponentLogo": "logos/cache/d597eff5c41c927f.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
@@ -2302,7 +2404,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
-      "opponentLogo": "logos/cache/b823bb0aeffa4fe7.jpg"
+      "opponentLogo": "logos/cache/cb8436a61480fd4e.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
@@ -2510,7 +2612,24 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "0fc0ad11-dafe-491e-802b-4679f59c96b4",
-      "opponentLogo": "logos/cache/cd0d0bdac8069208.jpg"
+      "opponentLogo": "logos/cache/c6defc343e05ecd2.jpg"
+    },
+    {
+      "id": "sportsconnect-46925757",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-10-15T17:00:01",
+      "end": "2026-10-15T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925757",
+      "sportsConnectTeamId": "41628518"
     },
     {
       "id": "hansen10u-Fall 2026-4d231ff4-0208-4cb5-9726-9bdb75311377",
@@ -2530,7 +2649,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "4d231ff4-0208-4cb5-9726-9bdb75311377",
-      "opponentLogo": "logos/cache/35f6f7feda1ede65.jpg"
+      "opponentLogo": "logos/cache/25b36803d4afea9a.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-5377af70-7917-48a5-a0d3-b700c4c425db",
@@ -2550,7 +2669,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "5377af70-7917-48a5-a0d3-b700c4c425db",
-      "opponentLogo": "logos/cache/466bcff907bb4ca4.jpg"
+      "opponentLogo": "logos/cache/adf1fb4c19d35ffe.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-d2917d60-4c74-48b9-8e92-c5639c7285da",
@@ -2570,7 +2689,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "d2917d60-4c74-48b9-8e92-c5639c7285da",
-      "opponentLogo": "logos/cache/cda41a31b261b973.jpg"
+      "opponentLogo": "logos/cache/f131360dfbc7873f.jpg"
     },
     {
       "id": "sportsconnect-46923279",
@@ -2607,6 +2726,23 @@
       "sportsConnectTeamId": "41195554"
     },
     {
+      "id": "sportsconnect-46925758",
+      "type": "practice",
+      "title": "Cobras Thiemeyer 13U Practice",
+      "start": "2026-10-22T17:00:01",
+      "end": "2026-10-22T19:00:01",
+      "timezone": "America/Chicago",
+      "teamName": "Cobras Thiemeyer 13U",
+      "teamKey": "",
+      "location": "VFW - Buss Field",
+      "category": "Outdoor Practice",
+      "description": "Outdoor practice at VFW - Buss Field.",
+      "source": "Sports Connect",
+      "sportsConnectEventId": "40107087",
+      "sportsConnectMatchId": "46925758",
+      "sportsConnectTeamId": "41628518"
+    },
+    {
       "id": "thiemeyer13u-Fall 2026-4cfbf7f9-f768-40e5-ba34-dee0938ea21e",
       "type": "gamechanger",
       "title": "13U Thiemeyer vs McHenry County Bandits - Hampton 13U",
@@ -2624,7 +2760,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "4cfbf7f9-f768-40e5-ba34-dee0938ea21e",
-      "opponentLogo": "logos/cache/93ebaafb191e270b.jpg"
+      "opponentLogo": "logos/cache/944f999c20965d74.jpg"
     },
     {
       "id": "allbooked-119526646_639291384000000000",
