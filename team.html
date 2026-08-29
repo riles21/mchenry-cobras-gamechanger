@@ -923,82 +923,67 @@
      DATE / TIME
   ============================================================ */
 
-  function getDateParts(game) {
+function getDateParts(game) {
 
-    const timezone =
-      game.timezone ||
-      "America/Chicago";
+  const timezone =
+    game.timezone ||
+    "America/Chicago";
 
+  const date =
+    new Date(game.start);
 
-    const date =
-      new Date(game.start_ts);
-
-
-    const parts =
-      new Intl.DateTimeFormat(
-        "en-US",
-        {
-          timeZone: timezone,
-          month: "short",
-          day: "numeric",
-          weekday: "short"
-        }
-      ).formatToParts(date);
-
-
-    const values = {};
-
-    parts.forEach(part => {
-      values[part.type] =
-        part.value;
-    });
-
-
-    return {
-      month:
-        values.month || "",
-
-      day:
-        values.day || "",
-
-      weekday:
-        values.weekday || ""
-    };
-  }
-
-
-  function formatTime(game) {
-
-    if (!game.start_ts) {
-      return "";
-    }
-
-    const timezone =
-      game.timezone ||
-      "America/Chicago";
-
-
-    return new Intl.DateTimeFormat(
+  const parts =
+    new Intl.DateTimeFormat(
       "en-US",
       {
         timeZone: timezone,
-        hour: "numeric",
-        minute: "2-digit"
+        month: "short",
+        day: "numeric",
+        weekday: "short"
       }
-    ).format(
-      new Date(game.start_ts)
-    );
+    ).formatToParts(date);
+
+  const values = {};
+
+  parts.forEach(part => {
+    values[part.type] = part.value;
+  });
+
+  return {
+    month: values.month || "",
+    day: values.day || "",
+    weekday: values.weekday || ""
+  };
+}
+function formatTime(game) {
+
+  if (!game || !game.start) {
+    return "";
   }
 
+  const timezone =
+    game.timezone ||
+    "America/Chicago";
 
-  function gameSort(a, b) {
+  return new Intl.DateTimeFormat(
+    "en-US",
+    {
+      timeZone: timezone,
+      hour: "numeric",
+      minute: "2-digit"
+    }
+  ).format(
+    new Date(game.start)
+  );
+}
 
-    return (
-      new Date(a.start_ts) -
-      new Date(b.start_ts)
-    );
-  }
+function gameSort(a, b) {
 
+  return (
+    new Date(a.start) -
+    new Date(b.start)
+  );
+}
 
   /* ============================================================
      SCORE HELPERS
@@ -1102,10 +1087,13 @@
       W
       L
       T
+      COMPLETED
       null
 
-    A game is considered completed when
-    both scores exist.
+    If both scores exist, calculate the result.
+    If GameChanger explicitly marks the game
+    completed but scores are unavailable, return
+    COMPLETED rather than inventing a result.
   */
 
   function getGameResult(game) {
@@ -1118,24 +1106,31 @@
 
 
     if (
-      teamScore === null ||
-      opponentScore === null
+      teamScore !== null &&
+      opponentScore !== null
     ) {
-      return null;
+
+      if (teamScore > opponentScore) {
+        return "W";
+      }
+
+      if (teamScore < opponentScore) {
+        return "L";
+      }
+
+      return "T";
     }
 
 
-    if (teamScore > opponentScore) {
-      return "W";
+    if (
+      String(game?.gameStatus || "").toLowerCase() ===
+      "completed"
+    ) {
+      return "COMPLETED";
     }
 
 
-    if (teamScore < opponentScore) {
-      return "L";
-    }
-
-
-    return "T";
+    return null;
   }
 
 
@@ -1177,32 +1172,28 @@
      LOGOS
   ============================================================ */
 
-  function logoUrl(game) {
+function logoUrl(game) {
 
-    const avatar =
-      game?.opponent_team?.avatar_url;
+  const avatar =
+    game?.opponentLogo;
 
-
-    if (!avatar) {
-      return FALLBACK_LOGO;
-    }
-
-
-    if (
-      avatar.startsWith("http://") ||
-      avatar.startsWith("https://") ||
-      avatar.startsWith("/")
-    ) {
-      return avatar;
-    }
-
-
-    return avatar.replace(
-      /^\.?\//,
-      ""
-    );
+  if (!avatar) {
+    return FALLBACK_LOGO;
   }
 
+  if (
+    avatar.startsWith("http://") ||
+    avatar.startsWith("https://") ||
+    avatar.startsWith("/")
+  ) {
+    return avatar;
+  }
+
+  return avatar.replace(
+    /^\.?\//,
+    ""
+  );
+}
 
   function imageTag(
     game,
@@ -1220,7 +1211,7 @@
         class="${className}"
         src="${src}"
         alt=""
-        onerror="this.onerror=null;this.src='${FALLBACK_LOGO}'"
+        onerror="this.onerror=null;this.src='cobras-logo.png'"
       >
     `;
   }
@@ -1247,12 +1238,12 @@
 
 
     const opponent =
-      game.opponent_team?.name ||
+      game.opponent ||
       "Opponent";
 
 
     const homeAway =
-      game.home_away === "away"
+      game.homeAway === "away"
         ? "AWAY"
         : "HOME";
 
@@ -1324,7 +1315,7 @@
 
 
     const opponent =
-      game.opponent_team?.name ||
+      game.opponent ||
       "Opponent";
 
 
@@ -1356,7 +1347,7 @@
 
 
     const homeAway =
-      game.home_away === "away"
+      game.homeAway === "away"
         ? "AWAY"
         : "HOME";
 
@@ -1473,12 +1464,12 @@
 
 
     const opponent =
-      game.opponent_team?.name ||
+      game.opponent ||
       "Opponent";
 
 
     const homeAway =
-      game.home_away === "away"
+      game.homeAway === "away"
         ? "AWAY"
         : "HOME";
 
@@ -1663,7 +1654,7 @@
         )
         .sort(
           (a, b) =>
-            new Date(b.start_ts) -
+            new Date(b.start) -
             new Date(a.start_ts)
         );
 
@@ -1698,14 +1689,14 @@
           }
 
 
-          if (!game.start_ts) {
+          if (!game.start) {
             return false;
           }
 
 
           return (
             new Date(
-              game.start_ts
+              game.start
             ).getTime() >= now
           );
 
@@ -2145,7 +2136,7 @@
         games.slice(0, 15).map(
           game => ({
             date:
-              game.start_ts,
+              game.start,
 
             teamKey:
               game.teamKey,
