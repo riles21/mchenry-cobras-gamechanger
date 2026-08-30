@@ -13,14 +13,14 @@
 
     body {
       margin: 0;
-      padding: 24px 12px 50px;
+      padding: 28px 18px 60px;
       background: #f5f5f5;
       color: #111;
       font-family: Arial, Helvetica, sans-serif;
     }
 
     .page {
-      max-width: 760px;
+      max-width: 1180px;
       margin: 0 auto;
     }
 
@@ -97,12 +97,81 @@
     }
 
     /* =========================
+       PAGE NAVIGATION
+    ========================== */
+
+    .page-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      background: #111;
+      border-left: 4px solid #ff5a00;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 5px rgba(0,0,0,.12);
+    }
+
+    .page-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .page-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+      padding: 7px 10px;
+      border-radius: 5px;
+    }
+
+    .page-nav a:hover,
+    .page-nav a.active {
+      background: #ff5a00;
+      color: #111;
+    }
+
+    .team-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 250px;
+    }
+
+    .team-switcher label {
+      color: #aaa;
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .team-switcher select {
+      width: 100%;
+      min-width: 190px;
+      background: #222;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 5px;
+      padding: 7px 9px;
+      font-size: 10px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* =========================
        TEAM INFORMATION
     ========================== */
 
     .info-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1.5fr 1.1fr auto;
+      grid-template-columns: 1.25fr 1.55fr 1.15fr auto;
       gap: 8px;
       margin-bottom: 10px;
     }
@@ -490,6 +559,16 @@
       .next-game {
         grid-template-columns: 65px 1fr 75px;
       }
+
+      .page-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .team-switcher {
+        width: 100%;
+        min-width: 0;
+      }
     }
 
     @media (max-width: 460px) {
@@ -509,6 +588,25 @@
       .follow-button {
         font-size: 9px;
         padding: 7px 9px;
+      }
+
+      .page-nav-links {
+        width: 100%;
+      }
+
+      .page-nav a {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      .team-switcher {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .team-switcher select {
+        min-width: 0;
       }
 
       .game-card {
@@ -554,6 +652,20 @@
   </div>
 
   <div class="orange-line"></div>
+
+  <div class="page-nav">
+    <div class="page-nav-links">
+      <a href="index.html">← Organization &amp; Teams</a>
+      <a href="calendar.html">Cobras Calendar</a>
+    </div>
+
+    <div class="team-switcher">
+      <label for="teamSwitcher">Switch Team</label>
+      <select id="teamSwitcher">
+        <option value="">Choose a team...</option>
+      </select>
+    </div>
+  </div>
 
 
   <!-- =========================
@@ -2203,11 +2315,73 @@ function logoUrl(game) {
 
 
   /* ============================================================
+     TEAM NAVIGATION
+  ============================================================ */
+
+  function getAgeGroup(teamName) {
+
+    const match =
+      String(teamName || "").match(/^(\d+)U/i);
+
+    return match
+      ? parseInt(match[1], 10)
+      : 999;
+  }
+
+  function buildTeamSwitcher() {
+
+    const select =
+      document.getElementById("teamSwitcher");
+
+    if (!select || typeof COBRAS_TEAMS === "undefined") {
+      return;
+    }
+
+    const activeTeams =
+      Object.entries(COBRAS_TEAMS)
+        .filter(([key, team]) =>
+          team && team.active === true
+        )
+        .sort((a, b) => {
+          const ageA = getAgeGroup(a[1].name);
+          const ageB = getAgeGroup(b[1].name);
+
+          if (ageA !== ageB) {
+            return ageA - ageB;
+          }
+
+          return a[1].name.localeCompare(b[1].name);
+        });
+
+    activeTeams.forEach(([key, team]) => {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = team.name;
+
+      if (key === teamKey) {
+        option.selected = true;
+      }
+
+      select.appendChild(option);
+    });
+
+    select.addEventListener("change", () => {
+      if (select.value) {
+        window.location.href =
+          `team.html?team=${encodeURIComponent(select.value)}`;
+      }
+    });
+  }
+
+  /* ============================================================
      START
   ============================================================ */
 
   teamConfig =
     getTeamConfig();
+
+
+  buildTeamSwitcher();
 
 
   loadSchedule();
