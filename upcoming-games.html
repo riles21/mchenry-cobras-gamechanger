@@ -133,17 +133,9 @@
     text-overflow: ellipsis;
   }
 
-  /*
-    Season information intentionally hidden.
-  */
-
   .meta {
     display: none;
   }
-
-  /*
-    Larger game time.
-  */
 
   .time {
     text-align: right;
@@ -153,10 +145,6 @@
     font-weight: 900;
     white-space: nowrap;
   }
-
-  /*
-    Larger HOME / AWAY indicator.
-  */
 
   .home-away {
     color: var(--orange);
@@ -284,6 +272,16 @@
     "https://riles21.github.io/mchenry-cobras-gamechanger/";
 
   const MAX_GAMES = 15;
+
+  /*
+    Use Central Time for determining whether a game
+    has already started.
+
+    The schedule data uses ISO timestamps, so JavaScript
+    can safely compare them against the current time.
+  */
+  const now =
+    new Date();
 
 
   function escapeHtml(value) {
@@ -423,6 +421,11 @@
 
   try {
 
+    /*
+      Add a cache-busting parameter so Wix/browser/CDN
+      caching is much less likely to give us an old JSON file.
+    */
+
     const response =
       await fetch(
         ROOT +
@@ -445,13 +448,101 @@
     }
 
 
-    const upcoming =
+    const data =
       await response.json();
 
 
     if (
-      !Array.isArray(upcoming) ||
-      !upcoming.length
+      !Array.isArray(data)
+    ) {
+
+      throw new Error(
+        "upcoming-games.json did not contain an array."
+      );
+
+    }
+
+
+    /*
+      IMPORTANT FIX
+      --------------
+
+      Do NOT assume that upcoming-games.json has already
+      removed old games.
+
+      Filter the schedule here using the actual game start time.
+    */
+
+    const futureGames =
+      data
+        .filter(item => {
+
+          const start =
+            item?.game?.start_ts;
+
+          if (!start) {
+            return false;
+          }
+
+          const startTime =
+            new Date(start);
+
+          if (
+            Number.isNaN(
+              startTime.getTime()
+            )
+          ) {
+            return false;
+          }
+
+          /*
+            Only show games that have not started yet.
+          */
+
+          return startTime.getTime() > now.getTime();
+
+        })
+
+
+        /*
+          Sort from soonest to latest.
+        */
+
+        .sort((a, b) => {
+
+          const aTime =
+            new Date(
+              a.game.start_ts
+            ).getTime();
+
+          const bTime =
+            new Date(
+              b.game.start_ts
+            ).getTime();
+
+          return aTime - bTime;
+
+        });
+
+
+    console.log(
+      "[Cobras Next Up] Total games loaded:",
+      data.length
+    );
+
+    console.log(
+      "[Cobras Next Up] Future games:",
+      futureGames.length
+    );
+
+
+    /*
+      If there are no future games, give the user
+      a clean message instead of showing stale games.
+    */
+
+    if (
+      !futureGames.length
     ) {
 
       gamesEl.innerHTML =
@@ -464,8 +555,15 @@
     }
 
 
+    /*
+      NOW take the first 15.
+
+      This is important — we filter first,
+      then slice.
+    */
+
     gamesEl.innerHTML =
-      upcoming
+      futureGames
         .slice(0, MAX_GAMES)
         .map(gameCard)
         .join("");
