@@ -197,57 +197,13 @@
       font-weight: 900;
       margin-bottom: 10px;
     }
-
     .coaches {
-      font-size: 14px;
-      line-height: 1.45;
-      color: #555;
+      font-size: 16px;
+      line-height: 1.35;
+      color: #444;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-
-    .team-record {
-      text-align: right;
-      flex-shrink: 0;
-      min-width: 150px;
-    }
-
-    .record-line {
-      font-size: 29px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .record-caption {
-      font-size: 12px;
-      letter-spacing: 1px;
-      font-weight: 800;
-      color: #666;
-      margin-top: 2px;
-    }
-
-    .arrow {
-      color: #ff5a00;
-      font-size: 25px;
-      margin-left: 7px;
-    }
-
-    .coach-label {
-      display: block;
-      color: #ff5a00;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 3px;
-    }
-
-    .winning-percent {
-      margin-top: 8px;
-      font-size: 13px;
-      font-weight: 900;
-      color: #ff5a00;
     }
 
     .loading {
@@ -295,8 +251,6 @@
       .team-record { min-width: 115px; padding-left: 12px; }
       .record-line { font-size: 23px; }
       .record-caption { font-size: 10px; }
-      .winning-percent { font-size: 11px; }
-    }
 
     @media (max-width: 390px) {
       .team-card { padding: 14px 12px; }
@@ -355,7 +309,7 @@
     </div>
 
     <div class="record-card">
-      <div class="record-number" id="orgWinPct">0%</div>
+      <div class="record-number" id="orgWinPct">.000</div>
       <div class="record-label">WINNING %</div>
     </div>
   </div>
@@ -552,8 +506,7 @@
       <div class="team-info">
         <div class="team-name">${escapeHtml(team.name)}</div>
         <div class="coaches">
-          <span class="coach-label">Coaches</span>
-          ${escapeHtml(coaches || "Coaching staff")}
+          Coaches: ${escapeHtml(coaches || "Coaching staff")}
         </div>
       </div>
 
@@ -562,8 +515,6 @@
           ${record.wins}-${record.losses}-${record.ties}
           <span class="arrow">→</span>
         </div>
-        <div class="record-caption">W-L-T</div>
-        <div class="winning-percent">${winningPct.toFixed(1)}% WIN</div>
       </div>
     `;
 
@@ -686,7 +637,7 @@
       : ((organizationWins + organizationTies * 0.5) / organizationGames) * 100;
 
     document.getElementById("orgWinPct").textContent =
-      `${organizationWinPct.toFixed(1)}%`;
+      `${(organizationWinPct / 100).toFixed(3).replace(/^0/, '')}`;
 
     /*
       Display teams by age group.
