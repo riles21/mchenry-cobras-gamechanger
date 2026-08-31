@@ -1331,6 +1331,183 @@ button:hover {
 
 }
 
+
+/* =========================================================
+   COBRAS SITE-ALIGNED COLOR OVERRIDES
+   Keeps the calendar itself dark while softening the
+   surrounding page to match the main Cobras site.
+========================================================= */
+
+html {
+    background: #f3f3f3;
+}
+
+body {
+    background: #f3f3f3;
+    color: #ffffff;
+}
+
+.container {
+    background: linear-gradient(135deg, #111111 0%, #1d130f 100%);
+    border-radius: 4px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.10);
+}
+
+/* Header — same black / warm-brown feel used elsewhere */
+.header {
+    padding: 2px 0 16px;
+}
+
+.header h1 {
+    letter-spacing: 1.2px;
+}
+
+.header h1 span {
+    color: #ff5a00;
+}
+
+.header-subtitle {
+    color: #b8b8b8;
+}
+
+/* Notice and controls are slightly lifted from pure black */
+.indoor-notice,
+.controls {
+    background: #181818;
+    border-color: #3a3a3a;
+}
+
+.indoor-notice {
+    border-left-color: #ff5a00;
+}
+
+.controls {
+    border-top-color: #ff5a00;
+}
+
+/* Buttons use the Cobras orange consistently */
+button,
+.allbooked-button {
+    background: #ff5a00;
+}
+
+button:hover,
+.allbooked-button:hover {
+    background: #ff6b1a;
+}
+
+/* Secondary controls */
+.secondary-button,
+.view-button,
+.range-button {
+    background: #2a2725;
+    border-color: #4a4542;
+}
+
+.secondary-button:hover,
+.view-button:hover,
+.range-button:hover {
+    background: #383330;
+}
+
+.filter {
+    background: #282522;
+    border-color: #47423f;
+    color: #dddddd;
+}
+
+.filter.active,
+.view-button.active,
+.range-button.active {
+    background: #ff5a00;
+    border-color: #ff5a00;
+    color: #ffffff;
+}
+
+/* Calendar remains intentionally dark */
+.calendar {
+    background: #121212;
+    border-color: #3a3a3a;
+}
+
+.weekdays {
+    background: #1d1b1a;
+    border-bottom-color: #45413e;
+}
+
+.day {
+    background: #121212;
+    border-right-color: #2d2b29;
+    border-bottom-color: #2d2b29;
+}
+
+.day.other-month {
+    background: #0e0e0e;
+}
+
+/* Event cards get a slightly softer charcoal */
+.event {
+    background: #252321;
+}
+
+.event:hover {
+    background: #34312e;
+}
+
+.event.practice,
+.event.indoor {
+    background: #252321;
+}
+
+.event.practice:hover,
+.event.indoor:hover {
+    background: #34312e;
+}
+
+/* Modal / list view stay dark, but with warmer neutral tones */
+.modal {
+    background: #141414;
+    border-color: #45413e;
+    border-top-color: #ff5a00;
+}
+
+.modal-header {
+    border-bottom-color: #35312f;
+}
+
+.list-view {
+    background: #121212;
+    border-color: #3a3a3a;
+}
+
+.list-day-heading {
+    background: #1d1b1a;
+    border-bottom-color: #393532;
+    border-top-color: #ff5a00;
+}
+
+.list-event {
+    background: #191817;
+    border-bottom-color: #2d2a28;
+}
+
+.list-event:hover {
+    background: #282522;
+}
+
+/* Make the overall page feel less harsh inside the Wix embed */
+.loading,
+.error {
+    color: #aaa;
+}
+
+@media (max-width: 800px) {
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
 </style>
 
 </head>
