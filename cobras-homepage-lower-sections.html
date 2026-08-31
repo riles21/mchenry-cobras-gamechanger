@@ -222,13 +222,6 @@ body{overflow-x:hidden}
   text-transform:uppercase;
   letter-spacing:.8px;
 }
-.org-summary-note{
-  grid-column:1/-1;
-  color:#aaa;
-  text-align:center;
-  font-size:11px;
-  margin-top:2px;
-}
 .team-choice{
   display:flex;
   align-items:center;
@@ -274,82 +267,12 @@ body{overflow-x:hidden}
   font-weight:900;
   margin-left:5px;
 }
-.selector-note{
-  color:#aaa;
-  font-size:11px;
-  margin-top:13px;
-  text-align:center;
-}
-
-/* EXPLORE */
-.explore-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-.explore-card{
-  position:relative;
-  min-height:155px;
-  padding:22px;
-  border-radius:8px;
-  overflow:hidden;
-  color:#fff;
-  text-decoration:none;
-  background:linear-gradient(135deg,#121212,#32180d);
-  border:1px solid #292929;
-  box-shadow:0 3px 9px rgba(0,0,0,.12);
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  transition:transform .15s ease,box-shadow .15s ease;
-}
-.explore-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 7px 16px rgba(0,0,0,.18);
-}
-.explore-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at 85% 15%,rgba(255,90,0,.23),transparent 42%);
-  pointer-events:none;
-}
-.explore-icon{
-  position:absolute;
-  top:19px;
-  left:20px;
-  color:var(--orange);
-  font-size:25px;
-  font-weight:900;
-}
-.explore-name{
-  position:relative;
-  font-size:24px;
-  font-weight:900;
-  text-transform:uppercase;
-}
-.explore-desc{
-  position:relative;
-  color:#bbb;
-  font-size:11px;
-  line-height:1.35;
-  margin-top:5px;
-}
-.explore-arrow{
-  position:absolute;
-  right:18px;
-  bottom:19px;
-  color:var(--orange);
-  font-size:22px;
-  font-weight:900;
-}
 
 @media(max-width:900px){
   .events-grid{grid-template-columns:repeat(3,1fr)}
   .org-summary{grid-template-columns:repeat(3,1fr)}
   .event-card:nth-child(3){border-right:0}
   .event-card:nth-child(n+4){border-top:1px solid rgba(255,255,255,.13)}
-  .explore-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:620px){
   .cobras-home{padding:20px 8px 34px}
@@ -369,10 +292,6 @@ body{overflow-x:hidden}
   .org-summary{grid-template-columns:repeat(2,1fr)}
   .team-choice{min-height:86px}
   .team-choice-name{font-size:18px}
-  .explore-grid{grid-template-columns:1fr 1fr;gap:9px}
-  .explore-card{min-height:135px;padding:16px}
-  .explore-name{font-size:18px}
-  .explore-desc{font-size:10px}
 }
 @media(max-width:390px){
   .events-grid{grid-template-columns:1fr}
@@ -380,7 +299,6 @@ body{overflow-x:hidden}
   .event-card,
   .event-card:nth-child(3){border-right:0;border-top:1px solid rgba(255,255,255,.13)}
   .event-card:first-child{border-top:0}
-  .explore-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -426,10 +344,6 @@ body{overflow-x:hidden}
       </div>
 
       <div id="teamPanel" class="team-panel"></div>
-
-      <div class="selector-note">
-        Select an age level to view team records and coaches.
-      </div>
     </div>
   </section>
 
@@ -611,9 +525,6 @@ body{overflow-x:hidden}
           <div class="org-stat">
             <div class="org-stat-value">${orgPct}</div>
             <div class="org-stat-label">Winning %</div>
-          </div>
-          <div class="org-summary-note">
-            Organization record: ${orgW}-${orgL}-${orgT}
           </div>
         </div>
       `;
