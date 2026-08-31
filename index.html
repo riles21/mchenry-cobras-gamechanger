@@ -1,4 +1,4 @@
-```
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +13,14 @@
 
     body {
       margin: 0;
-      padding: 28px 18px 60px;
+      padding: 28px 22px 70px;
       background: #f5f5f5;
       font-family: Arial, Helvetica, sans-serif;
       color: #111;
     }
 
     .container {
-      max-width: 1180px;
+      max-width: 1450px;
       margin: 0 auto;
     }
 
@@ -28,14 +28,14 @@
       background:
         linear-gradient(115deg, #101010 0%, #171717 48%, #4b210f 100%);
       border-radius: 10px;
-      padding: 25px;
+      padding: 28px 30px;
       text-align: center;
       box-shadow: 0 5px 12px rgba(0,0,0,.18);
       margin-bottom: 24px;
     }
 
     .hero img {
-      width: 540px;
+      width: 620px;
       max-width: 90%;
       height: auto;
       display: inline-block;
@@ -43,7 +43,7 @@
 
     h1 {
       text-align: center;
-      font-size: 38px;
+      font-size: 42px;
       margin: 15px 0 8px;
       font-weight: 800;
     }
@@ -51,20 +51,20 @@
     .season {
       text-align: center;
       color: #ff5a00;
-      font-size: 22px;
-      font-weight: 800;
-      margin-bottom: 16px;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 17px;
     }
 
     .orange-line {
-      height: 3px;
+      height: 4px;
       background: #ff5a00;
       margin: 0 0 25px;
     }
 
     .section-title {
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 21px;
+      font-weight: 900;
       margin: 0 0 10px;
     }
 
@@ -73,34 +73,35 @@
     ========================== */
 
     .page-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4px;
       background: #111;
-      border-left: 4px solid #ff5a00;
-      border-radius: 8px;
-      padding: 16px 18px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 5px rgba(0,0,0,.12);
+      border-left: 5px solid #ff5a00;
+      border-radius: 9px;
+      padding: 6px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,.14);
     }
 
     .page-nav-links {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
+      display: contents;
     }
 
     .page-nav a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
       color: #fff;
       text-decoration: none;
-      font-size: 11px;
-      font-weight: 800;
+      font-size: 16px;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: .4px;
-      padding: 7px 10px;
-      border-radius: 5px;
+      letter-spacing: .35px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-align: center;
     }
 
     .page-nav a:hover,
@@ -110,20 +111,16 @@
     }
 
     .page-nav-hint {
-      color: #aaa;
-      font-size: 9px;
-      text-transform: uppercase;
-      letter-spacing: .6px;
-      white-space: nowrap;
+      display: none;
     }
 
     /* Organization record */
 
     .org-record {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-bottom: 30px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 38px;
     }
 
     .record-card {
@@ -131,19 +128,19 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       text-align: center;
-      padding: 14px 8px;
+      padding: 19px 12px 17px;
       box-shadow: 0 2px 4px rgba(0,0,0,.08);
     }
 
     .record-number {
-      font-size: 28px;
+      font-size: 38px;
       font-weight: 800;
       line-height: 1;
     }
 
     .record-label {
-      margin-top: 6px;
-      font-size: 9px;
+      margin-top: 9px;
+      font-size: 13px;
       letter-spacing: 1px;
       font-weight: 800;
       color: #555;
@@ -156,29 +153,29 @@
     }
 
     .age-title {
-      font-size: 16px;
-      font-weight: 800;
-      border-bottom: 1px solid #d5d5d5;
-      padding-bottom: 7px;
-      margin-bottom: 8px;
+      font-size: 22px;
+      font-weight: 900;
+      border-bottom: 3px solid #ff5a00;
+      padding-bottom: 8px;
+      margin-bottom: 13px;
     }
 
     .teams-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .team-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 76px;
+      min-height: 128px;
       background: #fff;
       border: 1px solid #ddd;
-      border-left: 3px solid #ff5a00;
+      border-left: 5px solid #ff5a00;
       border-radius: 8px;
-      padding: 12px 14px;
+      padding: 20px 22px;
       text-decoration: none;
       color: #111;
       box-shadow: 0 2px 4px rgba(0,0,0,.06);
@@ -192,17 +189,18 @@
 
     .team-info {
       min-width: 0;
-      padding-right: 10px;
+      padding-right: 20px;
     }
 
     .team-name {
-      font-size: 16px;
-      font-weight: 800;
-      margin-bottom: 5px;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 10px;
     }
 
     .coaches {
-      font-size: 10px;
+      font-size: 14px;
+      line-height: 1.45;
       color: #555;
       white-space: nowrap;
       overflow: hidden;
@@ -212,18 +210,18 @@
     .team-record {
       text-align: right;
       flex-shrink: 0;
-      min-width: 105px;
+      min-width: 150px;
     }
 
     .record-line {
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 29px;
+      font-weight: 900;
       white-space: nowrap;
     }
 
     .record-caption {
-      font-size: 10px;
-      letter-spacing: .7px;
+      font-size: 12px;
+      letter-spacing: 1px;
       font-weight: 800;
       color: #666;
       margin-top: 2px;
@@ -231,8 +229,25 @@
 
     .arrow {
       color: #ff5a00;
-      font-size: 18px;
-      margin-left: 4px;
+      font-size: 25px;
+      margin-left: 7px;
+    }
+
+    .coach-label {
+      display: block;
+      color: #ff5a00;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .winning-percent {
+      margin-top: 8px;
+      font-size: 13px;
+      font-weight: 900;
+      color: #ff5a00;
     }
 
     .loading {
@@ -249,72 +264,46 @@
       padding: 15px;
     }
 
-    @media (max-width: 800px) {
-      body {
-        padding: 15px 10px 40px;
-      }
-
-      h1 {
-        font-size: 29px;
-      }
-
-      .hero {
-        padding: 18px 10px;
-      }
-
-      .org-record {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .teams-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .team-card {
-        min-height: 90px;
-        padding: 14px;
-      }
-
-      .team-name {
-        font-size: 17px;
-      }
-
-      .coaches {
-        font-size: 11px;
-      }
-
-      .record-line {
-        font-size: 19px;
-      }
-
-      .page-nav {
-        align-items: flex-start;
-      }
-
-      .page-nav-hint {
-        display: none;
-      }
+    @media (max-width: 900px) {
+      body { padding: 18px 12px 50px; }
+      h1 { font-size: 34px; }
+      .org-record { grid-template-columns: repeat(3, 1fr); }
+      .teams-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .team-card { min-height: 122px; padding: 17px; }
+      .team-name { font-size: 21px; }
+      .coaches { font-size: 13px; }
+      .team-record { min-width: 125px; padding-left: 14px; }
+      .record-line { font-size: 25px; }
     }
-    @media (max-width: 430px) {
-       .teams-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
 
-      .page-nav-links {
-        width: 100%;
-      }
-
-      .page-nav a {
-        flex: 1 1 auto;
-        text-align: center;
-      }
+    @media (max-width: 650px) {
+      body { padding: 12px 8px 40px; }
+      .hero { padding: 18px 10px; }
+      h1 { font-size: 27px; }
+      .season { font-size: 19px; }
+      .page-nav { grid-template-columns: 1fr; }
+      .page-nav a { min-height: 47px; font-size: 14px; }
+      .org-record { grid-template-columns: repeat(2, 1fr); gap: 9px; }
+      .record-card { min-height: 96px; padding: 15px 8px; }
+      .record-number { font-size: 31px; }
+      .record-label { font-size: 10px; }
+      .age-title { font-size: 19px; }
+      .teams-grid { grid-template-columns: 1fr; gap: 11px; }
+      .team-card { min-height: 116px; padding: 16px; }
+      .team-name { font-size: 21px; }
+      .coaches { font-size: 13px; }
+      .team-record { min-width: 115px; padding-left: 12px; }
+      .record-line { font-size: 23px; }
+      .record-caption { font-size: 10px; }
+      .winning-percent { font-size: 11px; }
     }
-    @media (max-width: 520px) {
-      .teams-grid { grid-template-columns: 1fr; }
-      .team-card { min-height: 82px; padding: 13px 14px; }
-      .team-name { font-size: 17px; }
-      .coaches { font-size: 11px; }
-      .record-line { font-size: 19px; }
+
+    @media (max-width: 390px) {
+      .team-card { padding: 14px 12px; }
+      .team-name { font-size: 19px; }
+      .coaches { font-size: 12px; }
+      .team-record { min-width: 100px; padding-left: 9px; }
+      .record-line { font-size: 20px; }
     }
   </style>
 </head>
@@ -363,6 +352,11 @@
     <div class="record-card">
       <div class="record-number" id="orgTies">0</div>
       <div class="record-label">TIES</div>
+    </div>
+
+    <div class="record-card">
+      <div class="record-number" id="orgWinPct">0%</div>
+      <div class="record-label">WINNING %</div>
     </div>
   </div>
 
@@ -543,6 +537,11 @@
       ...(team.assistantCoaches || [])
     ].filter(Boolean).join(" · ");
 
+    const totalGames = record.wins + record.losses + record.ties;
+    const winningPct = totalGames === 0
+      ? 0
+      : ((record.wins + record.ties * 0.5) / totalGames) * 100;
+
     const card = document.createElement("a");
 
     card.className = "team-card";
@@ -552,7 +551,10 @@
     card.innerHTML = `
       <div class="team-info">
         <div class="team-name">${escapeHtml(team.name)}</div>
-        <div class="coaches">${escapeHtml(coaches)}</div>
+        <div class="coaches">
+          <span class="coach-label">Coaches</span>
+          ${escapeHtml(coaches || "Coaching staff")}
+        </div>
       </div>
 
       <div class="team-record">
@@ -561,6 +563,7 @@
           <span class="arrow">→</span>
         </div>
         <div class="record-caption">W-L-T</div>
+        <div class="winning-percent">${winningPct.toFixed(1)}% WIN</div>
       </div>
     `;
 
@@ -675,6 +678,16 @@
     document.getElementById("orgTies").textContent =
       organizationTies;
 
+    const organizationGames =
+      organizationWins + organizationLosses + organizationTies;
+
+    const organizationWinPct = organizationGames === 0
+      ? 0
+      : ((organizationWins + organizationTies * 0.5) / organizationGames) * 100;
+
+    document.getElementById("orgWinPct").textContent =
+      `${organizationWinPct.toFixed(1)}%`;
+
     /*
       Display teams by age group.
     */
@@ -719,4 +732,3 @@
 
 </body>
 </html>
-```
