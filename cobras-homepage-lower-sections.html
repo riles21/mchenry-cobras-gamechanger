@@ -26,10 +26,11 @@ html,body{
 body{overflow-x:hidden}
 .cobras-home{
   width:100%;
-  padding:28px 24px 48px;
+  padding:24px 8px 42px;
 }
 .container{
-  width:min(1320px,100%);
+  width:100%;
+  max-width:none;
   margin:0 auto;
 }
 .section{
@@ -185,6 +186,49 @@ body{overflow-x:hidden}
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:12px;
 }
+
+/* ALL TEAMS / ORGANIZATION SUMMARY */
+.org-summary{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:10px;
+}
+.org-stat{
+  background:#fff;
+  color:#111;
+  border-left:5px solid var(--orange);
+  border-radius:7px;
+  min-height:108px;
+  padding:14px 10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:0 2px 7px rgba(0,0,0,.18);
+}
+.org-stat-value{
+  font-size:30px;
+  line-height:1;
+  font-weight:900;
+}
+.org-stat-label{
+  margin-top:8px;
+  color:#555;
+  font-size:10px;
+  line-height:1.1;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+.org-summary-note{
+  grid-column:1/-1;
+  color:#aaa;
+  text-align:center;
+  font-size:11px;
+  margin-top:2px;
+}
 .team-choice{
   display:flex;
   align-items:center;
@@ -302,12 +346,13 @@ body{overflow-x:hidden}
 
 @media(max-width:900px){
   .events-grid{grid-template-columns:repeat(3,1fr)}
+  .org-summary{grid-template-columns:repeat(3,1fr)}
   .event-card:nth-child(3){border-right:0}
   .event-card:nth-child(n+4){border-top:1px solid rgba(255,255,255,.13)}
   .explore-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:620px){
-  .cobras-home{padding:22px 12px 38px}
+  .cobras-home{padding:20px 8px 34px}
   .section-title{font-size:24px}
   .section-header{align-items:flex-start}
   .section-link{font-size:10px}
@@ -321,6 +366,7 @@ body{overflow-x:hidden}
   .event-name{font-size:14px}
   .team-selector{padding:16px}
   .team-panel{grid-template-columns:1fr}
+  .org-summary{grid-template-columns:repeat(2,1fr)}
   .team-choice{min-height:86px}
   .team-choice-name{font-size:18px}
   .explore-grid{grid-template-columns:1fr 1fr;gap:9px}
@@ -330,6 +376,7 @@ body{overflow-x:hidden}
 }
 @media(max-width:390px){
   .events-grid{grid-template-columns:1fr}
+  .org-summary{grid-template-columns:1fr}
   .event-card,
   .event-card:nth-child(3){border-right:0;border-top:1px solid rgba(255,255,255,.13)}
   .event-card:first-child{border-top:0}
@@ -554,9 +601,65 @@ body{overflow-x:hidden}
 
     const ages = Object.keys(groups).sort((a,b)=>Number(a)-Number(b));
 
-    tabs.innerHTML = ages.map((age,i) =>
-      `<button type="button" class="age-tab${i===0 ? " active" : ""}" data-age="${escapeHtml(age)}">${escapeHtml(age)}U</button>`
-    ).join("");
+    const completedGames = (Array.isArray(feed.events) ? feed.events : [])
+      .filter(e =>
+        e &&
+        e.type === "gamechanger" &&
+        e.gameStatus === "completed" &&
+        teams.some(item => item.key === e.teamKey)
+      );
+
+    let orgW = 0, orgL = 0, orgT = 0;
+    completedGames.forEach(e => {
+      if(e.result === "win") orgW++;
+      else if(e.result === "loss") orgL++;
+      else if(e.result === "tie") orgT++;
+    });
+
+    const orgTotal = orgW + orgL + orgT;
+    const orgPct = orgTotal
+      ? ((orgW + (orgT * 0.5)) / orgTotal).toFixed(3).replace(/^0/, "")
+      : ".000";
+
+    tabs.innerHTML =
+      `<button type="button" class="age-tab active" data-age="ALL">All Teams</button>` +
+      ages.map(age =>
+        `<button type="button" class="age-tab" data-age="${escapeHtml(age)}">${escapeHtml(age)}U</button>`
+      ).join("");
+
+    function showAll(){
+      tabs.querySelectorAll(".age-tab").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.age === "ALL");
+      });
+
+      panel.innerHTML = `
+        <div class="org-summary">
+          <div class="org-stat">
+            <div class="org-stat-value">${teams.length}</div>
+            <div class="org-stat-label">Active Teams</div>
+          </div>
+          <div class="org-stat">
+            <div class="org-stat-value">${orgW}</div>
+            <div class="org-stat-label">Wins</div>
+          </div>
+          <div class="org-stat">
+            <div class="org-stat-value">${orgL}</div>
+            <div class="org-stat-label">Losses</div>
+          </div>
+          <div class="org-stat">
+            <div class="org-stat-value">${orgT}</div>
+            <div class="org-stat-label">Ties</div>
+          </div>
+          <div class="org-stat">
+            <div class="org-stat-value">${orgPct}</div>
+            <div class="org-stat-label">Winning %</div>
+          </div>
+          <div class="org-summary-note">
+            Current organization record across completed games: ${orgW}-${orgL}-${orgT}
+          </div>
+        </div>
+      `;
+    }
 
     function showAge(age){
       tabs.querySelectorAll(".age-tab").forEach(btn => {
@@ -586,10 +689,17 @@ body{overflow-x:hidden}
     }
 
     tabs.querySelectorAll(".age-tab").forEach(btn => {
-      btn.addEventListener("click", () => showAge(btn.dataset.age));
+      btn.addEventListener("click", () => {
+        if(btn.dataset.age === "ALL"){
+          showAll();
+        } else {
+          showAge(btn.dataset.age);
+        }
+      });
     });
 
-    showAge(ages[0]);
+    // Default to the organization-wide view.
+    showAll();
   }
 
   fetch(CALENDAR,{cache:"no-store"})
