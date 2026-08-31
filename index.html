@@ -197,6 +197,11 @@
       font-weight: 900;
       margin-bottom: 10px;
     }
+    .coach-label {
+      color: var(--orange);
+      font-weight: 900;
+    }
+
     .coaches {
       font-size: 16px;
       line-height: 1.35;
@@ -506,7 +511,7 @@
       <div class="team-info">
         <div class="team-name">${escapeHtml(team.name)}</div>
         <div class="coaches">
-          Coaches: ${escapeHtml(coaches || "Coaching staff")}
+          <span class="coach-label">Coaches:</span> ${escapeHtml(coaches || "Coaching staff")}
         </div>
       </div>
 
