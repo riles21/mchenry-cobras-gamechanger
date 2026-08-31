@@ -7,6 +7,10 @@
   <title>McHenry Cobras Baseball</title>
 
   <style>
+    :root {
+      --orange: #ff5a00;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -225,6 +229,19 @@
       padding: 15px;
     }
 
+    .record-line {
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 900;
+      color: #ff5a00;
+      white-space: nowrap;
+    }
+
+    .arrow {
+      color: #ff5a00;
+      font-weight: 900;
+    }
+
     @media (max-width: 900px) {
       body { padding: 18px 12px 50px; }
       h1 { font-size: 34px; }
@@ -234,7 +251,7 @@
       .team-name { font-size: 21px; }
       .coaches { font-size: 13px; }
       .team-record { min-width: 125px; padding-left: 14px; }
-      .record-line { font-size: 25px; }
+      .record-line { font-size: 25px; font-weight: 900; color: #ff5a00; }
     }
 
     @media (max-width: 650px) {
@@ -254,7 +271,7 @@
       .team-name { font-size: 21px; }
       .coaches { font-size: 13px; }
       .team-record { min-width: 115px; padding-left: 12px; }
-      .record-line { font-size: 23px; }
+      .record-line { font-size: 23px; font-weight: 900; color: #ff5a00; }
       .record-caption { font-size: 10px; }
 
     @media (max-width: 390px) {
@@ -262,7 +279,7 @@
       .team-name { font-size: 19px; }
       .coaches { font-size: 12px; }
       .team-record { min-width: 100px; padding-left: 9px; }
-      .record-line { font-size: 20px; }
+      .record-line { font-size: 20px; font-weight: 900; color: #ff5a00; }
     }
   </style>
 </head>
@@ -495,13 +512,7 @@
       team.headCoach,
       ...(team.assistantCoaches || [])
     ].filter(Boolean).join(" · ");
-
-    const totalGames = record.wins + record.losses + record.ties;
-    const winningPct = totalGames === 0
-      ? 0
-      : ((record.wins + record.ties * 0.5) / totalGames) * 100;
-
-    const card = document.createElement("a");
+const card = document.createElement("a");
 
     card.className = "team-card";
 
