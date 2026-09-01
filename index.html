@@ -15,12 +15,21 @@
       box-sizing: border-box;
     }
 
+    html {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       padding: 28px 22px 70px;
       background: #f5f5f5;
       font-family: Arial, Helvetica, sans-serif;
       color: #111;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     .container {
@@ -154,6 +163,8 @@
 
     .age-group {
       margin-bottom: 26px;
+      width: 100%;
+      min-width: 0;
     }
 
     .age-title {
@@ -213,6 +224,8 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      min-width: 0;
+      max-width: 100%;
     }
 
     .loading {
@@ -255,31 +268,136 @@
     }
 
     @media (max-width: 650px) {
-      body { padding: 12px 8px 40px; }
-      .hero { padding: 18px 10px; }
-      h1 { font-size: 27px; }
-      .season { font-size: 19px; }
-      .page-nav { grid-template-columns: 1fr; }
-      .page-nav a { min-height: 47px; font-size: 14px; }
-      .org-record { grid-template-columns: repeat(2, 1fr); gap: 9px; }
-      .record-card { min-height: 96px; padding: 15px 8px; }
-      .record-number { font-size: 31px; }
-      .record-label { font-size: 10px; }
-      .age-title { font-size: 19px; }
-      .teams-grid { grid-template-columns: 1fr; gap: 11px; }
-      .team-card { min-height: 116px; padding: 16px; }
-      .team-name { font-size: 21px; }
-      .coaches { font-size: 13px; }
-      .team-record { min-width: 115px; padding-left: 12px; }
-      .record-line { font-size: 23px; font-weight: 900; color: #ff5a00; }
-      .record-caption { font-size: 10px; }
+      body {
+        padding: 12px 8px 40px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      .hero {
+        padding: 18px 10px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .season {
+        font-size: 19px;
+      }
+
+      .page-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .page-nav a {
+        min-height: 47px;
+        font-size: 14px;
+      }
+
+      .org-record {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+      }
+
+      .record-card {
+        min-height: 96px;
+        padding: 15px 8px;
+      }
+
+      .record-number {
+        font-size: 31px;
+      }
+
+      .record-label {
+        font-size: 10px;
+      }
+
+      .age-title {
+        font-size: 19px;
+      }
+
+      .teams-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+        width: 100%;
+        min-width: 0;
+      }
+
+      /* Mobile team cards stack vertically so the record cannot force
+         horizontal scrolling. */
+      .team-card {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 16px;
+      }
+
+      .team-info {
+        width: 100%;
+        min-width: 0;
+        padding-right: 0;
+      }
+
+      .team-name {
+        font-size: 21px;
+        line-height: 1.15;
+        margin-bottom: 8px;
+      }
+
+      .coaches {
+        font-size: 13px;
+        line-height: 1.45;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        overflow-wrap: anywhere;
+      }
+
+      .team-record {
+        width: 100%;
+        min-width: 0;
+        margin-top: 12px;
+        padding: 10px 0 0;
+        border-top: 1px solid #ddd;
+      }
+
+      .record-line {
+        font-size: 23px;
+        font-weight: 900;
+        color: #ff5a00;
+      }
+
+      .record-caption {
+        font-size: 10px;
+      }
+    }
 
     @media (max-width: 390px) {
-      .team-card { padding: 14px 12px; }
-      .team-name { font-size: 19px; }
-      .coaches { font-size: 12px; }
-      .team-record { min-width: 100px; padding-left: 9px; }
-      .record-line { font-size: 20px; font-weight: 900; color: #ff5a00; }
+      .team-card {
+        padding: 14px 12px;
+      }
+
+      .team-name {
+        font-size: 19px;
+      }
+
+      .coaches {
+        font-size: 12px;
+      }
+
+      .team-record {
+        min-width: 0;
+      }
+
+      .record-line {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
