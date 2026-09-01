@@ -3,7 +3,7 @@
     "id": "451bdb0f-c424-48db-abb7-837a6c001c81",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/da5fe8115c4091a4.jpg"
+      "avatar_url": "logos/cache/807d80a5793787c6.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T00:15:00.000Z",
@@ -26,7 +26,7 @@
     "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
     "opponent_team": {
       "name": "Eagles Elite 14U",
-      "avatar_url": "logos/cache/c6d3bdd0ce0093c6.jpg"
+      "avatar_url": "logos/cache/d654ee28835b88de.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T00:15:00.000Z",
@@ -49,7 +49,7 @@
     "id": "08611e4c-75c6-471b-915d-477272bdff91",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/7ef0e83942eb6220.jpg"
+      "avatar_url": "logos/cache/c6f3237a9c2df8d2.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-31T22:15:00.000Z",
@@ -57,10 +57,28 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "score": {
-      "team": 0,
-      "opponent_team": 2
+      "team": 1,
+      "opponent_team": 3
     },
-    "game_status": "live",
+    "game_status": "completed",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ",
+    "cobras_team_key": "boettcher14u",
+    "cobras_team_name": "14U Boettcher"
+  },
+  {
+    "id": "2db62a27-0001-4dc6-8571-090f050595cd",
+    "opponent_team": {
+      "name": "Lake County Stars Field 14U",
+      "avatar_url": "logos/cache/d5f4473df41f1733.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-04T00:00:00.000Z",
+    "end_ts": "2026-09-04T02:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -123,7 +141,7 @@
     "id": "83f634ae-41a4-4442-9603-94cb58b54816",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/da5fe8115c4091a4.jpg"
+      "avatar_url": "logos/cache/807d80a5793787c6.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-21T22:15:00.000Z",
