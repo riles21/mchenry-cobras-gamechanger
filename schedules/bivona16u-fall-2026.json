@@ -1,5 +1,22 @@
 [
   {
+    "id": "66ca0a59-9b5e-4d74-a8da-23e266f6fb6d",
+    "opponent_team": {
+      "name": "Thunder Select-Gallagher 15u"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-13T19:00:00.000Z",
+    "end_ts": "2026-09-13T21:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "8NGYBcGFasMw",
+    "cobras_team_key": "bivona16u",
+    "cobras_team_name": "16U Bivona"
+  },
+  {
     "id": "6f432b97-93cf-4aec-acc8-1cfebd9bf35c",
     "opponent_team": {
       "name": "Woodstock Heat 16U"
