@@ -3,7 +3,7 @@
     "id": "451bdb0f-c424-48db-abb7-837a6c001c81",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/52b3c96827d2d4a1.jpg"
+      "avatar_url": "logos/cache/2c170170888b666b.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T00:15:00.000Z",
@@ -26,7 +26,7 @@
     "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
     "opponent_team": {
       "name": "Eagles Elite 14U",
-      "avatar_url": "logos/cache/cec36b27dc196652.jpg"
+      "avatar_url": "logos/cache/dbc7b171a8efbf9b.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T00:15:00.000Z",
@@ -49,7 +49,7 @@
     "id": "08611e4c-75c6-471b-915d-477272bdff91",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/9bffe183368c1523.jpg"
+      "avatar_url": "logos/cache/ae0084a0b1ecdd3f.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-31T22:15:00.000Z",
@@ -72,7 +72,7 @@
     "id": "2db62a27-0001-4dc6-8571-090f050595cd",
     "opponent_team": {
       "name": "Lake County Stars Field 14U",
-      "avatar_url": "logos/cache/60f465855db69318.jpg"
+      "avatar_url": "logos/cache/ca052730fd14ac17.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-04T00:00:00.000Z",
@@ -141,7 +141,7 @@
     "id": "83f634ae-41a4-4442-9603-94cb58b54816",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/52b3c96827d2d4a1.jpg"
+      "avatar_url": "logos/cache/2c170170888b666b.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-21T22:15:00.000Z",
@@ -195,8 +195,8 @@
       "name": "Bennieboys 14"
     },
     "is_full_day": false,
-    "start_ts": "2026-10-10T18:00:00.000Z",
-    "end_ts": "2026-10-10T20:00:00.000Z",
+    "start_ts": "2026-10-11T18:00:00.000Z",
+    "end_ts": "2026-10-11T20:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
@@ -212,8 +212,8 @@
       "name": "Bennieboys 14"
     },
     "is_full_day": false,
-    "start_ts": "2026-10-10T20:00:00.000Z",
-    "end_ts": "2026-10-10T22:00:00.000Z",
+    "start_ts": "2026-10-11T20:00:00.000Z",
+    "end_ts": "2026-10-11T22:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
