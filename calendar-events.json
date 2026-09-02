@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-01T23:04:45.570Z",
+  "generatedAt": "2026-09-02T05:04:50.757Z",
   "cobrasSeason": "2026-27 Season",
   "activeGameChangerSeasons": [
     "Fall 2026"
   ],
-  "eventCount": 211,
+  "eventCount": 212,
   "eventCounts": {
     "gamechanger": 101,
     "organization": 5,
-    "indoor": 58,
-    "practice": 47
+    "indoor": 60,
+    "practice": 46
   },
   "events": [
     {
@@ -30,7 +30,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "451bdb0f-c424-48db-abb7-837a6c001c81",
-      "opponentLogo": "logos/cache/46f5203d89a731f1.jpg"
+      "opponentLogo": "logos/cache/a6d46e66ca966df4.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-91d70c9c-7cbc-4446-a5d3-25ded996cadc",
@@ -50,7 +50,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
-      "opponentLogo": "logos/cache/6dbf5189e7209ac7.jpg"
+      "opponentLogo": "logos/cache/5748856f698b37f3.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-f841b34f-56be-43d8-ab63-6adaf268f159",
@@ -70,7 +70,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "f841b34f-56be-43d8-ab63-6adaf268f159",
-      "opponentLogo": "logos/cache/9ebd33a7ff1cdc2b.jpg"
+      "opponentLogo": "logos/cache/80babe02b2c1d18b.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
@@ -90,7 +90,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
-      "opponentLogo": "logos/cache/85c00039201af590.jpg"
+      "opponentLogo": "logos/cache/f9b15b92e8b1101c.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-83f3a129-7360-40e4-9a05-b4393b986b93",
@@ -110,7 +110,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "83f3a129-7360-40e4-9a05-b4393b986b93",
-      "opponentLogo": "logos/cache/6a7a9d4869299c20.jpg"
+      "opponentLogo": "logos/cache/be35e617c13ace59.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
@@ -150,7 +150,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "07fea401-9542-4620-933a-8162e92592dd",
-      "opponentLogo": "logos/cache/e043ea991ac10ec8.jpg"
+      "opponentLogo": "logos/cache/5d8f03253527d84a.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
@@ -190,7 +190,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "83c18318-19fb-45a6-8286-32937e270604",
-      "opponentLogo": "logos/cache/39796bc444cac5fa.jpg"
+      "opponentLogo": "logos/cache/5df2ab7089ae815f.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-08611e4c-75c6-471b-915d-477272bdff91",
@@ -210,24 +210,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "08611e4c-75c6-471b-915d-477272bdff91",
-      "opponentLogo": "logos/cache/857f58045956fb8e.jpg"
-    },
-    {
-      "id": "sportsconnect-46886873",
-      "type": "practice",
-      "title": "Cobras Deubel 8U Practice",
-      "start": "2026-09-01T17:30:01",
-      "end": "2026-09-01T19:00:01",
-      "timezone": "America/Chicago",
-      "teamName": "Cobras Deubel 8U",
-      "teamKey": "",
-      "location": "VFW - Pinto Field",
-      "category": "Outdoor Practice",
-      "description": "Outdoor practice at VFW - Pinto Field.",
-      "source": "Sports Connect",
-      "sportsConnectEventId": "40107087",
-      "sportsConnectMatchId": "46886873",
-      "sportsConnectTeamId": "41628517"
+      "opponentLogo": "logos/cache/7235fb2d7509831b.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-46997580-1fae-4bc2-bcf2-478ccb73648a",
@@ -240,14 +223,14 @@
       "teamName": "12U Lorenz",
       "opponent": "Grayslake Coyotes 12U",
       "homeAway": "away",
-      "gameStatus": "",
-      "teamScore": null,
-      "opponentScore": null,
-      "result": null,
+      "gameStatus": "completed",
+      "teamScore": 2,
+      "opponentScore": 21,
+      "result": "loss",
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "46997580-1fae-4bc2-bcf2-478ccb73648a",
-      "opponentLogo": "logos/cache/b424cf76436bd242.jpg"
+      "opponentLogo": "logos/cache/6dbd030ecfd8a34e.jpg"
     },
     {
       "id": "sportsconnect-46919403",
@@ -301,7 +284,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
-      "opponentLogo": "logos/cache/a4ea4e9583dfaf91.jpg"
+      "opponentLogo": "logos/cache/221efcdbf469bb38.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
@@ -321,7 +304,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "b4b23b4b-4c6b-4945-a2b2-4f7c749fdaa5",
-      "opponentLogo": "logos/cache/2849998d924ed473.jpg"
+      "opponentLogo": "logos/cache/da36f4fd6238a3bb.jpg"
     },
     {
       "id": "sportsconnect-46886907",
@@ -375,7 +358,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "2db62a27-0001-4dc6-8571-090f050595cd",
-      "opponentLogo": "logos/cache/5f7c68498134bdac.jpg"
+      "opponentLogo": "logos/cache/fed1f25029e7896d.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-ce2e7fc3-c071-410c-a2fb-8f5af371c291",
@@ -435,7 +418,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
-      "opponentLogo": "logos/cache/3f83de11b904f714.jpg"
+      "opponentLogo": "logos/cache/3cb4489e52987b94.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-5b127abf-997e-43d1-a8b0-68b7cde64e3f",
@@ -495,7 +478,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
-      "opponentLogo": "logos/cache/07c2a69f972c0dc0.jpg"
+      "opponentLogo": "logos/cache/e20d50ef8701e5fd.jpg"
     },
     {
       "id": "sportsconnect-46919406",
@@ -657,7 +640,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
-      "opponentLogo": "logos/cache/349ef317cb2c75c8.jpg"
+      "opponentLogo": "logos/cache/e71f9955c5750a25.jpg"
     },
     {
       "id": "sportsconnect-46886908",
@@ -751,7 +734,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
-      "opponentLogo": "logos/cache/6c553212d8bac5d5.jpg"
+      "opponentLogo": "logos/cache/fb541e31784b0844.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-6448386f-512d-4302-a4ad-fc679e2e6f96",
@@ -811,7 +794,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
-      "opponentLogo": "logos/cache/21b9edcc16b6208c.jpg"
+      "opponentLogo": "logos/cache/5dee04048acb5dc1.jpg"
     },
     {
       "id": "sportsconnect-46919407",
@@ -848,7 +831,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "88a47f45-97ca-47a1-baa5-bee83abaf32e",
-      "opponentLogo": "logos/cache/72bf2f618cbf8bae.jpg"
+      "opponentLogo": "logos/cache/78edad9725d60ca8.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-ba903b67-c281-4478-9044-5affd5b3dbd9",
@@ -868,7 +851,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "ba903b67-c281-4478-9044-5affd5b3dbd9",
-      "opponentLogo": "logos/cache/38533f98d1d33100.jpg"
+      "opponentLogo": "logos/cache/7dbe16d5e6cead13.jpg"
     },
     {
       "id": "bivona16u-Fall 2026-66ca0a59-9b5e-4d74-a8da-23e266f6fb6d",
@@ -908,7 +891,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "6d750b37-620f-4c79-accc-08fe3828203b",
-      "opponentLogo": "logos/cache/5fb10a22ae860e69.jpg"
+      "opponentLogo": "logos/cache/9782306b1f6ab1b8.jpg"
     },
     {
       "id": "sportsconnect-46923274",
@@ -979,7 +962,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
-      "opponentLogo": "logos/cache/b3fa337c7aac0ff9.jpg"
+      "opponentLogo": "logos/cache/944f2d4dc153bf13.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -1036,7 +1019,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
-      "opponentLogo": "logos/cache/272d98b5ca67132f.jpg"
+      "opponentLogo": "logos/cache/e0da27f6f72bf831.jpg"
     },
     {
       "id": "sportsconnect-46886909",
@@ -1110,7 +1093,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "437f090e-d748-4588-8e84-b57190465519",
-      "opponentLogo": "logos/cache/2e0f08db28c079f3.jpg"
+      "opponentLogo": "logos/cache/94db2424e35b715b.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
@@ -1150,7 +1133,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "fe880c8c-78dc-478e-bc60-1895b491c61c",
-      "opponentLogo": "logos/cache/5508709e47824218.jpg"
+      "opponentLogo": "logos/cache/7b9a58ad7ba9ab09.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-a82a8d53-deb2-4999-967f-0abd1a4a0858",
@@ -1190,7 +1173,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "7f7155e3-7615-4df3-8f76-d076226b3814",
-      "opponentLogo": "logos/cache/d0d37c12377703cf.jpg"
+      "opponentLogo": "logos/cache/2df9eb9ec6dd306a.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
@@ -1210,7 +1193,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
-      "opponentLogo": "logos/cache/6dbf5189e7209ac7.jpg"
+      "opponentLogo": "logos/cache/5748856f698b37f3.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-44ac610f-e442-401e-8837-f41476558b9f",
@@ -1290,7 +1273,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
-      "opponentLogo": "logos/cache/272d98b5ca67132f.jpg"
+      "opponentLogo": "logos/cache/e0da27f6f72bf831.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-9d20219d-0c09-4496-afea-f47e77eb204c",
@@ -1310,7 +1293,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "9d20219d-0c09-4496-afea-f47e77eb204c",
-      "opponentLogo": "logos/cache/becdd533dc34b0cd.jpg"
+      "opponentLogo": "logos/cache/177fa6cdb2cca316.jpg"
     },
     {
       "id": "bivona16u-Fall 2026-6f432b97-93cf-4aec-acc8-1cfebd9bf35c",
@@ -1367,7 +1350,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
-      "opponentLogo": "logos/cache/88993188c27114d6.jpg"
+      "opponentLogo": "logos/cache/a8e9755d55b39a07.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -1407,7 +1390,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
-      "opponentLogo": "logos/cache/015fba88c93cd45c.jpg"
+      "opponentLogo": "logos/cache/c2c79a5cb44b9acb.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-f2a96aff-c718-4939-9267-e3cf8f9e948d",
@@ -1481,7 +1464,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "83f634ae-41a4-4442-9603-94cb58b54816",
-      "opponentLogo": "logos/cache/46f5203d89a731f1.jpg"
+      "opponentLogo": "logos/cache/a6d46e66ca966df4.jpg"
     },
     {
       "id": "sportsconnect-46886876",
@@ -1555,7 +1538,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "eceb4335-36c3-4b63-a277-b64f824ad009",
-      "opponentLogo": "logos/cache/015fba88c93cd45c.jpg"
+      "opponentLogo": "logos/cache/c2c79a5cb44b9acb.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-c920f9a3-b7d1-44d0-a141-42d994704f87",
@@ -1575,7 +1558,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "c920f9a3-b7d1-44d0-a141-42d994704f87",
-      "opponentLogo": "logos/cache/cdc5cf2865a1911b.jpg"
+      "opponentLogo": "logos/cache/2dfcd8bf16bb47c7.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
@@ -1595,7 +1578,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
-      "opponentLogo": "logos/cache/349ef317cb2c75c8.jpg"
+      "opponentLogo": "logos/cache/e71f9955c5750a25.jpg"
     },
     {
       "id": "sportsconnect-46886910",
@@ -1669,7 +1652,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
-      "opponentLogo": "logos/cache/fc0e3a9cc62950eb.jpg"
+      "opponentLogo": "logos/cache/b41dd008abd14703.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-4a16f24d-1882-4966-bb55-ae758d57aac8",
@@ -1689,7 +1672,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "4a16f24d-1882-4966-bb55-ae758d57aac8",
-      "opponentLogo": "logos/cache/5a2bba18a1db2bba.jpg"
+      "opponentLogo": "logos/cache/792ed34089f73aa9.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-53543ffc-3b9d-4356-8c0c-78823bdb3018",
@@ -1709,7 +1692,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
-      "opponentLogo": "logos/cache/5094bc3b67cc1e13.jpg"
+      "opponentLogo": "logos/cache/da6af52a5676a0c2.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-72caae43-c7cf-4487-9669-241a233cb33d",
@@ -1729,7 +1712,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "72caae43-c7cf-4487-9669-241a233cb33d",
-      "opponentLogo": "logos/cache/a0ea822656e01ee6.jpg"
+      "opponentLogo": "logos/cache/3647bb5f628620e5.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-b450590e-59e3-4429-b7e8-c0b35fbfde3c",
@@ -1749,7 +1732,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
-      "opponentLogo": "logos/cache/6c553212d8bac5d5.jpg"
+      "opponentLogo": "logos/cache/fb541e31784b0844.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-fa6f1770-1db4-4815-912b-c4e02db153d0",
@@ -1829,7 +1812,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "2bfa8776-272a-4c04-80d3-9e90371e4516",
-      "opponentLogo": "logos/cache/2e0f08db28c079f3.jpg"
+      "opponentLogo": "logos/cache/94db2424e35b715b.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-56880f21-1ced-4b64-baf7-8ae58e819ddd",
@@ -1849,7 +1832,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
-      "opponentLogo": "logos/cache/5a209bde05404a97.jpg"
+      "opponentLogo": "logos/cache/4c725e05a48c5a87.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-59b93419-8a14-46e6-b967-86924d1764e1",
@@ -1869,7 +1852,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "59b93419-8a14-46e6-b967-86924d1764e1",
-      "opponentLogo": "logos/cache/5fb10a22ae860e69.jpg"
+      "opponentLogo": "logos/cache/9782306b1f6ab1b8.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-8aaa56bf-083b-49b5-985a-73a9f1214c08",
@@ -1889,7 +1872,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
-      "opponentLogo": "logos/cache/2849998d924ed473.jpg"
+      "opponentLogo": "logos/cache/da36f4fd6238a3bb.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ccce8207-ae64-49d8-9bd7-529234d58d1e",
@@ -1909,7 +1892,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
-      "opponentLogo": "logos/cache/21b9edcc16b6208c.jpg"
+      "opponentLogo": "logos/cache/5dee04048acb5dc1.jpg"
     },
     {
       "id": "sportsconnect-46923276",
@@ -2071,7 +2054,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
-      "opponentLogo": "logos/cache/f5b249430c901118.jpg"
+      "opponentLogo": "logos/cache/059d5f9506cfea6c.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
@@ -2091,7 +2074,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
-      "opponentLogo": "logos/cache/80ab6f958c5550b3.jpg"
+      "opponentLogo": "logos/cache/aed812558f8f34c7.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-88d86fba-6f3c-48f4-80bd-f63a8f87fa75",
@@ -2131,7 +2114,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "227ec302-4bea-4848-a091-dde93f4a545d",
-      "opponentLogo": "logos/cache/e778bd489269a807.jpg"
+      "opponentLogo": "logos/cache/5034cfadf4abfabe.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-45a075d7-adc1-4a55-9e48-479b1f4034f9",
@@ -2151,7 +2134,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
-      "opponentLogo": "logos/cache/30404dcb0b9a5aa0.jpg"
+      "opponentLogo": "logos/cache/3edf89e1097ad888.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-b916f2f1-2955-4ed4-9409-73500ee3c184",
@@ -2171,7 +2154,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "b916f2f1-2955-4ed4-9409-73500ee3c184",
-      "opponentLogo": "logos/cache/37492b9b9f03e798.jpg"
+      "opponentLogo": "logos/cache/e9bb1b37bddd194b.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
@@ -2191,7 +2174,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
-      "opponentLogo": "logos/cache/648c842b7bdf65b4.jpg"
+      "opponentLogo": "logos/cache/e6402e046ca0a9ef.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-25878a9e-959a-45d6-9131-d6fb1149a4e8",
@@ -2299,7 +2282,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
-      "opponentLogo": "logos/cache/a4ea4e9583dfaf91.jpg"
+      "opponentLogo": "logos/cache/221efcdbf469bb38.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-b1c63fea-4b07-4e89-baf9-84f4a5877e65",
@@ -2319,7 +2302,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jo418sCgCDyw",
       "gameChangerGameId": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
-      "opponentLogo": "logos/cache/b824ad594307892e.jpg"
+      "opponentLogo": "logos/cache/e2c591979c961c62.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -2413,7 +2396,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "726ff682-4280-444e-97bd-716dd66eee54",
-      "opponentLogo": "logos/cache/fc9af54088c372e8.jpg"
+      "opponentLogo": "logos/cache/a50d66097ac35585.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
@@ -2433,7 +2416,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
-      "opponentLogo": "logos/cache/e6e284a22e9cfeb8.jpg"
+      "opponentLogo": "logos/cache/313bf8a412e15991.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
@@ -2661,7 +2644,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "0fc0ad11-dafe-491e-802b-4679f59c96b4",
-      "opponentLogo": "logos/cache/cdc5cf2865a1911b.jpg"
+      "opponentLogo": "logos/cache/2dfcd8bf16bb47c7.jpg"
     },
     {
       "id": "sportsconnect-46925757",
@@ -2698,7 +2681,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "4d231ff4-0208-4cb5-9726-9bdb75311377",
-      "opponentLogo": "logos/cache/2d8c78d4728cb21f.jpg"
+      "opponentLogo": "logos/cache/45fcdbf6306fc9dc.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-5377af70-7917-48a5-a0d3-b700c4c425db",
@@ -2718,7 +2701,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "5377af70-7917-48a5-a0d3-b700c4c425db",
-      "opponentLogo": "logos/cache/4699e73484bdb681.jpg"
+      "opponentLogo": "logos/cache/75afa437dc9e0f76.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ea2af42c-3a0a-4f4e-b500-f4043dad696c",
@@ -2758,7 +2741,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "d2917d60-4c74-48b9-8e92-c5639c7285da",
-      "opponentLogo": "logos/cache/b158abe2102b116b.jpg"
+      "opponentLogo": "logos/cache/c5cf090956f5cea4.jpg"
     },
     {
       "id": "sportsconnect-46923279",
@@ -2829,7 +2812,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "4cfbf7f9-f768-40e5-ba34-dee0938ea21e",
-      "opponentLogo": "logos/cache/c443d87bc8f27f0b.jpg"
+      "opponentLogo": "logos/cache/eea5ca76deb88d0a.jpg"
     },
     {
       "id": "allbooked-119526646_639291384000000000",
@@ -3700,6 +3683,36 @@
       "description": "15U Dean (All Tunnels (Team))",
       "source": "AllBooked",
       "allBookedUid": "119526788_639317700000000000"
+    },
+    {
+      "id": "allbooked-119526795_639318492000000000",
+      "type": "indoor",
+      "title": "16U Bivona",
+      "start": "2026-12-02T17:00:00-06:00",
+      "end": "2026-12-02T19:00:00-06:00",
+      "teamKey": "bivona16u",
+      "teamName": "16U Bivona",
+      "location": "McHenry Cobras Indoor Facility",
+      "space": "All Tunnels",
+      "category": "Indoor Facility",
+      "description": "16U Bivona (All Tunnels (Team))",
+      "source": "AllBooked",
+      "allBookedUid": "119526795_639318492000000000"
+    },
+    {
+      "id": "allbooked-119526800_639318564000000000",
+      "type": "indoor",
+      "title": "17U Deubel",
+      "start": "2026-12-02T19:00:00-06:00",
+      "end": "2026-12-02T21:00:00-06:00",
+      "teamKey": "deubel17u",
+      "teamName": "17U Deubel",
+      "location": "McHenry Cobras Indoor Facility",
+      "space": "All Tunnels",
+      "category": "Indoor Facility",
+      "description": "17U Deubel (All Tunnels (Team))",
+      "source": "AllBooked",
+      "allBookedUid": "119526800_639318564000000000"
     },
     {
       "id": "uniform-fitting-2026",
