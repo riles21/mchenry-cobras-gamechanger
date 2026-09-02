@@ -22,8 +22,8 @@
       "name": "Woodstock Heat 16U"
     },
     "is_full_day": false,
-    "start_ts": "2026-09-20T00:00:00.000Z",
-    "end_ts": "2026-09-20T02:00:00.000Z",
+    "start_ts": "2026-09-19T16:00:00.000Z",
+    "end_ts": "2026-09-19T18:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
     "has_videos_available": false,
