@@ -22,27 +22,10 @@
     "cobras_team_name": "13U Baillargeon"
   },
   {
-    "id": "5b127abf-997e-43d1-a8b0-68b7cde64e3f",
-    "opponent_team": {
-      "name": "Lake Villa Eagles 13U"
-    },
-    "is_full_day": false,
-    "start_ts": "2026-09-05T00:15:00.000Z",
-    "end_ts": "2026-09-05T02:15:00.000Z",
-    "timezone": "America/Chicago",
-    "home_away": "away",
-    "has_videos_available": false,
-    "has_live_stream": false,
-    "cobras_gamechanger_season": "Fall 2026",
-    "cobras_gamechanger_team_id": "kTpmcwbSxdDR",
-    "cobras_team_key": "baillargeon13u",
-    "cobras_team_name": "13U Baillargeon"
-  },
-  {
     "id": "fe880c8c-78dc-478e-bc60-1895b491c61c",
     "opponent_team": {
       "name": "Top Tier Mc 13u Brunschon",
-      "avatar_url": "logos/cache/4e5bd245f0a4f07e.jpg"
+      "avatar_url": "logos/cache/39e98b20df740761.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T22:30:00.000Z",
@@ -60,7 +43,7 @@
     "id": "4a16f24d-1882-4966-bb55-ae758d57aac8",
     "opponent_team": {
       "name": "SBA Raiders 13u - Hedrick",
-      "avatar_url": "logos/cache/9f1e9325d4e7fdef.jpg"
+      "avatar_url": "logos/cache/8b3f1c4a0dc33aaf.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T22:30:00.000Z",
@@ -78,7 +61,7 @@
     "id": "b916f2f1-2955-4ed4-9409-73500ee3c184",
     "opponent_team": {
       "name": "Wauconda Wreckers - Fall 26’ - 13U",
-      "avatar_url": "logos/cache/3c2c25e2a09a4420.jpg"
+      "avatar_url": "logos/cache/2637f2c3ed33d07e.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-03T00:30:00.000Z",
