@@ -316,7 +316,7 @@ body{overflow-x:hidden}
         <div class="eyebrow">What's Happening</div>
         <h2 class="section-title">Upcoming <span>Cobras Events</span></h2>
       </div>
-      <a class="section-link" href="https://riles210.wixsite.com/mchenrycobras2027/calendars" target="_blank" rel="noopener">View Full Calendar →</a>
+      <a class="section-link" href="https://riles210.wixsite.com/mchenrycobras2027/calendars" onclick="window.top.location.href=this.href; return false;">View Full Calendar →</a>
     </div>
 
     <div class="events-panel">
@@ -335,7 +335,7 @@ body{overflow-x:hidden}
         <div class="eyebrow">Find Your Team</div>
         <h2 class="section-title">Follow Your <span>Cobras</span></h2>
       </div>
-      <a class="section-link" href="https://riles210.wixsite.com/mchenrycobras2027/teams" target="_blank" rel="noopener">All Teams →</a>
+      <a class="section-link" href="https://riles210.wixsite.com/mchenrycobras2027/teams" onclick="window.top.location.href=this.href; return false;">All Teams →</a>
     </div>
 
     <div class="team-selector">
@@ -430,7 +430,7 @@ body{overflow-x:hidden}
         : "https://riles210.wixsite.com/mchenrycobras2027/calendars";
 
       return `
-        <a class="event-card" href="${href}" target="_blank" rel="noopener">
+        <a class="event-card" href="${href}" onclick="window.top.location.href=this.href; return false;">
           <div class="event-date">${escapeHtml(d.weekday)}</div>
           <div class="event-day">${escapeHtml(d.day)}</div>
           <div class="event-month">${escapeHtml(d.month)} ${escapeHtml(localDate(e.start).getFullYear())}</div>
