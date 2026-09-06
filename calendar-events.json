@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-05T23:04:34.546Z",
+  "generatedAt": "2026-09-06T05:05:05.971Z",
   "cobrasSeason": "2026-27 Season",
   "activeGameChangerSeasons": [
     "Fall 2026"
   ],
-  "eventCount": 214,
+  "eventCount": 216,
   "eventCounts": {
     "gamechanger": 102,
     "organization": 5,
-    "indoor": 65,
+    "indoor": 67,
     "practice": 42
   },
   "events": [
@@ -30,7 +30,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "451bdb0f-c424-48db-abb7-837a6c001c81",
-      "opponentLogo": "logos/cache/bcf265bc842901b6.jpg"
+      "opponentLogo": "logos/cache/807270994c584cd4.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-91d70c9c-7cbc-4446-a5d3-25ded996cadc",
@@ -50,7 +50,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "91d70c9c-7cbc-4446-a5d3-25ded996cadc",
-      "opponentLogo": "logos/cache/c980766e1118fdbf.jpg"
+      "opponentLogo": "logos/cache/9f8cfd1d31c68fd5.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-f841b34f-56be-43d8-ab63-6adaf268f159",
@@ -70,7 +70,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "f841b34f-56be-43d8-ab63-6adaf268f159",
-      "opponentLogo": "logos/cache/b39f9e9d510d74ae.jpg"
+      "opponentLogo": "logos/cache/3da52802365e35c3.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
@@ -90,7 +90,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
-      "opponentLogo": "logos/cache/8a0bde2b1719a698.jpg"
+      "opponentLogo": "logos/cache/835f67ad80ca5ba1.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-83f3a129-7360-40e4-9a05-b4393b986b93",
@@ -110,7 +110,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "83f3a129-7360-40e4-9a05-b4393b986b93",
-      "opponentLogo": "logos/cache/47b3aac838fc081b.jpg"
+      "opponentLogo": "logos/cache/4b5254aca81c8027.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-c18c2512-3a67-4dd5-b2f0-0fe4f529e06c",
@@ -150,7 +150,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "07fea401-9542-4620-933a-8162e92592dd",
-      "opponentLogo": "logos/cache/a9cce70d4fb7e52c.jpg"
+      "opponentLogo": "logos/cache/73706d37f52ccae6.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-18dbb7f2-0cda-4f18-8d3f-6b8adca961d5",
@@ -190,7 +190,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "83c18318-19fb-45a6-8286-32937e270604",
-      "opponentLogo": "logos/cache/1aa1cc52d578e9bb.jpg"
+      "opponentLogo": "logos/cache/7727c343c375b491.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-08611e4c-75c6-471b-915d-477272bdff91",
@@ -210,7 +210,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "08611e4c-75c6-471b-915d-477272bdff91",
-      "opponentLogo": "logos/cache/a1703f8ff6da51d4.jpg"
+      "opponentLogo": "logos/cache/f1d0e2f35d079fe2.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-46997580-1fae-4bc2-bcf2-478ccb73648a",
@@ -230,7 +230,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "46997580-1fae-4bc2-bcf2-478ccb73648a",
-      "opponentLogo": "logos/cache/a76b7e47caffabbf.jpg"
+      "opponentLogo": "logos/cache/60af640cacf8e839.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-2e9ad7d0-ab31-4f4a-b85c-b320920e1c4e",
@@ -250,7 +250,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "2e9ad7d0-ab31-4f4a-b85c-b320920e1c4e",
-      "opponentLogo": "logos/cache/d63030f3a1457d25.jpg"
+      "opponentLogo": "logos/cache/2aad361d22aaade5.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-2db62a27-0001-4dc6-8571-090f050595cd",
@@ -270,7 +270,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "2db62a27-0001-4dc6-8571-090f050595cd",
-      "opponentLogo": "logos/cache/097270e026b8e58a.jpg"
+      "opponentLogo": "logos/cache/27325c79ca84b6fb.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-ce2e7fc3-c071-410c-a2fb-8f5af371c291",
@@ -330,7 +330,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
-      "opponentLogo": "logos/cache/0542721365c4a560.jpg"
+      "opponentLogo": "logos/cache/9fc1f30c520b4942.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-4799af12-76fe-429f-890c-cafc4d653264",
@@ -370,7 +370,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
-      "opponentLogo": "logos/cache/3ce46421279e39bf.jpg"
+      "opponentLogo": "logos/cache/a703ea65abd22038.jpg"
     },
     {
       "id": "sportsconnect-46919406",
@@ -552,7 +552,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
-      "opponentLogo": "logos/cache/6ddcca5b4c0b94f0.jpg"
+      "opponentLogo": "logos/cache/850af9ea08e55891.jpg"
     },
     {
       "id": "sportsconnect-46886908",
@@ -626,7 +626,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
-      "opponentLogo": "logos/cache/ca7f1560a52ccb85.jpg"
+      "opponentLogo": "logos/cache/f4494d9f53cfee08.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-6448386f-512d-4302-a4ad-fc679e2e6f96",
@@ -671,13 +671,13 @@
     {
       "id": "meraz12u-Fall 2026-db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
       "type": "gamechanger",
-      "title": "12U Meraz vs Elite NW 12U Milazzo",
+      "title": "12U Meraz vs EBT Northwest Milazzo 12u",
       "start": "2026-09-12T00:30:00.000Z",
       "end": "2026-09-12T02:30:00.000Z",
       "timezone": "America/Chicago",
       "teamKey": "meraz12u",
       "teamName": "12U Meraz",
-      "opponent": "Elite NW 12U Milazzo",
+      "opponent": "EBT Northwest Milazzo 12u",
       "homeAway": "home",
       "gameStatus": "",
       "teamScore": null,
@@ -686,7 +686,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "db7a1b26-9e77-4536-ad22-46e14e5dfa1b",
-      "opponentLogo": "logos/cache/8eb807064cba558f.jpg"
+      "opponentLogo": "logos/cache/02e9773a3513b1d3.jpg"
     },
     {
       "id": "sportsconnect-46919407",
@@ -723,7 +723,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "88a47f45-97ca-47a1-baa5-bee83abaf32e",
-      "opponentLogo": "logos/cache/2d1ef1dc0eac7d59.jpg"
+      "opponentLogo": "logos/cache/0e7ea5e46aaeba8c.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-ba903b67-c281-4478-9044-5affd5b3dbd9",
@@ -743,7 +743,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "ba903b67-c281-4478-9044-5affd5b3dbd9",
-      "opponentLogo": "logos/cache/055b166e948a241f.jpg"
+      "opponentLogo": "logos/cache/60ae6c170d4db1d6.jpg"
     },
     {
       "id": "bivona16u-Fall 2026-66ca0a59-9b5e-4d74-a8da-23e266f6fb6d",
@@ -783,7 +783,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "6d750b37-620f-4c79-accc-08fe3828203b",
-      "opponentLogo": "logos/cache/87521a374e0a7358.jpg"
+      "opponentLogo": "logos/cache/68fb7fc7bab359de.jpg"
     },
     {
       "id": "sportsconnect-46923274",
@@ -854,7 +854,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "553fa9fd-eaf8-47c4-a8d0-cdd558896fe1",
-      "opponentLogo": "logos/cache/1656abd972b58296.jpg"
+      "opponentLogo": "logos/cache/b713fb5ada84e6f9.jpg"
     },
     {
       "id": "boettcher14u-Fall 2026-ddf54119-c5fa-43f3-84b8-e0a46611c07a",
@@ -911,18 +911,18 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
-      "opponentLogo": "logos/cache/cef10f199dc6eb71.jpg"
+      "opponentLogo": "logos/cache/fa7c4e9f1db50bd1.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-f30a2ae3-e039-4ed3-8687-65c7ed97944d",
       "type": "gamechanger",
-      "title": "12U Lorenz vs Elite NW 12U Milazzo",
+      "title": "12U Lorenz vs EBT Northwest Milazzo 12u",
       "start": "2026-09-17T00:30:00.000Z",
       "end": "2026-09-17T02:15:00.000Z",
       "timezone": "America/New_York",
       "teamKey": "lorenz12u",
       "teamName": "12U Lorenz",
-      "opponent": "Elite NW 12U Milazzo",
+      "opponent": "EBT Northwest Milazzo 12u",
       "homeAway": "home",
       "gameStatus": "",
       "teamScore": null,
@@ -931,7 +931,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
-      "opponentLogo": "logos/cache/61345236982ac91e.jpg"
+      "opponentLogo": "logos/cache/f560fab05d1a4e64.jpg"
     },
     {
       "id": "sportsconnect-46886909",
@@ -1005,7 +1005,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "437f090e-d748-4588-8e84-b57190465519",
-      "opponentLogo": "logos/cache/d5ecb009a72161ca.jpg"
+      "opponentLogo": "logos/cache/928e77c9311fcd22.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-aeabd766-ff62-4696-9a04-7ed92d9d6fc2",
@@ -1045,7 +1045,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "fe880c8c-78dc-478e-bc60-1895b491c61c",
-      "opponentLogo": "logos/cache/7e12f9e0b110f5da.jpg"
+      "opponentLogo": "logos/cache/29df6c254d120a92.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-a82a8d53-deb2-4999-967f-0abd1a4a0858",
@@ -1085,7 +1085,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "7f7155e3-7615-4df3-8f76-d076226b3814",
-      "opponentLogo": "logos/cache/ee73c7ef49016fd4.jpg"
+      "opponentLogo": "logos/cache/aa9ab3a381e9e3c0.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
@@ -1105,7 +1105,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "2ec5e07a-99f9-4e9e-99d5-64d3f35e0e53",
-      "opponentLogo": "logos/cache/c980766e1118fdbf.jpg"
+      "opponentLogo": "logos/cache/9f8cfd1d31c68fd5.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-44ac610f-e442-401e-8837-f41476558b9f",
@@ -1190,13 +1190,13 @@
     {
       "id": "lorenz12u-Fall 2026-abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
       "type": "gamechanger",
-      "title": "12U Lorenz vs Elite NW 12U Milazzo",
+      "title": "12U Lorenz vs EBT Northwest Milazzo 12u",
       "start": "2026-09-19T22:00:00.000Z",
       "end": "2026-09-19T23:45:00.000Z",
       "timezone": "America/New_York",
       "teamKey": "lorenz12u",
       "teamName": "12U Lorenz",
-      "opponent": "Elite NW 12U Milazzo",
+      "opponent": "EBT Northwest Milazzo 12u",
       "homeAway": "away",
       "gameStatus": "",
       "teamScore": null,
@@ -1205,18 +1205,18 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "abef9ce1-dfd9-49ed-8f2b-1ceeaf7259b1",
-      "opponentLogo": "logos/cache/61345236982ac91e.jpg"
+      "opponentLogo": "logos/cache/f560fab05d1a4e64.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-9d20219d-0c09-4496-afea-f47e77eb204c",
       "type": "gamechanger",
-      "title": "12U Lorenz vs Elite NW 12U Clouse",
+      "title": "12U Lorenz vs EBT Northwest Clouse 12U",
       "start": "2026-09-20T00:00:00.000Z",
       "end": "2026-09-20T01:45:00.000Z",
       "timezone": "America/New_York",
       "teamKey": "lorenz12u",
       "teamName": "12U Lorenz",
-      "opponent": "Elite NW 12U Clouse",
+      "opponent": "EBT Northwest Clouse 12U",
       "homeAway": "away",
       "gameStatus": "",
       "teamScore": null,
@@ -1225,7 +1225,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "9d20219d-0c09-4496-afea-f47e77eb204c",
-      "opponentLogo": "logos/cache/2d86de17cf5fa220.jpg"
+      "opponentLogo": "logos/cache/a4c27de61ca7350e.jpg"
     },
     {
       "id": "sportsconnect-46919408",
@@ -1262,7 +1262,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
-      "opponentLogo": "logos/cache/6717b2e49512a11e.jpg"
+      "opponentLogo": "logos/cache/f50db4bd23950176.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-0e5840fd-2635-42aa-9754-d5060cb92876",
@@ -1287,13 +1287,13 @@
     {
       "id": "decicco10u-Fall 2026-89712481-4e53-47dd-bbf0-5904c79f2f1d",
       "type": "gamechanger",
-      "title": "10U DeCicco vs Elite NW 10U Wintersdorf",
+      "title": "10U DeCicco vs EBT Northwest Wintersdorf 10U",
       "start": "2026-09-20T19:00:00.000Z",
       "end": "2026-09-20T21:00:00.000Z",
       "timezone": "America/Chicago",
       "teamKey": "decicco10u",
       "teamName": "10U DeCicco",
-      "opponent": "Elite NW 10U Wintersdorf",
+      "opponent": "EBT Northwest Wintersdorf 10U",
       "homeAway": "away",
       "gameStatus": "",
       "teamScore": null,
@@ -1302,7 +1302,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "89712481-4e53-47dd-bbf0-5904c79f2f1d",
-      "opponentLogo": "logos/cache/de75053d56c1183e.jpg"
+      "opponentLogo": "logos/cache/ed8ebaaf79c41bf6.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-f2a96aff-c718-4939-9267-e3cf8f9e948d",
@@ -1376,7 +1376,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "83f634ae-41a4-4442-9603-94cb58b54816",
-      "opponentLogo": "logos/cache/bcf265bc842901b6.jpg"
+      "opponentLogo": "logos/cache/807270994c584cd4.jpg"
     },
     {
       "id": "sportsconnect-46886876",
@@ -1450,7 +1450,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "c920f9a3-b7d1-44d0-a141-42d994704f87",
-      "opponentLogo": "logos/cache/70dcd2eba6aba6ee.jpg"
+      "opponentLogo": "logos/cache/4c92a922ac18fc1d.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
@@ -1470,7 +1470,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
-      "opponentLogo": "logos/cache/6ddcca5b4c0b94f0.jpg"
+      "opponentLogo": "logos/cache/850af9ea08e55891.jpg"
     },
     {
       "id": "sportsconnect-46886910",
@@ -1524,7 +1524,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "811ad366-bf78-4dc7-b985-1ea95439a134",
-      "opponentLogo": "logos/cache/f5b3ceb67a1aedcb.jpg"
+      "opponentLogo": "logos/cache/b766eb4ad4a9147b.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-a45043f4-5596-4537-b7da-9ba308dbc9d4",
@@ -1564,7 +1564,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
-      "opponentLogo": "logos/cache/d641aa9ed3fb4d08.jpg"
+      "opponentLogo": "logos/cache/00914bb990cf21fa.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-4a16f24d-1882-4966-bb55-ae758d57aac8",
@@ -1584,7 +1584,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "4a16f24d-1882-4966-bb55-ae758d57aac8",
-      "opponentLogo": "logos/cache/730877ae784d7d57.jpg"
+      "opponentLogo": "logos/cache/2e2ea90103228f73.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-53543ffc-3b9d-4356-8c0c-78823bdb3018",
@@ -1604,7 +1604,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "53543ffc-3b9d-4356-8c0c-78823bdb3018",
-      "opponentLogo": "logos/cache/2f9a6be70f176d11.jpg"
+      "opponentLogo": "logos/cache/72dbb0d4a5c2ca5e.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-72caae43-c7cf-4487-9669-241a233cb33d",
@@ -1624,7 +1624,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "72caae43-c7cf-4487-9669-241a233cb33d",
-      "opponentLogo": "logos/cache/a77df69beea22a15.jpg"
+      "opponentLogo": "logos/cache/76be62d1d80aa53a.jpg"
     },
     {
       "id": "mcandrews9u-Fall 2026-b450590e-59e3-4429-b7e8-c0b35fbfde3c",
@@ -1644,7 +1644,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
-      "opponentLogo": "logos/cache/ca7f1560a52ccb85.jpg"
+      "opponentLogo": "logos/cache/f4494d9f53cfee08.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-fa6f1770-1db4-4815-912b-c4e02db153d0",
@@ -1724,18 +1724,18 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "2bfa8776-272a-4c04-80d3-9e90371e4516",
-      "opponentLogo": "logos/cache/d5ecb009a72161ca.jpg"
+      "opponentLogo": "logos/cache/928e77c9311fcd22.jpg"
     },
     {
       "id": "hansen10u-Fall 2026-56880f21-1ced-4b64-baf7-8ae58e819ddd",
       "type": "gamechanger",
-      "title": "10U Hansen vs Elite NW 10U Wintersdorf",
+      "title": "10U Hansen vs EBT Northwest Wintersdorf 10U",
       "start": "2026-09-27T19:00:00.000Z",
       "end": "2026-09-27T20:45:00.000Z",
       "timezone": "America/Chicago",
       "teamKey": "hansen10u",
       "teamName": "10U Hansen",
-      "opponent": "Elite NW 10U Wintersdorf",
+      "opponent": "EBT Northwest Wintersdorf 10U",
       "homeAway": "away",
       "gameStatus": "",
       "teamScore": null,
@@ -1744,7 +1744,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "56880f21-1ced-4b64-baf7-8ae58e819ddd",
-      "opponentLogo": "logos/cache/746b85685436eef1.jpg"
+      "opponentLogo": "logos/cache/92878b1445cee800.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-59b93419-8a14-46e6-b967-86924d1764e1",
@@ -1764,7 +1764,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "59b93419-8a14-46e6-b967-86924d1764e1",
-      "opponentLogo": "logos/cache/87521a374e0a7358.jpg"
+      "opponentLogo": "logos/cache/68fb7fc7bab359de.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-8aaa56bf-083b-49b5-985a-73a9f1214c08",
@@ -1784,18 +1784,18 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
-      "opponentLogo": "logos/cache/d63030f3a1457d25.jpg"
+      "opponentLogo": "logos/cache/2aad361d22aaade5.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ccce8207-ae64-49d8-9bd7-529234d58d1e",
       "type": "gamechanger",
-      "title": "12U Meraz vs Elite NW 12U Milazzo",
+      "title": "12U Meraz vs EBT Northwest Milazzo 12u",
       "start": "2026-09-27T22:00:00.000Z",
       "end": "2026-09-28T00:35:00.000Z",
       "timezone": "America/Chicago",
       "teamKey": "meraz12u",
       "teamName": "12U Meraz",
-      "opponent": "Elite NW 12U Milazzo",
+      "opponent": "EBT Northwest Milazzo 12u",
       "homeAway": "away",
       "gameStatus": "",
       "teamScore": null,
@@ -1804,7 +1804,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "BmhjNVz0W5gR",
       "gameChangerGameId": "ccce8207-ae64-49d8-9bd7-529234d58d1e",
-      "opponentLogo": "logos/cache/8eb807064cba558f.jpg"
+      "opponentLogo": "logos/cache/02e9773a3513b1d3.jpg"
     },
     {
       "id": "sportsconnect-46923276",
@@ -1858,7 +1858,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5FbGFaKkWCHQ",
       "gameChangerGameId": "a6e63734-d279-4edb-b4ba-e323c2e226b9",
-      "opponentLogo": "logos/cache/a1703f8ff6da51d4.jpg"
+      "opponentLogo": "logos/cache/f1d0e2f35d079fe2.jpg"
     },
     {
       "id": "sportsconnect-46886877",
@@ -1986,7 +1986,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "a4c5e552-df0f-446f-bbd1-b8efd1ec15b8",
-      "opponentLogo": "logos/cache/1fb2803fb90786d5.jpg"
+      "opponentLogo": "logos/cache/780df2d591cd41e1.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
@@ -2006,7 +2006,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
-      "opponentLogo": "logos/cache/96472bcb877db84d.jpg"
+      "opponentLogo": "logos/cache/cbfb0daff1e893ae.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-88d86fba-6f3c-48f4-80bd-f63a8f87fa75",
@@ -2046,7 +2046,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "227ec302-4bea-4848-a091-dde93f4a545d",
-      "opponentLogo": "logos/cache/2d155b0704566ef0.jpg"
+      "opponentLogo": "logos/cache/3f91e55843937f9e.jpg"
     },
     {
       "id": "lorenz12u-Fall 2026-45a075d7-adc1-4a55-9e48-479b1f4034f9",
@@ -2066,7 +2066,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jWdOuqoTjKow",
       "gameChangerGameId": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
-      "opponentLogo": "logos/cache/19f9a1da0e544e20.jpg"
+      "opponentLogo": "logos/cache/8a3ef559a0343e65.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-b916f2f1-2955-4ed4-9409-73500ee3c184",
@@ -2086,7 +2086,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kTpmcwbSxdDR",
       "gameChangerGameId": "b916f2f1-2955-4ed4-9409-73500ee3c184",
-      "opponentLogo": "logos/cache/c14e192907278d80.jpg"
+      "opponentLogo": "logos/cache/763268a207c05c76.jpg"
     },
     {
       "id": "decicco10u-Fall 2026-e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
@@ -2106,7 +2106,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
-      "opponentLogo": "logos/cache/63cd8bb9d65208e9.jpg"
+      "opponentLogo": "logos/cache/7555cd84afc4813b.jpg"
     },
     {
       "id": "thiemeyer13u-Fall 2026-25878a9e-959a-45d6-9131-d6fb1149a4e8",
@@ -2214,7 +2214,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "eVa0Vr948vH4",
       "gameChangerGameId": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
-      "opponentLogo": "logos/cache/cef10f199dc6eb71.jpg"
+      "opponentLogo": "logos/cache/fa7c4e9f1db50bd1.jpg"
     },
     {
       "id": "bozer11u-Fall 2026-b1c63fea-4b07-4e89-baf9-84f4a5877e65",
@@ -2234,7 +2234,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "jo418sCgCDyw",
       "gameChangerGameId": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
-      "opponentLogo": "logos/cache/32eb0db350c33540.jpg"
+      "opponentLogo": "logos/cache/84d4401e40838183.jpg"
     },
     {
       "id": "deubel8u-Fall 2026-951db98e-a6e8-42e8-862d-1e62cebb0be1",
@@ -2328,7 +2328,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "726ff682-4280-444e-97bd-716dd66eee54",
-      "opponentLogo": "logos/cache/496dea23cddd6afb.jpg"
+      "opponentLogo": "logos/cache/22d32024ce1e9e4d.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
@@ -2348,7 +2348,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
-      "opponentLogo": "logos/cache/3d7323f9e2bd24bc.jpg"
+      "opponentLogo": "logos/cache/18b9577174a4c005.jpg"
     },
     {
       "id": "baillargeon13u-Fall 2026-aad78896-ae1b-4ea8-a183-fbf4a5dcc354",
@@ -2433,13 +2433,13 @@
     {
       "id": "decicco10u-Fall 2026-ca15473d-5472-43db-b4a4-be6ccb6b421d",
       "type": "gamechanger",
-      "title": "10U DeCicco vs Elite NW 10U Wintersdorf",
+      "title": "10U DeCicco vs EBT Northwest Wintersdorf 10U",
       "start": "2026-10-11T15:00:00.000Z",
       "end": "2026-10-11T17:00:00.000Z",
       "timezone": "America/Chicago",
       "teamKey": "decicco10u",
       "teamName": "10U DeCicco",
-      "opponent": "Elite NW 10U Wintersdorf",
+      "opponent": "EBT Northwest Wintersdorf 10U",
       "homeAway": "home",
       "gameStatus": "",
       "teamScore": null,
@@ -2448,7 +2448,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "ca15473d-5472-43db-b4a4-be6ccb6b421d",
-      "opponentLogo": "logos/cache/de75053d56c1183e.jpg"
+      "opponentLogo": "logos/cache/ed8ebaaf79c41bf6.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-70604a3a-363e-41e1-be60-f32e37ab5917",
@@ -2596,7 +2596,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "NJRBPnj0Dhk6",
       "gameChangerGameId": "0fc0ad11-dafe-491e-802b-4679f59c96b4",
-      "opponentLogo": "logos/cache/70dcd2eba6aba6ee.jpg"
+      "opponentLogo": "logos/cache/4c92a922ac18fc1d.jpg"
     },
     {
       "id": "sportsconnect-46925757",
@@ -2633,7 +2633,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "glieJ5HMvC0j",
       "gameChangerGameId": "4d231ff4-0208-4cb5-9726-9bdb75311377",
-      "opponentLogo": "logos/cache/6cbd2429024359d8.jpg"
+      "opponentLogo": "logos/cache/96a6db3d3c14ec02.jpg"
     },
     {
       "id": "lennon11u-Fall 2026-5377af70-7917-48a5-a0d3-b700c4c425db",
@@ -2653,7 +2653,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "kzFVJtSX9Brn",
       "gameChangerGameId": "5377af70-7917-48a5-a0d3-b700c4c425db",
-      "opponentLogo": "logos/cache/c2273eac63614421.jpg"
+      "opponentLogo": "logos/cache/b000eff984bb50a5.jpg"
     },
     {
       "id": "meraz12u-Fall 2026-ea2af42c-3a0a-4f4e-b500-f4043dad696c",
@@ -2693,7 +2693,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "tHsuttzldgTo",
       "gameChangerGameId": "d2917d60-4c74-48b9-8e92-c5639c7285da",
-      "opponentLogo": "logos/cache/55e456520be4ff0e.jpg"
+      "opponentLogo": "logos/cache/275c010ae04595a2.jpg"
     },
     {
       "id": "sportsconnect-46923279",
@@ -2764,7 +2764,7 @@
       "season": "Fall 2026",
       "gameChangerTeamId": "5OzlwlXAAYDd",
       "gameChangerGameId": "4cfbf7f9-f768-40e5-ba34-dee0938ea21e",
-      "opponentLogo": "logos/cache/73bc7336256aa6a3.jpg"
+      "opponentLogo": "logos/cache/4c8957b987b1c5ef.jpg"
     },
     {
       "id": "allbooked-119526646_639291384000000000",
@@ -3740,6 +3740,36 @@
       "description": "8U Deubel (All Tunnels (Team))",
       "source": "AllBooked",
       "allBookedUid": "119526842_639320904000000000"
+    },
+    {
+      "id": "allbooked-119526646_639321624000000000",
+      "type": "indoor",
+      "title": "13U Baillargeon",
+      "start": "2026-12-06T08:00:00-06:00",
+      "end": "2026-12-06T10:00:00-06:00",
+      "teamKey": "baillargeon13u",
+      "teamName": "13U Baillargeon",
+      "location": "McHenry Cobras Indoor Facility",
+      "space": "All Tunnels",
+      "category": "Indoor Facility",
+      "description": "13U Baillargeon (All Tunnels (Team))",
+      "source": "AllBooked",
+      "allBookedUid": "119526646_639321624000000000"
+    },
+    {
+      "id": "allbooked-119526656_639321696000000000",
+      "type": "indoor",
+      "title": "11U Lennon",
+      "start": "2026-12-06T10:00:00-06:00",
+      "end": "2026-12-06T12:00:00-06:00",
+      "teamKey": "lennon11u",
+      "teamName": "11U Lennon",
+      "location": "McHenry Cobras Indoor Facility",
+      "space": "All Tunnels",
+      "category": "Indoor Facility",
+      "description": "11U Lennon (All Tunnels (Team))",
+      "source": "AllBooked",
+      "allBookedUid": "119526656_639321696000000000"
     },
     {
       "id": "uniform-fitting-2026",
