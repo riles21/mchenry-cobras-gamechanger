@@ -1,5 +1,37 @@
 [
   {
+    "id": "52edc0a3-8b94-4e37-b774-49b0392e1067",
+    "opponent_team": {
+      "name": "LZ360 Bison 11U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-12T19:00:00.000Z",
+    "end_ts": "2026-09-12T20:45:00.000Z",
+    "timezone": "America/Chicago",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "jo418sCgCDyw",
+    "cobras_team_key": "bozer11u",
+    "cobras_team_name": "11U Bozer"
+  },
+  {
+    "id": "3cf62e96-0721-4d96-b3ea-b7b07ffb3a45",
+    "opponent_team": {
+      "name": "Prairie State Sod Buster 11U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-12T21:30:00.000Z",
+    "end_ts": "2026-09-12T23:15:00.000Z",
+    "timezone": "America/Chicago",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "jo418sCgCDyw",
+    "cobras_team_key": "bozer11u",
+    "cobras_team_name": "11U Bozer"
+  },
+  {
     "id": "a82a8d53-deb2-4999-967f-0abd1a4a0858",
     "opponent_team": {
       "name": "Lake Zurich"
@@ -54,7 +86,7 @@
     "id": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
     "opponent_team": {
       "name": "Wauconda Wreckers 11U",
-      "avatar_url": "logos/cache/2314b428a2d50b69.jpg"
+      "avatar_url": "logos/cache/bffd34253f69d85d.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-07T22:30:00.000Z",
