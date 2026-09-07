@@ -3,7 +3,7 @@
     "id": "451bdb0f-c424-48db-abb7-837a6c001c81",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/028270acc0deab4e.jpg"
+      "avatar_url": "logos/cache/4dd9485739a8c67c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T00:15:00.000Z",
@@ -26,7 +26,7 @@
     "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
     "opponent_team": {
       "name": "Eagles Elite 14U",
-      "avatar_url": "logos/cache/19c1bcf75c22d02f.jpg"
+      "avatar_url": "logos/cache/89db6f6e446ce8f1.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T00:15:00.000Z",
@@ -49,7 +49,7 @@
     "id": "08611e4c-75c6-471b-915d-477272bdff91",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/3144bc50e993468d.jpg"
+      "avatar_url": "logos/cache/bbfa9188945c5411.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-31T22:15:00.000Z",
@@ -72,7 +72,7 @@
     "id": "2db62a27-0001-4dc6-8571-090f050595cd",
     "opponent_team": {
       "name": "Lake County Stars Field 14U",
-      "avatar_url": "logos/cache/270522b7d398db38.jpg"
+      "avatar_url": "logos/cache/f5675555b1d54bb1.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-04T00:00:00.000Z",
@@ -94,7 +94,8 @@
   {
     "id": "1121e758-761a-474c-8804-73471c97e5ec",
     "opponent_team": {
-      "name": "GRB illinois 14U"
+      "name": "GRB Rays Illinois 14U - Fall",
+      "avatar_url": "logos/cache/c74b300e539bfe5c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-11T00:00:00.000Z",
@@ -128,7 +129,8 @@
   {
     "id": "33ded3b9-783e-4c07-beec-70a75fda30de",
     "opponent_team": {
-      "name": "GRB illinois 14U"
+      "name": "GRB Rays Illinois 14U - Fall",
+      "avatar_url": "logos/cache/c74b300e539bfe5c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T00:00:00.000Z",
@@ -146,7 +148,7 @@
     "id": "83f634ae-41a4-4442-9603-94cb58b54816",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/028270acc0deab4e.jpg"
+      "avatar_url": "logos/cache/4dd9485739a8c67c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-21T22:15:00.000Z",
@@ -181,7 +183,7 @@
     "id": "811ad366-bf78-4dc7-b985-1ea95439a134",
     "opponent_team": {
       "name": "Woodstock Heat 14U Fall",
-      "avatar_url": "logos/cache/5eb4d0763e92f8ff.jpg"
+      "avatar_url": "logos/cache/0d21848b89b07661.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T00:00:00.000Z",
@@ -199,7 +201,7 @@
     "id": "a6e63734-d279-4edb-b4ba-e323c2e226b9",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/3144bc50e993468d.jpg"
+      "avatar_url": "logos/cache/bbfa9188945c5411.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-28T22:15:00.000Z",
