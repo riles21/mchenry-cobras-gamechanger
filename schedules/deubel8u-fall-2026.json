@@ -25,7 +25,7 @@
     "id": "7f7155e3-7615-4df3-8f76-d076226b3814",
     "opponent_team": {
       "name": "Signature Stars 8U",
-      "avatar_url": "logos/cache/e14dc299d817d583.jpg"
+      "avatar_url": "logos/cache/ad8f86d5ea001682.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T23:30:00.000Z",
@@ -43,13 +43,30 @@
     "id": "c920f9a3-b7d1-44d0-a141-42d994704f87",
     "opponent_team": {
       "name": "Top Tier MC - Neumann 8U",
-      "avatar_url": "logos/cache/34dbe6bb9571a1e0.jpg"
+      "avatar_url": "logos/cache/b5df21c41077f819.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-23T23:00:00.000Z",
     "end_ts": "2026-09-24T00:45:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6",
+    "cobras_team_key": "deubel8u",
+    "cobras_team_name": "8U Deubel"
+  },
+  {
+    "id": "dbffbe46-b55f-4764-9d1a-1f03969053be",
+    "opponent_team": {
+      "name": "EBT Northwest Newman 8U",
+      "avatar_url": "logos/cache/471ac3c0cbe12487.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-02T23:00:00.000Z",
+    "end_ts": "2026-10-03T00:45:00.000Z",
+    "timezone": "America/Chicago",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -75,10 +92,27 @@
     "cobras_team_name": "8U Deubel"
   },
   {
+    "id": "465aa265-02b2-43ba-881b-0263cd9b7aae",
+    "opponent_team": {
+      "name": "EBT Northwest Newman 8U",
+      "avatar_url": "logos/cache/471ac3c0cbe12487.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-09T23:00:00.000Z",
+    "end_ts": "2026-10-10T00:45:00.000Z",
+    "timezone": "America/Chicago",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "NJRBPnj0Dhk6",
+    "cobras_team_key": "deubel8u",
+    "cobras_team_name": "8U Deubel"
+  },
+  {
     "id": "0fc0ad11-dafe-491e-802b-4679f59c96b4",
     "opponent_team": {
       "name": "Top Tier MC - Neumann 8U",
-      "avatar_url": "logos/cache/34dbe6bb9571a1e0.jpg"
+      "avatar_url": "logos/cache/b5df21c41077f819.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-14T23:00:00.000Z",
