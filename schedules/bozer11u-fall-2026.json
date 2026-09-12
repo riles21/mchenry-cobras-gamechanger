@@ -8,7 +8,13 @@
     "start_ts": "2026-09-12T19:00:00.000Z",
     "end_ts": "2026-09-12T20:45:00.000Z",
     "timezone": "America/Chicago",
-    "has_videos_available": false,
+    "home_away": "home",
+    "score": {
+      "team": 13,
+      "opponent_team": 16
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "jo418sCgCDyw",
@@ -24,7 +30,13 @@
     "start_ts": "2026-09-12T21:30:00.000Z",
     "end_ts": "2026-09-12T23:15:00.000Z",
     "timezone": "America/Chicago",
-    "has_videos_available": false,
+    "home_away": "away",
+    "score": {
+      "team": 12,
+      "opponent_team": 1
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "jo418sCgCDyw",
@@ -118,7 +130,7 @@
     "id": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
     "opponent_team": {
       "name": "Wauconda Wreckers 11U",
-      "avatar_url": "logos/cache/dc2eaef04ffb6e1c.jpg"
+      "avatar_url": "logos/cache/67d5b549a52ad797.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-07T22:30:00.000Z",
