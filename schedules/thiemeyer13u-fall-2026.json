@@ -25,7 +25,7 @@
     "id": "6448386f-512d-4302-a4ad-fc679e2e6f96",
     "opponent_team": {
       "name": "Crystal Lake Ironmen 13U",
-      "avatar_url": "logos/cache/5cbd61736a57650b.jpg"
+      "avatar_url": "logos/cache/fb1aef8ef9b03803.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-12T21:30:00.000Z",
@@ -48,7 +48,7 @@
     "id": "7b852f56-8caf-4e70-a306-74a069756ba9",
     "opponent_team": {
       "name": "Crystal Lake Ironmen 13U",
-      "avatar_url": "logos/cache/5cbd61736a57650b.jpg"
+      "avatar_url": "logos/cache/fb1aef8ef9b03803.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-13T16:30:00.000Z",
@@ -56,10 +56,32 @@
     "timezone": "America/Chicago",
     "home_away": "away",
     "score": {
-      "team": 1,
-      "opponent_team": 1
+      "team": 12,
+      "opponent_team": 5
     },
-    "game_status": "live",
+    "game_status": "completed",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5OzlwlXAAYDd",
+    "cobras_team_key": "thiemeyer13u",
+    "cobras_team_name": "13U Thiemeyer"
+  },
+  {
+    "id": "49acfe76-e674-4d63-99cb-b94d070332fb",
+    "opponent_team": {
+      "name": "Puma Academy Fall 13U"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-09-13T19:00:00.000Z",
+    "end_ts": "2026-09-13T20:45:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
+    "score": {
+      "team": 0,
+      "opponent_team": 11
+    },
+    "game_status": "completed",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -156,7 +178,7 @@
     "id": "4cfbf7f9-f768-40e5-ba34-dee0938ea21e",
     "opponent_team": {
       "name": "McHenry County Bandits - Hampton 13U",
-      "avatar_url": "logos/cache/f36a6f20aaa12506.jpg"
+      "avatar_url": "logos/cache/450257fa4def9abc.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-25T18:00:00.000Z",
