@@ -25,7 +25,7 @@
     "id": "6448386f-512d-4302-a4ad-fc679e2e6f96",
     "opponent_team": {
       "name": "Crystal Lake Ironmen 13U",
-      "avatar_url": "logos/cache/368141122e1bc560.jpg"
+      "avatar_url": "logos/cache/e5e9c640a22b7032.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-12T21:30:00.000Z",
@@ -33,10 +33,10 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "score": {
-      "team": 8,
+      "team": 10,
       "opponent_team": 17
     },
-    "game_status": "live",
+    "game_status": "completed",
     "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -47,12 +47,14 @@
   {
     "id": "7b852f56-8caf-4e70-a306-74a069756ba9",
     "opponent_team": {
-      "name": ""
+      "name": "Crystal Lake Ironmen 13U",
+      "avatar_url": "logos/cache/e5e9c640a22b7032.jpg"
     },
-    "is_full_day": true,
-    "start_ts": "2026-09-13T00:00:00.000Z",
-    "end_ts": "2026-09-14T00:00:00.000Z",
-    "timezone": null,
+    "is_full_day": false,
+    "start_ts": "2026-09-13T16:30:00.000Z",
+    "end_ts": "2026-09-13T18:15:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "away",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -149,7 +151,7 @@
     "id": "4cfbf7f9-f768-40e5-ba34-dee0938ea21e",
     "opponent_team": {
       "name": "McHenry County Bandits - Hampton 13U",
-      "avatar_url": "logos/cache/2184a55031872dfd.jpg"
+      "avatar_url": "logos/cache/6c0a3790a71c2e4d.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-25T18:00:00.000Z",
