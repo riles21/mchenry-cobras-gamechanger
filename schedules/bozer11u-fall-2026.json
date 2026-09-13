@@ -53,7 +53,12 @@
     "end_ts": "2026-09-13T15:45:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
-    "has_videos_available": false,
+    "score": {
+      "team": 11,
+      "opponent_team": 7
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "jo418sCgCDyw",
@@ -63,12 +68,18 @@
   {
     "id": "d2a45ff5-d15c-4d82-a7c1-a7511d3a5770",
     "opponent_team": {
-      "name": ""
+      "name": "Prairie State Sod Buster 11U"
     },
     "is_full_day": false,
     "start_ts": "2026-09-13T16:30:00.000Z",
     "end_ts": "2026-09-13T18:15:00.000Z",
     "timezone": "America/Chicago",
+    "home_away": "home",
+    "score": {
+      "team": 2,
+      "opponent_team": 2
+    },
+    "game_status": "live",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -131,7 +142,7 @@
     "id": "b1c63fea-4b07-4e89-baf9-84f4a5877e65",
     "opponent_team": {
       "name": "Wauconda Wreckers 11U",
-      "avatar_url": "logos/cache/549937f7537e20f9.jpg"
+      "avatar_url": "logos/cache/7bf35766efd1de60.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-07T22:30:00.000Z",

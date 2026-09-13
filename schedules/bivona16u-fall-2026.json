@@ -9,6 +9,11 @@
     "end_ts": "2026-09-13T18:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
+    "score": {
+      "team": 4,
+      "opponent_team": 1
+    },
+    "game_status": "live",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
