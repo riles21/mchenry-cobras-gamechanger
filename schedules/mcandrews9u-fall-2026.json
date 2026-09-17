@@ -3,7 +3,7 @@
     "id": "5cefc8d2-a7ea-4519-a026-3af86ddf42a1",
     "opponent_team": {
       "name": "Broncos Red 9U",
-      "avatar_url": "logos/cache/4f13dafd120793ed.jpg"
+      "avatar_url": "logos/cache/5a36d8f89c46b098.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T22:30:00.000Z",
@@ -70,7 +70,7 @@
     "id": "23a9f115-61f8-4659-bf9b-c18d12a522e9",
     "opponent_team": {
       "name": "SBA Raiders Duff 9U",
-      "avatar_url": "logos/cache/1536185a80bdfa27.jpg"
+      "avatar_url": "logos/cache/7b45006f3d5c901a.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-11T22:30:00.000Z",
@@ -93,7 +93,7 @@
     "id": "7aa33488-6d97-4cfb-a058-935a6d2ac6f4",
     "opponent_team": {
       "name": "SBA 9U Graf",
-      "avatar_url": "logos/cache/f40f6baf153e0714.jpg"
+      "avatar_url": "logos/cache/ace6aa22874e41a6.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-16T22:30:00.000Z",
@@ -101,11 +101,11 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "score": {
-      "team": 3,
-      "opponent_team": 5
+      "team": 11,
+      "opponent_team": 18
     },
-    "game_status": "live",
-    "has_videos_available": false,
+    "game_status": "completed",
+    "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "eVa0Vr948vH4",
@@ -116,7 +116,7 @@
     "id": "437f090e-d748-4588-8e84-b57190465519",
     "opponent_team": {
       "name": "Grayslake Sliders 9U",
-      "avatar_url": "logos/cache/f2f20f77283d07ad.jpg"
+      "avatar_url": "logos/cache/08b8ab89f1512cf8.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T22:30:00.000Z",
@@ -134,7 +134,7 @@
     "id": "8535acef-19bd-48ee-9723-2d46ac60d5e7",
     "opponent_team": {
       "name": "Signature Stars 9U",
-      "avatar_url": "logos/cache/974fecb3744e13d6.jpg"
+      "avatar_url": "logos/cache/1d390f711de7259a.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-20T14:00:00.000Z",
@@ -169,7 +169,7 @@
     "id": "b450590e-59e3-4429-b7e8-c0b35fbfde3c",
     "opponent_team": {
       "name": "SBA Raiders Duff 9U",
-      "avatar_url": "logos/cache/1536185a80bdfa27.jpg"
+      "avatar_url": "logos/cache/7b45006f3d5c901a.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-26T14:00:00.000Z",
@@ -187,7 +187,7 @@
     "id": "2bfa8776-272a-4c04-80d3-9e90371e4516",
     "opponent_team": {
       "name": "Grayslake Sliders 9U",
-      "avatar_url": "logos/cache/f2f20f77283d07ad.jpg"
+      "avatar_url": "logos/cache/08b8ab89f1512cf8.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-27T17:00:00.000Z",
@@ -222,7 +222,7 @@
     "id": "227ec302-4bea-4848-a091-dde93f4a545d",
     "opponent_team": {
       "name": "Trosky Illinois 9U",
-      "avatar_url": "logos/cache/b39a71530c546a33.jpg"
+      "avatar_url": "logos/cache/5043b9b8dbfb30e6.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-03T00:30:00.000Z",
@@ -240,7 +240,7 @@
     "id": "795ca95a-46b6-4de3-b96a-bcd90a0872b2",
     "opponent_team": {
       "name": "SBA 9U Graf",
-      "avatar_url": "logos/cache/f40f6baf153e0714.jpg"
+      "avatar_url": "logos/cache/ace6aa22874e41a6.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-07T22:30:00.000Z",
