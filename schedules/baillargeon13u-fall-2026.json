@@ -25,13 +25,18 @@
     "id": "fe880c8c-78dc-478e-bc60-1895b491c61c",
     "opponent_team": {
       "name": "Top Tier Mc 13u Brunschon",
-      "avatar_url": "logos/cache/18b7ade0cd740f13.jpg"
+      "avatar_url": "logos/cache/eb9c8a4d89011f6f.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T22:30:00.000Z",
     "end_ts": "2026-09-19T00:30:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
+    "score": {
+      "team": 10,
+      "opponent_team": 0
+    },
+    "game_status": "live",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -43,7 +48,7 @@
     "id": "4a16f24d-1882-4966-bb55-ae758d57aac8",
     "opponent_team": {
       "name": "SBA Raiders 13u - Hedrick",
-      "avatar_url": "logos/cache/5c92ee5335c424f4.jpg"
+      "avatar_url": "logos/cache/af5ac4b2841462a1.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T22:30:00.000Z",
@@ -61,7 +66,7 @@
     "id": "b916f2f1-2955-4ed4-9409-73500ee3c184",
     "opponent_team": {
       "name": "Wauconda Wreckers - Fall 26’ - 13U",
-      "avatar_url": "logos/cache/57c32c1e4d27ba86.jpg"
+      "avatar_url": "logos/cache/519e89e4a118392e.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-03T00:30:00.000Z",
