@@ -3,7 +3,7 @@
     "id": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
     "opponent_team": {
       "name": "SBA Raiders Woods 11U",
-      "avatar_url": "logos/cache/eaa830be48cf7d82.jpg"
+      "avatar_url": "logos/cache/039dfa091a6c8434.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-04T22:30:00.000Z",
@@ -33,11 +33,11 @@
     "timezone": "America/Chicago",
     "home_away": "home",
     "score": {
-      "team": 3,
-      "opponent_team": 5
+      "team": 15,
+      "opponent_team": 9
     },
-    "game_status": "live",
-    "has_videos_available": false,
+    "game_status": "completed",
+    "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
@@ -48,7 +48,7 @@
     "id": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
     "opponent_team": {
       "name": "SBA Raiders 11U - Simmons",
-      "avatar_url": "logos/cache/82019206074f6198.jpg"
+      "avatar_url": "logos/cache/326b231e8412d567.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T22:30:00.000Z",
@@ -66,7 +66,7 @@
     "id": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
     "opponent_team": {
       "name": "EBT Northwest Smerling 11U",
-      "avatar_url": "logos/cache/5c3472f2959dc0ee.jpg"
+      "avatar_url": "logos/cache/15fd6f68d1288f5a.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-02T22:30:00.000Z",
@@ -84,7 +84,7 @@
     "id": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
     "opponent_team": {
       "name": "Lake County Lightning 11U Fall",
-      "avatar_url": "logos/cache/037d85ebb8f7145f.jpg"
+      "avatar_url": "logos/cache/d8c8fa6f13b899ab.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-09T22:30:00.000Z",
@@ -102,7 +102,7 @@
     "id": "5377af70-7917-48a5-a0d3-b700c4c425db",
     "opponent_team": {
       "name": "Grayslake Coyotes 11U",
-      "avatar_url": "logos/cache/13252ab1a9d35b81.jpg"
+      "avatar_url": "logos/cache/ba6873b376aafa72.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-16T22:30:00.000Z",
