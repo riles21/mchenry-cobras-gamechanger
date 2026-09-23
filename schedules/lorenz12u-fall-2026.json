@@ -3,7 +3,7 @@
     "id": "46997580-1fae-4bc2-bcf2-478ccb73648a",
     "opponent_team": {
       "name": "Grayslake Coyotes 12U",
-      "avatar_url": "logos/cache/c2f75fcca00fb99b.jpg"
+      "avatar_url": "logos/cache/0ecfafabeec79ff9.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-01T23:30:00.000Z",
@@ -26,7 +26,7 @@
     "id": "e14d1e53-a7fb-4afc-8b4b-aeacda75b593",
     "opponent_team": {
       "name": "Sparks North 12U- Lozano",
-      "avatar_url": "logos/cache/7f2382606a883c4f.jpg"
+      "avatar_url": "logos/cache/38cd4ddd7d458d92.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-05T00:30:00.000Z",
@@ -49,7 +49,7 @@
     "id": "e3a4fdb2-d52e-45cc-b7c3-76880ff200a0",
     "opponent_team": {
       "name": "GRB Rays Illinois - Moore 12U",
-      "avatar_url": "logos/cache/7980e903b44c052d.jpg"
+      "avatar_url": "logos/cache/ea96358c1027822c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-10T00:30:00.000Z",
@@ -72,7 +72,7 @@
     "id": "6d750b37-620f-4c79-accc-08fe3828203b",
     "opponent_team": {
       "name": "LITH Thunder Black 12U",
-      "avatar_url": "logos/cache/b126faadf7c51056.jpg"
+      "avatar_url": "logos/cache/e677ab7d13441857.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-13T21:30:00.000Z",
@@ -95,7 +95,7 @@
     "id": "f30a2ae3-e039-4ed3-8687-65c7ed97944d",
     "opponent_team": {
       "name": "EBT Northwest Milazzo 12U",
-      "avatar_url": "logos/cache/d869d3fd5146025c.jpg"
+      "avatar_url": "logos/cache/b1623f1696a189c4.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-17T00:30:00.000Z",
@@ -140,7 +140,7 @@
     "id": "634fee1c-9d0a-4fe8-88cb-e1ab973423c1",
     "opponent_team": {
       "name": "GRB Rays Illinois - Moore 12U",
-      "avatar_url": "logos/cache/7980e903b44c052d.jpg"
+      "avatar_url": "logos/cache/ea96358c1027822c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-24T00:30:00.000Z",
@@ -164,6 +164,11 @@
     "end_ts": "2026-09-26T18:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "away",
+    "score": {
+      "team": 0,
+      "opponent_team": 0
+    },
+    "game_status": "new",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -175,7 +180,7 @@
     "id": "59b93419-8a14-46e6-b967-86924d1764e1",
     "opponent_team": {
       "name": "LITH Thunder Black 12U",
-      "avatar_url": "logos/cache/b126faadf7c51056.jpg"
+      "avatar_url": "logos/cache/e677ab7d13441857.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-27T19:30:00.000Z",
@@ -210,7 +215,7 @@
     "id": "45a075d7-adc1-4a55-9e48-479b1f4034f9",
     "opponent_team": {
       "name": "SBA Raiders-LoPresti 12U",
-      "avatar_url": "logos/cache/a06036525d839162.jpg"
+      "avatar_url": "logos/cache/3487dc61a9c04fe6.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-03T00:30:00.000Z",
@@ -228,7 +233,7 @@
     "id": "20a36d53-5d4d-49ed-ac0c-43e2b65f6c0c",
     "opponent_team": {
       "name": "Wauconda Wreckers  12U - Fall 2026",
-      "avatar_url": "logos/cache/eca194c57d8c311c.jpg"
+      "avatar_url": "logos/cache/a83330af0618b32b.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-03T17:00:00.000Z",
