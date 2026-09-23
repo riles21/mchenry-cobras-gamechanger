@@ -3,7 +3,7 @@
     "id": "451bdb0f-c424-48db-abb7-837a6c001c81",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/e8ade4cac6abbd19.jpg"
+      "avatar_url": "logos/cache/02c0b1489c102257.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T00:15:00.000Z",
@@ -26,7 +26,7 @@
     "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
     "opponent_team": {
       "name": "Eagles Elite 14U",
-      "avatar_url": "logos/cache/a30287bdf084a88b.jpg"
+      "avatar_url": "logos/cache/bbf7b0b902cb7edd.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T00:15:00.000Z",
@@ -49,7 +49,7 @@
     "id": "08611e4c-75c6-471b-915d-477272bdff91",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/67e55ccb1bb79da6.jpg"
+      "avatar_url": "logos/cache/0f77843c96317a9e.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-31T22:15:00.000Z",
@@ -72,7 +72,7 @@
     "id": "2db62a27-0001-4dc6-8571-090f050595cd",
     "opponent_team": {
       "name": "Lake County Stars Field 14U",
-      "avatar_url": "logos/cache/89a1800f500f6167.jpg"
+      "avatar_url": "logos/cache/fe3eedb18411a183.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-04T00:00:00.000Z",
@@ -95,7 +95,7 @@
     "id": "1121e758-761a-474c-8804-73471c97e5ec",
     "opponent_team": {
       "name": "GRB Rays Illinois 2031 - Fall",
-      "avatar_url": "logos/cache/8815fd3916fbc90d.jpg"
+      "avatar_url": "logos/cache/9bd7dabc72f3433e.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-11T00:00:00.000Z",
@@ -124,6 +124,11 @@
     "end_ts": "2026-09-23T02:00:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
+    "score": {
+      "team": 7,
+      "opponent_team": 6
+    },
+    "game_status": "live",
     "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -135,7 +140,7 @@
     "id": "811ad366-bf78-4dc7-b985-1ea95439a134",
     "opponent_team": {
       "name": "Woodstock Heat 14U Fall",
-      "avatar_url": "logos/cache/069f7f8af4f2e91e.jpg"
+      "avatar_url": "logos/cache/4b23030cce81e815.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T00:00:00.000Z",
@@ -153,7 +158,7 @@
     "id": "a6e63734-d279-4edb-b4ba-e323c2e226b9",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/67e55ccb1bb79da6.jpg"
+      "avatar_url": "logos/cache/0f77843c96317a9e.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-28T22:15:00.000Z",
