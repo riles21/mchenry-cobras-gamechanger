@@ -25,7 +25,7 @@
     "id": "fe880c8c-78dc-478e-bc60-1895b491c61c",
     "opponent_team": {
       "name": "Top Tier Mc 13u Brunschon",
-      "avatar_url": "logos/cache/ea921cf6c12c116a.jpg"
+      "avatar_url": "logos/cache/0cb4cef8e1ce024c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T22:30:00.000Z",
@@ -48,7 +48,7 @@
     "id": "4a16f24d-1882-4966-bb55-ae758d57aac8",
     "opponent_team": {
       "name": "SBA Raiders 13u - Hedrick",
-      "avatar_url": "logos/cache/752ea2dd8b137d4a.jpg"
+      "avatar_url": "logos/cache/4f4320b6fbb22904.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T22:30:00.000Z",
@@ -59,7 +59,7 @@
       "team": 11,
       "opponent_team": 3
     },
-    "game_status": "live",
+    "game_status": "completed",
     "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
@@ -71,7 +71,7 @@
     "id": "b916f2f1-2955-4ed4-9409-73500ee3c184",
     "opponent_team": {
       "name": "Wauconda Wreckers - Fall 26’ - 13U",
-      "avatar_url": "logos/cache/5f013e8fe743fcf4.jpg"
+      "avatar_url": "logos/cache/7623d6809b0e1daf.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-03T00:30:00.000Z",
