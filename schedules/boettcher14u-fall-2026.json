@@ -3,7 +3,7 @@
     "id": "451bdb0f-c424-48db-abb7-837a6c001c81",
     "opponent_team": {
       "name": "Lake County Stars (Nazario) 14U",
-      "avatar_url": "logos/cache/73ca2690cded89f2.jpg"
+      "avatar_url": "logos/cache/ce723d9f298683fa.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-21T00:15:00.000Z",
@@ -26,7 +26,7 @@
     "id": "f841b34f-56be-43d8-ab63-6adaf268f159",
     "opponent_team": {
       "name": "Eagles Elite 14U",
-      "avatar_url": "logos/cache/b559ef3f41743e8e.jpg"
+      "avatar_url": "logos/cache/cfca38b4a2d9c4b5.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-28T00:15:00.000Z",
@@ -49,7 +49,7 @@
     "id": "08611e4c-75c6-471b-915d-477272bdff91",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/0df68e6995bbdd22.jpg"
+      "avatar_url": "logos/cache/e514e29bdc6a6916.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-31T22:15:00.000Z",
@@ -72,7 +72,7 @@
     "id": "2db62a27-0001-4dc6-8571-090f050595cd",
     "opponent_team": {
       "name": "Lake County Stars Field 14U",
-      "avatar_url": "logos/cache/e21d4bd64b5437c7.jpg"
+      "avatar_url": "logos/cache/ddf00b1aa482e2d3.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-04T00:00:00.000Z",
@@ -95,7 +95,7 @@
     "id": "1121e758-761a-474c-8804-73471c97e5ec",
     "opponent_team": {
       "name": "GRB Rays Illinois 2031 - Fall",
-      "avatar_url": "logos/cache/4a87db977d07184a.jpg"
+      "avatar_url": "logos/cache/bc60350748576b3c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-11T00:00:00.000Z",
@@ -140,7 +140,7 @@
     "id": "811ad366-bf78-4dc7-b985-1ea95439a134",
     "opponent_team": {
       "name": "Woodstock Heat 14U Fall",
-      "avatar_url": "logos/cache/bff716ca090a59fc.jpg"
+      "avatar_url": "logos/cache/623b42045005e8ec.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T00:00:00.000Z",
@@ -163,7 +163,7 @@
     "id": "a6e63734-d279-4edb-b4ba-e323c2e226b9",
     "opponent_team": {
       "name": "Lake Villa Eagles 14U-Adams",
-      "avatar_url": "logos/cache/0df68e6995bbdd22.jpg"
+      "avatar_url": "logos/cache/e514e29bdc6a6916.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-28T22:15:00.000Z",
@@ -205,10 +205,28 @@
     "cobras_team_name": "14U Boettcher"
   },
   {
+    "id": "7cc339ad-46b9-4cbc-b4c0-5a910ed9a4e3",
+    "opponent_team": {
+      "name": "2031 SBA Raiders - CG",
+      "avatar_url": "logos/cache/09ce60d4bd2c3a02.jpg"
+    },
+    "is_full_day": false,
+    "start_ts": "2026-10-07T00:00:00.000Z",
+    "end_ts": "2026-10-07T02:00:00.000Z",
+    "timezone": "America/Chicago",
+    "home_away": "home",
+    "has_videos_available": false,
+    "has_live_stream": false,
+    "cobras_gamechanger_season": "Fall 2026",
+    "cobras_gamechanger_team_id": "5FbGFaKkWCHQ",
+    "cobras_team_key": "boettcher14u",
+    "cobras_team_name": "14U Boettcher"
+  },
+  {
     "id": "0185f1d3-76a8-49bf-b06b-c31230773e18",
     "opponent_team": {
       "name": "GRB Rays Illinois 2031 - Fall",
-      "avatar_url": "logos/cache/4a87db977d07184a.jpg"
+      "avatar_url": "logos/cache/bc60350748576b3c.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-09T00:00:00.000Z",
