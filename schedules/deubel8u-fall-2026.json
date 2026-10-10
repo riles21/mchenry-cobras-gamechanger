@@ -25,7 +25,7 @@
     "id": "7f7155e3-7615-4df3-8f76-d076226b3814",
     "opponent_team": {
       "name": "Signature Stars 8U",
-      "avatar_url": "logos/cache/fc0a7b7efd4474f4.jpg"
+      "avatar_url": "logos/cache/c453e3b83db50e53.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-18T23:30:00.000Z",
@@ -48,7 +48,7 @@
     "id": "c920f9a3-b7d1-44d0-a141-42d994704f87",
     "opponent_team": {
       "name": "Top Tier MC - Neumann 8U",
-      "avatar_url": "logos/cache/4fa023ef2bbec35a.jpg"
+      "avatar_url": "logos/cache/b300ff8e0dc88cba.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-23T23:00:00.000Z",
@@ -71,7 +71,7 @@
     "id": "dbffbe46-b55f-4764-9d1a-1f03969053be",
     "opponent_team": {
       "name": "EBT Northwest Newman 8U",
-      "avatar_url": "logos/cache/fb07e98f6463d597.jpg"
+      "avatar_url": "logos/cache/11f771e66b0d35c1.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-02T23:00:00.000Z",
@@ -116,13 +116,19 @@
     "id": "465aa265-02b2-43ba-881b-0263cd9b7aae",
     "opponent_team": {
       "name": "EBT Northwest Newman 8U",
-      "avatar_url": "logos/cache/fb07e98f6463d597.jpg"
+      "avatar_url": "logos/cache/11f771e66b0d35c1.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-09T23:00:00.000Z",
     "end_ts": "2026-10-10T00:45:00.000Z",
     "timezone": "America/Chicago",
-    "has_videos_available": false,
+    "home_away": "home",
+    "score": {
+      "team": 13,
+      "opponent_team": 14
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "NJRBPnj0Dhk6",
@@ -133,7 +139,7 @@
     "id": "0fc0ad11-dafe-491e-802b-4679f59c96b4",
     "opponent_team": {
       "name": "Top Tier MC - Neumann 8U",
-      "avatar_url": "logos/cache/4fa023ef2bbec35a.jpg"
+      "avatar_url": "logos/cache/b300ff8e0dc88cba.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-14T23:00:00.000Z",
