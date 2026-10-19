@@ -3,7 +3,7 @@
     "id": "a598bab4-4f7f-436a-82af-a9ee1c0f31c4",
     "opponent_team": {
       "name": "SBA Raiders Woods 11U",
-      "avatar_url": "logos/cache/34a86b4b832918fa.jpg"
+      "avatar_url": "logos/cache/145bb6588112be5e.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-04T22:30:00.000Z",
@@ -48,7 +48,7 @@
     "id": "fa04e8ab-8b52-4b7e-9878-b339d315ce28",
     "opponent_team": {
       "name": "SBA Raiders 11U - Simmons",
-      "avatar_url": "logos/cache/5d33b2e220e0890d.jpg"
+      "avatar_url": "logos/cache/6fff4c2e832925e3.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-25T22:30:00.000Z",
@@ -71,7 +71,7 @@
     "id": "7f527b52-7c21-45b7-9349-afd4e0d5d2d8",
     "opponent_team": {
       "name": "EBT Northwest Smerling 11U",
-      "avatar_url": "logos/cache/dae2d5a361dd08d6.jpg"
+      "avatar_url": "logos/cache/971c317499da4715.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-02T22:30:00.000Z",
@@ -94,7 +94,7 @@
     "id": "42bb4cce-6cf4-43fa-a045-7fcc03476aa8",
     "opponent_team": {
       "name": "Lake County Lightning 11U Fall",
-      "avatar_url": "logos/cache/eecc8c8acf9ace4a.jpg"
+      "avatar_url": "logos/cache/b60782ff2da30de3.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-09T22:30:00.000Z",
@@ -117,7 +117,7 @@
     "id": "5377af70-7917-48a5-a0d3-b700c4c425db",
     "opponent_team": {
       "name": "Grayslake Coyotes 11U",
-      "avatar_url": "logos/cache/9b9189895c969dc7.jpg"
+      "avatar_url": "logos/cache/c2cfb1de6a931b4b.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-16T22:30:00.000Z",
@@ -130,22 +130,6 @@
     },
     "game_status": "completed",
     "has_videos_available": true,
-    "has_live_stream": false,
-    "cobras_gamechanger_season": "Fall 2026",
-    "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
-    "cobras_team_key": "lennon11u",
-    "cobras_team_name": "11U Lennon"
-  },
-  {
-    "id": "7130ba8a-ebba-4b81-85d1-f6647f22ea80",
-    "opponent_team": {
-      "name": "March Mayhem"
-    },
-    "is_full_day": true,
-    "start_ts": "2027-03-20T00:00:00.000Z",
-    "end_ts": "2027-03-22T00:00:00.000Z",
-    "timezone": null,
-    "has_videos_available": false,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "kzFVJtSX9Brn",
