@@ -3,7 +3,7 @@
     "id": "83c18318-19fb-45a6-8286-32937e270604",
     "opponent_team": {
       "name": "SBA Raiders 10U",
-      "avatar_url": "logos/cache/c91af4b02cee5e56.jpg"
+      "avatar_url": "logos/cache/1316f38f38b5e65f.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-08-30T16:00:00.000Z",
@@ -26,7 +26,7 @@
     "id": "2e9ad7d0-ab31-4f4a-b85c-b320920e1c4e",
     "opponent_team": {
       "name": "Grayslake Coyotes 10U",
-      "avatar_url": "logos/cache/c239072a216bb4c9.jpg"
+      "avatar_url": "logos/cache/821ff0e00e429943.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-03T00:00:00.000Z",
@@ -93,7 +93,7 @@
     "id": "ba903b67-c281-4478-9044-5affd5b3dbd9",
     "opponent_team": {
       "name": "Grayslake Sliders 10U",
-      "avatar_url": "logos/cache/b8b752f224d6be3c.jpg"
+      "avatar_url": "logos/cache/7fcd51ef7b715acb.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-13T15:00:00.000Z",
@@ -116,7 +116,7 @@
     "id": "8aaa56bf-083b-49b5-985a-73a9f1214c08",
     "opponent_team": {
       "name": "Grayslake Coyotes 10U",
-      "avatar_url": "logos/cache/c239072a216bb4c9.jpg"
+      "avatar_url": "logos/cache/821ff0e00e429943.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-09-27T20:00:00.000Z",
@@ -139,7 +139,7 @@
     "id": "e951fe8c-2b54-4a65-8ccd-5ead3849f1d8",
     "opponent_team": {
       "name": "Lake Villa Eagles 10U-Kalina",
-      "avatar_url": "logos/cache/fd57b59a33e58843.jpg"
+      "avatar_url": "logos/cache/242abd0340c3bd31.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-04T14:00:00.000Z",
@@ -184,7 +184,7 @@
     "id": "ca15473d-5472-43db-b4a4-be6ccb6b421d",
     "opponent_team": {
       "name": "EBT Northwest Wintersdorf 10U",
-      "avatar_url": "logos/cache/4291a6ed6bf4ce9e.jpg"
+      "avatar_url": "logos/cache/47882c4160ac6562.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-11T14:00:00.000Z",
@@ -207,7 +207,7 @@
     "id": "3f75140b-c833-4b8e-b9af-90371abffd7a",
     "opponent_team": {
       "name": "Barrington Red 10U",
-      "avatar_url": "logos/cache/c7a04e15efdf25ed.jpg"
+      "avatar_url": "logos/cache/84d9819efcdd9104.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-17T00:30:00.000Z",
@@ -230,14 +230,19 @@
     "id": "4f9864f7-09db-4f9e-8ec8-31b8f1cb7fa4",
     "opponent_team": {
       "name": "Wreckers-Nollin 10U",
-      "avatar_url": "logos/cache/62b16f892d148940.jpg"
+      "avatar_url": "logos/cache/191d6b2d9573aac3.jpg"
     },
     "is_full_day": false,
     "start_ts": "2026-10-18T21:30:00.000Z",
     "end_ts": "2026-10-18T23:30:00.000Z",
     "timezone": "America/Chicago",
     "home_away": "home",
-    "has_videos_available": false,
+    "score": {
+      "team": 16,
+      "opponent_team": 3
+    },
+    "game_status": "completed",
+    "has_videos_available": true,
     "has_live_stream": false,
     "cobras_gamechanger_season": "Fall 2026",
     "cobras_gamechanger_team_id": "tHsuttzldgTo",
